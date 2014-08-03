@@ -49,3 +49,7 @@ Sails has brought a really functional and powerful MVC framework to the Node.js 
 ###Why Angular.js###
 
 Angular.js, while so many things, allows for expressive html markup.  This expression will allow for millions of different people to build and recycle expressive, easy to understand, markup in projects.  The second major benefit to us using Angular is the way it implements 2-way data binding.  Using SyQuery and SyScribe, we can use this data binding and websockets to create realtime collaborative projects between developers and designers.
+
+###Why a Crypto Currency###
+
+We quickly realized that it would be impossible for a non-funded starter organization to host cloud repositories for the potential millions of users.  We investigated using Torrents as way of seeding repositories, and liked how that would work, but realized there was little incentive to hosting these.  Then we investigated Crypto Currencies and realized that we could add potential value to hosting and sharing repositories with a timestamp that could credit the creators and contributers.  The Symanitis Currency will also allow for users who are not designers or developers to improve the network through maintenance like mining. This is also a very likely model to add value to good-will open source contributions which could completely change the employer/employee relationship.
