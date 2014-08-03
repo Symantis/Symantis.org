@@ -1,0 +1,38 @@
+/* Effect 9: Scale down pusher */
+
+// SidebarTransitions Scss
+// Widgetware.com
+// Licensed under MIT Open Source
+
+@import "global";
+
+.st-effect-9{
+	&.st-container {
+		-webkit-perspective: 1500px;
+		perspective: 1500px;
+	}
+	.st-pusher {
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+	}
+	&.st-menu-open .st-pusher {
+		-webkit-transform: translate3d(0, 0, -300px);
+		transform: translate3d(0, 0, -300px);
+	}
+	&.st-menu {
+		opacity: 1;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+
+		&::after{
+			display: none;
+		}
+	}
+	&.st-menu-open .st-effect-9.st-menu {
+		visibility: visible;
+		-webkit-transition: -webkit-transform 0.5s;
+		transition: transform 0.5s;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
