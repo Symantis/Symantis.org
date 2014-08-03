@@ -34,3 +34,18 @@ You will need to have Sails v0.10 installed on your machine (sudo npm install sa
     $ sails lift
 
 Once Lifted, compile the SASS by saving your app.scss file (this is a bug that needs fixed) and then Check it out at [http://localhost:1337](http://localhost:1337)
+
+
+##Rational##
+
+###Why Javascript?###
+
+For the first time, Javascript is availible on the frontend and backend (Node.js) of web technologies.  In addition, it's really quick.  By using a Javascript Only architecture, new comers to our world will only need to handle a single language to get started.  This lowers the barriers of entry into the Symantis pipeline.
+
+###Why Sails.js###
+
+Sails has brought a really functional and powerful MVC framework to the Node.js platform.  Since a Symantis goal is to keep developers and designers on the same beat, we need implement common structures like MVC. Sails.js is also stable and is quickly becoming popular amongst the Node.js community.
+
+###Why Angular.js###
+
+Angular.js, while so many things, allows for expressive html markup.  This expression will allow for millions of different people to build and recycle expressive, easy to understand, markup in projects.  The second major benefit to us using Angular is the way it implements 2-way data binding.  Using SyQuery and SyScribe, we can use this data binding and websockets to create realtime collaborative projects between developers and designers.
