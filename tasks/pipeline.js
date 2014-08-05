@@ -39,8 +39,8 @@ var jsFilesToInject = [
   'bower_components/angular-moment/angular-moment.js',
   'bower_components/angular-translate/angular-translate.js',
   'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
-  'bower_components/jquery/dist/jquery.min.js',
-  'bower_components/foundation/js/foundation.min.js',
+  //'bower_components/jquery/dist/jquery.min.js',
+  //'bower_components/foundation/js/foundation.min.js',
 
 
   // All of the rest of your app scripts

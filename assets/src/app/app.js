@@ -3,12 +3,12 @@ angular.module( 'symantis', [
 	'ngSails',
 	'angularMoment',
 	'lodash',
-	'angularMoment',
+	'mm.foundation',
 	//'ui.bootstrap',
 	'templates-app',
 	'services',
 	'models',
-	'mm.foundation',
+	//'mm.foundation',
 	'symantis.header',
 	'symantis.home',
 	'symantis.about',
@@ -31,10 +31,9 @@ angular.module( 'symantis', [
 
 .run( function run () {
 	moment.lang('en');
+	
 })
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, config ) {
 	config.currentUser = window.currentUser;
 });
-
-$(document).foundation();

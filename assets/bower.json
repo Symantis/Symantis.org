@@ -21,6 +21,7 @@
   },
   "dependencies": {},
   "resolutions": {
-    "angular": ">=1.2.*"
+    "angular": ">=1.2.*",
+    "angular-foundation": "~0.3.0"
   }
 }
