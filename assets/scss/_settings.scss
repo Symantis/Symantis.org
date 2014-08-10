@@ -21,6 +21,7 @@ $darkest: rgba(18,20,15,1.0);
 // $body-bg: rgba(86,87,89,1.0);
 
 
+
 //Modal Style Override
 
 $reveal-modal-bg: $darkest;
@@ -29,6 +30,8 @@ $reveal-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.45);
 
 $reveal-close-color: #FFFFFF;
 $reveal-close-weight: light;
+
+=======
 
 @mixin font-regular($size) {
 	font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
