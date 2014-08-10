@@ -8344,6 +8344,48 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/* line 1, ../scss/_animations.scss */
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  transition: opacity .15s linear;
+}
+
+/* line 6, ../scss/_animations.scss */
+.fade.in {
+  opacity: 1;
+}
+
+/* line 10, ../scss/_animations.scss */
+.reveal-modal.fade {
+  -webkit-transition: -webkit-transform .3s ease-out;
+  -moz-transition: -moz-transform .3s ease-out;
+  -o-transition: -o-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+}
+
+/* line 19, ../scss/_animations.scss */
+.reveal-modal.in {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+/* line 25, ../scss/_animations.scss */
+.reveal-modal-bg.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+/* line 29, ../scss/_animations.scss */
+.reveal-modal-bg.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+
 /*
 .sy-app, .sitenav, .sitenav-push{
 	height:100%
