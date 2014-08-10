@@ -26,5 +26,7 @@ angular.module( 'symantis.sitenav', [
         
     ];
 
+    
+
     $scope.siteItems = siteItems;
 });

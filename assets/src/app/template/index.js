@@ -19,4 +19,6 @@ angular.module( 'symantis.template', [
 
 .controller( 'TemplateCtrl', function TemplateController( $scope, titleService ) {
 	titleService.setTitle('Template');
+
+	
 });
