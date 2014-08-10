@@ -18,10 +18,14 @@
 		}
 }
 
+.modal-button-hover {
+	border-color: $primary-color;
+}
+
 input[type=text], input[type=password] {
 	@include font-regular(rem-calc(18pt));
 	position: relative;
-	margin: 1px;
+	margin: rem-calc(1px);
 	padding: rem-calc(10px) rem-calc(0px) rem-calc(10px) rem-calc(10px);
 	border: none;
 	/*border-width: rem-calc(1px);
@@ -35,9 +39,4 @@ input[type=text], input[type=password] {
 		opacity: 1;
 		@include transition(0s);
 	}
-}
-
-input:last-child {
-	background-color: red;
-	margin-top: rem-calc(15px);
 }

@@ -8486,12 +8486,17 @@ body {
 }
 
 /* line 21, ../scss/_kitchen.scss */
+.modal-button-hover {
+  border-color: #3b948b;
+}
+
+/* line 25, ../scss/_kitchen.scss */
 input[type=text], input[type=password] {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 1.125rem;
   position: relative;
-  margin: 1px;
+  margin: 0.0625rem;
   padding: 0.625rem 0 0.625rem 0.625rem;
   border: none;
   /*border-width: rem-calc(1px);
@@ -8499,7 +8504,7 @@ input[type=text], input[type=password] {
   height: auto;
   color: #878787;
 }
-/* line 31, ../scss/_kitchen.scss */
+/* line 35, ../scss/_kitchen.scss */
 input[type=text]:focus, input[type=password]:focus {
   padding-left: -10px;
   border-left: 10px inset #3b948b;
@@ -8510,10 +8515,4 @@ input[type=text]:focus, input[type=password]:focus {
   -o-transition: all 0s ease;
   -ms-transition: all 0s ease;
   transition: all 0s ease;
-}
-
-/* line 40, ../scss/_kitchen.scss */
-input:last-child {
-  background-color: red;
-  margin-top: 0.9375rem;
 }
