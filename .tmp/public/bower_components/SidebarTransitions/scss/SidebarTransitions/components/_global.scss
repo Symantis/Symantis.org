@@ -1,0 +1,35 @@
+// SidebarTransitions SCSS
+// Widgetware.com
+// Licensed under MIT Open Source
+
+@import "../functions";
+//
+// SidebarTransitions Variables
+//
+
+
+// We use these to control various global styles
+
+$primary-color: #008CBA !default;
+$secondary-color: #e7e7e7 !default;
+$alert-color: #f04124 !default;
+$success-color: #43AC6A !default;
+$warning-color: #f08a24 !default;
+$info-color: #a0d3e8 !default;
+
+//
+// CONTENT
+//
+
+$content-pusher-margin-left: 0px;
+
+//
+// SIDEBAR MENU
+//
+$side-bar-width: 300px !default;
+$sidebar-icon-color: $sidebar-link-color !default;
+$sidebar-title-padding: rem-calc(16) !default;
+
+//
+// EFFECTS
+//

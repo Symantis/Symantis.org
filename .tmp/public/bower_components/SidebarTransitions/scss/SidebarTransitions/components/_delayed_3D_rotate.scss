@@ -1,0 +1,43 @@
+/* Effect 14: Delayed 3D rotate */
+
+// SidebarTransitions Scss
+// Widgetware.com
+// Licensed under MIT Open Source
+
+@import "global";
+
+.st-effect-14{
+	&.st-container {
+		-webkit-perspective: 1500px;
+		perspective: 1500px;
+		-webkit-perspective-origin: 0% 50%;
+		perspective-origin: 0% 50%;
+	}
+	.st-pusher {
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+	}
+	&.st-menu-open .st-pusher {
+		-webkit-transform: translate3d(300px, 0, 0);
+		transform: translate3d(300px, 0, 0);
+	}
+	&.st-menu {
+		-webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg);
+		transform: translate3d(-100%, 0, 0) rotateY(90deg);
+		-webkit-transform-origin: 0% 50%;
+		transform-origin: 0% 50%;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+	}
+	&.st-menu-open .st-effect-14.st-menu {
+		visibility: visible;
+		-webkit-transition-delay: 0.1s;
+		transition-delay: 0.1s;
+		-webkit-transition-timing-function: ease-in-out;
+		transition-timing-function: ease-in-out;
+		-webkit-transition-property: -webkit-transform;
+		transition-property: transform;
+		-webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
+		transform: translate3d(-100%, 0, 0) rotateY(0deg);
+	}
+}

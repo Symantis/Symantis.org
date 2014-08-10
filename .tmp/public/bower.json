@@ -1,0 +1,27 @@
+{
+  "name": "CMS5",
+  "version": "0.2.0",
+  "devDependencies": {
+    "angular": "~1.3.0",
+    "angular-mocks": "~1.3.0",
+    "bootstrap": "~3.1.1",
+    "angular-bootstrap": "~0.10.0",
+    "angular-foundation": "~0.2.2",
+    "foundation": "zurb/bower-foundation",
+    "SidebarTransitions": "https://github.com/scott-wyatt/SidebarTransitions.git",
+    "angular-ui-router": "~0.2.10",
+    "angular-ui-utils": "~0.1.1",
+    "socket.io-client": "0.9.16",
+    "sails.io.js": "v0.10.0-rc2",
+    "angular-sails": "1.0.2",
+    "lodash": "~2.4.1",
+    "angular-moment": "~0.6.2",
+    "angular-translate": "~2.1.0",
+    "angular-translate-loader-static-files": "~2.1.0"
+  },
+  "dependencies": {},
+  "resolutions": {
+    "angular": ">=1.2.*",
+    "angular-foundation": "~0.3.0"
+  }
+}
