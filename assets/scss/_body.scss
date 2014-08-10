@@ -29,7 +29,7 @@ body {
 	h3 {
 		text-align: left;
 		width: 100%;
-		@include font-regular(rem-calc(18px));
+		@include font-semi(rem-calc(18px));
 		margin: 0;
 	}
 	p {
@@ -37,17 +37,14 @@ body {
 		width: 100%;
 		@include font-regular(rem-calc(12px));
 		margin: 0;
-		@include transition(50ms);
-		&:hover {
-			color: $primary-color;
-		}
 	}
 }
 .main-left {
-	padding-right: 50px;
+	padding-right: 30px;
 	header {
 		border-top: 2px white solid;
 		padding-top: 20px;
+		padding-bottom: 20px;
 		width: 100%;
 	}
 	.left-content {
@@ -57,17 +54,26 @@ body {
 			padding: 0;
 			li {
 				margin: 0;
-				padding-top: 10px;
-				padding-bottom: 10px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+		}
+		a {
+			p {
+				@include transition(50ms);
+				&:hover {
+					color: $primary-color;
+				}
 			}
 		}
 	}
 }
 .main-center {
-	padding-right: 50px;
+	padding-right: 30px;
 	header {
 		border-top: 1px $offWhite solid;
 		padding-top: 20px;
+		padding-bottom: 20px;
 		width: 100%;
 	}
 	.center-content {
