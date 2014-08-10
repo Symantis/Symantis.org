@@ -8728,32 +8728,33 @@ input[type=text]:focus, input[type=password]:focus {
   border-style: solid;
   border-width: 1px;
   border-color: white;
-  margin: 5px;
-  padding: 5px 10px 5px 10px;
+  margin: 5px 5px 20px 5px;
+  padding: 4px 10px 4px 10px;
   float: left;
   list-style: none;
   height: 37px;
 }
 
-/* line 78, ../scss/_kitchen.scss */
+/* line 79, ../scss/_kitchen.scss */
 .admin-tag {
   border-color: #3b948b;
+  color: #3b948b;
 }
 
-/* line 82, ../scss/_kitchen.scss */
-h2 {
-  color: white;
-}
-
-/* line 86, ../scss/_kitchen.scss */
+/* line 84, ../scss/_kitchen.scss */
 .text-link {
   color: white;
 }
 
-/* line 90, ../scss/_kitchen.scss */
+/* line 88, ../scss/_kitchen.scss */
 .text-link:hover {
   color: white;
   text-decoration: underline;
+}
+
+/* line 93, ../scss/_kitchen.scss */
+h2 {
+  color: white;
 }
 
 /* line 1, ../scss/_landing.scss */
