@@ -18,8 +18,9 @@
 		}
 }
 
-.modal-button-hover {
+.modal-button-hover:hover {
 	border-color: $primary-color;
+	color: white;
 }
 
 input[type=text], input[type=password] {
@@ -36,7 +37,10 @@ input[type=text], input[type=password] {
 		padding-left:-10px;
 		border-left: 10px inset $primary-color;
 		box-shadow: none;
-		opacity: 1;
 		@include transition(0s);
 	}
+}
+
+.reveal-modal {
+	outline:none;
 }
