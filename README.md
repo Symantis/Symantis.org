@@ -67,7 +67,7 @@ For the first time, Javascript is availible on the frontend and backend (Node.js
 
 ###Why Sails.js###
 
-Sails has brought a really functional and powerful MVC framework to the Node.js platform.  Since a Symantis goal is to keep developers and designers on the same beat, we need implement common structures like MVC. Sails.js is also stable and is quickly becoming popular amongst the Node.js community.
+Sails has brought a really functional and powerful MVC framework to the Node.js platform.  Since a Symantis goal is to keep developers and designers on the same beat, we need to implement common structures like MVC. Sails.js is also stable and is quickly becoming popular amongst the Node.js community.
 
 ###Why Angular.js###
 
