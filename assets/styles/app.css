@@ -8559,14 +8559,6 @@ input[type=text]:focus, input[type=password]:focus {
   -ms-transition: all 0s ease;
   transition: all 0s ease;
 }
-<<<<<<< HEAD
-=======
-
-/* line 40, ../scss/_kitchen.scss */
-input:last-child {
-  background-color: red;
-  margin-top: 0.9375rem;
-}
 
 /* line 1, ../scss/_landing.scss */
 .land-image {
@@ -8575,15 +8567,49 @@ input:last-child {
 
 /* line 4, ../scss/_landing.scss */
 .land-title {
-  height: 200px;
+  height: 160px;
   width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 20px;
   position: absolute;
   top: 50%;
   left: 0;
   border: 1px white solid;
-  margin-top: -100px;
+  margin-top: -80px;
   background-color: #2e302c;
 }
->>>>>>> FETCH_HEAD
+/* line 16, ../scss/_landing.scss */
+.land-title ul {
+  list-style: none;
+}
+
+/* line 20, ../scss/_landing.scss */
+.land-title-left {
+  padding: 40px;
+}
+/* line 22, ../scss/_landing.scss */
+.land-title-left p {
+  font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 14px;
+}
+
+/* line 26, ../scss/_landing.scss */
+.land-title-mid {
+  text-align: center;
+}
+/* line 28, ../scss/_landing.scss */
+.land-title-mid h1 {
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 68px;
+}
+/* line 31, ../scss/_landing.scss */
+.land-title-mid .title-sy {
+  color: #3b948b;
+}
+/* line 34, ../scss/_landing.scss */
+.land-title-mid .title-org {
+  font-size: 24px;
+}

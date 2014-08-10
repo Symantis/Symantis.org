@@ -2,14 +2,36 @@
 	text-align: center;
 }
 .land-title {
-	height: 200px;
+	height: 160px;
 	width: 100%;
+	max-width: 100%;
 	margin: 0;
 	padding: 20px;
 	position: absolute;
 	top: 50%;
 	left: 0;
 	border: 1px white solid;
-	margin-top: -100px;
+	margin-top: -80px;
 	background-color: $dark;
+	ul {
+		list-style: none;
+	}
+}
+.land-title-left {
+	padding: 40px;
+	p {
+		@include font-light(14px);
+	}
+}
+.land-title-mid {
+	text-align: center;
+	h1 {
+		@include font-regular(68px);
+	}
+	.title-sy {
+		color: $primary-color;
+	}
+	.title-org {
+		font-size: 24px;
+	}
 }
