@@ -8709,46 +8709,56 @@ input[type=text]:focus, input[type=password]:focus {
 /* line 16, ../scss/_landing.scss */
 .land-title ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 20, ../scss/_landing.scss */
+/* line 22, ../scss/_landing.scss */
 .land-title-left {
   padding: 40px;
 }
-/* line 22, ../scss/_landing.scss */
+/* line 24, ../scss/_landing.scss */
 .land-title-left p {
   font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 14px;
 }
 
-/* line 26, ../scss/_landing.scss */
+/* line 28, ../scss/_landing.scss */
 .land-title-mid {
   text-align: center;
 }
-/* line 28, ../scss/_landing.scss */
+/* line 30, ../scss/_landing.scss */
 .land-title-mid h1 {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 74px;
 }
-/* line 31, ../scss/_landing.scss */
+/* line 33, ../scss/_landing.scss */
 .land-title-mid .title-sy {
   color: #3b948b;
 }
-/* line 34, ../scss/_landing.scss */
+/* line 36, ../scss/_landing.scss */
 .land-title-mid .title-org {
   font-size: 24px;
 }
 
-/* line 39, ../scss/_landing.scss */
-.land-title-right li {
-  float: left;
-  padding: 5px;
+/* line 40, ../scss/_landing.scss */
+.land-title-right {
+  text-align: right;
+}
+/* line 42, ../scss/_landing.scss */
+.land-title-right ul {
   margin-top: 30px;
+  margin-right: 5%;
+}
+/* line 45, ../scss/_landing.scss */
+.land-title-right ul li {
+  float: right;
+  padding: 5px;
 }
 
-/* line 45, ../scss/_landing.scss */
+/* line 51, ../scss/_landing.scss */
 .social-svg {
   fill: white;
   height: auto;
@@ -8758,7 +8768,7 @@ input[type=text]:focus, input[type=password]:focus {
   -ms-transition: all 50ms ease;
   transition: all 50ms ease;
 }
-/* line 49, ../scss/_landing.scss */
+/* line 55, ../scss/_landing.scss */
 .social-svg:hover {
   fill: #3b948b;
 }
