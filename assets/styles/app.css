@@ -8422,3 +8422,24 @@ body {
 .main-right header {
   border-top: 1px white solid;
 }
+
+/* line 1, ../scss/_kitchen.scss */
+.sy-button {
+  border-color: white;
+  border-width: 0.1875rem;
+  border-style: solid;
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 0.625rem 1.875rem 0.625rem 1.875rem;
+  margin: 0 0 1.25rem 0;
+  display: inline-block;
+  position: relative;
+}
+/* line 14, ../scss/_kitchen.scss */
+.sy-button:hover {
+  border-color: black;
+  color: black;
+}
