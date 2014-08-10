@@ -35,7 +35,7 @@ You will need to have Sails v0.10 installed on your machine (sudo npm install sa
 
 Once Lifted, compile the SASS by saving your app.scss file (this is a bug that needs fixed) and then Check it out at [http://localhost:1337](http://localhost:1337)
 
-If you do not have Compass installed you will need to run `npm install -g compass`
+If you do not have Compass installed you will need to run `sudo gem install compass` and `npm install -g compass`
 
 Development process
 -------------------
