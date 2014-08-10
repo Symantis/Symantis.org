@@ -16,3 +16,30 @@ $darkest: rgba(18,20,15,1.0);
 // $info-color: #a0d3e8 !default;
 
 // $body-bg: rgba(86,87,89,1.0);
+
+
+@mixin font-regular($size) {
+	font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
+	font-size: $size;
+}
+@mixin font-light($size) {
+	font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	color: white;
+	font-size: $size;
+}
+@mixin font-semi($size) {
+	font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	color: white;
+	font-size: $size;
+}
+@mixin font-bold($size) {
+	font-family: 'open_sansbold', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	color: white;
+	font-size: $size;
+}
+@mixin font-italic($size) {
+	font-family: 'open_sansitalic', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	color: white;
+	font-size: $size;
+}
