@@ -17,8 +17,8 @@
 	width: 100%;
 	max-width: 100%;
 	position: absolute;
-	margin-top: -80px;
-	bottom: 160px;
+	margin-top: rem-calc(-80px);
+	bottom: rem-calc(160px);
 }
 .land-image {
 	text-align: center;
@@ -28,13 +28,13 @@
 .land-title {
 	position: absolute;
 	bottom: 0;
-	height: 160px;
+	height: rem-calc(160px);
 	width: 100%;
 	max-width: 100%;
 	margin: 0;
-	padding: 20px;
-	border-top: 1px white solid;
-	border-bottom: 1px white solid;
+	padding: rem-calc(20px);
+	border-top: rem-calc(1px) white solid;
+	border-bottom: rem-calc(1px) white solid;
 	background-color: $dark;
 	z-index: 10;
 	ul {
@@ -44,7 +44,7 @@
 	}
 }
 .land-title-left {
-	padding: 40px;
+	padding: rem-calc(40px);
 	p {
 		@include font-light(rem-calc(14px));
 	}
@@ -52,7 +52,7 @@
 .land-title-mid {
 	text-align: center;
 	h1 {
-		margin-top: -5px;
+		margin-top: rem-calc(-5px);
 		@include font-regular(rem-calc(84px));
 	}
 	.title-sy {
@@ -65,7 +65,7 @@
 .land-title-right {
 	text-align: right;
 	ul {
-		margin-top: 30px;
+		margin-top: rem-calc(30px);
 		margin-right: 5%;
 		li {
 			float: right;
@@ -84,7 +84,7 @@
 .land-content {
 	position: absolute;
 	top: 50%;
-	padding-top: 80px;
+	padding-top: rem-calc(80px);
 	max-width: 100%;
 	height: 50%;
 	z-index: 5;
@@ -95,15 +95,15 @@
 	ul {
 		list-style: none;
 		margin: 0 auto;
-		width: 360px;
-		margin-top: 40px;
+		width: rem-calc(360px);
+		margin-top: rem-calc(40px);
 		li {
 			float: left;
-			width: 120px;
+			width: rem-calc(120px);
 			text-align: center;
-			height: 25px;
-			border-right: 1px white solid;
-			margin-right: -1px;
+			height: rem-calc(25px);
+			border-right: rem-calc(1px) white solid;
+			margin-right: rem-calc(-1px);
 			p {
 				@include font-regular(rem-calc(14px));
 				@include transition(50ms);
@@ -143,8 +143,8 @@
 		}
 	}
 	.large-button {
-		width: 320px;
-		margin-bottom: 10px;
+		width: rem-calc(320px);
+		margin-bottom: rem-calc(10px);
 	}
 }
 .home-down-button {
@@ -153,9 +153,9 @@
 	text-align: center;
 	width: 100%;
 	.down-svg {
-		padding: 10px;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding: rem-calc(10px);
+		padding-left: rem-calc(20px);
+		padding-right: rem-calc(20px);
 		height: auto;
 		fill: white;
 		@include transition(50ms);

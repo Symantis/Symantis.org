@@ -8642,7 +8642,16 @@ body {
   width: 100%;
 }
 
-/* line 1, ../scss/_kitchen.scss */
+/* line 5, ../scss/_kitchen.scss */
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+}
+
+/* line 9, ../scss/_kitchen.scss */
 .sy-button {
   background-color: rgba(0, 0, 0, 0);
   border-color: white;
@@ -8665,46 +8674,35 @@ body {
   -o-transition: all 50ms ease;
   -ms-transition: all 50ms ease;
   transition: all 50ms ease;
+  outline: none;
 }
-/* line 17, ../scss/_kitchen.scss */
+/* line 26, ../scss/_kitchen.scss */
 .sy-button:hover {
   border-color: #3b948b;
   background-color: rgba(0, 0, 0, 0);
   color: white;
 }
-/* line 22, ../scss/_kitchen.scss */
+/* line 31, ../scss/_kitchen.scss */
 .sy-button:visited {
   color: white;
   background-color: rgba(0, 0, 0, 0);
 }
-/* line 26, ../scss/_kitchen.scss */
+/* line 35, ../scss/_kitchen.scss */
 .sy-button:focus {
   color: white;
   background-color: rgba(0, 0, 0, 0);
 }
-
-/* line 32, ../scss/_kitchen.scss */
-.modal-button-hover {
-  margin-top: 20px;
-}
-/* line 34, ../scss/_kitchen.scss */
-.modal-button-hover:hover {
-  border-color: #3b948b;
-  color: white;
-}
-/* line 38, ../scss/_kitchen.scss */
-.modal-button-hover:visited {
-  color: white;
-  background-color: rgba(0, 0, 0, 0);
+/* line 39, ../scss/_kitchen.scss */
+.sy-button:active {
+  border-color: white;
 }
 
 /* line 44, ../scss/_kitchen.scss */
-.modal-button-hover:hover {
-  border-color: #3b948b;
-  color: white;
+.modal-button {
+  margin-top: 20px;
 }
 
-/* line 49, ../scss/_kitchen.scss */
+/* line 48, ../scss/_kitchen.scss */
 input[type=text], input[type=password] {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
@@ -8718,7 +8716,7 @@ input[type=text], input[type=password] {
   height: auto;
   color: #878787;
 }
-/* line 59, ../scss/_kitchen.scss */
+/* line 58, ../scss/_kitchen.scss */
 input[type=text]:focus, input[type=password]:focus {
   border-left: 10px outset #3b948b;
   box-shadow: 0px 0px 0px 0px white;
@@ -8729,23 +8727,23 @@ input[type=text]:focus, input[type=password]:focus {
   transition: all 0s ease;
 }
 
-/* line 67, ../scss/_kitchen.scss */
+/* line 65, ../scss/_kitchen.scss */
 .reveal-modal {
   outline: none;
 }
 
-/* line 71, ../scss/_kitchen.scss */
+/* line 69, ../scss/_kitchen.scss */
 .modal-window {
   text-align: center;
 }
-/* line 73, ../scss/_kitchen.scss */
+/* line 71, ../scss/_kitchen.scss */
 .modal-window input[type=text], .modal-window [type='password'] {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 80, ../scss/_kitchen.scss */
+/* line 78, ../scss/_kitchen.scss */
 .tag {
   border-style: solid;
   border-width: 1px;
@@ -8757,23 +8755,23 @@ input[type=text]:focus, input[type=password]:focus {
   height: 37px;
 }
 
-/* line 92, ../scss/_kitchen.scss */
+/* line 90, ../scss/_kitchen.scss */
 .admin-tag {
   border-color: #3b948b;
   color: #3b948b;
 }
 
-/* line 97, ../scss/_kitchen.scss */
+/* line 95, ../scss/_kitchen.scss */
 .text-link {
   color: white;
 }
 
-/* line 101, ../scss/_kitchen.scss */
+/* line 99, ../scss/_kitchen.scss */
 .text-link:hover {
   color: white;
   text-decoration: underline;
 }
-/* line 104, ../scss/_kitchen.scss */
+/* line 102, ../scss/_kitchen.scss */
 .text-link:hover h2 {
   color: white;
 }
@@ -8801,8 +8799,8 @@ input[type=text]:focus, input[type=password]:focus {
   width: 100%;
   max-width: 100%;
   position: absolute;
-  margin-top: -80px;
-  bottom: 160px;
+  margin-top: -5rem;
+  bottom: 10rem;
 }
 
 /* line 23, ../scss/_landing.scss */
@@ -8816,13 +8814,13 @@ input[type=text]:focus, input[type=password]:focus {
 .land-title {
   position: absolute;
   bottom: 0;
-  height: 160px;
+  height: 10rem;
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 20px;
-  border-top: 1px white solid;
-  border-bottom: 1px white solid;
+  padding: 1.25rem;
+  border-top: 0.0625rem white solid;
+  border-bottom: 0.0625rem white solid;
   background-color: #2e302c;
   z-index: 10;
 }
@@ -8835,7 +8833,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* line 46, ../scss/_landing.scss */
 .land-title-left {
-  padding: 40px;
+  padding: 2.5rem;
 }
 /* line 48, ../scss/_landing.scss */
 .land-title-left p {
@@ -8850,7 +8848,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 /* line 54, ../scss/_landing.scss */
 .land-title-mid h1 {
-  margin-top: -5px;
+  margin-top: -0.3125rem;
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 5.25rem;
@@ -8870,7 +8868,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 /* line 67, ../scss/_landing.scss */
 .land-title-right ul {
-  margin-top: 30px;
+  margin-top: 1.875rem;
   margin-right: 5%;
 }
 /* line 70, ../scss/_landing.scss */
@@ -8898,7 +8896,7 @@ input[type=text]:focus, input[type=password]:focus {
 .land-content {
   position: absolute;
   top: 50%;
-  padding-top: 80px;
+  padding-top: 5rem;
   max-width: 100%;
   height: 50%;
   z-index: 5;
@@ -8913,17 +8911,17 @@ input[type=text]:focus, input[type=password]:focus {
 .home-nav ul {
   list-style: none;
   margin: 0 auto;
-  width: 360px;
-  margin-top: 40px;
+  width: 22.5rem;
+  margin-top: 2.5rem;
 }
 /* line 100, ../scss/_landing.scss */
 .home-nav ul li {
   float: left;
-  width: 120px;
+  width: 7.5rem;
   text-align: center;
-  height: 25px;
-  border-right: 1px white solid;
-  margin-right: -1px;
+  height: 1.5625rem;
+  border-right: 0.0625rem white solid;
+  margin-right: -0.0625rem;
 }
 /* line 107, ../scss/_landing.scss */
 .home-nav ul li p {
@@ -8984,8 +8982,8 @@ input[type=text]:focus, input[type=password]:focus {
 }
 /* line 145, ../scss/_landing.scss */
 .home-signup .large-button {
-  width: 320px;
-  margin-bottom: 10px;
+  width: 20rem;
+  margin-bottom: 0.625rem;
 }
 
 /* line 150, ../scss/_landing.scss */
@@ -8997,9 +8995,9 @@ input[type=text]:focus, input[type=password]:focus {
 }
 /* line 155, ../scss/_landing.scss */
 .home-down-button .down-svg {
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   height: auto;
   fill: white;
   -webkit-transition: all 50ms ease;

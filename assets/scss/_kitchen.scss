@@ -1,3 +1,11 @@
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: none;
+}
+
 .sy-button {
 	background-color: rgba(0, 0, 0, 0.0);
 	border-color: white;
@@ -14,6 +22,7 @@
 	display: inline-block;
 	position: relative;
 	@include transition(50ms);
+	outline: none;
 	&:hover {
 		border-color: $primary-color;
 		background-color: rgba(0, 0, 0, 0.0);
@@ -27,23 +36,13 @@
 		color: white;
 		background-color: rgba(0,0,0,0.0);
 	}
+	&:active {
+		border-color: white;
+	}
 }
 
-.modal-button-hover {
+.modal-button {
 	margin-top: 20px;
-	&:hover {
-		border-color: $primary-color;
-		color: white;
-	}
-	&:visited {
-		color: white;
-		background-color: rgba(0,0,0,0.0);
-	}
-}
-
-.modal-button-hover:hover {
-	border-color: $primary-color;
-	color: white;
 }
 
 input[type=text], input[type=password] {
@@ -57,7 +56,6 @@ input[type=text], input[type=password] {
 	height: auto;
 	color: $gray;
 	&:focus {
-
 		border-left: 10px outset $primary-color;
 		box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
 		@include transition(0s);
