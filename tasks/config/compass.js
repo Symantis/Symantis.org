@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     dist: {
       options: {
         httpPath: '/',
-        importPath: ['assets/bower_components/foundation/scss', 'assets/bower_components/SidebarTransitions/scss'],
+        importPath: ['assets/bower_components/foundation/scss'],
         //importPath: 'assets/bower_components/foundation/scss',
         sassDir: 'assets/scss',
         cssDir: 'assets/styles',
