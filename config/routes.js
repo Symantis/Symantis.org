@@ -86,9 +86,34 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /chat': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /docs': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /start': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /creator': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /chat': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /search': {
+    controller: 'HomeController',
+    action: 'index'
+  },
   'get /register': {
     controller: 'AuthController',
     action: 'register'
   }
+
 
 };

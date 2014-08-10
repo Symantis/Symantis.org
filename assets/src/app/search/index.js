@@ -3,7 +3,7 @@ angular.module( 'symantis.search', [
 
 .config(function config( $stateProvider ) {
 	$stateProvider.state( 'search', {
-		url: '/kitchen',
+		url: '/search',
 		views: {
 			"main": {
 				controller: 'SearchCtrl',
