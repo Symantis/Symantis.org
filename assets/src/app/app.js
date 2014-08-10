@@ -22,7 +22,7 @@ angular.module( 'symantis', [
 	'symantis.community',
 	'symantis.start',
 	'symantis.chat',
-	'symantis.app'
+	'symantis.creator'
 ])
 
 .config( function syAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
