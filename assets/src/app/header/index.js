@@ -6,7 +6,8 @@ angular.module( 'symantis.header', [
 
     var navItems = [
         {title: 'Messages', translationKey: 'navigation:messages', url: '/messages', cssClass: 'fa fa-comments'},
-        {title: 'About', translationKey: 'navigation:about', url:'/about',cssClass: 'fa fa-info-circle'}
+        {title: 'About', translationKey: 'navigation:about', url:'/about',cssClass: 'fa fa-info-circle'},
+        {title: 'Kitchen', translationKey: 'navigation:kitchen', url:'/kitchen',cssClass: 'fa fa-info-circle'}
     ];
 
     if (!$scope.currentUser) {

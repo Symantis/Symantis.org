@@ -12,7 +12,8 @@ angular.module( 'symantis', [
 	'symantis.header',
 	'symantis.home',
 	'symantis.about',
-	'symantis.messages'
+	'symantis.messages',
+	'symantis.kitchen'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
