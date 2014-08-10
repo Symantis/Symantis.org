@@ -1,17 +1,31 @@
+.home-vert-center {
+	height: 50vh;
+	position: absolute;
+	top: 80px;
+	width: 100%;
+}
+.home-top {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	margin-top: -80px;
+	bottom: 160px;
+}
 .land-image {
 	text-align: center;
+	max-width: 100%;
+	position: relative;
 }
 .land-title {
+	position: absolute;
+	bottom: 0;
 	height: 160px;
 	width: 100%;
 	max-width: 100%;
 	margin: 0;
 	padding: 20px;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	border: 1px white solid;
-	margin-top: -80px;
+	border-top: 1px white solid;
+	border-bottom: 1px white solid;
 	background-color: $dark;
 	ul {
 		list-style: none;
