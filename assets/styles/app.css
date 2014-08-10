@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* line 316, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.3.3/";
@@ -8345,6 +8344,19 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/*
+.sy-app, .sitenav, .sitenav-push{
+	height:100%
+}
+
+.sy-app{
+	overflow-y: scroll;
+}
+
+.sitenav{
+	width:60px;
+}
+*/
 /* line 1, ../scss/_body.scss */
 body {
   background-color: #282828;

@@ -17,8 +17,27 @@ angular.module( 'symantis.kitchen', [
 	});
 })
 
-.controller( 'KitchenCtrl', function KitchenController( $scope, titleService ) {
+.controller( 'KitchenCtrl', function KitchenController( $scope, titleService, $modal ) {
 	titleService.setTitle('Kitchen');
 
+	$scope.kitchenModal = function () {
+
+		var modalInstance = $modal.open({
+			templateUrl: 'kitchen/modals/kitchenModal.tpl.html',
+			controller: 'KitchenModalCtrl',
+			windowClass: 'small'
+		});
+	};
 	
+})
+.controller( 'KitchenModalCtrl', function KitchenModalController($scope, $modalInstance){
+
+
+	$scope.ok = function () {
+		$modalInstance.close();
+	};
+
+	$scope.cancel = function () {
+		$modalInstance.dismiss('cancel');
+	};
 });

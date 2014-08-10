@@ -13,17 +13,23 @@
 
 <div ng-include="'header/index.tpl.html'"></div>
 
-<div class="header" ui-view="header">
-</div><!-- /.header -->
+<div class="sy-app">
+	<div class="sitenav" ui-view="sitenav">
+	</div><!-- /.sitenav -->
 
-<div class="sitenav" ui-view="sitenav">
-</div><!-- /.sitenav -->
+	<div class="sitenav-push">
+		<div class="header" ui-view="header">
+		</div><!-- /.header -->
 
-<div class="overlay" ui-view="overlay">
-</div><!-- /.overlay -->
 
-<div class="container" ui-view="main">
-</div><!-- /.container -->
 
-<div class="footer" ui-view="footer">
-</div><!-- /.footer -->
+		<div class="overlay" ui-view="overlay">
+		</div><!-- /.overlay -->
+
+		<div class="container" ui-view="main">
+		</div><!-- /.container -->
+
+		<div class="footer" ui-view="footer">
+		</div><!-- /.footer -->
+	</div>
+</div>
