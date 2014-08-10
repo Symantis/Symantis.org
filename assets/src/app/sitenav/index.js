@@ -19,7 +19,7 @@ angular.module( 'symantis.sitenav', [
 
     var siteItems = [
         {title: 'Home', translationKey: 'navigation:docs', url:'/home'},
-        {title: 'Start', translationKey: 'navigation:start', url:'/start'},
+        {title: 'Getting Started', translationKey: 'navigation:start', url:'/start'},
         {title: 'Documentation', translationKey: 'navigation:docs', url:'/docs'},
         {title: 'Community', translationKey: 'navigation:community', url:'/community'},
         {title: 'Web App', translationKey: 'navigation:creator', url:'/creator'}
