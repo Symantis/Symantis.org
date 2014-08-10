@@ -12,6 +12,7 @@ angular.module( 'symantis', [
 	'models',
 	//'mm.foundation',
 	'symantis.header',
+	'symantis.sitenav',
 	'symantis.home',
 	'symantis.about',
 	'symantis.messages',

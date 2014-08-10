@@ -8,6 +8,10 @@ angular.module( 'symantis.messages', [
 			"main": {
 				controller: 'MessagesCtrl',
 				templateUrl: 'messages/index.tpl.html'
+			},
+			"sitenav": {
+				controller: 'SiteNavCtrl',
+                templateUrl: 'sitenav/index.tpl.html'
 			}
 		}
 	});

@@ -10,6 +10,10 @@ angular.module( 'symantis.home', [
 			"main": {
 				controller: 'HomeCtrl',
 				templateUrl: 'home/index.tpl.html'
+			},
+			"sitenav": {
+				controller: 'SiteNavCtrl',
+                templateUrl: 'sitenav/index.tpl.html'
 			}
 		}
 	});

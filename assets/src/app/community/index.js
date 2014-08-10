@@ -8,6 +8,10 @@ angular.module( 'symantis.community', [
 			"main": {
 				controller: 'CommunityCtrl',
 				templateUrl: 'community/index.tpl.html'
+			},
+			"sitenav": {
+				controller: 'SiteNavCtrl',
+                templateUrl: 'sitenav/index.tpl.html'
 			}
 		}
 	});

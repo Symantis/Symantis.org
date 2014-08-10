@@ -8,6 +8,10 @@ angular.module( 'symantis.kitchen', [
 			"main": {
 				controller: 'KitchenCtrl',
 				templateUrl: 'kitchen/index.tpl.html'
+			},
+			"sitenav": {
+				controller: 'SiteNavCtrl',
+                templateUrl: 'sitenav/index.tpl.html'
 			}
 		}
 	});

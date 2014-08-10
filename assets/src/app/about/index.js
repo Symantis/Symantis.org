@@ -8,6 +8,10 @@ angular.module( 'symantis.about', [
 			"main": {
 				controller: 'AboutCtrl',
 				templateUrl: 'about/index.tpl.html'
+			},
+			"sitenav": {
+				controller: 'SiteNavCtrl',
+                templateUrl: 'sitenav/index.tpl.html'
 			}
 		}
 	});

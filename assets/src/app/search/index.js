@@ -8,6 +8,10 @@ angular.module( 'symantis.search', [
 			"main": {
 				controller: 'SearchCtrl',
 				templateUrl: 'search/index.tpl.html'
+			},
+			"sitenav": {
+				controller: 'SiteNavCtrl',
+                templateUrl: 'sitenav/index.tpl.html'
 			}
 		}
 	});
