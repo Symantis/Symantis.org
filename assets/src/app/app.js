@@ -1,3 +1,4 @@
+(function(){
 angular.module( 'symantis', [
 	'ui.router',
 	'ngSails',
@@ -39,3 +40,5 @@ angular.module( 'symantis', [
 .controller( 'AppCtrl', function AppCtrl ( $scope, config ) {
 	config.currentUser = window.currentUser;
 });
+
+})();
