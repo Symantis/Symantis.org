@@ -1,0 +1,507 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-contrib-compass',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.28
+4 verbose node symlink /usr/local/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'grunt-contrib-compass', null ]
+7 verbose cache add name=undefined spec="grunt-contrib-compass" args=["grunt-contrib-compass",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'grunt-contrib-compass',
+8 verbose parsed url   path: 'grunt-contrib-compass',
+8 verbose parsed url   href: 'grunt-contrib-compass' }
+9 silly lockFile 6a816d73-grunt-contrib-compass grunt-contrib-compass
+10 verbose lock grunt-contrib-compass /Users/hamishjacksonmee/.npm/6a816d73-grunt-contrib-compass.lock
+11 silly lockFile 6a816d73-grunt-contrib-compass grunt-contrib-compass
+12 silly lockFile 6a816d73-grunt-contrib-compass grunt-contrib-compass
+13 verbose addNamed [ 'grunt-contrib-compass', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile 9d4b61e1-grunt-contrib-compass grunt-contrib-compass@
+16 verbose lock grunt-contrib-compass@ /Users/hamishjacksonmee/.npm/9d4b61e1-grunt-contrib-compass.lock
+17 silly addNameRange { name: 'grunt-contrib-compass', range: '*', hasData: false }
+18 verbose url raw grunt-contrib-compass
+19 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-compass' ]
+20 verbose url resolved https://registry.npmjs.org/grunt-contrib-compass
+21 info trying registry request attempt 1 at 13:54:01
+22 http GET https://registry.npmjs.org/grunt-contrib-compass
+23 http 200 https://registry.npmjs.org/grunt-contrib-compass
+24 silly registry.get cb [ 200,
+24 silly registry.get   { date: 'Sun, 10 Aug 2014 01:54:02 GMT',
+24 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly registry.get     etag: '"308U2G2T3KUD18A6OJDS7JTRJ"',
+24 silly registry.get     'content-type': 'application/json',
+24 silly registry.get     'cache-control': 'max-age=60',
+24 silly registry.get     'content-length': '43015',
+24 silly registry.get     'accept-ranges': 'bytes',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     age: '0',
+24 silly registry.get     'x-served-by': 'cache-ak102-NZ',
+24 silly registry.get     'x-cache': 'MISS',
+24 silly registry.get     'x-cache-hits': '0',
+24 silly registry.get     'x-timer': 'S1407635641.290027,VS0,VE1174',
+24 silly registry.get     vary: 'Accept',
+24 silly registry.get     'keep-alive': 'timeout=10, max=50',
+24 silly registry.get     connection: 'Keep-Alive' } ]
+25 silly addNameRange number 2 { name: 'grunt-contrib-compass', range: '*', hasData: true }
+26 silly addNameRange versions [ 'grunt-contrib-compass',
+26 silly addNameRange   [ '0.1.0',
+26 silly addNameRange     '0.1.1',
+26 silly addNameRange     '0.1.2',
+26 silly addNameRange     '0.1.3',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.4.1',
+26 silly addNameRange     '0.5.0',
+26 silly addNameRange     '0.6.0',
+26 silly addNameRange     '0.7.0',
+26 silly addNameRange     '0.1.1-rc7',
+26 silly addNameRange     '0.1.1-rc8',
+26 silly addNameRange     '0.7.1',
+26 silly addNameRange     '0.7.2',
+26 silly addNameRange     '0.8.0',
+26 silly addNameRange     '0.9.0',
+26 silly addNameRange     '0.9.1' ] ]
+27 verbose addNamed [ 'grunt-contrib-compass', '0.9.1' ]
+28 verbose addNamed [ '0.9.1', '0.9.1' ]
+29 silly lockFile 58f846b8-grunt-contrib-compass-0-9-1 grunt-contrib-compass@0.9.1
+30 verbose lock grunt-contrib-compass@0.9.1 /Users/hamishjacksonmee/.npm/58f846b8-grunt-contrib-compass-0-9-1.lock
+31 silly lockFile 5f59a7ad--grunt-contrib-compass-0-9-1-tgz https://registry.npmjs.org/grunt-contrib-compass/-/grunt-contrib-compass-0.9.1.tgz
+32 verbose lock https://registry.npmjs.org/grunt-contrib-compass/-/grunt-contrib-compass-0.9.1.tgz /Users/hamishjacksonmee/.npm/5f59a7ad--grunt-contrib-compass-0-9-1-tgz.lock
+33 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-contrib-compass/-/grunt-contrib-compass-0.9.1.tgz',
+33 verbose addRemoteTarball   'd4c84eef03b7b376a6f9b46bdf7f1303664432d3' ]
+34 info retry fetch attempt 1 at 13:54:02
+35 verbose fetch to= /var/folders/kc/79ckjtj50vv54lmf6k030nh40000gn/T/npm-555-uFraKVtd/registry.npmjs.org/grunt-contrib-compass/-/grunt-contrib-compass-0.9.1.tgz
+36 http GET https://registry.npmjs.org/grunt-contrib-compass/-/grunt-contrib-compass-0.9.1.tgz
+37 http 200 https://registry.npmjs.org/grunt-contrib-compass/-/grunt-contrib-compass-0.9.1.tgz
+38 silly lockFile 5f59a7ad--grunt-contrib-compass-0-9-1-tgz https://registry.npmjs.org/grunt-contrib-compass/-/grunt-contrib-compass-0.9.1.tgz
+39 silly lockFile 5f59a7ad--grunt-contrib-compass-0-9-1-tgz https://registry.npmjs.org/grunt-contrib-compass/-/grunt-contrib-compass-0.9.1.tgz
+40 silly lockFile 58f846b8-grunt-contrib-compass-0-9-1 grunt-contrib-compass@0.9.1
+41 silly lockFile 58f846b8-grunt-contrib-compass-0-9-1 grunt-contrib-compass@0.9.1
+42 silly lockFile 9d4b61e1-grunt-contrib-compass grunt-contrib-compass@
+43 silly lockFile 9d4b61e1-grunt-contrib-compass grunt-contrib-compass@
+44 silly resolved [ { name: 'grunt-contrib-compass',
+44 silly resolved     description: 'Compile Sass to CSS using Compass',
+44 silly resolved     version: '0.9.1',
+44 silly resolved     author: { name: 'Grunt Team', url: 'http://gruntjs.com/' },
+44 silly resolved     repository:
+44 silly resolved      { type: 'git',
+44 silly resolved        url: 'git://github.com/gruntjs/grunt-contrib-compass' },
+44 silly resolved     licenses: [ [Object] ],
+44 silly resolved     engines: { node: '>=0.10.0' },
+44 silly resolved     scripts: { test: 'grunt test' },
+44 silly resolved     dependencies:
+44 silly resolved      { async: '^0.8.0',
+44 silly resolved        'bin-version-check': '^0.1.0',
+44 silly resolved        dargs: '^0.1.0',
+44 silly resolved        tmp: '0.0.23' },
+44 silly resolved     devDependencies:
+44 silly resolved      { grunt: '^0.4.5',
+44 silly resolved        'grunt-contrib-clean': '^0.5.0',
+44 silly resolved        'grunt-contrib-internal': '^0.4.2',
+44 silly resolved        'grunt-contrib-jshint': '^0.10.0',
+44 silly resolved        'grunt-contrib-nodeunit': '^0.4.0' },
+44 silly resolved     peerDependencies: { grunt: '~0.4.0' },
+44 silly resolved     keywords:
+44 silly resolved      [ 'gruntplugin',
+44 silly resolved        'compass',
+44 silly resolved        'scss',
+44 silly resolved        'sass',
+44 silly resolved        'css',
+44 silly resolved        'compile',
+44 silly resolved        'preprocessor',
+44 silly resolved        'style' ],
+44 silly resolved     files: [ 'tasks', 'LICENSE-MIT' ],
+44 silly resolved     bugs: { url: 'https://github.com/gruntjs/grunt-contrib-compass/issues' },
+44 silly resolved     homepage: 'https://github.com/gruntjs/grunt-contrib-compass',
+44 silly resolved     _id: 'grunt-contrib-compass@0.9.1',
+44 silly resolved     dist:
+44 silly resolved      { shasum: 'd4c84eef03b7b376a6f9b46bdf7f1303664432d3',
+44 silly resolved        tarball: 'http://registry.npmjs.org/grunt-contrib-compass/-/grunt-contrib-compass-0.9.1.tgz' },
+44 silly resolved     _from: 'grunt-contrib-compass@',
+44 silly resolved     _npmVersion: '1.3.26',
+44 silly resolved     _npmUser: { name: 'vladikoff', email: 'vlad@vladikoff.com' },
+44 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+44 silly resolved     directories: {},
+44 silly resolved     _shasum: 'd4c84eef03b7b376a6f9b46bdf7f1303664432d3',
+44 silly resolved     _resolved: 'https://registry.npmjs.org/grunt-contrib-compass/-/grunt-contrib-compass-0.9.1.tgz' } ]
+45 info install grunt-contrib-compass@0.9.1 into /Users/hamishjacksonmee/Desktop/Symantis.org
+46 info installOne grunt-contrib-compass@0.9.1
+47 info /Users/hamishjacksonmee/Desktop/Symantis.org/node_modules/grunt-contrib-compass unbuild
+48 info preuninstall grunt-contrib-compass@0.9.0
+49 info uninstall grunt-contrib-compass@0.9.0
+50 verbose true,/Users/hamishjacksonmee/Desktop/Symantis.org/node_modules,/Users/hamishjacksonmee/Desktop/Symantis.org/node_modules unbuild grunt-contrib-compass@0.9.0
+51 info postuninstall grunt-contrib-compass@0.9.0
+52 verbose tar unpack /Users/hamishjacksonmee/.npm/grunt-contrib-compass/0.9.1/package.tgz
+53 silly lockFile 1b24643d-de-modules-grunt-contrib-compass tar:///Users/hamishjacksonmee/Desktop/Symantis.org/node_modules/grunt-contrib-compass
+54 verbose lock tar:///Users/hamishjacksonmee/Desktop/Symantis.org/node_modules/grunt-contrib-compass /Users/hamishjacksonmee/.npm/1b24643d-de-modules-grunt-contrib-compass.lock
+55 silly lockFile f20bba8f-ontrib-compass-0-9-1-package-tgz tar:///Users/hamishjacksonmee/.npm/grunt-contrib-compass/0.9.1/package.tgz
+56 verbose lock tar:///Users/hamishjacksonmee/.npm/grunt-contrib-compass/0.9.1/package.tgz /Users/hamishjacksonmee/.npm/f20bba8f-ontrib-compass-0-9-1-package-tgz.lock
+57 silly gunzTarPerm modes [ '755', '644' ]
+58 silly gunzTarPerm extractEntry package.json
+59 silly gunzTarPerm extractEntry README.md
+60 silly gunzTarPerm extractEntry LICENSE-MIT
+61 silly gunzTarPerm extractEntry tasks/compass.js
+62 silly gunzTarPerm extractEntry tasks/lib/compass.js
+63 silly lockFile 1b24643d-de-modules-grunt-contrib-compass tar:///Users/hamishjacksonmee/Desktop/Symantis.org/node_modules/grunt-contrib-compass
+64 silly lockFile 1b24643d-de-modules-grunt-contrib-compass tar:///Users/hamishjacksonmee/Desktop/Symantis.org/node_modules/grunt-contrib-compass
+65 silly lockFile f20bba8f-ontrib-compass-0-9-1-package-tgz tar:///Users/hamishjacksonmee/.npm/grunt-contrib-compass/0.9.1/package.tgz
+66 silly lockFile f20bba8f-ontrib-compass-0-9-1-package-tgz tar:///Users/hamishjacksonmee/.npm/grunt-contrib-compass/0.9.1/package.tgz
+67 info preinstall grunt-contrib-compass@0.9.1
+68 verbose readDependencies using package.json deps
+69 verbose readDependencies using package.json deps
+70 verbose cache add [ 'async@^0.8.0', null ]
+71 verbose cache add name=undefined spec="async@^0.8.0" args=["async@^0.8.0",null]
+72 verbose parsed url { protocol: null,
+72 verbose parsed url   slashes: null,
+72 verbose parsed url   auth: null,
+72 verbose parsed url   host: null,
+72 verbose parsed url   port: null,
+72 verbose parsed url   hostname: null,
+72 verbose parsed url   hash: null,
+72 verbose parsed url   search: null,
+72 verbose parsed url   query: null,
+72 verbose parsed url   pathname: 'async@^0.8.0',
+72 verbose parsed url   path: 'async@^0.8.0',
+72 verbose parsed url   href: 'async@^0.8.0' }
+73 verbose cache add [ 'bin-version-check@^0.1.0', null ]
+74 verbose cache add name=undefined spec="bin-version-check@^0.1.0" args=["bin-version-check@^0.1.0",null]
+75 verbose parsed url { protocol: null,
+75 verbose parsed url   slashes: null,
+75 verbose parsed url   auth: null,
+75 verbose parsed url   host: null,
+75 verbose parsed url   port: null,
+75 verbose parsed url   hostname: null,
+75 verbose parsed url   hash: null,
+75 verbose parsed url   search: null,
+75 verbose parsed url   query: null,
+75 verbose parsed url   pathname: 'bin-version-check@^0.1.0',
+75 verbose parsed url   path: 'bin-version-check@^0.1.0',
+75 verbose parsed url   href: 'bin-version-check@^0.1.0' }
+76 verbose cache add [ 'dargs@^0.1.0', null ]
+77 verbose cache add name=undefined spec="dargs@^0.1.0" args=["dargs@^0.1.0",null]
+78 verbose parsed url { protocol: null,
+78 verbose parsed url   slashes: null,
+78 verbose parsed url   auth: null,
+78 verbose parsed url   host: null,
+78 verbose parsed url   port: null,
+78 verbose parsed url   hostname: null,
+78 verbose parsed url   hash: null,
+78 verbose parsed url   search: null,
+78 verbose parsed url   query: null,
+78 verbose parsed url   pathname: 'dargs@^0.1.0',
+78 verbose parsed url   path: 'dargs@^0.1.0',
+78 verbose parsed url   href: 'dargs@^0.1.0' }
+79 verbose cache add name="async" spec="^0.8.0" args=["async","^0.8.0"]
+80 verbose parsed url { protocol: null,
+80 verbose parsed url   slashes: null,
+80 verbose parsed url   auth: null,
+80 verbose parsed url   host: null,
+80 verbose parsed url   port: null,
+80 verbose parsed url   hostname: null,
+80 verbose parsed url   hash: null,
+80 verbose parsed url   search: null,
+80 verbose parsed url   query: null,
+80 verbose parsed url   pathname: '^0.8.0',
+80 verbose parsed url   path: '^0.8.0',
+80 verbose parsed url   href: '^0.8.0' }
+81 verbose addNamed [ 'async', '^0.8.0' ]
+82 verbose addNamed [ null, '>=0.8.0-0 <0.9.0-0' ]
+83 silly lockFile 742bab73-async-0-8-0 async@^0.8.0
+84 verbose lock async@^0.8.0 /Users/hamishjacksonmee/.npm/742bab73-async-0-8-0.lock
+85 verbose cache add name="bin-version-check" spec="^0.1.0" args=["bin-version-check","^0.1.0"]
+86 verbose parsed url { protocol: null,
+86 verbose parsed url   slashes: null,
+86 verbose parsed url   auth: null,
+86 verbose parsed url   host: null,
+86 verbose parsed url   port: null,
+86 verbose parsed url   hostname: null,
+86 verbose parsed url   hash: null,
+86 verbose parsed url   search: null,
+86 verbose parsed url   query: null,
+86 verbose parsed url   pathname: '^0.1.0',
+86 verbose parsed url   path: '^0.1.0',
+86 verbose parsed url   href: '^0.1.0' }
+87 verbose addNamed [ 'bin-version-check', '^0.1.0' ]
+88 verbose addNamed [ null, '>=0.1.0-0 <0.2.0-0' ]
+89 silly lockFile 766f676d-bin-version-check-0-1-0 bin-version-check@^0.1.0
+90 verbose lock bin-version-check@^0.1.0 /Users/hamishjacksonmee/.npm/766f676d-bin-version-check-0-1-0.lock
+91 verbose cache add [ 'tmp@0.0.23', null ]
+92 verbose cache add name=undefined spec="tmp@0.0.23" args=["tmp@0.0.23",null]
+93 verbose parsed url { protocol: null,
+93 verbose parsed url   slashes: null,
+93 verbose parsed url   auth: null,
+93 verbose parsed url   host: null,
+93 verbose parsed url   port: null,
+93 verbose parsed url   hostname: null,
+93 verbose parsed url   hash: null,
+93 verbose parsed url   search: null,
+93 verbose parsed url   query: null,
+93 verbose parsed url   pathname: 'tmp@0.0.23',
+93 verbose parsed url   path: 'tmp@0.0.23',
+93 verbose parsed url   href: 'tmp@0.0.23' }
+94 verbose cache add name="dargs" spec="^0.1.0" args=["dargs","^0.1.0"]
+95 verbose parsed url { protocol: null,
+95 verbose parsed url   slashes: null,
+95 verbose parsed url   auth: null,
+95 verbose parsed url   host: null,
+95 verbose parsed url   port: null,
+95 verbose parsed url   hostname: null,
+95 verbose parsed url   hash: null,
+95 verbose parsed url   search: null,
+95 verbose parsed url   query: null,
+95 verbose parsed url   pathname: '^0.1.0',
+95 verbose parsed url   path: '^0.1.0',
+95 verbose parsed url   href: '^0.1.0' }
+96 verbose addNamed [ 'dargs', '^0.1.0' ]
+97 verbose addNamed [ null, '>=0.1.0-0 <0.2.0-0' ]
+98 silly lockFile 42fb2a0b-dargs-0-1-0 dargs@^0.1.0
+99 verbose lock dargs@^0.1.0 /Users/hamishjacksonmee/.npm/42fb2a0b-dargs-0-1-0.lock
+100 verbose cache add name="tmp" spec="0.0.23" args=["tmp","0.0.23"]
+101 verbose parsed url { protocol: null,
+101 verbose parsed url   slashes: null,
+101 verbose parsed url   auth: null,
+101 verbose parsed url   host: null,
+101 verbose parsed url   port: null,
+101 verbose parsed url   hostname: null,
+101 verbose parsed url   hash: null,
+101 verbose parsed url   search: null,
+101 verbose parsed url   query: null,
+101 verbose parsed url   pathname: '0.0.23',
+101 verbose parsed url   path: '0.0.23',
+101 verbose parsed url   href: '0.0.23' }
+102 verbose addNamed [ 'tmp', '0.0.23' ]
+103 verbose addNamed [ '0.0.23', '0.0.23' ]
+104 silly lockFile f7638ceb-tmp-0-0-23 tmp@0.0.23
+105 verbose lock tmp@0.0.23 /Users/hamishjacksonmee/.npm/f7638ceb-tmp-0-0-23.lock
+106 silly addNameRange { name: 'async', range: '>=0.8.0-0 <0.9.0-0', hasData: false }
+107 silly addNameRange { name: 'bin-version-check',
+107 silly addNameRange   range: '>=0.1.0-0 <0.2.0-0',
+107 silly addNameRange   hasData: false }
+108 silly addNameRange { name: 'dargs', range: '>=0.1.0-0 <0.2.0-0', hasData: false }
+109 verbose url raw bin-version-check
+110 verbose url resolving [ 'https://registry.npmjs.org/', './bin-version-check' ]
+111 verbose url resolved https://registry.npmjs.org/bin-version-check
+112 info trying registry request attempt 1 at 13:54:03
+113 http GET https://registry.npmjs.org/bin-version-check
+114 verbose url raw dargs
+115 verbose url resolving [ 'https://registry.npmjs.org/', './dargs' ]
+116 verbose url resolved https://registry.npmjs.org/dargs
+117 info trying registry request attempt 1 at 13:54:03
+118 http GET https://registry.npmjs.org/dargs
+119 verbose url raw tmp
+120 verbose url resolving [ 'https://registry.npmjs.org/', './tmp' ]
+121 verbose url resolved https://registry.npmjs.org/tmp
+122 info trying registry request attempt 1 at 13:54:03
+123 verbose etag "7EEX0B275AFWTKLXBU24JHYBQ"
+124 http GET https://registry.npmjs.org/tmp
+125 verbose url raw async
+126 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+127 verbose url resolved https://registry.npmjs.org/async
+128 info trying registry request attempt 1 at 13:54:03
+129 verbose etag "B5J4ZR654JR27FI42M4CCUW8G"
+130 http GET https://registry.npmjs.org/async
+131 http 200 https://registry.npmjs.org/bin-version-check
+132 silly registry.get cb [ 200,
+132 silly registry.get   { date: 'Sun, 10 Aug 2014 01:54:04 GMT',
+132 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+132 silly registry.get     etag: '"BQBO3M352YZL0KFMTLS8334WO"',
+132 silly registry.get     'content-type': 'application/json',
+132 silly registry.get     'cache-control': 'max-age=60',
+132 silly registry.get     'content-length': '3633',
+132 silly registry.get     'accept-ranges': 'bytes',
+132 silly registry.get     via: '1.1 varnish',
+132 silly registry.get     age: '0',
+132 silly registry.get     'x-served-by': 'cache-ak102-NZ',
+132 silly registry.get     'x-cache': 'MISS',
+132 silly registry.get     'x-cache-hits': '0',
+132 silly registry.get     'x-timer': 'S1407635643.722038,VS0,VE826',
+132 silly registry.get     vary: 'Accept',
+132 silly registry.get     'keep-alive': 'timeout=10, max=50',
+132 silly registry.get     connection: 'Keep-Alive' } ]
+133 silly addNameRange number 2 { name: 'bin-version-check',
+133 silly addNameRange   range: '>=0.1.0-0 <0.2.0-0',
+133 silly addNameRange   hasData: true }
+134 silly addNameRange versions [ 'bin-version-check', [ '0.1.0' ] ]
+135 verbose addNamed [ 'bin-version-check', '0.1.0' ]
+136 verbose addNamed [ '0.1.0', '0.1.0' ]
+137 silly lockFile 1025b36b-bin-version-check-0-1-0 bin-version-check@0.1.0
+138 verbose lock bin-version-check@0.1.0 /Users/hamishjacksonmee/.npm/1025b36b-bin-version-check-0-1-0.lock
+139 silly lockFile f94fc2ad-heck-bin-version-check-0-1-0-tgz https://registry.npmjs.org/bin-version-check/-/bin-version-check-0.1.0.tgz
+140 verbose lock https://registry.npmjs.org/bin-version-check/-/bin-version-check-0.1.0.tgz /Users/hamishjacksonmee/.npm/f94fc2ad-heck-bin-version-check-0-1-0-tgz.lock
+141 http 200 https://registry.npmjs.org/dargs
+142 silly registry.get cb [ 200,
+142 silly registry.get   { date: 'Sun, 10 Aug 2014 01:54:04 GMT',
+142 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+142 silly registry.get     etag: '"3E17WXH4Y5HDOWNF76UR5TT01"',
+142 silly registry.get     'content-type': 'application/json',
+142 silly registry.get     'cache-control': 'max-age=60',
+142 silly registry.get     'content-length': '4454',
+142 silly registry.get     'accept-ranges': 'bytes',
+142 silly registry.get     via: '1.1 varnish',
+142 silly registry.get     age: '2710',
+142 silly registry.get     'x-served-by': 'cache-ak47-NZ',
+142 silly registry.get     'x-cache': 'MISS',
+142 silly registry.get     'x-cache-hits': '0',
+142 silly registry.get     'x-timer': 'S1407635643.733860,VS0,VE824',
+142 silly registry.get     vary: 'Accept',
+142 silly registry.get     'keep-alive': 'timeout=10, max=50',
+142 silly registry.get     connection: 'Keep-Alive' } ]
+143 verbose addRemoteTarball [ 'https://registry.npmjs.org/bin-version-check/-/bin-version-check-0.1.0.tgz',
+143 verbose addRemoteTarball   'dc9d366ea3f96fa05932ee8881a73776c8fee0e1' ]
+144 info retry fetch attempt 1 at 13:54:04
+145 verbose fetch to= /var/folders/kc/79ckjtj50vv54lmf6k030nh40000gn/T/npm-555-uFraKVtd/registry.npmjs.org/bin-version-check/-/bin-version-check-0.1.0.tgz
+146 http GET https://registry.npmjs.org/bin-version-check/-/bin-version-check-0.1.0.tgz
+147 silly addNameRange number 2 { name: 'dargs', range: '>=0.1.0-0 <0.2.0-0', hasData: true }
+148 silly addNameRange versions [ 'dargs', [ '0.1.0' ] ]
+149 verbose addNamed [ 'dargs', '0.1.0' ]
+150 verbose addNamed [ '0.1.0', '0.1.0' ]
+151 silly lockFile 23bfdef0-dargs-0-1-0 dargs@0.1.0
+152 verbose lock dargs@0.1.0 /Users/hamishjacksonmee/.npm/23bfdef0-dargs-0-1-0.lock
+153 silly lockFile d6397952--npmjs-org-dargs-dargs-0-1-0-tgz https://registry.npmjs.org/dargs/-/dargs-0.1.0.tgz
+154 verbose lock https://registry.npmjs.org/dargs/-/dargs-0.1.0.tgz /Users/hamishjacksonmee/.npm/d6397952--npmjs-org-dargs-dargs-0-1-0-tgz.lock
+155 verbose addRemoteTarball [ 'https://registry.npmjs.org/dargs/-/dargs-0.1.0.tgz',
+155 verbose addRemoteTarball   '2364ad9f441f976dcd5fe9961e21715665a5e3c3' ]
+156 info retry fetch attempt 1 at 13:54:04
+157 verbose fetch to= /var/folders/kc/79ckjtj50vv54lmf6k030nh40000gn/T/npm-555-uFraKVtd/registry.npmjs.org/dargs/-/dargs-0.1.0.tgz
+158 http GET https://registry.npmjs.org/dargs/-/dargs-0.1.0.tgz
+159 http 200 https://registry.npmjs.org/tmp
+160 silly registry.get cb [ 200,
+160 silly registry.get   { date: 'Sun, 10 Aug 2014 01:54:04 GMT',
+160 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+160 silly registry.get     etag: '"51XVMRPL3F9C76S888M8OU2TL"',
+160 silly registry.get     'content-type': 'application/json',
+160 silly registry.get     'cache-control': 'max-age=60',
+160 silly registry.get     'content-length': '30207',
+160 silly registry.get     'accept-ranges': 'bytes',
+160 silly registry.get     via: '1.1 varnish',
+160 silly registry.get     age: '0',
+160 silly registry.get     'x-served-by': 'cache-ak47-NZ',
+160 silly registry.get     'x-cache': 'MISS',
+160 silly registry.get     'x-cache-hits': '0',
+160 silly registry.get     'x-timer': 'S1407635643.738298,VS0,VE950',
+160 silly registry.get     vary: 'Accept',
+160 silly registry.get     'keep-alive': 'timeout=10, max=50',
+160 silly registry.get     connection: 'Keep-Alive' } ]
+161 silly lockFile f32f8216-try-npmjs-org-tmp-tmp-0-0-23-tgz https://registry.npmjs.org/tmp/-/tmp-0.0.23.tgz
+162 verbose lock https://registry.npmjs.org/tmp/-/tmp-0.0.23.tgz /Users/hamishjacksonmee/.npm/f32f8216-try-npmjs-org-tmp-tmp-0-0-23-tgz.lock
+163 verbose addRemoteTarball [ 'https://registry.npmjs.org/tmp/-/tmp-0.0.23.tgz',
+163 verbose addRemoteTarball   'de874aa5e974a85f0a32cdfdbd74663cb3bd9c74' ]
+164 info retry fetch attempt 1 at 13:54:04
+165 verbose fetch to= /var/folders/kc/79ckjtj50vv54lmf6k030nh40000gn/T/npm-555-uFraKVtd/registry.npmjs.org/tmp/-/tmp-0.0.23.tgz
+166 http GET https://registry.npmjs.org/tmp/-/tmp-0.0.23.tgz
+167 http 200 https://registry.npmjs.org/async
+168 silly registry.get cb [ 200,
+168 silly registry.get   { date: 'Sun, 10 Aug 2014 01:54:04 GMT',
+168 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+168 silly registry.get     etag: '"6F56H860K20W087372PUWE6TD"',
+168 silly registry.get     'content-type': 'application/json',
+168 silly registry.get     'cache-control': 'max-age=60',
+168 silly registry.get     'content-length': '104409',
+168 silly registry.get     'accept-ranges': 'bytes',
+168 silly registry.get     via: '1.1 varnish',
+168 silly registry.get     age: '20328',
+168 silly registry.get     'x-served-by': 'cache-ak47-NZ',
+168 silly registry.get     'x-cache': 'HIT',
+168 silly registry.get     'x-cache-hits': '19',
+168 silly registry.get     'x-timer': 'S1407635643.749526,VS0,VE946',
+168 silly registry.get     vary: 'Accept',
+168 silly registry.get     'keep-alive': 'timeout=10, max=50',
+168 silly registry.get     connection: 'Keep-Alive' } ]
+169 silly addNameRange number 2 { name: 'async', range: '>=0.8.0-0 <0.9.0-0', hasData: true }
+170 silly addNameRange versions [ 'async',
+170 silly addNameRange   [ '0.1.0',
+170 silly addNameRange     '0.1.1',
+170 silly addNameRange     '0.1.2',
+170 silly addNameRange     '0.1.3',
+170 silly addNameRange     '0.1.4',
+170 silly addNameRange     '0.1.5',
+170 silly addNameRange     '0.1.6',
+170 silly addNameRange     '0.1.7',
+170 silly addNameRange     '0.1.8',
+170 silly addNameRange     '0.1.9',
+170 silly addNameRange     '0.1.10',
+170 silly addNameRange     '0.1.11',
+170 silly addNameRange     '0.1.12',
+170 silly addNameRange     '0.1.13',
+170 silly addNameRange     '0.1.14',
+170 silly addNameRange     '0.1.15',
+170 silly addNameRange     '0.1.16',
+170 silly addNameRange     '0.1.17',
+170 silly addNameRange     '0.1.18',
+170 silly addNameRange     '0.1.19',
+170 silly addNameRange     '0.1.20',
+170 silly addNameRange     '0.1.21',
+170 silly addNameRange     '0.1.22',
+170 silly addNameRange     '0.2.0',
+170 silly addNameRange     '0.2.1',
+170 silly addNameRange     '0.2.2',
+170 silly addNameRange     '0.2.3',
+170 silly addNameRange     '0.2.4',
+170 silly addNameRange     '0.2.5',
+170 silly addNameRange     '0.2.6',
+170 silly addNameRange     '0.2.7',
+170 silly addNameRange     '0.2.8',
+170 silly addNameRange     '0.2.9',
+170 silly addNameRange     '0.2.10',
+170 silly addNameRange     '0.3.0',
+170 silly addNameRange     '0.4.0',
+170 silly addNameRange     '0.4.1',
+170 silly addNameRange     '0.5.0',
+170 silly addNameRange     '0.6.0',
+170 silly addNameRange     '0.6.1',
+170 silly addNameRange     '0.6.2',
+170 silly addNameRange     '0.7.0',
+170 silly addNameRange     '0.8.0',
+170 silly addNameRange     '0.9.0' ] ]
+171 verbose addNamed [ 'async', '0.8.0' ]
+172 verbose addNamed [ '0.8.0', '0.8.0' ]
+173 silly lockFile 3d809785-async-0-8-0 async@0.8.0
+174 verbose lock async@0.8.0 /Users/hamishjacksonmee/.npm/3d809785-async-0-8-0.lock
+175 silly lockFile d049e176--npmjs-org-async-async-0-8-0-tgz https://registry.npmjs.org/async/-/async-0.8.0.tgz
+176 verbose lock https://registry.npmjs.org/async/-/async-0.8.0.tgz /Users/hamishjacksonmee/.npm/d049e176--npmjs-org-async-async-0-8-0-tgz.lock
+177 verbose addRemoteTarball [ 'https://registry.npmjs.org/async/-/async-0.8.0.tgz',
+177 verbose addRemoteTarball   'ee65ec77298c2ff1456bc4418a052d0f06435112' ]
+178 info retry fetch attempt 1 at 13:54:04
+179 verbose fetch to= /var/folders/kc/79ckjtj50vv54lmf6k030nh40000gn/T/npm-555-uFraKVtd/registry.npmjs.org/async/-/async-0.8.0.tgz
+180 http GET https://registry.npmjs.org/async/-/async-0.8.0.tgz
+181 http 200 https://registry.npmjs.org/tmp/-/tmp-0.0.23.tgz
+182 silly lockFile f32f8216-try-npmjs-org-tmp-tmp-0-0-23-tgz https://registry.npmjs.org/tmp/-/tmp-0.0.23.tgz
+183 silly lockFile f32f8216-try-npmjs-org-tmp-tmp-0-0-23-tgz https://registry.npmjs.org/tmp/-/tmp-0.0.23.tgz
+184 silly lockFile f7638ceb-tmp-0-0-23 tmp@0.0.23
+185 silly lockFile f7638ceb-tmp-0-0-23 tmp@0.0.23
+186 verbose about to build /Users/hamishjacksonmee/Desktop/Symantis.org/node_modules/grunt-contrib-compass
+187 info /Users/hamishjacksonmee/Desktop/Symantis.org/node_modules/grunt-contrib-compass unbuild
+188 info preuninstall grunt-contrib-compass@0.9.1
+189 info uninstall grunt-contrib-compass@0.9.1
+190 verbose true,/Users/hamishjacksonmee/Desktop/Symantis.org/node_modules,/Users/hamishjacksonmee/Desktop/Symantis.org/node_modules unbuild grunt-contrib-compass@0.9.1
+191 info postuninstall grunt-contrib-compass@0.9.1
+192 error Error: EACCES, open '/Users/hamishjacksonmee/.npm/tmp/0.0.23/package/package.json'
+192 error  { [Error: EACCES, open '/Users/hamishjacksonmee/.npm/tmp/0.0.23/package/package.json']
+192 error   errno: 3,
+192 error   code: 'EACCES',
+192 error   path: '/Users/hamishjacksonmee/.npm/tmp/0.0.23/package/package.json',
+192 error   parent: 'grunt-contrib-compass' }
+193 error Please try running this command again as root/Administrator.
+194 error System Darwin 12.5.0
+195 error command "node" "/usr/local/bin/npm" "install" "grunt-contrib-compass" "--save-dev"
+196 error cwd /Users/hamishjacksonmee/Desktop/Symantis.org
+197 error node -v v0.10.28
+198 error npm -v 1.4.14
+199 error path /Users/hamishjacksonmee/.npm/tmp/0.0.23/package/package.json
+200 error code EACCES
+201 error errno 3
+202 error stack Error: EACCES, open '/Users/hamishjacksonmee/.npm/tmp/0.0.23/package/package.json'
+203 verbose exit [ 3, true ]
