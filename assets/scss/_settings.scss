@@ -46,3 +46,10 @@ $darkest: rgba(18,20,15,1.0);
 	color: white;
 	font-size: $size;
 }
+@mixin transition($time) {
+	-webkit-transition: all $time ease;                  
+    -moz-transition: all $time ease;                 
+    -o-transition: all $time ease;   
+    -ms-transition: all $time ease;          
+    transition: all $time ease;
+}

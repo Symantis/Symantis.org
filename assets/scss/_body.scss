@@ -22,29 +22,44 @@ body {
 	h1 {
 		text-align: left;
 		width: 100%;
-		@include font-semi(24px);
+		@include font-regular(rem-calc(48px));
+		padding-bottom: 20px;
+		margin: 0;
 	}
 	h3 {
 		text-align: left;
 		width: 100%;
-		@include font-regular(18px);
+		@include font-regular(rem-calc(18px));
+		margin: 0;
 	}
 	p {
 		text-align: left;
 		width: 100%;
-		@include font-regular(12px);
+		@include font-regular(rem-calc(12px));
+		margin: 0;
+		@include transition(50ms);
+		&:hover {
+			color: $primary-color;
+		}
 	}
 }
 .main-left {
 	padding-right: 50px;
 	header {
 		border-top: 2px white solid;
+		padding-top: 20px;
+		width: 100%;
 	}
 	.left-content {
 		ul {
 			list-style: none;
 			margin: 0;
 			padding: 0;
+			li {
+				margin: 0;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
 		}
 	}
 }
@@ -52,6 +67,8 @@ body {
 	padding-right: 50px;
 	header {
 		border-top: 1px $offWhite solid;
+		padding-top: 20px;
+		width: 100%;
 	}
 	.center-content {
 

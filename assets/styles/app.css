@@ -8375,49 +8375,72 @@ body {
 .fluid-row h1 {
   text-align: left;
   width: 100%;
-  font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  font-size: 24px;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  margin: 0;
 }
-/* line 27, ../scss/_body.scss */
+/* line 29, ../scss/_body.scss */
 .fluid-row h3 {
   text-align: left;
   width: 100%;
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
+  margin: 0;
 }
-/* line 32, ../scss/_body.scss */
+/* line 35, ../scss/_body.scss */
 .fluid-row p {
   text-align: left;
   width: 100%;
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  font-size: 12px;
+  font-size: 0.75rem;
+  margin: 0;
+  -webkit-transition: all 50ms ease;
+  -moz-transition: all 50ms ease;
+  -o-transition: all 50ms ease;
+  -ms-transition: all 50ms ease;
+  transition: all 50ms ease;
+}
+/* line 41, ../scss/_body.scss */
+.fluid-row p:hover {
+  color: #3b948b;
 }
 
-/* line 38, ../scss/_body.scss */
+/* line 46, ../scss/_body.scss */
 .main-left {
   padding-right: 50px;
 }
-/* line 40, ../scss/_body.scss */
+/* line 48, ../scss/_body.scss */
 .main-left header {
   border-top: 2px white solid;
+  padding-top: 20px;
+  width: 100%;
 }
-/* line 44, ../scss/_body.scss */
+/* line 54, ../scss/_body.scss */
 .main-left .left-content ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+/* line 58, ../scss/_body.scss */
+.main-left .left-content ul li {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-/* line 51, ../scss/_body.scss */
+/* line 66, ../scss/_body.scss */
 .main-center {
   padding-right: 50px;
 }
-/* line 53, ../scss/_body.scss */
+/* line 68, ../scss/_body.scss */
 .main-center header {
   border-top: 1px #e8e8e8 solid;
+  padding-top: 20px;
+  width: 100%;
 }
 
 /* line 1, ../scss/_kitchen.scss */
