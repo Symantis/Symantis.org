@@ -39,9 +39,11 @@
 		color: white;
 		background-color: rgba(0,0,0,0.0);
 	}
-	&:active {
-		background-color: rgba(0, 0, 0, 0.0);
-	}
+}
+
+.modal-button-hover:hover {
+	border-color: $primary-color;
+	color: white;
 }
 
 input[type=text], input[type=password] {
@@ -103,3 +105,4 @@ input[type=text], input[type=password] {
 		color: white;
 	}
 }
+

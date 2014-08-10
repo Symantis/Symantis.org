@@ -8697,12 +8697,14 @@ body {
   color: white;
   background-color: rgba(0, 0, 0, 0);
 }
-/* line 42, ../scss/_kitchen.scss */
-.modal-button-hover:active {
-  background-color: rgba(0, 0, 0, 0);
+
+/* line 44, ../scss/_kitchen.scss */
+.modal-button-hover:hover {
+  border-color: #3b948b;
+  color: white;
 }
 
-/* line 47, ../scss/_kitchen.scss */
+/* line 49, ../scss/_kitchen.scss */
 input[type=text], input[type=password] {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
@@ -8716,7 +8718,7 @@ input[type=text], input[type=password] {
   height: auto;
   color: #878787;
 }
-/* line 57, ../scss/_kitchen.scss */
+/* line 59, ../scss/_kitchen.scss */
 input[type=text]:focus, input[type=password]:focus {
   border-left: 10px outset #3b948b;
   box-shadow: 0px 0px 0px 0px white;
@@ -8727,23 +8729,23 @@ input[type=text]:focus, input[type=password]:focus {
   transition: all 0s ease;
 }
 
-/* line 65, ../scss/_kitchen.scss */
+/* line 67, ../scss/_kitchen.scss */
 .reveal-modal {
   outline: none;
 }
 
-/* line 69, ../scss/_kitchen.scss */
+/* line 71, ../scss/_kitchen.scss */
 .modal-window {
   text-align: center;
 }
-/* line 71, ../scss/_kitchen.scss */
+/* line 73, ../scss/_kitchen.scss */
 .modal-window input[type=text], .modal-window [type='password'] {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 78, ../scss/_kitchen.scss */
+/* line 80, ../scss/_kitchen.scss */
 .tag {
   border-style: solid;
   border-width: 1px;
@@ -8755,23 +8757,23 @@ input[type=text]:focus, input[type=password]:focus {
   height: 37px;
 }
 
-/* line 90, ../scss/_kitchen.scss */
+/* line 92, ../scss/_kitchen.scss */
 .admin-tag {
   border-color: #3b948b;
   color: #3b948b;
 }
 
-/* line 95, ../scss/_kitchen.scss */
+/* line 97, ../scss/_kitchen.scss */
 .text-link {
   color: white;
 }
 
-/* line 99, ../scss/_kitchen.scss */
+/* line 101, ../scss/_kitchen.scss */
 .text-link:hover {
   color: white;
   text-decoration: underline;
 }
-/* line 102, ../scss/_kitchen.scss */
+/* line 104, ../scss/_kitchen.scss */
 .text-link:hover h2 {
   color: white;
 }
