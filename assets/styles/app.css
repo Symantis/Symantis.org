@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 316, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.3.3/";
@@ -8581,7 +8582,7 @@ input:last-child {
   position: absolute;
   top: 50%;
   left: 0;
-  border: 2px white solid;
+  border: 1px white solid;
   margin-top: -100px;
   background-color: #2e302c;
 }
