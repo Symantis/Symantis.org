@@ -8517,3 +8517,22 @@ input:last-child {
   background-color: red;
   margin-top: 0.9375rem;
 }
+
+/* line 1, ../scss/_landing.scss */
+.land-image {
+  text-align: center;
+}
+
+/* line 4, ../scss/_landing.scss */
+.land-title {
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border: 2px white solid;
+  margin-top: -100px;
+  background-color: #2e302c;
+}
