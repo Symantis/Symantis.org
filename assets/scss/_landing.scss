@@ -15,6 +15,8 @@
 	background-color: $dark;
 	ul {
 		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 }
 .land-title-left {
@@ -36,10 +38,14 @@
 	}
 }
 .land-title-right {
-	li {
-		float: left;
-		padding: 5px;
+	text-align: right;
+	ul {
 		margin-top: 30px;
+		margin-right: 5%;
+		li {
+			float: right;
+			padding: 5px;
+		}
 	}
 }
 .social-svg {
