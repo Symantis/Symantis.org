@@ -11,6 +11,11 @@
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
+          <li>
+            <a class="button" ng-click="syMenuToggle()">
+              Open
+            </a>
+          </li>
           <li ng-if="currentUser" class="has-dropdown">
             <a>
               {{currentUser.email}} 

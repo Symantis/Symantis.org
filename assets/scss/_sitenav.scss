@@ -81,3 +81,40 @@
 	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
+
+
+/* Effect 9: Scale down pusher */
+
+.sy-effect.st-container {
+	-webkit-perspective: 1500px;
+	perspective: 1500px;
+}
+
+.sy-effect .st-pusher {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.sy-effect.sy-menu-open .sitenav-push {
+	-webkit-transform: translate3d(0, 0, -300px);
+	transform: translate3d(0, 0, -300px);
+}
+
+.sy-effect.sitenav {
+	opacity: 1;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}
+
+.sy-effect.sy-menu-open .sy-effect.sitenav {
+	visibility: visible;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.sy-effect.sitenav::after {
+	display: none;
+}
+

@@ -61,6 +61,13 @@ angular.module( 'symantis', [
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, config ) {
 	config.currentUser = window.currentUser;
+
+
+	$scope.syMenuOpen = false;
+	$scope.syMenuToggle = function(){
+		$scope.syMenuOpen = !$scope.syMenuOpen;
+	}
+
 });
 
 })();
