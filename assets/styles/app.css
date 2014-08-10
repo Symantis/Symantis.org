@@ -8486,33 +8486,44 @@ body,
   transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.5s;
 }
 
-/* Effect 9: Scale down pusher */
-/* line 94, ../scss/_sitenav.scss */
+/* line 93, ../scss/_sitenav.scss */
+.sitenav ul li {
+  list-style: none;
+}
+/* line 96, ../scss/_sitenav.scss */
+.sitenav ul li a {
+  color: #fff;
+}
+
+/* line 103, ../scss/_sitenav.scss */
 .sy-effect.sy-app {
   -webkit-perspective: 1500px;
   perspective: 1500px;
 }
 
-/* line 99, ../scss/_sitenav.scss */
+/* line 108, ../scss/_sitenav.scss */
 .sy-effect .sitenav-push {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-/* line 104, ../scss/_sitenav.scss */
+/* line 113, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sitenav-push {
-  -webkit-transform: translate3d(0, 0, -200px);
-  transform: translate3d(0, 0, -200px);
+  -webkit-transform: translate3d(100px, 0, -350px);
+  transform: translate3d(100px, 0, -350px);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
-/* line 109, ../scss/_sitenav.scss */
+/* line 123, ../scss/_sitenav.scss */
 .sy-effect.sitenav {
   opacity: 1;
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
 
-/* line 115, ../scss/_sitenav.scss */
+/* line 129, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav {
   visibility: visible;
   -webkit-transition: -webkit-transform 0.5s;
@@ -8521,7 +8532,7 @@ body,
   transform: translate3d(0, 0, 0);
 }
 
-/* line 123, ../scss/_sitenav.scss */
+/* line 137, ../scss/_sitenav.scss */
 .sy-effect.sitenav::after {
   display: none;
 }
@@ -8736,46 +8747,56 @@ h2 {
 /* line 16, ../scss/_landing.scss */
 .land-title ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 20, ../scss/_landing.scss */
+/* line 22, ../scss/_landing.scss */
 .land-title-left {
   padding: 40px;
 }
-/* line 22, ../scss/_landing.scss */
+/* line 24, ../scss/_landing.scss */
 .land-title-left p {
   font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 14px;
 }
 
-/* line 26, ../scss/_landing.scss */
+/* line 28, ../scss/_landing.scss */
 .land-title-mid {
   text-align: center;
 }
-/* line 28, ../scss/_landing.scss */
+/* line 30, ../scss/_landing.scss */
 .land-title-mid h1 {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 74px;
 }
-/* line 31, ../scss/_landing.scss */
+/* line 33, ../scss/_landing.scss */
 .land-title-mid .title-sy {
   color: #3b948b;
 }
-/* line 34, ../scss/_landing.scss */
+/* line 36, ../scss/_landing.scss */
 .land-title-mid .title-org {
   font-size: 24px;
 }
 
-/* line 39, ../scss/_landing.scss */
-.land-title-right li {
-  float: left;
-  padding: 5px;
+/* line 40, ../scss/_landing.scss */
+.land-title-right {
+  text-align: right;
+}
+/* line 42, ../scss/_landing.scss */
+.land-title-right ul {
   margin-top: 30px;
+  margin-right: 5%;
+}
+/* line 45, ../scss/_landing.scss */
+.land-title-right ul li {
+  float: right;
+  padding: 5px;
 }
 
-/* line 45, ../scss/_landing.scss */
+/* line 51, ../scss/_landing.scss */
 .social-svg {
   fill: white;
   height: auto;
@@ -8785,7 +8806,7 @@ h2 {
   -ms-transition: all 50ms ease;
   transition: all 50ms ease;
 }
-/* line 49, ../scss/_landing.scss */
+/* line 55, ../scss/_landing.scss */
 .social-svg:hover {
   fill: #3b948b;
 }
