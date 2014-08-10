@@ -6,6 +6,7 @@
 	line-height: normal;
 	text-align: center;
 	text-decoration: none;
+	@include font-regular(rem-calc(14pt));
 	color: white;
 	padding: rem-calc(10px) rem-calc(50px) rem-calc(10px) rem-calc(50px);
 	margin:0 0 1.25rem 0;
@@ -17,3 +18,12 @@
 		}
 }
 
+input[type=text], input[type=password] {
+	@include font-regular(rem-calc(18pt));
+	position: relative;
+	margin-bottom: 0px;
+	padding: rem-calc(10px) rem-calc(0px) rem-calc(10px) rem-calc(10px);
+	border-color: black;
+	border-width: rem-calc(1px);
+	border-style: solid;
+}

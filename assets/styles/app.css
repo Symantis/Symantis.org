@@ -8452,14 +8452,30 @@ body {
   line-height: normal;
   text-align: center;
   text-decoration: none;
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 0.875rem;
   color: white;
   padding: 0.625rem 3.125rem 0.625rem 3.125rem;
   margin: 0 0 1.25rem 0;
   display: inline-block;
   position: relative;
 }
-/* line 14, ../scss/_kitchen.scss */
+/* line 15, ../scss/_kitchen.scss */
 .sy-button:hover {
   border-color: black;
   color: black;
+}
+
+/* line 21, ../scss/_kitchen.scss */
+input[type=text], input[type=password] {
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1.125rem;
+  position: relative;
+  margin-bottom: 0px;
+  padding: 0.625rem 0 0.625rem 0.625rem;
+  border-color: black;
+  border-width: 0.0625rem;
+  border-style: solid;
 }
