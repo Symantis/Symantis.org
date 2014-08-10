@@ -1,7 +1,16 @@
 <div ng-controller="SiteNavCtrl">
-    <ul>
+    <ul class="top">
+      <li></li>
+    </ul>
+    <ul class="middle">
     	<li ng-repeat="siteItem in siteItems">
         	<a href="{{siteItem.url}}">{{siteItem.title}}</a>
     	</li>
+    </ul>
+    <ul class="bottom">
+      <li></li>
+    </ul>
+    <ul class="logo">
+      <li></li>
     </ul>
 </div>
