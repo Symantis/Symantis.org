@@ -16,10 +16,16 @@ angular.module( 'symantis', [
 	'symantis.about',
 	'symantis.messages',
 	'symantis.kitchen',
-	'symantis.template'
+	'symantis.template',
+	'symantis.search',
+	'symantis.docs',
+	'symantis.community',
+	'symantis.start',
+	'symantis.chat',
+	'symantis.app'
 ])
 
-.config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
+.config( function syAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
 	// $urlRouterProvider.otherwise( '/home' );
 	$urlRouterProvider.otherwise(function ($injector, $location) {
 		console.log($location);
