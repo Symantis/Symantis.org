@@ -8512,19 +8512,19 @@ body,
 .sy-effect.sy-menu-open .sitenav-push {
   -webkit-transform: translate3d(100px, 0, -350px);
   transform: translate3d(100px, 0, -350px);
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
-/* line 123, ../scss/_sitenav.scss */
+/* line 119, ../scss/_sitenav.scss */
 .sy-effect.sitenav {
   opacity: 1;
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
 
-/* line 129, ../scss/_sitenav.scss */
+/* line 125, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav {
   visibility: visible;
   -webkit-transition: -webkit-transform 0.5s;
@@ -8533,7 +8533,7 @@ body,
   transform: translate3d(0, 0, 0);
 }
 
-/* line 137, ../scss/_sitenav.scss */
+/* line 133, ../scss/_sitenav.scss */
 .sy-effect.sitenav::after {
   display: none;
 }
@@ -8660,26 +8660,49 @@ body {
   margin: 0 0 1.25rem 0;
   display: inline-block;
   position: relative;
+  -webkit-transition: all 50ms ease;
+  -moz-transition: all 50ms ease;
+  -o-transition: all 50ms ease;
+  -ms-transition: all 50ms ease;
+  transition: all 50ms ease;
 }
-/* line 16, ../scss/_kitchen.scss */
+/* line 17, ../scss/_kitchen.scss */
 .sy-button:hover {
-  border-color: black;
-  color: black;
+  border-color: #3b948b;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+/* line 22, ../scss/_kitchen.scss */
+.sy-button:visited {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* line 26, ../scss/_kitchen.scss */
+.sy-button:focus {
+  color: white;
   background-color: rgba(0, 0, 0, 0);
 }
 
-/* line 23, ../scss/_kitchen.scss */
+/* line 32, ../scss/_kitchen.scss */
 .modal-button-hover {
   margin-top: 20px;
 }
-
-/* line 27, ../scss/_kitchen.scss */
+/* line 34, ../scss/_kitchen.scss */
 .modal-button-hover:hover {
   border-color: #3b948b;
   color: white;
 }
+/* line 38, ../scss/_kitchen.scss */
+.modal-button-hover:visited {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* line 42, ../scss/_kitchen.scss */
+.modal-button-hover:active {
+  background-color: rgba(0, 0, 0, 0);
+}
 
-/* line 32, ../scss/_kitchen.scss */
+/* line 47, ../scss/_kitchen.scss */
 input[type=text], input[type=password] {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
@@ -8693,11 +8716,10 @@ input[type=text], input[type=password] {
   height: auto;
   color: #878787;
 }
-/* line 42, ../scss/_kitchen.scss */
+/* line 57, ../scss/_kitchen.scss */
 input[type=text]:focus, input[type=password]:focus {
-  padding-left: -10px;
-  border-left: 10px inset #3b948b;
-  box-shadow: none;
+  border-left: 10px outset #3b948b;
+  box-shadow: 0px 0px 0px 0px white;
   -webkit-transition: all 0s ease;
   -moz-transition: all 0s ease;
   -o-transition: all 0s ease;
@@ -8705,36 +8727,74 @@ input[type=text]:focus, input[type=password]:focus {
   transition: all 0s ease;
 }
 
-/* line 50, ../scss/_kitchen.scss */
+/* line 65, ../scss/_kitchen.scss */
 .reveal-modal {
   outline: none;
 }
 
-/* line 54, ../scss/_kitchen.scss */
+/* line 69, ../scss/_kitchen.scss */
 .modal-window {
   text-align: center;
 }
-/* line 57, ../scss/_kitchen.scss */
+/* line 71, ../scss/_kitchen.scss */
 .modal-window input[type=text], .modal-window [type='password'] {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 64, ../scss/_kitchen.scss */
-h2 {
+/* line 78, ../scss/_kitchen.scss */
+.tag {
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  margin: 5px 5px 20px 5px;
+  padding: 4px 10px 4px 10px;
+  float: left;
+  list-style: none;
+  height: 37px;
+}
+
+/* line 90, ../scss/_kitchen.scss */
+.admin-tag {
+  border-color: #3b948b;
+  color: #3b948b;
+}
+
+/* line 95, ../scss/_kitchen.scss */
+.text-link {
+  color: white;
+}
+
+/* line 99, ../scss/_kitchen.scss */
+.text-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+/* line 102, ../scss/_kitchen.scss */
+.text-link:hover h2 {
   color: white;
 }
 
 /* line 1, ../scss/_landing.scss */
+.home-initial {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 10, ../scss/_landing.scss */
 .home-vert-center {
-  height: 50vh;
+  height: 50%;
   position: absolute;
   top: 80px;
   width: 100%;
 }
 
-/* line 7, ../scss/_landing.scss */
+/* line 16, ../scss/_landing.scss */
 .home-top {
   width: 100%;
   max-width: 100%;
@@ -8743,14 +8803,14 @@ h2 {
   bottom: 160px;
 }
 
-/* line 14, ../scss/_landing.scss */
+/* line 23, ../scss/_landing.scss */
 .land-image {
   text-align: center;
   max-width: 100%;
   position: relative;
 }
 
-/* line 19, ../scss/_landing.scss */
+/* line 28, ../scss/_landing.scss */
 .land-title {
   position: absolute;
   bottom: 0;
@@ -8762,60 +8822,62 @@ h2 {
   border-top: 1px white solid;
   border-bottom: 1px white solid;
   background-color: #2e302c;
+  z-index: 10;
 }
-/* line 30, ../scss/_landing.scss */
+/* line 40, ../scss/_landing.scss */
 .land-title ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 36, ../scss/_landing.scss */
+/* line 46, ../scss/_landing.scss */
 .land-title-left {
   padding: 40px;
 }
-/* line 38, ../scss/_landing.scss */
+/* line 48, ../scss/_landing.scss */
 .land-title-left p {
   font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
-/* line 42, ../scss/_landing.scss */
+/* line 52, ../scss/_landing.scss */
 .land-title-mid {
   text-align: center;
 }
-/* line 44, ../scss/_landing.scss */
+/* line 54, ../scss/_landing.scss */
 .land-title-mid h1 {
+  margin-top: -5px;
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  font-size: 74px;
+  font-size: 5.25rem;
 }
-/* line 47, ../scss/_landing.scss */
+/* line 58, ../scss/_landing.scss */
 .land-title-mid .title-sy {
   color: #3b948b;
 }
-/* line 50, ../scss/_landing.scss */
+/* line 61, ../scss/_landing.scss */
 .land-title-mid .title-org {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
-/* line 54, ../scss/_landing.scss */
+/* line 65, ../scss/_landing.scss */
 .land-title-right {
   text-align: right;
 }
-/* line 56, ../scss/_landing.scss */
+/* line 67, ../scss/_landing.scss */
 .land-title-right ul {
   margin-top: 30px;
   margin-right: 5%;
 }
-/* line 59, ../scss/_landing.scss */
+/* line 70, ../scss/_landing.scss */
 .land-title-right ul li {
   float: right;
   padding: 5px;
 }
 
-/* line 65, ../scss/_landing.scss */
+/* line 76, ../scss/_landing.scss */
 .social-svg {
   fill: white;
   height: auto;
@@ -8825,7 +8887,126 @@ h2 {
   -ms-transition: all 50ms ease;
   transition: all 50ms ease;
 }
-/* line 69, ../scss/_landing.scss */
+/* line 80, ../scss/_landing.scss */
 .social-svg:hover {
   fill: #3b948b;
+}
+
+/* line 84, ../scss/_landing.scss */
+.land-content {
+  position: absolute;
+  top: 50%;
+  padding-top: 80px;
+  max-width: 100%;
+  height: 50%;
+  z-index: 5;
+}
+
+/* line 92, ../scss/_landing.scss */
+.home-nav {
+  width: 100%;
+  position: relative;
+}
+/* line 95, ../scss/_landing.scss */
+.home-nav ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 360px;
+  margin-top: 40px;
+}
+/* line 100, ../scss/_landing.scss */
+.home-nav ul li {
+  float: left;
+  width: 120px;
+  text-align: center;
+  height: 25px;
+  border-right: 1px white solid;
+  margin-right: -1px;
+}
+/* line 107, ../scss/_landing.scss */
+.home-nav ul li p {
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 0.875rem;
+  -webkit-transition: all 50ms ease;
+  -moz-transition: all 50ms ease;
+  -o-transition: all 50ms ease;
+  -ms-transition: all 50ms ease;
+  transition: all 50ms ease;
+}
+/* line 110, ../scss/_landing.scss */
+.home-nav ul li p:hover {
+  color: #3b948b;
+}
+/* line 114, ../scss/_landing.scss */
+.home-nav ul li:last-child {
+  border-right: none;
+}
+
+/* line 120, ../scss/_landing.scss */
+.home-quote {
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 50%;
+  margin-left: 25%;
+  margin-left: 25%;
+}
+/* line 128, ../scss/_landing.scss */
+.home-quote quote {
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+}
+
+/* line 133, ../scss/_landing.scss */
+.home-signup {
+  width: 100%;
+  text-align: center;
+}
+/* line 136, ../scss/_landing.scss */
+.home-signup p {
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 0.75rem;
+}
+/* line 138, ../scss/_landing.scss */
+.home-signup p a {
+  color: white;
+}
+/* line 140, ../scss/_landing.scss */
+.home-signup p a:hover {
+  text-decoration: underline;
+}
+/* line 145, ../scss/_landing.scss */
+.home-signup .large-button {
+  width: 320px;
+  margin-bottom: 10px;
+}
+
+/* line 150, ../scss/_landing.scss */
+.home-down-button {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+/* line 155, ../scss/_landing.scss */
+.home-down-button .down-svg {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: auto;
+  fill: white;
+  -webkit-transition: all 50ms ease;
+  -moz-transition: all 50ms ease;
+  -o-transition: all 50ms ease;
+  -ms-transition: all 50ms ease;
+  transition: all 50ms ease;
+}
+/* line 162, ../scss/_landing.scss */
+.home-down-button .down-svg:hover {
+  fill: #12140f;
 }

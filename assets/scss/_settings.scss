@@ -30,6 +30,7 @@ $reveal-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.45);
 $reveal-close-color: #FFFFFF;
 $reveal-close-weight: light;
 
+
 @mixin font-regular($size) {
 	font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: white;
@@ -61,4 +62,9 @@ $reveal-close-weight: light;
     -o-transition: all $time ease;   
     -ms-transition: all $time ease;          
     transition: all $time ease;
+}
+@mixin drop-shadow {
+	-webkit-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:    2px 3px 15px 0px rgba(0, 0, 0, 0.5);
+	box-shadow:         2px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }

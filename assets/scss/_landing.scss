@@ -1,5 +1,14 @@
+.home-initial {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
 .home-vert-center {
-	height: 50vh;
+	height: 50%;
 	position: absolute;
 	top: 80px;
 	width: 100%;
@@ -27,6 +36,7 @@
 	border-top: 1px white solid;
 	border-bottom: 1px white solid;
 	background-color: $dark;
+	z-index: 10;
 	ul {
 		list-style: none;
 		margin: 0;
@@ -36,19 +46,20 @@
 .land-title-left {
 	padding: 40px;
 	p {
-		@include font-light(14px);
+		@include font-light(rem-calc(14px));
 	}
 }
 .land-title-mid {
 	text-align: center;
 	h1 {
-		@include font-regular(74px);
+		margin-top: -5px;
+		@include font-regular(rem-calc(84px));
 	}
 	.title-sy {
 		color: $primary-color;
 	}
 	.title-org {
-		font-size: 24px;
+		font-size: rem-calc(24px);
 	}
 }
 .land-title-right {
@@ -70,3 +81,88 @@
 		fill: $primary-color;
 	}
 }
+.land-content {
+	position: absolute;
+	top: 50%;
+	padding-top: 80px;
+	max-width: 100%;
+	height: 50%;
+	z-index: 5;
+}
+.home-nav {
+	width: 100%;
+	position: relative;
+	ul {
+		list-style: none;
+		margin: 0 auto;
+		width: 360px;
+		margin-top: 40px;
+		li {
+			float: left;
+			width: 120px;
+			text-align: center;
+			height: 25px;
+			border-right: 1px white solid;
+			margin-right: -1px;
+			p {
+				@include font-regular(rem-calc(14px));
+				@include transition(50ms);
+				&:hover {
+					color: $primary-color;
+				}
+			}
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+}
+.home-quote {
+	width: 100%;
+	text-align: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 50%;
+	margin-left: 25%;
+	margin-left: 25%;
+	quote {
+		@include font-regular(rem-calc(40px));
+		line-height: rem-calc(50px);
+	}
+}
+.home-signup {
+	width: 100%;
+	text-align: center;
+	p {
+		@include font-regular(rem-calc(12px));
+		a {
+			color: white;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.large-button {
+		width: 320px;
+		margin-bottom: 10px;
+	}
+}
+.home-down-button {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	.down-svg {
+		padding: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+		height: auto;
+		fill: white;
+		@include transition(50ms);
+		&:hover {
+			fill: $darkest;
+		}
+	}
+}
+
+

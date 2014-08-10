@@ -113,11 +113,7 @@ body,
 .sy-effect.sy-menu-open .sitenav-push {
 	-webkit-transform: translate3d(100px, 0, -350px);
 	transform: translate3d(100px, 0, -350px);
-
-
-	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+	@include drop-shadow;
 }
 
 .sy-effect.sitenav {
