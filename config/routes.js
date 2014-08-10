@@ -62,8 +62,29 @@ module.exports.routes = {
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
   // and examples.
 
-  'get /home': 'HomeController.index',
-  'get /about': 'HomeController.index',
-  'get /messages': 'HomeController.index'
+  'get /home/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /about/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /messages': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /kitchen/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /help/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /register/*': {
+    controller: 'AuthController',
+    action: 'register'
+  }
 
 };
