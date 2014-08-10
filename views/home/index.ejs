@@ -13,8 +13,8 @@
 
 <div ng-include="'header/index.tpl.html'"></div>
 
-<div class="sy-app">
-	<div class="sitenav" ui-view="sitenav">
+<div class="sy-app sy-effect" ng-class="{'sy-menu-open': syMenuOpen}">
+	<div class="sitenav sy-effect" ui-view="sitenav">
 	</div><!-- /.sitenav -->
 
 	<div class="sitenav-push">
