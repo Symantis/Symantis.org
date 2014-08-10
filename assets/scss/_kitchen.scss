@@ -1,7 +1,24 @@
 .sy-button {
-	background-color: red;
-	border-color: #FFFFFF;
+	border-color: white;
+	border-width: rem-calc(3px);
+	border-style: solid;
+	font-weight: normal;
+	line-height: normal;
 	text-align: center;
+	text-decoration: none;
+	color: white;
 	padding: rem-calc(10px) rem-calc(30px) rem-calc(10px) rem-calc(30px);
 	margin:0 0 1.25rem 0;
+<<<<<<< HEAD
 }
+=======
+	display: inline-block;
+	position: relative;
+		&:hover {
+			border-color: black;
+			color: black;
+		}
+}
+
+
+>>>>>>> FETCH_HEAD

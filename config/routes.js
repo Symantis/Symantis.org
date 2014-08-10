@@ -74,15 +74,19 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'index'
   },
-  'get /kitchen/*': {
+  'get /kitchen': {
     controller: 'HomeController',
     action: 'index'
   },
-  'get /help/*': {
+  'get /template': {
     controller: 'HomeController',
     action: 'index'
   },
-  'get /register/*': {
+  'get /help': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /register': {
     controller: 'AuthController',
     action: 'register'
   }

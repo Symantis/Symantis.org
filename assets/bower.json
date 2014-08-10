@@ -16,7 +16,8 @@
     "lodash": "~2.4.1",
     "angular-moment": "~0.6.2",
     "angular-translate": "~2.1.0",
-    "angular-translate-loader-static-files": "~2.1.0"
+    "angular-translate-loader-static-files": "~2.1.0",
+    "ng-idle": "~0.3.5"
   },
   "dependencies": {},
   "resolutions": {
