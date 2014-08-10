@@ -8424,14 +8424,14 @@ body {
 /* line 1, ../scss/_kitchen.scss */
 .sy-button {
   border-color: white;
-  border-width: 0.1875rem;
+  border-width: 0.0625rem;
   border-style: solid;
   font-weight: normal;
   line-height: normal;
   text-align: center;
   text-decoration: none;
   color: white;
-  padding: 0.625rem 1.875rem 0.625rem 1.875rem;
+  padding: 0.625rem 3.125rem 0.625rem 3.125rem;
   margin: 0 0 1.25rem 0;
   display: inline-block;
   position: relative;
