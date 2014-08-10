@@ -8558,14 +8558,6 @@ input[type=text]:focus, input[type=password]:focus {
   -ms-transition: all 0s ease;
   transition: all 0s ease;
 }
-<<<<<<< HEAD
-=======
-
-/* line 40, ../scss/_kitchen.scss */
-input:last-child {
-  background-color: red;
-  margin-top: 0.9375rem;
-}
 
 /* line 1, ../scss/_landing.scss */
 .land-image {
@@ -8585,4 +8577,3 @@ input:last-child {
   margin-top: -100px;
   background-color: #2e302c;
 }
->>>>>>> FETCH_HEAD
