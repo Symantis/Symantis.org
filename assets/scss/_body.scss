@@ -33,7 +33,7 @@ body {
 		color: white;
 		font-family: sans-serif;
 		font-size: 12px;
-		font-weight: 400;
+		font-weight: 300;
 	}
 }
 .main-left {
@@ -42,7 +42,10 @@ body {
 		border-top: 1px white solid;
 	}
 	.left-content {
-
+		ul {
+			list-style: none;
+			
+		}
 	}
 }
 .main-center {

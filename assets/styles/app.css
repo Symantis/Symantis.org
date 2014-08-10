@@ -8388,7 +8388,7 @@ body {
   color: white;
   font-family: sans-serif;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* line 39, ../scss/_body.scss */
@@ -8399,21 +8399,25 @@ body {
 .main-left header {
   border-top: 1px white solid;
 }
+/* line 45, ../scss/_body.scss */
+.main-left .left-content ul {
+  list-style: none;
+}
 
-/* line 48, ../scss/_body.scss */
+/* line 51, ../scss/_body.scss */
 .main-center {
   padding: 0px 10px 10px 10px;
 }
-/* line 50, ../scss/_body.scss */
+/* line 53, ../scss/_body.scss */
 .main-center header {
   border-top: 1px white solid;
 }
 
-/* line 57, ../scss/_body.scss */
+/* line 60, ../scss/_body.scss */
 .main-right {
   padding: 0px 10px 10px 10px;
 }
-/* line 59, ../scss/_body.scss */
+/* line 62, ../scss/_body.scss */
 .main-right header {
   border-top: 1px white solid;
 }
