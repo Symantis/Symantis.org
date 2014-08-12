@@ -1,6 +1,23 @@
-<h1>Check me out!</h1>
-<p class="lead">
-	Sign up here
-</p>
-<a href="#" class="sy-button modal-button-hover">Sign Up</a>
-<a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+<div class="modal-window">
+    <h2>Check me out!</h2>
+    <p class="lead">
+        Sign up here
+    </p>
+
+        <form class="modal-form">
+		  <div class="row">
+		    <div class="large-12 columns">
+		      <input type="text" placeholder="Username" />
+		      <input type="password" placeholder="Password" />
+		      <input type="text" placeholder="Email" />
+		      <button href="#" class="sy-button modal-button" ng-click="kitchenModal()">Sign Up</button>
+		      <!-- can we call a modal within a modal and change the content? -->
+		    </div>
+		  </div>
+		</form>
+
+    <!-- <a href="#" class="sy-button modal-button-hover">Sign Up</a> -->
+    <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+
+    <p>By signing up you are agreeing to our T's and C's</p>
+</div>

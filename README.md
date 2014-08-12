@@ -35,7 +35,7 @@ You will need to have Sails v0.10 installed on your machine (sudo npm install sa
 
 Once Lifted, compile the SASS by saving your app.scss file (this is a bug that needs fixed) and then Check it out at [http://localhost:1337](http://localhost:1337)
 
-If you do not have Compass installed you will need to run `sudo gem install compass` and `npm install -g compass`
+If you do not have Compass installed you will need to run `sudo gem install compass` and `npm install compass`
 
 Development process
 -------------------
@@ -67,7 +67,7 @@ For the first time, Javascript is availible on the frontend and backend (Node.js
 
 ###Why Sails.js###
 
-Sails has brought a really functional and powerful MVC framework to the Node.js platform.  Since a Symantis goal is to keep developers and designers on the same beat, we need implement common structures like MVC. Sails.js is also stable and is quickly becoming popular amongst the Node.js community.
+Sails has brought a really functional and powerful MVC framework to the Node.js platform.  Since a Symantis goal is to keep developers and designers on the same beat, we need to implement common structures like MVC. Sails.js is also stable and is quickly becoming popular amongst the Node.js community.
 
 ###Why Angular.js###
 
