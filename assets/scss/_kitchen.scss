@@ -5,7 +5,6 @@ input[type="submit"]::-moz-focus-inner,
 input[type="file"] > input[type="button"]::-moz-focus-inner {
     border: none;
 }
-
 .sy-button {
 	background-color: rgba(0, 0, 0, 0.0);
 	border-color: white;
@@ -40,32 +39,29 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		border-color: white;
 	}
 }
-
 .modal-button {
 	margin-top: 20px;
 }
-
-input[type=text], input[type=password] {
-	@include font-regular(rem-calc(18pt));
-	position: relative;
-	margin: rem-calc(1px);
-	padding: rem-calc(10px) rem-calc(0px) rem-calc(10px) rem-calc(10px);
-	border: none;
-	/*border-width: rem-calc(1px);
-	border-style: solid;*/
-	height: auto;
-	color: $gray;
-	&:focus {
-		border-left: 10px outset $primary-color;
-		box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
-		@include transition(0s);
+.modal-form {
+	input[type=text], input[type=password] {
+		@include font-regular(rem-calc(18pt));
+		margin-bottom: rem-calc(1px);
+		padding: rem-calc(10px) rem-calc(0px) rem-calc(10px) rem-calc(10px);
+		border: none;
+		/*border-width: rem-calc(1px);
+		border-style: solid;*/
+		height: auto;
+		color: $gray;
+		&:focus {
+			border-left: 10px outset $primary-color;
+			box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+			@include transition(50ms);
+		}
 	}
 }
-
 .reveal-modal {
 	outline:none;
 }
-
 .modal-window {
 	text-align: center;
 	input[type=text], [type='password'] {
@@ -74,22 +70,27 @@ input[type=text], input[type=password] {
 		margin-right: auto;
 	}
 }
-
 .tag {
-	border-style: solid;
-	border-width: 1px;
-	border-color: white;
+	border: 1px solid white;
 	margin: 5px 5px 20px 5px;
 	padding: 4px 10px 4px 10px;
 	float: left;
 	list-style: none;
 	//needs to be auto
 	height: 37px;
+	&:hover {
+		border-color: $primary-color;
+		color: $primary-color;
+	}
 }
 
 .admin-tag {
 	border-color: $primary-color;
 	color: $primary-color;
+	&:hover {
+		border-color: white;
+		color: white;
+	}
 }
 
 .text-link {
@@ -103,4 +104,79 @@ input[type=text], input[type=password] {
 		color: white;
 	}
 }
+
+$opact: 0.98;
+.full-screen {
+	background: rgba(130,130,130,1.0);
+	background: -moz-linear-gradient(top, rgba(130,130,130,$opact) 0%, rgba(75,75,75,$opact) 30%, rgba(41,41,41,$opact) 44%, rgba(41,41,41,$opact) 56%, rgba(75,75,75,$opact) 70%, rgba(130,130,130,$opact) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(130,130,130,$opact)), color-stop(30%,rgba(75,75,75,$opact)), color-stop(44%,rgba(41,41,41,$opact)), color-stop(56%,rgba(41,41,41,$opact)), color-stop(70%,rgba(75,75,75,$opact)), color-stop(100%,rgba(130,130,130,$opact)));
+	background: -webkit-linear-gradient(top, rgba(130,130,130,$opact) 0%,rgba(75,75,75,$opact) 30%,rgba(41,41,41,$opact) 44%,rgba(41,41,41,$opact) 56%,rgba(75,75,75,$opact) 70%,rgba(130,130,130,$opact) 100%);
+	background: -o-linear-gradient(top, rgba(130,130,130,$opact) 0%,rgba(75,75,75,$opact) 30%,rgba(41,41,41,$opact) 44%,rgba(41,41,41,$opact) 56%,rgba(75,75,75,$opact) 70%,rgba(130,130,130,$opact) 100%);
+	background: -ms-linear-gradient(top, rgba(130,130,130,$opact) 0%,rgba(75,75,75,$opact) 30%,rgba(41,41,41,$opact) 44%,rgba(41,41,41,$opact) 56%,rgba(75,75,75,$opact) 70%,rgba(130,130,130,$opact) 100%);
+	background: linear-gradient(to bottom, rgba(130,130,130,$opact) 0%,rgba(75,75,75,$opact) 30%,rgba(41,41,41,$opact) 44%,rgba(41,41,41,$opact) 56%,rgba(75,75,75,$opact) 70%,rgba(130,130,130,$opact) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828282', endColorstr='#828282',GradientType=0 );
+	background-position: fixed;
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	padding-top: rem-calc(30px);
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.left-search {
+	header {
+		padding-top: 0;
+	}
+}
+.exit-search {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	padding: rem-calc(10px);
+	margin: rem-calc(10px);
+	.exit-icon {
+		fill: white;
+	}
+	@include transition(50ms);
+	&:hover .exit-icon  {
+		fill: $gray;
+	}
+}
+.search-form {
+	&::-webkit-input-placeholder { @include font-regular(rem-calc(48px)); color: $gray; }
+	&:-moz-placeholder { @include font-regular(rem-calc(48px)); color: $gray; opacity: 1; }
+	&::-moz-placeholder { @include font-regular(rem-calc(48px)); color: $gray; opacity: 1; }
+	&:-ms-input-placeholder { @include font-regular(rem-calc(48px)); color: $gray; }
+	.search-field {
+		background: rgba(255,255,255,0.0);
+		border: none;
+		border-color: inherit;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		padding: 0;
+		margin: 0;
+		height: rem-calc(65px);
+		@include font-regular(rem-calc(48px));
+		&:focus {
+			background: rgba(255,255,255,0.0);
+			outline: 0;
+			outline: none;
+			border-color: inherit;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+}
+.search-top {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+
+
+
+
+
+
 

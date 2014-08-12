@@ -28,10 +28,17 @@ angular.module( 'symantis.kitchen', [
 			windowClass: 'small'
 		});
 	};
+	$scope.FullScreenModal = function () {
+
+		var modalInstance = $modal.open({
+			templateUrl: 'kitchen/modals/FullScreenModal.tpl.html',
+			controller: 'KitchenModalCtrl',
+			windowClass: 'full-screen'
+		});
+	};
 	
 })
 .controller( 'KitchenModalCtrl', function KitchenModalController($scope, $modalInstance){
-
 
 	$scope.ok = function () {
 		$modalInstance.close();
@@ -40,4 +47,5 @@ angular.module( 'symantis.kitchen', [
 	$scope.cancel = function () {
 		$modalInstance.dismiss('cancel');
 	};
+
 });
