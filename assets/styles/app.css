@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-@charset "UTF-8";
->>>>>>> FETCH_HEAD
 /* line 316, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.3.3/";
@@ -8490,7 +8486,6 @@ body,
   transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.5s;
 }
 
-<<<<<<< HEAD
 /* line 93, ../scss/_sitenav.scss */
 .sitenav ul li {
   list-style: none;
@@ -8501,26 +8496,17 @@ body,
 }
 
 /* line 103, ../scss/_sitenav.scss */
-=======
-/* Effect 9: Scale down pusher */
-/* line 94, ../scss/_sitenav.scss */
->>>>>>> FETCH_HEAD
 .sy-effect.sy-app {
   -webkit-perspective: 1500px;
   perspective: 1500px;
 }
 
-<<<<<<< HEAD
 /* line 108, ../scss/_sitenav.scss */
-=======
-/* line 99, ../scss/_sitenav.scss */
->>>>>>> FETCH_HEAD
 .sy-effect .sitenav-push {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-<<<<<<< HEAD
 /* line 113, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sitenav-push {
   -webkit-transform: translate3d(100px, 0, -350px);
@@ -8531,26 +8517,13 @@ body,
 }
 
 /* line 123, ../scss/_sitenav.scss */
-=======
-/* line 104, ../scss/_sitenav.scss */
-.sy-effect.sy-menu-open .sitenav-push {
-  -webkit-transform: translate3d(0, 0, -200px);
-  transform: translate3d(0, 0, -200px);
-}
-
-/* line 109, ../scss/_sitenav.scss */
->>>>>>> FETCH_HEAD
 .sy-effect.sitenav {
   opacity: 1;
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
 
-<<<<<<< HEAD
 /* line 129, ../scss/_sitenav.scss */
-=======
-/* line 115, ../scss/_sitenav.scss */
->>>>>>> FETCH_HEAD
 .sy-effect.sy-menu-open .sy-effect.sitenav {
   visibility: visible;
   -webkit-transition: -webkit-transform 0.5s;
@@ -8559,11 +8532,7 @@ body,
   transform: translate3d(0, 0, 0);
 }
 
-<<<<<<< HEAD
 /* line 137, ../scss/_sitenav.scss */
-=======
-/* line 123, ../scss/_sitenav.scss */
->>>>>>> FETCH_HEAD
 .sy-effect.sitenav::after {
   display: none;
 }
@@ -8756,15 +8725,6 @@ input[type=text]:focus, input[type=password]:focus {
 /* line 16, ../scss/_landing.scss */
 .land-title ul {
   list-style: none;
-<<<<<<< HEAD
-}
-
-/* line 20, ../scss/_landing.scss */
-.land-title-left {
-  padding: 40px;
-}
-/* line 22, ../scss/_landing.scss */
-=======
   margin: 0;
   padding: 0;
 }
@@ -8774,58 +8734,31 @@ input[type=text]:focus, input[type=password]:focus {
   padding: 40px;
 }
 /* line 24, ../scss/_landing.scss */
->>>>>>> FETCH_HEAD
 .land-title-left p {
   font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 14px;
 }
 
-<<<<<<< HEAD
-/* line 26, ../scss/_landing.scss */
-.land-title-mid {
-  text-align: center;
-}
-/* line 28, ../scss/_landing.scss */
-=======
 /* line 28, ../scss/_landing.scss */
 .land-title-mid {
   text-align: center;
 }
 /* line 30, ../scss/_landing.scss */
->>>>>>> FETCH_HEAD
 .land-title-mid h1 {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 74px;
 }
-<<<<<<< HEAD
-/* line 31, ../scss/_landing.scss */
-.land-title-mid .title-sy {
-  color: #3b948b;
-}
-/* line 34, ../scss/_landing.scss */
-=======
 /* line 33, ../scss/_landing.scss */
 .land-title-mid .title-sy {
   color: #3b948b;
 }
 /* line 36, ../scss/_landing.scss */
->>>>>>> FETCH_HEAD
 .land-title-mid .title-org {
   font-size: 24px;
 }
 
-<<<<<<< HEAD
-/* line 39, ../scss/_landing.scss */
-.land-title-right li {
-  float: left;
-  padding: 5px;
-  margin-top: 30px;
-}
-
-/* line 45, ../scss/_landing.scss */
-=======
 /* line 40, ../scss/_landing.scss */
 .land-title-right {
   text-align: right;
@@ -8842,7 +8775,6 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 /* line 51, ../scss/_landing.scss */
->>>>>>> FETCH_HEAD
 .social-svg {
   fill: white;
   height: auto;
@@ -8852,11 +8784,7 @@ input[type=text]:focus, input[type=password]:focus {
   -ms-transition: all 50ms ease;
   transition: all 50ms ease;
 }
-<<<<<<< HEAD
-/* line 49, ../scss/_landing.scss */
-=======
 /* line 55, ../scss/_landing.scss */
->>>>>>> FETCH_HEAD
 .social-svg:hover {
   fill: #3b948b;
 }
