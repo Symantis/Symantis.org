@@ -89,37 +89,70 @@ body,
 
 .sitenav{
 	.activator{
+		cursor: pointer;
+
 		position:absolute;
 		width: 50px;
+		padding-left:12px;
+		padding-right:12px;
 		height: 100%;
 		text-align:center;
 		display:table;
+		-webkit-transition: width 0.3s;
+		transition: width 0.3s;
+		
 		& > .activator-icon{
-			cursor: pointer;
+			
 			display:table-cell;
 			width:25px;
 			vertical-align:middle;
+			opacity:1;
+			-webkit-transition: all 0.3s;
+			transition: all 0.3s;
 		}
 	}
 	.sitenav-inner{
 		height:100%;
 		width:100%;
-		
+		display:table;
 		
 
 		ul{
 			margin:0px;
+			display:table-cell;
+			vertical-align:middle;
+			
+			&.top{
+				position:absolute;
+				left:0px;
+			}
 
 			&.middle{
 				width: 150px;
-				margin-left:50px;
-			}
-			li{
-				list-style: none;
-
-				a{
-					color: #fff;
+				padding-left:50px;
+				
+				li{
+					
+					width:150px;
+					
+					a{
+						display:block;
+						color: #fff;
+						line-height: rem-calc(15);
+						opacity:0;
+						-webkit-transition: all 0.3s;
+						transition: all 0.3s;
+					}
 				}
+			}
+			
+			&.bottom{
+				position:absolute;
+				left:0px;
+			}
+			
+			li {
+				list-style: none;
 			}
 		}
 	}
@@ -168,6 +201,27 @@ body,
 	left: 0;
 
 	@include drop-shadow;
+
+	.activator{
+		width: 80px;
+
+		& > .activator-icon{
+			width: 80px;
+			opacity:0;
+		}
+	}
+	.sitenav-inner{
+		ul{
+			&.middle{
+				li{
+					a{
+						line-height: rem-calc(35);
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
 }
 
 .sy-effect.sitenav::after {

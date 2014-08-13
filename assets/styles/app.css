@@ -8485,49 +8485,78 @@ body,
 
 /* line 91, ../scss/_sitenav.scss */
 .sitenav .activator {
+  cursor: pointer;
   position: absolute;
   width: 50px;
+  padding-left: 12px;
+  padding-right: 12px;
   height: 100%;
   text-align: center;
   display: table;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
 }
-/* line 97, ../scss/_sitenav.scss */
+/* line 104, ../scss/_sitenav.scss */
 .sitenav .activator > .activator-icon {
-  cursor: pointer;
   display: table-cell;
   width: 25px;
   vertical-align: middle;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-/* line 104, ../scss/_sitenav.scss */
+/* line 114, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner {
   height: 100%;
   width: 100%;
+  display: table;
 }
-/* line 110, ../scss/_sitenav.scss */
+/* line 120, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul {
   margin: 0px;
+  display: table-cell;
+  vertical-align: middle;
 }
-/* line 113, ../scss/_sitenav.scss */
+/* line 125, ../scss/_sitenav.scss */
+.sitenav .sitenav-inner ul.top {
+  position: absolute;
+  left: 0px;
+}
+/* line 130, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.middle {
   width: 150px;
-  margin-left: 50px;
+  padding-left: 50px;
 }
-/* line 117, ../scss/_sitenav.scss */
+/* line 134, ../scss/_sitenav.scss */
+.sitenav .sitenav-inner ul.middle li {
+  width: 150px;
+}
+/* line 138, ../scss/_sitenav.scss */
+.sitenav .sitenav-inner ul.middle li a {
+  display: block;
+  color: #fff;
+  line-height: 0.9375rem;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 149, ../scss/_sitenav.scss */
+.sitenav .sitenav-inner ul.bottom {
+  position: absolute;
+  left: 0px;
+}
+/* line 154, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul li {
   list-style: none;
 }
-/* line 120, ../scss/_sitenav.scss */
-.sitenav .sitenav-inner ul li a {
-  color: #fff;
-}
 
-/* line 128, ../scss/_sitenav.scss */
+/* line 161, ../scss/_sitenav.scss */
 .sy-effect.sy-app {
   -webkit-perspective: 1500px;
   perspective: 1500px;
 }
 
-/* line 133, ../scss/_sitenav.scss */
+/* line 166, ../scss/_sitenav.scss */
 .sy-effect .sitenav-push {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -8535,7 +8564,7 @@ body,
   margin-left: 50px;
 }
 
-/* line 140, ../scss/_sitenav.scss */
+/* line 173, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sitenav-push {
   -webkit-transform: translate3d(100px, 0, -350px);
   transform: translate3d(100px, 0, -350px);
@@ -8544,7 +8573,7 @@ body,
   box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
-/* line 146, ../scss/_sitenav.scss */
+/* line 179, ../scss/_sitenav.scss */
 .sy-effect.sitenav {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -8554,7 +8583,7 @@ body,
   overflow: hidden;
 }
 
-/* line 156, ../scss/_sitenav.scss */
+/* line 189, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav {
   opacity: 1;
   -webkit-transition: -webkit-transform 0.5s;
@@ -8567,8 +8596,22 @@ body,
   -moz-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
+/* line 205, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-open .sy-effect.sitenav .activator {
+  width: 80px;
+}
+/* line 208, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-open .sy-effect.sitenav .activator > .activator-icon {
+  width: 80px;
+  opacity: 0;
+}
+/* line 217, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle li a {
+  line-height: 2.1875rem;
+  opacity: 1;
+}
 
-/* line 173, ../scss/_sitenav.scss */
+/* line 227, ../scss/_sitenav.scss */
 .sy-effect.sitenav::after {
   display: none;
 }
