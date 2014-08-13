@@ -1,4 +1,4 @@
-<div ng-controller="HeaderCtrl">
+<div ng-controller="HeaderCtrl" class="fixed">
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
@@ -36,3 +36,47 @@
       </section>
     </nav>
 </div>
+<!--
+<div class="row">
+      <div class="small-12.columns">
+<div ng-controller="HeaderCtrl">
+  <top-bar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/home">Symantis</a></h1>
+      </li>
+      <li toggle-top-bar class="menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+    <top-bar-section>
+     
+      <ul class="right">
+        <li>
+            <a class="button" ng-click="syMenuToggle()">
+              Open
+            </a>
+          </li>
+          <li ng-if="currentUser" class="has-dropdown">
+            <a>
+              {{currentUser.email}} 
+            </a>
+            <ul class="dropdown">
+                <li>
+                  <a href="/logout">Logout</a>
+                </li>
+            </ul>    
+          </li>
+      </ul>
+
+    
+      <ul class="left">
+        <li ng-repeat="navItem in navItems">
+          <a href="{{navItem.url}}">{{navItem.title}}</a>
+        </li>
+      </ul>
+    </top-bar-section>
+  </top-bar>
+</div>
+</div>
+</div>
+-->

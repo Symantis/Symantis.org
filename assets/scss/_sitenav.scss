@@ -31,19 +31,19 @@ body,
 	height: 100%;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
-}
 
-.sitenav-push::after {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 0;
-	height: 0;
-	background: rgba(0,0,0,0.2);
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.3s, width 0.1s 0.5s, height 0.1s 0.3s;
-	transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.5s;
+	&::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		background: rgba(0,0,0,0.2);
+		content: '';
+		opacity: 0;
+		-webkit-transition: opacity 0.3s, width 0.1s 0.5s, height 0.1s 0.3s;
+		transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.5s;
+	}
 }
 
 .sy-menu-open .sitenav-push::after {
@@ -59,8 +59,8 @@ body,
 	top: 0;
 	left: 0;
 	z-index: 100;
-	visibility: hidden;
-	width: 200px;
+	//visibility: hidden;
+	width: 50px;
 	height: 100%;
 	background: $darkest;
 	-webkit-transition: all 0.3s;
@@ -108,6 +108,8 @@ body,
 .sy-effect .sitenav-push {
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	overflow:auto;
+	margin-left:50px;
 }
 
 .sy-effect.sy-menu-open .sitenav-push {
@@ -120,10 +122,12 @@ body,
 	opacity: 1;
 	-webkit-transform: translate3d(-100%, 0, 0);
 	transform: translate3d(-100%, 0, 0);
+	//left:50px;
+	width: 200px;
 }
 
 .sy-effect.sy-menu-open .sy-effect.sitenav {
-	visibility: visible;
+	//visibility: visible;
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.3s;
 	-webkit-transform: translate3d(0, 0, 0);

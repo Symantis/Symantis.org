@@ -8425,8 +8425,7 @@ body,
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
 }
-
-/* line 36, ../scss/_sitenav.scss */
+/* line 35, ../scss/_sitenav.scss */
 .sitenav-push::after {
   position: absolute;
   top: 0;
@@ -8455,8 +8454,7 @@ body,
   top: 0;
   left: 0;
   z-index: 100;
-  visibility: hidden;
-  width: 200px;
+  width: 50px;
   height: 100%;
   background: #12140f;
   -webkit-transition: all 0.3s;
@@ -8505,9 +8503,11 @@ body,
 .sy-effect .sitenav-push {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  overflow: auto;
+  margin-left: 50px;
 }
 
-/* line 113, ../scss/_sitenav.scss */
+/* line 115, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sitenav-push {
   -webkit-transform: translate3d(100px, 0, -350px);
   transform: translate3d(100px, 0, -350px);
@@ -8516,35 +8516,23 @@ body,
   box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
-<<<<<<< HEAD
-/* line 123, ../scss/_sitenav.scss */
-=======
-/* line 119, ../scss/_sitenav.scss */
->>>>>>> FETCH_HEAD
+/* line 121, ../scss/_sitenav.scss */
 .sy-effect.sitenav {
   opacity: 1;
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
+  width: 200px;
 }
 
-<<<<<<< HEAD
 /* line 129, ../scss/_sitenav.scss */
-=======
-/* line 125, ../scss/_sitenav.scss */
->>>>>>> FETCH_HEAD
 .sy-effect.sy-menu-open .sy-effect.sitenav {
-  visibility: visible;
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.3s;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-<<<<<<< HEAD
 /* line 137, ../scss/_sitenav.scss */
-=======
-/* line 133, ../scss/_sitenav.scss */
->>>>>>> FETCH_HEAD
 .sy-effect.sitenav::after {
   display: none;
 }
@@ -8556,7 +8544,7 @@ body {
 
 /* line 6, ../scss/_body.scss */
 .bg-gradient {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: #828282;
   background: -moz-linear-gradient(top, #828282 0%, #4b4b4b 30%, #292929 44%, #292929 56%, #4b4b4b 70%, #828282 100%);
@@ -8960,48 +8948,22 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .land-title-left {
   padding: 2.5rem;
 }
-<<<<<<< HEAD
-/* line 24, ../scss/_landing.scss */
-=======
 /* line 48, ../scss/_landing.scss */
->>>>>>> FETCH_HEAD
 .land-title-left p {
   font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 0.875rem;
 }
 
-<<<<<<< HEAD
-/* line 28, ../scss/_landing.scss */
-.land-title-mid {
-  text-align: center;
-}
-/* line 30, ../scss/_landing.scss */
-=======
 /* line 52, ../scss/_landing.scss */
 .land-title-mid {
   text-align: center;
 }
 /* line 54, ../scss/_landing.scss */
->>>>>>> FETCH_HEAD
 .land-title-mid h1 {
   margin-top: -0.3125rem;
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-<<<<<<< HEAD
-  font-size: 74px;
-}
-/* line 33, ../scss/_landing.scss */
-.land-title-mid .title-sy {
-  color: #3b948b;
-}
-/* line 36, ../scss/_landing.scss */
-.land-title-mid .title-org {
-  font-size: 24px;
-}
-
-/* line 40, ../scss/_landing.scss */
-=======
   font-size: 5.25rem;
 }
 /* line 58, ../scss/_landing.scss */
@@ -9014,7 +8976,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 /* line 65, ../scss/_landing.scss */
->>>>>>> FETCH_HEAD
 .land-title-right {
   text-align: right;
 }
@@ -9029,11 +8990,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   padding: 5px;
 }
 
-<<<<<<< HEAD
-/* line 51, ../scss/_landing.scss */
-=======
 /* line 76, ../scss/_landing.scss */
->>>>>>> FETCH_HEAD
 .social-svg {
   fill: white;
   height: auto;
@@ -9043,11 +9000,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   -ms-transition: all 50ms ease;
   transition: all 50ms ease;
 }
-<<<<<<< HEAD
-/* line 55, ../scss/_landing.scss */
-=======
 /* line 80, ../scss/_landing.scss */
->>>>>>> FETCH_HEAD
 .social-svg:hover {
   fill: #3b948b;
 }

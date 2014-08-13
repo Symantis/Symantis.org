@@ -4,7 +4,7 @@ body {
 //gradient - #828282 0%, #4b4b4b 30%, #414141 44%, #414141 56%, #4b4b4b 70%, #828282 100%
 // rgba(130,130,130,1.0) - rgba(75,75,75,1.0) - rgba(41,41,41,1.0)
 .bg-gradient {
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 	background: rgba(130,130,130,1.0);
 	background: -moz-linear-gradient(top, rgba(130,130,130,1.0) 0%, rgba(75,75,75,1.0) 30%, rgba(41,41,41,1.0) 44%, rgba(41,41,41,1.0) 56%, rgba(75,75,75,1.0) 70%, rgba(130,130,130,1.0) 100%);
