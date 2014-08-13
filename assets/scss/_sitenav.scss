@@ -153,6 +153,22 @@ body,
 				width:100%;
 				min-height:50px;
 				bottom:0px;
+				li.logo{
+					font-size:30px;
+					.sy{
+						padding-left:8px;
+						width:50px;
+						color:$primary-color;
+
+					}
+					.mantis{
+						width:100px;
+						padding-left:2px;
+						opacity:0;
+						-webkit-transition: all 0.3s;
+						transition: all 0.3s;
+					}
+				}
 			}
 			
 			li {
@@ -223,6 +239,16 @@ body,
 				li{
 					a{
 						display:block;
+					}
+				}
+			}
+			&.bottom{
+				li.logo{
+					.sy{
+
+					}
+					.mantis{
+						opacity:1.0;
 					}
 				}
 			}

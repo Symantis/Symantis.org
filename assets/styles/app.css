@@ -8551,18 +8551,36 @@ body,
   min-height: 50px;
   bottom: 0px;
 }
+/* line 156, ../scss/_sitenav.scss */
+.sitenav .sitenav-inner ul.bottom li.logo {
+  font-size: 30px;
+}
 /* line 158, ../scss/_sitenav.scss */
+.sitenav .sitenav-inner ul.bottom li.logo .sy {
+  padding-left: 8px;
+  width: 50px;
+  color: #3b948b;
+}
+/* line 164, ../scss/_sitenav.scss */
+.sitenav .sitenav-inner ul.bottom li.logo .mantis {
+  width: 100px;
+  padding-left: 2px;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 174, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul li {
   list-style: none;
 }
 
-/* line 165, ../scss/_sitenav.scss */
+/* line 181, ../scss/_sitenav.scss */
 .sy-effect.sy-app {
   -webkit-perspective: 1500px;
   perspective: 1500px;
 }
 
-/* line 170, ../scss/_sitenav.scss */
+/* line 186, ../scss/_sitenav.scss */
 .sy-effect .sitenav-push {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -8570,7 +8588,7 @@ body,
   margin-left: 50px;
 }
 
-/* line 177, ../scss/_sitenav.scss */
+/* line 193, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sitenav-push {
   -webkit-transform: translate3d(100px, 0, -350px);
   transform: translate3d(100px, 0, -350px);
@@ -8579,7 +8597,7 @@ body,
   box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
-/* line 183, ../scss/_sitenav.scss */
+/* line 199, ../scss/_sitenav.scss */
 .sy-effect.sitenav {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -8589,7 +8607,7 @@ body,
   overflow: hidden;
 }
 
-/* line 193, ../scss/_sitenav.scss */
+/* line 209, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav {
   opacity: 1;
   -webkit-transition: -webkit-transform 0.5s;
@@ -8602,27 +8620,31 @@ body,
   -moz-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
-/* line 209, ../scss/_sitenav.scss */
+/* line 225, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .activator {
   width: 80px;
 }
-/* line 212, ../scss/_sitenav.scss */
+/* line 228, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .activator > .activator-icon {
   width: 80px;
   opacity: 0;
 }
-/* line 219, ../scss/_sitenav.scss */
+/* line 235, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle {
   padding-left: 50px;
   line-height: 2.1875rem;
   opacity: 1;
 }
-/* line 224, ../scss/_sitenav.scss */
+/* line 240, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle li a {
   display: block;
 }
+/* line 250, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.bottom li.logo .mantis {
+  opacity: 1.0;
+}
 
-/* line 233, ../scss/_sitenav.scss */
+/* line 259, ../scss/_sitenav.scss */
 .sy-effect.sitenav::after {
   display: none;
 }
