@@ -1,0 +1,82 @@
+// Smartphones (portrait and landscape) -----------
+@media only screen 
+and (min-device-width : rem-calc(320px)) 
+and (max-device-width : rem-calc(480px)) {
+
+}
+
+// Smartphones (landscape) ----------- 
+@media only screen 
+and (min-width : rem-calc(321px)) {
+
+
+}
+
+// Smartphones (portrait) ----------- 
+@media only screen 
+and (max-width : rem-calc(320px)) {
+
+
+}
+
+// iPads (portrait and landscape) ----------- 
+@media only screen 
+and (min-device-width : rem-calc(768px)) 
+and (max-device-width : rem-calc(1024px)) {
+
+
+}
+
+// iPads (landscape) ----------- 
+@media only screen 
+and (min-device-width : rem-calc(768px)) 
+and (max-device-width : rem-calc(1024px)) 
+and (orientation : landscape) {
+
+
+}
+
+// iPads (portrait) ----------- 
+@media only screen 
+and (min-device-width : rem-calc(768px)) 
+and (max-device-width : rem-calc(1024px)) 
+and (orientation : portrait) {
+
+
+}
+
+// Desktops & Laptops ----------- 
+@media only screen 
+and (min-width : rem-calc(1224px)) {
+	.home-quote {
+		display: block;
+	}
+}
+
+
+// Laptops Only ----------
+@media only screen 
+and (min-width : rem-calc(1224px)) 
+and (max-height : rem-calc(880px)) {
+	.home-quote {
+		display: none;
+	}
+	.home-signup {
+		margin-top: rem-calc(30px);
+	}
+}
+
+// Large screens ----------- 
+@media only screen 
+and (min-width : rem-calc(1824px)) {
+
+
+}
+
+// Retina ----------- 
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+
+}

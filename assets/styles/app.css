@@ -9009,10 +9009,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
-/* line 10, ../scss/_landing.scss */
+/* line 9, ../scss/_landing.scss */
 .home-vert-center {
   height: 50%;
   position: absolute;
@@ -9020,7 +9019,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   width: 100%;
 }
 
-/* line 16, ../scss/_landing.scss */
+/* line 15, ../scss/_landing.scss */
 .home-top {
   width: 100%;
   max-width: 100%;
@@ -9029,14 +9028,14 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   bottom: 10rem;
 }
 
-/* line 23, ../scss/_landing.scss */
+/* line 22, ../scss/_landing.scss */
 .land-image {
   text-align: center;
   max-width: 100%;
   position: relative;
 }
 
-/* line 28, ../scss/_landing.scss */
+/* line 27, ../scss/_landing.scss */
 .land-title {
   position: absolute;
   bottom: 0;
@@ -9050,60 +9049,60 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   background-color: #2e302c;
   z-index: 10;
 }
-/* line 40, ../scss/_landing.scss */
+/* line 39, ../scss/_landing.scss */
 .land-title ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 46, ../scss/_landing.scss */
+/* line 45, ../scss/_landing.scss */
 .land-title-left {
   padding: 2.5rem;
 }
-/* line 48, ../scss/_landing.scss */
+/* line 47, ../scss/_landing.scss */
 .land-title-left p {
   font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 0.875rem;
 }
 
-/* line 52, ../scss/_landing.scss */
+/* line 51, ../scss/_landing.scss */
 .land-title-mid {
   text-align: center;
 }
-/* line 54, ../scss/_landing.scss */
+/* line 53, ../scss/_landing.scss */
 .land-title-mid h1 {
   margin-top: -0.3125rem;
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 5.25rem;
 }
-/* line 58, ../scss/_landing.scss */
+/* line 57, ../scss/_landing.scss */
 .land-title-mid .title-sy {
   color: #3b948b;
 }
-/* line 61, ../scss/_landing.scss */
+/* line 60, ../scss/_landing.scss */
 .land-title-mid .title-org {
   font-size: 1.5rem;
 }
 
-/* line 65, ../scss/_landing.scss */
+/* line 64, ../scss/_landing.scss */
 .land-title-right {
   text-align: right;
 }
-/* line 67, ../scss/_landing.scss */
+/* line 66, ../scss/_landing.scss */
 .land-title-right ul {
   margin-top: 1.875rem;
   margin-right: 5%;
 }
-/* line 70, ../scss/_landing.scss */
+/* line 69, ../scss/_landing.scss */
 .land-title-right ul li {
   float: right;
   padding: 5px;
 }
 
-/* line 76, ../scss/_landing.scss */
+/* line 75, ../scss/_landing.scss */
 .social-svg {
   fill: white;
   height: auto;
@@ -9113,12 +9112,12 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   -ms-transition: all 50ms ease;
   transition: all 50ms ease;
 }
-/* line 80, ../scss/_landing.scss */
+/* line 79, ../scss/_landing.scss */
 .social-svg:hover {
   fill: #3b948b;
 }
 
-/* line 84, ../scss/_landing.scss */
+/* line 83, ../scss/_landing.scss */
 .land-content {
   position: absolute;
   top: 50%;
@@ -9128,19 +9127,19 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   z-index: 5;
 }
 
-/* line 92, ../scss/_landing.scss */
+/* line 91, ../scss/_landing.scss */
 .home-nav {
   width: 100%;
   position: relative;
 }
-/* line 95, ../scss/_landing.scss */
+/* line 94, ../scss/_landing.scss */
 .home-nav ul {
   list-style: none;
   margin: 0 auto;
   width: 22.5rem;
   margin-top: 2.5rem;
 }
-/* line 100, ../scss/_landing.scss */
+/* line 99, ../scss/_landing.scss */
 .home-nav ul li {
   float: left;
   width: 7.5rem;
@@ -9149,7 +9148,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border-right: 0.0625rem white solid;
   margin-right: -0.0625rem;
 }
-/* line 107, ../scss/_landing.scss */
+/* line 106, ../scss/_landing.scss */
 .home-nav ul li p {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
@@ -9160,16 +9159,16 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   -ms-transition: all 50ms ease;
   transition: all 50ms ease;
 }
-/* line 110, ../scss/_landing.scss */
+/* line 109, ../scss/_landing.scss */
 .home-nav ul li p:hover {
   color: #3b948b;
 }
-/* line 114, ../scss/_landing.scss */
+/* line 113, ../scss/_landing.scss */
 .home-nav ul li:last-child {
   border-right: none;
 }
 
-/* line 120, ../scss/_landing.scss */
+/* line 119, ../scss/_landing.scss */
 .home-quote {
   width: 100%;
   text-align: center;
@@ -9179,7 +9178,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   margin-left: 25%;
   margin-left: 25%;
 }
-/* line 128, ../scss/_landing.scss */
+/* line 127, ../scss/_landing.scss */
 .home-quote quote {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
@@ -9187,39 +9186,39 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   line-height: 3.125rem;
 }
 
-/* line 133, ../scss/_landing.scss */
+/* line 132, ../scss/_landing.scss */
 .home-signup {
   width: 100%;
   text-align: center;
 }
-/* line 136, ../scss/_landing.scss */
+/* line 135, ../scss/_landing.scss */
 .home-signup p {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 0.75rem;
 }
-/* line 138, ../scss/_landing.scss */
+/* line 137, ../scss/_landing.scss */
 .home-signup p a {
   color: white;
 }
-/* line 140, ../scss/_landing.scss */
+/* line 139, ../scss/_landing.scss */
 .home-signup p a:hover {
   text-decoration: underline;
 }
-/* line 145, ../scss/_landing.scss */
+/* line 144, ../scss/_landing.scss */
 .home-signup .large-button {
   width: 20rem;
   margin-bottom: 0.625rem;
 }
 
-/* line 150, ../scss/_landing.scss */
+/* line 149, ../scss/_landing.scss */
 .home-down-button {
   position: absolute;
   bottom: 0;
   text-align: center;
   width: 100%;
 }
-/* line 155, ../scss/_landing.scss */
+/* line 154, ../scss/_landing.scss */
 .home-down-button .down-svg {
   padding: 0.625rem;
   padding-left: 1.25rem;
@@ -9232,7 +9231,25 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   -ms-transition: all 50ms ease;
   transition: all 50ms ease;
 }
-/* line 162, ../scss/_landing.scss */
+/* line 161, ../scss/_landing.scss */
 .home-down-button .down-svg:hover {
   fill: #12140f;
+}
+
+@media only screen and (min-width: 76.5rem) {
+  /* line 51, ../scss/_responsive.scss */
+  .home-quote {
+    display: block;
+  }
+}
+@media only screen and (min-width: 76.5rem) and (max-height: 55rem) {
+  /* line 61, ../scss/_responsive.scss */
+  .home-quote {
+    display: none;
+  }
+
+  /* line 64, ../scss/_responsive.scss */
+  .home-signup {
+    margin-top: 1.875rem;
+  }
 }
