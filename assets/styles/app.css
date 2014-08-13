@@ -8485,7 +8485,6 @@ body,
 
 /* line 91, ../scss/_sitenav.scss */
 .sitenav .activator {
-  cursor: pointer;
   position: absolute;
   width: 50px;
   padding-left: 12px;
@@ -8495,8 +8494,9 @@ body,
   display: table;
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
+  z-index: -1;
 }
-/* line 104, ../scss/_sitenav.scss */
+/* line 103, ../scss/_sitenav.scss */
 .sitenav .activator > .activator-icon {
   display: table-cell;
   width: 25px;
@@ -8505,40 +8505,40 @@ body,
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 114, ../scss/_sitenav.scss */
+/* line 113, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner {
   height: 100%;
   width: 100%;
   display: table;
 }
-/* line 120, ../scss/_sitenav.scss */
+/* line 119, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul {
   margin: 0px;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 125, ../scss/_sitenav.scss */
+/* line 124, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.top {
   position: absolute;
   left: 0px;
 }
-/* line 130, ../scss/_sitenav.scss */
+/* line 129, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.middle {
   width: 150px;
-  padding-left: 50px;
-}
-/* line 134, ../scss/_sitenav.scss */
-.sitenav .sitenav-inner ul.middle li {
-  width: 150px;
-}
-/* line 138, ../scss/_sitenav.scss */
-.sitenav .sitenav-inner ul.middle li a {
-  display: block;
-  color: #fff;
+  padding-left: 25px;
   line-height: 0.9375rem;
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+/* line 139, ../scss/_sitenav.scss */
+.sitenav .sitenav-inner ul.middle li {
+  width: 150px;
+}
+/* line 141, ../scss/_sitenav.scss */
+.sitenav .sitenav-inner ul.middle li a {
+  display: block;
+  color: #fff;
 }
 /* line 149, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.bottom {
@@ -8605,13 +8605,14 @@ body,
   width: 80px;
   opacity: 0;
 }
-/* line 217, ../scss/_sitenav.scss */
-.sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle li a {
+/* line 215, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle {
+  padding-left: 50px;
   line-height: 2.1875rem;
   opacity: 1;
 }
 
-/* line 227, ../scss/_sitenav.scss */
+/* line 224, ../scss/_sitenav.scss */
 .sy-effect.sitenav::after {
   display: none;
 }

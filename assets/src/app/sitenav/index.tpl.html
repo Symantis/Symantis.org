@@ -1,4 +1,4 @@
-<a href="#" class="activator" ng-click="syMenuToggle()">
+<a href="#" class="activator">
   <div class="activator-icon">
     <object data="/img/svg/menu_icon.svg" width="100%" type="image/svg+xml">
         <img src="/img/png/menu_icon.png" width="100%" />
@@ -9,7 +9,7 @@
     <ul class="top">
       <li></li>
     </ul>
-    <ul class="middle">
+    <ul class="middle" ng-click="syMenuToggle()">
     	<li ng-repeat="siteItem in siteItems">
         	<a href="{{siteItem.url}}">{{siteItem.title}}</a>
     	</li>
