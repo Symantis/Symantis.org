@@ -8608,7 +8608,7 @@ body,
   overflow: hidden;
 }
 
-/* line 210, ../scss/_sitenav.scss */
+/* line 213, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav {
   opacity: 1;
   -webkit-transition: -webkit-transform 0.5s;
@@ -8617,37 +8617,44 @@ body,
   transform: translate3d(0, 0, 0);
   width: 200px;
   left: 0;
-  -webkit-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
-/* line 226, ../scss/_sitenav.scss */
+/* line 229, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .activator {
   width: 80px;
 }
-/* line 229, ../scss/_sitenav.scss */
+/* line 232, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .activator > .activator-icon {
   width: 80px;
   opacity: 0;
 }
-/* line 236, ../scss/_sitenav.scss */
+/* line 239, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle {
   padding-left: 50px;
   line-height: 2.1875rem;
   opacity: 1;
 }
-/* line 241, ../scss/_sitenav.scss */
+/* line 244, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle li a {
   display: block;
 }
-/* line 251, ../scss/_sitenav.scss */
+/* line 254, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.bottom li.logo .mantis {
   opacity: 1.0;
 }
 
-/* line 260, ../scss/_sitenav.scss */
+/* line 263, ../scss/_sitenav.scss */
 .sy-effect.sitenav::after {
   display: none;
+}
+
+/* line 1, ../scss/_header.scss */
+.top-bar {
+  opacity: 0;
+}
+
+/* line 5, ../scss/_header.scss */
+.top-bar:hover {
+  opacity: 1.0 !important;
 }
 
 /* line 1, ../scss/_body.scss */
