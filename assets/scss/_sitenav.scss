@@ -120,15 +120,18 @@ body,
 		display:table;
 		
 		&::after{
+			-webkit-transition: border-width 0.3s;
+			transition: border-width 0.3s;
 			position: absolute;
+			z-index:-1;
 			left:50px;
 			content:' ';
 			width:0; 
 		     height:0; 
-		     border-right:150px solid transparent;
+		     border-right:0px solid transparent;
 		     border-top:100vh solid transparent;
-		     border-left:0px solid $darkest;
-		     border-bottom:50px solid $darkest;
+		     border-left:0px solid transparent;
+		     border-bottom:0px solid transparent;
 		}
 
 		ul{
@@ -138,16 +141,27 @@ body,
 			
 			&.top{
 				position:absolute;
+				z-index:100;
 				left:0px;
 				width:100%;
-				min-height:50px;
+				min-height:100px;
 				li{
 					font-size:20px;
-					.icon{
-						padding-left:14px;
+					line-height:50px;
+					.search-icon{
+						padding-left:15px;
 						width:50px;
-						line-height:50px;
+						
 						color:$primary-color;
+					}
+					.search{
+						font-size:16px;
+						padding-left:15px;
+						width:100px;
+						color:#fff;
+						opacity:0;
+						-webkit-transition: all 0.3s;
+						transition: all 0.3s;
 					}
 				}
 			}
@@ -155,7 +169,7 @@ body,
 			&.middle{
 				width: 150px;
 				padding-left:5px;
-				
+				z-index:99;
 				line-height: rem-calc(15);
 				opacity:0;
 				-webkit-transition: all 0.3s;
@@ -173,11 +187,15 @@ body,
 			
 			&.bottom{
 				position:absolute;
+				z-index:100;
 				left:0px;
 				width:100%;
-				min-height:50px;
+				min-height:100px;
 				bottom:0px;
+				display:table;
 				li.logo{
+					display:table-cell;
+					vertical-align:bottom;
 					font-size:30px;
 					.sy{
 						padding-left:8px;
@@ -299,8 +317,16 @@ body,
 		     border-right:100px solid transparent;
 		     border-top:100vh solid $darkest;
 		     border-left:0px solid $darkest;
-		     border-bottom:50px solid transparent;
-
+		     border-bottom:0px solid transparent;
+		}
+		ul{
+			&.top{
+				li{
+					.search{
+						opacity:1.0;
+					}
+				}
+			}
 		}
 	}
 }
@@ -312,10 +338,19 @@ body,
 			content:' ';
 			width:0; 
 		     height:0; 
-		     border-right:100px solid transparent;
+		     border-right:0px solid transparent;
 		     border-top:100vh solid transparent;
 		     border-left:100px solid $darkest;
-		     border-bottom:50px solid $darkest;
+		     border-bottom:0px solid $darkest;
+		}
+		ul{
+			&.bottom{
+				li.logo{
+					.mantis{
+						opacity:1.0;
+					}
+				}
+			}
 		}
 	}
 }

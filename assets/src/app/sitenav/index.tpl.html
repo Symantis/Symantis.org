@@ -6,9 +6,9 @@
   </div>
 </a>
 <div class="sitenav-inner" ng-controller="SiteNavCtrl">
-    <ul class="top" ng-click="syMenutTopToggle()">
+    <ul class="top" ng-click="syMenuTopToggle()">
       <li>
-        <span class=""><i class="icon icon-search"></i></span><span></span>
+        <span class="search-icon"><i class="icon icon-search"></i></span><span class="search">Search...</span>
         </li>
     </ul>
     <ul class="middle" ng-click="syMenuToggle()">
@@ -16,7 +16,7 @@
         	<a href="{{siteItem.url}}">{{siteItem.title}}</a>
     	</li>
     </ul>
-    <ul class="bottom" ng-click="syMenutBottomToggle()">
+    <ul class="bottom" ng-click="syMenuBottomToggle()">
       <li class="logo">
         <a href="/home">
         <span class="sy">sy.</span><span class="mantis">mantis</span>
