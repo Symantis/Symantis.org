@@ -8617,9 +8617,9 @@ body,
   transform: translate3d(0, 0, 0);
   width: 200px;
   left: 0;
-  -webkit-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.3);
 }
 /* line 226, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .activator {

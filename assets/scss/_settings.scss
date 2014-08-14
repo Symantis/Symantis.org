@@ -63,9 +63,9 @@ $reveal-close-weight: light;
     -ms-transition: all $time ease;          
     transition: all $time ease;
 }
-@mixin drop-shadow {
-	-webkit-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow:    2px 3px 15px 0px rgba(0, 0, 0, 0.5);
-	box-shadow:         2px 3px 15px 0px rgba(0, 0, 0, 0.5);
+@mixin drop-shadow($opac) {
+	-webkit-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, $opac);
+	-moz-box-shadow:    2px 3px 15px 0px rgba(0, 0, 0, $opac);
+	box-shadow:         2px 3px 15px 0px rgba(0, 0, 0, $opac);
 }
 
