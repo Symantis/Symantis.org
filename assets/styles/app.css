@@ -8542,8 +8542,8 @@ body,
   position: absolute;
   z-index: 100;
   left: 0px;
-  width: 100%;
-  min-height: 100px;
+  width: 150px;
+  min-height: 200px;
 }
 /* line 153, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.top li {
@@ -8590,8 +8590,8 @@ body,
   position: absolute;
   z-index: 100;
   left: 0px;
-  width: 100%;
-  min-height: 100px;
+  width: 150px;
+  min-height: 200px;
   bottom: 0px;
   display: table;
 }
