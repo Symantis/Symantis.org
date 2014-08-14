@@ -23,7 +23,12 @@ and (max-width : rem-calc(320px)) {
 @media only screen 
 and (min-device-width : rem-calc(768px)) 
 and (max-device-width : rem-calc(1024px)) {
-
+	.home-quote {
+		display: none;
+	}
+	.home-signup {
+		margin-top: rem-calc(30px);
+	}
 
 }
 
@@ -50,6 +55,17 @@ and (orientation : portrait) {
 and (min-width : rem-calc(1224px)) {
 	.home-quote {
 		display: block;
+	}
+}
+
+// Small Laptops and below
+@media only screen 
+and (max-width : rem-calc(1224px)) {
+	.home-quote {
+		display: none;
+	}
+	.home-signup {
+		margin-top: rem-calc(30px);
 	}
 }
 

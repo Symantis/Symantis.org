@@ -136,8 +136,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	margin: rem-calc(10px);
 	.exit-icon {
 		fill: white;
+		@include transition(100ms);
 	}
-	@include transition(100ms);
 	&:hover .exit-icon  {
 		fill: $gray;
 	}

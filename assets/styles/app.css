@@ -8938,15 +8938,15 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   right: 10px;
   padding: 0.625rem;
   margin: 0.625rem;
+}
+/* line 137, ../scss/_kitchen.scss */
+.exit-search .exit-icon {
+  fill: white;
   -webkit-transition: all 100ms ease;
   -moz-transition: all 100ms ease;
   -o-transition: all 100ms ease;
   -ms-transition: all 100ms ease;
   transition: all 100ms ease;
-}
-/* line 137, ../scss/_kitchen.scss */
-.exit-search .exit-icon {
-  fill: white;
 }
 /* line 141, ../scss/_kitchen.scss */
 .exit-search:hover .exit-icon {
@@ -9292,19 +9292,41 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   fill: #12140f;
 }
 
-@media only screen and (min-width: 76.5rem) {
-  /* line 51, ../scss/_responsive.scss */
-  .home-quote {
-    display: block;
-  }
-}
-@media only screen and (min-width: 76.5rem) and (max-height: 55rem) {
-  /* line 61, ../scss/_responsive.scss */
+@media only screen and (min-device-width: 48rem) and (max-device-width: 64rem) {
+  /* line 26, ../scss/_responsive.scss */
   .home-quote {
     display: none;
   }
 
+  /* line 29, ../scss/_responsive.scss */
+  .home-signup {
+    margin-top: 1.875rem;
+  }
+}
+@media only screen and (min-width: 76.5rem) {
+  /* line 56, ../scss/_responsive.scss */
+  .home-quote {
+    display: block;
+  }
+}
+@media only screen and (max-width: 76.5rem) {
   /* line 64, ../scss/_responsive.scss */
+  .home-quote {
+    display: none;
+  }
+
+  /* line 67, ../scss/_responsive.scss */
+  .home-signup {
+    margin-top: 1.875rem;
+  }
+}
+@media only screen and (min-width: 76.5rem) and (max-height: 55rem) {
+  /* line 77, ../scss/_responsive.scss */
+  .home-quote {
+    display: none;
+  }
+
+  /* line 80, ../scss/_responsive.scss */
   .home-signup {
     margin-top: 1.875rem;
   }
