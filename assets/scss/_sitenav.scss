@@ -133,12 +133,17 @@ body,
 		     border-left:0px solid transparent;
 		     border-bottom:0px solid transparent;
 		}
-
+		.vertical-middle{
+			//display:table-cell;
+			display:table;
+			height:100%;
+			width:100%;
+		}
 		ul{
 			margin:0px;
 			display:table-cell;
 			vertical-align:middle;
-			
+
 			&.top{
 				position:absolute;
 				z-index:100;
