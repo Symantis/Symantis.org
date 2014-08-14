@@ -50,6 +50,8 @@ body {
 		width: 100%;
 	}
 	.left-content {
+		overflow: scroll;
+		height: 100vh;
 		ul {
 			list-style: none;
 			margin: 0;

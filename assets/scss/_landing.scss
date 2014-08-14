@@ -64,7 +64,7 @@
 .land-title-right {
 	text-align: right;
 	ul {
-		margin-top: rem-calc(30px);
+		margin-top: rem-calc(33px);
 		margin-right: 5%;
 		li {
 			float: right;
@@ -75,7 +75,7 @@
 .social-svg {
 	fill: white;
 	height: auto;
-	@include transition(50ms);
+	@include transition(100ms);
 	&:hover {
 		fill: $primary-color;
 	}
