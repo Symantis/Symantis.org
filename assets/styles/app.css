@@ -8569,7 +8569,7 @@ body,
 }
 /* line 176, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.middle {
-  width: 150px;
+  width: 50px;
   padding-left: 5px;
   z-index: 99;
   line-height: 0.9375rem;
@@ -8579,14 +8579,15 @@ body,
 }
 /* line 185, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.middle li {
-  width: 150px;
+  width: 100%;
+  display: block;
 }
-/* line 187, ../scss/_sitenav.scss */
+/* line 188, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.middle li a {
   display: none;
   color: #fff;
 }
-/* line 195, ../scss/_sitenav.scss */
+/* line 196, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.bottom {
   position: absolute;
   z-index: 100;
@@ -8596,19 +8597,19 @@ body,
   bottom: 0px;
   display: table;
 }
-/* line 203, ../scss/_sitenav.scss */
+/* line 204, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.bottom li.logo {
   display: table-cell;
   vertical-align: bottom;
   font-size: 30px;
 }
-/* line 207, ../scss/_sitenav.scss */
+/* line 208, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.bottom li.logo .sy {
   padding-left: 8px;
   width: 50px;
   color: #3b948b;
 }
-/* line 213, ../scss/_sitenav.scss */
+/* line 214, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.bottom li.logo .mantis {
   width: 100px;
   padding-left: 2px;
@@ -8617,18 +8618,18 @@ body,
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 224, ../scss/_sitenav.scss */
+/* line 225, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul li {
   list-style: none;
 }
 
-/* line 231, ../scss/_sitenav.scss */
+/* line 232, ../scss/_sitenav.scss */
 .sy-effect.sy-app {
   -webkit-perspective: 1500px;
   perspective: 1500px;
 }
 
-/* line 236, ../scss/_sitenav.scss */
+/* line 237, ../scss/_sitenav.scss */
 .sy-effect .sitenav-push {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -8636,7 +8637,7 @@ body,
   margin-left: 50px;
 }
 
-/* line 243, ../scss/_sitenav.scss */
+/* line 244, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sitenav-push {
   -webkit-transform: translate3d(75px, 0, -350px);
   transform: translate3d(75px, 0, -350px);
@@ -8645,7 +8646,7 @@ body,
   box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
-/* line 249, ../scss/_sitenav.scss */
+/* line 250, ../scss/_sitenav.scss */
 .sy-effect.sitenav {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -8656,7 +8657,7 @@ body,
   left: 0;
 }
 
-/* line 260, ../scss/_sitenav.scss */
+/* line 261, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav {
   opacity: 1;
   -webkit-transition: -webkit-transform 0.5s;
@@ -8669,45 +8670,50 @@ body,
   -moz-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.3);
 }
-/* line 276, ../scss/_sitenav.scss */
+/* line 277, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .activator {
   width: 80px;
 }
-/* line 279, ../scss/_sitenav.scss */
+/* line 280, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .activator > .activator-icon {
   width: 80px;
   opacity: 0;
 }
-/* line 284, ../scss/_sitenav.scss */
+/* line 285, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner {
   width: 150px;
 }
-/* line 287, ../scss/_sitenav.scss */
+/* line 290, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.top li .search {
+  opacity: 1.0;
+}
+/* line 295, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle {
+  width: 150px;
   padding-left: 15px;
   line-height: 2.1875rem;
   font-size: 1rem;
   opacity: 1;
 }
-/* line 293, ../scss/_sitenav.scss */
+/* line 302, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle li a {
   display: block;
 }
-/* line 303, ../scss/_sitenav.scss */
+/* line 312, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.bottom li.logo .mantis {
   opacity: 1.0;
 }
 
-/* line 313, ../scss/_sitenav.scss */
+/* line 322, ../scss/_sitenav.scss */
 .sy-effect.sitenav::after {
   display: none;
 }
 
-/* line 318, ../scss/_sitenav.scss */
+/* line 327, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-top-open .sy-effect.sitenav .sitenav-inner {
   width: 150px;
 }
-/* line 320, ../scss/_sitenav.scss */
+/* line 329, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-top-open .sy-effect.sitenav .sitenav-inner::after {
   position: absolute;
   left: 50px;
@@ -8719,16 +8725,16 @@ body,
   border-left: 0px solid #12140f;
   border-bottom: 0px solid transparent;
 }
-/* line 334, ../scss/_sitenav.scss */
+/* line 343, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-top-open .sy-effect.sitenav .sitenav-inner ul.top li .search {
   opacity: 1.0;
 }
 
-/* line 343, ../scss/_sitenav.scss */
+/* line 352, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner {
   width: 150px;
 }
-/* line 345, ../scss/_sitenav.scss */
+/* line 354, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner::after {
   position: absolute;
   left: 50px;
@@ -8740,7 +8746,7 @@ body,
   border-left: 100px solid #12140f;
   border-bottom: 0px solid #12140f;
 }
-/* line 359, ../scss/_sitenav.scss */
+/* line 368, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner ul.bottom li.logo .mantis {
   opacity: 1.0;
 }
