@@ -8682,7 +8682,7 @@ body {
 .fluid-row {
   position: relative;
   width: 100%;
-  padding: 30px;
+  padding: 1.875rem;
   max-width: 100%;
 }
 /* line 24, ../scss/_body.scss */
@@ -8692,7 +8692,7 @@ body {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 3rem;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
   margin: 0;
 }
 /* line 31, ../scss/_body.scss */
@@ -8716,13 +8716,13 @@ body {
 
 /* line 44, ../scss/_body.scss */
 .main-left {
-  padding-right: 30px;
+  padding-right: 1.875rem;
 }
 /* line 46, ../scss/_body.scss */
 .main-left header {
-  border-top: 2px white solid;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  border-top: 0.125rem white solid;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   width: 100%;
 }
 /* line 53, ../scss/_body.scss */
@@ -8734,16 +8734,16 @@ body {
 /* line 57, ../scss/_body.scss */
 .main-left .left-content ul li {
   margin: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
 }
 /* line 64, ../scss/_body.scss */
 .main-left .left-content a p {
-  -webkit-transition: all 50ms ease;
-  -moz-transition: all 50ms ease;
-  -o-transition: all 50ms ease;
-  -ms-transition: all 50ms ease;
-  transition: all 50ms ease;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  transition: all 100ms ease;
 }
 /* line 66, ../scss/_body.scss */
 .main-left .left-content a p:hover {
@@ -8752,14 +8752,17 @@ body {
 
 /* line 73, ../scss/_body.scss */
 .main-center {
-  padding-right: 30px;
+  padding-right: 1.875rem;
 }
 /* line 75, ../scss/_body.scss */
 .main-center header {
-  border-top: 1px #e8e8e8 solid;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  border-top: 0.0625rem #e8e8e8 solid;
+  padding-top: 1.25rem;
   width: 100%;
+}
+/* line 80, ../scss/_body.scss */
+.main-center .main-content {
+  padding-top: 1.25rem;
 }
 
 /* line 5, ../scss/_kitchen.scss */
@@ -8789,11 +8792,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   margin: 0 0 1.25rem 0;
   display: inline-block;
   position: relative;
-  -webkit-transition: all 50ms ease;
-  -moz-transition: all 50ms ease;
-  -o-transition: all 50ms ease;
-  -ms-transition: all 50ms ease;
-  transition: all 50ms ease;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  transition: all 100ms ease;
   outline: none;
 }
 /* line 25, ../scss/_kitchen.scss */
@@ -8935,11 +8938,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   right: 10px;
   padding: 0.625rem;
   margin: 0.625rem;
-  -webkit-transition: all 50ms ease;
-  -moz-transition: all 50ms ease;
-  -o-transition: all 50ms ease;
-  -ms-transition: all 50ms ease;
-  transition: all 50ms ease;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  transition: all 100ms ease;
 }
 /* line 137, ../scss/_kitchen.scss */
 .exit-search .exit-icon {
@@ -9008,6 +9011,51 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .search-top {
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+/* line 174, ../scss/_kitchen.scss */
+.search-result {
+  padding-bottom: 1.25rem;
+  padding-top: 0.625rem;
+}
+/* line 177, ../scss/_kitchen.scss */
+.search-result h3 {
+  @inlude font-bold(rem-calc(30px));
+  padding-bottom: 0.625rem;
+}
+/* line 181, ../scss/_kitchen.scss */
+.search-result p {
+  @inlude font-regular(rem-calc(12px));
+  line-height: 1.125rem;
+}
+/* line 187, ../scss/_kitchen.scss */
+.search-result .search-result-category a h2 {
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 0.75rem;
+  padding-bottom: 0.9375rem;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  transition: all 100ms ease;
+}
+/* line 194, ../scss/_kitchen.scss */
+.search-result .search-result-category a:hover h2 {
+  color: #3b948b;
+}
+/* line 199, ../scss/_kitchen.scss */
+.search-result .search-result-content {
+  border-left: 0.0625rem solid white;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  transition: all 100ms ease;
+}
+/* line 202, ../scss/_kitchen.scss */
+.search-result .search-result-content:hover {
+  border-left-color: #3b948b;
 }
 
 /* line 1, ../scss/_landing.scss */

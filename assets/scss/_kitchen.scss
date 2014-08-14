@@ -20,7 +20,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	margin:0 0 1.25rem 0;
 	display: inline-block;
 	position: relative;
-	@include transition(50ms);
+	@include transition(100ms);
 	outline: none;
 	&:hover {
 		border-color: $primary-color;
@@ -137,7 +137,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	.exit-icon {
 		fill: white;
 	}
-	@include transition(50ms);
+	@include transition(100ms);
 	&:hover .exit-icon  {
 		fill: $gray;
 	}
@@ -170,6 +170,39 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .search-top {
 	margin-bottom: 0;
 	padding-bottom: 0;
+}
+.search-result {
+	padding-bottom: rem-calc(20px);
+	padding-top: rem-calc(10px);
+	h3 {
+		@inlude font-bold(rem-calc(30px));
+		padding-bottom: rem-calc(10px);
+	}
+	p {
+		@inlude font-regular(rem-calc(12px));
+		line-height: rem-calc(18px);
+	}
+	.search-result-category {
+		a {
+			h2 {
+				font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+				color: white;
+				font-size: rem-calc(12px);
+				padding-bottom: rem-calc(15px);
+				@include transition(100ms);
+			}
+			&:hover h2 {
+				color: $primary-color;
+			}
+		}
+	}
+	.search-result-content {
+		border-left: rem-calc(1px) solid white;
+		@include transition(100ms);
+		&:hover {
+			border-left-color: $primary-color;
+		}
+	}
 }
 
 

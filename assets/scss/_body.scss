@@ -19,13 +19,13 @@ body {
 .fluid-row {
 	position: relative;
 	width: 100%;
-	padding: 30px;
+	padding: rem-calc(30px);
 	max-width: 100%;
 	h1 {
 		text-align: left;
 		width: 100%;
 		@include font-regular(rem-calc(48px));
-		padding-bottom: 20px;
+		padding-bottom: rem-calc(20px);
 		margin: 0;
 	}
 	h3 {
@@ -42,11 +42,11 @@ body {
 	}
 }
 .main-left {
-	padding-right: 30px;
+	padding-right: rem-calc(30px);
 	header {
-		border-top: 2px white solid;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		border-top: rem-calc(2px) white solid;
+		padding-top: rem-calc(20px);
+		padding-bottom: rem-calc(20px);
 		width: 100%;
 	}
 	.left-content {
@@ -56,13 +56,13 @@ body {
 			padding: 0;
 			li {
 				margin: 0;
-				padding-top: 5px;
-				padding-bottom: 5px;
+				padding-top: rem-calc(5px);
+				padding-bottom: rem-calc(5px);
 			}
 		}
 		a {
 			p {
-				@include transition(50ms);
+				@include transition(100ms);
 				&:hover {
 					color: $primary-color;
 				}
@@ -71,15 +71,14 @@ body {
 	}
 }
 .main-center {
-	padding-right: 30px;
+	padding-right: rem-calc(30px);
 	header {
-		border-top: 1px $offWhite solid;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		border-top: rem-calc(1px) $offWhite solid;
+		padding-top: rem-calc(20px);
 		width: 100%;
 	}
-	.center-content {
-
+	.main-content {
+		padding-top: rem-calc(20px);
 	}
 }
 .main-right {
