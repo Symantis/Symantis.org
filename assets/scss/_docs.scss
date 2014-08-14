@@ -1,0 +1,37 @@
+.docs-left {
+	header {
+		margin-bottom: rem-calc(-40px);
+	}
+}
+.docs-left-content {
+	border-bottom: rem-calc(2px) white solid;
+}
+.docs-nav {
+	padding-top: rem-calc(20px);
+	h3 {
+		padding-top: rem-calc(10px);
+		a {
+			text-align: left;
+			width: 100%;
+			@include font-semi(rem-calc(18px));
+			margin: 0;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+	ul {
+		li {
+			a {
+				text-align: left;
+				width: 100%;
+				@include font-regular(rem-calc(12px));
+				margin: 0;
+				padding: 0;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

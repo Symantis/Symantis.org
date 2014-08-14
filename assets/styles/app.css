@@ -8842,7 +8842,7 @@ body {
 }
 /* line 52, ../scss/_body.scss */
 .main-left .left-content {
-  overflow: scroll;
+  overflow-y: scroll;
   height: 100vh;
 }
 /* line 55, ../scss/_body.scss */
@@ -9410,4 +9410,50 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 /* line 161, ../scss/_landing.scss */
 .home-down-button .down-svg:hover {
   fill: #12140f;
+}
+
+/* line 2, ../scss/_docs.scss */
+.docs-left header {
+  margin-bottom: -2.5rem;
+}
+
+/* line 6, ../scss/_docs.scss */
+.docs-left-content {
+  border-bottom: 0.125rem white solid;
+}
+
+/* line 9, ../scss/_docs.scss */
+.docs-nav {
+  padding-top: 1.25rem;
+}
+/* line 11, ../scss/_docs.scss */
+.docs-nav h3 {
+  padding-top: 0.625rem;
+}
+/* line 13, ../scss/_docs.scss */
+.docs-nav h3 a {
+  text-align: left;
+  width: 100%;
+  font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1.125rem;
+  margin: 0;
+}
+/* line 18, ../scss/_docs.scss */
+.docs-nav h3 a:hover {
+  color: #3b948b;
+}
+/* line 25, ../scss/_docs.scss */
+.docs-nav ul li a {
+  text-align: left;
+  width: 100%;
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+/* line 31, ../scss/_docs.scss */
+.docs-nav ul li a:hover {
+  text-decoration: underline;
 }
