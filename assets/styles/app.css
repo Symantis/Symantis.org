@@ -8758,7 +8758,11 @@ body,
   border-left: 100px solid #12140f;
   border-bottom: 0px solid #12140f;
 }
-/* line 371, ../scss/_sitenav.scss */
+/* line 368, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner ul {
+  width: 150px;
+}
+/* line 372, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner ul.bottom li.logo .mantis {
   opacity: 1.0;
 }
@@ -9419,18 +9423,19 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 /* line 6, ../scss/_docs.scss */
 .docs-left-content {
-  border-bottom: 0.125rem white solid;
+  border-bottom: 0.0625rem white solid;
 }
 
 /* line 9, ../scss/_docs.scss */
 .docs-nav {
   padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
-/* line 11, ../scss/_docs.scss */
+/* line 12, ../scss/_docs.scss */
 .docs-nav h3 {
   padding-top: 0.625rem;
 }
-/* line 13, ../scss/_docs.scss */
+/* line 14, ../scss/_docs.scss */
 .docs-nav h3 a {
   text-align: left;
   width: 100%;
@@ -9439,13 +9444,20 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   font-size: 1.125rem;
   margin: 0;
 }
-/* line 18, ../scss/_docs.scss */
+/* line 19, ../scss/_docs.scss */
 .docs-nav h3 a:hover {
   color: #3b948b;
 }
-/* line 25, ../scss/_docs.scss */
-.docs-nav ul li a {
+/* line 24, ../scss/_docs.scss */
+.docs-nav li {
+  padding: 0;
+  margin: 0;
+  line-height: 12px;
+}
+/* line 28, ../scss/_docs.scss */
+.docs-nav li a {
   text-align: left;
+  line-height: 12px;
   width: 100%;
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
@@ -9453,7 +9465,65 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   margin: 0;
   padding: 0;
 }
-/* line 31, ../scss/_docs.scss */
-.docs-nav ul li a:hover {
+/* line 35, ../scss/_docs.scss */
+.docs-nav li a:hover {
   text-decoration: underline;
+}
+
+/* line 41, ../scss/_docs.scss */
+.docs-main-content {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  margin-top: -1.25rem;
+  border-bottom: 0.0625rem white solid;
+}
+
+/* line 49, ../scss/_docs.scss */
+.docs-category {
+  border-left: 0.0625rem solid white;
+  margin-top: 1.875rem;
+  margin-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 0.9375rem;
+}
+/* line 55, ../scss/_docs.scss */
+.docs-category h1 {
+  font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 2.25rem;
+  line-height: 2.375rem;
+  padding-bottom: 0.625rem;
+}
+/* line 60, ../scss/_docs.scss */
+.docs-category h2 {
+  font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.625rem;
+  padding-bottom: 1.25rem;
+  padding-top: 0.9375rem;
+  margin: 0;
+}
+/* line 67, ../scss/_docs.scss */
+.docs-category p {
+  line-height: 1.125rem;
+  text-align: left;
+  width: 100%;
+  font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 0.75rem;
+  margin: 0;
+  padding-bottom: 0.625rem;
+}
+
+/* line 76, ../scss/_docs.scss */
+.docs-code-block {
+  width: 100%;
+  height: 9.375rem;
+  padding: 1.25rem;
+  border: 0.0625rem solid #898b88;
+  background: #2e302c;
+  overflow: scroll;
 }
