@@ -6,15 +6,17 @@
   </div>
 </a>
 <div class="sitenav-inner" ng-controller="SiteNavCtrl">
-    <ul class="top">
-      <li></li>
+    <ul class="top" ng-click="syMenutTopToggle()">
+      <li>
+        <span class=""><i class="icon icon-search"></i></span><span></span>
+        </li>
     </ul>
     <ul class="middle" ng-click="syMenuToggle()">
     	<li ng-repeat="siteItem in siteItems">
         	<a href="{{siteItem.url}}">{{siteItem.title}}</a>
     	</li>
     </ul>
-    <ul class="bottom">
+    <ul class="bottom" ng-click="syMenutBottomToggle()">
       <li class="logo">
         <a href="/home">
         <span class="sy">sy.</span><span class="mantis">mantis</span>

@@ -62,10 +62,19 @@ angular.module( 'symantis', [
 .controller( 'AppCtrl', function AppCtrl ( $scope, config ) {
 	config.currentUser = window.currentUser;
 
-
 	$scope.syMenuOpen = false;
 	$scope.syMenuToggle = function(){
 		$scope.syMenuOpen = !$scope.syMenuOpen;
+	}
+
+	$scope.syMenuTopOpen = false;
+	$scope.syMenuTopToggle = function(){
+		$scope.syMenuTopOpen = !$scope.syMenuTopOpen;
+	}
+
+	$scope.syMenuBottomOpen = false;
+	$scope.syMenuBottomToggle = function(){
+		$scope.syMenuBottomOpen = !$scope.syMenuBottomOpen;
 	}
 
 });

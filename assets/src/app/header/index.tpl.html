@@ -16,6 +16,16 @@
               Open
             </a>
           </li>
+          <li>
+            <a class="button" ng-click="syMenuTopToggle()">
+              Top
+            </a>
+          </li>
+          <li>
+            <a class="button" ng-click="syMenuBottomToggle()">
+              Bottom
+            </a>
+          </li>
           <li ng-if="currentUser" class="has-dropdown">
             <a>
               {{currentUser.email}} 
