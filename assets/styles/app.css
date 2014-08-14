@@ -8507,10 +8507,11 @@ body,
 /* line 117, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner {
   height: 100%;
-  width: 100%;
+  width: 50px;
+  overflow: hidden;
   display: table;
 }
-/* line 122, ../scss/_sitenav.scss */
+/* line 124, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner::after {
   -webkit-transition: border-width 0.3s;
   transition: border-width 0.3s;
@@ -8525,19 +8526,19 @@ body,
   border-left: 0px solid transparent;
   border-bottom: 0px solid transparent;
 }
-/* line 136, ../scss/_sitenav.scss */
+/* line 138, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner .vertical-middle {
   display: table;
   height: 100%;
   width: 100%;
 }
-/* line 142, ../scss/_sitenav.scss */
+/* line 144, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul {
   margin: 0px;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 147, ../scss/_sitenav.scss */
+/* line 149, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.top {
   position: absolute;
   z-index: 100;
@@ -8545,18 +8546,18 @@ body,
   width: 150px;
   min-height: 200px;
 }
-/* line 153, ../scss/_sitenav.scss */
+/* line 155, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.top li {
   font-size: 20px;
   line-height: 50px;
 }
-/* line 156, ../scss/_sitenav.scss */
+/* line 158, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.top li .search-icon {
   padding-left: 15px;
   width: 50px;
   color: #3b948b;
 }
-/* line 162, ../scss/_sitenav.scss */
+/* line 164, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.top li .search {
   font-size: 16px;
   padding-left: 15px;
@@ -8566,7 +8567,7 @@ body,
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 174, ../scss/_sitenav.scss */
+/* line 176, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.middle {
   width: 150px;
   padding-left: 5px;
@@ -8576,16 +8577,16 @@ body,
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 183, ../scss/_sitenav.scss */
+/* line 185, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.middle li {
   width: 150px;
 }
-/* line 185, ../scss/_sitenav.scss */
+/* line 187, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.middle li a {
   display: none;
   color: #fff;
 }
-/* line 193, ../scss/_sitenav.scss */
+/* line 195, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.bottom {
   position: absolute;
   z-index: 100;
@@ -8595,19 +8596,19 @@ body,
   bottom: 0px;
   display: table;
 }
-/* line 201, ../scss/_sitenav.scss */
+/* line 203, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.bottom li.logo {
   display: table-cell;
   vertical-align: bottom;
   font-size: 30px;
 }
-/* line 205, ../scss/_sitenav.scss */
+/* line 207, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.bottom li.logo .sy {
   padding-left: 8px;
   width: 50px;
   color: #3b948b;
 }
-/* line 211, ../scss/_sitenav.scss */
+/* line 213, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul.bottom li.logo .mantis {
   width: 100px;
   padding-left: 2px;
@@ -8616,18 +8617,18 @@ body,
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 222, ../scss/_sitenav.scss */
+/* line 224, ../scss/_sitenav.scss */
 .sitenav .sitenav-inner ul li {
   list-style: none;
 }
 
-/* line 229, ../scss/_sitenav.scss */
+/* line 231, ../scss/_sitenav.scss */
 .sy-effect.sy-app {
   -webkit-perspective: 1500px;
   perspective: 1500px;
 }
 
-/* line 234, ../scss/_sitenav.scss */
+/* line 236, ../scss/_sitenav.scss */
 .sy-effect .sitenav-push {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -8635,7 +8636,7 @@ body,
   margin-left: 50px;
 }
 
-/* line 241, ../scss/_sitenav.scss */
+/* line 243, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sitenav-push {
   -webkit-transform: translate3d(75px, 0, -350px);
   transform: translate3d(75px, 0, -350px);
@@ -8644,7 +8645,7 @@ body,
   box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
-/* line 247, ../scss/_sitenav.scss */
+/* line 249, ../scss/_sitenav.scss */
 .sy-effect.sitenav {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -8655,7 +8656,7 @@ body,
   left: 0;
 }
 
-/* line 258, ../scss/_sitenav.scss */
+/* line 260, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav {
   opacity: 1;
   -webkit-transition: -webkit-transform 0.5s;
@@ -8668,37 +8669,45 @@ body,
   -moz-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.3);
 }
-/* line 274, ../scss/_sitenav.scss */
+/* line 276, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .activator {
   width: 80px;
 }
-/* line 277, ../scss/_sitenav.scss */
+/* line 279, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .activator > .activator-icon {
   width: 80px;
   opacity: 0;
 }
 /* line 284, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner {
+  width: 150px;
+}
+/* line 287, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle {
   padding-left: 15px;
   line-height: 2.1875rem;
   font-size: 1rem;
   opacity: 1;
 }
-/* line 290, ../scss/_sitenav.scss */
+/* line 293, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle li a {
   display: block;
 }
-/* line 300, ../scss/_sitenav.scss */
+/* line 303, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.bottom li.logo .mantis {
   opacity: 1.0;
 }
 
-/* line 310, ../scss/_sitenav.scss */
+/* line 313, ../scss/_sitenav.scss */
 .sy-effect.sitenav::after {
   display: none;
 }
 
-/* line 316, ../scss/_sitenav.scss */
+/* line 318, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-top-open .sy-effect.sitenav .sitenav-inner {
+  width: 150px;
+}
+/* line 320, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-top-open .sy-effect.sitenav .sitenav-inner::after {
   position: absolute;
   left: 50px;
@@ -8710,12 +8719,16 @@ body,
   border-left: 0px solid #12140f;
   border-bottom: 0px solid transparent;
 }
-/* line 330, ../scss/_sitenav.scss */
+/* line 334, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-top-open .sy-effect.sitenav .sitenav-inner ul.top li .search {
   opacity: 1.0;
 }
 
-/* line 340, ../scss/_sitenav.scss */
+/* line 343, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner {
+  width: 150px;
+}
+/* line 345, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner::after {
   position: absolute;
   left: 50px;
@@ -8727,7 +8740,7 @@ body,
   border-left: 100px solid #12140f;
   border-bottom: 0px solid #12140f;
 }
-/* line 354, ../scss/_sitenav.scss */
+/* line 359, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner ul.bottom li.logo .mantis {
   opacity: 1.0;
 }

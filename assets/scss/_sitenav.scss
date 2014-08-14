@@ -62,7 +62,7 @@ body,
 	//visibility: hidden;
 	height: 100%;
 	background: $darkest;
-	//overflow:hidden;
+	
 
 }
 
@@ -116,9 +116,11 @@ body,
 	}
 	.sitenav-inner{
 		height:100%;
-		width:100%;
-		display:table;
 		
+		width:50px;
+		overflow:hidden;
+
+		display:table;
 		&::after{
 			-webkit-transition: border-width 0.3s;
 			transition: border-width 0.3s;
@@ -280,6 +282,7 @@ body,
 		}
 	}
 	.sitenav-inner{
+		width:150px;
 		ul{
 			&.middle{
 				padding-left:15px;
@@ -313,6 +316,7 @@ body,
 
 .sy-effect.sy-menu-top-open .sy-effect.sitenav{
 	.sitenav-inner{
+		width:150px;
 		&::after{
 			position: absolute;
 			left:50px;
@@ -337,6 +341,7 @@ body,
 }
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav{
 	.sitenav-inner{
+		width:150px;
 		&::after{
 			position: absolute;
 			left:50px;
