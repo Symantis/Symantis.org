@@ -9517,8 +9517,17 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   margin: 0;
   padding-bottom: 0.625rem;
 }
+/* line 74, ../scss/_docs.scss */
+.docs-category p a {
+  color: white;
+  text-decoration: underline;
+}
+/* line 77, ../scss/_docs.scss */
+.docs-category p a:hover {
+  color: #898b88;
+}
 
-/* line 76, ../scss/_docs.scss */
+/* line 83, ../scss/_docs.scss */
 .docs-code-block {
   width: 100%;
   height: 9.375rem;

@@ -71,6 +71,13 @@
 		@include font-regular(rem-calc(12px));
 		margin: 0;
 		padding-bottom: rem-calc(10px);
+		a {
+			color: white;
+			text-decoration: underline;
+			&:hover {
+				color: $gray;
+			}
+		}
 	}
 }
 .docs-code-block {
