@@ -194,7 +194,7 @@ body,
 .sy-effect.sy-menu-open .sitenav-push {
 	-webkit-transform: translate3d(100px, 0, -350px);
 	transform: translate3d(100px, 0, -350px);
-	@include drop-shadow;
+	@include drop-shadow(0.5);
 }
 
 .sy-effect.sitenav {
@@ -224,7 +224,11 @@ body,
 	width: 200px;
 	left: 0;
 
+<<<<<<< HEAD
 	//@include drop-shadow;
+=======
+	@include drop-shadow(0.3);
+>>>>>>> FETCH_HEAD
 
 	.activator{
 		width: 80px;
