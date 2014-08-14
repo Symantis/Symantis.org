@@ -150,7 +150,7 @@ body,
 				position:absolute;
 				z-index:100;
 				left:0px;
-				width:150px;
+				width: 50px;
 				min-height:200px;
 				li{
 					font-size:20px;
@@ -197,7 +197,7 @@ body,
 				position:absolute;
 				z-index:100;
 				left:0px;
-				width:150px;
+				width: 50px;
 				min-height:200px;
 				bottom:0px;
 				display:table;
@@ -286,6 +286,7 @@ body,
 		width:150px;
 		ul{
 			&.top{
+				width:150px;
 				li{
 					.search{
 						opacity:1.0;
@@ -305,6 +306,7 @@ body,
 				}
 			}
 			&.bottom{
+				width:150px;
 				li.logo{
 					.sy{
 
@@ -339,6 +341,7 @@ body,
 		}
 		ul{
 			&.top{
+				width:150px;
 				li{
 					.search{
 						opacity:1.0;
@@ -363,6 +366,7 @@ body,
 		     border-bottom:0px solid $darkest;
 		}
 		ul{
+			width:150px;
 			&.bottom{
 				li.logo{
 					.mantis{

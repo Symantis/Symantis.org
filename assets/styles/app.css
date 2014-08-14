@@ -8543,7 +8543,7 @@ body,
   position: absolute;
   z-index: 100;
   left: 0px;
-  width: 150px;
+  width: 50px;
   min-height: 200px;
 }
 /* line 155, ../scss/_sitenav.scss */
@@ -8592,7 +8592,7 @@ body,
   position: absolute;
   z-index: 100;
   left: 0px;
-  width: 150px;
+  width: 50px;
   min-height: 200px;
   bottom: 0px;
   display: table;
@@ -8683,11 +8683,15 @@ body,
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner {
   width: 150px;
 }
-/* line 290, ../scss/_sitenav.scss */
+/* line 288, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.top {
+  width: 150px;
+}
+/* line 291, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.top li .search {
   opacity: 1.0;
 }
-/* line 295, ../scss/_sitenav.scss */
+/* line 296, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle {
   width: 150px;
   padding-left: 15px;
@@ -8695,25 +8699,29 @@ body,
   font-size: 1rem;
   opacity: 1;
 }
-/* line 302, ../scss/_sitenav.scss */
+/* line 303, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.middle li a {
   display: block;
 }
-/* line 312, ../scss/_sitenav.scss */
+/* line 308, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.bottom {
+  width: 150px;
+}
+/* line 314, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-open .sy-effect.sitenav .sitenav-inner ul.bottom li.logo .mantis {
   opacity: 1.0;
 }
 
-/* line 322, ../scss/_sitenav.scss */
+/* line 324, ../scss/_sitenav.scss */
 .sy-effect.sitenav::after {
   display: none;
 }
 
-/* line 327, ../scss/_sitenav.scss */
+/* line 329, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-top-open .sy-effect.sitenav .sitenav-inner {
   width: 150px;
 }
-/* line 329, ../scss/_sitenav.scss */
+/* line 331, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-top-open .sy-effect.sitenav .sitenav-inner::after {
   position: absolute;
   left: 50px;
@@ -8726,15 +8734,19 @@ body,
   border-bottom: 0px solid transparent;
 }
 /* line 343, ../scss/_sitenav.scss */
+.sy-effect.sy-menu-top-open .sy-effect.sitenav .sitenav-inner ul.top {
+  width: 150px;
+}
+/* line 346, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-top-open .sy-effect.sitenav .sitenav-inner ul.top li .search {
   opacity: 1.0;
 }
 
-/* line 352, ../scss/_sitenav.scss */
+/* line 355, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner {
   width: 150px;
 }
-/* line 354, ../scss/_sitenav.scss */
+/* line 357, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner::after {
   position: absolute;
   left: 50px;
@@ -8746,7 +8758,7 @@ body,
   border-left: 100px solid #12140f;
   border-bottom: 0px solid #12140f;
 }
-/* line 368, ../scss/_sitenav.scss */
+/* line 371, ../scss/_sitenav.scss */
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav .sitenav-inner ul.bottom li.logo .mantis {
   opacity: 1.0;
 }
