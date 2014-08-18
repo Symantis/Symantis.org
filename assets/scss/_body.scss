@@ -16,6 +16,10 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b5d5a', endColorstr='#5b5d5a',GradientType=0 );
 	position: fixed;
 }
+#heading-row {
+	padding-top: rem-calc(60px);
+	padding-bottom: 0;
+}
 .fluid-row {
 	position: relative;
 	width: 100%;
@@ -25,7 +29,6 @@ body {
 		text-align: left;
 		width: 100%;
 		@include font-regular(rem-calc(48px));
-		padding-bottom: rem-calc(20px);
 		margin: 0;
 	}
 	h3 {
@@ -58,7 +61,7 @@ body {
 			padding: 0;
 			li {
 				margin: 0;
-				padding-top: rem-calc(5px);
+				padding-top: rem-calc(0px);
 				padding-bottom: rem-calc(5px);
 			}
 		}

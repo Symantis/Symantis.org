@@ -8798,23 +8798,28 @@ body {
 }
 
 /* line 19, ../scss/_body.scss */
+#heading-row {
+  padding-top: 3.75rem;
+  padding-bottom: 0;
+}
+
+/* line 23, ../scss/_body.scss */
 .fluid-row {
   position: relative;
   width: 100%;
   padding: 1.875rem;
   max-width: 100%;
 }
-/* line 24, ../scss/_body.scss */
+/* line 28, ../scss/_body.scss */
 .fluid-row h1 {
   text-align: left;
   width: 100%;
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 3rem;
-  padding-bottom: 1.25rem;
   margin: 0;
 }
-/* line 31, ../scss/_body.scss */
+/* line 34, ../scss/_body.scss */
 .fluid-row h3 {
   text-align: left;
   width: 100%;
@@ -8823,7 +8828,7 @@ body {
   font-size: 1.125rem;
   margin: 0;
 }
-/* line 37, ../scss/_body.scss */
+/* line 40, ../scss/_body.scss */
 .fluid-row p {
   text-align: left;
   width: 100%;
@@ -8833,35 +8838,35 @@ body {
   margin: 0;
 }
 
-/* line 44, ../scss/_body.scss */
+/* line 47, ../scss/_body.scss */
 .main-left {
   padding-right: 1.875rem;
 }
-/* line 46, ../scss/_body.scss */
+/* line 49, ../scss/_body.scss */
 .main-left header {
   border-top: 0.125rem white solid;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   width: 100%;
 }
-/* line 52, ../scss/_body.scss */
+/* line 55, ../scss/_body.scss */
 .main-left .left-content {
   overflow-y: scroll;
   height: 100vh;
 }
-/* line 55, ../scss/_body.scss */
+/* line 58, ../scss/_body.scss */
 .main-left .left-content ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 59, ../scss/_body.scss */
+/* line 62, ../scss/_body.scss */
 .main-left .left-content ul li {
   margin: 0;
-  padding-top: 0.3125rem;
+  padding-top: 0;
   padding-bottom: 0.3125rem;
 }
-/* line 66, ../scss/_body.scss */
+/* line 69, ../scss/_body.scss */
 .main-left .left-content a p {
   -webkit-transition: all 100ms ease;
   -moz-transition: all 100ms ease;
@@ -8869,22 +8874,22 @@ body {
   -ms-transition: all 100ms ease;
   transition: all 100ms ease;
 }
-/* line 68, ../scss/_body.scss */
+/* line 71, ../scss/_body.scss */
 .main-left .left-content a p:hover {
   color: #3b948b;
 }
 
-/* line 75, ../scss/_body.scss */
+/* line 78, ../scss/_body.scss */
 .main-center {
   padding-right: 1.875rem;
 }
-/* line 77, ../scss/_body.scss */
+/* line 80, ../scss/_body.scss */
 .main-center header {
   border-top: 0.0625rem #e8e8e8 solid;
   padding-top: 1.25rem;
   width: 100%;
 }
-/* line 82, ../scss/_body.scss */
+/* line 85, ../scss/_body.scss */
 .main-center .main-content {
   padding-top: 1.25rem;
 }
@@ -9132,27 +9137,32 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 /* line 170, ../scss/_kitchen.scss */
+#search-category-1 {
+  padding-top: 0.625rem;
+}
+
+/* line 173, ../scss/_kitchen.scss */
 .search-top {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-/* line 174, ../scss/_kitchen.scss */
+/* line 177, ../scss/_kitchen.scss */
 .search-result {
   padding-bottom: 1.25rem;
   padding-top: 0.625rem;
 }
-/* line 177, ../scss/_kitchen.scss */
+/* line 180, ../scss/_kitchen.scss */
 .search-result h3 {
   @inlude font-bold(rem-calc(30px));
   padding-bottom: 0.625rem;
 }
-/* line 181, ../scss/_kitchen.scss */
+/* line 184, ../scss/_kitchen.scss */
 .search-result p {
   @inlude font-regular(rem-calc(12px));
   line-height: 1.125rem;
 }
-/* line 187, ../scss/_kitchen.scss */
+/* line 190, ../scss/_kitchen.scss */
 .search-result .search-result-category a h2 {
   font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
@@ -9164,11 +9174,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   -ms-transition: all 100ms ease;
   transition: all 100ms ease;
 }
-/* line 194, ../scss/_kitchen.scss */
+/* line 197, ../scss/_kitchen.scss */
 .search-result .search-result-category a:hover h2 {
   color: #3b948b;
 }
-/* line 199, ../scss/_kitchen.scss */
+/* line 202, ../scss/_kitchen.scss */
 .search-result .search-result-content {
   border-left: 0.0625rem solid white;
   -webkit-transition: all 100ms ease;
@@ -9177,7 +9187,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   -ms-transition: all 100ms ease;
   transition: all 100ms ease;
 }
-/* line 202, ../scss/_kitchen.scss */
+/* line 205, ../scss/_kitchen.scss */
 .search-result .search-result-content:hover {
   border-left-color: #3b948b;
 }
@@ -9535,4 +9545,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border: 0.0625rem solid #898b88;
   background: #2e302c;
   overflow: scroll;
+}
+
+/* line 1, ../scss/_community.scss */
+#left-indent {
+  padding-left: 1.25rem;
 }
