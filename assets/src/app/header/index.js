@@ -11,6 +11,9 @@ angular.module( 'symantis.header', [
         {title: 'Template', translationKey: 'navigation:template', url:'/template',cssClass: 'fa fa-info-circle'},
         {title: 'Docs', translationKey: 'navigation:docs', url:'/docs',cssClass: 'fa fa-info-circle'},
         {title: 'Community', translationKey: 'navigation:community', url:'/community',cssClass: 'fa fa-info-circle'},
+        {title: 'News', translationKey: 'navigation:community', url:'/news',cssClass: 'fa fa-info-circle'},
+        {title: 'Queries', translationKey: 'navigation:community', url:'/queries',cssClass: 'fa fa-info-circle'},
+        {title: 'Connections', translationKey: 'navigation:community', url:'/connections',cssClass: 'fa fa-info-circle'},
         {title: 'Creator', translationKey: 'navigation:creator', url:'/creator',cssClass: 'fa fa-info-circle'},
         {title: 'Start', translationKey: 'navigation:start', url:'/start',cssClass: 'fa fa-info-circle'}
     ];

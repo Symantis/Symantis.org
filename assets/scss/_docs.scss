@@ -24,10 +24,10 @@
 	li {
 		padding: 0;
 		margin: 0;
-		line-height: 12px;
+		line-height: rem-calc(12px);
 		a {
 			text-align: left;
-			line-height: 12px;
+			line-height: rem-calc(14px);
 			width: 100%;
 			@include font-regular(rem-calc(12px));
 			margin: 0;

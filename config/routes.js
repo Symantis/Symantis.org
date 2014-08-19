@@ -82,6 +82,22 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /community': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /news': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /queries': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /connections': {
+    controller: 'HomeController',
+    action: 'index'
+  },
   'get /help': {
     controller: 'HomeController',
     action: 'index'

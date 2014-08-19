@@ -1,9 +1,6 @@
 body {
 	background-color: rgba(40,40,40,1.0);
 }
-.container h1{
-	color:blue !important;
-}
 //gradient - #828282 0%, #4b4b4b 30%, #414141 44%, #414141 56%, #4b4b4b 70%, #828282 100%
 // rgba(130,130,130,1.0) - rgba(75,75,75,1.0) - rgba(41,41,41,1.0)
 .bg-gradient {
@@ -27,6 +24,7 @@ body {
 	position: relative;
 	width: 100%;
 	padding: rem-calc(30px);
+	padding-top: rem-calc(20px);
 	max-width: 100%;
 	h1 {
 		text-align: left;
