@@ -114,7 +114,7 @@
 						color: white;
 						@include transition(100ms);
 						&:hover {
-							color: $dark;
+							color: $gray;
 						}
 					}
 				}
@@ -272,10 +272,11 @@
 			float: left;
 			width: 70%;
 			h3 {
+				padding-bottom: rem-calc(10px);
 				a {
 					@inlude font-bold(rem-calc(30px));
-					padding-bottom: rem-calc(10px);
 					color: $primary-color;
+					@include transition(100ms);
 					&:hover {
 						color: white;
 					}
@@ -291,6 +292,40 @@
 		.querie-overview-stats {
 			float: right;
 			width: 30%;
+			ul {
+				float: right;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				a {
+					float: left;
+					svg {
+						fill: white;
+						float: left;
+						&:hover {
+							fill: $primary-color;
+						}
+					}
+				}
+				li {
+					float: right;
+					width: rem-calc(60px);
+					padding-top: rem-calc(5px);
+					svg {
+						fill: white;
+						float: left;
+					}
+					p {
+						float: left;
+						width: rem-calc(35px);
+						text-overflow: ellipsis;
+						textwrap: white;
+						padding-top: rem-calc(2px);
+						padding-left: rem-calc(6px);
+						padding-bottom: rem-calc(2px);
+					}
+				}
+			}
 		}
 	}
 }
