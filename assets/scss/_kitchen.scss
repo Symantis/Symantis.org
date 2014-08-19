@@ -193,6 +193,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 				font-size: rem-calc(12px);
 				padding-bottom: rem-calc(15px);
 				@include transition(100ms);
+				text-align: right;
 			}
 			&:hover h2 {
 				color: $primary-color;

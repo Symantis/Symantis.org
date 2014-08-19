@@ -51,6 +51,7 @@
 			color: white;
 			font-size: rem-calc(12px);
 			padding-bottom: rem-calc(15px);
+			text-align: right;
 		}
 	}
 	.news-post-content {
@@ -61,6 +62,10 @@
 			@inlude font-bold(rem-calc(30px));
 			padding-bottom: rem-calc(10px);
 			color: $primary-color;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			max-height: rem-calc(36px);
+			overflow: hidden;
 			@include transition(100ms);
 			&:hover {
 				color: white;
@@ -81,17 +86,18 @@
 			padding: 0;
 			width: 100%;
 			list-style: none;
+			max-width: rem-calc(768px);
 			li {
 				margin: 0;
 				padding: rem-calc(10px);
 				float: left;
-				width: calc(100% / 3);
 				padding-bottom: 0;
 			}
 			.news-post-details {
 				padding-top: rem-calc(25px);
 				text-align: left;
 				padding-left: 0;
+				width: 38%;
 				p {
 					@inlude font-regular(rem-calc(10px));
 					line-height: rem-calc(12px);
@@ -100,6 +106,7 @@
 			.news-post-comments {
 				@inlude font-regular(rem-calc(12px));
 				padding-top: rem-calc(25px);
+				width: 24%;
 				p {
 					width: 100%;
 					text-align: center;
@@ -108,7 +115,7 @@
 						color: white;
 						@include transition(100ms);
 						&:hover {
-							color: $gray;
+							color: $dark;
 						}
 					}
 				}
@@ -117,6 +124,7 @@
 				padding-top: rem-calc(15px);
 				padding-right: 0;
 				text-align: right;
+				width: 38%;
 				.facebook-share {
 					float: right;
 					padding-top: rem-calc(5px);

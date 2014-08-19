@@ -29,6 +29,15 @@ and (max-device-width : rem-calc(1024px)) {
 	.home-signup {
 		margin-top: rem-calc(30px);
 	}
+	.search-result {
+		.search-result-category {
+			a {
+				h2 {
+					font-size: rem-calc(8px);
+				}
+			}
+		}
+	}
 
 }
 
@@ -50,7 +59,7 @@ and (orientation : portrait) {
 
 }
 
-// Desktops & Laptops ----------- 
+// Desktops & Laptops & Above ----------- 
 @media only screen 
 and (min-width : rem-calc(1224px)) {
 	.home-quote {
@@ -58,7 +67,7 @@ and (min-width : rem-calc(1224px)) {
 	}
 }
 
-// Small Laptops and below
+// Small Laptops and below ----------
 @media only screen 
 and (max-width : rem-calc(1224px)) {
 	.home-quote {
@@ -66,6 +75,15 @@ and (max-width : rem-calc(1224px)) {
 	}
 	.home-signup {
 		margin-top: rem-calc(30px);
+	}
+	.search-result {
+		.search-result-category {
+			a {
+				h2 {
+					font-size: rem-calc(10px);
+				}
+			}
+		}
 	}
 }
 
@@ -82,11 +100,27 @@ and (max-height : rem-calc(880px)) {
 	}
 }
 
+// Medium Screens -----------
+@media only screen 
+and (min-width : rem-calc(1024px))
+and (max-width : rem-calc(1560px)) {
+	.news-post-date {
+		width: 16%;
+	}
+	.news-post-content {
+		width: 84%;
+	}
+}
+
 // Large screens ----------- 
 @media only screen 
 and (min-width : rem-calc(1824px)) {
-
-
+	.search-result-category {
+		width: 10%;
+	}
+	.search-result-content {
+		width: 90%;
+	}
 }
 
 // Retina ----------- 
