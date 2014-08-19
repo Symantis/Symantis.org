@@ -62,7 +62,14 @@ module.exports.routes = {
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
   // and examples.
 
+  //Handle "/home" queries 
   'get /home/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
+  //Handle "/about" queries
+  'get /about': {
     controller: 'HomeController',
     action: 'index'
   },
@@ -70,63 +77,113 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'index'
   },
+
+  //Handle "/messages" queries
   'get /messages': {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /messages/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  
+  //Handle "/kitchen" queries "testing sitewide designs"
   'get /kitchen': {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /kitchen/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  
+  //Handle "/template" queries "testing sitewide designs"
   'get /template': {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /template/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
+  //Handle "/community" queries "Community Section, News, Queries"
   'get /community': {
     controller: 'HomeController',
     action: 'index'
   },
-  'get /news': {
+  'get /community/*': {
     controller: 'HomeController',
     action: 'index'
   },
-  'get /queries': {
-    controller: 'HomeController',
-    action: 'index'
-  },
-  'get /connections': {
-    controller: 'HomeController',
-    action: 'index'
-  },
+
+  //Handle "/help" queries "Help Section"
   'get /help': {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /help/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
+  //Handle "/chat" queries "Chat Section"
   'get /chat': {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /chat/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  
+  //Handle "/creator" queries "Creator App"
   'get /docs': {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /docs/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
+  //Handle "/start" queries "Getting Started"
   'get /start': {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /start/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  
+  //Handle "/creator" queries
   'get /creator': {
     controller: 'HomeController',
     action: 'index'
   },
-  'get /chat': {
+  'get /creator/*': {
     controller: 'HomeController',
     action: 'index'
   },
+
+  //Handle "/search" queries
   'get /search': {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /search/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
+  //Handle "/register" queries
   'get /register': {
+    controller: 'AuthController',
+    action: 'register'
+  },
+  'get /register/*': {
     controller: 'AuthController',
     action: 'register'
   }

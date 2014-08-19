@@ -1,13 +1,13 @@
 angular.module( 'symantis.news', [
 ])
-
+/*
 .config(function config( $stateProvider ) {
 	$stateProvider.state( 'news', {
 		url: '/news',
 		views: {
 			"main": {
 				controller: 'NewsCtrl',
-				templateUrl: 'news/index.tpl.html'
+				templateUrl: 'community/news/index.tpl.html'
 			},
 			"sitenav": {
 				controller: 'SiteNavCtrl',
@@ -16,7 +16,7 @@ angular.module( 'symantis.news', [
 		}
 	});
 })
-
+*/
 .controller( 'NewsCtrl', function NewsController( $scope, titleService ) {
 	titleService.setTitle('news');
 

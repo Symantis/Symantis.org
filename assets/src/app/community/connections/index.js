@@ -1,6 +1,6 @@
 angular.module( 'symantis.connections', [
 ])
-
+/*
 .config(function config( $stateProvider ) {
 	$stateProvider.state( 'connections', {
 		url: '/connections',
@@ -16,7 +16,7 @@ angular.module( 'symantis.connections', [
 		}
 	});
 })
-
+*/
 .controller( 'ConnectionsCtrl', function ConnectionsController( $scope, titleService ) {
 	titleService.setTitle('Connections');
 

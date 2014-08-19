@@ -1,6 +1,6 @@
 angular.module( 'symantis.queries', [
 ])
-
+/*
 .config(function config( $stateProvider ) {
 	$stateProvider.state( 'queries', {
 		url: '/queries',
@@ -16,7 +16,7 @@ angular.module( 'symantis.queries', [
 		}
 	});
 })
-
+*/
 .controller( 'QueriesCtrl', function QueriesController( $scope, titleService ) {
 	titleService.setTitle('Queries');
 
