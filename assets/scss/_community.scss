@@ -13,6 +13,7 @@
 					width: 100%;
 					@include font-semi(rem-calc(18px));
 					margin: 0;
+					@include transition(100ms);
 					&:hover {
 						color: $primary-color;
 					}
@@ -47,9 +48,7 @@
 	height: auto;
 	.news-post-date {
 		h2 {
-			font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
-			color: white;
-			font-size: rem-calc(12px);
+			@include font-regular(rem-calc(12px));
 			padding-bottom: rem-calc(15px);
 			text-align: right;
 		}
@@ -186,6 +185,111 @@
 		}
 	}
 }
+.queries-left {
+	h3 {
+		a {
+			text-align: left;
+			width: 100%;
+			@include font-semi(rem-calc(18px));
+			margin: 0;
+		}
+	}
+	li {
+		padding: 0;
+		margin: 0;
+		line-height: rem-calc(12px);
+		a {
+			text-align: left;
+			line-height: rem-calc(16px);
+			width: 100%;
+			@include font-regular(rem-calc(12px));
+			margin: 0;
+			padding: 0;
+			@include transition(100ms);
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}
+.queries-sub-nav {
+	border-bottom: rem-calc(1px) white solid;
+	float: left;
+	ul {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			margin: 0;
+			padding: 0;
+			width: rem-calc(70px);
+			text-align: center;
+			margin-top: rem-calc(-20px);
+			a {
+				@include font-regular(rem-calc(13px));
+				width: 100%;
+				display: block;
+				padding-bottom: rem-calc(25px);
+				padding-top: rem-calc(25px);
+				&:hover {
+					border-top: rem-calc(3px) white solid;
+					padding-top: rem-calc(22px);
+				}
+				&:selected {
+					border-top: rem-calc(3px) white solid;
+					padding-top: rem-calc(22px);
+				}
+			}
+		}
+	}
+	.queries-sub-nav-left {
+		float: left;
+		li {
+			float: left;
+		}
+	}
+	.queries-sub-nav-right {
+		float: right;
+		li {
+			float: right;
+			&:first-child {
+				width: rem-calc(60px);
+			}
+		}
+	}
+}
+
+.queries-main-container {
+	.querie-overview {
+		position: relative;
+		float: left;
+		width: 100%;
+		padding-top: rem-calc(20px);
+		padding-bottom: rem-calc(20px);
+		border-bottom: rem-calc(1px) white solid;
+		.querie-overview-main {
+			float: left;
+			width: 70%;
+			h3 {
+				@inlude font-bold(rem-calc(30px));
+				padding-bottom: rem-calc(10px);
+				color: $primary-color;
+			}
+			.querie-tags {
+				ul {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+		.querie-overview-stats {
+			float: right;
+			width: 30%;
+		}
+	}
+}
+
 
 
 

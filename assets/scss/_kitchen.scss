@@ -72,23 +72,33 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .tag {
 	border: 1px solid white;
-	margin: 5px 5px 20px 5px;
+	margin: 5px;
 	padding: 4px 10px 4px 10px;
 	float: left;
 	list-style: none;
-	//needs to be auto
-	height: 37px;
+	height: auto;
+	p {
+		line-height: auto;
+		margin: 0;
+		padding: 0;
+	}
 	&:hover {
 		border-color: $primary-color;
+	}
+	&:hover p {
 		color: $primary-color;
 	}
 }
 
 .admin-tag {
 	border-color: $primary-color;
-	color: $primary-color;
+	p {
+		color: $primary-color;
+	}
 	&:hover {
 		border-color: white;
+	}
+	&:hover p {
 		color: white;
 	}
 }
