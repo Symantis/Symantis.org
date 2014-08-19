@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 				expand: true,
 				cwd: './assets',
 				//src: filesToCopy,
-				src: ['**/*.!(coffee|less)'],
+				src: ['**/*.!(coffee|less|scss)'],
 				dest: '.tmp/public'
 			}]
 		},
