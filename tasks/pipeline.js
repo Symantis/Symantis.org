@@ -46,7 +46,7 @@ var jsFilesToInject = [
   'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
   //'bower_components/jquery/dist/jquery.min.js',
   //'bower_components/foundation/js/foundation.min.js',
-  'bower_components/livereload/dist/livereload.js',
+  //'bower_components/livereload/dist/livereload.js',
 
 
   // All of the rest of your app scripts
