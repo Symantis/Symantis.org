@@ -4,17 +4,16 @@
 	}
 }
 .docs-left-content {
-	border-bottom: rem-calc(1px) white solid;
 }
 .docs-nav {
 	padding-top: rem-calc(20px);
 	padding-bottom: rem-calc(20px);
 	h3 {
-		padding-top: rem-calc(10px);
+		padding-top: rem-calc(7px);
 		a {
 			text-align: left;
 			width: 100%;
-			@include font-semi(rem-calc(18px));
+			@include font-semi(rem-calc(16px));
 			margin: 0;
 			&:hover {
 				color: $primary-color;
@@ -41,7 +40,6 @@
 .docs-main-content {
 	margin: 0;
 	padding: 0;
-	height: 100vh;
 	overflow-y: scroll; 
 	margin-top: rem-calc(-20px);
 	border-bottom: rem-calc(1px) white solid;
