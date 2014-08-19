@@ -3,6 +3,7 @@ module.exports = function (grunt) {
 		'clean:dev',
 		'html2js:dev',
 		'less:dev',
+		'compass:dist',
 		'copy:dev',
 		'coffee:dev'
 	]);

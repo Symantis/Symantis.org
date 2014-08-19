@@ -11,13 +11,17 @@ module.exports = function(grunt) {
     
     dist: {
       options: {
+        //expand: true,
         httpPath: '/',
         importPath: ['assets/bower_components/foundation/scss'],
         //importPath: 'assets/bower_components/foundation/scss',
-        sassDir: 'assets/scss',
-        cssDir: 'assets/styles',
-        imagesDir: 'assets/images',
-        javascriptsDir: 'assets/js'    
+        sassDir: ['assets/scss'],
+        //cssDir: 'assets/css',
+        cssDir: '.tmp/public/styles/',
+        imagesDir: 'assets/img',
+        //javascriptsDir: 'assets/js'
+        //,force: true
+        //,watch: true 
       }
     }
   });
