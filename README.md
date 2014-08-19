@@ -25,7 +25,7 @@ Current features include: a modular angular js architecture and file structure, 
 It uses Foundation 5 Sass framework and Compass.
 
 ### To get up and running ###
-You will need to have Sails v0.10 installed on your machine (sudo npm install sails@beta -g) and then clone the repo, cd into the project directory and run
+You will need to have Sails v0.10 installed on your machine (sudo npm install sails -g) and then clone the repo, cd into the project directory and run
 
     $ npm install (if you are on Windows using Vagrant, be sure to: npm install --no-bin-links)
     $ cd assets
@@ -33,7 +33,7 @@ You will need to have Sails v0.10 installed on your machine (sudo npm install sa
     $ cd ../
     $ sails lift
 
-Once Lifted, compile the SASS by saving your app.scss file (this is a bug that needs fixed) and then Check it out at [http://localhost:1337](http://localhost:1337)
+Once Lifted, livereload has been enabled, so any changes you make to an scss file will update live in your browser.
 
 If you do not have Compass installed you will need to run `sudo gem install compass` and `npm install compass`
 
