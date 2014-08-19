@@ -272,9 +272,14 @@
 			float: left;
 			width: 70%;
 			h3 {
-				@inlude font-bold(rem-calc(30px));
-				padding-bottom: rem-calc(10px);
-				color: $primary-color;
+				a {
+					@inlude font-bold(rem-calc(30px));
+					padding-bottom: rem-calc(10px);
+					color: $primary-color;
+					&:hover {
+						color: white;
+					}
+				}
 			}
 			.querie-tags {
 				ul {
