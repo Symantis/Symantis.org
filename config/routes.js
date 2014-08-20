@@ -118,6 +118,16 @@ module.exports.routes = {
     action: 'index'
   },
 
+  //Handle "/community" queries "Community Section, News, Queries"
+  'get /profile': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /profile/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
   //Handle "/help" queries "Help Section"
   'get /help': {
     controller: 'HomeController',

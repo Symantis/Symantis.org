@@ -26,7 +26,8 @@ angular.module( 'symantis', [
 	'symantis.creator',
 	'symantis.news',
 	'symantis.connections',
-	'symantis.queries'
+	'symantis.queries',
+	'symantis.profile'
 ])
 
 .config( function syAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
@@ -60,6 +61,12 @@ angular.module( 'symantis', [
 .run( function run () {
 	moment.lang('en');
 	
+})
+
+.run( function run ($rootScope, $sails, lodash) {
+	$rootScope.currentUser = oCurrentUser;
+	$rootScope.users = aUsers;
+
 })
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, config ) {
@@ -99,5 +106,18 @@ angular.module( 'symantis', [
 	}
 
 });
+
+var oCurrentUser = {
+	id: 1, 
+	name: "Hamish Mc-Donkey Dick Breath",
+	handle: "@DonkeyDickBreath"
+}
+var aUsers = [
+	{
+		id: 1, 
+		name: "Hamish Mc-Donkey Dick Breath",
+		handle: "@DonkeyDickBreath"
+	}
+]
 
 })();
