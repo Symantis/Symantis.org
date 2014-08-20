@@ -15,7 +15,7 @@
 					margin: 0;
 					@include transition(100ms);
 					&:hover {
-						color: $darkest;
+						color: $gray;
 					}
 				}
 			}
@@ -143,8 +143,8 @@
 					}
 				}
 				.share-count {
-					height: 25px;
-					width: rem-calc(60px);
+					height: 18px;
+					width: rem-calc(50px);
 					border: 1px solid $primary-color;
 					float: left;
 					background: $dark;
@@ -152,9 +152,9 @@
 					p {
 						width: 100%;
 						text-align: center;
-						@include font-regular(rem-calc(10px));
+						@include font-regular(rem-calc(9px));
 						padding: 0;
-						padding-top: rem-calc(3px);
+						padding-top: 0;
 						margin: 0;
 					}
 				}
@@ -343,13 +343,16 @@
 		padding: 0;
 		margin: 0;
 		line-height: rem-calc(12px);
-		a {
+		p {
 			text-align: left;
 			line-height: rem-calc(16px);
 			width: 100%;
 			@include font-regular(rem-calc(12px));
 			margin: 0;
 			padding: 0;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
 			@include transition(100ms);
 			&:hover {
 				color: $primary-color;
