@@ -121,6 +121,13 @@ and (min-width : rem-calc(1824px)) {
 	.search-result-content {
 		width: 90%;
 	}
+	.connections-container {
+		.connections-individual {
+			.connections-message {
+				right: 20%;
+			}
+		}
+	}
 }
 
 // Retina ----------- 
