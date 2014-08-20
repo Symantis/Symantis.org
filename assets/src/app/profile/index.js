@@ -39,10 +39,11 @@ angular.module( 'symantis.profile', [
 	$scope.user = {};
 
 	for(var i in $scope.users){
+		
 		if($scope.users[i].handle == $stateParams.handle){
 			
 			$scope.user = $scope.users[i];
-			
+			console.log($scope.user);
 			titleService.setTitle($scope.user.name+' Profile');
 			break;
 		}

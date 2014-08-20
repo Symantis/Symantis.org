@@ -109,14 +109,16 @@ angular.module( 'symantis', [
 
 var oCurrentUser = {
 	id: 1, 
-	name: "Hamish Mc-Donkey Dick Breath",
-	handle: "@DonkeyDickBreath"
+	name: "Hamish Jackson-Mee",
+	handle: "donkeyDickBreath",
+	at: "@"
 }
 var aUsers = [
 	{
 		id: 1, 
-		name: "Hamish Mc-Donkey Dick Breath",
-		handle: "@DonkeyDickBreath"
+		name: "Hamish Jackson-Mee",
+		handle: "donkeyDickBreath",
+		at: "@"
 	}
 ]
 
