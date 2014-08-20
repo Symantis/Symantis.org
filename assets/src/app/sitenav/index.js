@@ -22,7 +22,7 @@ angular.module( 'symantis.sitenav', [
         {title: 'Getting Started', translationKey: 'navigation:start', url:'/start'},
         {title: 'Documentation', translationKey: 'navigation:docs', url:'/docs'},
         {title: 'Community', translationKey: 'navigation:community', url:'/community'},
-        {title: 'Web App', translationKey: 'navigation:creator', url:'/creator'}
+        {title: 'Creator App', translationKey: 'navigation:creator', url:'/creator'}
         
     ];
 
