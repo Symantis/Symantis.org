@@ -67,87 +67,33 @@
     	<!-- Section for main center header -->
         <header></header>
         <div class="row connections-container">
-            <article class="connections-individual medium-6">
-                <div class="connections-pic"></div>
-                <a href="#"><h2 class="connections-name">Scott Wyatt</h2></a>
-                <p class="connections-bio">Lorem ipsum is a shit placeholder text. Meanwhile I'm a skilled developer</p>
-                <p class="connections-skills"><a href="#">Back-end</a></p>
-                <a href="#"><div class="connections-message">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" id="message-icon" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                        <path d="M2,9.5v60.4h19.1v20.6l19.1-20.6h57.2V9.5H2z M84.4,34.8H16v-9.6h68.4L84.4,34.8L84.4,34.8z M84.4,52.6H16V43h68.4
-                            L84.4,52.6L84.4,52.6z"/>
-                    </svg>
-                </div></a>
-            </article>
-            <article class="connections-individual medium-6">
-                <div class="connections-pic connections-online"></div>
-                <a ui-sref="profile.view({ handle: 'donkeyDickBreath' })">
-                    <h2 class="connections-name">
-                        Hamish Jackson-Mee
-                    </h2>
+            <article 
+                class="connections-individual medium-6"
+                ng-repeat="user in users track by $index"
+            >
+                <div class="connections-pic connections-{{ user.status }}"></div>
+                <h2 class="connections-name">
+                    <a 
+                        ui-sref="profile.view({ handle: user.handle })"
+                    >
+                        {{ user.name }}
+                    </a>
+                </h2>
+                <p class="connections-bio">
+                    {{ user.professed }}
+                </p>
+                <p class="connections-skills">
+                    <a ng-repeat="tag in user.tags" href="#">{{ tag }}</a>
+                </p>
+                <a href="#">
+                    <div class="connections-message">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" id="message-icon" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                            <path d="M2,9.5v60.4h19.1v20.6l19.1-20.6h57.2V9.5H2z M84.4,34.8H16v-9.6h68.4L84.4,34.8L84.4,34.8z M84.4,52.6H16V43h68.4
+                                L84.4,52.6L84.4,52.6z"/>
+                        </svg>
+                    </div>
                 </a>
-                <p class="connections-bio">Lorem ipsum is a shit placeholder text. Meanwhile I'm a skilled developer</p>
-                <p class="connections-skills"><a href="#">Front-end</a></p>
-                <a href="#"><div class="connections-message">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" id="message-icon" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                        <path d="M2,9.5v60.4h19.1v20.6l19.1-20.6h57.2V9.5H2z M84.4,34.8H16v-9.6h68.4L84.4,34.8L84.4,34.8z M84.4,52.6H16V43h68.4
-                            L84.4,52.6L84.4,52.6z"/>
-                    </svg>
-                </div></a>
-            </article>
-            <article class="connections-individual medium-6">
-                <div class="connections-pic"></div>
-                <a href="#"><h2 class="connections-name">Katelin Bull</h2></a>
-                <p class="connections-bio">Lorem ipsum is a shit placeholder text. Meanwhile I'm a skilled developer</p>
-                <p class="connections-skills"><a href="#">Front-end</a></p>
-                <a href="#"><div class="connections-message">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" id="message-icon" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                        <path d="M2,9.5v60.4h19.1v20.6l19.1-20.6h57.2V9.5H2z M84.4,34.8H16v-9.6h68.4L84.4,34.8L84.4,34.8z M84.4,52.6H16V43h68.4
-                            L84.4,52.6L84.4,52.6z"/>
-                    </svg>
-                </div></a>
-            </article>
-            <article class="connections-individual medium-6">
-                <div class="connections-pic"></div>
-                <a href="#"><h2 class="connections-name">Hamish Jackson-Mee</h2></a>
-                <p class="connections-bio">Lorem ipsum is a shit placeholder text. Meanwhile I'm a skilled developer</p>
-                <p class="connections-skills"><a href="#">Front-end</a></p>
-                <a href="#"><div class="connections-message">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" id="message-icon" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                        <path d="M2,9.5v60.4h19.1v20.6l19.1-20.6h57.2V9.5H2z M84.4,34.8H16v-9.6h68.4L84.4,34.8L84.4,34.8z M84.4,52.6H16V43h68.4
-                            L84.4,52.6L84.4,52.6z"/>
-                    </svg>
-                </div></a>
-            </article>
-            <article class="connections-individual medium-6">
-                <div class="connections-pic connections-online"></div>
-                <a href="#"><h2 class="connections-name">Anthony Twonuts</h2></a>
-                <p class="connections-bio">Lorem ipsum is a shit placeholder text. Meanwhile I'm a skilled developer</p>
-                <p class="connections-skills"><a href="#">Front-end</a></p>
-                <a href="#"><div class="connections-message">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" id="message-icon" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                        <path d="M2,9.5v60.4h19.1v20.6l19.1-20.6h57.2V9.5H2z M84.4,34.8H16v-9.6h68.4L84.4,34.8L84.4,34.8z M84.4,52.6H16V43h68.4
-                            L84.4,52.6L84.4,52.6z"/>
-                    </svg>
-                </div></a>
-            </article>
-            <article class="connections-individual medium-6">
-                <div class="connections-pic"></div>
-                <a href="#"><h2 class="connections-name">Best Person</h2></a>
-                <p class="connections-bio">Lorem ipsum is a shit placeholder text. Meanwhile I'm a skilled developer</p>
-                <p class="connections-skills"><a href="#">Front-end</a></p>
-                <a href="#"><div class="connections-message">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" id="message-icon" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                        <path d="M2,9.5v60.4h19.1v20.6l19.1-20.6h57.2V9.5H2z M84.4,34.8H16v-9.6h68.4L84.4,34.8L84.4,34.8z M84.4,52.6H16V43h68.4
-                            L84.4,52.6L84.4,52.6z"/>
-                    </svg>
-                </div></a>
             </article>
         </div>
     </section>

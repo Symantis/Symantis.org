@@ -118,7 +118,46 @@ var aUsers = [
 		id: 1, 
 		name: "Hamish Jackson-Mee",
 		handle: "donkeyDickBreath",
-		at: "@"
+		at: "@",
+		tags: ['Designer', 'Developer'],
+		professed: 'Lorem ipsum is a shit placeholder text. Meanwhile I\'m a skilled developer',
+		status: 'online' 
+	},
+	{
+		id: 2, 
+		name: "Scott Wyatt",
+		handle: "awesome",
+		at: "@",
+		tags: ['Designer', 'Developer'],
+		professed: 'Lorem ipsum is a shit placeholder text. Meanwhile I\'m a skilled developer',
+		status: 'online' 
+	},
+	{
+		id: 3, 
+		name: "Katelin",
+		handle: "kBull",
+		at: "@",
+		tags: ['Designer', 'Developer'],
+		professed: 'Lorem ipsum is a shit placeholder text. Meanwhile I\'m a skilled developer',
+		status: 'offline' 
+	},
+	{
+		id: 4, 
+		name: "Anthony TwoNuts",
+		handle: "2Nuts",
+		at: "@",
+		tags: ['Designer', 'Developer'],
+		professed: 'Lorem ipsum is a shit placeholder text. Meanwhile I\'m a skilled developer',
+		status: 'offline' 
+	},
+	{
+		id: 4, 
+		name: "Best Person",
+		handle: "bP",
+		at: "@",
+		tags: ['Designer', 'Developer'],
+		professed: 'Lorem ipsum is a shit placeholder text. Meanwhile I\'m a skilled developer',
+		status: 'offline' 
 	}
 ]
 
