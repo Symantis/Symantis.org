@@ -1,4 +1,48 @@
-<div>
-    Hello {{ user.name }} ({{user.at}}{{ user.handle }})
+<div class="bg-gradient"></div>
+<div class="row fluid-row">
+    <section class="medium-2 columns main-left profile-left">
+    	<!-- Section for main left header -->
+        <header class="profile-left-user left-header">
+            <h3>{{ user.name }}</h3>
+            <div class="profile-pic">
+            </div>
+        </header>
+        <header class="profile-left-options left-header">
+            <h3><a href="#">Connect</a></h3>
+            <h3><a href="#">Message</a></h3>
+        </header>
+    </section>
+    <section class="medium-10 large-8 columns main-center profile-center">
+    	<!-- Section for main center header -->
+        <header class="profile-header profile-about-header">
+        	<h3>About</h3>
+        </header>
+        <article class="profile-about-content">
+        	<p>{{ user.bio }}</p>
+        </article>
+        <header class="profile-header profile-manti-header">
+        	<h3>Current Manti</h3>
+        </header>
+        <article class="profile-manti-content">
+        	<div class="current-manti">
+        		<section class="current-manti-view"></section>
+        		<section class="current-manti-content"></section>
+        	</div>
+        </article>
+        <header class="profile-header profile-contributions-header"><h3>Recent Contributions</h3></header>
+        <article class="profile-contributions-content">
+        	<div class="recent-contributions">
+        		<section class="recent-contributions-type"></section>
+        		<section class="recent-contributions-content"></section>
+        	</div>
+        </article>
+    </section>
+    <section class="medium-0 large-2 columns main-right">
+        <header class="right-header">
+        	<!-- Main Right Heading -->
+        </header>
+        <div class="right-content">
+        	<!-- Main Right Content -->
+        </div>
+    </section>
 </div>
-

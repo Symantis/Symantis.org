@@ -1,0 +1,7 @@
+.profile-left {
+	.profile-left-user {
+		h3 {
+			@include font-semi(rem-calc(18px));
+		}
+	}
+}
