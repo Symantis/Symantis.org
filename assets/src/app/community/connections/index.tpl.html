@@ -83,7 +83,12 @@
                     {{ user.professed }}
                 </p>
                 <p class="connections-skills">
-                    <a ng-repeat="tag in user.tags" href="#">{{ tag }}</a>
+                    <a 
+                        ng-repeat="tag in user.tags" 
+                        ui-sref="community.tags({ tag: tag })"
+                    >
+                        {{ tag }}
+                    </a>
                 </p>
                 <a href="#">
                     <div class="connections-message">

@@ -20,13 +20,19 @@ angular.module( 'symantis', [
 	'symantis.template',
 	'symantis.search',
 	'symantis.docs',
+	
+	//Community
 	'symantis.community',
+	'symantis.connections',
+	'symantis.queries',
+	'symantis.tags',
+	//End Community
+
 	'symantis.start',
 	'symantis.chat',
 	'symantis.creator',
 	'symantis.news',
-	'symantis.connections',
-	'symantis.queries',
+	
 	'symantis.profile'
 ])
 
