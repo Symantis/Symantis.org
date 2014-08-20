@@ -77,23 +77,24 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	float: left;
 	list-style: none;
 	height: auto;
+	@include transition(100ms);
 	p {
 		line-height: auto;
 		margin: 0;
 		padding: 0;
 	}
 	&:hover {
-		border-color: $primary-color;
+		border-color: $gray;
 	}
 	&:hover p {
-		color: $primary-color;
+		color: $gray;
 	}
 }
 
 .admin-tag {
-	border-color: $primary-color;
+	border-color: $gray;
 	p {
-		color: $primary-color;
+		color: $gray;
 	}
 	&:hover {
 		border-color: white;
