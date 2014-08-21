@@ -176,6 +176,9 @@ var aQueries = [
 	{
 		id: 1,
 		title: 'Problems with installation of Symantis v 2.0 on Windows 8',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
 		category: {
 			title: 'Question'
 		},
@@ -200,6 +203,9 @@ var aQueries = [
 	{
 		id: 2,
 		title: 'Symantis quick install on RasPi',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
 		category: {
 			title: 'Question'
 		},
@@ -224,6 +230,9 @@ var aQueries = [
 	{
 		id: 3,
 		title: 'Working together on different platforms',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
 		category: {
 			title: 'Question'
 		},
@@ -246,8 +255,11 @@ var aQueries = [
 		query: 'Lorem ipsum'
 	},
 	{
-		id: 3,
+		id: 4,
 		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
 		category: {
 			title: 'Question'
 		},

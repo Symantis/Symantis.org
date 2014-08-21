@@ -47,7 +47,7 @@
                     class="querie-overview"
                 >
                     <div class="querie-overview-main">
-                        <h3><a ui-sref="community.queries.view({id: query.id, title: query.title })">{{ query.title }}</a></h3>
+                        <h3><a ui-sref="community.queries.view({id: query.id, title: query.clean() })">{{ query.title }}</a></h3>
                         <div class="querie-tags">
                             <ul>
                                 <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
