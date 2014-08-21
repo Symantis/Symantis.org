@@ -19,9 +19,14 @@
         <div class="left-content">
             <div class="connections-online-nav">
                 <ul>
-                    <li><a href="#"><p>Hamish Jackson-Mee</P></a></li>
-                    <li><a href="#"><p>Scott Wyatt</P></a></li>
-                    <li><a href="#"><p>Katelin Bull</P></a></li>
+                    <li ng-repeat="user in users">
+                        <a 
+                            href="#" 
+                            ng-show="user.status == 'online'"
+                        >
+                            <p>{{ user.name }}</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
