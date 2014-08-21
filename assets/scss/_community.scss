@@ -433,7 +433,7 @@
 			line-height: rem-calc(24px);
 			position: relative;
 			padding-top: rem-calc(4px);
-			padding-right: 20%;
+			padding-right: rem-calc(40px);
 			text-overflow: ellipsis;
 			margin-bottom: rem-calc(4px);
 			overflow: hidden;
@@ -474,8 +474,8 @@
 			border: rem-calc(2px) $primary-color solid;
 		}
 		.connections-message {
-			height: rem-calc(30px);
-			width: rem-calc(30px);
+			height: rem-calc(25px);
+			width: rem-calc(25px);
 			position: absolute;
 			top: rem-calc(8px);
 			right: rem-calc(5px);

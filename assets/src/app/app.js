@@ -116,14 +116,14 @@ angular.module( 'symantis', [
 var oCurrentUser = {
 	id: 1, 
 	name: "Hamish Jackson-Mee",
-	handle: "The man",
+	handle: "theman",
 	at: "@"
 }
 var aUsers = [
 	{
 		id: 1, 
 		name: "Hamish Jackson-Mee",
-		handle: "The man",
+		handle: "theman",
 		at: "@",
 		tags: ['Designer', 'Developer'],
 		professed: 'Lorem ipsum is a shit placeholder text. Meanwhile I\'m a skilled developer',

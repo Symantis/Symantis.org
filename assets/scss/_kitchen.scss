@@ -82,6 +82,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		line-height: auto;
 		margin: 0;
 		padding: 0;
+		@include transition(100ms);
 	}
 	&:hover {
 		border-color: $gray;
@@ -92,15 +93,16 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .admin-tag {
-	border-color: $gray;
+	border-color: white;
 	p {
-		color: $gray;
+		color: white;
+		font-style: italic;
 	}
 	&:hover {
-		border-color: white;
+		border-color: $gray;
 	}
 	&:hover p {
-		color: white;
+		color: $gray;
 	}
 }
 
