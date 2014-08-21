@@ -51,7 +51,7 @@
                         <div class="querie-tags">
                             <ul>
                                 <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
-                                    <a href="#">
+                                    <a ui-sref="community.tags.view({ tag:tag.title })">
                                         <p>{{ tag.title }}</p>
                                     </a>
                                 </li>

@@ -53,11 +53,20 @@ angular.module( 'symantis.community', [
 			}
 		})
 		.state( 'community.tags', {
-			url: '/:tag',
+			url: '/tags',
 			views: {
 				"main@": {
 					controller: 'TagsCtrl',
 					templateUrl: 'community/tags/index.tpl.html'
+				}
+			}
+		})
+		.state( 'community.tags.view', {
+			url: '/:tag',
+			views: {
+				"main@": {
+					controller: 'TagsViewCtrl',
+					templateUrl: 'community/tags/view.tpl.html'
 				}
 			}
 		})
