@@ -34,6 +34,15 @@ angular.module( 'symantis.community', [
 				}
 			}
 		})
+		.state( 'community.queries.view', {
+			url: '/:id/:title',
+			views: {
+				"main@": {
+					controller: 'QueriesViewCtrl',
+					templateUrl: 'community/queries/view.tpl.html'
+				}
+			}
+		})
 		.state( 'community.connections', {
 			url: '/connections',
 			views: {

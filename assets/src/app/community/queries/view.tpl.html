@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="large-12 columns fluid-row">
+		<h1>{{ query.title }}</h1>
+		<p>
+			{{ query.category.title }}
+			{{ query.totalViews | number }}
+			{{ query.totalReplies | number }}
+		</p>
+		<div class="querie-tags">
+            <ul>
+            	<li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
+	                <a href="#">
+	                	<p>{{ tag.title }}</p>
+	                </a>
+                </li>
+            </ul>
+        </div>
+	</div>
+</div>

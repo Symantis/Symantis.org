@@ -21,4 +21,16 @@ angular.module( 'symantis.queries', [
 	titleService.setTitle('Queries');
 
 	
+})
+.controller( 'QueriesViewCtrl', function QueriesViewController( $scope, titleService, $state, $stateParams  ) {
+	for(var i in $scope.queries){
+		if ($scope.queries[i].id == $stateParams.id){
+			$scope.query = $scope.queries[i];
+			break;
+		};
+	}
+
+	titleService.setTitle('Query: ' + $scope.query.title);
+
+	
 });
