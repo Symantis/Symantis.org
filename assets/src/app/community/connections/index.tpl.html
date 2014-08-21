@@ -31,32 +31,11 @@
         <div class="left-content">
             <div class="connections-suggestions-nav">
                 <ul>
-                    <li>
-                        <a href="#">
-                            <div class="connections-suggestions-pic"></div>
-                            <p class="connections-suggestions-name">Scott Wyatt</p>
-                            <p class="connections-suggestions-skills">Everything</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="connections-suggestions-pic"></div>
-                            <p class="connections-suggestions-name">Hamish Jackson-Mee</p>
-                            <p class="connections-suggestions-skills">Design yo</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="connections-suggestions-pic suggestions-online"></div>
-                            <p class="connections-suggestions-name">Katelin Bull</p>
-                            <p class="connections-suggestions-skills">Being a girl</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="connections-suggestions-pic"></div>
-                            <p class="connections-suggestions-name">Scott Wyatt</p>
-                            <p class="connections-suggestions-skills">Front-End</p>
+                    <li ng-repeat="user in users">
+                        <a ui-sref="profile.view({ handle: user.handle })">
+                            <div class="connections-suggestions-pic suggestions-{{ user.status }}"></div>
+                            <p class="connections-suggestions-name">{{ user.name }}</p>
+                            <p class="connections-suggestions-skills">{{ user.tags[0] }}</p>
                         </a>
                     </li>
                 </ul>
