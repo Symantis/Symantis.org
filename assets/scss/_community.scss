@@ -385,18 +385,16 @@
 					line-height: rem-calc(15px);
 				}
 				&:hover .connections-suggestions-name {
-					color: $darkest;
+					color: white;
+					padding-left: rem-calc(15px);
 				}
 				&:hover .connections-suggestions-pic {
-					border: rem-calc(1px) $darkest solid;
+					
 				}
 				&:hover .connections-suggestions-skills {
-					color: $darkest;
+					padding-left: rem-calc(15px);
 				}
 			}
-		}
-		.connections-suggestions-name {
-			@include transition(100ms);
 		}
 		.connections-suggestions-pic {
 			width: rem-calc(40px);
