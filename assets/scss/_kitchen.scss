@@ -7,7 +7,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .sy-button {
 	background-color: rgba(0, 0, 0, 0.0);
-	border-color: $primary-color;
+	border-color: black;
 	border-width: rem-calc(1px);
 	border-style: solid;
 	font-weight: normal;
@@ -20,24 +20,18 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	margin:0 0 1.25rem 0;
 	display: inline-block;
 	position: relative;
-	@include transition(200ms);
 	outline: none;
 	&:hover {
 		border-color: $primary-color;
-		background-color: $primary-color;
-		color: white;
-	}
-	&:visited {
-		color: $gray;
-		background-color: rgba(0,0,0,0.0);
+		color: $primary-color;
 	}
 	&:focus {
-		color: $gray;
+		color: $primary-color;
 		background-color: rgba(0,0,0,0.0);
 	}
 	&:active {
 		border-color: black;
-		color: $gray;
+		color: black;
 	}
 }
 .modal-button {
@@ -220,6 +214,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		@include transition(100ms);
 		&:hover {
 			border-left-color: $primary-color;
+		}
+		&:hover h3 {
+			color: $primary-color;
 		}
 	}
 }

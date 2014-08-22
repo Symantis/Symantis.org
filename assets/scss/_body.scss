@@ -29,7 +29,7 @@ body {
 	h1 {
 		text-align: left;
 		width: 100%;
-		@include font-semi(rem-calc(48px));
+		@include font-semi(rem-calc(58px));
 		margin: 0;
 	}
 	h3 {
@@ -44,6 +44,9 @@ body {
 		@include font-regular(rem-calc(12px));
 		margin: 0;
 	}
+}
+.sub-heading {
+	padding-left: rem-calc(10px);
 }
 .main-left {
 	padding-right: rem-calc(30px);
