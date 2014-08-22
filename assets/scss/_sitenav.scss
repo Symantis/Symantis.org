@@ -65,8 +65,6 @@ body,
 	//visibility: hidden;
 	height: 100%;
 	background: #fff;
-	
-
 }
 
 .sitenav::after {
@@ -99,7 +97,7 @@ body,
 	}
 	.activator{
 		position:absolute;
-		width: 42px;
+		width: 34px;
 		padding-left:15px;
 		padding-right:10px;
 		height: 100%;
@@ -112,7 +110,7 @@ body,
 		& > .activator-icon{
 			
 			display:table-cell;
-			width:25px;
+			width:18px;
 			vertical-align:middle;
 			opacity:1;
 			-webkit-transition: opacity 0.3s;

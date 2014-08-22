@@ -67,7 +67,7 @@
 			overflow: hidden;
 			@include transition(100ms);
 			&:hover {
-				color: $gray;
+				color: black;
 			}
 		}
 		p {
@@ -230,12 +230,14 @@
 			a {
 				@include font-regular(rem-calc(13px));
 				width: 100%;
+				color: $gray;
 				display: block;
 				padding-bottom: rem-calc(25px);
 				padding-top: rem-calc(25px);
 				&:hover {
 					border-top: rem-calc(3px) black solid;
 					padding-top: rem-calc(22px);
+					color: black;
 				}
 				&:selected {
 					border-top: rem-calc(3px) black solid;
