@@ -1,3 +1,5 @@
+$animationTime: 0.15s !default;
+
 *,
 *:after,
 *::before {
@@ -29,8 +31,8 @@ body,
 	left: 0;
 	z-index: 99;
 	height: 100%;
-	-webkit-transition: -webkit-filter 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-	transition: filter 0.3s, opacity 0.3s, transform 0.3s;
+	-webkit-transition: -webkit-filter $animationTime, opacity $animationTime, -webkit-transform $animationTime;
+	transition: filter $animationTime, opacity $animationTime, transform $animationTime;
 	background: white;
 
 	&::after {
@@ -41,8 +43,8 @@ body,
 		height: 0;
 		content: '';
 		opacity: 0;
-		-webkit-transition: opacity 0.3s, width 0.1s 0.5s, height 0.1s 0.3s;
-		transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.5s;
+		-webkit-transition: opacity $animationTime, width 0.1s $animationTime, height 0.1s $animationTime;
+		transition: opacity $animationTime, width 0.1s $animationTime, height 0.1s $animationTime;
 	}
 }
 
@@ -50,8 +52,8 @@ body,
 	width: 100%;
 	height: 100%;
 	opacity: 1;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
+	-webkit-transition: opacity $animationTime;
+	transition: opacity $animationTime;
 }
 
 .sitenav {
@@ -73,21 +75,21 @@ body,
 	//background: rgba(0,0,0,0.2);
 	content: '';
 	opacity: 1;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
+	-webkit-transition: opacity $animationTime;
+	transition: opacity $animationTime;
 }
 
 .sy-menu-open .sitenav::after {
 	width: 0;
 	height: 0;
 	opacity: 0;
-	-webkit-transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.3s;
-	transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.5s;
+	-webkit-transition: opacity $animationTime, width 0.1s $animationTime, height 0.1s $animationTime;
+	transition: opacity $animationTime, width 0.1s $animationTime, height 0.1s $animationTime;
 }
 
 .sitenav{
-	-webkit-transition: left 0.3s;
-	transition: left 0.3s;
+	-webkit-transition: left $animationTime;
+	transition: left $animationTime;
 
 	.trident{
 		fill:#000;
@@ -132,8 +134,8 @@ body,
 				left:150px;
 				width: 50px;
 				min-height:50px;
-				-webkit-transition: left 0.3s;
-				transition: left 0.3s;
+				-webkit-transition: left $animationTime;
+				transition: left $animationTime;
 				li{
 					font-size:20px;
 					line-height:50px;
@@ -151,8 +153,8 @@ body,
 						position:relative;
 						top:-3px;
 						opacity:0;
-						-webkit-transition: opacity 0.3s;
-						transition: opacity 0.3s;
+						-webkit-transition: opacity $animationTime;
+						transition: opacity $animationTime;
 					}
 				}
 			}
@@ -162,8 +164,8 @@ body,
 				padding-left:12px;
 				z-index:99;
 				line-height: rem-calc(15);
-				//-webkit-transition: all 0.3s;
-				//transition: all 0.3s;
+				//-webkit-transition: all $animationTime;
+				//transition: all $animationTime;
 				
 				li{
 					width:100%;
@@ -192,8 +194,8 @@ body,
 				bottom:0px;
 				display:table;
 				
-				-webkit-transition: left 0.3s;
-				transition: left 0.3s;
+				-webkit-transition: left $animationTime;
+				transition: left $animationTime;
 				
 				li.logo{
 					display:table-cell;
@@ -211,8 +213,8 @@ body,
 						color:#000;
 						white-space: nowrap;
 						opacity:0;
-						-webkit-transition: opacity 0.3s;
-						transition: opacity 0.3s;
+						-webkit-transition: opacity $animationTime;
+						transition: opacity $animationTime;
 
 					}
 				}
@@ -253,8 +255,8 @@ body,
 
 .sy-effect.sy-menu-open .sy-effect.sitenav {
 
-	-webkit-transition: left 0.3s, -webkit-transform 0.3s;
-	transition: left 0.3s, transform 0.3s;
+	-webkit-transition: left $animationTime, -webkit-transform $animationTime;
+	transition: left $animationTime, transform $animationTime;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 
