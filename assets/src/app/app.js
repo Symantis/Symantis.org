@@ -11,6 +11,7 @@ angular.module( 'symantis', [
 	'templates-app',
 	'services',
 	'models',
+	'ngProgress',
 	//'mm.foundation',
 	'symantis.header',
 	'symantis.sitenav',
@@ -35,6 +36,7 @@ angular.module( 'symantis', [
 	'symantis.news',
 	
 	'symantis.profile'
+
 ])
 
 .config( function syAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
@@ -77,7 +79,12 @@ angular.module( 'symantis', [
 
 })
 
-.controller( 'AppCtrl', function AppCtrl ( $scope, config ) {
+.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout ) {
+	ngProgress.color('#3b948b');
+	ngProgress.start();
+	$timeout(function() {
+		ngProgress.complete();
+	}, 1000);
 	config.currentUser = window.currentUser;
 
 	$scope.syMenuOpen = false;
