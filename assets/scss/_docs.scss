@@ -42,10 +42,10 @@
 	padding: 0;
 	overflow-y: scroll; 
 	margin-top: rem-calc(-20px);
-	border-bottom: rem-calc(1px) white solid;
+	border-bottom: rem-calc(1px) black solid;
 }
 .docs-category {
-	border-left: rem-calc(1px) solid white;
+	border-left: rem-calc(1px) solid black;
 	margin-top: rem-calc(30px);
 	margin-bottom: rem-calc(10px);
 	padding-left: rem-calc(20px);
@@ -70,7 +70,7 @@
 		margin: 0;
 		padding-bottom: rem-calc(10px);
 		a {
-			color: white;
+			color: black;
 			text-decoration: underline;
 			&:hover {
 				color: $gray;
@@ -82,8 +82,8 @@
 	width: 100%;
 	height: rem-calc(150px);
 	padding: rem-calc(20px);
-	border: rem-calc(1px) solid $gray;
-	background: $dark;
+	border: rem-calc(1px) solid $dark;
+	background: $gray;
 	overflow: scroll; 
 }
 

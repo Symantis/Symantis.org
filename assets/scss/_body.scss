@@ -1,9 +1,9 @@
 body {
-	background-color: rgba(40,40,40,1.0);
+	background-color: white;
 }
 //gradient - #828282 0%, #4b4b4b 30%, #414141 44%, #414141 56%, #4b4b4b 70%, #828282 100%
 // rgba(130,130,130,1.0) - rgba(75,75,75,1.0) - rgba(41,41,41,1.0)
-.bg-gradient {
+/*.bg-gradient {
 	height: 100vh;
 	width: 100%;
 	background: rgb(91,93,90); 
@@ -15,7 +15,7 @@ body {
 	background: linear-gradient(to bottom, rgba(91,93,90,1) 0%,rgba(71,73,70,1) 20%,rgba(60,62,58,1) 35%,rgba(56,58,54,1) 50%,rgba(60,62,58,1) 65%,rgba(71,73,70,1) 80%,rgba(91,93,90,1) 100%); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b5d5a', endColorstr='#5b5d5a',GradientType=0 );
 	position: fixed;
-}
+}*/
 #heading-row {
 	padding-top: rem-calc(60px);
 	padding-bottom: 0;
@@ -48,7 +48,7 @@ body {
 .main-left {
 	padding-right: rem-calc(30px);
 	header {
-		border-top: rem-calc(2px) white solid;
+		border-top: rem-calc(2px) black solid;
 		padding-top: rem-calc(20px);
 		padding-bottom: rem-calc(20px);
 		width: 100%;
@@ -78,7 +78,7 @@ body {
 .main-center {
 	padding-right: rem-calc(30px);
 	header {
-		border-top: rem-calc(1px) $offWhite solid;
+		border-top: rem-calc(1px) black solid;
 		padding-top: rem-calc(20px);
 		width: 100%;
 	}

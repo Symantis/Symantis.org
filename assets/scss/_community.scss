@@ -54,7 +54,7 @@
 		}
 	}
 	.news-post-content {
-		border-left: rem-calc(1px) solid white;
+		border-left: rem-calc(1px) solid black;
 		height: 100%;
 		position: relative;
 		h3 {
@@ -67,7 +67,7 @@
 			overflow: hidden;
 			@include transition(100ms);
 			&:hover {
-				color: white;
+				color: $gray;
 			}
 		}
 		p {
@@ -111,7 +111,7 @@
 					text-align: center;
 					line-height: rem-calc(12px);
 					a {
-						color: white;
+						color: black;
 						@include transition(100ms);
 						&:hover {
 							color: $gray;
@@ -137,7 +137,7 @@
 					float: left;
 					margin-right: rem-calc(7px);
 					@include transition(100ms);
-					fill: white;
+					fill: black;
 					&:hover {
 						fill: $primary-color;
 					}
@@ -147,7 +147,7 @@
 					width: rem-calc(50px);
 					border: 1px solid $primary-color;
 					float: left;
-					background: $dark;
+					background: white;
 					position: relative;
 					p {
 						width: 100%;
@@ -171,7 +171,7 @@
 
 				.share-count:after {
 					border-color: rgba(187, 128, 213, 0);
-					border-right-color: $dark;
+					border-right-color: white;
 					border-width: 5px;
 					margin-top: -5px;
 				}
@@ -214,7 +214,7 @@
 	}
 }
 .queries-sub-nav {
-	border-bottom: rem-calc(1px) white solid;
+	border-bottom: rem-calc(1px) black solid;
 	float: left;
 	ul {
 		position: relative;
@@ -234,11 +234,11 @@
 				padding-bottom: rem-calc(25px);
 				padding-top: rem-calc(25px);
 				&:hover {
-					border-top: rem-calc(3px) white solid;
+					border-top: rem-calc(3px) black solid;
 					padding-top: rem-calc(22px);
 				}
 				&:selected {
-					border-top: rem-calc(3px) white solid;
+					border-top: rem-calc(3px) black solid;
 					padding-top: rem-calc(22px);
 				}
 			}
@@ -267,7 +267,7 @@
 		width: 100%;
 		padding-top: rem-calc(20px);
 		padding-bottom: rem-calc(20px);
-		border-bottom: rem-calc(1px) white solid;
+		border-bottom: rem-calc(1px) black solid;
 		.querie-overview-main {
 			float: left;
 			width: 70%;
@@ -278,7 +278,7 @@
 					color: $primary-color;
 					@include transition(100ms);
 					&:hover {
-						color: white;
+						color: black;
 					}
 				}
 			}
@@ -300,7 +300,7 @@
 				a {
 					float: left;
 					svg {
-						fill: white;
+						fill: black;
 						float: left;
 						&:hover {
 							fill: $gray;
@@ -312,14 +312,13 @@
 					width: rem-calc(60px);
 					padding-top: rem-calc(5px);
 					svg {
-						fill: white;
+						fill: black;
 						float: left;
 					}
 					p {
 						float: left;
 						width: rem-calc(35px);
 						text-overflow: ellipsis;
-						textwrap: white;
 						padding-top: rem-calc(2px);
 						padding-left: rem-calc(6px);
 						padding-bottom: rem-calc(2px);
@@ -385,7 +384,7 @@
 					line-height: rem-calc(15px);
 				}
 				&:hover .connections-suggestions-name {
-					color: white;
+					color: black;
 					padding-left: rem-calc(15px);
 				}
 				&:hover .connections-suggestions-pic {
@@ -400,7 +399,7 @@
 			width: rem-calc(40px);
 			height: rem-calc(40px);
 			float: left;
-			border: rem-calc(1px) white solid;
+			border: rem-calc(1px) black solid;
 			border-radius: rem-calc(20px);
 			overflow: hidden;
 			@include transition(100ms);
@@ -422,7 +421,7 @@
 		.connections-pic {
 			width: rem-calc(90px);
 			height: rem-calc(90px);
-			border: rem-calc(2px) white solid;
+			border: rem-calc(2px) black solid;
 			border-radius: rem-calc(45px);
 			overflow: hidden;
 			float: left;
@@ -483,7 +482,7 @@
 			z-index: 5;
 			@include transition(100ms);
 			svg {
-				fill: white;
+				fill: black;
 				@include transition(100ms);
 			}
 			&:hover svg {

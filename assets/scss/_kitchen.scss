@@ -25,18 +25,18 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	&:hover {
 		border-color: $primary-color;
 		background-color: rgba(0, 0, 0, 0.0);
-		color: white;
+		color: $gray;
 	}
 	&:visited {
-		color: white;
+		color: $gray;
 		background-color: rgba(0,0,0,0.0);
 	}
 	&:focus {
-		color: white;
+		color: $gray;
 		background-color: rgba(0,0,0,0.0);
 	}
 	&:active {
-		border-color: white;
+		border-color: black;
 	}
 }
 .modal-button {
@@ -71,7 +71,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	}
 }
 .tag {
-	border: 1px solid white;
+	border: 1px solid black;
 	margin: 5px;
 	padding: 4px 10px 4px 10px;
 	float: left;
@@ -93,9 +93,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .admin-tag {
-	border-color: white;
+	border-color: black;
 	p {
-		color: white;
+		color: black;
 		font-style: italic;
 	}
 	&:hover {
@@ -111,15 +111,15 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .text-link:hover {
-	color: white;
+	color: black;
 	text-decoration: underline;
 	h2 {
-		color: white;
+		color: black;
 	}
 }
 
 .full-screen {
-	background: rgba(66,68,64,0.95);
+	background: rgba(255,255,255,0.95);
 	/*background: -moz-linear-gradient(top, rgba(130,130,130,$opact) 0%, rgba(75,75,75,$opact) 30%, rgba(41,41,41,$opact) 44%, rgba(41,41,41,$opact) 56%, rgba(75,75,75,$opact) 70%, rgba(130,130,130,$opact) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(130,130,130,$opact)), color-stop(30%,rgba(75,75,75,$opact)), color-stop(44%,rgba(41,41,41,$opact)), color-stop(56%,rgba(41,41,41,$opact)), color-stop(70%,rgba(75,75,75,$opact)), color-stop(100%,rgba(130,130,130,$opact)));
 	background: -webkit-linear-gradient(top, rgba(130,130,130,$opact) 0%,rgba(75,75,75,$opact) 30%,rgba(41,41,41,$opact) 44%,rgba(41,41,41,$opact) 56%,rgba(75,75,75,$opact) 70%,rgba(130,130,130,$opact) 100%);
@@ -148,7 +148,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	padding: rem-calc(10px);
 	margin: rem-calc(10px);
 	.exit-icon {
-		fill: white;
+		fill: black;
 		@include transition(100ms);
 	}
 	&:hover .exit-icon  {
@@ -202,7 +202,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		a {
 			h2 {
 				font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
-				color: white;
+				color: black;
 				font-size: rem-calc(12px);
 				padding-bottom: rem-calc(15px);
 				@include transition(100ms);
@@ -214,7 +214,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		}
 	}
 	.search-result-content {
-		border-left: rem-calc(1px) solid white;
+		border-left: rem-calc(1px) solid black;
 		@include transition(100ms);
 		&:hover {
 			border-left-color: $primary-color;

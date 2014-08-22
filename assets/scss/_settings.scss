@@ -33,27 +33,27 @@ $reveal-close-weight: light;
 
 @mixin font-regular($size) {
 	font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: white;
+	color: black;
 	font-size: $size;
 }
 @mixin font-light($size) {
 	font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;;
-	color: white;
+	color: black;
 	font-size: $size;
 }
 @mixin font-semi($size) {
 	font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;;
-	color: white;
+	color: black;
 	font-size: $size;
 }
 @mixin font-bold($size) {
 	font-family: 'open_sansbold', "Helvetica Neue", Helvetica, Arial, sans-serif;;
-	color: white;
+	color: black;
 	font-size: $size;
 }
 @mixin font-italic($size) {
 	font-family: 'open_sansitalic', "Helvetica Neue", Helvetica, Arial, sans-serif;;
-	color: white;
+	color: black;
 	font-size: $size;
 }
 @mixin transition($time) {
