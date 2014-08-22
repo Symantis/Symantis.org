@@ -29,8 +29,8 @@ body,
 	left: 0;
 	z-index: 99;
 	height: 100%;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
+	-webkit-transition: -webkit-filter 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	transition: filter 0.3s, opacity 0.3s, transform 0.3s;
 	background: white;
 	//-webkit-transition: opacity 0.3s;
 	//transition: opacity 0.3s;
@@ -91,55 +91,40 @@ body,
 }
 
 .sitenav{
-	//-webkit-transition: width 0.3s;
-	//transition: width 0.3s;
-	//width:50px;
+	-webkit-transition: left 0.3s;
+	transition: left 0.3s;
+	//width:200px;
+	//left:-150px;
+
 	.trident{
 		fill:#000;
 	}
 	.activator{
-		position:absolute;
-		width: 42px;
-		padding-left:15px;
-		padding-right:10px;
+		
+		width: 50px;
 		height: 100%;
 		text-align:center;
 		display:table;
-		-webkit-transition: width 0.3s;
-		transition: width 0.3s;
+		//-webkit-transition: width 0.3s;
+		//transition: width 0.3s;
 		z-index:-1;
-		
+		float:right;
 		& > .activator-icon{
-			
 			display:table-cell;
-			width:25px;
+			width:50px;
+			height:50px;
+			padding-left:15px;
+			padding-right:15px;
 			vertical-align:middle;
-			opacity:1;
-			-webkit-transition: opacity 0.3s;
-			transition: opacity 0.3s;
 		}
 	}
 	.sitenav-inner{
 		height:100%;
 		
-		width:50px;
-		overflow:hidden;
+		width:150px;
+		float:left;
 
 		display:table;
-		&::after{
-			-webkit-transition: border-width 0.3s;
-			transition: border-width 0.3s;
-			position: absolute;
-			z-index:-1;
-			left:50px;
-			content:' ';
-			width:0; 
-		     height:0; 
-		     border-right:0px solid transparent;
-		     border-top:100vh solid transparent;
-		     border-left:0px solid transparent;
-		     border-bottom:0px solid transparent;
-		}
 		.vertical-middle{
 			//display:table-cell;
 			display:table;
@@ -154,16 +139,17 @@ body,
 			&.top{
 				position:absolute;
 				z-index:100;
-				left:0px;
+				left:150px;
 				width: 50px;
-				min-height:200px;
+				min-height:50px;
+				-webkit-transition: left 0.3s;
+				transition: left 0.3s;
 				li{
 					font-size:20px;
 					line-height:50px;
 					.search-icon{
 						padding-left:15px;
 						width:50px;
-						
 						color:$primary-color;
 					}
 					.search{
@@ -171,28 +157,37 @@ body,
 						padding-left:15px;
 						width:100px;
 						color:#000;
+						white-space: nowrap;
+						position:relative;
+						top:-3px;
 						opacity:0;
-						-webkit-transition: all 0.3s;
-						transition: all 0.3s;
+						-webkit-transition: opacity 0.3s;
+						transition: opacity 0.3s;
 					}
 				}
 			}
 
 			&.middle{
-				width: 50px;
-				padding-left:5px;
+				width: 150px;
+				padding-left:12px;
 				z-index:99;
 				line-height: rem-calc(15);
-				opacity:0;
-				-webkit-transition: all 0.3s;
-				transition: all 0.3s;
+				//-webkit-transition: all 0.3s;
+				//transition: all 0.3s;
 				
 				li{
 					width:100%;
 					display:block;
+					line-height: rem-calc(35);
+					font-size:rem-calc(16);
 					a{
-						display:none;
+						display:block;
 						color: #000;
+						//-webkit-transition: padding 0.1s;
+						//transition: padding 0.1s;
+						&:hover{
+						//	padding-left:5px;
+						}
 						
 					}
 				}
@@ -201,11 +196,15 @@ body,
 			&.bottom{
 				position:absolute;
 				z-index:100;
-				left:0px;
+				left:150px;
 				width: 50px;
-				min-height:200px;
+				min-height:50px;
 				bottom:0px;
 				display:table;
+				
+				-webkit-transition: left 0.3s;
+				transition: left 0.3s;
+				
 				li.logo{
 					display:table-cell;
 					vertical-align:bottom;
@@ -220,9 +219,11 @@ body,
 						width:100px;
 						padding-left:2px;
 						color:#000;
+						white-space: nowrap;
 						opacity:0;
-						-webkit-transition: all 0.3s;
-						transition: all 0.3s;
+						-webkit-transition: opacity 0.3s;
+						transition: opacity 0.3s;
+
 					}
 				}
 			}
@@ -247,10 +248,10 @@ body,
 }
 
 .sy-effect.sy-menu-open .sitenav-push {
-	-webkit-transform: translate3d(75px, 0, -50px);
-	transform: translate3d(75px, 0, -50px);
+	-webkit-transform: translate3d(75px, 0, -30px);
+	transform: translate3d(75px, 0, -30px);
 	//@include drop-shadow(0.5);
-	opacity:0.5;
+	opacity:0.4;
 	-webkit-filter: blur(2px);
   	filter: blur(2px);
 }
@@ -259,35 +260,34 @@ body,
 	opacity: 1;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-	-webkit-transition: width 0.3s;
-	transition: width 0.3s;
-	width:50px;
-	left: 0;
+	-webkit-transition: left 0.3s;
+	transition: left 0.3s;
+	width:200px;
+	left: -150px;
 	//overflow: hidden;
 }
 
 .sy-effect.sy-menu-open .sy-effect.sitenav {
 	//visibility: visible;
 	opacity: 1;
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.3s;
+	-webkit-transition: left 0.3s, -webkit-transform 0.3s;
+	transition: left 0.3s, transform 0.3s;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 
-//	-webkit-transition: width 0.3s;
-//	transition: width 0.3s;
+//	-webkit-transition: left 0.3s;
+//	transition: left 0.3s;
 
-	width: 150px;
+	width: 200px;
 	left: 0;
 
 	//@include drop-shadow(0.3);
 
 	.activator{
-		width: 80px;
+		width: 50px;
 
 		& > .activator-icon{
-			width: 80px;
-			opacity:0;
+			width: 50px;
 		}
 	}
 	.sitenav-inner{
@@ -295,6 +295,7 @@ body,
 		ul{
 			&.top{
 				width:150px;
+				left:0px;
 				li{
 					.search{
 						opacity:1.0;
@@ -303,10 +304,8 @@ body,
 			}
 			&.middle{
 				width:150px;
-				padding-left:15px;
-				line-height: rem-calc(35);
-				font-size:rem-calc(16);
-				opacity: 1;
+				//padding-left:15px;
+				
 				li{
 					a{
 						display:block;
@@ -315,6 +314,7 @@ body,
 			}
 			&.bottom{
 				width:150px;
+				left:0px;
 				li.logo{
 					.sy{
 
@@ -336,17 +336,6 @@ body,
 .sy-effect.sy-menu-top-open .sy-effect.sitenav{
 	.sitenav-inner{
 		width:150px;
-		&::after{
-			position: absolute;
-			left:50px;
-			content:' ';
-			width:0; 
-		     height:0; 
-		     //border-right:100px solid transparent;
-		     //border-top:100vh solid $darkest;
-		     //border-left:0px solid $darkest;
-		     //border-bottom:0px solid transparent;
-		}
 		ul{
 			&.top{
 				width:150px;
@@ -361,20 +350,9 @@ body,
 }
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav{
 	.sitenav-inner{
-		width:150px;
-		&::after{
-			position: absolute;
-			left:50px;
-			content:' ';
-			width:0; 
-		     height:0; 
-		     //border-right:0px solid transparent;
-		     //border-top:100vh solid transparent;
-		     //border-left:100px solid $darkest;
-		     //border-bottom:0px solid $darkest;
-		}
+		//width:150px;
 		ul{
-			width:150px;
+			//width:150px;
 			&.bottom{
 				li.logo{
 					.mantis{

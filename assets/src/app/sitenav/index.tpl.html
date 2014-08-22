@@ -1,4 +1,4 @@
-<a href="#" class="activator">
+<a href="#" class="activator" ng-click="syMenuToggle()">
   <div class="activator-icon">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    viewBox="0 0 612 792" style="enable-background:new 0 0 612 792;" xml:space="preserve">
@@ -21,7 +21,7 @@
       </li>
     </ul>
    
-    <ul class="middle" ng-click="syMenuToggle()">
+    <ul class="middle" >
     	<li ng-repeat="siteItem in siteItems">
         	<a href="{{siteItem.url}}">{{siteItem.title}}</a>
     	</li>

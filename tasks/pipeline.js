@@ -44,6 +44,7 @@ var jsFilesToInject = [
   'bower_components/angular-moment/angular-moment.js',
   'bower_components/angular-translate/angular-translate.js',
   'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+  'bower_components/d3/d3.js',
   //'bower_components/jquery/dist/jquery.min.js',
   //'bower_components/foundation/js/foundation.min.js',
   //'bower_components/livereload/dist/livereload.js',
