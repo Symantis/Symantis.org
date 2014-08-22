@@ -244,8 +244,8 @@ body,
 }
 
 .sy-effect.sy-menu-open .sitenav-push {
-	-webkit-transform: translate3d(75px, 0, -350px);
-	transform: translate3d(75px, 0, -350px);
+	-webkit-transform: translate3d(75px, 0, -100px);
+	transform: translate3d(75px, 0, -100px);
 	//@include drop-shadow(0.5);
 	opacity:0.5;
 }
