@@ -1,8 +1,17 @@
 <a href="#" class="activator">
   <div class="activator-icon">
-    <object data="/img/svg/menu_icon.svg" width="100%" type="image/svg+xml">
-        <img src="/img/png/menu_icon.png" width="100%" />
-    </object>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 612 792" style="enable-background:new 0 0 612 792;" xml:space="preserve">
+<path class="trident" d="M572.6,366.1l-94.2-79.2c-13.2-11.4-32.6-9.7-44,3.5v0.9c-11.4,13.2-9.7,32.6,3.5,44l27.3,22.9l-308.9-1.8
+  l227-225.3l-5.3,39.6c-2.6,16.7,9.7,32.6,26.4,34.3h0.9c16.7,2.6,32.6-9.7,34.3-26.4l15.8-122.3c1.8-13.2,1.8-27.3-8.8-37.8
+  c-8.8-9.7-22.9-13.2-37-12.3l-123.2,9.7c-16.7,1.8-29.9,16.7-28.2,33.4v0.9c1.8,16.7,16.7,29.9,33.4,28.2l35.2-2.6L45.5,355.5
+  c-3.5,3.5-8.8,8.8-12.3,13.2c-6.2,7.9-8.8,15.8-8.8,27.3v0.9c0,11.4,2.6,20.2,11.4,28.2c2.6,3.5,7,7.9,9.7,10.6L328,715.4l-35.2-2.6
+  c-16.7-1.8-31.7,11.4-33.4,28.2v0.9c-1.8,16.7,11.4,31.7,28.2,33.4l123.2,9.7c13.2,0.9,28.2-2.6,37.8-12.3
+  c10.6-10.6,10.6-24.6,8.8-37.8l-15.8-122.3c-2.6-16.7-17.6-29-34.3-26.4h-0.9c-16.7,2.6-29,17.6-26.4,34.3l5.3,39.6L159,435.6
+  l306.2,0.9l-30.8,23.8c-13.2,10.6-15.8,29.9-5.3,43.1l0.9,0.9c10.6,13.2,29.9,15.8,43.1,5.3l97.7-75.7c10.6-7.9,20.2-17.6,20.2-32.6
+  C591.1,388.1,583.2,374.9,572.6,366.1z"/>
+</svg>
+
   </div>
 </a>
 <div class="sitenav-inner" ng-controller="SiteNavCtrl">
@@ -12,7 +21,7 @@
       </li>
     </ul>
    
-    <ul class="middle" ng-mouseenter="syMenuToggleOn()" ng-mouseleave="syMenuToggleOff()">
+    <ul class="middle" ng-click="syMenuToggle()">
     	<li ng-repeat="siteItem in siteItems">
         	<a href="{{siteItem.url}}">{{siteItem.title}}</a>
     	</li>
