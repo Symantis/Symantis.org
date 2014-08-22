@@ -7,7 +7,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .sy-button {
 	background-color: rgba(0, 0, 0, 0.0);
-	border-color: white;
+	border-color: black;
 	border-width: rem-calc(1px);
 	border-style: solid;
 	font-weight: normal;
@@ -15,28 +15,23 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	text-align: center;
 	text-decoration: none;
 	@include font-regular(rem-calc(14pt));
-	color: white;
+	color: black;
 	padding: rem-calc(10px) rem-calc(50px) rem-calc(10px) rem-calc(50px);
 	margin:0 0 1.25rem 0;
 	display: inline-block;
 	position: relative;
-	@include transition(100ms);
 	outline: none;
 	&:hover {
 		border-color: $primary-color;
-		background-color: rgba(0, 0, 0, 0.0);
-		color: $gray;
-	}
-	&:visited {
-		color: $gray;
-		background-color: rgba(0,0,0,0.0);
+		color: $primary-color;
 	}
 	&:focus {
-		color: $gray;
+		color: $primary-color;
 		background-color: rgba(0,0,0,0.0);
 	}
 	&:active {
 		border-color: black;
+		color: black;
 	}
 }
 .modal-button {
@@ -71,7 +66,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	}
 }
 .tag {
-	border: 1px solid black;
+	border: 1px solid $dark;
 	margin: 5px;
 	padding: 4px 10px 4px 10px;
 	float: left;
@@ -83,12 +78,13 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		margin: 0;
 		padding: 0;
 		@include transition(100ms);
+		color: $dark;
 	}
 	&:hover {
-		border-color: $gray;
+		background-color: $dark;
 	}
 	&:hover p {
-		color: $gray;
+		color: white;
 	}
 }
 
@@ -99,10 +95,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		font-style: italic;
 	}
 	&:hover {
-		border-color: $gray;
+		background-color: $dark;
 	}
 	&:hover p {
-		color: $gray;
+		color: white;
 	}
 }
 
@@ -218,6 +214,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		@include transition(100ms);
 		&:hover {
 			border-left-color: $primary-color;
+		}
+		&:hover h3 {
+			color: $primary-color;
 		}
 	}
 }

@@ -65,8 +65,6 @@ body,
 	//visibility: hidden;
 	height: 100%;
 	background: #fff;
-	
-
 }
 
 .sitenav::after {
@@ -100,8 +98,15 @@ body,
 		fill:#000;
 	}
 	.activator{
+<<<<<<< HEAD
 		
 		width: 50px;
+=======
+		position:absolute;
+		width: 22px;
+		padding-left:15px;
+		padding-right:10px;
+>>>>>>> FETCH_HEAD
 		height: 100%;
 		text-align:center;
 		display:table;
@@ -111,10 +116,14 @@ body,
 		float:right;
 		& > .activator-icon{
 			display:table-cell;
+<<<<<<< HEAD
 			width:50px;
 			height:50px;
 			padding-left:15px;
 			padding-right:15px;
+=======
+			width:18px;
+>>>>>>> FETCH_HEAD
 			vertical-align:middle;
 		}
 	}
