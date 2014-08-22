@@ -247,10 +247,12 @@ body,
 }
 
 .sy-effect.sy-menu-open .sitenav-push {
-	-webkit-transform: translate3d(75px, 0, -100px);
-	transform: translate3d(75px, 0, -100px);
+	-webkit-transform: translate3d(75px, 0, -50px);
+	transform: translate3d(75px, 0, -50px);
 	//@include drop-shadow(0.5);
 	opacity:0.5;
+	-webkit-filter: blur(2px);
+  	filter: blur(2px);
 }
 
 .sy-effect.sitenav {
