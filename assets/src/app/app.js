@@ -6,6 +6,7 @@ angular.module( 'symantis', [
 	'lodash',
 	'ngIdle',
 	'mm.foundation',
+	'sy.templates',
 	//'ui.bootstrap',
 	'templates-app',
 	'services',
