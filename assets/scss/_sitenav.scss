@@ -1,4 +1,4 @@
-$animationTime: 0.15s !default;
+$animationTime: 0.1s !default;
 
 *,
 *:after,
@@ -63,7 +63,7 @@ body,
 	z-index: 100;
 	//visibility: hidden;
 	height: 100%;
-	background: #fff;
+	background: rgba(255,255,255,0.0);
 }
 
 .sitenav::after {
@@ -112,10 +112,9 @@ body,
 	}
 	.sitenav-inner{
 		height:100%;
-		
+		background-color: $darkest;
 		width:150px;
 		float:left;
-
 		display:table;
 		.vertical-middle{
 			//display:table-cell;
@@ -136,7 +135,7 @@ body,
 				min-height:50px;
 				-webkit-transition: left $animationTime;
 				transition: left $animationTime;
-				li{
+				li {
 					font-size:20px;
 					line-height:50px;
 					.search-icon{
@@ -145,10 +144,10 @@ body,
 						color:$primary-color;
 					}
 					.search{
-						font-size:rem-calc(14px);
+						@include font-regular(rem-calc(16px));
 						padding-left:15px;
 						width:100px;
-						color:#000;
+						color: white;
 						white-space: nowrap;
 						position:relative;
 						top:-3px;
@@ -174,7 +173,7 @@ body,
 					font-size:rem-calc(13px);
 					a{
 						display: block;
-						color: #000;
+						color: white;
 						//-webkit-transition: padding 0.1s;
 						//transition: padding 0.1s;
 						&:hover{
@@ -211,7 +210,7 @@ body,
 					.mantis{
 						width:100px;
 						padding-left:2px;
-						color:#000;
+						color:white;
 						white-space: nowrap;
 						opacity:0;
 						-webkit-transition: opacity $animationTime;
@@ -325,6 +324,7 @@ body,
 				li{
 					.search{
 						opacity:1.0;
+						color: #000;
 					}
 				}
 			}
@@ -340,6 +340,7 @@ body,
 				li.logo{
 					.mantis{
 						opacity:1.0;
+						color: #000;
 					}
 				}
 			}
