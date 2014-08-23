@@ -13,9 +13,8 @@
 					width: 100%;
 					@include font-semi(rem-calc(18px));
 					margin: 0;
-					@include transition(100ms);
 					&:hover {
-						color: $gray;
+						color: $primary-color;
 					}
 				}
 			}
@@ -114,7 +113,7 @@
 						color: black;
 						@include transition(100ms);
 						&:hover {
-							color: $gray;
+							color: $primary-color;
 						}
 					}
 				}
@@ -206,7 +205,6 @@
 			@include font-regular(rem-calc(12px));
 			margin: 0;
 			padding: 0;
-			@include transition(100ms);
 			&:hover {
 				color: $primary-color;
 			}
@@ -354,7 +352,6 @@
 			text-overflow: ellipsis;
 			overflow: hidden;
 			white-space: nowrap;
-			@include transition(100ms);
 			&:hover {
 				color: $primary-color;
 			}
@@ -440,7 +437,6 @@
 			overflow: hidden;
 			white-space: nowrap;
 			z-index: 4;
-			@include transition(100ms);
 			@include font-semi(rem-calc(20px));
 			a {
 				@include font-semi(rem-calc(20px));
