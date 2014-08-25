@@ -1,4 +1,4 @@
-$animationTime: 0.1s !default;
+$animationTime: 0.15s !default;
 
 *,
 *:after,
@@ -210,7 +210,7 @@ body,
 					.mantis{
 						width:100px;
 						padding-left:2px;
-						color:white;
+						color: white;
 						white-space: nowrap;
 						opacity:0;
 						-webkit-transition: opacity $animationTime;
