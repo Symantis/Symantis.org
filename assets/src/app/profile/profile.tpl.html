@@ -43,40 +43,13 @@
         </header>
         <article class="profile-manti-content">
             <ul>
-        		<li class="row current-manti">
+        		<li class="row current-manti" ng-repeat="manti in user.curManti">
                     <div class="medium-2 large-1 columns current-manti-view">
                         <a href="#"><p>View</p></a>
                     </div>
                     <div class="medium-10 large-11 columns current-manti-content">
-                        <h3><a href="#">SyScribe</a></h3>
-                        <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.</p>
-                    </div>
-                </li>
-                <li class="row current-manti">
-                    <div class="medium-2 large-1 columns current-manti-view">
-                        <a href="#"><p>View</p></a>
-                    </div>
-                    <div class="medium-10 large-11 columns current-manti-content">
-                        <h3><a href="#">SyScribe</a></h3>
-                        <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.</p>
-                    </div>
-                </li>
-                <li class="row current-manti">
-                    <div class="medium-2 large-1 columns current-manti-view">
-                        <a href="#"><p>View</p></a>
-                    </div>
-                    <div class="medium-10 large-11 columns current-manti-content">
-                        <h3><a href="#">SyScribe</a></h3>
-                        <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.</p>
-                    </div>
-                </li>
-                <li class="row current-manti">
-                    <div class="medium-2 large-1 columns current-manti-view">
-                        <a href="#"><p>View</p></a>
-                    </div>
-                    <div class="medium-10 large-11 columns current-manti-content">
-                        <h3><a href="#">SyScribe</a></h3>
-                        <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.</p>
+                        <h3><a href="#">{{ manti.title }}</a></h3>
+                        <p>{{ manti.description }}</p>
                     </div>
                 </li>
             </ul>
@@ -86,49 +59,13 @@
         </header>
         <article class="profile-contributions-content">
             <ul>
-            	<li class="row recent-contribution">
+            	<li class="row recent-contribution" ng-repeat="contribution in user.reContributions">
                     <div class="medium-2 large-1 columns recent-contribution-category">
-                        <p>New Branch</p>
+                        <p>{{ contribution.type }}</p>
                     </div>
                     <div class="medium-10 large-11 columns recent-contribution-content">
-                        <h3>SyScribe</h3>
-                        <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.</p>
-                    </div>
-                </li>
-                <li class="row recent-contribution">
-                    <div class="medium-2 large-1 columns recent-contribution-category">
-                        <p>New Branch</p>
-                    </div>
-                    <div class="medium-10 large-11 columns recent-contribution-content">
-                        <h3>SyScribe</h3>
-                        <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.</p>
-                    </div>
-                </li>
-                <li class="row recent-contribution">
-                    <div class="medium-2 large-1 columns recent-contribution-category">
-                        <p>New Branch</p>
-                    </div>
-                    <div class="medium-10 large-11 columns recent-contribution-content">
-                        <h3>SyScribe</h3>
-                        <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.</p>
-                    </div>
-                </li>
-                <li class="row recent-contribution">
-                    <div class="medium-2 large-1 columns recent-contribution-category">
-                        <p>New Branch</p>
-                    </div>
-                    <div class="medium-10 large-11 columns recent-contribution-content">
-                        <h3>SyScribe</h3>
-                        <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.</p>
-                    </div>
-                </li>
-                <li class="row recent-contribution">
-                    <div class="medium-2 large-1 columns recent-contribution-category">
-                        <p>New Branch</p>
-                    </div>
-                    <div class="medium-10 large-11 columns recent-contribution-content">
-                        <h3>SyScribe</h3>
-                        <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.</p>
+                        <h3>{{ contribution.title }}</h3>
+                        <p>{{ contribution.description }}</p>
                     </div>
                 </li>
             </ul>
