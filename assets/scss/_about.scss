@@ -19,4 +19,20 @@
 	header {
 		margin-bottom: rem-calc(-10px);
 	}
+	quote {
+		h2 {
+			@include font-bitter2(rem-calc(32px));
+			line-height: rem-calc(34px);
+		}
+		span {
+			@include font-italic(rem-calc(14px));
+			line-height: rem-calc(16px);
+		}
+	}
+	h3 {
+		//padding-bottom: rem-calc(20px);
+	}
+	.about-article {
+		padding-top: rem-calc(25px);
+	}
 }
