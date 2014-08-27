@@ -152,6 +152,7 @@ body,
 						position:relative;
 						top:-3px;
 						opacity:0;
+						@include transition(0.1s);
 						-webkit-transition: opacity $animationTime;
 						transition: opacity $animationTime;
 					}
@@ -213,6 +214,7 @@ body,
 						color: white;
 						white-space: nowrap;
 						opacity:0;
+						@include transition(0.1s);
 						-webkit-transition: opacity $animationTime;
 						transition: opacity $animationTime;
 
@@ -281,13 +283,13 @@ body,
 				li{
 					.search{
 						opacity:1.0;
+						@include transition(0.1s);
 					}
 				}
 			}
 			&.middle{
 				width:150px;
 				//padding-left:15px;
-				
 				li{
 					a{
 						display:block;
@@ -299,10 +301,10 @@ body,
 				left:0px;
 				li.logo{
 					.sy{
-
 					}
 					.mantis{
 						opacity:1.0;
+						@include transition(0.1s);
 					}
 				}
 			}
@@ -324,7 +326,7 @@ body,
 				li{
 					.search{
 						opacity:1.0;
-						color: #000;
+						color: $gray;
 					}
 				}
 			}
@@ -340,7 +342,7 @@ body,
 				li.logo{
 					.mantis{
 						opacity:1.0;
-						color: #000;
+						color: $gray;
 					}
 				}
 			}

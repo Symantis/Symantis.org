@@ -1,0 +1,22 @@
+.about-left {
+	header {
+		margin-bottom: rem-calc(-10px);
+	}
+	.about-left-nav {
+		a {
+			line-height: rem-calc(12px);
+			li {
+				@include font-regular(rem-calc(12px));
+				line-height: rem-calc(16px);
+			}
+			&:hover li {
+				color: $primary-color;
+			}
+		}
+	}
+}
+.about-center {
+	header {
+		margin-bottom: rem-calc(-10px);
+	}
+}
