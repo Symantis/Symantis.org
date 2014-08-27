@@ -109,8 +109,14 @@
 
 }
 @font-face {
-    font-family: 'oswald';
-    src: url('fonts/Oswald-Bold.ttf');
+    font-family: 'bitter';
+    src: url('fonts/Bitter-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bitter2';
+    src: url('fonts/Bitter-Regular.otf');
     font-weight: normal;
     font-style: normal;
 }

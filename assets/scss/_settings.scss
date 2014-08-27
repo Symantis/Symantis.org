@@ -61,6 +61,16 @@ $reveal-close-weight: light;
 	color: black;
 	font-size: $size;
 }
+@mixin font-bitter($size) {
+	font-family: 'bitter', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	color: black;
+	font-size: $size;
+}
+@mixin font-bitter2($size) {
+	font-family: 'bitter2', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	color: black;
+	font-size: $size;
+}
 @mixin transition($time) {
 	-webkit-transition: all $time ease;                  
     -moz-transition: all $time ease;                 
