@@ -46,6 +46,7 @@
 	padding-top: rem-calc(10px);
 	height: auto;
 	.news-post-date {
+		width: 5.6rem;
 		h2 {
 			@include font-regular(rem-calc(12px));
 			padding-bottom: rem-calc(15px);
@@ -56,6 +57,7 @@
 		border-left: rem-calc(1px) solid black;
 		height: 100%;
 		position: relative;
+		width: calc(100% - 5.6rem);
 		h3 {
 			@inlude font-bold(rem-calc(30px));
 			padding-bottom: rem-calc(10px);
@@ -84,7 +86,6 @@
 			padding: 0;
 			width: 100%;
 			list-style: none;
-			max-width: rem-calc(768px);
 			li {
 				margin: 0;
 				padding: rem-calc(10px);
@@ -322,6 +323,25 @@
 						padding-top: rem-calc(2px);
 						padding-left: rem-calc(6px);
 						padding-bottom: rem-calc(2px);
+						@include font-regular(rem-calc(11px));
+					}
+				}
+			}
+			.querie-date {
+				float: right;
+				padding-top: rem-calc(15px);
+				width: 100%;
+				text-align: right;
+				position: relative;
+				p {
+					@include font-regular(rem-calc(11px));
+					line-height: rem-calc(15px);
+					text-align: left;
+					width: rem-calc(118px);
+					position: absolute;
+					right: 0;
+					span {
+						@include font-semi(rem-calc(12px));
 					}
 				}
 			}
@@ -542,7 +562,6 @@
 				float: left;
 				position: relative;
 				height: rem-calc(36px);
-				max-width: rem-calc(200px);
 				h3 {
 					color: black;
 					width: auto;
@@ -589,8 +608,9 @@
 			.current-manti-view {
 				height: auto;
 				min-height: rem-calc(60px);
+				width: 5.6rem;
 				p {
-					text-align: left;
+					text-align: right;
 					width: 100%;
 					margin-top: rem-calc(-2px);
 					min-height: rem-calc(60px);
@@ -608,6 +628,7 @@
 				height: auto;
 				min-height: rem-calc(60px);
 				margin-left: 0;
+				width: calc(100% - 5.6rem);
 				@include transition(0.1s);
 				h3 {
 					@include font-semi(rem-calc(15px));
@@ -630,21 +651,25 @@
 		.recent-contribution {
 			height: auto;
 			.recent-contribution-category {
+				width: 5.6rem;
 				height: auto;
 				min-height: rem-calc(50px);
+				min-width: rem-calc(60px);
 				p {
-					@include font-regular(rem-calc(10px));
+					@include font-regular(rem-calc(11px));
 					line-height: rem-calc(12px);
-					text-align: left;
+					text-align: right;
 					width: 100%;
 					min-height: rem-calc(60px);
 				}
 			}
 			.recent-contribution-content {
+				width: calc(100% - 5.6rem);
 				border-left: rem-calc(1px) black solid;
 				height: auto;
 				min-height: rem-calc(50px);
 				margin-left: 0;
+				min-width: calc(100% - rem-calc(60px));
 				h3 {
 					@include font-semi(rem-calc(15px));
 					padding: 0;

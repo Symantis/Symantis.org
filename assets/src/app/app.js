@@ -431,7 +431,8 @@ var aQueries = [
 		],
 		totalReplies: '5',
 		totalViews: '1000',
-		query: 'Lorem ipsum'
+		query: 'Lorem ipsum',
+		date: '12-08-2014'
 	},
 	{
 		id: 2,
@@ -458,7 +459,8 @@ var aQueries = [
 		],
 		totalReplies: '5',
 		totalViews: '1000',
-		query: 'Lorem ipsum'
+		query: 'Lorem ipsum',
+		date: '12-08-2014'
 	},
 	{
 		id: 3,
@@ -485,7 +487,8 @@ var aQueries = [
 		],
 		totalReplies: '5',
 		totalViews: '1000',
-		query: 'Lorem ipsum'
+		query: 'Lorem ipsum',
+		date: '12-08-2014'
 	},
 	{
 		id: 4,
@@ -512,7 +515,8 @@ var aQueries = [
 		],
 		totalReplies: '5',
 		totalViews: '1000',
-		query: 'Lorem ipsum'
+		query: 'Lorem ipsum',
+		date: '12-08-2014'
 	}
 	
 ]
