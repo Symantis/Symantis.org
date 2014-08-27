@@ -598,6 +598,11 @@
 	p {
 		@include font-regular(rem-calc(12px));
 	}
+	.profile-about-header {
+		h3 {
+			padding-bottom: rem-calc(15px);
+		}
+	}
 	.profile-manti-header {
 		margin-top: rem-calc(25px);
 	}
