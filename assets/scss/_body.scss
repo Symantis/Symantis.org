@@ -22,7 +22,7 @@ small {
 	h1 {
 		text-align: left;
 		width: 100%;
-		@include font-semi(rem-calc(58px));
+		@include font-oswald(rem-calc(58px));
 		margin: 0;
 	}
 	h3 {

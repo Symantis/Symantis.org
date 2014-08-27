@@ -51,15 +51,15 @@
 	padding-left: rem-calc(20px);
 	padding-right: rem-calc(15px);
 	h1 {
-		@include font-semi(rem-calc(36px));
+		@include font-semi(rem-calc(26px));
 		line-height: rem-calc(38px);
-		padding-bottom: rem-calc(10px);
+		padding-bottom: 0;
 	}
 	h2 {
-		@include font-semi(rem-calc(24px));
+		@include font-semi(rem-calc(18px));
 		line-height: rem-calc(26px);
-		padding-bottom: rem-calc(20px);
-		padding-top: rem-calc(15px);
+		padding-bottom: rem-calc(10px);
+		padding-top: rem-calc(8px);
 		margin: 0;
 	}
 	p {
