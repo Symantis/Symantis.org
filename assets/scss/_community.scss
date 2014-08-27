@@ -337,12 +337,18 @@
 					@include font-regular(rem-calc(11px));
 					line-height: rem-calc(15px);
 					text-align: left;
-					width: rem-calc(118px);
-					position: absolute;
+					width: rem-calc(68px);
+					float: right;
 					right: 0;
 					span {
 						@include font-semi(rem-calc(12px));
 					}
+				}
+				.querie-empty {
+					width: rem-calc(50px);
+					height: rem-calc(15px);
+					float: right;
+					line-height: rem-calc(15px);
 				}
 			}
 		}
