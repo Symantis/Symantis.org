@@ -38,6 +38,7 @@ var jsFilesToInject = [
   'bower_components/socket.io-client/dist/socket.io.min.js',
   'bower_components/sails.io.js/dist/sails.io.js',
   'bower_components/angular-sails/dist/angular-sails.js',
+  'bower_components/angular-animate/angular-animate.js',
   'bower_components/lodash/dist/lodash.js',
   'bower_components/moment/moment.js',
   'bower_components/ng-idle/angular-idle.min.js',

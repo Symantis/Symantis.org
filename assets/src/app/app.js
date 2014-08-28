@@ -5,6 +5,7 @@ angular.module( 'symantis', [
 	'angularMoment',
 	'lodash',
 	'ngIdle',
+	'ngAnimate',
 	'mm.foundation',
 	'sy.templates',
 	//'ui.bootstrap',
