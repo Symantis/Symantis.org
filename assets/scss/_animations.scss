@@ -35,6 +35,7 @@
 }
 
 /* Main UI animation */
+$uiAnimationTime: 0.14s;
 
 [ui-view="main"].ng-enter, [ui-view="main"].ng-leave {
   position: absolute;
@@ -43,10 +44,10 @@
   //padding-left: $column-gutter / 2;
   padding-right: $column-gutter / 2;
   //height:100%;
-  -webkit-transition:all .3s ease-in-out;
-    -moz-transition:all .3s ease-in-out;
-    -o-transition:all .3s ease-in-out;
-    transition:all .3s ease-in-out;
+  -webkit-transition:all $uiAnimationTime ease-in-out;
+    -moz-transition:all $uiAnimationTime ease-in-out;
+    -o-transition:all $uiAnimationTime ease-in-out;
+    transition:all $uiAnimationTime ease-in-out;
 }
 
 [ui-view="main"].ng-enter {
