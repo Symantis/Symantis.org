@@ -21,12 +21,13 @@
 	}
 	quote {
 		h2 {
-			@include font-bitter2(rem-calc(32px));
-			line-height: rem-calc(34px);
+			@include font-semi(rem-calc(32px));
+			line-height: rem-calc(38px);
+			margin-bottom: rem-calc(-5px);
 		}
 		span {
-			@include font-italic(rem-calc(14px));
-			line-height: rem-calc(16px);
+			@include font-italic(rem-calc(12px));
+			line-height: rem-calc(14px);
 		}
 	}
 	h3 {
