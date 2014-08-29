@@ -147,4 +147,21 @@ angular.module('sy.templates.sitenav', [])
                 });
             }
         };
+}])
+
+.directive('topNavContainer', ['$document', '$window', '$location', '$state', '$timeout', function ($document, $window, $location, $state, $timeout) {
+	 return {
+            scope: {},
+            restrict: 'C',
+            link: function ($scope, element, attrs) {
+                var win = angular.element($window);
+                var topbar = $scope.topbar = element;
+                
+
+            },
+            controller: ['$scope', function($scope) {
+
+                
+            }]
+	};
 }]);
