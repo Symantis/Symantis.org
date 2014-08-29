@@ -231,7 +231,7 @@ angular.module('sy.templates.sitenav', [])
         };
 }])
 
-.directive('topNavContainer', ['$document', '$window', '$location', '$state', '$timeout', function ($document, $window, $location, $state, $timeout) {
+.directive('topNav', ['$document', '$window', '$location', '$state', '$timeout', function ($document, $window, $location, $state, $timeout) {
 	 return {
             scope: {},
             restrict: 'C',
@@ -246,4 +246,16 @@ angular.module('sy.templates.sitenav', [])
                 
             }]
 	};
+}])
+.directive('topNavContainer', [function () {
+        return {
+            require: '^topNav',
+            restrict: 'C',
+            link: function ($scope, element, attrs, topNav) {
+                //console.log(element.$parent());
+	            element.css({ 
+			    	width: element.parent()[0].offsetWidth - 65 + 'px' 
+			    });
+            }
+        };
 }]);
