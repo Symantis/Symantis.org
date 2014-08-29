@@ -12,6 +12,10 @@ angular.module( 'symantis.creator', [
 			"sitenav": {
 				controller: 'SiteNavCtrl',
                 templateUrl: 'sitenav/index.tpl.html'
+			},
+			"header": {
+				controller: 'HeaderCtrl',
+	            templateUrl: 'header/header.tpl.html'
 			}
 		}
 	});
