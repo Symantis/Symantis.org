@@ -45,7 +45,7 @@ angular.module( 'symantis.community', [
 		.state( 'community.queries.view', {
 			url: '/:id/:title',
 			views: {
-				"main@": {
+				"queries@community.queries": {
 					controller: 'QueriesViewCtrl',
 					templateUrl: 'community/queries/view.tpl.html'
 				}
