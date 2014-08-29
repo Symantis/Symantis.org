@@ -247,14 +247,21 @@ angular.module('sy.templates.sitenav', [])
             }]
 	};
 }])
-.directive('topNavContainer', [function () {
+.directive('topNavContainer', ['$document','$window',function ($document, $window) {
         return {
             require: '^topNav',
             restrict: 'C',
             link: function ($scope, element, attrs, topNav) {
                 //console.log(element.$parent());
+	            var win = angular.element($window);
+
 	            element.css({ 
 			    	width: element.parent()[0].offsetWidth - 65 + 'px' 
+			    });
+			    win.bind("resize", function(){
+			    	element.css({ 
+				    	width: element.parent()[0].offsetWidth - 65 + 'px' 
+				    });
 			    });
             }
         };
