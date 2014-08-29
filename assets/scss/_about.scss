@@ -19,18 +19,6 @@
 	header {
 		margin-bottom: rem-calc(-10px);
 	}
-	quote {
-		h2 {
-			@include font-semi(rem-calc(18px));
-			color: $primary-color;
-			margin: 0;
-		}
-		span {
-			@include font-italic(rem-calc(12px));
-			line-height: rem-calc(14px);
-			color: $gray;
-		}
-	}
 	h3 {
 		//padding-bottom: rem-calc(20px);
 	}

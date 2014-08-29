@@ -23,12 +23,6 @@ and (max-width : rem-calc(320px)) {
 @media only screen 
 and (min-device-width : rem-calc(768px)) 
 and (max-device-width : rem-calc(1024px)) {
-	.home-quote {
-		display: none;
-	}
-	.home-signup {
-		margin-top: rem-calc(30px);
-	}
 	.search-result {
 		.search-result-category {
 			a {
@@ -62,20 +56,12 @@ and (orientation : portrait) {
 // Desktops & Laptops & Above ----------- 
 @media only screen 
 and (min-width : rem-calc(1224px)) {
-	.home-quote {
-		display: block;
-	}
+
 }
 
 // Small Laptops and below ----------
 @media only screen 
 and (max-width : rem-calc(1224px)) {
-	.home-quote {
-		display: none;
-	}
-	.home-signup {
-		margin-top: rem-calc(30px);
-	}
 	.search-result {
 		.search-result-category {
 			a {
@@ -92,35 +78,25 @@ and (max-width : rem-calc(1224px)) {
 @media only screen 
 and (min-width : rem-calc(1224px)) 
 and (max-height : rem-calc(880px)) {
-	.home-quote {
-		display: none;
-	}
-	.home-signup {
-		margin-top: rem-calc(30px);
-	}
+
 }
 
 // Medium Screens -----------
 @media only screen 
 and (min-width : rem-calc(1024px))
 and (max-width : rem-calc(1560px)) {
-	.news-post-date {
-		width: 16%;
-	}
-	.news-post-content {
-		width: 84%;
-	}
+
 }
 
 // Large screens ----------- 
 @media only screen 
 and (min-width : rem-calc(1824px)) {
-	.search-result-category {
+	/*.search-result-category {
 		width: 10%;
 	}
 	.search-result-content {
 		width: 90%;
-	}
+	}*/
 	.connections-container {
 		.connections-individual {
 			.connections-message {

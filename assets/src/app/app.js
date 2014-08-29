@@ -28,13 +28,13 @@ angular.module( 'symantis', [
 	'symantis.community',
 	'symantis.connections',
 	'symantis.queries',
+	'symantis.news',
 	'symantis.tags',
 	//End Community
 
 	'symantis.start',
 	'symantis.chat',
 	'symantis.creator',
-	'symantis.news',
 	
 	'symantis.profile'
 
@@ -125,14 +125,16 @@ angular.module( 'symantis', [
 
 var oCurrentUser = {
 	id: 1, 
-	name: "Hamish Jackson-Mee",
+	firstName: "Hamish",
+	lastName:  "Jackson-Mee",
 	handle: "theman",
 	at: "@"
 }
 var aUsers = [
 	{
 		id: 1, 
-		name: "Hamish Jackson-Mee",
+		firstName: "Hamish",
+		lastName:  "Jackson-Mee",
 		handle: "theman",
 		at: "@",
 		tags: ['Designer', 'Developer'],
@@ -187,7 +189,8 @@ var aUsers = [
 	},
 	{
 		id: 2, 
-		name: "Scott Wyatt",
+		firstName: "Scott",
+		lastName:  "Wyatt",
 		handle: "awesome",
 		at: "@",
 		tags: ['Designer', 'Developer'],
@@ -242,7 +245,8 @@ var aUsers = [
 	},
 	{
 		id: 3, 
-		name: "Katelin",
+		firstName: "Katelin",
+		lastName:  "Bull",
 		handle: "kBull",
 		at: "@",
 		tags: ['Designer', 'Developer'],
@@ -297,7 +301,8 @@ var aUsers = [
 	},
 	{
 		id: 4, 
-		name: "Anthony TwoNuts",
+		firstName: "Anthony",
+		lastName:  "Twonuts",
 		handle: "2Nuts",
 		at: "@",
 		tags: ['Designer', 'Developer'],
@@ -352,7 +357,8 @@ var aUsers = [
 	},
 	{
 		id: 5, 
-		name: "Best Person",
+		firstName: "Best",
+		lastName:  "Person",
 		handle: "bP",
 		at: "@",
 		tags: ['Designer', 'Developer'],

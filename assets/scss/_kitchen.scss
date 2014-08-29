@@ -195,7 +195,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		line-height: rem-calc(18px);
 	}
 	.search-result-category {
+		width: 5.6rem;
 		a {
+
 			h2 {
 				font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
 				color: black;
@@ -210,6 +212,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		}
 	}
 	.search-result-content {
+		width: calc(100% - 5.6rem);
 		border-left: rem-calc(1px) solid black;
 		@include transition(100ms);
 		&:hover {

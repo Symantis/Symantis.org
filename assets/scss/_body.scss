@@ -8,6 +8,18 @@ body {
 small {
 	@include font-regular(10px);
 }
+quote {
+	h2 {
+		@include font-semi(rem-calc(18px));
+		color: $primary-color;
+		margin: 0;
+	}
+	span {
+		@include font-italic(rem-calc(12px));
+		line-height: rem-calc(14px);
+		color: $gray;
+	}
+}
 
 #heading-row {
 	padding-top: rem-calc(60px);
@@ -72,7 +84,7 @@ small {
 	}
 }
 .main-center {
-	padding-right: rem-calc(30px);
+	//padding-right: rem-calc(30px);
 	header {
 		border-top: rem-calc(1px) black solid;
 		padding-top: rem-calc(20px);
