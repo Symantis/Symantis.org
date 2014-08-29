@@ -1,7 +1,7 @@
 <a 
   id="symenutrigger"
   href="#" 
-  class="activator symenutrigger"
+  class="activator sy-nav-toggle"
 >
   <div class="activator-icon">
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -18,7 +18,7 @@
   </div>
 </a>
 <div class="sitenav-inner" ng-controller="SiteNavCtrl">
-    <ul class="top">
+    <ul class="top sy-nav-top-toggle">
       <li>
         <span class="search-icon"><i class="icon icon-search"></i></span><span class="search">Find</span>
       </li>
@@ -30,7 +30,7 @@
     	</li>
     </ul>
     
-    <ul class="bottom" ng-mouseenter="syMenuBottomToggleOn()" ng-mouseleave="syMenuBottomToggleOff()">
+    <ul class="bottom sy-nav-bottom-toggle" >
       <li class="logo">
         <a href="/home">
         <span class="sy">sy.</span><span class="mantis">mantis</span>
