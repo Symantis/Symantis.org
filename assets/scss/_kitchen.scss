@@ -68,7 +68,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .tag {
 	border: 1px solid $dark;
 	margin: 5px;
-	padding: 4px 10px 4px 10px;
 	float: left;
 	list-style: none;
 	height: auto;
@@ -77,6 +76,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		line-height: auto;
 		margin: 0;
 		padding: 0;
+		padding: 4px 10px 4px 10px;
 		@include transition(100ms);
 		color: $dark;
 	}
