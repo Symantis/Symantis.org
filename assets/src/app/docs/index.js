@@ -16,6 +16,10 @@ angular.module( 'symantis.docs', [
 			"header": {
 				controller: 'HeaderCtrl',
 				templateUrl: 'header/header.tpl.html'
+			},
+			"subheader@docs": {
+				controller: 'DocsHeaderCtrl',
+                templateUrl: 'docs/header.tpl.html'
 			}
 		}
 	});
@@ -23,6 +27,11 @@ angular.module( 'symantis.docs', [
 
 .controller( 'DocsCtrl', function DocsController( $scope, titleService ) {
 	titleService.setTitle('Docs');
+
+	
+})
+.controller( 'DocsHeaderCtrl', function DocsHeaderController( $scope, titleService ) {
+	//titleService.setTitle('Docs');
 
 	
 });
