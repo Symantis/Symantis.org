@@ -17,6 +17,10 @@ angular.module( 'symantis.profile', [
 				"header": {
 					controller: 'HeaderCtrl',
 	                templateUrl: 'header/header.tpl.html'
+				},
+				"subheader@profile": {
+					controller: 'ProfileHeaderCtrl',
+                	templateUrl: 'profile/header.tpl.html'
 				}
 			}
 		})
@@ -36,6 +40,9 @@ angular.module( 'symantis.profile', [
 	titleService.setTitle('Profile');
 
 	
+})
+.controller( 'ProfileHeaderCtrl', function ProfileHeaderController( $scope, titleService ) {
+	//titleService.setTitle('About');
 })
 .controller( 'ProfileViewCtrl', function ProfileViewController($scope, titleService, $state, $stateParams) {
 	

@@ -36,7 +36,7 @@
 							</li>
 							<li class="top-nav-name">
 								<span>Hi,</span>
-								<a href="#">{{ currentUser.firstName }}</a>
+								<a ui-sref="profile.view({ handle: currentUser.handle })">{{ currentUser.firstName }}</a>
 							</li>
 						</ul>
 						<!-- <p class="sub-nav-noUser">
