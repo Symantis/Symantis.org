@@ -247,7 +247,7 @@ angular.module('sy.templates.sitenav', [])
             }]
 	};
 }])
-.directive('topNavContainer', ['$document','$window',function ($document, $window) {
+.directive('topNavContainer', ['$document','$window','$state' ,function ($document, $window, $state) {
         return {
             require: '^topNav',
             restrict: 'C',
@@ -263,6 +263,11 @@ angular.module('sy.templates.sitenav', [])
 				    	width: element.parent()[0].offsetWidth - 65 + 'px' 
 				    });
 			    });
+			    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+	    			element.css({ 
+				    	width: element.parent()[0].offsetWidth - 65 + 'px' 
+				    });
+	    		});
             }
         };
 }]);

@@ -79,7 +79,23 @@ angular.module( 'symantis', [
 	$rootScope.queries = aQueries;
 
 })
-
+/*
+.config(function config( $stateProvider ) {
+	$stateProvider.state('/', {
+		url: '/',
+		views: {
+			"sitenav": {
+				controller: 'SiteNavCtrl',
+                templateUrl: 'sitenav/index.tpl.html'
+			},
+			"header": {
+				controller: 'HeaderCtrl',
+                templateUrl: 'header/header.tpl.html'
+			}
+		}
+	});
+})
+*/
 .controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout ) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
@@ -89,6 +105,7 @@ angular.module( 'symantis', [
 	config.currentUser = window.currentUser;
 
 });
+
 
 var oCurrentUser = {
 	id: 1, 

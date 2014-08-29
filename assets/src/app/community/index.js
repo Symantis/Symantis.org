@@ -17,6 +17,10 @@ angular.module( 'symantis.community', [
 				"header": {
 					controller: 'HeaderCtrl',
 	                templateUrl: 'header/header.tpl.html'
+				},
+				"subheader@community": {
+					controller: 'CommunityHeaderCtrl',
+                	templateUrl: 'community/header.tpl.html'
 				}
 			}
 		})
@@ -81,4 +85,7 @@ angular.module( 'symantis.community', [
 	titleService.setTitle('Community');
 
 	
+})
+.controller( 'CommunityHeaderCtrl', function CommunityHeaderController( $scope, titleService ) {
+	//titleService.setTitle('About');
 });
