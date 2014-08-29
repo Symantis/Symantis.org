@@ -8,10 +8,11 @@ angular.module("sy.templates", ['sy.templates.sitenav']);
  */
 angular.module('sy.templates.sitenav', [])
 
-.directive('sySiteNavToggle', ['$document', '$window', '$location', '$timeout', function ($document, $window, $location, $timeout) {
+.directive('sySiteNavToggle', ['$document', '$window', '$location', '$state', '$timeout', function ($document, $window, $location, $state, $timeout) {
 	var openElement = null,
 		closeMenu   = angular.noop,
-		openMenu	= angular.noop;
+		openMenu	= angular.noop,
+		toggleMenu	= angular.noop;
 	return {
 	    restrict: 'CA',
 	    scope: {
@@ -28,6 +29,10 @@ angular.module('sy.templates.sitenav', [])
 	    		console.log("location changed");
 	    		closeMenu(); 
 	    	});
+	    	scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+	    		console.log("state changed");
+	    		closeMenu(); 
+	    	});
 
 	      //console.log(element);
 	      /*
@@ -37,15 +42,31 @@ angular.module('sy.templates.sitenav', [])
 		*/
 			var trytimeout = angular.noop;
 
-	    	element.children('#sitenav').bind('mouseenter', function (event) {
-	    		console.log("Mouse Left");
-				$timeout.cancel(trytimeout);
-				trytimeout = $timeout(function(){
-					closeMenu()
-				}, 500);
-
-
+	    	element.children('.sitenav-inner').bind('mouseenter mouseleave', function (e) {
+	    		//element.children('.sitenav-inner').unbind('mouseenter mouseleave');
+	    		e = e ? e : window.event;
+			    var from = e.relatedTarget || e.toElement;
+			    if (!from || from.nodeName == "HTML") {
+			    	console.log('Left Window');
+			    	$timeout.cancel(trytimeout);
+			    }else{
+		    		console.log(e.type);
+					$timeout.cancel(trytimeout);
+					var action = function(){ 
+						return e.type == 'mouseover' ? closeMenu() : openMenu();
+					}
+					trytimeout = $timeout(function(){
+						action()
+					}, 500);
+			        // stop your drag event here
+			        // for now we can just use an alert
+			        //alert("left window");
+			    }
 	    	});
+	    	element.children('.sitenav-inner').bind('click', function (e) {
+	    		console.log('Clicked');
+	    	});
+	    	/*
 	    	element.children('#sitenav').bind('mouseleave', function (event) {
 	     		console.log("Mouse Enter");
 	     		$timeout.cancel(trytimeout);
@@ -53,7 +74,21 @@ angular.module('sy.templates.sitenav', [])
 					openMenu()
 				}, 500);
 	    	});
-
+			*/
+			/*
+			$('.symenutrigger').bind('click', function (event){
+				console.log("Clicked");
+				var menuWasOpen = element.hasClass('sy-menu-open');
+	        
+	    		if (menuWasOpen) {
+	        		closeMenu();
+	    		}
+	    		if (!menuWasOpen && !element.hasClass('disabled') && !element.prop('disabled')) {
+	    			openMenu();
+	    		}
+			});
+	*/
+			/*
 	    	element.bind('click', function (event) {
 	        
 	    		var menuWasOpen = element.hasClass('sy-menu-open');
@@ -65,6 +100,7 @@ angular.module('sy.templates.sitenav', [])
 	    			openMenu();
 	    		}
 	      	});
+			*/
 			
 			closeMenu = function (event) {
 				$document.unbind('click', closeMenu);
