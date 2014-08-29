@@ -14,11 +14,18 @@
 <div ng-include="'header/index.tpl.html'"></div>
 
 <div 
+	sy-site-nav-toggle="#sy-menu"
+	id="sy-menu"
 	class="sy-app sy-effect" 
 	ng-class="{'sy-menu-open': syMenuOpen, 'sy-menu-top-open': syMenuTopOpen, 'sy-menu-bottom-open': syMenuBottomOpen }"
 >
 
-	<div class="sitenav sy-effect" ui-view="sitenav" ng-mouseleave="syMenuToggleOff()">
+	<div 
+		id="sitenav"
+		class="sitenav sy-effect" 
+		ui-view="sitenav" 
+		ng-mouseleave="syMenuToggleOff()"
+	>
 	</div><!-- /.sitenav -->
 
 	<div class="sitenav-push">
