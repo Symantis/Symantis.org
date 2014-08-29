@@ -14,17 +14,19 @@ angular.module('sy.templates.sitenav', [])
             link: function ($scope, element, attrs) {
                 var win = angular.element($window);
                 var sidebar = $scope.sidebar = element;
+                $scope.trytimeout = angular.noop;
 
                 $scope.hide = function () {
+                    $timeout.cancel($scope.trytimeout);
                     sidebar.removeClass('sy-menu-open');
                     //sidebar.removeClass('move-right');
                 };
                 $scope.show = function () {
+                    $timeout.cancel($scope.trytimeout);
                     sidebar.addClass('sy-menu-open');
                     //sidebar.removeClass('move-right');
                 };
-                $scope.trytimeout = angular.noop;
-
+                
                 win.bind("resize.body", $scope.hide);
 
                 $scope.$on('$destroy', function() {
@@ -122,13 +124,14 @@ angular.module('sy.templates.sitenav', [])
             link: function ($scope, element, attrs, syNav) {
                 
                 element.on('mouseenter mouseleave', function (e) {
-                    console.log(e.type);
+                    //console.log(e.type);
+                    $timeout.cancel($scope.trytimeout);
                     var action = function(){
                     	return e.type == 'mouseover' ? syNav.show() : syNav.hide();
                     }
                     $scope.trytimeout = $timeout(function(){
 						action()
-					}, 500);
+					}, 1000);
                     //var action = e.type == 'mouseover' ? syNav.bottomOpen() : syNav.bottomClose();
                 });
             }
