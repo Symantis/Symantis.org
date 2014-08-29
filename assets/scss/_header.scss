@@ -2,8 +2,9 @@
 .fluid-row.top-nav {
 	position: fixed;
 	width: calc(100% - 50px);
-	padding-top: rem-calc(15px);
+	padding-top: 0;
 	padding-bottom: 0;
+	height: rem-calc(50px);
 }
 
 .top-nav {
@@ -20,37 +21,49 @@
 			margin: 0;
 			li {
 				display: block;
-				padding-bottom: rem-calc(15px);
-				height: rem-calc(35px);
 			}
 			.top-nav-left {
+				padding-top: rem-calc(15px);
+				padding-bottom: rem-calc(15px);
 				p {
 					@include font-bold(rem-calc(12px));
 					color: $primary-color;
 				}
 			}
 			.top-nav-mid {
+				padding-top: rem-calc(15px);
+				padding-bottom: rem-calc(15px);
 				p {
 					a {
-						color: black;
+						color: $gray;
+						margin-top: rem-calc(5px);
+						padding-top: rem-calc(5px);
+						&:hover {
+							border-top: rem-calc(1px) black solid;
+							color: black;
+						}
 					}
 				}
 			}
 			.top-nav-right {
 				padding-left: 0;
+				padding-top: rem-calc(15px);
+				padding-bottom: rem-calc(15px);
 				.top-nav-userOnline {
 					li {
 						float: right;
-						padding-left: rem-calc(10px);
 					}
 					.top-nav-name {
 						padding-right: rem-calc(10px);
 					}
 					.top-nav-messages {
 						padding-top: rem-calc(1px);
+						margin-left: rem-calc(10px);
+						height: rem-calc(19px);
 					}
 					.top-nav-settings {
-
+						margin-left: rem-calc(10px);
+						height: rem-calc(19px);
 					}
 				}
 			}
