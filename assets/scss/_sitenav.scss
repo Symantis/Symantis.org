@@ -129,7 +129,7 @@ body,
 
 			&.top{
 				position:absolute;
-				z-index:999;
+				z-index:100;
 				left:150px;
 				width: 50px;
 				min-height:50px;
@@ -142,7 +142,6 @@ body,
 						padding-left:15px;
 						width:50px;
 						color:$primary-color;
-						z-index: 9999;
 					}
 					.search{
 						@include font-regular(rem-calc(16px));
@@ -156,7 +155,6 @@ body,
 						@include transition(0.1s);
 						-webkit-transition: opacity $animationTime;
 						transition: opacity $animationTime;
-						z-index: 9999;
 					}
 				}
 			}
