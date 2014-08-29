@@ -8,6 +8,7 @@
 	padding-top: 0;
 	padding-bottom: 0;
 	height: rem-calc(50px);
+	z-index:100;
 }
 .top-nav {
 	//z-index: 10;
@@ -16,30 +17,47 @@
 		ul {
 			list-style: none;
 			margin: 0;
+			display:block;
+			&:after{
+				content:'';
+		    	display:block;
+		    	clear: both;
+			}
 			li {
+				background-color: white;
+				a{
+					display:block;
+				}	
 			}
 			.top-nav-left {
 				padding-top: rem-calc(15px);
 				padding-bottom: rem-calc(15px);
-				p {
+				
 					@include font-bold(rem-calc(12px));
 					color: $primary-color;
-				}
+				
 			}
 			.top-nav-mid {
 				padding-top: rem-calc(15px);
 				padding-bottom: rem-calc(15px);
-				p {
+				
 					a {
 						color: $gray;
-						margin-top: rem-calc(5px);
-						padding-top: rem-calc(5px);
+						font-size: rem-calc(12px);
+						span{
+							color: $gray;
+							border-top: rem-calc(1px) white solid;
+							margin-top: rem-calc(5px);
+							padding-top: rem-calc(5px);
+						}
 						&:hover {
-							border-top: rem-calc(1px) black solid;
-							color: black;
+							span {
+								border-top: rem-calc(1px) black solid;
+								color: black;
+							}
 						}
 					}
-				}
+				
 			}
 			.top-nav-right {
 				padding-left: 0;
@@ -50,7 +68,14 @@
 						float: right;
 					}
 					.top-nav-name {
+						color: $gray;
+						font-size: rem-calc(12px);
 						padding-right: rem-calc(10px);
+						white-space: nowrap;
+						display:block;
+						a, span{
+							display:inline-block;
+						}
 					}
 					.top-nav-messages {
 						padding-top: rem-calc(1px);
@@ -68,6 +93,11 @@
 			width: 100%;
 			height: rem-calc(1px);
 			background-color: black;
+		}
+		&:after{
+			content:'';
+		    display:block;
+		    clear: both;
 		}
 	}
 }
