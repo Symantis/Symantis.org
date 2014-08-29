@@ -139,7 +139,6 @@
 				width: 5.6rem;
 				height: auto;
 				min-height: rem-calc(50px);
-				min-width: rem-calc(60px);
 				p {
 					@include font-regular(rem-calc(11px));
 					line-height: rem-calc(12px);
@@ -148,6 +147,12 @@
 					min-height: rem-calc(60px);
 				}
 			}
+			.recent-contribution-category:hover p {
+				color: $primary-color;
+			}
+			.recent-contribution-category:hover + .recent-contribution-content {
+				border-left: rem-calc(5px) $primary-color solid;
+			}
 			.recent-contribution-content {
 				width: calc(100% - 5.6rem);
 				border-left: rem-calc(1px) black solid;
@@ -155,6 +160,7 @@
 				min-height: rem-calc(50px);
 				margin-left: 0;
 				min-width: calc(100% - rem-calc(60px));
+				@include transition(0.1s);
 				h3 {
 					@include font-semi(rem-calc(15px));
 					padding: 0;
