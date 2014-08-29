@@ -3,7 +3,7 @@
         <!-- Section on left of heading -->
     </section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
-        <h1>{{ user.firstName }} {{ user.lastName }}</h1>
+        <h1>{{ user.firstName + ' ' + user.lastName }}</h1>
     </section>
     <section class="medium-0 large-2 columns heading-right">
         <!-- Section on right of heading -->
@@ -14,7 +14,7 @@
     	<!-- Section for main left header -->
         <header class="profile-left-user left-header">
             <h3>
-                {{ user.firstName }} {{ user.lastName }}
+                {{ user.firstName + ' ' + user.lastName }}
             </h3>
             <small>{{ user.at }}{{ user.handle }}</small>
             <div class="profile-pic">

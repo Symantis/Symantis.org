@@ -44,7 +44,7 @@ angular.module( 'symantis.profile', [
 			
 			$scope.user = $scope.users[i];
 			console.log($scope.user);
-			titleService.setTitle($scope.user.name+' Profile');
+			titleService.setTitle($scope.user.firstName+'\'s' + ' Profile');
 			break;
 		}
 		console.log($stateParams.handle+' '+$scope.users[i].handle);

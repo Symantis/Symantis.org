@@ -23,7 +23,7 @@
                             href="#" 
                             ng-show="user.status == 'online'"
                         >
-                            <p>{{ user.firstName }} {{ user.lastName }}</p>
+                            <p>{{ user.firstName + ' ' + user.lastName }}</p>
                         </a>
                     </li>
                 </ul>
@@ -38,7 +38,7 @@
                     <li ng-repeat="user in users">
                         <a ui-sref="profile.view({ handle: user.handle })">
                             <div class="connections-suggestions-pic suggestions-{{ user.status }}"></div>
-                            <p class="connections-suggestions-name">{{ user.firstName }} {{ user.lastName }}</p>
+                            <p class="connections-suggestions-name">{{ user.firstName + ' ' + user.lastName }}</p>
                             <p class="connections-suggestions-skills">{{ user.tags[0] }}</p>
                         </a>
                     </li>
@@ -59,7 +59,7 @@
                     <a 
                         ui-sref="profile.view({ handle: user.handle })"
                     >
-                        {{ user.firstName }} {{ user.lastName }}
+                        {{ user.firstName + ' ' + user.lastName }}
                     </a>
                 </h2>
                 <p class="connections-bio">

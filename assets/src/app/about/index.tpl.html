@@ -1,45 +1,54 @@
+<!--  =================== Top Nav Section that is to be revealed =================== -->
 <div class="row fluid-row top-nav">
 	<nav class="top-nav-container">
 		<ul>
-			<li class="top-nav-heading medium-3 large-2 large-offset-1 columns">
+			<li class="top-nav-left medium-3 large-2 large-offset-1 columns">
+				<p><a href="#">More</a></p>
+			</li>
+			<li class="top-nav-mid medium-2 large-1 columns">
 				<p><a href="#">About</a></p>
 			</li>
-			<li class="top-nav-section medium-2 large-1 columns">
-				<p><a href="#">About-1</a></p>
+			<li class="top-nav-mid medium-2 large-1 columns">
+				<p><a href="#">Extras</a></p>
 			</li>
-			<li class="top-nav-section medium-2 large-1 columns">
-				<p><a href="#">About-2</a></p>
-			</li>
-			<li class="top-nav-section medium-2 large-1 columns">
-				<p><a href="#">About-3</a></p>
+			<li class="top-nav-mid medium-2 large-1 columns">
+				<p><a href="#">Contributors</a></p>
 			</li>
 			<li class="top-nav-right medium-3 large-4 columns">
 				<ul class="top-nav-userOnline">
 					<li>
+						<a href="#">settings</a>
+					</li>
+					<li>
+						<a href="#">messages</a>
+					</li>
+					<li>
 						<p>Hi, <a href="#">{{ currentUser.firstName }}</a></p>
 					</li>
-					<li><a href="#"></a>messages icon</li>
-					<li>settings icon</li>
 				</ul>
+				<!--  =================== No User is Logged In =================== -->
 				<!-- <p class="sub-nav-noUser">
 					<a href="#">Login</a> or <a href="#">Sign up</a>
 				</p> -->
 			</li>
 			<li class="top-nav-large-right medium-0 large-2 columns"></li>
 		</ul>
+		<div class="top-nav-rule medium-12 large-9 large-offset-1 columns">
+			<div class="top-nav-rule-inner"></div>
+		</div>
 	</nav>
 </div>
-<!-- <div id="heading-row" class="row fluid-row">
+<!--  =================== Header section to be hidden when menu is loaded =================== -->
+<div id="heading-row" class="row fluid-row">
 	<section class="medium-3 large-2 large-offset-1 columns heading-left">
-		 Section on left of heading 
 	</section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
         <h1>About</h1>
     </section>
     <section class="medium-0 large-2 columns heading-right">
-		Section on right of heading 
 	</section>
-</div> -->
+</div>
+<!--  ===================  Body of page. Class of 'no-title' to be applied when top menu is revealed =================== -->
 <div class="row fluid-row no-title">
 	<section class="medium-3 large-2 large-offset-1 columns main-left about-left">
 		<header></header>
@@ -55,10 +64,36 @@
 	</section>
 	<section class="medium-9 large-7 columns main-center about-center">
 		<header class="main-header">
-			<!-- Main Center Heading -->
 		</header>
 		<div class="main-content">
-			<!-- Main Center Content -->
+			<article class="row">
+				<div class="medium-6 columns about-left-section">
+					<h3>Making your ideas feasible.</h3>
+					<p>The Symantis system aims to give the common person the freedom to build intricate web applications. We help you to communicate and collaborate with the right people specific to your idea, while also giving you the tools to help make that idea a reality all within an online enviroment.</p>
+				</div>
+				<div class="medium-6 columns about-right-section">
+					<quote>
+						<h2>"What a great idea"</h2>
+						<span>- John Key</span>
+					</quote>
+				</div>
+			</article>
+			<article class="row about-article">
+				<div class="medium-6 columns about-right-section">
+				</div>
+				<div class="medium-6 columns about-left-section">
+					<h3>Enhancing collaboration and communication within the web development community.</h3>
+					<p>The Symantis system aims to give the common person the freedom to build intricate web applications. We help you to communicate and collaborate with the right people specific to your idea, while also giving you the tools to potentially make that idea a reality all within an online enviroment.</p>
+				</div>
+			</article>
+			<article class="row about-article">
+				<div class="medium-6 columns about-left-section">
+					<h3>Helping accelerate the production within your workplace.</h3>
+					<p>The Symantis system aims to give the common person the freedom to build intricate web applications. We help you to communicate and collaborate with the right people specific to your idea, while also giving you the tools to potentially make that idea a reality all within an online enviroment.</p>
+				</div>
+				<div class="medium-6 columns about-right-section">
+				</div>
+			</article>
 			<article class="row">
 				<div class="medium-6 columns about-left-section">
 					<h3>Making your ideas feasible.</h3>
@@ -91,10 +126,8 @@
 	</section>
 	<section class="medium-0 large-2 columns main-right">
         <header class="right-header">
-        	<!-- Main Right Heading -->
         </header>
         <div class="right-content">
-        	<!-- Main Right Content -->
         </div>
     </section>
 </div>
