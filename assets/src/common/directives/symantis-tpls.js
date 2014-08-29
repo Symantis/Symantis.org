@@ -123,17 +123,13 @@ angular.module('sy.templates.sitenav', [])
                     sidebar.addClass('sy-menu-open');
                     //sidebar.removeClass('move-right');
                 };
+                $scope.trytimeout = angular.noop;
 
                 win.bind("resize.body", $scope.hide);
 
                 $scope.$on('$destroy', function() {
                     win.unbind("resize.body", $scope.hide);
                 });
-                /*
-                $document.bind('click', function( e ){
-                	$scope.hide();
-                });
-				*/
 
                 $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
 	    			console.log("state changed");
@@ -165,12 +161,15 @@ angular.module('sy.templates.sitenav', [])
                 };
 
                 this.toggle = function() {
+                    $timeout.cancel($scope.trytimeout);
                     $scope.sidebar.toggleClass("sy-menu-open");
                 };
                 this.hide = function() {
+                    $timeout.cancel($scope.trytimeout);
                     $scope.hide();
                 };
                 this.show = function() {
+                    $timeout.cancel($scope.trytimeout);
                     $scope.show();
                 };
             }]
@@ -212,6 +211,25 @@ angular.module('sy.templates.sitenav', [])
                 });
                 element.on('mouseenter mouseleave', function (e) {
                     var action = e.type == 'mouseover' ? syNav.bottomOpen() : syNav.bottomClose();
+                });
+            }
+        };
+}])
+.directive('syNavMenu', ['$timeout', function ($timeout) {
+        return {
+            require: '^syNav',
+            restrict: 'C',
+            link: function ($scope, element, attrs, syNav) {
+                
+                element.on('mouseenter mouseleave', function (e) {
+                    console.log(e.type);
+                    var action = function(){
+                    	return e.type == 'mouseover' ? syNav.show() : syNav.hide();
+                    }
+                    $scope.trytimeout = $timeout(function(){
+						action()
+					}, 500);
+                    //var action = e.type == 'mouseover' ? syNav.bottomOpen() : syNav.bottomClose();
                 });
             }
         };
