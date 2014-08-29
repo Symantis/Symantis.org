@@ -256,16 +256,16 @@ angular.module('sy.templates.sitenav', [])
 	            var win = angular.element($window);
 
 	            element.css({ 
-			    	width: element.parent()[0].offsetWidth - 65 + 'px' 
+			    	width: element.parent()[0].offsetWidth - 50 + 'px' 
 			    });
 			    win.bind("resize", function(){
 			    	element.css({ 
-				    	width: element.parent()[0].offsetWidth - 65 + 'px' 
+				    	width: element.parent()[0].offsetWidth - 50 + 'px' 
 				    });
 			    });
 			    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
 	    			element.css({ 
-				    	width: element.parent()[0].offsetWidth - 65 + 'px' 
+				    	width: element.parent()[0].offsetWidth - 50 + 'px' 
 				    });
 	    		});
             }

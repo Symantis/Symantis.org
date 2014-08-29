@@ -30,7 +30,7 @@
 		//position: fixed;
 		//width: calc(100% - 50px);
 		//width:100%;
-		
+		margin-right: 0;
 		&.row.fluid-row {
 			padding-top:0px;
 			padding-bottom:0px;
@@ -86,19 +86,23 @@
 			}
 			.top-nav-right {
 				padding-left: 0;
-				padding-top: rem-calc(15px);
-				padding-bottom: rem-calc(15px);
+				padding-top: rem-calc(16px);
+				padding-bottom: rem-calc(16px);
 				background-color: white;
 				.top-nav-userOnline {
 					li {
 						float: right;
 					}
 					.top-nav-name {
-						color: $gray;
+						color: black;
 						font-size: rem-calc(12px);
 						padding-right: rem-calc(10px);
+						padding-top: rem-calc(3px);
 						white-space: nowrap;
 						display:block;
+						a {
+							color: $primary-color;
+						}
 						a, span{
 							display:inline-block;
 						}
