@@ -1,7 +1,8 @@
-angular.module( 'symantis.about', [
+angular.module( 'symantis.extras', [
 ])
 
 .config(function config( $stateProvider ) {
+	/*
 	$stateProvider.state( 'about', {
 		url: '/about',
 		views: {
@@ -21,19 +22,14 @@ angular.module( 'symantis.about', [
 				controller: 'AboutHeaderCtrl',
                 templateUrl: 'about/header.tpl.html'
 			}
-			/*
-			"header": {
-				controller: 'AboutHeaderCtrl',
-                templateUrl: 'about/header.tpl.html'
-			}
-			*/
 		}
 	});
+	*/
 })
 
-.controller( 'AboutCtrl', function AboutController( $scope, titleService ) {
-	titleService.setTitle('About');
+.controller( 'ExtrasCtrl', function ExtrasController( $scope, titleService ) {
+	titleService.setTitle('Extras');
 })
-.controller( 'AboutHeaderCtrl', function AboutHeaderController( $scope, titleService ) {
+.controller( 'ExtrasHeaderCtrl', function ExtrasHeaderController( $scope, titleService ) {
 	//titleService.setTitle('About');
 });

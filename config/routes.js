@@ -78,6 +78,16 @@ module.exports.routes = {
     action: 'index'
   },
 
+  //Handle "/about" queries
+  'get /more': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /more/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
   //Handle "/messages" queries
   'get /messages': {
     controller: 'HomeController',

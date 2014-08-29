@@ -17,13 +17,19 @@ angular.module( 'symantis', [
 	'symantis.header',
 	'symantis.sitenav',
 	'symantis.home',
-	'symantis.about',
+
 	'symantis.messages',
 	'symantis.kitchen',
 	'symantis.template',
 	'symantis.search',
 	'symantis.docs',
 	
+	//More
+	'symantis.more',
+	'symantis.about',
+	'symantis.extras',
+	'symantis.contributors',
+
 	//Community
 	'symantis.community',
 	'symantis.connections',

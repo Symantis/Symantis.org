@@ -18,11 +18,18 @@ angular.module( 'symantis.home', [
 			"header": {
 				controller: 'HeaderCtrl',
                 templateUrl: 'header/header.tpl.html'
+			},
+			"subheader@home": {
+				controller: 'HomeHeaderCtrl',
+                templateUrl: 'home/header.tpl.html'
 			}
 		}
 	});
 })
 
 .controller( 'HomeCtrl', function HomeController( $scope, titleService ) {
+	titleService.setTitle('Home');
+})
+.controller( 'HomeHeaderCtrl', function HomeHeaderController( $scope, titleService ) {
 	titleService.setTitle('Home');
 });
