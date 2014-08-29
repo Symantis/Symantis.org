@@ -283,7 +283,7 @@ body,
 				li{
 					.search{
 						opacity:1.0;
-						@include transition(0.1s);
+						@include transition($animationTime);
 					}
 				}
 			}
@@ -304,7 +304,7 @@ body,
 					}
 					.mantis{
 						opacity:1.0;
-						@include transition(0.1s);
+						@include transition($animationTime);
 					}
 				}
 			}

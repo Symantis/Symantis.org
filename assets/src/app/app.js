@@ -88,41 +88,6 @@ angular.module( 'symantis', [
 	}, 1000);
 	config.currentUser = window.currentUser;
 
-	/*
-	$scope.syMenuOpen = false;
-	$scope.syMenuToggle = function(){
-		$scope.syMenuOpen = !$scope.syMenuOpen;
-	}
-	$scope.syMenuToggleOn = function(){
-		$scope.syMenuOpen = true;
-	}
-	$scope.syMenuToggleOff = function(){
-		$scope.syMenuOpen = false;
-	}
-
-	$scope.syMenuTopOpen = false;
-	$scope.syMenuTopToggle = function(){
-		$scope.syMenuTopOpen = !$scope.syMenuTopOpen;
-	}
-	$scope.syMenuTopToggleOn = function(){
-		$scope.syMenuTopOpen = true;
-	}
-	$scope.syMenuTopToggleOff = function(){
-		$scope.syMenuTopOpen = false;
-	}
-
-	$scope.syMenuBottomOpen = false;
-	$scope.syMenuBottomToggle = function(){
-		$scope.syMenuBottomOpen = !$scope.syMenuBottomOpen;
-	}
-	$scope.syMenuBottomToggleOn = function(){
-		$scope.syMenuBottomOpen = true;
-	}
-	$scope.syMenuBottomToggleOff = function(){
-		$scope.syMenuBottomOpen = false;
-	}
-	*/
-
 });
 
 var oCurrentUser = {
