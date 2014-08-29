@@ -18,7 +18,7 @@
         <div class="left-content">
             <div class="connections-online-nav">
                 <ul>
-                    <li ng-repeat="user in users">
+                    <li class="animate-repeat" ng-repeat="user in users">
                         <a 
                             href="#" 
                             ng-show="user.status == 'online'"
@@ -35,7 +35,10 @@
         <div class="left-content">
             <div class="connections-suggestions-nav">
                 <ul>
-                    <li ng-repeat="user in users">
+                    <li 
+                        class="animate-repeat" 
+                        ng-repeat="user in users"
+                    >
                         <a ui-sref="profile.view({ handle: user.handle })">
                             <div class="connections-suggestions-pic suggestions-{{ user.status }}"></div>
                             <p class="connections-suggestions-name">{{ user.firstName + ' ' + user.lastName }}</p>
@@ -51,7 +54,7 @@
         <header></header>
         <div class="row connections-container">
             <article 
-                class="connections-individual medium-6"
+                class="animate-repeat connections-individual medium-6"
                 ng-repeat="user in users track by $index"
             >
                 <div class="connections-pic connections-{{ user.status }}"></div>
