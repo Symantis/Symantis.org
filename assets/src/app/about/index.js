@@ -12,6 +12,10 @@ angular.module( 'symantis.about', [
 			"sitenav": {
 				controller: 'SiteNavCtrl',
                 templateUrl: 'sitenav/index.tpl.html'
+			},
+			"header": {
+				controller: 'AboutHeaderCtrl',
+                templateUrl: 'about/header.tpl.html'
 			}
 		}
 	});
@@ -19,4 +23,7 @@ angular.module( 'symantis.about', [
 
 .controller( 'AboutCtrl', function AboutController( $scope, titleService ) {
 	titleService.setTitle('About');
+})
+.controller( 'AboutHeaderCtrl', function AboutHeaderController( $scope, titleService ) {
+	//titleService.setTitle('About');
 });
