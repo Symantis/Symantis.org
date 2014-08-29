@@ -1,10 +1,4 @@
-.top-bar{
-	opacity:0;
-		
-}
-.top-bar:hover{
-	opacity:1.0 !important;
-}
+
 .fluid-row.top-nav {
 	position: fixed;
 	width: calc(100% - 50px);
@@ -13,9 +7,12 @@
 }
 
 .top-nav {
+	background-color: white;
+	z-index: 10;
 	.top-nav-container {
 		position: relative;
 		display: block;
+		//background-color: white;
 		ul {
 			position: relative;
 			display: block;
@@ -27,15 +24,33 @@
 				height: rem-calc(35px);
 			}
 			.top-nav-left {
-
+				p {
+					@include font-bold(rem-calc(12px));
+					color: $primary-color;
+				}
 			}
 			.top-nav-mid {
-
+				p {
+					a {
+						color: black;
+					}
+				}
 			}
 			.top-nav-right {
-				ul {
+				padding-left: 0;
+				.top-nav-userOnline {
 					li {
 						float: right;
+						padding-left: rem-calc(10px);
+					}
+					.top-nav-name {
+						padding-right: rem-calc(10px);
+					}
+					.top-nav-messages {
+						padding-top: rem-calc(1px);
+					}
+					.top-nav-settings {
+
 					}
 				}
 			}
@@ -43,7 +58,7 @@
 		.top-nav-rule-inner {
 			width: 100%;
 			height: rem-calc(1px);
-			background-color: rgba(200,200,200,1.0);
+			background-color: black;
 		}
 	}
 }

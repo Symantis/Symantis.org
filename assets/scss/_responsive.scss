@@ -52,6 +52,20 @@ and (orientation : portrait) {
 
 
 }
+// iPads & below ----------- 
+@media only screen 
+and (max-width : rem-calc(1024px)) {
+	.top-nav{
+		.top-nav-container {
+			ul {
+				.top-nav-large-right {
+					display:none;
+				}
+			}
+		}
+	}
+	
+}
 
 // Desktops & Laptops & Above ----------- 
 @media only screen 
