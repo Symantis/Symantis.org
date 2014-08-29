@@ -88,6 +88,7 @@ angular.module( 'symantis', [
 	}, 1000);
 	config.currentUser = window.currentUser;
 
+	/*
 	$scope.syMenuOpen = false;
 	$scope.syMenuToggle = function(){
 		$scope.syMenuOpen = !$scope.syMenuOpen;
@@ -120,6 +121,7 @@ angular.module( 'symantis', [
 	$scope.syMenuBottomToggleOff = function(){
 		$scope.syMenuBottomOpen = false;
 	}
+	*/
 
 });
 

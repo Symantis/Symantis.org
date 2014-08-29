@@ -23,7 +23,7 @@ angular.module( 'symantis.sitenav', [
         {title: 'Documentation', translationKey: 'navigation:docs', url:'/docs'},
         {title: 'Community', translationKey: 'navigation:community', url:'/community'},
         {title: 'Creator App', translationKey: 'navigation:creator', url:'/creator'},
-        {title: 'About', translationKey: 'navigation:about', url:'/about'}
+        {title: 'More', translationKey: 'navigation:about', url:'/about'}
     ];
 
     $scope.siteItems = siteItems;
