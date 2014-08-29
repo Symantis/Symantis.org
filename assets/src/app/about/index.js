@@ -14,9 +14,19 @@ angular.module( 'symantis.about', [
                 templateUrl: 'sitenav/index.tpl.html'
 			},
 			"header": {
+				controller: 'HeaderCtrl',
+                templateUrl: 'header/header.tpl.html'
+			},
+			"subheader@about": {
 				controller: 'AboutHeaderCtrl',
                 templateUrl: 'about/header.tpl.html'
 			}
+			/*
+			"header": {
+				controller: 'AboutHeaderCtrl',
+                templateUrl: 'about/header.tpl.html'
+			}
+			*/
 		}
 	});
 })

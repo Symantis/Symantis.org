@@ -2,7 +2,7 @@ angular.module( 'symantis.header', [
 ])
 
 .controller( 'HeaderCtrl', function HeaderController( $scope, $state, config ) {
-    $scope.currentUser = config.currentUser;
+    //$scope.currentUser = config.currentUser;
 
     var navItems = [
         {title: 'Messages', translationKey: 'navigation:messages', url: '/messages', cssClass: 'fa fa-comments'},
