@@ -514,6 +514,90 @@ var aQueries = [
 		totalViews: '1000',
 		query: 'Lorem ipsum',
 		date: new Date()
+	},
+	{
+		id: 5,
+		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		category: {
+			title: 'Question'
+		},
+		tags: [
+			{
+				title: 'Question',
+				privillege: 'none',
+			},
+			{
+				title: 'v2.0',
+				privillege: 'none',
+			},
+			{
+				title: 'Install',
+				privillege: 'none',
+			}
+		],
+		totalReplies: '5',
+		totalViews: '1000',
+		query: 'Lorem ipsum',
+		date: new Date()
+	},
+	{
+		id: 6,
+		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		category: {
+			title: 'Question'
+		},
+		tags: [
+			{
+				title: 'Question',
+				privillege: 'none',
+			},
+			{
+				title: 'v2.0',
+				privillege: 'none',
+			},
+			{
+				title: 'Install',
+				privillege: 'none',
+			}
+		],
+		totalReplies: '5',
+		totalViews: '1000',
+		query: 'Lorem ipsum',
+		date: new Date()
+	},
+	{
+		id: 7,
+		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		category: {
+			title: 'Question'
+		},
+		tags: [
+			{
+				title: 'Question',
+				privillege: 'none',
+			},
+			{
+				title: 'v2.0',
+				privillege: 'none',
+			},
+			{
+				title: 'Install',
+				privillege: 'none',
+			}
+		],
+		totalReplies: '5',
+		totalViews: '1000',
+		query: 'Lorem ipsum',
+		date: new Date()
 	}
 	
 ]
