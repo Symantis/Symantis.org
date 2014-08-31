@@ -223,6 +223,66 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		}
 	}
 }
+.share-options {
+	padding: rem-calc(10px);
+	.facebook-share {
+		float: left;
+		padding: rem-calc(10px);
+	}
+	.twitter-share {
+		float: left;
+		padding: rem-calc(10px);
+	}
+	svg {
+		float: left;
+		margin-right: rem-calc(7px);
+		@include transition(100ms);
+		fill: black;
+		&:hover {
+			fill: $primary-color;
+		}
+	}
+	.share-count {
+		height: 18px;
+		width: rem-calc(50px);
+		border: 1px solid $primary-color;
+		float: left;
+		background: white;
+		position: relative;
+		p {
+			width: 100%;
+			text-align: center;
+			@include font-regular(rem-calc(9px));
+			padding: 0;
+			padding-top: rem-calc(1px);
+			margin: 0;
+		}
+	}
+	.share-count:after, .share-count:before {
+		right: 100%;
+		top: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+
+	.share-count:after {
+		border-color: rgba(187, 128, 213, 0);
+		border-right-color: white;
+		border-width: 5px;
+		margin-top: -5px;
+	}
+	.share-count:before {
+		border-color: rgba(194, 225, 245, 0);
+		border-right-color: $primary-color;
+		border-width: 6px;
+		margin-top: -6px;
+	}
+}
+
 
 
 

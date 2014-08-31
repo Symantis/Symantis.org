@@ -93,7 +93,7 @@
 				padding-bottom: 0;
 			}
 			.news-post-details {
-				padding-top: rem-calc(25px);
+				padding-top: rem-calc(20px);
 				text-align: left;
 				padding-left: 0;
 				width: 38%;
@@ -104,7 +104,7 @@
 			}
 			.news-post-comments {
 				@inlude font-regular(rem-calc(12px));
-				padding-top: rem-calc(25px);
+				padding-top: rem-calc(20px);
 				width: 24%;
 				p {
 					width: 100%;
@@ -120,7 +120,7 @@
 				}
 			}
 			.news-post-share {
-				padding-top: rem-calc(15px);
+				padding-top: rem-calc(10px);
 				padding-right: 0;
 				text-align: right;
 				width: 38%;

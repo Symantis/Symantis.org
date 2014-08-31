@@ -117,6 +117,20 @@
 						height: rem-calc(19px);
 					}
 				}
+				.top-nav-noUser {
+					text-align: right;
+					padding-top: rem-calc(1px);
+					padding-bottom: rem-calc(2px);
+					a {
+						display: inline;
+						&:hover {
+							color: black;
+						}
+					}
+					span {
+						color: $gray;
+					}
+				}
 			}
 		}
 		.top-nav-rule-inner {
