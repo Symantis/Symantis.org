@@ -90,7 +90,7 @@ body,
 .sitenav{
 	-webkit-transition: left $animationTime;
 	transition: left $animationTime;
-
+	//border-right: rem-calc(1px) $light solid;
 	.trident{
 		fill:#000;
 	}
@@ -276,6 +276,7 @@ body,
 	}
 	.sitenav-inner{
 		width:150px;
+		@include drop-shadow(0.3);
 		ul{
 			&.top{
 				width:150px;

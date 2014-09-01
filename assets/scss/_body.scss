@@ -35,12 +35,14 @@ quote {
 		text-align: left;
 		width: 100%;
 		@include font-bitter2(rem-calc(48px));
+		color: $dark;
 		margin: 0;
 	}
 	h3 {
 		text-align: left;
 		width: 100%;
 		@include font-semi(rem-calc(18px));
+		color: $dark;
 		margin: 0;
 	}
 	p {
@@ -56,7 +58,7 @@ quote {
 .main-left {
 	padding-right: rem-calc(30px);
 	header {
-		border-top: rem-calc(2px) black solid;
+		border-top: rem-calc(2px) $dark solid;
 		padding-top: rem-calc(20px);
 		padding-bottom: rem-calc(20px);
 		width: 100%;
@@ -86,7 +88,7 @@ quote {
 .main-center {
 	//padding-right: rem-calc(30px);
 	header {
-		border-top: rem-calc(1px) black solid;
+		border-top: rem-calc(1px) $dark solid;
 		padding-top: rem-calc(20px);
 		width: 100%;
 	}

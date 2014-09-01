@@ -54,7 +54,7 @@
 		}
 	}
 	.news-post-content {
-		border-left: rem-calc(1px) solid black;
+		border-left: rem-calc(1px) solid $light;
 		height: 100%;
 		position: relative;
 		width: calc(100% - 5.6rem);
@@ -137,7 +137,7 @@
 					float: left;
 					margin-right: rem-calc(7px);
 					@include transition(100ms);
-					fill: black;
+					fill: $gray;
 					&:hover {
 						fill: $primary-color;
 					}
@@ -213,7 +213,7 @@
 	}
 }
 .queries-sub-nav {
-	border-bottom: rem-calc(1px) black solid;
+	border-bottom: rem-calc(1px) $dark solid;
 	float: left;
 	ul {
 		position: relative;
@@ -271,7 +271,7 @@
 	width: 100%;
 	padding-top: rem-calc(20px);
 	padding-bottom: rem-calc(20px);
-	border-bottom: rem-calc(1px) black solid;
+	border-bottom: rem-calc(1px) $light solid;
 	.querie-overview-main {
 		float: left;
 		width: 70%;
@@ -304,10 +304,10 @@
 			a {
 				float: left;
 				svg {
-					fill: black;
+					fill: $gray;
 					float: left;
 					&:hover {
-						fill: $gray;
+						fill: $dark;
 					}
 				}
 			}
@@ -316,7 +316,7 @@
 				width: rem-calc(60px);
 				padding-top: rem-calc(5px);
 				svg {
-					fill: black;
+					fill: $gray;
 					float: left;
 				}
 				p {
@@ -351,6 +351,7 @@
 				right: 0;
 				span {
 					@include font-semi(rem-calc(12px));
+					color: $dark;
 				}
 				span.post-date{
 					whitespace: nowrap;

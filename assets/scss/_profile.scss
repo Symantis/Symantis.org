@@ -109,7 +109,7 @@
 				border-left: rem-calc(5px) $primary-color solid;
 			}
 			.current-manti-content {
-				border-left: rem-calc(1px) black solid;
+				border-left: rem-calc(1px) $light solid;
 				height: auto;
 				min-height: rem-calc(60px);
 				margin-left: 0;
@@ -155,7 +155,7 @@
 			}
 			.recent-contribution-content {
 				width: calc(100% - 5.6rem);
-				border-left: rem-calc(1px) black solid;
+				border-left: rem-calc(1px) $light solid;
 				height: auto;
 				min-height: rem-calc(50px);
 				margin-left: 0;
