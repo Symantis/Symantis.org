@@ -30,12 +30,12 @@ angular.module( 'symantis.more', [
 				*/
 			}
 		})
-		.state( 'more.about', {
-			url: '/about',
+		.state( 'more.contact', {
+			url: '/contact',
 			views: {
 				"main@": {
-					controller: 'AboutCtrl',
-					templateUrl: 'more/about/index.tpl.html'
+					controller: 'ContactCtrl',
+					templateUrl: 'more/contact/index.tpl.html'
 				}
 			}
 		})
