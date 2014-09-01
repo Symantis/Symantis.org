@@ -101,6 +101,7 @@ body,
 		display:table;
 		z-index:-1;
 		float:right;
+		//border-right: rem-calc(1px) $light solid;
 		& > .activator-icon{
 			display:table-cell;
 			width:50px;
@@ -228,6 +229,18 @@ body,
 		}
 	}
 }
+
+/* ----- Dark Side Bar ------ */
+
+/*.sitenav{
+	background-color: $darkest;
+	.trident{
+		fill: white;
+	}
+	.sitenav-inner{
+		background-color: none;
+	}
+}*/
 
 .sy-effect.sy-app {
 	-webkit-perspective: 1500px;

@@ -304,10 +304,10 @@
 			a {
 				float: left;
 				svg {
-					fill: $gray;
+					fill: $dark;
 					float: left;
 					&:hover {
-						fill: $dark;
+						fill: $gray;
 					}
 				}
 			}
@@ -316,7 +316,7 @@
 				width: rem-calc(60px);
 				padding-top: rem-calc(5px);
 				svg {
-					fill: $gray;
+					fill: $dark;
 					float: left;
 				}
 				p {
@@ -346,12 +346,13 @@
 				@include font-regular(rem-calc(11px));
 				line-height: rem-calc(15px);
 				text-align: left;
+				color: $gray;
 				width: 100%;
 				float: right;
 				right: 0;
 				span {
 					@include font-semi(rem-calc(12px));
-					color: $dark;
+					color: $gray;
 				}
 				span.post-date{
 					whitespace: nowrap;
@@ -373,6 +374,7 @@
 			text-align: left;
 			width: 100%;
 			@include font-semi(rem-calc(18px));
+			color: $dark;
 			margin: 0;
 		}
 	}
@@ -408,6 +410,7 @@
 					width: auto;
 					line-height: rem-calc(14px);
 					@include font-semi(rem-calc(12px));
+					color: $dark;
 					padding-top: rem-calc(7px);
 					padding-left: rem-calc(5px);
 					text-overflow: ellipsis;
@@ -476,6 +479,7 @@
 			white-space: nowrap;
 			z-index: 4;
 			@include font-semi(rem-calc(20px));
+			color: $dark;
 			a {
 				@include font-semi(rem-calc(20px));
 				color: inherit;

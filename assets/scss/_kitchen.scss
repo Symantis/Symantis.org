@@ -66,7 +66,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	}
 }
 .tag {
-	border: 1px solid $dark;
+	border: 1px solid $gray;
 	margin: 5px;
 	float: left;
 	list-style: none;
@@ -78,10 +78,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		padding: 0;
 		padding: 4px 10px 4px 10px;
 		@include transition(100ms);
-		color: $dark;
+		color: $gray;
 	}
 	&:hover {
-		background-color: $dark;
+		background-color: $gray;
 	}
 	&:hover p {
 		color: white;
@@ -89,13 +89,13 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .admin-tag {
-	border-color: black;
+	border-color: $gray;
 	p {
-		color: black;
+		color: $gray;
 		font-style: italic;
 	}
 	&:hover {
-		background-color: $dark;
+		background-color: $gray;
 	}
 	&:hover p {
 		color: white;
@@ -187,7 +187,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		line-height: rem-calc(18px);
 	}
 	.search-result-category {
-		width: 5.6rem;
+		width: 6.8rem;
 		a {
 
 			h2 {
@@ -195,7 +195,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 				color: black;
 				font-size: rem-calc(12px);
 				padding-bottom: rem-calc(15px);
-				@include transition(100ms);
 				text-align: right;
 			}
 			&:hover h2 {
@@ -204,9 +203,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 		}
 	}
 	.search-result-content {
-		width: calc(100% - 5.6rem);
-		border-left: rem-calc(1px) solid black;
-		@include transition(100ms);
+		width: calc(100% - 6.8rem);
+		border-left: rem-calc(1px) solid $light;
 		&:hover {
 			border-left-color: $primary-color;
 		}

@@ -25,7 +25,6 @@
 }
 .top-nav {
 	//z-index: 10;
-	
 	.top-nav-container {
 		//position: fixed;
 		//width: calc(100% - 50px);
@@ -41,7 +40,7 @@
 			list-style: none;
 			margin: 0;
 			display:block;
-			&:after{
+			&:after {
 				content:'';
 		    	display:block;
 		    	clear: both;
@@ -133,6 +132,15 @@
 				}
 			}
 		}
+		/* ------ Full width Header -------- */
+		/*.top-nav-rule-cont {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.top-nav-rule {
+			padding-left: 0;
+			padding-right: 0;
+		}*/
 		.top-nav-rule-inner {
 			width: 100%;
 			height: rem-calc(1px);

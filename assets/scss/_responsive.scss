@@ -64,6 +64,27 @@ and (max-width : rem-calc(1024px)) {
 			}
 		}
 	}
+	.sitenav{
+		background-color: $darkest;
+		.trident{
+			fill: white;
+		}
+		.sitenav-inner{
+			background-color: none;
+		}
+	}
+	.top-nav {
+		.top-nav-container {
+			.top-nav-rule-cont {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			.top-nav-rule {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
 	
 }
 
