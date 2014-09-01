@@ -518,7 +518,7 @@
 			z-index: 5;
 			@include transition(100ms);
 			svg {
-				fill: black;
+				fill: $dark;
 				@include transition(100ms);
 			}
 			&:hover svg {

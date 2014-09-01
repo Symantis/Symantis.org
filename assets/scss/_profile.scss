@@ -43,13 +43,13 @@
 				position: relative;
 				height: rem-calc(36px);
 				h3 {
-					color: black;
+					color: $dark;
 					width: auto;
 					position: absolute;
 					left: 0;
 				}
 				svg {
-					fill: black;
+					fill: $dark;
 					float: right;
 					position: absolute;
 					top: rem-calc(5px);
