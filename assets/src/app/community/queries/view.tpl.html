@@ -24,11 +24,7 @@
 		                </a>
 		            </li>
 		        </ul>
-		        <div class="querie-date">
-		            <p>Posted on:<br /><span class="post-date">{{ query.date | date }}</span></p>
-		        </div>
 		    </div>
-		    
 		</section>
 		<section class="query-content">
 			<div class="query-content-main">
@@ -61,6 +57,11 @@
 	                    </a>
 	                </li>
 	            </ul>
+	        </div>
+	        <div class="query-details">
+	        	<div class="query-details-pic"></div>
+                <p class="query-details-by"><a href="#">Hamish Jackson-Mee</a></p>
+                <p class="query-details-on">On <span>{{ query.date | date }}</span></p>
 	        </div>
 		</section>
 	</div>

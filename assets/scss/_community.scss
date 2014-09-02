@@ -8,6 +8,9 @@
 			padding-bottom: rem-calc(20px);
 			h3 {
 				padding-top: rem-calc(10px);
+				&:first-child {
+					padding-top: 0;
+				}
 				a {
 					text-align: left;
 					width: 100%;
@@ -416,12 +419,15 @@
 						float: left;
 						width: 23%;
 						margin-right: 1%;
-						margin-left: 1%;
+						
 						height: auto;
 						border: rem-calc(1px) $light solid;
 						img {
 							max-width: 100%;
 							width: 100%;
+						}
+						&:first-child {
+							margin-left: 0;	
 						}
 					}
 				}
@@ -432,6 +438,7 @@
 			width: 100%;
 			position: relative;
 			border-top: rem-calc(1px) $light solid;
+			border-bottom: rem-calc(1px) $dark solid;
 			padding-bottom: rem-calc(20px);
 			.querie-tags {
 				padding-top: rem-calc(20px);
@@ -440,6 +447,35 @@
 				ul {
 					margin: 0;
 					padding: 0;
+				}
+			}
+			.query-details {
+				float: right;
+				min-width: rem-calc(180px);
+				padding-top: rem-calc(20px);
+				.query-details-pic {
+					width: rem-calc(40px);
+					height: rem-calc(40px);
+					float: left;
+					border: rem-calc(1px) black solid;
+					border-radius: rem-calc(20px);
+					overflow: hidden;
+					@include transition(100ms);
+					margin-right: rem-calc(10px);
+				}
+				.query-details-by {
+					@include font-regular(rem-calc(12px));
+					color: $primary-color;
+					line-height: rem-calc(14px);
+					padding-top: rem-calc(5px);
+				}
+				.query-details-on {
+					@include font-regular(rem-calc(12px));
+					line-height: rem-calc(15px);
+					span {
+						@include font-italic(rem-calc(12px));
+						color: $gray;
+					}
 				}
 			}
 		}
