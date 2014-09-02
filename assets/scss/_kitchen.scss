@@ -124,6 +124,24 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	left: 0;
 	top: 0;
 }
+.code-snippet {
+	width: 100%;
+	background-color: #f8f8f8;
+	border: rem-calc(1px) solid #dfdfdf;
+	border-left: rem-calc(3px) solid $primary-color;
+	padding: rem-calc(5px);
+	padding-left: rem-calc(10px);
+	border-bottom-right-radius: rem-calc(5px);
+	border-top-right-radius: rem-calc(5px);
+	max-height: rem-calc(400px);
+	overflow: scroll;
+	code {
+		padding: none;
+		border: none;
+		background: none;
+		font-size: rem-calc(12px);
+	}
+}
 .left-search {
 	header {
 		padding-top: 0;

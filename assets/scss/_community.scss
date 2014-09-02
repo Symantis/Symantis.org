@@ -227,7 +227,7 @@
 			text-align: center;
 			margin-top: rem-calc(-20px);
 			a {
-				@include font-regular(rem-calc(13px));
+				@include font-regular(rem-calc(12px));
 				width: 100%;
 				color: $gray;
 				display: block;
@@ -278,7 +278,6 @@
 		h3 {
 			padding-bottom: rem-calc(10px);
 			a {
-				@inlude font-bold(rem-calc(30px));
 				color: $primary-color;
 				@include transition(100ms);
 				&:hover {
@@ -367,6 +366,92 @@
 		}
 	}
 }
+.query-page {
+	.query-post {
+		.querie-overview {
+			position: relative;
+			float: left;
+			width: 100%;
+			padding-top: rem-calc(20px);
+			padding-bottom: rem-calc(20px);
+			border-bottom: rem-calc(1px) $light solid;
+			.querie-overview-main {
+				float: left;
+				width: 70%;
+				h3 {
+					padding-bottom: 0;
+					@include font-bold(rem-calc(26px));
+					font-size: rem-calc(26px);
+					a {
+						color: $dark;
+						&:hover {
+							color: $dark;
+						}
+					}
+				}
+			}
+		}
+		.query-content {
+			float: left;
+			position: relative;
+			width: 100%;
+			padding-bottom: rem-calc(20px);
+			.query-content-main {
+				float: left;
+				.query-content-p {
+					padding-top: rem-calc(20px);
+				}
+				.code-snippet {
+					margin-top: rem-calc(20px);
+					float: left;
+					position: relative;
+				}
+				.image-thumbs {
+					padding-top: rem-calc(20px);
+					float: left;
+					position: relative;
+					width: 100%;
+					.thumbnail-container {
+						padding: rem-calc(5px);
+						float: left;
+						width: 23%;
+						margin-right: 1%;
+						margin-left: 1%;
+						height: auto;
+						border: rem-calc(1px) $light solid;
+						img {
+							max-width: 100%;
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+		.query-footer {
+			float: left;
+			width: 100%;
+			position: relative;
+			border-top: rem-calc(1px) $light solid;
+			padding-bottom: rem-calc(20px);
+			.querie-tags {
+				padding-top: rem-calc(20px);
+				float: left;
+				position: relative;
+				ul {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+	.query-comment {
+
+	}
+	.query-reply {
+
+	}
+}
+
 
 .connections-left {
 	h3 {

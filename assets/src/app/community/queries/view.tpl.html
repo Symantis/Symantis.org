@@ -1,17 +1,8 @@
-
-    <div class="medium-12 columns query-page">
-		<article class="querie-overview">
+<div class="medium-12 columns query-page">
+	<div class="query-post">
+		<section class="querie-overview">
 		    <div class="querie-overview-main">
 		        <h3><a ui-sref="community.queries.view({id: query.id, title: query.clean() })">{{ query.title }}</a></h3>
-		        <div class="querie-tags">
-		            <ul>
-		                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
-		                    <a ui-sref="community.tags.view({ tag:tag.title })">
-		                        <p>{{ tag.title }}</p>
-		                    </a>
-		                </li>
-		            </ul>
-		        </div>
 		    </div>
 		    <div class="querie-overview-stats">
 		        <ul>
@@ -37,11 +28,41 @@
 		            <p>Posted on:<br /><span class="post-date">{{ query.date | date }}</span></p>
 		        </div>
 		    </div>
-		</article>
+		    
+		</section>
 		<section class="query-content">
 			<div class="query-content-main">
 				<p class="query-content-p">{{ query.query }}</p>
+				<div class="code-snippet">
+					<code>Sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code </code>
+		        </div>
+		        <div class="image-thumbs">
+		        	<div class="thumbnail-container">
+		        		<img src="http://placehold.it/140x100" alt="placeholder" />
+		        	</div>
+			        <div class="thumbnail-container">
+		        		<img src="http://placehold.it/140x100" alt="placeholder" />
+		        	</div>
+		        	<div class="thumbnail-container">
+		        		<img src="http://placehold.it/140x100" alt="placeholder" />
+		        	</div>
+		        	<div class="thumbnail-container">
+		        		<img src="http://placehold.it/140x100" alt="placeholder" />
+		        	</div>
+			    </div>
 			</div>
 		</section>
+		<section class="query-footer">
+			<div class="querie-tags">
+	            <ul>
+	                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
+	                    <a ui-sref="community.tags.view({ tag:tag.title })">
+	                        <p>{{ tag.title }}</p>
+	                    </a>
+	                </li>
+	            </ul>
+	        </div>
+		</section>
 	</div>
+</div>
 

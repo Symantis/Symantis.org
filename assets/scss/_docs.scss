@@ -77,15 +77,11 @@
 			}
 		}
 	}
+	.code-snippet {
+		margin-top: rem-calc(10px);
+	}
 }
-.docs-code-block {
-	width: 100%;
-	height: rem-calc(150px);
-	padding: rem-calc(20px);
-	border: rem-calc(1px) solid $dark;
-	background: $gray;
-	overflow: scroll; 
-}
+
 
 
 
