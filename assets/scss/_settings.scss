@@ -72,6 +72,12 @@ $reveal-close-weight: light;
 	color: black;
 	font-size: $size;
 }
+@mixin icon($size,$color) {
+	color: $color;
+	line-height: 1;
+	height: auto;
+	font-size: $size;
+}
 @mixin transition($time) {
 	-webkit-transition: all $time ease;                  
     -moz-transition: all $time ease;                 

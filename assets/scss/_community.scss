@@ -371,16 +371,16 @@
 }
 .query-page {
 	.query-post {
-		.querie-overview {
+		.querie-header {
 			position: relative;
 			float: left;
 			width: 100%;
 			padding-top: rem-calc(20px);
 			padding-bottom: rem-calc(20px);
-			border-bottom: rem-calc(1px) $light solid;
-			.querie-overview-main {
+			border-bottom: rem-calc(1px) rgba(190,192,188,0.4) solid;
+			.querie-header-title {
 				float: left;
-				width: 70%;
+				width: 100%;
 				h3 {
 					padding-bottom: 0;
 					@include font-bold(rem-calc(26px));
@@ -419,12 +419,12 @@
 						float: left;
 						width: 23%;
 						margin-right: 1%;
-						
 						height: auto;
 						border: rem-calc(1px) $light solid;
 						img {
 							max-width: 100%;
 							width: 100%;
+							max-height: rem-calc(200px);
 						}
 						&:first-child {
 							margin-left: 0;	
@@ -433,15 +433,49 @@
 				}
 			}
 		}
+		/*.query-options {
+			padding-bottom: rem-calc(20px);
+			float: left;
+			width: 100%;
+			position: relative;
+
+			.query-options-right {
+				float: left;
+				ul {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					.icon {
+						@include icon(rem-calc(20px),$gray);
+						float: left;
+					}
+					p {
+						float: left;
+						width: rem-calc(35px);
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						padding-top: rem-calc(1px);
+						padding-left: rem-calc(6px);
+						@include font-regular(rem-calc(11px));
+					}
+					li {
+						float: left;
+						width: rem-calc(60px);
+					}
+				}
+			}
+		}*/
 		.query-footer {
 			float: left;
 			width: 100%;
 			position: relative;
-			border-top: rem-calc(1px) $light solid;
+			border-top: rem-calc(1px) rgba(190,192,188,0.4) solid;
 			border-bottom: rem-calc(1px) $dark solid;
 			padding-bottom: rem-calc(20px);
+			padding-top: rem-calc(20px);
+			text-align: center;
 			.querie-tags {
-				padding-top: rem-calc(20px);
+				
 				float: left;
 				position: relative;
 				ul {
@@ -449,10 +483,27 @@
 					padding: 0;
 				}
 			}
+			.query-options {
+				display: inline-block;
+				padding-top: rem-calc(8px);
+				p {
+					@include font-regular(rem-calc(14px));
+					color: $gray;
+					text-align: center;
+					display: block;
+					a {
+						font-size: rem-calc(14px);
+						color: $dark;
+						&:hover {
+							color: $primary-color;
+						}
+					}
+				}
+			}
 			.query-details {
 				float: right;
 				min-width: rem-calc(180px);
-				padding-top: rem-calc(20px);
+
 				.query-details-pic {
 					width: rem-calc(40px);
 					height: rem-calc(40px);
