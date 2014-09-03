@@ -7,7 +7,7 @@
 		</section>
 		<section class="query-content">
 			<div class="query-content-main">
-				<p class="query-content-p">{{ query.query }}</p>
+				<p class="query-content-p">{{ query.query }}<br /><a href="#">Find it here. Link Example.</a></p>
 				<div class="code-snippet">
 					<code>Sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code </code>
 		        </div>
@@ -27,23 +27,6 @@
 			    </div>
 			</div>
 		</section>
-		<!-- <section class="query-options">
-			
-			<div class="query-options-right">
-                <ul>
-                	<li class="query-replys">
-                        <div class="icon-reply icon"></div>
-                        <p class="query-replys-num">
-                            {{ query.totalReplies | number }}
-                        </p>
-                    </li>
-                    <li class="query-views">
-                        <div class="icon-view icon"></div>
-                        <p class="query-views-num">{{ query.totalViews | number }}</p>
-                    </li>
-                </ul>
-			</div>
-		</section> -->
 		<section class="query-footer">
 			<div class="querie-tags">
 	            <ul>
@@ -53,18 +36,58 @@
 	                    </a>
 	                </li>
 	            </ul>
-	        </div>
+			</div>
 	        <div class="query-options">
-				<p><a href="#">Share</a> or <a href="#">Reply</a></p>
+				<p><a href="#">Share</a> or <a href="#">Comment</a></p>
 			</div>
 	        <div class="query-details">
 	        	<div class="query-details-pic"></div>
-                <p class="query-details-by"><a href="#">Hamish Jackson-Mee</a></p>
+                <p class="query-details-by"><a href="#">Hamish Jackson-Meemskmsk</a></p>
                 <p class="query-details-on"><span>{{ query.date | date }}</span></p>
 	        </div>
 		</section>
 	</div>
-	<div class="query-replies-toggle">
+	<div class="query-comments-head">
+		<h4 class="number-comments">5 Comments</h4>
+	</div>
+	<div class="query-comment">
+		<div class="query-comment-content">
+			<p class="query-comment-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.</p>
+			<p class="query-comment-reply"><a href="#">Reply</a></p>
+			<div class="query-details">
+	        	<div class="query-details-pic"></div>
+	            <p class="query-details-by"><a href="#">Hamish Jackson-Mee</a></p>
+	            <p class="query-details-on"><span>Sep 4, 2013</span></p>
+	        </div>
+		</div>
+        <a href="#"><div class="query-reply-toggle">
+			<p>View <span>3</span> replies..</p>
+		</div></a>
+	</div>
+	<div class="query-comment">
+		<div class="query-comment-content">
+			<p class="query-comment-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
+			<div class="code-snippet">
+				<code>Sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code </code>
+	        </div>
+			<p class="query-comment-reply"><a href="#">Reply</a></p>
+			<div class="query-details">
+	        	<div class="query-details-pic"></div>
+	            <p class="query-details-by"><a href="#">Katelin Bull</a></p>
+	            <p class="query-details-on"><span>Sep 5, 2013</span></p>
+	        </div>
+		</div>
+	</div>
+	<div class="query-comment">
+		<div class="query-comment-content">
+			<p class="query-comment-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
+			<p class="query-comment-reply"><a href="#">Reply</a></p>
+			<div class="query-details">
+	        	<div class="query-details-pic"></div>
+	            <p class="query-details-by"><a href="#">Scott Wyatt</a></p>
+	            <p class="query-details-on"><span>Sep 5, 2013</span></p>
+	        </div>
+		</div>
 	</div>
 </div>
 
