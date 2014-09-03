@@ -48,8 +48,8 @@
 					position: absolute;
 					left: 0;
 				}
-				svg {
-					fill: $dark;
+				.icon {
+					@include icon(rem-calc(20px),$dark);
 					float: right;
 					position: absolute;
 					top: rem-calc(5px);
@@ -58,8 +58,8 @@
 				&:hover h3 {
 					color: $primary-color;
 				}
-				&:hover svg {
-					fill: $primary-color;
+				&:hover .icon {
+					color: $primary-color;
 				}
 			}
 		}

@@ -62,17 +62,12 @@
                     <div class="querie-overview-stats">
                         <ul>
                             <li class="querie-views">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="views-icon" x="0px" y="0px" width="20px" viewBox="0 0 30 30" enable-background="new 0 0 32 32" xml:space="preserve">
-                                    <path id="view" d="M16,8.318c-7.545,0-13.5,7.714-13.5,7.714s5.954,7.715,13.5,7.715c5.771,0,13.5-7.716,13.5-7.716  S21.771,8.318,16,8.318z M16,20.839c-2.649,0-4.807-2.156-4.807-4.809c0-2.648,2.158-4.808,4.807-4.808  c2.648,0,4.807,2.158,4.807,4.808C20.807,18.681,18.648,20.839,16,20.839z M16,13.226c-1.549,0-2.806,1.256-2.806,2.806  S14.45,18.839,16,18.839s2.807-1.258,2.807-2.809C18.807,14.483,17.55,13.226,16,13.226z"/>
-                                </svg>
+                                <div class="icon-view icon"></div>
                                 <p class="querie-views-num">{{ query.totalViews | number }}</p>
                             </li>
                             <li class="querie-replys">
                                 <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="replys-icon" x="0px" y="0px" width="20px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                        <polygon points="65,58 65,74 25,74 25,34 41,34 41,24 15,24 15,84 75,84 75,58 "/>
-                                        <polygon points="47,15 47,28 60.186,28 35.434,52.752 46.746,64.065 71,39.812 71,52 85,52 85,15 "/>
-                                    </svg>
+                                    <div class="icon-reply icon"></div>
                                     <p class="querie-replys-num">
                                         {{ query.totalReplies | number }}
                                     </p>

@@ -197,3 +197,21 @@
 .icon-view:before {
   content: "n";
 }
+.icon-social-facebook:before {
+  content: "i";
+}
+.icon-social-twitter:before {
+  content: "o";
+}
+.icon-social-behance:before {
+  content: "p";
+}
+.icon-social-linkedin:before {
+  content: "q";
+}
+.icon-social-github:before {
+  content: "r";
+}
+.icon-social-google-plus:before {
+  content: "s";
+}

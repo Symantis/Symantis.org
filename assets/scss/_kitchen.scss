@@ -233,21 +233,18 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .share-options {
 	padding: rem-calc(10px);
-	.facebook-share {
+	.social-share {
 		float: left;
 		padding: rem-calc(10px);
 	}
-	.twitter-share {
+	.icon {
 		float: left;
-		padding: rem-calc(10px);
-	}
-	svg {
-		float: left;
-		margin-right: rem-calc(7px);
+		margin-right: rem-calc(5px);
+		margin-top: rem-calc(-3px);
+		@include icon(rem-calc(24px),$gray);
 		@include transition(100ms);
-		fill: black;
 		&:hover {
-			fill: $primary-color;
+			color: $primary-color;
 		}
 	}
 	.share-count {

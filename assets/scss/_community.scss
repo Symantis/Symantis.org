@@ -136,13 +136,14 @@
 					padding-left: rem-calc(10px);
 					padding-top: rem-calc(5px);
 				}
-				svg {
+				.icon {
 					float: left;
-					margin-right: rem-calc(7px);
+					margin-right: rem-calc(5px);
+					margin-top: rem-calc(-3px);
+					@include icon(rem-calc(24px),$gray);
 					@include transition(100ms);
-					fill: $gray;
 					&:hover {
-						fill: $primary-color;
+						color: $primary-color;
 					}
 				}
 				.share-count {
@@ -305,11 +306,10 @@
 			list-style: none;
 			a {
 				float: left;
-				svg {
-					fill: $dark;
+				.icon {
 					float: left;
 					&:hover {
-						fill: $gray;
+						color: $gray;
 					}
 				}
 			}
@@ -317,8 +317,8 @@
 				float: right;
 				width: rem-calc(60px);
 				padding-top: rem-calc(5px);
-				svg {
-					fill: $dark;
+				.icon {
+					@include icon(rem-calc(20px),$dark);
 					float: left;
 				}
 				p {
@@ -354,7 +354,7 @@
 				right: 0;
 				span {
 					@include font-semi(rem-calc(12px));
-					color: $gray;
+					color: $dark;
 				}
 				span.post-date{
 					whitespace: nowrap;
@@ -693,12 +693,11 @@
 			display: none;
 			z-index: 5;
 			@include transition(100ms);
-			svg {
-				fill: $dark;
-				@include transition(100ms);
+			.icon-message {
+				@include icon(rem-calc(20px),$dark);
 			}
-			&:hover svg {
-				fill: $primary-color;
+			&:hover .icon-message {
+				color: $primary-color;
 			}
 		}
 		&:hover .connections-message {
