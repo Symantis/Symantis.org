@@ -77,12 +77,21 @@
 		p {
 			@inlude font-regular(rem-calc(12px));
 			line-height: rem-calc(18px);
+			a {
+				text-decoration: underline;
+				color: $gray;
+				&:hover {
+					color: $dark;
+				}
+			}
 		}
 		img {
-			padding-top: rem-calc(15px);
 			padding-bottom: rem-calc(15px);
 			max-width: 100%;
 			display: block;
+			width: 100%;
+			height: auto;
+			max-height: rem-calc(400px);
 		}
 		ul {
 			margin: 0;
@@ -100,9 +109,36 @@
 				text-align: left;
 				padding-left: 0;
 				width: 38%;
-				p {
-					@inlude font-regular(rem-calc(10px));
-					line-height: rem-calc(12px);
+			}
+			.news-details {
+				float: left;
+				min-width: rem-calc(180px);
+				.news-details-pic {
+					width: rem-calc(30px);
+					height: rem-calc(30px);
+					float: left;
+					border: rem-calc(1px) black solid;
+					border-radius: rem-calc(15px);
+					overflow: hidden;
+					@include transition(100ms);
+					margin-right: rem-calc(6px);
+				}
+				.news-details-by {
+					a {
+						@include font-regular(rem-calc(12px));
+						color: $primary-color;
+						text-decoration: none;
+					}
+					line-height: rem-calc(14px);
+					padding-top: 0;
+				}
+				.news-details-on {
+					@include font-regular(rem-calc(12px));
+					line-height: rem-calc(15px);
+					span {
+						@include font-italic(rem-calc(12px));
+						color: $gray;
+					}
 				}
 			}
 			.news-post-comments {
@@ -115,6 +151,7 @@
 					line-height: rem-calc(12px);
 					a {
 						color: black;
+						text-decoration: none;
 						@include transition(100ms);
 						&:hover {
 							color: $primary-color;
