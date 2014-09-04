@@ -635,7 +635,7 @@ var aArticles = [
 		]
 	},
 	{
-		id: 1,
+		id: 2,
 		title: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Wellington',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
@@ -657,9 +657,6 @@ var aArticles = [
 			},
 			{
 				id : '2'
-			},
-			{
-				id : '3'
 			}
 		]
 	}
