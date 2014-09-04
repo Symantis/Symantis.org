@@ -30,8 +30,66 @@
 			</div>
 		</div>
     </section>
-    <section class="medium-9 large-7 columns main-center">
+    <section class="medium-9 large-7 columns main-center" ui-view="news">
         <header></header>
+        
+        <article class="row news-post" ng-repeat="article in articles">
+            <div class="medium-2 large-1 columns news-post-date">
+                <h2>
+                    {{ article.date | date:'dd MMMM' }}
+                </h2>
+            </div>
+            <div class="medium-10 large-11 columns news-post-content">
+                
+                <img 
+                    ng-show="article.img" 
+                    ng-src="{{ article.img }}"
+                >
+                <a ui-sref="community.news.view({id: article.id, title: article.clean() })">
+                    <h3>{{ article.title }}</h3>
+                </a>
+                <p>{{ article.description }}</p>
+                <ul class="news-post-footer">
+                    <li class="news-post-details">
+                        <div class="news-details">
+                            <div class="news-details-pic author-{{ article.author.status }}"></div>
+                            <p class="news-details-by">
+                                <a ui-sref="profile.view({ handle: article.author.handle })">
+                                    {{ article.author.firstName }} {{ article.author.lastName }}
+                                </a>
+                            </p>
+                            <p class="news-details-on">
+                                <span>
+                                    {{ article.date | date }}
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li ng-show="article.comments.length > 0" class="news-post-comments">
+                        <p><a href="#">View Comments ({{ article.comments.length }})</a></p>
+                    </li>
+                    <li class="news-post-share">
+                        <div class="twitter-share">
+                            <a href="#">
+                                <div class="icon-social-twitter icon"></div>
+                            </a>
+                            <div class="share-count">
+                                <p>234</p>
+                            </div>
+                        </div>
+                        <div class="facebook-share">
+                            <a href="#">
+                                <div class="icon-social-facebook icon"></div>
+                            </a>
+                            <div class="share-count">
+                                <p>17</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
         <article class="row news-post">
             <div class="medium-2 large-1 columns news-post-date">
                 <h2>22<br />February</h2>

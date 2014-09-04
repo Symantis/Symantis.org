@@ -20,7 +20,7 @@
                 <ul>
                     <li class="animate-repeat" ng-repeat="user in users">
                         <a 
-                            href="#" 
+                            ui-sref="profile.view({ handle: user.handle })" 
                             ng-show="user.status == 'online'"
                         >
                             <p>{{ user.firstName + ' ' + user.lastName }}</p>

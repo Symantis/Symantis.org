@@ -21,4 +21,16 @@ angular.module( 'symantis.news', [
 	titleService.setTitle('news');
 
 	
+})
+.controller( 'NewsViewCtrl', function NewsViewController( $scope, titleService, $state, $stateParams  ) {
+	for(var i in $scope.articles){
+		if ($scope.articles[i].id == $stateParams.id){
+			$scope.article = $scope.articles[i];
+			break;
+		};
+	}
+
+	titleService.setTitle('News: ' + $scope.article.title);
+
+	
 });

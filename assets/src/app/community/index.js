@@ -33,6 +33,15 @@ angular.module( 'symantis.community', [
 				}
 			}
 		})
+		.state( 'community.news.view', {
+			url: '/:id/:title',
+			views: {
+				"news@community.news": {
+					controller: 'NewsViewCtrl',
+					templateUrl: 'community/news/view.tpl.html'
+				}
+			}
+		})
 		.state( 'community.queries', {
 			url: '/queries',
 			views: {
