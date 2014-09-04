@@ -632,7 +632,11 @@ var aArticles = [
 			{
 				id : '3'
 			}
-		]
+		],
+		social : {
+			facebook : 12,
+			twitter : 50
+		}
 	},
 	{
 		id: 2,
@@ -658,7 +662,11 @@ var aArticles = [
 			{
 				id : '2'
 			}
-		]
+		],
+		social : {
+			facebook : 25,
+			twitter : 50
+		}
 	}
 ]
 

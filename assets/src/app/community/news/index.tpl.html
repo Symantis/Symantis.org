@@ -41,10 +41,12 @@
             </div>
             <div class="medium-10 large-11 columns news-post-content">
                 
-                <img 
-                    ng-show="article.img" 
-                    ng-src="{{ article.img }}"
+                <a 
+                    ng-show="article.img"  
+                    ui-sref="community.news.view({id: article.id, title: article.clean() })"
                 >
+                <img ng-src="{{ article.img }}">
+                </a>
                 <a ui-sref="community.news.view({id: article.id, title: article.clean() })">
                     <h3>{{ article.title }}</h3>
                 </a>
@@ -74,7 +76,7 @@
                                 <div class="icon-social-twitter icon"></div>
                             </a>
                             <div class="share-count">
-                                <p>234</p>
+                                <p>{{ article.social.twitter }}</p>
                             </div>
                         </div>
                         <div class="facebook-share">
@@ -82,7 +84,7 @@
                                 <div class="icon-social-facebook icon"></div>
                             </a>
                             <div class="share-count">
-                                <p>17</p>
+                                <p>{{ article.social.facebook }}</p>
                             </div>
                         </div>
                     </li>
