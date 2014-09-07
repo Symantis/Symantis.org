@@ -33,4 +33,7 @@ angular.module( 'symantis.news', [
 	titleService.setTitle('News: ' + $scope.article.title);
 
 	
+})
+.controller( 'CommunityNewsLeftsideCtrl', function CommunityNewsLeftsideController( $scope ) {
+	//titleService.setTitle('About');
 });

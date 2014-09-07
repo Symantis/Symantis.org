@@ -20,6 +20,10 @@ angular.module( 'symantis.start', [
 			"subheader@start": {
 				controller: 'StartHeaderCtrl',
                 templateUrl: 'start/header.tpl.html'
+			},
+			"leftside@start": {
+				controller: 'StartLeftsideCtrl',
+                templateUrl: 'start/leftside.tpl.html'
 			}
 		}
 	});
@@ -33,5 +37,9 @@ angular.module( 'symantis.start', [
 .controller( 'StartHeaderCtrl', function StartHeaderController( $scope, titleService ) {
 	//titleService.setTitle('Getting Started');
 
+	
+})
+.controller( 'StartLeftsideCtrl', function StartLeftsideController( $scope ) {
+	//titleService.setTitle('Getting Started');
 	
 });

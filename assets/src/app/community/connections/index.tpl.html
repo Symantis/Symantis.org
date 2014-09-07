@@ -10,44 +10,8 @@
 	</section>
 </div>
 <div class="row fluid-row">
-    <section class="medium-3 large-2 columns large-offset-1 main-left connections-left">
-    	<!-- Section for main left header -->
-        <header class="left-header">
-            <h3><a href="#">Online</a></h3>
-        </header>
-        <div class="left-content">
-            <div class="connections-online-nav">
-                <ul>
-                    <li class="animate-repeat" ng-repeat="user in users">
-                        <a 
-                            ui-sref="profile.view({ handle: user.handle })" 
-                            ng-show="user.status == 'online'"
-                        >
-                            <p>{{ user.firstName + ' ' + user.lastName }}</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <header class="connections-suggestions-header left-header">
-            <h3><a href="#">Suggestions</a></h3>
-        </header>
-        <div class="left-content">
-            <div class="connections-suggestions-nav">
-                <ul>
-                    <li 
-                        class="animate-repeat" 
-                        ng-repeat="user in users"
-                    >
-                        <a ui-sref="profile.view({ handle: user.handle })">
-                            <div class="connections-suggestions-pic suggestions-{{ user.status }}"></div>
-                            <p class="connections-suggestions-name">{{ user.firstName + ' ' + user.lastName }}</p>
-                            <p class="connections-suggestions-skills">{{ user.tags[0] }}</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <section class="medium-3 large-2 columns large-offset-1 main-left connections-left" ui-view="leftside">
+    	
     </section>
     <section class="medium-9 large-7 columns main-center connections-center">
     	<!-- Section for main center header -->

@@ -10,25 +10,8 @@
 	</section>
 </div>
 <div class="row fluid-row">
-    <section class="medium-3 large-2 large-offset-1 columns main-left news-left">
-        <header></header>
-        <div class="left-content news-left-content">
-			<div class="news-nav">
-				<h3><a href="#">2014</a></h3>
-				<ul class="left-indent">
-					<li><a href="#">August</a></li>
-					<li><a href="#">July</a></li>
-					<li><a href="#">June</a></li>
-					<li><a href="#">May</a></li>
-					<li><a href="#">April</a></li>
-					<li><a href="#">March</a></li>
-					<li><a href="#">February</a></li>
-					<li><a href="#">January</a></li>
-				</ul>
-				<h3><a href="#">2013</a></h3>
-				<h3><a href="#">2012</a></h3>
-			</div>
-		</div>
+    <section class="medium-3 large-2 large-offset-1 columns main-left news-left" ui-view="leftside">
+        
     </section>
     <section class="medium-9 large-7 columns main-center" ui-view="news">
         <header></header>

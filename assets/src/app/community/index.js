@@ -21,6 +21,10 @@ angular.module( 'symantis.community', [
 				"subheader@community": {
 					controller: 'CommunityHeaderCtrl',
                 	templateUrl: 'community/header.tpl.html'
+				},
+				"leftside@community": {
+					controller: 'CommunityLeftsideCtrl',
+                	templateUrl: 'community/leftside.tpl.html'
 				}
 			}
 		})
@@ -30,6 +34,10 @@ angular.module( 'symantis.community', [
 				"main@": {
 					controller: 'NewsCtrl',
 					templateUrl: 'community/news/index.tpl.html'
+				},
+				"leftside@community.news": {
+					controller: 'CommunityNewsLeftsideCtrl',
+                	templateUrl: 'community/news/leftside.tpl.html'
 				}
 			}
 		})
@@ -48,6 +56,10 @@ angular.module( 'symantis.community', [
 				"main@": {
 					controller: 'QueriesCtrl',
 					templateUrl: 'community/queries/index.tpl.html'
+				},
+				"leftside@community.queries": {
+					controller: 'CommunityQueriesLeftsideCtrl',
+                	templateUrl: 'community/queries/leftside.tpl.html'
 				}
 			}
 		})
@@ -66,6 +78,10 @@ angular.module( 'symantis.community', [
 				"main@": {
 					controller: 'ConnectionsCtrl',
 					templateUrl: 'community/connections/index.tpl.html'
+				},
+				"leftside@community.connections": {
+					controller: 'CommunityConnectionsLeftsideCtrl',
+                	templateUrl: 'community/connections/leftside.tpl.html'
 				}
 			}
 		})
@@ -96,5 +112,8 @@ angular.module( 'symantis.community', [
 	
 })
 .controller( 'CommunityHeaderCtrl', function CommunityHeaderController( $scope, titleService ) {
+	//titleService.setTitle('About');
+})
+.controller( 'CommunityLeftsideCtrl', function CommunityLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 });

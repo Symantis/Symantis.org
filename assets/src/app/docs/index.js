@@ -20,6 +20,10 @@ angular.module( 'symantis.docs', [
 			"subheader@docs": {
 				controller: 'DocsHeaderCtrl',
                 templateUrl: 'docs/header.tpl.html'
+			},
+			"leftside@docs": {
+				controller: 'DocsLeftsideCtrl',
+                templateUrl: 'docs/leftside.tpl.html'
 			}
 		}
 	});
@@ -31,6 +35,11 @@ angular.module( 'symantis.docs', [
 	
 })
 .controller( 'DocsHeaderCtrl', function DocsHeaderController( $scope, titleService ) {
+	//titleService.setTitle('Docs');
+
+	
+})
+.controller( 'DocsLeftsideCtrl', function DocsLeftsideController( $scope ) {
 	//titleService.setTitle('Docs');
 
 	

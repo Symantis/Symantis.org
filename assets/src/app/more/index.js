@@ -21,6 +21,10 @@ angular.module( 'symantis.more', [
 				"subheader@more": {
 					controller: 'MoreHeaderCtrl',
 	                templateUrl: 'more/header.tpl.html'
+				},
+				"leftside@more": {
+					controller: 'MoreLeftsideCtrl',
+	                templateUrl: 'more/leftside.tpl.html'
 				}
 				/*
 				"header": {
@@ -36,6 +40,10 @@ angular.module( 'symantis.more', [
 				"main@": {
 					controller: 'ContactCtrl',
 					templateUrl: 'more/contact/index.tpl.html'
+				},
+				"leftside@more.contact": {
+					controller: 'ContactLeftsideCtrl',
+                	templateUrl: 'more/contact/leftside.tpl.html'
 				}
 			}
 		})
@@ -45,6 +53,10 @@ angular.module( 'symantis.more', [
 				"main@": {
 					controller: 'ExtrasCtrl',
 					templateUrl: 'more/extras/index.tpl.html'
+				},
+				"leftside@more.extras": {
+					controller: 'ExtrasLeftsideCtrl',
+                	templateUrl: 'more/extras/leftside.tpl.html'
 				}
 			}
 		})
@@ -54,6 +66,10 @@ angular.module( 'symantis.more', [
 				"main@": {
 					controller: 'ContributorsCtrl',
 					templateUrl: 'more/contributors/index.tpl.html'
+				},
+				"leftside@more.contributors": {
+					controller: 'ContributorsLeftsideCtrl',
+                	templateUrl: 'more/contributors/leftside.tpl.html'
 				}
 			}
 		})
@@ -64,5 +80,8 @@ angular.module( 'symantis.more', [
 	titleService.setTitle('More');
 })
 .controller( 'MoreHeaderCtrl', function MoreHeaderController( $scope, titleService ) {
+	//titleService.setTitle('About');
+})
+.controller( 'MoreLeftsideCtrl', function MoreLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 });

@@ -10,4 +10,7 @@ angular.module( 'symantis.contributors', [
 })
 .controller( 'ContributorsHeaderCtrl', function ContributorsHeaderController( $scope, titleService ) {
 	//titleService.setTitle('About');
+})
+.controller( 'ContributorsLeftsideCtrl', function ContributorsLeftCsideontroller( $scope ) {
+	//titleService.setTitle('About');
 });

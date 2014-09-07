@@ -21,4 +21,10 @@ angular.module( 'symantis.connections', [
 	titleService.setTitle('Connections');
 
 	
+})
+.controller( 'CommunityConnectionsLeftsideCtrl', function CommunityConnectionsLeftsideController( $scope ) {
+	//titleService.setTitle('About');
+})
+.controller( 'CommunityConnectionsLeftsideCtrl', function CommunityConnectionsLeftsideController( $scope ) {
+	//titleService.setTitle('About');
 });

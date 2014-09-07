@@ -32,4 +32,7 @@ angular.module( 'symantis.extras', [
 })
 .controller( 'ExtrasHeaderCtrl', function ExtrasHeaderController( $scope, titleService ) {
 	//titleService.setTitle('About');
+})
+.controller( 'ExtrasLeftsideCtrl', function ExtrasLeftsideController( $scope ) {
+	//titleService.setTitle('About');
 });
