@@ -273,19 +273,25 @@ angular.module('sy.templates.sitenav', [])
         };
 }]);
 angular.module('sy.templates.homeanimation', [])
-.directive('homeAnimation', [function ($timeout) {
+.directive('homeAnimation', ['$document','$window','$timeout', function ($document, $window, $timeout) {
         return {
             restrict: 'C',
             link: function ($scope, element, attrs){
                 console.log("Home Animation");
-                var w = element[0].offsetWidth,
-                    h = 600;
+                
+                
 
-                var nodes = d3.range(200).map(function() { return {radius: Math.random() * 12 + 4}; }),
-                    color = d3.scale.category10();
+                var w = element[0].offsetWidth,
+                    h = $window.innerHeight - 6;
+
+                var nodes = d3.range(250).map(function() { return {radius: Math.random() * 12 + 4}; }),
+                    color = d3.scale
+                            .linear()
+                            //.domain([-1, 0, 1])
+                            .range(["#3b948b", "#3b948b", "#3b948b"]);
 
                 var force = d3.layout.force()
-                    .gravity(0.05)
+                    .gravity(0.06)
                     .charge(function(d, i) { return i ? 0 : -2000; })
                     .nodes(nodes)
                     .size([w, h]);
@@ -302,9 +308,10 @@ angular.module('sy.templates.homeanimation', [])
 
                 svg.selectAll("circle")
                     .data(nodes.slice(1))
-                  .enter().append("svg:circle")
+                    .enter()
+                    .append("svg:circle")
                     .attr("r", function(d) { return d.radius - 2; })
-                    .style("fill", function(d, i) { return "#3b948b" });
+                    .style("fill", function(d, i) { return color(i % 2); });
 
                 force.on("tick", function(e) {
                   var q = d3.geom.quadtree(nodes),
