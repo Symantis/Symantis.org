@@ -279,7 +279,7 @@ angular.module('sy.templates.homeanimation', [])
             link: function ($scope, element, attrs){
                 console.log("Home Animation");
                 var w = element[0].offsetWidth,
-                    h = 800;
+                    h = 600;
 
                 var nodes = d3.range(200).map(function() { return {radius: Math.random() * 12 + 4}; }),
                     color = d3.scale.category10();
@@ -304,7 +304,7 @@ angular.module('sy.templates.homeanimation', [])
                     .data(nodes.slice(1))
                   .enter().append("svg:circle")
                     .attr("r", function(d) { return d.radius - 2; })
-                    .style("fill", function(d, i) { return color(i % 3); });
+                    .style("fill", function(d, i) { return "#3b948b" });
 
                 force.on("tick", function(e) {
                   var q = d3.geom.quadtree(nodes),
