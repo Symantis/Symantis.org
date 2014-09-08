@@ -1,4 +1,4 @@
-angular.module( 'symantis.connections', [
+angular.module( 'symantis.community.connections', [
 ])
 /*
 .config(function config( $stateProvider ) {

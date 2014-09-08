@@ -1,4 +1,4 @@
-angular.module( 'symantis.extras', [
+angular.module( 'symantis.more.extras', [
 ])
 
 .config(function config( $stateProvider ) {

@@ -1,4 +1,4 @@
-angular.module( 'symantis.tags', [
+angular.module( 'symantis.community.tags', [
 ])
 
 .controller( 'TagsCtrl', function TagsController( $scope, titleService, $state, $stateParams ) {

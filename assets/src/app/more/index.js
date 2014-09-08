@@ -1,4 +1,7 @@
 angular.module( 'symantis.more', [
+	'symantis.more.extras',
+	'symantis.more.contributors',
+	'symantis.more.contact'
 ])
 
 .config(function config( $stateProvider ) {

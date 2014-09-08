@@ -10,33 +10,9 @@
     </section>
 </div>
 <div class="row fluid-row">
-    <section class="medium-3 large-2 large-offset-1 columns main-left profile-left">
+    <section class="medium-3 large-2 large-offset-1 columns main-left profile-left" ui-view="leftside">
     	<!-- Section for main left header -->
-        <header class="profile-left-user left-header">
-            <h3>
-                {{ user.firstName + ' ' + user.lastName }}
-            </h3>
-            <small>{{ user.at }}{{ user.handle }}</small>
-            <div class="profile-pic">
-                <div class="profile-pic-inner online"></div>
-            </div>
-        </header>
-        <header class="profile-left-options left-header">
-            <ul>
-                <a href="#"><li>
-                    <h3>Connect</h3>
-                    <div class="icon-plus icon"></div>
-                </li></a>
-                <a href="#"><li>
-                    <h3>Message</h3>
-                    <div class="icon-message icon"></div>
-                </li></a>
-                <a href="#"><li>
-                    <h3>Invite</h3>
-                    <div class="icon-plus icon"></div>
-                </li></a>
-            </ul>
-        </header>
+        
     </section>
     <section class="medium-9 large-7 columns main-center profile-center">
     	<!-- Section for main center header -->

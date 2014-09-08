@@ -7,8 +7,10 @@ angular.module( 'symantis', [
 	'ngIdle',
 	'ngAnimate',
 	'mm.foundation',
+	
+	//Directives, Templates, Etc...
 	'sy.templates',
-	//'ui.bootstrap',
+
 	'templates-app',
 	'services',
 	'models',
@@ -22,26 +24,26 @@ angular.module( 'symantis', [
 	'symantis.kitchen',
 	'symantis.template',
 	'symantis.search',
+	
+	//Documentation
 	'symantis.docs',
 	
 	//More
 	'symantis.more',
-	'symantis.contact',
-	'symantis.extras',
-	'symantis.contributors',
 
 	//Community
 	'symantis.community',
-	'symantis.connections',
-	'symantis.queries',
-	'symantis.news',
-	'symantis.tags',
-	//End Community
 
+	//Getting Started
 	'symantis.start',
+	
+	//Chat
 	'symantis.chat',
+	
+	//Creator App
 	'symantis.creator',
 	
+	//Profile
 	'symantis.profile'
 
 ])

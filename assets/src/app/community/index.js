@@ -1,4 +1,8 @@
 angular.module( 'symantis.community', [
+	'symantis.community.connections',
+	'symantis.community.news',
+	'symantis.community.queries',
+	'symantis.community.tags'
 ])
 
 .config(function config( $stateProvider ) {

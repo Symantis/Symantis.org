@@ -1,4 +1,4 @@
-angular.module( 'symantis.news', [
+angular.module( 'symantis.community.news', [
 ])
 /*
 .config(function config( $stateProvider ) {

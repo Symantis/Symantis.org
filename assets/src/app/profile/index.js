@@ -1,4 +1,4 @@
-angular.module( 'symantis.profile', [
+angular.module( 'symantis.profile', ['symantis.profile.view'
 ])
 
 .config(function config( $stateProvider ) {
@@ -21,6 +21,10 @@ angular.module( 'symantis.profile', [
 				"subheader@profile": {
 					controller: 'ProfileHeaderCtrl',
                 	templateUrl: 'profile/header.tpl.html'
+				},
+				"leftside@profile": {
+					controller: 'ProfileLeftsideCtrl',
+					templateUrl: 'profile/leftside.tpl.html'
 				}
 			}
 		})
@@ -29,7 +33,11 @@ angular.module( 'symantis.profile', [
 			views: {
 				"main@": {
 					controller: 'ProfileViewCtrl',
-					templateUrl: 'profile/profile.tpl.html'
+					templateUrl: 'profile/view/index.tpl.html'
+				},
+				"leftside@profile.view": {
+					controller: 'ProfileViewLeftsideCtrl',
+					templateUrl: 'profile/view/leftside.tpl.html'
 				}
 			}
 		})
@@ -44,21 +52,6 @@ angular.module( 'symantis.profile', [
 .controller( 'ProfileHeaderCtrl', function ProfileHeaderController( $scope, titleService ) {
 	//titleService.setTitle('About');
 })
-.controller( 'ProfileViewCtrl', function ProfileViewController($scope, titleService, $state, $stateParams) {
-	
-	
-	$scope.user = {};
-
-	for(var i in $scope.users){
-		
-		if($scope.users[i].handle == $stateParams.handle){
-			
-			$scope.user = $scope.users[i];
-			console.log($scope.user);
-			titleService.setTitle($scope.user.firstName+'\'s' + ' Profile');
-			break;
-		}
-		console.log($stateParams.handle+' '+$scope.users[i].handle);
-	}
-
+.controller( 'ProfileLeftsideCtrl', function ProfileLeftsideController( $scope ) {
+	//titleService.setTitle('About');
 });

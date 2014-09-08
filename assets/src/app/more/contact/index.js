@@ -1,4 +1,4 @@
-angular.module( 'symantis.contact', [
+angular.module( 'symantis.more.contact', [
 ])
 
 .config(function config( $stateProvider ) {
