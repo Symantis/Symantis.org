@@ -51,7 +51,13 @@
                         </div>
                     </li>
                     <li ng-show="article.comments.length > 0" class="news-post-comments">
-                        <p><a href="#">View Comments ({{ article.comments.length }})</a></p>
+                        <p>
+                            <a 
+                                ui-sref="community.news.view({id: article.id, title: article.clean(), comments:'comments' })"
+                            >
+                                View Comments ({{ article.comments.length }})
+                            </a>
+                        </p>
                     </li>
                     <li class="news-post-share">
                         <div class="twitter-share">

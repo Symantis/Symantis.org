@@ -1,4 +1,4 @@
-angular.module("sy.templates", ['sy.templates.sitenav', 'sy.templates.homeanimation']);
+angular.module("sy.templates", ['sy.templates.sitenav', 'sy.templates.homeanimation', 'sy.templates.userimage']);
 
 /*
  * sySiteNavToggle - Provides site nav menu functionality
@@ -272,6 +272,64 @@ angular.module('sy.templates.sitenav', [])
             }
         };
 }]);
+
+angular.module('sy.templates.userimage', [])
+.directive('generateImage', [function(){
+    return {
+        restrict: 'C',
+        scope: {
+            value: '=',
+            type: '@'
+        },
+        link: function (scope, element, attrs){
+            console.log("signature: "+attrs.signature);
+            var w = element[0].offsetWidth;
+            var h = element[0].offsetHeight;
+
+            var mouse = [ w / 2 , h / 2],
+                count = 0;
+
+            var svg = d3.select(element[0]).append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+            var g = svg.selectAll("g")
+                .data(d3.range(25))
+              .enter().append("g")
+                .attr("transform", "translate(" + mouse + ")");
+
+            g.append("rect")
+                .attr("rx", 6)
+                .attr("ry", 6)
+                .attr("x", -12.5)
+                .attr("y", -12.5)
+                .attr("width", 25)
+                .attr("height", 25)
+                .attr("transform", function(d, i) { return "scale(" + (1 - d / 25) * 20 + ")"; })
+                .style("fill", d3.scale.category20c());
+
+            g.datum(function(d) {
+              return {center: [0, 0], angle: 0};
+            });
+
+            svg.on("mousemove", function() {
+              mouse = d3.mouse(this);
+            });
+
+            d3.timer(function() {
+              count++;
+              g.attr("transform", function(d, i) {
+                d.center[0] += (mouse[0] - d.center[0]) / (i + 5);
+                d.center[1] += (mouse[1] - d.center[1]) / (i + 5);
+                d.angle += Math.sin((count + i) / 10) * 7;
+                return "translate(" + d.center + ")rotate(" + d.angle + ")";
+              });
+            });
+
+        }
+    }
+}]);
+
 angular.module('sy.templates.homeanimation', [])
 .directive('homeAnimation', ['$document','$window','$timeout', function ($document, $window, $timeout) {
         return {
