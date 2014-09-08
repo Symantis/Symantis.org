@@ -1,3 +1,95 @@
-.fourohfour{
+.fourohfour {
+	.fluid-row {
+		min-width: 320px;
+	}
+	p {
+		@include font-regular(rem-calc(12px));
+	}
+	.big-clock {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		max-width: rem-calc(700px);
+		margin: 0 auto;
+		svg {
+			width: 100%;
+			max-width: 100%;
+		}
+		p {
+			font-size: rem-calc(14px);
+			width: auto;
+			text-align: center;
+			padding-top: rem-calc(20px);
+		}
+	}
+	.four-bottom {
+		margin-top: rem-calc(40px);
+		padding: 0;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		.wiki-link {
+			margin: 0;
+			padding: 0;
+			p {
+				text-align: right;
+			}
+		}
+		.four-hint {
+			margin: 0;
+			padding: 0;
+		}
+		.four-bottom-menu {
+			padding: 0;
+			margin: 0;
+			padding-top: rem-calc(20px);
+			margin-top: rem-calc(20px);
+			border-top: rem-calc(1px) solid $gray;
+			ul {
+				list-style: none;
+				float: left;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				line-height: 1;
+				li {
+					float: left;
+					margin: 0;
+					padding-left: rem-calc(10px);
+					padding-right: rem-calc(10px);
+					a {
+						margin-top: rem-calc(-22px);
+						padding: 0;
+						padding-top: rem-calc(22px);
+						@include font-regular(rem-calc(12px));
+						color: $gray;
+						&:hover {
+							border-top: rem-calc(3px) solid $dark;
+							padding-top: rem-calc(19px);
+							color: $dark;
+						}
+					}
+					&:first-child {
+						padding-left: 0;
+					}
+				}
+				.four-logo {
+					float: right;
+					margin: 0;
+					padding: 0;
+					p {
+						@include font-semi(rem-calc(32px));
+						color: $primary-color;
+						text-align: right;
+						margin: 0;
+						padding: 0;
+						margin-top: rem-calc(-15px);
+					}
+				}
+			}
+		}
+	}
 	
 }
+
