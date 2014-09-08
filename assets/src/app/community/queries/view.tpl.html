@@ -41,8 +41,8 @@
 				<p><a href="#">Share</a> or <a href="#">Comment</a></p>
 			</div>
 	        <div class="query-details">
-	        	<div class="query-details-pic"></div>
-                <p class="query-details-by"><a href="#">Hamish Jackson-Meemskmsk</a></p>
+	        	<div class="query-details-pic generate-image" signature="{{ query.author.signature }}"></div>
+                <p class="query-details-by"><a href="#">{{query.author.firstName}} {{query.author.lastName}}</a></p>
                 <p class="query-details-on"><span>{{ query.date | date }}</span></p>
 	        </div>
 		</section>

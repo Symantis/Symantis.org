@@ -13,7 +13,7 @@
     <section class="medium-3 large-2 large-offset-1 columns main-left news-left" ui-view="leftside">
         
     </section>
-    <section class="medium-9 large-7 columns main-center" ui-view="news">
+    <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center" ui-view="news">
         <header></header>
         
         <article class="row news-post" ng-repeat="article in articles">
@@ -37,7 +37,7 @@
                 <ul class="news-post-footer">
                     <li class="news-post-details">
                         <div class="news-details">
-                            <div class="news-details-pic author-{{ article.author.status }}"></div>
+                            <div class="news-details-pic author-{{ article.author.status }} generate-image" signature="{{ article.author.signature }}"></div>
                             <p class="news-details-by">
                                 <a ui-sref="profile.view({ handle: article.author.handle })">
                                     {{ article.author.firstName }} {{ article.author.lastName }}

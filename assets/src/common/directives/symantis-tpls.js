@@ -1,4 +1,4 @@
-angular.module("sy.templates", ['sy.templates.sitenav', 'sy.templates.homeanimation', 'sy.templates.userimage']);
+angular.module("sy.templates", ['sy.templates.sitenav', 'sy.templates.homeanimation', 'sy.templates.userimage', 'sy.templates.mainleft']);
 
 /*
  * sySiteNavToggle - Provides site nav menu functionality
@@ -272,6 +272,19 @@ angular.module('sy.templates.sitenav', [])
             }
         };
 }]);
+angular.module('sy.templates.mainleft',[])
+.directive('mainLeft', ['$document','$window','$timeout', function ($document, $window, $timeout){
+    return {
+        restrict: 'C',
+        scope: {
+            value: '=',
+            type: '@'
+        },
+        link: function (scope, element, attrs){
+            console.log("main left");
+        }
+    }
+}]);
 
 angular.module('sy.templates.userimage', [])
 .directive('generateImage', [function(){
@@ -283,11 +296,18 @@ angular.module('sy.templates.userimage', [])
         },
         link: function (scope, element, attrs){
             console.log("signature: "+attrs.signature);
+            
+            var rand = Math.floor(attrs.signature * 10) + 1;
+
             var w = element[0].offsetWidth;
             var h = element[0].offsetHeight;
 
             var mouse = [ w / 2 , h / 2],
-                count = 0;
+                count = 0,
+                color = d3.scale
+                        .linear()
+                        .domain([0, 7])
+                        .range(["red", "green", "blue", "orange", "yellow", "pink", "gold"]);
 
             var svg = d3.select(element[0]).append("svg")
                 .attr("width", w)
@@ -295,7 +315,8 @@ angular.module('sy.templates.userimage', [])
 
             var g = svg.selectAll("g")
                 .data(d3.range(25))
-              .enter().append("g")
+                .enter()
+                .append("g")
                 .attr("transform", "translate(" + mouse + ")");
 
             g.append("rect")
@@ -306,7 +327,8 @@ angular.module('sy.templates.userimage', [])
                 .attr("width", 25)
                 .attr("height", 25)
                 .attr("transform", function(d, i) { return "scale(" + (1 - d / 25) * 20 + ")"; })
-                .style("fill", d3.scale.category20c());
+                .style("fill", function(d, i) { return color(i % rand); });
+                //.style("fill", d3.scale.category20c());
 
             g.datum(function(d) {
               return {center: [0, 0], angle: 0};
@@ -316,6 +338,7 @@ angular.module('sy.templates.userimage', [])
               mouse = d3.mouse(this);
             });
 
+            /*
             d3.timer(function() {
               count++;
               g.attr("transform", function(d, i) {
@@ -325,6 +348,7 @@ angular.module('sy.templates.userimage', [])
                 return "translate(" + d.center + ")rotate(" + d.angle + ")";
               });
             });
+            */
 
         }
     }
@@ -345,7 +369,7 @@ angular.module('sy.templates.homeanimation', [])
                 var nodes = d3.range(250).map(function() { return {radius: Math.random() * 12 + 4}; }),
                     color = d3.scale
                             .linear()
-                            //.domain([-1, 0, 1])
+                            .domain([1,3])
                             .range(["#3b948b", "#3b948b", "#3b948b"]);
 
                 var force = d3.layout.force()
@@ -369,7 +393,7 @@ angular.module('sy.templates.homeanimation', [])
                     .enter()
                     .append("svg:circle")
                     .attr("r", function(d) { return d.radius - 2; })
-                    .style("fill", function(d, i) { return color(i % 2); });
+                    .style("fill", function(d, i) { return color(i % 3); });
 
                 force.on("tick", function(e) {
                   var q = d3.geom.quadtree(nodes),
