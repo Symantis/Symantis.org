@@ -282,10 +282,31 @@ angular.module('sy.templates.mainleft',['duScroll'])
             var top = 400;
             var duration = 2000; //milliseconds
             
+            var wind = angular.element($document[0].querySelector('.sitenav-push'));
+            //console.log(wind[0]);
             //Scroll to the exact position
+            
+            angular.element(wind).bind("scroll", function() {
+                var lockTop = angular.element($document[0].querySelector('.top-nav-container'));
+                var scrollTop = wind.scrollTop();
+                var offset = scrollTop - 103;
+                console.log(offset);
+                console.log(lockTop[0].offsetHeight);
+
+                if(scrollTop > 103){
+                    console.log('lock');
+                    element.css('margin-top' , offset+'px');
+                }else{
+                    element.css('margin-top' , 0+'px');
+                    console.log('unlocked');
+                }
+
+            });
+            /*
             $document.scrollTop(top, duration).then(function() {
               console.log('You just scrolled to the top!');
             });
+            */
             
         }
     }
