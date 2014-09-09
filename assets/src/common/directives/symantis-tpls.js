@@ -272,16 +272,21 @@ angular.module('sy.templates.sitenav', [])
             }
         };
 }]);
-angular.module('sy.templates.mainleft',[])
+angular.module('sy.templates.mainleft',['duScroll'])
 .directive('mainLeft', ['$document','$window','$timeout', function ($document, $window, $timeout){
     return {
         restrict: 'C',
-        scope: {
-            value: '=',
-            type: '@'
-        },
-        link: function (scope, element, attrs){
+        link: function ($scope, element, attrs){
             console.log("main left");
+            var width = element[0].offsetWidth;
+            var top = 400;
+            var duration = 2000; //milliseconds
+            
+            //Scroll to the exact position
+            $document.scrollTop(top, duration).then(function() {
+              console.log('You just scrolled to the top!');
+            });
+            
         }
     }
 }]);

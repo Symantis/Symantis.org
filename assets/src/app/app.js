@@ -15,7 +15,8 @@ angular.module( 'symantis', [
 	'services',
 	'models',
 	'ngProgress',
-	//'mm.foundation',
+	'duScroll',
+	
 	'symantis.header',
 	'symantis.sitenav',
 	'symantis.home',

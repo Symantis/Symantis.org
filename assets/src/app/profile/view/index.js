@@ -15,11 +15,11 @@ angular.module( 'symantis.profile.view', [
 		if($scope.users[i].handle == $stateParams.handle){
 			
 			$scope.user = $scope.users[i];
-			console.log($scope.user);
+			//console.log($scope.user);
 			titleService.setTitle($scope.user.firstName+'\'s' + ' Profile');
 			break;
 		}
-		console.log($stateParams.handle+' '+$scope.users[i].handle);
+		//console.log($stateParams.handle+' '+$scope.users[i].handle);
 	}
 
 })
