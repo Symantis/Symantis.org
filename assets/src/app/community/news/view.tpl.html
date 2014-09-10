@@ -5,9 +5,9 @@
 
 	    <div class="news-post-content">
 	    	<section class="news-page-hero">
-		    	<a ng-show="article.img" ui-sref="community.news.view({id: article.id, title: article.clean() })">
-		        	<img ng-src="{{ article.img }}">
-		        </a>
+		    	
+		        <img ng-show="article.img" ng-src="{{ article.img }}">
+		        
 		    </section>
 	        <section class="news-page-header">
 		        <h3>{{ article.title }}</h3>
@@ -58,7 +58,6 @@
 		</div>
 		<div class="news-comment" ng-repeat="comment in article.comments">
 			<div class="news-comment-content">
-<<<<<<< HEAD
 				<p class="news-comment-text">{{ comment.comment }}</p>
 				<p class="news-comment-reply"><a ng-click="">Reply</a></p>
 				<div class="news-comment-details">
@@ -100,46 +99,6 @@
 					<p>View <span>{{ comment.replies.length }}</span> replies</p>
 				</div>
 			</a>
-=======
-				<p class="news-comment-text">{{ comment.description }}</p>
-				<p class="news-comment-reply"><a href="#">Reply</a></p>
-				<div class="news-comment-details">
-		            <p>
-		            	<span>{{ comment.date | date }}</span> - 
-		            	<a ui-sref="profile.view({ handle: comment.author.handle })">
-		            		{{ comment.author.firstName }} {{ comment.author.lastName }}
-		            	</a>
-		            </p>
-		        </div>
-			</div>
-	        <a href="#" ng-show="comment.replys.length > 0">
-	        	<div class="news-reply-toggle">
-					<p>View replies ({{ comment.replys.length }})</p>
-				</div>
-			</a>
-			<!-- <div class="news-replies">
-				<div class="news-reply" ng-repeat="reply in comment.replys">
-					<div class="news-reply-push">
-						<div class="icon-indent icon">
-						</div>
-					</div>
-					<div class="news-reply-content">
-						<p class="news-reply-text">{{ reply.description }}</p>
-						<div class="news-reply-details">
-				            <p>
-				            	<span>{{ reply.date | date }}</span> -
-				            	<a ui-sref="profile.view({ handle: reply.author.handle })">
-				            		{{ reply.author.firstName }} {{ reply.author.lastName }}
-				            	</a>
-				            </p>
-				        </div>
-				    </div>
-				</div>
-			</div>
-			<a href="#" ng-show="comment.replys.length > 0"><div class="news-reply-toggle">
-				<p>Hide replies</p>
-			</div></a> -->
->>>>>>> FETCH_HEAD
 		</div>
 	</div>
 </article>
