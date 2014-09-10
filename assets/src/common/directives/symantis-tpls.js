@@ -397,6 +397,7 @@ angular.module('sy.templates.homeanimation', [])
                     h = $window.innerHeight - 6;
 
                 var nodes = d3.range(250).map(function() { return {radius: Math.random() * 12 + 4}; }),
+                    links = d3.layout.tree().links(nodes),
                     color = d3.scale
                             .linear()
                             .domain([1,3])
@@ -406,6 +407,7 @@ angular.module('sy.templates.homeanimation', [])
                     .gravity(0.06)
                     .charge(function(d, i) { return i ? 0 : -2000; })
                     .nodes(nodes)
+                    .links(links)
                     .size([w, h]);
 
                 var root = nodes[0];
@@ -425,6 +427,16 @@ angular.module('sy.templates.homeanimation', [])
                     .attr("r", function(d) { return d.radius - 2; })
                     .style("fill", function(d, i) { return color(i % 3); });
 
+                svg.selectAll("line.link")
+                    .data(links, function(d) { return d.target.id; })
+                    .enter()
+                    .insert("svg:line", ".node")
+                    .attr("class", "cirlcelink")
+                    .attr("x1", function(d) { return d.source.x; })
+                    .attr("y1", function(d) { return d.source.y; })
+                    .attr("x2", function(d) { return d.target.x; })
+                    .attr("y2", function(d) { return d.target.y; });
+
                 force.on("tick", function(e) {
                   var q = d3.geom.quadtree(nodes),
                       i = 0,
@@ -433,10 +445,18 @@ angular.module('sy.templates.homeanimation', [])
                   while (++i < n) {
                     q.visit(collide(nodes[i]));
                   }
+                  
 
                   svg.selectAll("circle")
                       .attr("cx", function(d) { return d.x; })
                       .attr("cy", function(d) { return d.y; });
+                  
+                  svg.selectAll("line.link")   
+                      .attr("x1", function(d) { return d.source.x; })
+                      .attr("y1", function(d) { return d.source.y; })
+                      .attr("x2", function(d) { return d.target.x; })
+                      .attr("y2", function(d) { return d.target.y; });  
+                    
                 });
 
                 svg.on("mousemove", function() {
@@ -471,6 +491,10 @@ angular.module('sy.templates.homeanimation', [])
                         || y1 > ny2
                         || y2 < ny1;
                   };
+                }
+
+                function stepOne(){
+
                 }
             }
         }
