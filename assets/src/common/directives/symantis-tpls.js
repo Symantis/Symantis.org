@@ -194,16 +194,20 @@ angular.module('sy.templates.sitenav', [])
 	    			console.log("menu updated "+ status.status);
 	    			if(status.status == false){
 	    				//$scope.currentShape = $scope.trident;
-	    				path.attr('d', trident)
-	    					.attr("transform", null)
+	    				path
   							.transition()
-    						.ease("linear");
+                            .duration(500)
+    						.ease("linear")
+                            .attr('d', trident);
+                            //.attr("transform", null);
 	    			}else{
 	    				//$scope.currentShape = $scope.cross;
-	    				path.attr('d', cross)
-	    				.attr("transform", null)
+	    				path
   						.transition()
-    					.ease("linear");
+                        .duration(500)
+    					.ease("linear")
+                        .attr('d', cross);
+                        //.attr("transform", null);
 	    			}
 	    			
 	    		});
