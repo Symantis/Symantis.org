@@ -458,7 +458,35 @@ var aQueries = [
 		totalReplies: '5',
 		totalViews: '1000',
 		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date()
+		date: new Date(),
+		comments : [
+			{
+				id : '1',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: [
+					{
+						id: '1',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			}
+		]
 	},
 	{
 		id: 2,
@@ -506,7 +534,35 @@ var aQueries = [
 		totalReplies: '5',
 		totalViews: '1000',
 		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date()
+		date: new Date(),
+		comments : [
+			{
+				id : '1',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: []
+			},
+			{
+				id : '2',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: []
+			}
+		]
 	},
 	{
 		id: 3,
@@ -554,7 +610,86 @@ var aQueries = [
 		totalReplies: '5',
 		totalViews: '1000',
 		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date()
+		date: new Date(),
+		comments : [
+			{
+				id : '1',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: [
+					{
+						id: '1',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			},
+			{
+				id : '2',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: [
+					{
+						id: '1',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					},
+					{
+						id: '2',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			},
+			{
+				id : '3',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: []
+			}
+		]
 	},
 	{
 		id: 4,
@@ -602,7 +737,73 @@ var aQueries = [
 		totalReplies: '5',
 		totalViews: '1000',
 		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date()
+		date: new Date(),
+		comments : [
+			{
+				id : '1',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: [
+					{
+						id: '1',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			},
+			{
+				id : '2',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: [
+					{
+						id: '1',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					},
+					{
+						id: '2',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			}
+		]
 	},
 	{
 		id: 5,
@@ -650,7 +851,22 @@ var aQueries = [
 		totalReplies: '5',
 		totalViews: '1000',
 		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date()
+		date: new Date(),
+		comments : [
+			{
+				id : '1',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: []
+			}
+		]
 	},
 	{
 		id: 6,
@@ -698,7 +914,60 @@ var aQueries = [
 		totalReplies: '5',
 		totalViews: '1000',
 		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date()
+		date: new Date(),
+		comments : [
+			{
+				id : '1',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: [
+					{
+						id: '1',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					},
+					{
+						id: '2',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			},
+			{
+				id : '2',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: []
+			}
+		]
 	},
 	{
 		id: 7,
@@ -746,9 +1015,87 @@ var aQueries = [
 		totalReplies: '5',
 		totalViews: '1000',
 		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date()
+		date: new Date(),
+		comments : [
+			{
+				id : '1',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: [
+					{
+						id: '1',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			},
+			{
+				id : '2',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: [
+					{
+						id: '1',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					},
+					{
+						id: '2',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			},
+			{
+				id : '3',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: []
+			}
+		]
 	}
-	
 ]
 
 var aArticles = [
@@ -771,15 +1118,23 @@ var aArticles = [
 			status: 'online',
 			signature: Math.random()
 		},
+		social : {
+			facebook : 12,
+			twitter : 50
+		},
 		comments : [
 			{
 				id : '1',
+<<<<<<< HEAD
 				comment: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+=======
+>>>>>>> FETCH_HEAD
 				author:{
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
 					handle: "theman",
+<<<<<<< HEAD
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -788,11 +1143,21 @@ var aArticles = [
 					{
 						id: '1',
 						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
+=======
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: [
+					{
+						id: '1',
+>>>>>>> FETCH_HEAD
 						author:{
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
 							handle: "theman",
+<<<<<<< HEAD
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -802,11 +1167,21 @@ var aArticles = [
 					{
 						id: '2',
 						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
+=======
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					},
+					{
+						id: '2',
+>>>>>>> FETCH_HEAD
 						author:{
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
 							handle: "theman",
+<<<<<<< HEAD
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -819,11 +1194,23 @@ var aArticles = [
 			{
 				id : '2',
 				comment: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
+=======
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			},
+			{
+				id : '2',
+>>>>>>> FETCH_HEAD
 				author:{
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
 					handle: "theman",
+<<<<<<< HEAD
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -875,15 +1262,18 @@ var aArticles = [
 					}
 				],
 				date: new Date(),
+=======
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: []
+>>>>>>> FETCH_HEAD
 			}
-		],
-		social : {
-			facebook : 12,
-			twitter : 50
-		}
+		]
 	},
 	{
-		id: 2,
+		id: 1,
 		title: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Wellington',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
@@ -900,18 +1290,63 @@ var aArticles = [
 			status: 'online',
 			signature: Math.random()
 		},
-		comments : [
-			{
-				id : '1'
-			},
-			{
-				id : '2'
-			}
-		],
 		social : {
 			facebook : 25,
 			twitter : 50
-		}
+		},
+		comments : [
+			{
+				id : '1',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: [
+					{
+						id: '1',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					},
+					{
+						id: '2',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "theman",
+							at: "@"
+						},
+						date: new Date(),
+						description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			},
+			{
+				id : '2',
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "theman",
+					at: "@"
+				},
+				date: new Date(),
+				description: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replys: []
+			}
+		]
 	}
 ]
 
