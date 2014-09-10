@@ -2,7 +2,11 @@
 	<div class="query-post">
 		<section class="querie-header">
 		    <div class="querie-header-title">
-		        <h3><a ui-sref="community.queries.view({id: query.id, title: query.clean() })">{{ query.title }}</a></h3>
+		        <h3>
+		        	<a ui-sref="community.queries.view({id: query.id, title: query.clean() })">
+		        		{{ query.title }}
+		        	</a>
+		        </h3>
 		    </div>
 		</section>
 		<section class="query-content">
@@ -56,76 +60,34 @@
 		</section>
 	</div>
 	<div class="query-comments-head">
-		<h4 class="number-comments"><a href="#">{{ article.comments.length }} Comments</a></h4>
+		<h4 class="number-comments">
+			<a href="#">
+				{{ query.comments.length }} Comments
+			</a>
+		</h4>
 		<h4><a href="#">New</a></h4>
 	</div>
-	<div class="query-comment">
+	<div class="query-comment" ng-repeat="comment in query.comments">
 		<div class="query-comment-content">
-			<p class="query-comment-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.</p>
+			<p class="query-comment-text">
+				{{ comment.description }}
+			</p>
 			<p class="query-comment-reply"><a href="#">Reply</a></p>
 			<div class="query-comment-details">
 	            <p>
-	            	<span>Sep 5, 2013</span> - <a href="#">Hamish Jackson-Mee</a>
+	            	<span>{{ comment.date | date }}</span> - 
+	            	<a ui-sref="profile.view({ handle: comment.author.handle })">
+	            		{{ comment.author.firstName }} {{ comment.author.lastName }}
+	            	</a>
 	            </p>
 	        </div>
 		</div>
-        <a href="#"><div class="query-reply-toggle">
-			<p>View <span>3</span> replies</p>
-		</div></a>
-	</div>
-	<div class="query-comment">
-		<div class="query-comment-content">
-			<p class="query-comment-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
-			<div class="code-snippet">
-				<code>Sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code </code>
-	        </div>
-			<p class="query-comment-reply"><a href="#">Reply</a></p>
-			<div class="query-comment-details">
-	            <p>
-	            	<span>Sep 5, 2013</span> - <a href="#">Katelin Bull</a>
-	            </p>
-	        </div>
-		</div>
-	</div>
-	<div class="query-comment">
-		<div class="query-comment-content">
-			<p class="query-comment-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
-			<p class="query-comment-reply"><a href="#">Reply</a></p>
-			<div class="query-comment-details">
-	            <p>
-	            	<span>Sep 5, 2013</span> - <a href="#">Scott Wyatt</a>
-	            </p>
-	        </div>
-		</div>
-		<div class="query-replies">
-			<div class="query-reply">
-				<div class="query-reply-push">
-					<div class="icon-indent icon">
-					</div>
-				</div>
-				<div class="query-reply-content">
-					<p class="query-reply-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
-					<div class="query-reply-details">
-			            <p>
-			            	<span>Sep 5, 2013</span> - <a href="#">Katelin Bull</a>
-			            </p>
-			        </div>
-			    </div>
+        <a href="#" ng-show="comment.replys.length > 0">
+        	<div class="query-reply-toggle">
+				<p>View Replies ({{ comment.replys.length }})</p>
 			</div>
-			<div class="query-reply">
-				<div class="query-reply-push">
-					<div class="icon-indent icon">
-					</div>
-				</div>
-				<div class="query-reply-content">
-					<p class="query-reply-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
-					<div class="query-reply-details">
-			            <p>
-			            	<span>Sep 5, 2013</span> - <a href="#">Katelin Bull</a>
-			            </p>
-			        </div>
-			    </div>
-			</div>
+		</a>
+		<!-- <div class="query-replies">
 			<div class="query-reply">
 				<div class="query-reply-push">
 					<div class="icon-indent icon">
@@ -143,7 +105,7 @@
 		</div>
 		<a href="#"><div class="query-reply-toggle">
 			<p>Hide replies</p>
-		</div></a>
+		</div></a> -->
 	</div>
 </div>
 

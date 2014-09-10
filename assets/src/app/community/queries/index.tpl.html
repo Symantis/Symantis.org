@@ -34,12 +34,13 @@
         <!-- Section for main center content -->
         <div class="row" ui-view="queries">
             <div class="medium-12 columns queries-main-container">
-                <article 
-                    ng-repeat="query in queries"
-                    class="querie-overview"
-                >
+                <article ng-repeat="query in queries" class="querie-overview">
                     <div class="querie-overview-main">
-                        <h3><a ui-sref="community.queries.view({id: query.id, title: query.clean() })">{{ query.title }}</a></h3>
+                        <h3>
+                            <a ui-sref="community.queries.view({id: query.id, title: query.clean() })">
+                                {{ query.title }}
+                            </a>
+                        </h3>
                         <div class="querie-tags">
                             <ul>
                                 <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
@@ -54,19 +55,25 @@
                         <ul>
                             <li class="querie-views">
                                 <div class="icon-view icon"></div>
-                                <p class="querie-views-num">{{ query.totalViews | number }}</p>
+                                <p class="querie-views-num">
+                                    {{ query.totalViews | number }}
+                                </p>
                             </li>
                             <li class="querie-replys">
                                 <a href="#">
                                     <div class="icon-reply icon"></div>
                                     <p class="querie-replys-num">
-                                        {{ query.totalReplies | number }}
+                                        {{ query.comments.length }}
                                     </p>
                                 </a>
                             </li>
                         </ul>
                         <div class="querie-date">
-                            <p>Posted on:<br /><span class="post-date">{{ query.date | date }}</span></p>
+                            <p>Posted on:<br />
+                                <span class="post-date">
+                                    {{ query.date | date }}
+                                </span>
+                            </p>
                         </div>
                     </div>
                 </article>
