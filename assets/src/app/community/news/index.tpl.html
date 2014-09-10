@@ -3,7 +3,7 @@
 		<!-- Section on left of heading -->
 	</section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
-        <h1>News</h1>
+        <h1><a href="/community/news">News</a></h1>
     </section>
     <section class="medium-0 large-2 columns heading-right">
 		<!-- Section on right of heading -->
@@ -35,30 +35,6 @@
                 </a>
                 <p>{{ article.description }}</p>
                 <ul class="news-post-footer">
-                    <li class="news-post-details">
-                        <div class="news-details">
-                            <div class="news-details-pic author-{{ article.author.status }} generate-image" signature="{{ article.author.signature }}"></div>
-                            <p class="news-details-by">
-                                <a ui-sref="profile.view({ handle: article.author.handle })">
-                                    {{ article.author.firstName }} {{ article.author.lastName }}
-                                </a>
-                            </p>
-                            <p class="news-details-on">
-                                <span>
-                                    {{ article.date | date }}
-                                </span>
-                            </p>
-                        </div>
-                    </li>
-                    <li ng-show="article.comments.length > 0" class="news-post-comments">
-                        <p>
-                            <a 
-                                ui-sref="community.news.view({id: article.id, title: article.clean(), comments:'comments' })"
-                            >
-                                View Comments ({{ article.comments.length }})
-                            </a>
-                        </p>
-                    </li>
                     <li class="news-post-share">
                         <div class="twitter-share">
                             <a href="#">
@@ -77,124 +53,34 @@
                             </div>
                         </div>
                     </li>
+                    <li ng-show="article.comments.length > 0" class="news-post-comments">
+                        <p>
+                            <a 
+                                ui-sref="community.news.view({id: article.id, title: article.clean(), comments:'comments' })"
+                            >
+                                View Comments ({{ article.comments.length }})
+                            </a>
+                        </p>
+                    </li>
+                    <li class="news-post-details">
+                        <div class="news-details">
+                            <div class="news-details-pic author-{{ article.author.status }} generate-image" signature="{{ article.author.signature }}"></div>
+                            <p class="news-details-by">
+                                <a ui-sref="profile.view({ handle: article.author.handle })">
+                                    {{ article.author.firstName }} {{ article.author.lastName }}
+                                </a>
+                            </p>
+                            <p class="news-details-on">
+                                <span>
+                                    {{ article.date | date }}
+                                </span>
+                            </p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </article>
 
-        <article class="row news-post">
-            <div class="medium-2 large-1 columns news-post-date">
-                <h2>22<br />February</h2>
-            </div>
-            <div class="medium-10 large-11 columns news-post-content">
-                <img src="http://placehold.it/350x150">
-                <a href="#"><h3>Symantis.org is out of Beta!</h3></a>
-                <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.</p>
-                <ul class="news-post-footer">
-                    <li class="news-post-details">
-                        <div class="news-details">
-                            <div class="news-details-pic"></div>
-                            <p class="news-details-by"><a href="#">Hamish Jackson-Mee</a></p>
-                            <p class="news-details-on"><span>07-08-2014</span></p>
-                        </div>
-                    </li>
-                    <li class="news-post-comments">
-                        <p><a href="#">View Comments (3)</a></p>
-                    </li>
-                    <li class="news-post-share">
-                        <div class="twitter-share">
-                            <a href="#">
-                                <div class="icon-social-twitter icon"></div>
-                            </a>
-                            <div class="share-count">
-                                <p>234</p>
-                            </div>
-                        </div>
-                        <div class="facebook-share">
-                            <a href="#">
-                                <div class="icon-social-facebook icon"></div>
-                            </a>
-                            <div class="share-count">
-                                <p>17</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </article>
-        <article class="row news-post">
-            <div class="medium-2 large-1 columns news-post-date">
-                <h2>3<br />August</h2>
-            </div>
-            <div class="medium-10 large-11 columns news-post-content">
-                <a href="#"><h3>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</h3></a>
-                <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. <a href="#">This is a link.</a> Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.</p>
-                <ul class="news-post-footer">
-                    <li class="news-post-details">
-                        <div class="news-details">
-                            <div class="news-details-pic"></div>
-                            <p class="news-details-by"><a href="#">Hamish Jackson-Mee</a></p>
-                            <p class="news-details-on"><span>07-08-2014</span></p>
-                        </div>
-                    </li>
-                    <li class="news-post-comments"><p><a href="#">View Comments (8)</a></p></li>
-                    <li class="news-post-share">
-                        <div class="twitter-share">
-                            <a href="#">
-                                <div class="icon-social-twitter icon"></div>
-                            </a>
-                            <div class="share-count">
-                                <p>234</p>
-                            </div>
-                        </div>
-                        <div class="facebook-share">
-                            <a href="#">
-                                <div class="icon-social-facebook icon"></div>
-                            </a>
-                            <div class="share-count">
-                                <p>17</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </article>
-        <article class="row news-post">
-            <div class="medium-2 large-1 columns news-post-date">
-                <h2>27<br />September</h2>
-            </div>
-            <div class="medium-10 large-11 columns news-post-content">
-                <a href="#"><h3>I'm a girl.</h3></a>
-                <p>Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.</p>
-                <ul class="news-post-footer">
-                    <li class="news-post-details">
-                        <div class="news-details">
-                            <div class="news-details-pic"></div>
-                            <p class="news-details-by"><a href="#">Hamish Jackson-Mee</a></p>
-                            <p class="news-details-on"><span>07-08-2014</span></p>
-                        </div>
-                    </li>
-                    <li class="news-post-comments"><p><a href="#">View Comments (17)</a></p></li>
-                    <li class="news-post-share">
-                        <div class="twitter-share">
-                            <a href="#">
-                                <div class="icon-social-twitter icon"></div>
-                            </a>
-                            <div class="share-count">
-                                <p>234</p>
-                            </div>
-                        </div>
-                        <div class="facebook-share">
-                            <a href="#">
-                                <div class="icon-social-facebook icon"></div>
-                            </a>
-                            <div class="share-count">
-                                <p>17</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </article>
     </section>
     <section class="medium-0 large-2 columns main-right">
         <header class="right-header">

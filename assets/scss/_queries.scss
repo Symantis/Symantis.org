@@ -1,232 +1,3 @@
-.news-left {
-	header {
-		margin-bottom: rem-calc(-40px);
-	}
-	.news-left-content {
-		.news-nav {
-			padding-top: rem-calc(20px);
-			padding-bottom: rem-calc(20px);
-			h3 {
-				padding-top: rem-calc(10px);
-				&:first-child {
-					padding-top: 0;
-				}
-				a {
-					text-align: left;
-					width: 100%;
-					@include font-semi(rem-calc(18px));
-					margin: 0;
-					&:hover {
-						color: $primary-color;
-					}
-				}
-			}
-			li {
-				padding: 0;
-				margin: 0;
-				line-height: rem-calc(12px);
-				a {
-					text-align: left;
-					line-height: rem-calc(16px);
-					width: 100%;
-					@include font-regular(rem-calc(12px));
-					margin: 0;
-					padding: 0;
-					&:hover {
-						text-decoration: underline;
-					}
-				}
-			}
-			.left-indent {
-				padding-left: rem-calc(20px);
-				padding-top: rem-calc(5px);
-			}
-		}
-	}
-}
-.news-post {
-	padding-bottom: rem-calc(20px);
-	padding-top: rem-calc(10px);
-	height: auto;
-	.news-post-date {
-		width: 5.6rem;
-		h2 {
-			@include font-regular(rem-calc(12px));
-			padding-bottom: rem-calc(15px);
-			text-align: right;
-		}
-	}
-	.news-post-content {
-		border-left: rem-calc(1px) solid $light;
-		height: 100%;
-		position: relative;
-		width: calc(100% - 5.6rem);
-		h3 {
-			@inlude font-bold(rem-calc(30px));
-			padding-bottom: rem-calc(10px);
-			color: $primary-color;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-			max-height: rem-calc(36px);
-			overflow: hidden;
-			@include transition(100ms);
-			&:hover {
-				color: black;
-			}
-		}
-		p {
-			@inlude font-regular(rem-calc(12px));
-			line-height: rem-calc(18px);
-			a {
-				text-decoration: underline;
-				color: $gray;
-				&:hover {
-					color: $dark;
-				}
-			}
-		}
-		img {
-			padding-bottom: rem-calc(15px);
-			max-width: 100%;
-			display: block;
-			width: 100%;
-			height: auto;
-			max-height: rem-calc(400px);
-		}
-		ul {
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			list-style: none;
-			li {
-				margin: 0;
-				padding: rem-calc(10px);
-				float: left;
-				padding-bottom: 0;
-			}
-			.news-post-details {
-				padding-top: rem-calc(20px);
-				text-align: left;
-				padding-left: 0;
-				width: 38%;
-			}
-			.news-details {
-				float: left;
-				min-width: rem-calc(180px);
-				.news-details-pic {
-					width: rem-calc(30px);
-					height: rem-calc(30px);
-					float: left;
-					border: rem-calc(1px) black solid;
-					border-radius: rem-calc(15px);
-					overflow: hidden;
-					@include transition(100ms);
-					margin-right: rem-calc(6px);
-				}
-				.news-details-by {
-					a {
-						@include font-regular(rem-calc(12px));
-						color: $primary-color;
-						text-decoration: none;
-					}
-					line-height: rem-calc(14px);
-					padding-top: 0;
-				}
-				.news-details-on {
-					@include font-regular(rem-calc(12px));
-					line-height: rem-calc(15px);
-					span {
-						@include font-italic(rem-calc(12px));
-						color: $gray;
-					}
-				}
-			}
-			.news-post-comments {
-				@inlude font-regular(rem-calc(12px));
-				padding-top: rem-calc(20px);
-				width: 24%;
-				p {
-					width: 100%;
-					text-align: center;
-					line-height: rem-calc(12px);
-					a {
-						color: black;
-						text-decoration: none;
-						@include transition(100ms);
-						&:hover {
-							color: $primary-color;
-						}
-					}
-				}
-			}
-			.news-post-share {
-				padding-top: rem-calc(10px);
-				padding-right: 0;
-				text-align: right;
-				width: 38%;
-				.facebook-share {
-					float: right;
-					padding-top: rem-calc(5px);
-				}
-				.twitter-share {
-					float: right;
-					padding-left: rem-calc(10px);
-					padding-top: rem-calc(5px);
-				}
-				.icon {
-					float: left;
-					margin-right: rem-calc(5px);
-					margin-top: rem-calc(-3px);
-					@include icon(rem-calc(24px),$gray);
-					@include transition(100ms);
-					&:hover {
-						color: $primary-color;
-					}
-				}
-				.share-count {
-					height: 18px;
-					width: rem-calc(50px);
-					border: 1px solid $primary-color;
-					float: left;
-					background: white;
-					position: relative;
-					p {
-						width: 100%;
-						text-align: center;
-						@include font-regular(rem-calc(9px));
-						padding: 0;
-						padding-top: 0;
-						margin: 0;
-					}
-				}
-				.share-count:after, .share-count:before {
-					right: 100%;
-					top: 50%;
-					border: solid transparent;
-					content: " ";
-					height: 0;
-					width: 0;
-					position: absolute;
-					pointer-events: none;
-				}
-
-				.share-count:after {
-					border-color: rgba(187, 128, 213, 0);
-					border-right-color: white;
-					border-width: 5px;
-					margin-top: -5px;
-				}
-				.share-count:before {
-					border-color: rgba(194, 225, 245, 0);
-					border-right-color: $primary-color;
-					border-width: 6px;
-					margin-top: -6px;
-				}
-			}
-		}
-	}
-}
-
 .queries-left {
 	h3 {
 		a {
@@ -275,14 +46,15 @@
 				//display: block;
 				padding-bottom: rem-calc(25px);
 				padding-top: rem-calc(25px);
+				@include transition(100ms);
 				&:hover {
-					border-bottom: rem-calc(4px) black solid;
-					padding-bottom: rem-calc(21px);
-					color: $dark;
+					border-top: rem-calc(2px) $dark solid;
+					padding-top: rem-calc(23px);
+					color: black;
 				}
 				&:selected {
-					border-bottom: rem-calc(4px) black solid;
-					padding-bottom: rem-calc(21px);
+					border-top: rem-calc(2px) $dark solid;
+					padding-top: rem-calc(23px);
 				}
 			}
 		}
@@ -417,7 +189,7 @@
 			width: 100%;
 			padding-top: rem-calc(20px);
 			padding-bottom: rem-calc(20px);
-			border-bottom: rem-calc(1px) rgba(190,192,188,0.4) solid;
+			border-bottom: rem-calc(1px) $offWhite solid;
 			.querie-header-title {
 				float: left;
 				width: 100%;
@@ -516,7 +288,7 @@
 			float: left;
 			width: 100%;
 			position: relative;
-			border-top: rem-calc(1px) rgba(190,192,188,0.4) solid;
+			border-top: rem-calc(1px) $offWhite solid;
 			border-bottom: rem-calc(1px) $dark solid;
 			padding-bottom: rem-calc(20px);
 			padding-top: rem-calc(20px);
@@ -552,9 +324,7 @@
 		}
 	}
 	.query-details {
-		position: absolute;
-		right: 0;
-		bottom: rem-calc(20px);
+		float: right;
 		width: rem-calc(180px);
 		.query-details-pic {
 			width: rem-calc(40px);
@@ -595,16 +365,34 @@
 		border-bottom: rem-calc(1px) $light solid;
 		h4 {
 			@include font-semi(rem-calc(18px));
-			color: $dark;
 			padding: 0;
 			margin: 0;
 			float: left;
 			width: auto;
 			padding-bottom: rem-calc(20px);
-			border-bottom: rem-calc(2px) $dark solid;
-			margin-bottom: rem-calc(-1px);
+			a {
+				color: $gray;
+				float: left;
+				margin-bottom: rem-calc(-19px);
+				padding-bottom: rem-calc(19px);
+				&:hover {
+					color: $dark;
+					border-bottom: rem-calc(2px) $dark solid;
+					margin-bottom: rem-calc(-21px);
+				}
+				&:selected {
+					color: $dark;
+					border-bottom: rem-calc(2px) $dark solid;
+					margin-bottom: rem-calc(-21px);
+				}
+			}
+			&:first-child {
+				padding-right: rem-calc(30px);
+			}
+			/*&:nth-child(2) {
+				float: right;
+			}*/
 		}
-
 	}
 	.query-comment {
 		float: left;
@@ -620,6 +408,10 @@
 			height: auto;
 			p {
 				@include font-regular(rem-calc(12px));
+			}
+			.code-snippet {
+				margin-top: rem-calc(10px);
+				float: left;
 			}
 			.query-comment-text {
 				float: left;
@@ -721,177 +513,3 @@
 
 	}
 }
-
-.connections-left {
-	h3 {
-		a {
-			text-align: left;
-			width: 100%;
-			@include font-semi(rem-calc(18px));
-			color: $dark;
-			margin: 0;
-		}
-	}
-	li {
-		padding: 0;
-		margin: 0;
-		line-height: rem-calc(12px);
-		p {
-			text-align: left;
-			line-height: rem-calc(16px);
-			width: 100%;
-			@include font-regular(rem-calc(12px));
-			margin: 0;
-			padding: 0;
-			text-overflow: ellipsis;
-			overflow: hidden;
-			white-space: nowrap;
-			&:hover {
-				color: $primary-color;
-			}
-		}
-	}
-	.connections-suggestions-header {
-		margin-top: rem-calc(20px);
-	}
-	.connections-suggestions-nav {
-		ul {
-			li {
-				width: 100%;
-				padding-bottom: rem-calc(20px);
-				p {
-					position: relative;
-					width: auto;
-					line-height: rem-calc(14px);
-					@include font-semi(rem-calc(12px));
-					color: $dark;
-					padding-top: rem-calc(7px);
-					padding-left: rem-calc(5px);
-					text-overflow: ellipsis;
-					overflow: hidden;
-					white-space: nowrap;
-				}
-				.connections-suggestions-skills {
-					@include font-regular(rem-calc(12px));
-					color: $gray;
-					padding-top: 0;
-					line-height: rem-calc(15px);
-				}
-				&:hover .connections-suggestions-name {
-					color: black;
-					padding-left: rem-calc(15px);
-				}
-				&:hover .connections-suggestions-skills {
-					padding-left: rem-calc(15px);
-				}
-			}
-		}
-		.connections-suggestions-pic {
-			width: rem-calc(40px);
-			height: rem-calc(40px);
-			float: left;
-			border: rem-calc(1px) black solid;
-			border-radius: rem-calc(20px);
-			overflow: hidden;
-			@include transition(100ms);
-		}
-		.suggestions-online {
-			border: rem-calc(1px) $primary-color solid;
-		}
-	}
-}
-.connections-container {
-	padding-left: rem-calc(20px);
-	padding-right: rem-calc(20px);
-	.connections-individual {
-		margin-top: rem-calc(10px);
-		margin-bottom: rem-calc(20px);
-		height: auto;
-		float: left;
-		position: relative;
-		.connections-pic {
-			width: rem-calc(90px);
-			height: rem-calc(90px);
-			border: rem-calc(2px) black solid;
-			border-radius: rem-calc(45px);
-			overflow: hidden;
-			float: left;
-			margin: 0;
-		}
-		.connections-name {
-			padding-left: rem-calc(10px);
-			line-height: rem-calc(24px);
-			position: relative;
-			padding-top: rem-calc(4px);
-			padding-right: rem-calc(40px);
-			text-overflow: ellipsis;
-			margin-bottom: rem-calc(4px);
-			overflow: hidden;
-			white-space: nowrap;
-			z-index: 4;
-			@include font-semi(rem-calc(20px));
-			color: $dark;
-			a {
-				@include font-semi(rem-calc(20px));
-				color: inherit;
-			}
-			&:hover {
-				color: $primary-color;
-			}
-		}
-		.connections-bio {
-			padding-left: rem-calc(100px);
-			padding-top: 0;
-			padding-bottom: rem-calc(4px);
-			margin: 0;
-			position: relative;
-			@include font-regular(rem-calc(12px));
-			line-height: rem-calc(15px);
-		}
-		.connections-skills {
-			padding-left: rem-calc(100px);
-			a {
-				@include font-regular(rem-calc(12px));
-				color: $gray;
-				padding-top: 0;
-				padding: rem-calc(5px);
-				&:first-child {
-					padding-left: 0;
-				}
-			}
-		}
-		.connections-online {
-			border: rem-calc(2px) $primary-color solid;
-		}
-		.connections-message {
-			height: rem-calc(25px);
-			width: rem-calc(25px);
-			position: absolute;
-			top: rem-calc(8px);
-			right: rem-calc(5px);
-			display: none;
-			z-index: 5;
-			@include transition(100ms);
-			.icon-message {
-				@include icon(rem-calc(20px),$dark);
-			}
-			&:hover .icon-message {
-				color: $primary-color;
-			}
-		}
-		&:hover .connections-message {
-			display: block;
-		}
-		&:nth-child(2n+1) {
-			padding-right: rem-calc(20px);
-		}
-		&:nth-child(even) {
-			padding-left: rem-calc(20px);
-		}
-	}
-}
-
-
-
-
-

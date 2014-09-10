@@ -37,18 +37,27 @@
 	                </li>
 	            </ul>
 			</div>
-	        <div class="query-options">
+	        <!-- <div class="query-options">
 				<p><a href="#">Share</a> or <a href="#">Comment</a></p>
-			</div>
+			</div> -->
 	        <div class="query-details">
-	        	<div class="query-details-pic generate-image" signature="{{ query.author.signature }}"></div>
-                <p class="query-details-by"><a href="#">{{query.author.firstName}} {{query.author.lastName}}</a></p>
-                <p class="query-details-on"><span>{{ query.date | date }}</span></p>
-	        </div>
+	        	<div class="query-details-pic author-{{ query.author.status }} generate-image" signature="{{ query.author.signature }}"></div>
+                <p class="query-details-by">
+                    <a ui-sref="profile.view({ handle: query.author.handle })">
+                        {{ query.author.firstName }} {{ query.author.lastName }}
+                    </a>
+                </p>
+                <p class="query-details-on">
+                    <span>
+                        {{ query.date | date }}
+                    </span>
+                </p>
+            </div>
 		</section>
 	</div>
 	<div class="query-comments-head">
-		<h4 class="number-comments">5 Comments</h4>
+		<h4 class="number-comments"><a href="#">{{ article.comments.length }} Comments</a></h4>
+		<h4><a href="#">New</a></h4>
 	</div>
 	<div class="query-comment">
 		<div class="query-comment-content">
