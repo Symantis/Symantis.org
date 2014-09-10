@@ -126,6 +126,16 @@
 					}
 				}
 			}
+			&:after {
+				content:"";
+				clear:both;
+				display:block;
+			}
+			&:before {
+				content:"";
+				clear:both;
+				display:block;
+			}
 		}
 	}
 	.profile-contributions-content {
@@ -168,6 +178,11 @@
 					margin: 0;
 					margin-top: rem-calc(-3px);
 				}
+			}
+			&:after{
+				content:"";
+				clear:both;
+				display:block;
 			}
 		}
 	}
