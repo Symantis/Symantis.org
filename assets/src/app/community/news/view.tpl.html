@@ -53,93 +53,53 @@
 	    </div>
 
 	    <div class="news-comments-head">
-			<h4 class="number-comments"><a href="#">{{ article.comments.length }} Comments</a></h4>
-			<h4><a href="#">New</a></h4>
+			<h4 class="number-comments"><a ng-click="">{{ article.comments.length }} Comments</a></h4>
+			<h4><a ng-click="">New</a></h4>
 		</div>
-		<div class="news-comment">
+		<div class="news-comment" ng-repeat="comment in article.comments">
 			<div class="news-comment-content">
-				<p class="news-comment-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.</p>
-				<p class="news-comment-reply"><a href="#">Reply</a></p>
+				<p class="news-comment-text">{{ comment.comment }}</p>
+				<p class="news-comment-reply"><a ng-click="">Reply</a></p>
 				<div class="news-comment-details">
 		            <p>
-		            	<span>Sep 5, 2013</span> - <a href="#">Hamish Jackson-Mee</a>
-		            </p>
-		        </div>
-			</div>
-	        <a href="#"><div class="news-reply-toggle">
-				<p>View <span>3</span> replies</p>
-			</div></a>
-		</div>
-		<div class="news-comment">
-			<div class="news-comment-content">
-				<p class="news-comment-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
-				<p class="news-comment-reply"><a href="#">Reply</a></p>
-				<div class="news-comment-details">
-		            <p>
-		            	<span>Sep 5, 2013</span> - <a href="#">Katelin Bull</a>
-		            </p>
-		        </div>
-			</div>
-		</div>
-		<div class="news-comment">
-			<div class="news-comment-content">
-				<p class="news-comment-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
-				<p class="news-comment-reply"><a href="#">Reply</a></p>
-				<div class="news-comment-details">
-		            <p>
-		            	<span>Sep 5, 2013</span> - <a href="#">Scott Wyatt</a>
+		            	<span>{{comment.date | date }}</span> - <a ui-sref="profile.view({ handle: comment.author.handle })">{{ comment.author.firstName }} {{ comment.author.lastName }}</a>
 		            </p>
 		        </div>
 			</div>
 			<div class="news-replies">
-				<div class="news-reply">
+				<div 
+					class="news-reply" 
+					ng-int="replies.open = false" 
+					ng-repeat="reply in comment.replies"
+					ng-show="replies.open"
+				>
 					<div class="news-reply-push">
 						<div class="icon-indent icon">
 						</div>
 					</div>
 					<div class="news-reply-content">
-						<p class="news-reply-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
+						<p class="news-reply-text">
+							{{reply.reply}}
+						</p>
 						<div class="news-reply-details">
 				            <p>
-				            	<span>Sep 5, 2013</span> - <a href="#">Katelin Bull</a>
-				            </p>
-				        </div>
-				    </div>
-				</div>
-				<div class="news-reply">
-					<div class="news-reply-push">
-						<div class="icon-indent icon">
-						</div>
-					</div>
-					<div class="news-reply-content">
-						<p class="news-reply-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
-						<div class="news-reply-details">
-				            <p>
-				            	<span>Sep 5, 2013</span> - <a href="#">Katelin Bull</a>
-				            </p>
-				        </div>
-				    </div>
-				</div>
-				<div class="news-reply">
-					<div class="news-reply-push">
-						<div class="icon-indent icon">
-						</div>
-					</div>
-					<div class="news-reply-content">
-						<p class="news-reply-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
-						<div class="news-reply-details">
-				            <p>
-				            	<span>Sep 5, 2013</span> - <a href="#">Katelin Bull</a>
+				            	<span>{{ reply.date | date }}</span> - <a ui-sref="profile.view({ handle: reply.author.handle })" >{{ reply.author.firstName }} {{ reply.author.lastName }}</a>
 				            </p>
 				        </div>
 				    </div>
 				</div>
 			</div>
-			<a href="#"><div class="news-reply-toggle">
-				<p>Hide replies</p>
-			</div></a>
+			<a ng-click="replies.open = false" ng-show="{{ comment.replies.length > 0 }} && replies.open">
+				<div class="news-reply-toggle">
+					<p>Hide replies</p>
+				</div>
+			</a>
+	        <a ng-click="replies.open = true" ng-show="{{ comment.replies.length > 0 }} && !replies.open">
+	        	<div class="news-reply-toggle">
+					<p>View <span>{{ comment.replies.length }}</span> replies</p>
+				</div>
+			</a>
 		</div>
-
 	</div>
 </article>
 
