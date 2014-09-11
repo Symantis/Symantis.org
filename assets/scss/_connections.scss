@@ -107,6 +107,7 @@
 			z-index: 4;
 			@include font-semi(rem-calc(20px));
 			color: $dark;
+			@include transition(100ms);
 			a {
 				@include font-semi(rem-calc(20px));
 				color: inherit;
@@ -149,6 +150,7 @@
 			z-index: 5;
 			@include transition(100ms);
 			.icon-message {
+				@include transition(100ms);
 				@include icon(rem-calc(20px),$dark);
 			}
 			&:hover .icon-message {

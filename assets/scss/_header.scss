@@ -65,23 +65,35 @@
 				padding-top: rem-calc(15px);
 				padding-bottom: rem-calc(15px);
 				float:left;
-					a {
+				a {
+					color: $gray;
+					font-size: rem-calc(12px);
+					span{
 						color: $gray;
-						font-size: rem-calc(12px);
-						span{
-							color: $gray;
-							border-top: rem-calc(1px) white solid;
-							margin-top: rem-calc(5px);
-							padding-top: rem-calc(5px);
+						border-top: rem-calc(1px) white solid;
+						margin-top: rem-calc(5px);
+						padding-top: rem-calc(5px);
+						@include transition(200ms);
+						&:active {
+							border-top: rem-calc(1px) black solid;
+							color: black;
 						}
-						&:hover {
-							span {
-								border-top: rem-calc(1px) black solid;
-								color: black;
-							}
+						&:focus {
+							border-top: rem-calc(1px) black solid;
+							color: black;
+						}
+						&:target {
+							border-top: rem-calc(1px) black solid;
+							color: black;
 						}
 					}
-				
+					&:hover {
+						span {
+							border-top: rem-calc(1px) black solid;
+							color: black;
+						}
+					}
+				}
 			}
 			.top-nav-right {
 				padding-left: 0;

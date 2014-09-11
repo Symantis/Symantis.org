@@ -15,6 +15,7 @@
 			width: 100%;
 			@include font-semi(rem-calc(16px));
 			margin: 0;
+			@include transition(100ms);
 			&:hover {
 				color: $primary-color;
 			}
@@ -31,8 +32,9 @@
 			@include font-regular(rem-calc(12px));
 			margin: 0;
 			padding: 0;
+			@include transition(100ms);
 			&:hover {
-				text-decoration: underline;
+				color: $gray;
 			}
 		}
 	}

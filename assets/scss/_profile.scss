@@ -47,6 +47,7 @@
 					width: auto;
 					position: absolute;
 					left: 0;
+					@include transition(100ms);
 				}
 				.icon {
 					@include icon(rem-calc(20px),$dark);
@@ -54,6 +55,7 @@
 					position: absolute;
 					top: rem-calc(5px);
 					right: 0;
+					@include transition(100ms);
 				}
 				&:hover h3 {
 					color: $primary-color;

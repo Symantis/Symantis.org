@@ -18,8 +18,9 @@
 			@include font-regular(rem-calc(12px));
 			margin: 0;
 			padding: 0;
+			@include transition(100ms);
 			&:hover {
-				color: $primary-color;
+				color: $gray;
 			}
 		}
 	}
@@ -375,6 +376,7 @@
 				float: left;
 				margin-bottom: rem-calc(-19px);
 				padding-bottom: rem-calc(19px);
+				@include transition(200ms);
 				&:hover {
 					color: $dark;
 					border-bottom: rem-calc(2px) $dark solid;
@@ -424,6 +426,7 @@
 				padding-top: rem-calc(20px);
 				border-top: rem-calc(1px) $dark solid;
 				@include font-semi(rem-calc(12px));
+				@include transition(100ms);
 				a {
 					color: $dark;
 					&:hover {
@@ -444,6 +447,7 @@
 				@include font-regular(rem-calc(12px));
 				color: $dark;
 				margin-bottom: rem-calc(-20px);
+				@include transition(100ms);
 			}
 			&:hover p {
 				color: $primary-color;
