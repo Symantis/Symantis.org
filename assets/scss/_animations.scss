@@ -81,9 +81,11 @@ $uiAnimationTime: 0.14s;
 
 
 [ui-view="news"].ng-enter, [ui-view="news"].ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
+  //position: absolute;
+  //left: 0;
+  //right: 0;
+  //padding-left: $column-gutter / 2;
+  //padding-right: $column-gutter / 2;
   -webkit-transition:all $uiAnimationTime ease-in-out;
     -moz-transition:all $uiAnimationTime ease-in-out;
     -o-transition:all $uiAnimationTime ease-in-out;
@@ -107,9 +109,9 @@ $uiAnimationTime: 0.14s;
 }
 
 [ui-view="queries"].ng-enter, [ui-view="queries"].ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
+  //position: absolute;
+  //left: 0;
+  //right: 0;
   -webkit-transition:all $uiAnimationTime ease-in-out;
     -moz-transition:all $uiAnimationTime ease-in-out;
     -o-transition:all $uiAnimationTime ease-in-out;
