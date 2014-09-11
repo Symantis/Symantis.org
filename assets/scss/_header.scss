@@ -6,6 +6,12 @@
 	position:relative;
 	//height: 50px;
 }
+.active {
+}
+.active span {
+	border-top: rem-calc(1px) black solid;
+	color: black;
+}
 .top-bar {
 	opacity: 0;
 	display: none;
