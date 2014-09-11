@@ -296,15 +296,16 @@ angular.module('sy.templates.mainleft',['duScroll'])
                 var lockTop = angular.element($document[0].querySelector('.top-nav-container'));
                 var scrollTop = wind.scrollTop();
                 var offset = scrollTop - 108;
-                console.log(offset);
-                console.log(lockTop[0].offsetHeight);
+                //console.log(offset);
+                //console.log(lockTop[0].offsetHeight);
 
                 if(scrollTop > 108){
-                    console.log('lock');
+                    //console.log('lock');
                     element.css('margin-top' , offset+'px');
                 }else{
+                    //console.log('unlocked');
                     element.css('margin-top' , 0+'px');
-                    console.log('unlocked');
+                    
                 }
 
             });

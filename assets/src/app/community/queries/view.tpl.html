@@ -70,7 +70,7 @@
 	<div class="query-comment" ng-repeat="comment in query.comments">
 		<div class="query-comment-content">
 			<p class="query-comment-text">
-				{{ comment.description }}
+				{{ comment.comment }}
 			</p>
 			<p class="query-comment-reply"><a href="#">Reply</a></p>
 			<div class="query-comment-details">
@@ -82,30 +82,43 @@
 	            </p>
 	        </div>
 		</div>
-        <a href="#" ng-show="comment.replys.length > 0">
-        	<div class="query-reply-toggle">
-				<p>View Replies ({{ comment.replys.length }})</p>
-			</div>
-		</a>
-		<!-- <div class="query-replies">
-			<div class="query-reply">
+        
+		<div class="query-replies" ng-init="replies.open = false">
+			<div 
+				class="query-reply" 
+				ng-repeat="reply in comment.replies"
+				ng-show="replies.open"
+			>
 				<div class="query-reply-push">
 					<div class="icon-indent icon">
 					</div>
 				</div>
 				<div class="query-reply-content">
-					<p class="query-reply-text">Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.</p>
+					<p class="query-reply-text">{{reply.reply}}</p>
 					<div class="query-reply-details">
 			            <p>
-			            	<span>Sep 5, 2013</span> - <a href="#">Katelin Bull</a>
+			            	<span>{{reply.date | date}}</span> - <a ui-sref="profile.view({handle: reply.author.handle})">{{reply.author.firstName}} {{reply.author.lastName}}</a>
 			            </p>
 			        </div>
 			    </div>
 			</div>
 		</div>
-		<a href="#"><div class="query-reply-toggle">
-			<p>Hide replies</p>
-		</div></a> -->
+		<a 
+        	ng-click="replies.open = true" 
+        	ng-show="comment.replies.length > 0 && !replies.open"
+        >
+        	<div class="query-reply-toggle">
+				<p>View Replies ({{ comment.replies.length }})</p>
+			</div>
+		</a>
+		<a 
+			ng-click="replies.open = false"
+			ng-show="comment.replies.length > 0 && replies.open"
+		>
+			<div class="query-reply-toggle">
+				<p>Hide replies</p>
+			</div>
+		</a>
 	</div>
 </div>
 
