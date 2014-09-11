@@ -91,15 +91,19 @@
 			</div>
 			<a ng-click="replies.open = false" ng-show="{{ comment.replies.length > 0 }} && replies.open">
 				<div class="news-reply-toggle">
-					<p>Hide replies</p>
+					<p>Hide Replies</p>
 				</div>
 			</a>
 	        <a ng-click="replies.open = true" ng-show="{{ comment.replies.length > 0 }} && !replies.open">
-	        	<div class="news-reply-toggle">
-					<p>View <span>{{ comment.replies.length }}</span> replies</p>
+	        	<div class="news-reply-toggle view-toggle">
+					<p>View <span>{{ comment.replies.length }}</span> Replies</p>
 				</div>
 			</a>
 		</div>
+		<div class="news-new-comment">
+
+		</div>
+
 	</div>
 </article>
 

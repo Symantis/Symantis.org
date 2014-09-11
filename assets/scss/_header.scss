@@ -6,12 +6,6 @@
 	position:relative;
 	//height: 50px;
 }
-.active {
-}
-.active span {
-	border-top: rem-calc(1px) black solid;
-	color: black;
-}
 .top-bar {
 	opacity: 0;
 	display: none;
@@ -71,6 +65,7 @@
 				padding-top: rem-calc(15px);
 				padding-bottom: rem-calc(15px);
 				float:left;
+				
 				a {
 					color: $gray;
 					font-size: rem-calc(12px);
@@ -80,25 +75,35 @@
 						margin-top: rem-calc(5px);
 						padding-top: rem-calc(5px);
 						@include transition(200ms);
-						&:active {
-							border-top: rem-calc(1px) black solid;
-							color: black;
-						}
-						&:focus {
-							border-top: rem-calc(1px) black solid;
-							color: black;
-						}
-						&:target {
-							border-top: rem-calc(1px) black solid;
+					}
+					&:hover {
+						span {
+							//border-top: rem-calc(1px) black solid;
 							color: black;
 						}
 					}
-					&:hover {
+					/*&:active {
 						span {
 							border-top: rem-calc(1px) black solid;
 							color: black;
 						}
 					}
+					&:focus {
+						span {
+							border-top: rem-calc(1px) black solid;
+							color: black;
+						}
+					}
+					&:target {
+						span {
+							border-top: rem-calc(1px) black solid;
+							color: black;
+						}
+					}*/
+				}
+				.active span {
+					border-top: rem-calc(1px) black solid;
+					color: black;
 				}
 			}
 			.top-nav-right {

@@ -1,13 +1,13 @@
 <section class="top-nav-left medium-3 large-2 large-offset-1 columns">
-	<a ui-sref="community" detect-active-tab="1"><span>Community</span></a>
+	<a ui-sref="community"><span>Community</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="community.news" detect-active-tab="1"><span>News</span></a>
+	<a ui-sref="community.news" ng-class="{active:isActive('/community/news')}"><span>News</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="community.queries" detect-active-tab="1"><span>Queries</span></a>
+	<a ui-sref="community.queries" ng-class="{active:isActive('/community/queries')}"><span>Queries</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="community.connections" detect-active-tab="1"><span>Connections</span></a>
+	<a ui-sref="community.connections" ng-class="{active:isActive('/community/connections')}"><span>Connections</span></a>
 </section>
 				
