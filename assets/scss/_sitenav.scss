@@ -101,6 +101,7 @@ body,
 		display:table;
 		z-index:-1;
 		float:right;
+		//background-color: $darkest;
 		//border-right: rem-calc(1px) $light solid;
 		& > .activator-icon{
 			display:table-cell;
@@ -282,9 +283,8 @@ body,
 	//@include drop-shadow(0.3);
 
 	.activator{
-		
 		width: 50px;
-
+		//border-right: none;
 		& > .activator-icon{
 			width: 50px;
 

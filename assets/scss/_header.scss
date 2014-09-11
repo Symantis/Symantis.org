@@ -168,15 +168,6 @@
 				}
 			}
 		}
-		/* ------ Full width Header -------- */
-		/*.top-nav-rule-cont {
-			padding-left: 0;
-			padding-right: 0;
-		}
-		.top-nav-rule {
-			padding-left: 0;
-			padding-right: 0;
-		}*/
 		.top-nav-rule-inner {
 			width: 100%;
 			height: rem-calc(1px);
@@ -189,5 +180,22 @@
 		    display:block;
 		    clear: both;
 		}
+
+		/* ------ Full width Header -------- */
+		/*.top-nav-rule-cont {
+			padding-left: 0;
+			padding-right: 0;
+			background-color: $gray;
+		}
+		.top-nav-rule {
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: -50px;
+			margin-right: -50px;
+		}
+		.top-nav-rule-inner {
+			background-color: none;
+		}*/
+		/* ---- End ---- */
 	}
 }

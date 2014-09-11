@@ -90,15 +90,16 @@ and (max-width : rem-calc(1024px)) {
 		.top-nav-container {
 			.row.fluid-row {
 				.top-nav-right {
+					padding-right: 0;
 					.top-nav-userOnline {
 						.top-nav-name {
-							padding-right: rem-calc(3px);
+							//padding-right: rem-calc(3px);
 						}
 						.top-nav-messages {
-							margin-left: rem-calc(3px);
+							//margin-left: rem-calc(3px);
 						}
 						.top-nav-settings {
-							margin-left: rem-calc(3px);
+							//margin-left: rem-calc(3px);
 						}
 					}
 				}
