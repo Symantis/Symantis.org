@@ -52,18 +52,21 @@
 	padding-top: rem-calc(10px);
 	height: auto;
 	.news-post-date {
-		width: 5.6rem;
+		width: 4.6rem;
+		//display: none;
 		h2 {
 			@include font-regular(rem-calc(12px));
 			padding-bottom: rem-calc(15px);
 			text-align: right;
+			margin-top: 0;
 		}
 	}
 	.news-post-content {
 		border-left: rem-calc(1px) solid $light;
 		height: 100%;
 		position: relative;
-		width: calc(100% - 5.6rem);
+		width: calc(100% - 4.6rem);
+		//width: 100%;
 		h3 {
 			@inlude font-bold(rem-calc(30px));
 			padding-bottom: rem-calc(10px);

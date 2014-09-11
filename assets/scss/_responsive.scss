@@ -106,6 +106,15 @@ and (max-width : rem-calc(1024px)) {
 			}
 		}
 	}
+	.news-post {
+		.news-post-date {
+			display: none;
+		}
+		.news-post-content {
+			border-left: none;
+			width: 100%;
+		}
+	}
 	
 }
 
