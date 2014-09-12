@@ -430,13 +430,17 @@
 				margin-bottom: rem-calc(-19px);
 				padding-bottom: rem-calc(19px);
 				@include transition(200ms);
-				&:hover {
+				&.active {
 					color: $dark;
 					border-bottom: rem-calc(2px) $dark solid;
 					margin-bottom: rem-calc(-21px);
 				}
-				&:selected {
+				&:hover {
 					color: $dark;
+					
+					//margin-bottom: rem-calc(-21px);
+				}
+				&:focus {
 					border-bottom: rem-calc(2px) $dark solid;
 					margin-bottom: rem-calc(-21px);
 				}

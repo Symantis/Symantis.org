@@ -52,9 +52,24 @@
 			</section>
 	    </div>
 
-	    <div class="news-comments-head">
-			<h4 class="number-comments"><a ng-click="">{{ article.comments.length }} Comments</a></h4>
-			<h4><a ng-click="">New</a></h4>
+	    <div class="news-comments-head" ng-init="comments.selected = true">
+			<h4 class="number-comments">
+				<a 
+					ng-class="{active: comments.selected}" 
+					ng-click="comments.selected = true"
+				>
+					{{ article.comments.length }} Comments
+				</a>
+			</h4>
+
+			<h4>
+				<a 
+					ng-click="comments.selected = false" 
+					ng-class="{active: !comments.selected}"
+				>
+					New
+				</a>
+			</h4>
 		</div>
 		<div class="news-comment" ng-repeat="comment in article.comments">
 			<div class="news-comment-content">

@@ -110,12 +110,15 @@ angular.module( 'symantis.community', [
 	;
 })
 
-.controller( 'CommunityCtrl', function CommunityController( $scope, titleService ) {
+.controller( 'CommunityCtrl', function CommunityController( $scope, $state ,titleService ) {
 	titleService.setTitle('Community');
+
 
 	
 })
-.controller( 'CommunityHeaderCtrl', function CommunityHeaderController( $scope, titleService ) {
+.controller( 'CommunityHeaderCtrl', function CommunityHeaderController( $scope, $state, titleService ) {
+	$scope.$state = $state;
+	console.log($scope.$state);
 	//titleService.setTitle('About');
 })
 .controller( 'CommunityLeftsideCtrl', function CommunityLeftsideController( $scope ) {

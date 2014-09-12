@@ -277,13 +277,15 @@ angular.module('sy.templates.sitenav', [])
 	    		});
             }
         };
-}])
+}]);
+/*
 .controller('TabsCtrl', function ($scope, $location) {
     $scope.isActive = function(route) {
         return route === $location.path();
     }
-
 });
+*/
+
 angular.module('sy.templates.mainleft',['duScroll'])
 .directive('mainLeft', ['$document','$window','$timeout', function ($document, $window, $timeout){
     return {

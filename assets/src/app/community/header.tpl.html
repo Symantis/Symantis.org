@@ -2,12 +2,30 @@
 	<a ui-sref="community"><span>Community</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="community.news" ng-class="{active:isActive('/community/news')}"><span>News</span></a>
+	<a 
+		ui-sref="community.news" 
+		
+		ng-class="{active: $state.includes('community.news')}"
+	>
+		<span>News</span>
+	</a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="community.queries" ng-class="{active:isActive('/community/queries')}"><span>Queries</span></a>
+	<a 
+		ui-sref="community.queries" 
+		
+		ng-class="{active: $state.includes('community.queries')}"
+	>
+		<span>Queries</span>
+	</a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="community.connections" ng-class="{active:isActive('/community/connections')}"><span>Connections</span></a>
+	<a 
+		ui-sref="community.connections" 
+		
+		ng-class="{active: $state.includes('community.connections')}"
+	>
+		<span>Connections</span>
+	</a>
 </section>
 				
