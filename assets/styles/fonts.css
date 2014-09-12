@@ -215,3 +215,12 @@
 .icon-social-google-plus:before {
   content: "s";
 }
+.icon-code-snippet:before {
+  content: "u";
+}
+.icon-vote-down:before {
+  content: "t";
+}
+.icon-vote-up:before {
+  content: "v";
+}

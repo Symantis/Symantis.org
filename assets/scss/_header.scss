@@ -56,7 +56,7 @@
 				padding-top: rem-calc(15px);
 				padding-bottom: rem-calc(15px);
 				padding-right: 1.875rem;
-				@include font-bold(rem-calc(12px));
+				@include font-bold(rem-calc(13px));
 				color: $primary-color;
 				
 			}
@@ -68,7 +68,7 @@
 				
 				a {
 					color: $gray;
-					font-size: rem-calc(12px);
+					font-size: rem-calc(13px);
 					span{
 						color: $gray;
 						border-top: rem-calc(1px) white solid;

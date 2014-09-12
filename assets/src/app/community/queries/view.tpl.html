@@ -59,21 +59,37 @@
             </div>
 		</section>
 	</div>
-	<div class="query-comments-head">
+	<div class="comments-head" ng-init="comments.selected = true">
 		<h4 class="number-comments">
-			<a href="#">
+			<a 
+				ng-class="{active: comments.selected}" 
+				ng-click="comments.selected = true"
+			>
 				{{ query.comments.length }} Comments
 			</a>
 		</h4>
-		<h4><a href="#">New</a></h4>
+		<h4>
+			<a 
+				ng-click="comments.selected = false" 
+				ng-class="{active: !comments.selected}"
+			>
+				New
+			</a>
+		</h4>
 	</div>
-	<div class="query-comment" ng-repeat="comment in query.comments">
-		<div class="query-comment-left">
-			<div class="query-comment-pic">
+	<div 
+		class="comment" 
+		ng-repeat="comment in query.comments"
+	>
+		<div class="comment-left">
+			<div 
+				class="comment-pic generate-image" 
+				signature="{{ comment.author.signature }}"
+			>
 			</div>
 		</div>
-		<div class="query-comment-content">
-			<div class="query-comment-details">
+		<div class="comment-content">
+			<div class="comment-details">
 	            <p>
 	            	<a ui-sref="profile.view({ handle: comment.author.handle })">
 	            		{{ comment.author.firstName }} {{ comment.author.lastName }}
@@ -82,29 +98,56 @@
 	            	<span>{{ comment.date | date }}</span>
 	            </p>
 	        </div>
-			<p class="query-comment-text">
+			<p class="comment-text">
 				{{ comment.comment }}
 			</p>
-			<p class="query-comment-reply"><a href="#">Reply</a></p>
+			<p class="comment-reply">
+				<a ui-sref="#">
+					<span class="icon-vote-up"></span>
+					<span 
+						class="comment-votes" 
+						ng-show="comment.upVotes > 0"
+					>
+						{{ comment.upVotes | number }}
+					</span>
+				</a>
+				<a ui-sref="#">
+					<span class="icon-vote-down"></span>
+					<span 
+						class="comment-votes"
+						ng-show="comment.downVotes > 0"
+					>
+						{{ comment.downVotes | number }}
+					</span>
+				</a>
+				<a class="reply-option" ui-sref="#">Reply</a>
+			</p>
 		</div>
         
-		<div class="query-replies" ng-init="replies.open = false">
+		<div class="replies" ng-init="replies.open = false">
 			<div 
-				class="query-reply" 
+				class="reply" 
 				ng-repeat="reply in comment.replies"
 				ng-show="replies.open"
 			>
-				<div class="query-reply-push">
+				<div class="reply-push">
 					<div class="icon-indent icon">
 					</div>
 				</div>
-				<div class="query-reply-content">
-					<p class="query-reply-text">{{reply.reply}}</p>
-					<div class="query-reply-details">
+				<div class="reply-left">
+					<div class="reply-pic generate-image" signature="{{ reply.author.signature }}"></div>
+				</div>
+				<div class="reply-content">
+					<div class="reply-details">
 			            <p>
-			            	<span>{{reply.date | date}}</span> - <a ui-sref="profile.view({handle: reply.author.handle})">{{reply.author.firstName}} {{reply.author.lastName}}</a>
+			            	<a ui-sref="profile.view({handle: reply.author.handle})">
+			            		{{reply.author.firstName}} {{reply.author.lastName}}
+			            	</a>
+			            	&middot;
+			            	<span>{{ reply.date | date }}</span>
 			            </p>
 			        </div>
+					<p class="reply-text">{{reply.reply}}</p>
 			    </div>
 			</div>
 		</div>
@@ -112,7 +155,7 @@
         	ng-click="replies.open = true" 
         	ng-show="comment.replies.length > 0 && !replies.open"
         >
-        	<div class="query-reply-toggle view-toggle">
+        	<div class="reply-toggle view-toggle">
 				<p>View Replies ({{ comment.replies.length }})</p>
 			</div>
 		</a>
@@ -120,12 +163,12 @@
 			ng-click="replies.open = false"
 			ng-show="comment.replies.length > 0 && replies.open"
 		>
-			<div class="query-reply-toggle">
+			<div class="reply-toggle">
 				<p>Hide replies</p>
 			</div>
 		</a>
 	</div>
-	<div class="query-new-comment">
+	<div class="new-comment">
 	</div>
 
 </div>
