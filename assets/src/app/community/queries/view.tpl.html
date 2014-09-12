@@ -182,6 +182,12 @@
 		</a>
 	</div>
 
+	<div class="view-more-comments" ng-show="query.comments.length > 12">
+		<a ui-sref="">
+			<p>More Comments</p>
+		</a>
+	</div>
+
 	<div class="new-comment">
 		<div class="new-comment-left">
 			<div 
@@ -197,7 +203,11 @@
 	        	</a>
 	        </p>
 			<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
-			<a ui-sref=""><div class="new-comment-submit"><span class="icon-plus"></span></div></a>
+			<a ui-sref="">
+				<div class="new-comment-submit">
+					<span class="icon-plus"></span>
+				</div>
+			</a>
 		</form>
 	</div>
 
