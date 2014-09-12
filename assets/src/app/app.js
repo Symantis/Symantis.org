@@ -118,11 +118,12 @@ angular.module( 'symantis', [
 
 
 var oCurrentUser = {
-	id: 1, 
+	id: 0, 
 	firstName: "Hamish",
 	lastName:  "Jackson-Mee",
 	handle: "theman",
-	at: "@"
+	at: "@",
+	signature: Math.random()
 }
 var aUsers = [
 	{

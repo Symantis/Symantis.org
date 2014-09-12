@@ -166,7 +166,7 @@
 					{{ comment.comment }}
 				</p>
 				<p class="comment-reply">
-					<a ui-sref="#">
+					<a ui-sref="">
 						<span class="icon-vote-up"></span>
 						<span 
 							class="comment-votes" 
@@ -175,7 +175,7 @@
 							{{ comment.upVotes | number }}
 						</span>
 					</a>
-					<a ui-sref="#">
+					<a ui-sref="">
 						<span class="icon-vote-down"></span>
 						<span 
 							class="comment-votes"
@@ -184,7 +184,7 @@
 							{{ comment.downVotes | number }}
 						</span>
 					</a>
-					<a class="reply-option" ui-sref="#">Reply</a>
+					<a class="reply-option" ui-sref="">Reply</a>
 				</p>
 			</div>
 	        
@@ -208,10 +208,14 @@
 				            		{{reply.author.firstName}} {{reply.author.lastName}}
 				            	</a>
 				            	&middot;
-				            	<span>{{ reply.date | date }}</span>
+				            	<span>
+				            		{{ reply.date | date }}
+				            	</span>
 				            </p>
 				        </div>
-						<p class="reply-text">{{reply.reply}}</p>
+						<p class="reply-text">
+							{{reply.reply}}
+						</p>
 				    </div>
 				</div>
 			</div>
@@ -233,6 +237,22 @@
 			</a>
 		</div>
 		<div class="new-comment">
+			<div class="new-comment-left">
+				<div 
+					class="reply-pic generate-image" 
+					signature="{{ currentUser.signature }}"
+				>
+				</div>
+			</div>
+			<form class="new-comment-form">
+				<p>
+		        	<a ui-sref="profile.view({handle: currentUser.handle})">
+		        		{{ currentUser.firstName }} {{ currentUser.lastName }}
+		        	</a>
+		        </p>
+				<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
+				<a ui-sref=""><div class="new-comment-submit"><span class="icon-plus"></span></div></a>
+			</form>
 		</div>
 
 	</div>

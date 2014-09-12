@@ -70,12 +70,21 @@
 		</h4>
 		<h4>
 			<a 
+				ng-show="currentUser"
 				ng-click="comments.selected = false" 
 				ng-class="{active: !comments.selected}"
 			>
 				New
 			</a>
+			<a 
+				ng-show="!currentUser"
+			>
+				Sign up
+			</a>
 		</h4>
+		<p>
+			<a ui-sref="">Sort by <span class="icon-vote-down icon"></span></a>
+		</p>
 	</div>
 	<div 
 		class="comment" 
@@ -102,7 +111,7 @@
 				{{ comment.comment }}
 			</p>
 			<p class="comment-reply">
-				<a ui-sref="#">
+				<a ui-sref="">
 					<span class="icon-vote-up"></span>
 					<span 
 						class="comment-votes" 
@@ -111,7 +120,7 @@
 						{{ comment.upVotes | number }}
 					</span>
 				</a>
-				<a ui-sref="#">
+				<a ui-sref="">
 					<span class="icon-vote-down"></span>
 					<span 
 						class="comment-votes"
@@ -120,7 +129,7 @@
 						{{ comment.downVotes | number }}
 					</span>
 				</a>
-				<a class="reply-option" ui-sref="#">Reply</a>
+				<a class="reply-option" ui-sref="">Reply</a>
 			</p>
 		</div>
         
@@ -135,7 +144,11 @@
 					</div>
 				</div>
 				<div class="reply-left">
-					<div class="reply-pic generate-image" signature="{{ reply.author.signature }}"></div>
+					<div 
+						class="reply-pic generate-image" 
+						signature="{{ reply.author.signature }}"
+					>
+					</div>
 				</div>
 				<div class="reply-content">
 					<div class="reply-details">
@@ -168,7 +181,24 @@
 			</div>
 		</a>
 	</div>
+
 	<div class="new-comment">
+		<div class="new-comment-left">
+			<div 
+				class="reply-pic generate-image" 
+				signature="{{ currentUser.signature }}"
+			>
+			</div>
+		</div>
+		<form class="new-comment-form">
+			<p>
+	        	<a ui-sref="profile.view({handle: currentUser.handle})">
+	        		{{ currentUser.firstName }} {{ currentUser.lastName }}
+	        	</a>
+	        </p>
+			<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
+			<a ui-sref=""><div class="new-comment-submit"><span class="icon-plus"></span></div></a>
+		</form>
 	</div>
 
 </div>

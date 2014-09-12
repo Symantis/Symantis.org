@@ -2,6 +2,7 @@
 	float: left;
 	width: 100%;
 	padding-top: rem-calc(40px);
+	margin-bottom: rem-calc(20px);
 	border-bottom: rem-calc(1px) $light solid;
 	h4 {
 		@include font-semi(rem-calc(18px));
@@ -11,7 +12,7 @@
 		width: auto;
 		padding-bottom: rem-calc(20px);
 		a {
-			color: $gray;
+			color: darken($light, 30%);
 			float: left;
 			margin-bottom: rem-calc(-19px);
 			padding-bottom: rem-calc(19px);
@@ -37,6 +38,31 @@
 		/*&:nth-child(2) {
 			float: right;
 		}*/
+	}
+	p {
+		float: right;
+		@include font-semi(rem-calc(12px));
+		padding: 0;
+		margin: 0;
+		width: auto;
+		padding-top: rem-calc(6px);
+		//padding-bottom: rem-calc(20px);
+		a {
+			position: relative;
+			float: right;
+			padding-right: rem-calc(15px);
+			color: darken($light, 30%);
+			@include transition(100ms);
+			.icon {
+				//padding-top: rem-calc(8px);
+				position: absolute;
+				bottom: -2px;
+				right: 0;
+			}
+			&:hover {
+				color: $dark;
+			}
+		}
 	}
 }
 .comment {
@@ -112,7 +138,7 @@
 			@include font-bold(rem-calc(12px));
 			a {
 				float: left;
-				color: darken($light, 20%);
+				color: darken($light, 30%);
 				@include transition(100ms);
 				padding-right: rem-calc(3px);
 				padding-left: rem-calc(3px);
@@ -125,7 +151,7 @@
 				}
 				.comment-votes {
 					@include font-semi(rem-calc(12px));
-					color: darken($light, 20%);
+					color: darken($light, 30%);
 					padding-left: rem-calc(2px);
 				}
 				&:hover {
@@ -143,14 +169,16 @@
 	.reply-toggle {
 		float: left;
 		width: 100%;
+		padding-left: 3.6rem;
 		margin-top: rem-calc(10px);
 		text-align: center;
 		p {
 			padding-bottom: rem-calc(10px);
 			padding-top: rem-calc(10px);
-			text-align: center;
+			text-align: left;
 			@include font-regular(rem-calc(12px));
 			color: $gray;
+			width: 40%;
 			border-top: rem-calc(1px) $light solid;
 			//border-left: rem-calc(1px) $light solid;
 			//border-right: rem-calc(1px) $light solid;
@@ -253,5 +281,90 @@
 			padding-bottom: rem-calc(10px);
 		}
 	}
-
 }
+.new-comment {
+	padding-top: rem-calc(40px);
+	width: 100%;
+	position: relative;
+	float: left;
+	.new-comment-left {
+		float: left;
+		position: relative;
+		width: 3.6rem;
+		height: 100%;
+		.reply-pic {
+			width: rem-calc(40px);
+			height: rem-calc(40px);
+			float: left;
+			border: rem-calc(1px) black solid;
+			border-radius: rem-calc(20px);
+			overflow: hidden;
+			display: block;
+			@include transition(100ms);
+		}
+	}
+	.new-comment-form {
+
+		position: relative;
+		float: left;
+		width: calc(100% - 3.6rem);
+		p {
+			a {
+				@include font-semi(rem-calc(14px));
+				color: $primary-color;
+				padding-bottom: rem-calc(10px);
+				display: inline-block;
+				&:hover {
+					color: darken($primary-color, 20%);
+				}
+			}
+		}
+		textarea {
+			resize: none;
+			outline: none;
+			outline: 0;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border: none;
+			border-left: rem-calc(2px) $gray solid;
+			border-top: rem-calc(2px) $gray solid;
+			border-bottom: rem-calc(2px) $gray solid;
+			background: rgba(255,255,255,0.0);
+			height: rem-calc(80px);
+			//border-radius: rem-calc(10px);
+			border-bottom-left-radius: rem-calc(10px);
+			border-top-left-radius: rem-calc(10px);
+			width: calc(100% - 3rem);
+			float: left;
+			&:focus {
+				-webkit-box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.73);
+				-moz-box-shadow:    0px 0px 7px 0px rgba(50, 50, 50, 0.73);
+				box-shadow:         0px 0px 7px 0px rgba(50, 50, 50, 0.73);
+			}
+		}
+		.new-comment-submit {
+			float: left;
+			position: relative;
+			//margin-left: 0.2rem;
+			width: 3rem;
+			height: rem-calc(80px);
+			background-color: $gray;
+			border-top-right-radius: rem-calc(10px);
+			border-bottom-right-radius: rem-calc(10px);
+			@include transition(100ms);
+			span {
+				@include font-semi(rem-calc(18px));
+				color: white;
+				top: rem-calc(30px);
+				left: 0.9rem;
+				position: absolute;
+			}
+			&:hover {
+				background-color: darken($gray, 20%);
+			}
+		}
+	}
+}
+
+
+
