@@ -68,19 +68,24 @@
 		<h4><a href="#">New</a></h4>
 	</div>
 	<div class="query-comment" ng-repeat="comment in query.comments">
+		<div class="query-comment-left">
+			<div class="query-comment-pic">
+			</div>
+		</div>
 		<div class="query-comment-content">
+			<div class="query-comment-details">
+	            <p>
+	            	<a ui-sref="profile.view({ handle: comment.author.handle })">
+	            		{{ comment.author.firstName }} {{ comment.author.lastName }}
+	            	</a>
+	            	&middot;
+	            	<span>{{ comment.date | date }}</span>
+	            </p>
+	        </div>
 			<p class="query-comment-text">
 				{{ comment.comment }}
 			</p>
 			<p class="query-comment-reply"><a href="#">Reply</a></p>
-			<div class="query-comment-details">
-	            <p>
-	            	<span>{{ comment.date | date }}</span> - 
-	            	<a ui-sref="profile.view({ handle: comment.author.handle })">
-	            		{{ comment.author.firstName }} {{ comment.author.lastName }}
-	            	</a>
-	            </p>
-	        </div>
 		</div>
         
 		<div class="query-replies" ng-init="replies.open = false">
@@ -122,6 +127,6 @@
 	</div>
 	<div class="query-new-comment">
 	</div>
-	
+
 </div>
 
