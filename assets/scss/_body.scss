@@ -124,3 +124,43 @@ quote {
 .no-title {
 	padding-top: rem-calc(80px);
 }
+.back-to-top {
+	position: fixed;
+	bottom: 5rem;
+	right: 2rem;
+	a {
+	    p {
+	    	position: relative;
+	    	@include font-regular(rem-calc(12px));
+	    	color: white;
+	    	padding-bottom: rem-calc(7px);
+	    	padding-top: rem-calc(6px);
+	    	padding-left: rem-calc(12px);
+	    	padding-right: rem-calc(12px);
+			background-color: $primary-color;
+			-ms-transform: rotate(-90deg);
+		    -webkit-transform: rotate(-90deg);
+		    -moz-transform: rotate(-90deg);
+		    transform: rotate(-90deg);
+		    @include transition(100ms);
+	    }
+	    p:after {
+	    	left: 100%;
+	    	top: 50%;
+	    	border: solid transparent;
+	    	content: " ";
+	    	height: 0;
+	    	width: 0;
+	    	margin-left: rem-calc(-1px);
+	    	position: absolute;
+	    	pointer-events: none;
+	    	border-color: rgba(255,255,255,0);
+	    	border-left-color: $primary-color;
+	    	border-width: rem-calc(16.5px);
+	    	margin-top: rem-calc(-16.5px);
+	    }
+	    p:hover {
+	    	color: $dark;
+	    }
+	}
+}

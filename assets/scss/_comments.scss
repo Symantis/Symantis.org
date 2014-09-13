@@ -345,14 +345,14 @@
 			-webkit-box-shadow: none;
 			box-shadow: none;
 			border: none;
-			border-left: rem-calc(2px) $gray solid;
-			border-top: rem-calc(2px) $gray solid;
-			border-bottom: rem-calc(2px) $gray solid;
+			border-left: rem-calc(1px) $gray solid;
+			border-top: rem-calc(1px) $gray solid;
+			border-bottom: rem-calc(1px) $gray solid;
 			background: rgba(255,255,255,0.0);
 			height: rem-calc(80px);
 			//border-radius: rem-calc(10px);
-			border-bottom-left-radius: rem-calc(10px);
-			border-top-left-radius: rem-calc(10px);
+			//border-bottom-left-radius: rem-calc(10px);
+			//border-top-left-radius: rem-calc(10px);
 			width: calc(100% - 3rem);
 			float: left;
 			&:focus {
@@ -368,8 +368,8 @@
 			width: 3rem;
 			height: rem-calc(80px);
 			background-color: $gray;
-			border-top-right-radius: rem-calc(10px);
-			border-bottom-right-radius: rem-calc(10px);
+			//border-top-right-radius: rem-calc(10px);
+			//border-bottom-right-radius: rem-calc(10px);
 			@include transition(100ms);
 			span {
 				@include font-semi(rem-calc(18px));
