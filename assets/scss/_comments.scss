@@ -24,7 +24,6 @@
 			}
 			&:hover {
 				color: $dark;
-				
 				//margin-bottom: rem-calc(-21px);
 			}
 			&:focus {
@@ -35,9 +34,6 @@
 		&:first-child {
 			padding-right: rem-calc(30px);
 		}
-		/*&:nth-child(2) {
-			float: right;
-		}*/
 	}
 	p {
 		float: right;
@@ -124,6 +120,7 @@
 		}
 		.code-snippet {
 			margin-top: rem-calc(7px);
+			margin-bottom: rem-calc(7px);
 			float: left;
 		}
 		.comment-text {
@@ -181,17 +178,10 @@
 			color: darken($light, 30%);
 			width: 40%;
 			border-top: rem-calc(1px) $light solid;
-			//border-left: rem-calc(1px) $light solid;
-			//border-right: rem-calc(1px) $light solid;
-			//border-bottom: rem-calc(1px) $light solid;
 			@include transition(100ms);
 		}
 		&:hover p {
 			color: $dark;
-			//border: rem-calc(1px) $primary-color solid;
-			//border-left: rem-calc(2px) $dark solid;
-			//border-top: rem-calc(2px) $light solid;
-			//border-bottom: rem-calc(1px) $light solid;
 		}
 	}
 	.view-toggle {

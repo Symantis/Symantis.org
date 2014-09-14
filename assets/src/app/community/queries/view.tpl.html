@@ -15,18 +15,11 @@
 				<div class="code-snippet">
 					<code>Sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code </code>
 		        </div>
-		        <div class="image-thumbs">
-		        	<div class="thumbnail-container">
-		        		<img src="http://placehold.it/140x100" alt="placeholder" />
-		        	</div>
-			        <div class="thumbnail-container">
-		        		<img src="http://placehold.it/140x100" alt="placeholder" />
-		        	</div>
-		        	<div class="thumbnail-container">
-		        		<img src="http://placehold.it/140x100" alt="placeholder" />
-		        	</div>
-		        	<div class="thumbnail-container">
-		        		<img src="http://placehold.it/140x100" alt="placeholder" />
+		        <div class="image-thumbs" ng-show="query.imgs">
+		        	<div class="thumbnail-container" ng-repeat="img in query.imgs">
+		        		<a ui-sref="">
+		                    <img ng-src="{{ img.src }}" />
+		                </a>
 		        	</div>
 			    </div>
 			</div>
@@ -41,9 +34,6 @@
 	                </li>
 	            </ul>
 			</div>
-	        <!-- <div class="query-options">
-				<p><a href="#">Share</a> or <a href="#">Comment</a></p>
-			</div> -->
 	        <div class="query-details">
 	        	<div class="query-details-pic author-{{ query.author.status }} generate-image" signature="{{ query.author.signature }}"></div>
                 <p class="query-details-by">
@@ -65,7 +55,7 @@
 				ng-class="{active: comments.selected}" 
 				ng-click="comments.selected = true"
 			>
-				{{ query.comments.length }} Comments
+				{{ query.responses.length }} Response<span ng-show="query.responses.length > 1">s</span>
 			</a>
 		</h4>
 		<h4>
@@ -88,47 +78,52 @@
 	</div>
 	<div 
 		class="comment" 
-		ng-repeat="comment in query.comments"
+		ng-repeat="response in query.responses"
 	>
 		<div class="comment-left">
 			<div 
 				class="comment-pic generate-image" 
-				signature="{{ comment.author.signature }}"
+				signature="{{ response.author.signature }}"
 			>
 			</div>
+			<p class="response-voting">
+				<a ui-sref="" class="vote-up">
+					<span class="icon-vote-up"></span>
+				</a>
+				<span class="response-votes">
+					{{ response.votes | number }}
+				</span>
+				<a ui-sref="" class="vote-down">
+					<span class="icon-vote-down"></span>
+				</a>
+				<!-- placeholder icon -->
+				<span class="icon-hide response-favourite" ng-show="response.favourite"></span>
+			</p>
 		</div>
 		<div class="comment-content">
 			<div class="comment-details">
 	            <p>
-	            	<a ui-sref="profile.view({ handle: comment.author.handle })">
-	            		{{ comment.author.firstName }} {{ comment.author.lastName }}
+	            	<a ui-sref="profile.view({ handle: response.author.handle })">
+	            		{{ response.author.firstName }} {{ response.author.lastName }}
 	            	</a>
 	            	&middot;
-	            	<span>{{ comment.date | date }}</span>
+	            	<span>{{ response.date | date }}</span>
 	            </p>
 	        </div>
 			<p class="comment-text">
-				{{ comment.comment }}
+				{{ response.response }}
+				<div class="code-snippet">
+					<code>Sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code </code>
+		        </div>
 			</p>
+			<div class="image-thumbs" ng-show="response.imgs">
+	        	<div class="thumbnail-container" ng-repeat="img in response.imgs">
+	        		<a ui-sref="">
+	                    <img ng-src="{{ img.src }}" />
+	                </a>
+	        	</div>
+		    </div>
 			<p class="comment-reply">
-				<a ui-sref="">
-					<span class="icon-vote-up"></span>
-					<span 
-						class="comment-votes" 
-						ng-show="comment.upVotes > 0"
-					>
-						{{ comment.upVotes | number }}
-					</span>
-				</a>
-				<a ui-sref="">
-					<span class="icon-vote-down"></span>
-					<span 
-						class="comment-votes"
-						ng-show="comment.downVotes > 0"
-					>
-						{{ comment.downVotes | number }}
-					</span>
-				</a>
 				<a class="reply-option" ui-sref="">Reply</a>
 			</p>
 		</div>
@@ -136,7 +131,7 @@
 		<div class="replies" ng-init="replies.open = false">
 			<div 
 				class="reply" 
-				ng-repeat="reply in comment.replies"
+				ng-repeat="reply in response.replies"
 				ng-show="replies.open"
 			>
 				<div class="reply-push">
@@ -166,15 +161,15 @@
 		</div>
 		<a 
         	ng-click="replies.open = true" 
-        	ng-show="comment.replies.length > 0 && !replies.open"
+        	ng-show="response.replies.length > 0 && !replies.open"
         >
         	<div class="reply-toggle view-toggle">
-				<p>View Replies ({{ comment.replies.length }})</p>
+				<p>View Replies ({{ response.replies.length }})</p>
 			</div>
 		</a>
 		<a 
 			ng-click="replies.open = false"
-			ng-show="comment.replies.length > 0 && replies.open"
+			ng-show="response.replies.length > 0 && replies.open"
 		>
 			<div class="reply-toggle">
 				<p>Hide replies</p>
@@ -182,9 +177,9 @@
 		</a>
 	</div>
 
-	<div class="view-more-comments" ng-show="query.comments.length > 12">
+	<div class="view-more-comments" ng-show="query.response.length > 12">
 		<a ui-sref="">
-			<p>More Comments</p>
+			<p>More Responses</p>
 		</a>
 	</div>
 

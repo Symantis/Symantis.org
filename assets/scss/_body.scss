@@ -127,10 +127,18 @@ quote {
 }
 .back-to-top {
 	position: fixed;
-	bottom: 30%;
-	right: 2rem;
+	bottom: 0.5rem;
+	right: 1rem;
 	a {
-	    p {
+		span {
+			font-size: rem-calc(40px);
+			color: $primary-color;
+			@include transition(200ms);
+			&:hover {
+				color: darken($primary-color, 10%);
+			}
+		}
+	    /*p {
 	    	position: relative;
 	    	@include font-regular(rem-calc(12px));
 	    	color: white;
@@ -152,7 +160,7 @@ quote {
 	    	content: " ";
 	    	height: 0;
 	    	width: 0;
-	    	margin-left: rem-calc(-1px);
+	    	//margin-left: rem-calc(-1px);
 	    	position: absolute;
 	    	pointer-events: none;
 	    	border-color: rgba(255,255,255,0);
@@ -161,7 +169,7 @@ quote {
 	    	margin-top: rem-calc(-16.5px);
 	    }
 	    p:hover {
-	    	color: $dark;
-	    }
+	    	color: $offWhite;
+	    }*/
 	}
 }

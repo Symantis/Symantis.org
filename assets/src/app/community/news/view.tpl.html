@@ -51,78 +51,7 @@
 		        </div>
 			</section>
 	    </div>
-<!-- 
-	    <div class="news-comments-head" ng-init="comments.selected = true">
-			<h4 class="number-comments">
-				<a 
-					ng-class="{active: comments.selected}" 
-					ng-click="comments.selected = true"
-				>
-					{{ article.comments.length }} Comments
-				</a>
-			</h4>
-			<h4>
-				<a 
-					ng-click="comments.selected = false" 
-					ng-class="{active: !comments.selected}"
-				>
-					New
-				</a>
-			</h4>
-		</div> -->
-		<!-- <div class="news-comment" ng-repeat="comment in article.comments">
-			<div class="news-comment-content">
-				<p class="news-comment-text">{{ comment.comment }}</p>
-				<p class="news-comment-reply">
-					<a ng-click="">Reply</a>
-				</p>
-				<div class="news-comment-details">
-		            <p>
-		            	<span>{{ comment.date | date }}</span>
-		            	 - 
-		            	 <a ui-sref="profile.view({ handle: comment.author.handle })">
-		            	 	{{ comment.author.firstName }} {{ comment.author.lastName }}
-		            	 </a>
-		            </p>
-		        </div>
-			</div>
-			<div class="news-replies">
-				<div 
-					class="news-reply" 
-					ng-int="replies.open = false" 
-					ng-repeat="reply in comment.replies"
-					ng-show="replies.open"
-				>
-					<div class="news-reply-push">
-						<div class="icon-indent icon">
-						</div>
-					</div>
-					<div class="news-reply-content">
-						<p class="news-reply-text">
-							{{reply.reply}}
-						</p>
-						<div class="news-reply-details">
-				            <p>
-				            	<span>{{ reply.date | date }}</span> - <a ui-sref="profile.view({ handle: reply.author.handle })" >{{ reply.author.firstName }} {{ reply.author.lastName }}</a>
-				            </p>
-				        </div>
-				    </div>
-				</div>
-			</div>
-			<a ng-click="replies.open = false" ng-show="{{ comment.replies.length > 0 }} && replies.open">
-				<div class="news-reply-toggle">
-					<p>Hide Replies</p>
-				</div>
-			</a>
-	        <a ng-click="replies.open = true" ng-show="{{ comment.replies.length > 0 }} && !replies.open">
-	        	<div class="news-reply-toggle view-toggle">
-					<p>View <span>{{ comment.replies.length }}</span> Replies</p>
-				</div>
-			</a>
-		</div>
-		<div class="news-new-comment">
 
-		</div> -->
 		<div class="comments-head" ng-init="comments.selected = true">
 			<h4 class="number-comments">
 				<a 
@@ -141,6 +70,7 @@
 				</a>
 			</h4>
 		</div>
+		
 		<div 
 			class="comment" 
 			ng-repeat="comment in article.comments"

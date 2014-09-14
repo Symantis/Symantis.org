@@ -145,6 +145,8 @@ $uiAnimationTime: 0.14s;
 .animate-repeat.ng-enter,
 .animate-repeat.ng-leave {
   -webkit-transition:all linear 0.3s;
+  -moz-transition:all linear 0.3s;
+  -o-transition:all linear 0.3s;
   transition:all linear 0.3s;
 }
 

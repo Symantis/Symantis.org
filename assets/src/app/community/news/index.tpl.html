@@ -23,12 +23,11 @@
                 </h2>
             </div>
             <div class="medium-10 large-11 columns news-post-content">
-                
                 <a 
                     ng-show="article.img"  
                     ui-sref="community.news.view({id: article.id, title: article.clean() })"
                 >
-                <img ng-src="{{ article.img }}">
+                    <img ng-src="{{ article.img }}">
                 </a>
                 <a ui-sref="community.news.view({id: article.id, title: article.clean() })">
                     <h3>{{ article.title }}</h3>

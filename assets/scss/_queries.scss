@@ -188,9 +188,9 @@
 			position: relative;
 			float: left;
 			width: 100%;
-			padding-top: rem-calc(20px);
-			padding-bottom: rem-calc(20px);
-			border-bottom: rem-calc(1px) $offWhite solid;
+			padding-top: rem-calc(30px);
+			padding-bottom: rem-calc(15px);
+			border-bottom: rem-calc(1px) $light solid;
 			.querie-header-title {
 				float: left;
 				width: 100%;
@@ -215,7 +215,7 @@
 			.query-content-main {
 				float: left;
 				.query-content-p {
-					padding-top: rem-calc(20px);
+					padding-top: rem-calc(15px);
 					a {
 						color: $gray;
 						text-decoration: underline;
@@ -253,43 +253,11 @@
 				}
 			}
 		}
-		/*.query-options {
-			padding-bottom: rem-calc(20px);
-			float: left;
-			width: 100%;
-			position: relative;
-
-			.query-options-right {
-				float: left;
-				ul {
-					list-style: none;
-					margin: 0;
-					padding: 0;
-					.icon {
-						@include icon(rem-calc(20px),$gray);
-						float: left;
-					}
-					p {
-						float: left;
-						width: rem-calc(35px);
-						white-space: nowrap;
-						text-overflow: ellipsis;
-						padding-top: rem-calc(1px);
-						padding-left: rem-calc(6px);
-						@include font-regular(rem-calc(11px));
-					}
-					li {
-						float: left;
-						width: rem-calc(60px);
-					}
-				}
-			}
-		}*/
 		.query-footer {
 			float: left;
 			width: 100%;
 			position: relative;
-			border-top: rem-calc(1px) $offWhite solid;
+			border-top: rem-calc(1px) $light solid;
 			border-bottom: rem-calc(1px) $dark solid;
 			padding-bottom: rem-calc(20px);
 			padding-top: rem-calc(20px);
@@ -359,4 +327,121 @@
 			}
 		}
 	}
+	$response-bg: lighten($offWhite, 5%);
+	.comments-head {
+		margin-bottom: rem-calc(10px);
+	}
+	.comment {
+		padding: rem-calc(10px);
+		padding-bottom: 0;
+		margin-top: rem-calc(20px);
+		background-color: $offWhite;
+		border: rem-calc(1px) $gray solid;
+		.comment-left {
+			.response-voting {
+				a {
+					width: 2.6rem;
+					float: left;
+					position: relative;
+					text-align: center;
+					&:hover {
+						span {
+							color: $dark;
+						}
+					}
+				}
+				span {
+					@include font-semi(rem-calc(28px));
+					color: $gray;
+					line-height: 0.6;
+					@include transition(200ms);
+				}
+				.vote-up {
+					padding-top: rem-calc(6px);
+					margin-bottom: rem-calc(-4px);
+				}
+				.vote-down {
+				}
+				.response-favourite {
+					width: 2.6rem;
+					float: left;
+					position: relative;
+					text-align: center;
+					color: green;
+				}
+				.response-votes {
+					font-size: rem-calc(24px);
+					line-height: 1;
+					width: 2.6rem;
+					float: left;
+					position: relative;
+					text-align: center;
+				}
+			}
+		}
+		.comment-content {
+			.comment-details {
+				padding-top: rem-calc(10px);
+				padding-bottom: rem-calc(8px);
+				margin-bottom: rem-calc(8px);
+				border-bottom: rem-calc(1px) $gray solid;
+			}
+			.code-snippet {
+				margin-top: rem-calc(7px);
+				margin-bottom: rem-calc(7px);
+				float: left;
+				background-color: darken($offWhite, 10%);
+			}
+			.image-thumbs {
+				padding-top: rem-calc(10px);
+				padding-bottom: rem-calc(10px);
+				float: left;
+				position: relative;
+				width: 100%;
+				.thumbnail-container {
+					padding: rem-calc(5px);
+					float: left;
+					width: 23%;
+					margin-right: 1%;
+					height: auto;
+					border: rem-calc(1px) $light solid;
+					img {
+						max-width: 100%;
+						width: 100%;
+						max-height: rem-calc(200px);
+					}
+					&:first-child {
+						margin-left: 0;	
+					}
+				}
+			}
+			.comment-reply {
+				border-top: rem-calc(1px) $gray solid;
+				margin-top: rem-calc(5px);
+				a {
+					color: $gray;
+				}
+			}
+		}
+		.reply-toggle {
+			margin-bottom: 0;
+			//padding-right: 3.6rem;
+			p {
+				width: 100%;
+				border-top: rem-calc(1px) $gray solid;
+				color: $gray;
+			}
+		}
+	}
+	.replies {
+		margin-top: rem-calc(10px);
+		.reply {
+			padding-top: rem-calc(10px);
+			padding-bottom: rem-calc(20px);
+			//border-top: rem-calc(1px) solid $gray;
+		}
+	}
 }
+
+
+
