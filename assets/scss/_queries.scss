@@ -338,9 +338,12 @@
 		background-color: $offWhite;
 		border: rem-calc(1px) $gray solid;
 		.comment-left {
+			.comment-pic {
+				margin-left: rem-calc(3px);
+			}
 			.response-voting {
 				a {
-					width: 2.6rem;
+					width: 2.8rem;
 					float: left;
 					position: relative;
 					text-align: center;
@@ -363,7 +366,7 @@
 				.vote-down {
 				}
 				.response-favourite {
-					width: 2.6rem;
+					width: 2.8rem;
 					float: left;
 					position: relative;
 					text-align: center;
@@ -372,7 +375,7 @@
 				.response-votes {
 					font-size: rem-calc(24px);
 					line-height: 1;
-					width: 2.6rem;
+					width: 2.8rem;
 					float: left;
 					position: relative;
 					text-align: center;
@@ -439,6 +442,41 @@
 			padding-top: rem-calc(10px);
 			padding-bottom: rem-calc(20px);
 			//border-top: rem-calc(1px) solid $gray;
+		}
+		.new-comment {
+			padding-top: 0;
+			width: 100%;
+			position: relative;
+			float: left;
+			.new-comment-left {
+				float: left;
+				position: relative;
+				width: 3.6rem;
+				height: 100%;
+				.reply-pic {
+					width: rem-calc(40px);
+					height: rem-calc(40px);
+					float: left;
+					margin-left: rem-calc(3px);
+					border: rem-calc(1px) black solid;
+					border-radius: rem-calc(20px);
+					overflow: hidden;
+					display: block;
+					@include transition(100ms);
+				}
+			}
+			.new-comment-form {
+				textarea {
+					height: rem-calc(60px);
+					background-color: white;
+				}
+				.new-comment-submit {
+					height: rem-calc(60px);
+					span {
+						top: rem-calc(20px);
+					}
+				}
+			}
 		}
 	}
 }

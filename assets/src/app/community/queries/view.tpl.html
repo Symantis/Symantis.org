@@ -87,13 +87,13 @@
 			>
 			</div>
 			<p class="response-voting">
-				<a ui-sref="" class="vote-up">
+				<a ui-sref="" class="vote-up" ng-click="response.votes = response.votes + 1">
 					<span class="icon-vote-up"></span>
 				</a>
 				<span class="response-votes">
 					{{ response.votes | number }}
 				</span>
-				<a ui-sref="" class="vote-down">
+				<a ui-sref="" class="vote-down" ng-click="response.votes = response.votes - 1">
 					<span class="icon-vote-down"></span>
 				</a>
 				<!-- placeholder icon -->
@@ -157,6 +157,28 @@
 			        </div>
 					<p class="reply-text">{{reply.reply}}</p>
 			    </div>
+			</div>
+			<div class="new-comment" ng-show="replies.open">
+				<div class="new-comment-left">
+					<div 
+						class="reply-pic generate-image" 
+						signature="{{ currentUser.signature }}"
+					>
+					</div>
+				</div>
+				<form class="new-comment-form">
+					<p>
+			        	<a ui-sref="profile.view({handle: currentUser.handle})">
+			        		{{ currentUser.firstName }} {{ currentUser.lastName }}
+			        	</a>
+			        </p>
+					<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
+					<a ui-sref="">
+						<div class="new-comment-submit">
+							<span class="icon-plus"></span>
+						</div>
+					</a>
+				</form>
 			</div>
 		</div>
 		<a 
