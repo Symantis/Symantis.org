@@ -64,6 +64,7 @@ quote {
 .main-left {
 	position:absolute;
 	padding-right: rem-calc(30px);
+	padding-left: 0.6rem;
 	header {
 		border-top: rem-calc(2px) $dark solid;
 		padding-top: rem-calc(20px);
@@ -126,7 +127,7 @@ quote {
 }
 .back-to-top {
 	position: fixed;
-	bottom: 5rem;
+	bottom: 30%;
 	right: 2rem;
 	a {
 	    p {

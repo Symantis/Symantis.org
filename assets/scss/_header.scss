@@ -46,7 +46,6 @@
 		    	clear: both;
 			}
 			& > section {
-				
 				a{
 					display:block;
 				}	
@@ -65,41 +64,20 @@
 				padding-top: rem-calc(15px);
 				padding-bottom: rem-calc(15px);
 				float:left;
-				
 				a {
 					color: $gray;
 					font-size: rem-calc(13px);
 					span{
 						color: $gray;
-						border-top: rem-calc(1px) white solid;
 						margin-top: rem-calc(5px);
 						padding-top: rem-calc(5px);
 						@include transition(200ms);
 					}
 					&:hover {
 						span {
-							//border-top: rem-calc(1px) black solid;
 							color: black;
 						}
 					}
-					/*&:active {
-						span {
-							border-top: rem-calc(1px) black solid;
-							color: black;
-						}
-					}
-					&:focus {
-						span {
-							border-top: rem-calc(1px) black solid;
-							color: black;
-						}
-					}
-					&:target {
-						span {
-							border-top: rem-calc(1px) black solid;
-							color: black;
-						}
-					}*/
 				}
 				.active span {
 					border-top: rem-calc(1px) black solid;
@@ -110,34 +88,50 @@
 				padding-left: 0;
 				padding-top: rem-calc(16px);
 				padding-bottom: rem-calc(16px);
-				background-color: white;
+				padding-right: 0;
+				//background-color: white;
+				text-align: right;
 				.top-nav-userOnline {
+					margin: 0;
+					float: right;
+					max-width: rem-calc(200px);
+					list-style: none;
 					li {
-						float: right;
+						float: left;
 					}
 					.top-nav-name {
-						color: black;
-						font-size: rem-calc(12px);
 						padding-right: rem-calc(10px);
-						padding-top: rem-calc(3px);
-						white-space: nowrap;
-						display:block;
+						padding-top: rem-calc(2px);
+						max-width: rem-calc(100px);
+						p {
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							margin: 0;
+							padding: 0;
+							color: $primary-color;
+							font-size: rem-calc(12px);
+						}
 						a {
 							color: $primary-color;
 							&:hover {
-								color: $dark;
+								color: darken($primary-color, 10%);
 							}
 						}
 						a, span{
-							display:inline-block;
+							display:inline;
+						}
+						span {
+							color: $dark;
 						}
 					}
 					.top-nav-messages {
-						padding-top: rem-calc(2px);
+						padding-top: rem-calc(5px);
 						margin-left: rem-calc(10px);
 						height: rem-calc(19px);
 					}
 					.top-nav-settings {
+						padding-top: rem-calc(4px);
 						margin-left: rem-calc(10px);
 						height: rem-calc(19px);
 					}
@@ -171,7 +165,7 @@
 		.top-nav-rule-inner {
 			width: 100%;
 			height: rem-calc(1px);
-			background-color: $gray;
+			background-color: $dark;
 			//padding-right: 1.875rem;
 			//padding-left: 1.875rem;
 		}
@@ -179,6 +173,9 @@
 			content:'';
 		    display:block;
 		    clear: both;
+		}
+		.top-nav-rule {
+			padding-right: 0;
 		}
 
 		/* ------ Full width Header -------- */
