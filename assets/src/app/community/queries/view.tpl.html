@@ -100,7 +100,7 @@
 				<span class="icon-hide response-favourite" ng-show="response.favourite"></span>
 			</p>
 		</div>
-		<div class="comment-content">
+		<div class="comment-content" ng-init="newComment.open = false">
 			<div class="comment-details">
 	            <p>
 	            	<a ui-sref="profile.view({ handle: response.author.handle })">
@@ -123,9 +123,43 @@
 	                </a>
 	        	</div>
 		    </div>
-			<p class="comment-reply">
-				<a class="reply-option" ui-sref="">Reply</a>
+		    <div 
+				class="new-comment" 
+				ng-show="newComment.open"
+			>
+				<form class="new-comment-form">
+					<p>
+			        	<a ui-sref="profile.view({handle: currentUser.handle})">
+			        		{{ currentUser.firstName }} {{ currentUser.lastName }}
+			        	</a>
+			        </p>
+					<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
+					<a ui-sref="">
+						<div class="new-comment-submit">
+							<span class="icon-plus"></span>
+						</div>
+					</a>
+				</form>
+			</div>
+			<p 
+				class="comment-reply" 
+				ng-click="newComment.open = true"
+				ng-show="!newComment.open"
+			>
+				<a class="reply-option">
+					Reply
+				</a>
 			</p>
+			<p 
+				class="comment-reply" 
+				ng-click="newComment.open = false"
+				ng-show="newComment.open"
+			>
+				<a class="reply-option">
+					Cancel
+				</a>
+			</p>
+			
 		</div>
         
 		<div class="replies" ng-init="replies.open = false">

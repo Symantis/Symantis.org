@@ -425,6 +425,25 @@
 					color: $gray;
 				}
 			}
+			.new-comment {
+				padding-top: rem-calc(15px);
+				width: 100%;
+				position: relative;
+				float: left;
+				.new-comment-form {
+					textarea {
+						height: rem-calc(60px);
+						background-color: white;
+						//width: calc(100% - 3rem);
+					}
+					.new-comment-submit {
+						height: rem-calc(60px);
+						span {
+							top: rem-calc(20px);
+						}
+					}
+				}
+			}
 		}
 		.reply-toggle {
 			margin-bottom: 0;
