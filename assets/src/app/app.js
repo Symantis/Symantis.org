@@ -119,7 +119,7 @@ angular.module( 'symantis', [
 
 var oCurrentUser = {
 	id: 0, 
-	firstName: "Hamishkdcmslskmc",
+	firstName: "Hamish",
 	lastName:  "Jackson-Mee",
 	handle: "theman",
 	at: "@",
