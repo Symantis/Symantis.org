@@ -335,8 +335,11 @@
 		padding: rem-calc(10px);
 		padding-bottom: 0;
 		margin-top: rem-calc(20px);
-		background-color: $offWhite;
+		background-color: white;
 		border: rem-calc(1px) $gray solid;
+		-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+		box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 		.comment-left {
 			.comment-pic {
 				margin-left: rem-calc(3px);
@@ -393,7 +396,7 @@
 				margin-top: rem-calc(7px);
 				margin-bottom: rem-calc(7px);
 				float: left;
-				background-color: darken($offWhite, 10%);
+				//background-color: darken($offWhite, 10%);
 			}
 			.image-thumbs {
 				padding-top: rem-calc(10px);
