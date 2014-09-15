@@ -63,12 +63,21 @@
 			</h4>
 			<h4>
 				<a 
+					ng-show="currentUser"
 					ng-click="comments.selected = false" 
 					ng-class="{active: !comments.selected}"
 				>
 					New
 				</a>
+				<a 
+					ng-show="!currentUser"
+				>
+					Sign up
+				</a>
 			</h4>
+			<p>
+				<a ui-sref="">Sort by <span class="icon-vote-down icon"></span></a>
+			</p>
 		</div>
 		
 		<div 

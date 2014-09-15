@@ -168,21 +168,19 @@ $uiAnimationTime: 0.14s;
 
 /*  ----- Comment, Response reply animation ----- */
 
-.ng-hide-add, .ng-hide-remove {
-    /* ensure visibility during the transition */
-    display: block !important; /* yes, important */
-}
 .slideToggle {
   height: 100%;
   overflow: hidden;
-  @include transition(400ms);
+  opacity: 1;
+}
+.slideToggle.ng-hide-add.ng-hide-add-active,
+.slideToggle.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
 }
 .slideToggle.ng-hide {
+  opacity: 0;
   height: 0;
 }
-.slideToggle.ng-show {
-  height: 100%;
-}
-
 
 

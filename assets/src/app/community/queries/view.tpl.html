@@ -122,9 +122,6 @@
 	        </div>
 			<p class="comment-text">
 				{{ response.response }}
-				<div class="code-snippet">
-					<code>Sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code </code>
-		        </div>
 			</p>
 			<div class="image-thumbs" ng-show="response.imgs">
 	        	<div class="thumbnail-container" ng-repeat="img in response.imgs">
@@ -164,7 +161,7 @@
 					<p class="reply-text">{{reply.reply}}</p>
 			    </div>
 			</div>
-			<div class="new-comment slideToggle">
+			<div class="new-comment" ng-show="currentUser">
 				<div class="new-comment-left">
 					<div 
 						class="reply-pic generate-image" 
@@ -186,6 +183,11 @@
 					</a>
 				</form>
 			</div>
+			<h4>
+				<a ng-show="!currentUser">
+					Sign up
+				</a>
+			</h4>
 		</div>
 
 		<a 
@@ -216,7 +218,7 @@
 		</a>
 	</div>
 
-	<div class="new-comment">
+	<div class="new-response">
 		<div class="new-comment-left">
 			<div 
 				class="reply-pic generate-image" 
@@ -231,11 +233,6 @@
 	        	</a>
 	        </p>
 			<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
-			<a ui-sref="">
-				<div class="new-comment-submit">
-					<span class="icon-plus"></span>
-				</div>
-			</a>
 		</form>
 	</div>
 
