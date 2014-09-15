@@ -340,6 +340,7 @@
 		-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 		-moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 		box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+
 		.comment-left {
 			.comment-pic {
 				margin-left: rem-calc(3px);
@@ -428,7 +429,7 @@
 					color: $gray;
 				}
 			}
-			.new-comment {
+			/*.new-comment {
 				padding-top: rem-calc(15px);
 				width: 100%;
 				position: relative;
@@ -446,17 +447,21 @@
 						}
 					}
 				}
-			}
+			}*/
 		}
 		.reply-toggle {
 			margin-bottom: 0;
 			//padding-right: 3.6rem;
+			padding-bottom: rem-calc(10px);
 			p {
 				width: 100%;
 				border-top: rem-calc(1px) $gray solid;
 				color: $gray;
 			}
 		}
+	}
+	.solution {
+		border: rem-calc(4px) $primary-color solid;
 	}
 	.replies {
 		margin-top: rem-calc(10px);

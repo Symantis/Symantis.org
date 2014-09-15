@@ -78,7 +78,8 @@
 	</div>
 	<div 
 		class="comment" 
-		ng-repeat="response in query.responses"
+		ng-repeat="response in query.responses | orderBy : 'votes' : true "
+		ng-class="{ solution: response.solution }"
 	>
 		<div class="comment-left">
 			<div 
@@ -87,20 +88,29 @@
 			>
 			</div>
 			<p class="response-voting">
-				<a ui-sref="" class="vote-up" ng-click="response.votes = response.votes + 1">
+				<a 
+					ui-sref="" 
+					class="vote-up" 
+					ng-click="response.votes = response.votes + 1"
+				>
 					<span class="icon-vote-up"></span>
 				</a>
 				<span class="response-votes">
 					{{ response.votes | number }}
 				</span>
-				<a ui-sref="" class="vote-down" ng-click="response.votes = response.votes - 1">
+				<a 
+					ui-sref="" 
+					class="vote-down" 
+					ng-click="response.votes = response.votes - 1"
+				>
 					<span class="icon-vote-down"></span>
 				</a>
 				<!-- placeholder icon -->
-				<span class="icon-hide response-favourite" ng-show="response.favourite"></span>
+				<span class="icon-check response-favourite" ng-show="response.solution"></span>
 			</p>
 		</div>
-		<div class="comment-content" ng-init="newComment.open = false">
+
+		<div class="comment-content">
 			<div class="comment-details">
 	            <p>
 	            	<a ui-sref="profile.view({ handle: response.author.handle })">
@@ -122,44 +132,7 @@
 	                    <img ng-src="{{ img.src }}" />
 	                </a>
 	        	</div>
-		    </div>
-		    <div 
-				class="new-comment" 
-				ng-show="newComment.open"
-			>
-				<form class="new-comment-form">
-					<p>
-			        	<a ui-sref="profile.view({handle: currentUser.handle})">
-			        		{{ currentUser.firstName }} {{ currentUser.lastName }}
-			        	</a>
-			        </p>
-					<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
-					<a ui-sref="">
-						<div class="new-comment-submit">
-							<span class="icon-plus"></span>
-						</div>
-					</a>
-				</form>
-			</div>
-			<p 
-				class="comment-reply" 
-				ng-click="newComment.open = true"
-				ng-show="!newComment.open"
-			>
-				<a class="reply-option">
-					Reply
-				</a>
-			</p>
-			<p 
-				class="comment-reply" 
-				ng-click="newComment.open = false"
-				ng-show="newComment.open"
-			>
-				<a class="reply-option">
-					Cancel
-				</a>
-			</p>
-			
+		    </div>		
 		</div>
         
 		<div class="replies" ng-init="replies.open = false">
@@ -217,18 +190,21 @@
 		</div>
 		<a 
         	ng-click="replies.open = true" 
-        	ng-show="response.replies.length > 0 && !replies.open"
+        	ng-show="!replies.open"
         >
         	<div class="reply-toggle view-toggle">
-				<p>View Replies ({{ response.replies.length }})</p>
+				<p>
+					<span ng-show="response.replies.length > 0">Add/View Replies ({{ response.replies.length }})</span>
+					<span ng-show="response.replies.length < 1">Reply</span>
+				</p>
 			</div>
 		</a>
 		<a 
 			ng-click="replies.open = false"
-			ng-show="response.replies.length > 0 && replies.open"
+			ng-show="replies.open"
 		>
 			<div class="reply-toggle">
-				<p>Hide replies</p>
+				<p>Hide</p>
 			</div>
 		</a>
 	</div>

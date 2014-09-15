@@ -470,7 +470,7 @@ var aQueries = [
 			{
 				id : '1',
 				votes: 0,
-				favourite: false,
+				solution: false,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -568,7 +568,7 @@ var aQueries = [
 			{
 				id : '1',
 				votes: 0,
-				favourite: false,
+				solution: false,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -584,7 +584,7 @@ var aQueries = [
 			{
 				id : '2',
 				votes: 73,
-				favourite: true,
+				solution: true,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -646,7 +646,7 @@ var aQueries = [
 			{
 				id : '1',
 				votes: -13,
-				favourite: false,
+				solution: false,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -676,7 +676,7 @@ var aQueries = [
 			{
 				id : '2',
 				votes: 27,
-				favourite: true,
+				solution: true,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -736,7 +736,7 @@ var aQueries = [
 			{
 				id : '3',
 				votes: -7,
-				favourite: false,
+				solution: false,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -767,7 +767,7 @@ var aQueries = [
 			{
 				id : '5',
 				votes: 0,
-				favourite: false,
+				solution: false,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -783,7 +783,7 @@ var aQueries = [
 			{
 				id : '6',
 				votes: 0,
-				favourite: false,
+				solution: false,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -850,7 +850,7 @@ var aQueries = [
 			{
 				id : '1',
 				votes: 7,
-				favourite: true,
+				solution: true,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -880,7 +880,7 @@ var aQueries = [
 			{
 				id : '2',
 				votes: 0,
-				favourite: false,
+				solution: false,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -979,7 +979,7 @@ var aQueries = [
 			{
 				id : '1',
 				votes: 0,
-				favourite: false,
+				solution: false,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -1033,7 +1033,7 @@ var aQueries = [
 			{
 				id : '1',
 				votes: 2,
-				favourite: false,
+				solution: false,
 				imgs: [ 
 					{
 						name: 'placeholder',
@@ -1090,7 +1090,7 @@ var aQueries = [
 			{
 				id : '2',
 				votes: 3,
-				favourite: true,
+				solution: true,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -1145,7 +1145,7 @@ var aQueries = [
 			{
 				id : '1',
 				votes: 3,
-				favourite: false,
+				solution: false,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
@@ -1175,7 +1175,7 @@ var aQueries = [
 			{
 				id : '2',
 				votes: 17,
-				favourite: true,
+				solution: true,
 				imgs: [ 
 					{
 						name: 'placeholder',
@@ -1225,7 +1225,7 @@ var aQueries = [
 			{
 				id : '3',
 				votes: 7,
-				favourite: false,
+				solution: false,
 				author:{
 					id: 1, 
 					firstName: "Hamish",

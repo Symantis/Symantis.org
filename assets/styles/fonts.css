@@ -224,3 +224,6 @@
 .icon-vote-up:before {
   content: "v";
 }
+.icon-check:before {
+  content: "w";
+}
