@@ -158,17 +158,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-edit:before {
-  content: "a";
-}
 .icon-exit:before {
   content: "b";
 }
 .icon-hide:before {
   content: "c";
-}
-.icon-image:before {
-  content: "d";
 }
 .icon-link:before {
   content: "e";
@@ -184,9 +178,6 @@
 }
 .icon-reply:before {
   content: "j";
-}
-.icon-indent:before {
-  content: "k";
 }
 .icon-search:before {
   content: "l";
@@ -215,15 +206,24 @@
 .icon-social-google-plus:before {
   content: "s";
 }
-.icon-code-snippet:before {
-  content: "u";
-}
-.icon-vote-down:before {
-  content: "t";
-}
-.icon-vote-up:before {
-  content: "v";
+.icon-indent:before {
+  content: "k";
 }
 .icon-check:before {
   content: "w";
+}
+.icon-code-snippet:before {
+  content: "x";
+}
+.icon-pencil:before {
+  content: "a";
+}
+.icon-photo:before {
+  content: "d";
+}
+.icon-vote-up:before {
+  content: "u";
+}
+.icon-vote-down:before {
+  content: "y";
 }

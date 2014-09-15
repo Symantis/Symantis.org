@@ -89,6 +89,9 @@ and (max-width : rem-calc(1024px)) {
 	.top-nav {
 		.top-nav-container {
 			.row.fluid-row {
+				.top-nav-left {
+					padding-left: 0.6rem;
+				}
 				.top-nav-right {
 					padding-right: 0;
 					.top-nav-userOnline {

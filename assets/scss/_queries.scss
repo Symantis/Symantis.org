@@ -532,6 +532,7 @@
 				float: left;
 				position: relative;
 				padding-bottom: 0;
+				padding-top: rem-calc(4px);
 				ul {
 					list-style: none;
 					position: relative;
@@ -540,10 +541,20 @@
 					border-bottom: rem-calc(1px) $gray solid;
 					margin: 0;
 					li {
-						display: inline-block;
 						float: left;
+						padding: rem-calc(5px);
 						a {
-
+							color: $dark;
+							@include transition(100ms);
+							span {
+								font-size: rem-calc(15px);
+							}
+							&:hover {
+								color: $gray;
+							}
+						}
+						&:first-child {
+							padding-left: 0;
 						}
 					}
 				}
