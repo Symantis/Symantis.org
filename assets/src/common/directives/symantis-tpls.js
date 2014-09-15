@@ -254,7 +254,7 @@ angular.module('sy.templates.sitenav', [])
             }]
 	};
 }])
-.directive('topNavContainer', ['$document','$window','$state' ,function ($document, $window, $state) {
+.directive('topNavContainer', ['$document','$window','$state', '$timeout' ,function ($document, $window, $state, $timeout) {
         return {
             require: '^topNav',
             restrict: 'C',
@@ -265,15 +265,40 @@ angular.module('sy.templates.sitenav', [])
 	            element.css({ 
 			    	width: element.parent()[0].offsetWidth - 50 + 'px' 
 			    });
+
 			    win.bind("resize", function(){
 			    	element.css({ 
 				    	width: element.parent()[0].offsetWidth - 50 + 'px' 
 				    });
 			    });
+                var trytimeout = angular.noop;
+
 			    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
-	    			element.css({ 
+	    			console.log(fromState);
+                    console.log(toState);
+
+                    element.css({ 
 				    	width: element.parent()[0].offsetWidth - 50 + 'px' 
 				    });
+                    var toSplit = toState.name.split('.');
+                    var fromSplit = fromState.name.split('.');
+
+
+
+                    if((toSplit[0] != fromSplit[0])){
+                        
+                        $timeout.cancel(trytimeout);
+
+                        element.css({ 
+                            'margin-top' : - element[0].offsetHeight + 'px' 
+                        });
+
+                        trytimeout = $timeout(function(){
+                            element.css({ 
+                                'margin-top' : 0 + 'px' 
+                            }); 
+                        }, 1000);
+                    }
 	    		});
             }
         };

@@ -8,6 +8,11 @@
   opacity: 1;
 }
 
+.top-nav-container{
+-webkit-transition: margin .15s linear;
+transition: margin .15s linear;
+}
+
 /*Reveal Modal Animation*/
 
 .reveal-modal.fade {
