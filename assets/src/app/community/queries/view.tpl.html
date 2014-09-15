@@ -134,7 +134,7 @@
 	        	</div>
 		    </div>		
 		</div>
-        
+
 		<div class="replies" ng-init="replies.open = false">
 			<div 
 				class="reply" 
@@ -179,7 +179,7 @@
 			        		{{ currentUser.firstName }} {{ currentUser.lastName }}
 			        	</a>
 			        </p>
-					<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
+					<textarea name="new-comment-input" placeholder="Add Reply.."></textarea>
 					<a ui-sref="">
 						<div class="new-comment-submit">
 							<span class="icon-plus"></span>
@@ -188,6 +188,7 @@
 				</form>
 			</div>
 		</div>
+
 		<a 
         	ng-click="replies.open = true" 
         	ng-show="!replies.open"
@@ -207,6 +208,7 @@
 				<p>Hide</p>
 			</div>
 		</a>
+
 	</div>
 
 	<div class="view-more-comments" ng-show="query.response.length > 12">

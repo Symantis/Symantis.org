@@ -148,21 +148,46 @@
 						</p>
 				    </div>
 				</div>
+				<div class="new-comment" ng-show="replies.open">
+					<div class="new-comment-left">
+						<div 
+							class="reply-pic generate-image" 
+							signature="{{ currentUser.signature }}"
+						>
+						</div>
+					</div>
+					<form class="new-comment-form">
+						<p>
+				        	<a ui-sref="profile.view({handle: currentUser.handle})">
+				        		{{ currentUser.firstName }} {{ currentUser.lastName }}
+				        	</a>
+				        </p>
+						<textarea name="new-comment-input" placeholder="Add Reply.."></textarea>
+						<a ui-sref="">
+							<div class="new-comment-submit">
+								<span class="icon-plus"></span>
+							</div>
+						</a>
+					</form>
+				</div>
 			</div>
 			<a 
 	        	ng-click="replies.open = true" 
-	        	ng-show="comment.replies.length > 0 && !replies.open"
+	        	ng-show="!replies.open"
 	        >
 	        	<div class="reply-toggle view-toggle">
-					<p>View Replies ({{ comment.replies.length }})</p>
+					<p>
+						<span ng-show="comment.replies.length > 0">Add/View Replies ({{ comment.replies.length }})</span>
+						<span ng-show="comment.replies.length < 1">Reply</span>
+					</p>
 				</div>
 			</a>
 			<a 
 				ng-click="replies.open = false"
-				ng-show="comment.replies.length > 0 && replies.open"
+				ng-show="replies.open"
 			>
 				<div class="reply-toggle">
-					<p>Hide replies</p>
+					<p>Hide</p>
 				</div>
 			</a>
 		</div>
