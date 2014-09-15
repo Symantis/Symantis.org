@@ -490,16 +490,12 @@
 	}
 }
 .new-response {
-	padding-top: rem-calc(40px);
+	padding-top: rem-calc(30px);
 	width: 100%;
 	position: relative;
 	float: left;
-	.new-response-left {
-		float: left;
-		position: relative;
-		width: 3.6rem;
-		height: 100%;
-		.reply-pic {
+	.new-response-form {
+		/*.reply-pic {
 			width: rem-calc(40px);
 			height: rem-calc(40px);
 			float: left;
@@ -508,16 +504,13 @@
 			overflow: hidden;
 			display: block;
 			@include transition(100ms);
-		}
-	}
-	.new-comment-form {
-
+		}*/
 		position: relative;
 		float: left;
-		width: calc(100% - 3.6rem);
-		p {
+		width: 100%;
+		.new-response-title {
+			@include font-semi(rem-calc(14px));
 			a {
-				@include font-semi(rem-calc(14px));
 				color: $primary-color;
 				padding-bottom: rem-calc(10px);
 				display: inline-block;
@@ -526,48 +519,53 @@
 				}
 			}
 		}
-		textarea {
-			resize: none;
-			outline: none;
-			outline: 0;
-			-webkit-box-shadow: none;
-			box-shadow: none;
-			border: none;
-			border-left: rem-calc(1px) $gray solid;
-			border-top: rem-calc(1px) $gray solid;
-			border-bottom: rem-calc(1px) $gray solid;
-			background: rgba(255,255,255,0.0);
-			height: rem-calc(80px);
-			//border-radius: rem-calc(10px);
-			//border-bottom-left-radius: rem-calc(10px);
-			//border-top-left-radius: rem-calc(10px);
-			width: calc(100% - 3rem);
+		.new-response-inner {
 			float: left;
+			width: 100%;
+			position: relative;
+			border: rem-calc(1px) $gray solid;
+			min-height: rem-calc(140px);
+			.response-options {
+				padding: rem-calc(15px);
+				padding-bottom: 0;
+				width: 100%;
+				float: left;
+				position: relative;
+				padding-bottom: 0;
+				ul {
+					list-style: none;
+					position: relative;
+					float: left;
+					width: 100%;
+					border-bottom: rem-calc(1px) $gray solid;
+					margin: 0;
+					li {
+						display: inline-block;
+						float: left;
+						a {
+
+						}
+					}
+				}
+			}
+			textarea {
+				resize: vertical;
+				outline: none;
+				outline: 0;
+				margin: 0;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				border: none;
+				background: rgba(255,255,255,0.0);
+				height: rem-calc(140px);
+				width: 100%;
+				float: left;
+				padding: rem-calc(15px);
+			}
 			&:focus {
 				-webkit-box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.73);
 				-moz-box-shadow:    0px 0px 7px 0px rgba(50, 50, 50, 0.73);
 				box-shadow:         0px 0px 7px 0px rgba(50, 50, 50, 0.73);
-			}
-		}
-		.new-comment-submit {
-			float: left;
-			position: relative;
-			//margin-left: 0.2rem;
-			width: 3rem;
-			height: rem-calc(80px);
-			background-color: $gray;
-			//border-top-right-radius: rem-calc(10px);
-			//border-bottom-right-radius: rem-calc(10px);
-			@include transition(100ms);
-			span {
-				@include font-semi(rem-calc(18px));
-				color: white;
-				top: rem-calc(30px);
-				left: 0.9rem;
-				position: absolute;
-			}
-			&:hover {
-				background-color: darken($gray, 20%);
 			}
 		}
 	}

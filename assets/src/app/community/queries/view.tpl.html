@@ -219,20 +219,45 @@
 	</div>
 
 	<div class="new-response">
-		<div class="new-comment-left">
+		<form class="new-response-form">
 			<div 
 				class="reply-pic generate-image" 
 				signature="{{ currentUser.signature }}"
 			>
 			</div>
-		</div>
-		<form class="new-comment-form">
-			<p>
+			<p class="new-response-title">
+				New Response as 
 	        	<a ui-sref="profile.view({handle: currentUser.handle})">
 	        		{{ currentUser.firstName }} {{ currentUser.lastName }}
 	        	</a>
 	        </p>
-			<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
+	        <div class="new-response-inner">
+	        	<div class="response-options">
+			        <ul>
+			        	<li class="response-options-edit">
+			        		<a ui-sref="">
+			        			<span class="icon-edit"></span>
+			        		</a>
+			        	</li>
+			        	<li class="response-options-link">
+			        		<a ui-sref="">
+			        			<span class="icon-link"></span>
+			        		</a>
+			        	</li>
+			        	<li class="response-options-image">
+			        		<a ui-sref="">
+			        			<span class="icon-image"></span>
+			        		</a>
+			        	</li>
+			        	<li class="response-options-code">
+			        		<a ui-sref="">
+			        			<span class="icon-code-snippet"></span>
+			        		</a>
+			        	</li>
+			        </ul>
+			    </div>
+				<textarea name="new-response-input" placeholder="New Response.."></textarea>
+			</div>
 		</form>
 	</div>
 
