@@ -165,3 +165,24 @@ $uiAnimationTime: 0.14s;
   max-height:1000px;
   overflow:auto;
 }
+
+/*  ----- Comment, Response reply animation ----- */
+
+.ng-hide-add, .ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important; /* yes, important */
+}
+.slideToggle {
+  height: 100%;
+  overflow: hidden;
+  @include transition(400ms);
+}
+.slideToggle.ng-hide {
+  height: 0;
+}
+.slideToggle.ng-show {
+  height: 100%;
+}
+
+
+

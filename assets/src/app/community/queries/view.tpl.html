@@ -135,11 +135,10 @@
 		    </div>		
 		</div>
 
-		<div class="replies" ng-init="replies.open = false">
+		<div class="replies slideToggle" ng-init="replies.open = false" ng-show="replies.open">
 			<div 
 				class="reply" 
 				ng-repeat="reply in response.replies"
-				ng-show="replies.open"
 			>
 				<div class="reply-push">
 					<div class="icon-indent icon">
@@ -165,7 +164,7 @@
 					<p class="reply-text">{{reply.reply}}</p>
 			    </div>
 			</div>
-			<div class="new-comment" ng-show="replies.open">
+			<div class="new-comment slideToggle">
 				<div class="new-comment-left">
 					<div 
 						class="reply-pic generate-image" 
@@ -193,7 +192,7 @@
         	ng-click="replies.open = true" 
         	ng-show="!replies.open"
         >
-        	<div class="reply-toggle view-toggle">
+        	<div class="reply-toggle">
 				<p>
 					<span ng-show="response.replies.length > 0">Add/View Replies ({{ response.replies.length }})</span>
 					<span ng-show="response.replies.length < 1">Reply</span>
