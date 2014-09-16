@@ -4,7 +4,12 @@ body {
 .container{
 	height:100%;
 }
-
+::selection {
+  background: rgba(255,255,0,0.5); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: rgba(255,255,0,0.5); /* Gecko Browsers */
+}
 small {
 	@include font-regular(10px);
 }

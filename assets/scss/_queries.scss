@@ -432,7 +432,7 @@
 		}
 		.reply-toggle {
 			margin-bottom: 0;
-			//padding-right: 3.6rem;
+			padding-right: 3.6rem;
 			padding-bottom: rem-calc(10px);
 			p {
 				width: 100%;
@@ -446,6 +446,7 @@
 	}
 	.replies {
 		margin-top: rem-calc(10px);
+		padding-right: 3.6rem;
 		.reply {
 			padding-top: rem-calc(10px);
 			padding-bottom: rem-calc(20px);
@@ -462,6 +463,7 @@
 				position: relative;
 				width: 3.6rem;
 				height: 100%;
+				display: none;
 				.reply-pic {
 					width: rem-calc(40px);
 					height: rem-calc(40px);
@@ -475,6 +477,7 @@
 				}
 			}
 			.new-comment-form {
+				width: 100%;
 				textarea {
 					height: rem-calc(60px);
 					background-color: white;
@@ -573,14 +576,42 @@
 				float: left;
 				padding: rem-calc(15px);
 			}
-			&:focus {
-				-webkit-box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.73);
-				-moz-box-shadow:    0px 0px 7px 0px rgba(50, 50, 50, 0.73);
-				box-shadow:         0px 0px 7px 0px rgba(50, 50, 50, 0.73);
+		}
+		.new-response-post {
+			float: right;
+			width: auto;
+			p {
+				padding: rem-calc(10px);
+				padding-right: 0;
+				.sy-button {
+					margin-top: 0;
+				}
+			}
+		}
+		.new-response-preview {
+			float: right;
+			width: auto;
+			p {
+				padding: rem-calc(10px);
+				padding-right: 0;
+				.sy-button {
+					margin-top: 0;
+				}
 			}
 		}
 	}
 }
-
+.response-noUser {
+	float: left;
+	width: 100%;
+	border-top: rem-calc(1px) $gray solid;
+	margin-top: rem-calc(30px);
+	padding-top: rem-calc(10px);
+	h4 {
+		@include font-semi(rem-calc(14px));
+		color: $dark;
+		float: left;
+	}
+}
 
 

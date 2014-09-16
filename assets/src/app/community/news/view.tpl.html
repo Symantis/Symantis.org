@@ -156,7 +156,7 @@
 						</p>
 				    </div>
 				</div>
-				<div class="new-comment">
+				<div class="new-comment" ng-show="currentUser">
 					<div class="new-comment-left">
 						<div 
 							class="reply-pic generate-image" 
@@ -178,6 +178,9 @@
 						</a>
 					</form>
 				</div>
+				<h4 class="comment-noUser" ng-show="!currentUser">
+					<a>Sign up</a> to comment
+				</h4>
 			</div>
 			<a 
 	        	ng-click="replies.open = true" 

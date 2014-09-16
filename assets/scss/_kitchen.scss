@@ -14,17 +14,18 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	line-height: normal;
 	text-align: center;
 	text-decoration: none;
-	@include font-regular(rem-calc(14px));
+	@include font-regular(rem-calc(12));
 	color: $dark;
-	padding: rem-calc(10px) rem-calc(50px) rem-calc(10px) rem-calc(50px);
+	padding: rem-calc(10px) rem-calc(30px) rem-calc(10px) rem-calc(30px);
 	margin:0 0 1.25rem 0;
 	display: inline-block;
 	position: relative;
 	outline: none;
+	@include transition(200ms);
 	&:hover {
 		border-color: $primary-color;
 		color: white;
-		//background-color: rgba(0,0,0,0.0);
+		background-color: $primary-color;
 	}
 	&:focus {
 		background-color: rgba(0,0,0,0.0);
@@ -33,8 +34,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	}
 	&:active {
 		background-color: rgba(0,0,0,0.0);
-		border-color: $primary-color;
-		color: $primary-color;
+		border-color: $dark;
+		color: $dark;
 	}
 }
 .modal-button {
