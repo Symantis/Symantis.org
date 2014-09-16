@@ -284,7 +284,7 @@ angular.module('sy.templates.sitenav', [])
                     var fromSplit = fromState.name.split('.');
 
 
-
+                    /*
                     if((toSplit[0] != fromSplit[0])){
                         
                         $timeout.cancel(trytimeout);
@@ -299,10 +299,27 @@ angular.module('sy.templates.sitenav', [])
                             }); 
                         }, 1000);
                     }
+                    */
 	    		});
             }
         };
+}])
+.directive('topNavLeft', [function(){
+    return {
+        require: '^topNav',
+        restrict: 'C',
+        //replace: true,
+        transclude: true,
+        template: '<div ng-transclude></div><ul id="topNavLeftNav" class="f-dropdown"><li></li></ul>',
+        link: function($scope, element, attrs){
+            
+            //element.attr('dropdown-toggle', "#topNavLeftNav");
+            console.log(element);
+        }
+    }
 }]);
+
+
 
 angular.module('sy.templates.mainleft',['duScroll'])
 .directive('mainLeft', ['$document','$window','$timeout', function ($document, $window, $timeout){
