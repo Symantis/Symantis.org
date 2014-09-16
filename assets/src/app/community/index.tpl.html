@@ -19,9 +19,49 @@
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center">
     	<!-- Section for main center header -->
         <header></header>
-        <p><a ui-sref="community.news">Community - News</a></p>
-        <p><a ui-sref="community.queries">Community - Queries</a></p>
-        <p><a ui-sref="community.connections">Community - Connections</a></p>
+        <ul class="community-container">
+            <li class="community-pod">
+                <section class="pod-header">
+                    <div class="pod-header-left">
+                        <div 
+                            class="pod-user-pic generate-image" 
+                            signature="{{ currentUser.signature }}"
+                        >
+                        </div>
+                    </div>
+                    <h3>
+                        <a ui-sref="">Hamish Jackson-Mee </a>created a new Manti -<a ui-sref=""> syQuery</a><br />
+                        <span>3 hours ago</span>
+                    </h3>
+                    <div class="pod-options">
+                        <a ui-sref=""><span class="icon-vote-down"></span></a>
+                    </div>
+                </section>
+                <section class="pod-body">
+                    <p class="pod-description">Trust fund irony brunch small batch. Hoodie slow-carb post-ironic, yr American Apparel forage blog pork belly shabby chic 8-bit pour-over bicycle rights. PBR&B farm-to-table pickled tofu gluten-free pour-over, readymade fingerstache cardigan cray. Bicycle rights ethnic sustainable mumblecore Marfa, aesthetic banjo tattooed hashtag bitters. Distillery fanny pack food truck you probably haven't heard of them Truffaut, street art readymade mixtape farm-to-table. Flannel vegan cliche skateboard fap Carles, leggings scenester ennui aesthetic PBR&B. Gentrify pour-over cliche ugh, normcore plaid scenester art party put a bird on it drinking vinegar salvia gluten-free Vice.</p>
+                    <div class="pod-extra">
+                        <h4 class="pod-extra-title"></h4>
+                        <div class="pod-extra-content"></div>
+                    </div>
+                </section>
+                <section class="pod-footer">
+                    <div class="pod-reveal-comments">
+                        <p><a ui-sref="">Add/View Comments</a></p>
+                    </div>
+                    <div class="pod-reveal-share">
+                        <div class="reveal-share-button">
+                            <a ui-sref=""><span class="icon-dot-3"></span></a>
+                        </div>
+                        <ul class="pod-share-options">
+                            <li><a ui-sref=""><span class="icon-social-facebook"></span></a></li>
+                            <li><a ui-sref=""><span class="icon-social-twitter"></span></a></li>
+                            <li><a ui-sref=""><span class="icon-social-behance"></span></a></li>
+                            <li><a ui-sref=""><span class="icon-social-github"></span></a></li>
+                        </ul>
+                    </div>
+                </section>
+            </li>
+        </ul>
         <!-- Section for main center content -->
     </section>
     <section class="medium-0 large-2 columns main-right">

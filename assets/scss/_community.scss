@@ -1,0 +1,188 @@
+.community-header {
+	padding-bottom: 0 !important;
+}
+.community-category-nav {
+	ul {
+		list-style: none;
+		float: left;
+		position: relative;
+		width: 100%;
+		li {
+			padding: 0 !important;
+			margin: 0 !important;
+			line-height: 1;
+			float: left;
+			width: 100%;
+			position: relative;
+			a {
+				padding: 0 0 rem-calc(10px) 0;
+				margin: 0;
+				@include font-regular(12px);
+				color: darken($light, 10%);
+				@include transition(100ms);
+				line-height: 1.4;
+				float: left;
+				&:hover {
+					color: $dark;
+				}
+				&.selected {
+					color: $dark;
+				}
+			}
+		}
+	}
+}
+.community-container {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	float: left;
+	width: 100%;
+}
+.community-pod {
+	padding: rem-calc(15px);
+	margin: 0.6rem 0 0.6rem 0;
+	float: left;
+	width: 100%;
+	position: relative;
+	border: rem-calc(1px) $gray solid;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	.pod-header {
+		float: left;
+		width: 100%;
+		position: relative;
+		border-bottom: rem-calc(1px) $light solid;
+		padding: 0 0 rem-calc(15px) 0;
+		margin: 0 0 rem-calc(10px) 0;
+		.pod-header-left {
+			float: left;
+			position: relative;
+			width: 3rem;
+			.pod-user-pic {
+				width: rem-calc(40px);
+				height: rem-calc(40px);
+				float: left;
+				border: rem-calc(1px) black solid;
+				border-radius: rem-calc(20px);
+				overflow: hidden;
+				@include transition(100ms);
+			}
+		}
+		h3 {
+			float: left;
+			width: calc(100% - 3rem);
+			position: relative;
+			@include font-semi(14px);
+			color: $dark;
+			padding-top: rem-calc(2px);
+			padding-right: rem-calc(30px);
+			/*white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;*/
+			a {
+			}
+			span {
+				@include font-italic(rem-calc(12px));
+				color: $gray;
+			}
+		}
+		.pod-options {
+			position: absolute;
+			top: rem-calc(4px);
+			right: 0;
+			//z-index: 10;
+			a {
+				color: $gray;
+				@include transition(100ms);
+				&:hover {
+					color: $dark;
+				}
+			}
+		}
+	}
+	.pod-body {
+		p {
+			@include font-regular(12px);
+			width: 100%;
+			float: left;
+		}
+	}
+	.pod-footer {
+		float: left;
+		width: 100%;
+		border-top: rem-calc(1px) $light solid;
+		position: relative;
+		padding: rem-calc(10px) 0 0 0;
+		margin-top: rem-calc(10px);
+		.pod-reveal-comments {
+			float: left;
+			width: auto;
+			padding: 0;
+			p {
+				float: left;
+				width: auto;
+				@include font-semi(12px);
+				a {
+					@include transition(100ms);
+					color: $primary-color;
+					&:hover {
+						color: $dark;
+					}
+				}
+			}
+		}
+		.pod-reveal-share {
+			float: right;
+			width: auto;
+			position: relative;
+			margin-bottom: -1rem;
+			.reveal-share-button {
+				float: right;
+				width: auto;
+				margin: 0;
+				padding: 0;
+				a {
+					color: $gray;
+					@include transition(200ms);
+					span {
+						font-size: rem-calc(24px);
+						line-height: 0.4;
+					}
+					&:hover {
+						color: $dark;
+					}
+				}
+			}
+			.pod-share-options {
+				width: auto;
+				float: right;
+				position: relative;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				li {
+					float: left;
+					padding: 0 rem-calc(5px) 0 rem-calc(5px);
+					a {
+						color: $gray;
+						@include transition(200ms);
+						span {
+							font-size: rem-calc(24px);
+							line-height: 0.4;
+						}
+						&:hover {
+							color: $dark;
+						}
+					}
+					&:last-child {
+						padding-right: rem-calc(20px);
+					}
+				}
+			}
+		}
+	}
+}
+
+
