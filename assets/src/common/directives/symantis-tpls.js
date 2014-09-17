@@ -334,48 +334,11 @@ angular.module('sy.templates.sitenav', [])
 }]);
 
 angular.module('sy.templates.scroll',['duScroll'])
-.directive('backToTop', ['$document','$window','$timeout', '$state', function ($document, $window, $timeout, $state){
+.directive('backToTop', ['$document','$window', function ($document, $window){
     return {
         restrict: 'C',
         link: function ($scope, element, attrs){
-           var scrollToTopBtn = $scope.scrollToTopBtn = element;
             
-           //scrollToTopBtn.addClass('hide');           
-
-          /* 
-          $scope.toggleViewport = function(){
-            var viewport = angular.element($document[0].querySelector('[ui-view="main"]'));
-            var win = angular.element($window); 
-
-            var viewportHeight = viewport[0].offsetHeight;
-            var winHeight = win[0].innerHeight;
-
-            console.log(viewport[0].offsetHeight);
-            console.log(win[0].innerHeight); 
-
-            if(viewportHeight > winHeight){
-                console.log("Show");
-                $scope.hidden = false;
-                //scrollToTopBtn.addClass('hide');
-            }else{
-                console.log("Hide");
-                $scope.hidden = true;
-                //scrollToTopBtn.removeClass('hide');
-            }
-          } 
-
-          $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
-            
-            $scope.toggleViewport();
-            //$scope.$apply();
-
-          });
-
-          angular.element($window).bind('resize', function() {
-                $scope.toggleViewport();
-                //$scope.$apply();
-            });
-          */
           var viewport = angular.element($document[0].querySelector('.sitenav-push'));
           angular.element(viewport).bind("scroll", function() {
                 var scrollTop = viewport.scrollTop();
