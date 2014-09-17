@@ -18,12 +18,12 @@ angular.module( 'symantis.sitenav', [
 .controller( 'SiteNavCtrl', function SiteNavController( $scope, $state, config ) {
 
     var siteItems = [
-        {title: 'Home', translationKey: 'navigation:docs', url:'/home'},
-        {title: 'Get Started', translationKey: 'navigation:start', url:'/start'},
-        {title: 'Documentation', translationKey: 'navigation:docs', url:'/docs'},
-        {title: 'Community', translationKey: 'navigation:community', url:'/community'},
-        {title: 'Creator App', translationKey: 'navigation:creator', url:'/creator'},
-        {title: 'More', translationKey: 'navigation:more', url:'/more'}
+        {title: 'Home', translationKey: 'navigation:docs', url:'/home', sref:'home'},
+        {title: 'Get Started', translationKey: 'navigation:start', url:'/start', sref:'start'},
+        {title: 'Documentation', translationKey: 'navigation:docs', url:'/docs', sref:'docs'},
+        {title: 'Community', translationKey: 'navigation:community', url:'/community', sref:'community'},
+        {title: 'Creator App', translationKey: 'navigation:creator', url:'/creator', sref:'creator'},
+        {title: 'More', translationKey: 'navigation:more', url:'/more', sref:'more'}
     ];
 
     $scope.siteItems = siteItems;

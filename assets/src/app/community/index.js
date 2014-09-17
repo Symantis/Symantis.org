@@ -22,6 +22,7 @@ angular.module( 'symantis.community', [
 					controller: 'HeaderCtrl',
 	                templateUrl: 'header/header.tpl.html'
 				},
+
 				"subheader@community": {
 					controller: 'CommunityHeaderCtrl',
                 	templateUrl: 'community/header.tpl.html'

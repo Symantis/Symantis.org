@@ -19,26 +19,30 @@ angular.module('sy.templates.sitenav', [])
                 //$scope.open = false;
 
                 $scope.hide = function () {
-                    menuOpen = false;
-                    $timeout.cancel(trytimeout);
-                    $scope.$broadcast('trytimeout', { status: 'canceled'});
-                    sidebar.removeClass('sy-menu-open');
-                    $scope.$broadcast('menuOpened', { status: menuOpen});
+                    if(menuOpen != false){
+                        menuOpen = false;
+                        $timeout.cancel(trytimeout);
+                        $scope.$broadcast('trytimeout', { status: 'canceled'});
+                        sidebar.removeClass('sy-menu-open blur');
+                        $scope.$broadcast('menuOpened', { status: menuOpen});
+                    }
                     //console.log($scope.menuOpen);
                 };
                 $scope.show = function () {
-                    menuOpen = true;
-                    $timeout.cancel(trytimeout);
-                    $scope.$broadcast('trytimeout', { status: 'canceled'});
-                    sidebar.addClass('sy-menu-open');
-                    $scope.$broadcast('menuOpened', { status: menuOpen});
+                    if(menuOpen != true){
+                        menuOpen = true;
+                        $timeout.cancel(trytimeout);
+                        $scope.$broadcast('trytimeout', { status: 'canceled'});
+                        sidebar.addClass('sy-menu-open blur');
+                        $scope.$broadcast('menuOpened', { status: menuOpen});
+                    }
                     //console.log($scope.menuOpen);
                 };
                 $scope.toggle = function () {
 					menuOpen = menuOpen == true ? false : true;
                 	$timeout.cancel(trytimeout);
                 	$scope.$broadcast('trytimeout', { status: 'canceled'});
-                	sidebar.toggleClass("sy-menu-open");
+                	sidebar.toggleClass("sy-menu-open blur");
                 	$scope.$broadcast('menuOpened', { status: menuOpen});
                 	//console.log($scope.menuOpen);
                 }
@@ -49,9 +53,12 @@ angular.module('sy.templates.sitenav', [])
                     win.unbind("resize.body", $scope.hide);
                 });
 
+
                 $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
 	    			console.log("state changed");
-	    			$scope.hide();
+                    $scope.$broadcast('trytimeout', { status: 'canceled'});
+	    			//$scope.hide();
+                    sidebar.removeClass('blur');
 	    		});
                 /*
 	    		$scope.$on('menuOpened', function(event, status){
@@ -194,13 +201,14 @@ angular.module('sy.templates.sitenav', [])
                 $scope.$on('menuOpened', function(event, status){
 	    			//console.log(status);
 	    			console.log("menu updated "+ status.status);
+
 	    			if(status.status == false){
 	    				//$scope.currentShape = $scope.trident;
 	    				path
-  							.transition()
-                            .duration(400)
-    						.ease("linear")
-                            .attr('d', trident);
+  						.transition()
+                        .duration(400)
+    					.ease("linear")
+                        .attr('d', trident);
                             //.attr("transform", null);
 	    			}else{
 	    				//$scope.currentShape = $scope.cross;

@@ -106,13 +106,16 @@ angular.module( 'symantis', [
 	});
 })
 */
-.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout ) {
+.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
 	$timeout(function() {
 		ngProgress.complete();
 	}, 1000);
 	config.currentUser = window.currentUser;
+
+
+	
 
 });
 
