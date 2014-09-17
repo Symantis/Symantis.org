@@ -342,8 +342,9 @@ angular.module('sy.templates.scroll',['duScroll'])
             
            //scrollToTopBtn.addClass('hide');           
 
+          /* 
           $scope.toggleViewport = function(){
-            var viewport = angular.element($document[0].querySelector('.sitenav-push'));
+            var viewport = angular.element($document[0].querySelector('[ui-view="main"]'));
             var win = angular.element($window); 
 
             var viewportHeight = viewport[0].offsetHeight;
@@ -354,18 +355,37 @@ angular.module('sy.templates.scroll',['duScroll'])
 
             if(viewportHeight > winHeight){
                 console.log("Show");
-                scrollToTopBtn.addClass('hide');
+                $scope.hidden = false;
+                //scrollToTopBtn.addClass('hide');
             }else{
                 console.log("Hide");
-                scrollToTopBtn.removeClass('hide');
+                $scope.hidden = true;
+                //scrollToTopBtn.removeClass('hide');
             }
           } 
 
           $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
             
             $scope.toggleViewport();
+            //$scope.$apply();
 
           });
+
+          angular.element($window).bind('resize', function() {
+                $scope.toggleViewport();
+                //$scope.$apply();
+            });
+          */
+          var viewport = angular.element($document[0].querySelector('.sitenav-push'));
+          angular.element(viewport).bind("scroll", function() {
+                var scrollTop = viewport.scrollTop();
+                if(scrollTop > 0){
+                    $scope.hidden = false;
+                }else{
+                     $scope.hidden = true;
+                }
+         });
+
           $scope.scrollToTop = function(){
             var top = 0;
             var duration = 1000; //milliseconds
@@ -378,6 +398,7 @@ angular.module('sy.templates.scroll',['duScroll'])
 
         },
         controller: ['$scope', function($scope) {
+            $scope.hidden = true;
             $scope.backToTop = function(){
                 //console.log("Clicked!");
                 $scope.scrollToTop();

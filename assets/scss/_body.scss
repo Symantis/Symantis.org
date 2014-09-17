@@ -3,7 +3,7 @@ body {
 }
 .container{
 	height:100%;
-	position:relative;
+	//position:relative;
 }
 /* ----- Highlight color ------ */
 ::selection {
@@ -139,8 +139,13 @@ quote {
 }
 .back-to-top {
 	position: fixed;
-	bottom: 0.5rem;
-	right: 1rem;
+	bottom: 10px;
+	right: 25px;
+	opacity: 1;
+	@include transition(200ms);
+	&.hidden{
+		opacity:0;
+	}
 	a {
 		span {
 			font-size: rem-calc(40px);
