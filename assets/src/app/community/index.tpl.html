@@ -33,7 +33,7 @@
                         <a >Hamish Jackson-Mee </a>created a new Manti -<a > syQuery</a><br />
                         <span>3 hours ago</span>
                     </h3>
-                    <div class="pod-options-toggle">
+                    <div class="pod-options-reveal">
                         <a ng-click="podOptions.open = true">
                             <span class="icon-vote-down"></span>
                         </a>
@@ -42,8 +42,10 @@
                 <section class="pod-body">
                     <p class="pod-description">Trust fund irony brunch small batch. Hoodie slow-carb post-ironic, yr American Apparel forage blog pork belly shabby chic 8-bit pour-over bicycle rights. PBR&B farm-to-table pickled tofu gluten-free pour-over, readymade fingerstache cardigan cray. Bicycle rights ethnic sustainable mumblecore Marfa, aesthetic banjo tattooed hashtag bitters. Distillery fanny pack food truck you probably haven't heard of them Truffaut, street art readymade mixtape farm-to-table. Flannel vegan cliche skateboard fap Carles, leggings scenester ennui aesthetic PBR&B. Gentrify pour-over cliche ugh, normcore plaid scenester art party put a bird on it drinking vinegar salvia gluten-free Vice.</p>
                     <div class="pod-extra">
-                        <h4 class="pod-extra-title"></h4>
-                        <div class="pod-extra-content"></div>
+                        <h4 class="pod-extra-title">Preview</h4>
+                        <div class="pod-extra-content">
+                            <img src="http://placehold.it/350x150" />
+                        </div>
                     </div>
                 </section>
                 <section class="pod-footer">
@@ -51,31 +53,46 @@
                         <p><a >Add/View Comments</a></p>
                     </div>
                     <div class="pod-reveal-share">
-                        <div class="reveal-share-button">
+                        <div class="reveal-share-button" ng-click="podShare.open = true" ng-show="!podShare.open">
                             <a >
                                 <span class="icon-dot-3"></span>
                             </a>
                         </div>
-                        <ul class="pod-share-options">
-                            <li><a ><span class="icon-social-facebook"></span></a></li>
-                            <li><a ><span class="icon-social-twitter"></span></a></li>
-                            <li><a ><span class="icon-social-behance"></span></a></li>
-                            <li><a ><span class="icon-social-github"></span></a></li>
-                        </ul>
+                        <div class="reveal-share-button" ng-click="podShare.open = false" ng-show="podShare.open">
+                            <a >
+                                <span class="icon-exit share-button-small"></span>
+                            </a>
+                        </div>
                     </div>
                 </section>
-                
                 <section 
                     class="pod-options" 
                     ng-init="podOptions.open = false" 
                     ng-show="podOptions.open"
                 >
-                    <p class="pod-options-exit" ng-click="podOptions.open = false">Post Options<a ><span class="icon-exit"></span></a>
+                    <p 
+                        class="pod-options-exit" 
+                        ng-click="podOptions.open = false"
+                    >
+                        Post Options
+                        <a ><span class="icon-exit"></span></a>
                     </p>
                     <ul class="pod-options-list">
                         <li><a >Remove from Feed</a></li>
                         <li><a >Block User</a></li>
                         <li><a >Flag as inappropriate</a></li>
+                    </ul>
+                </section>
+                <section 
+                    class="pod-share"
+                    ng-init="podShare.open = false" 
+                    ng-show="podShare.open"
+                >
+                    <ul class="pod-share-options">
+                        <li><a ><span class="icon-social-facebook"></span></a></li>
+                        <li><a ><span class="icon-social-twitter"></span></a></li>
+                        <li><a ><span class="icon-social-behance"></span></a></li>
+                        <li><a ><span class="icon-social-github"></span></a></li>
                     </ul>
                 </section>
             </li>

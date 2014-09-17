@@ -41,12 +41,16 @@
 	list-style: none;
 }
 .community-pod {
+	//padding: 0 0 0 rem-calc(15px);
 	padding: rem-calc(15px);
-	margin: 0.6rem 0 0.6rem 0;
+	margin: 0.6rem 0 2rem 0;
 	float: left;
+	background-color: white;
 	width: 100%;
 	position: relative;
+	//border-left: rem-calc(5px) $light solid;
 	border: rem-calc(1px) $gray solid;
+	//border-radius: 8px;
 	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
@@ -89,11 +93,10 @@
 				color: $gray;
 			}
 		}
-		.pod-options-toggle {
+		.pod-options-reveal {
 			position: absolute;
 			top: rem-calc(4px);
 			right: rem-calc(4px);
-			//z-index: 10;
 			a {
 				color: $gray;
 				@include transition(100ms);
@@ -104,10 +107,37 @@
 		}
 	}
 	.pod-body {
+		float: left;
+		width: 100%;
+		position: relative;
 		p {
 			@include font-regular(12px);
 			width: 100%;
 			float: left;
+		}
+		.pod-extra {
+			float: left;
+			width: 100%;
+			position: relative;
+			h4 {
+				padding: rem-calc(5px) 0 rem-calc(5px) 0;
+				margin-bottom: rem-calc(10px);
+				@include font-semi(14px);
+				color: $dark;
+				width: 100%;
+				border-bottom: rem-calc(1px) $light solid;
+				float: left;
+			}
+			.pod-extra-content {
+				float: left;
+				width: 100%;
+				position: relative;
+				img {
+					max-width: 100%;
+					width: 100%;
+					height: auto;
+				}
+			}
 		}
 	}
 	.pod-footer {
@@ -151,41 +181,21 @@
 						font-size: rem-calc(24px);
 						line-height: 0.4;
 					}
+					.share-button-small {
+						font-size: rem-calc(14px);
+						padding-top: rem-calc(2px);
+					}
 					&:hover {
 						color: $dark;
 					}
 				}
 			}
-			.pod-share-options {
-				width: auto;
-				float: right;
-				position: relative;
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				li {
-					float: left;
-					padding: 0 rem-calc(5px) 0 rem-calc(5px);
-					a {
-						color: $gray;
-						@include transition(200ms);
-						span {
-							font-size: rem-calc(24px);
-							line-height: 0.4;
-						}
-						&:hover {
-							color: $dark;
-						}
-					}
-					&:last-child {
-						padding-right: rem-calc(20px);
-					}
-				}
-			}
+			
 		}
 	}
 	.pod-options {
 		position: absolute;
+		z-index: 10;
 		overflow: hidden;
 		top: rem-calc(40px);
 		right: rem-calc(14px);
@@ -241,6 +251,46 @@
 					background-color: $primary-color;
 					a {
 						color: white;
+					}
+				}
+			}
+		}
+	}
+	.pod-share {
+		position: absolute;
+		z-index: 10;
+		overflow: hidden;
+		bottom: 0;
+		right: rem-calc(-50px);
+		width: rem-calc(40px);
+		height: rem-calc(154px);
+		background-color: white;
+		border: rem-calc(1px) $gray solid;
+		-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+		-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+		box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+		.pod-share-options {
+			width: auto;
+			float: left;
+			position: relative;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			padding-top: rem-calc(5px);
+			li {
+				float: left;
+				width: 100%;
+				text-align: center;
+				padding: rem-calc(3px);
+				a {
+					color: $gray;
+					@include transition(200ms);
+					span {
+						font-size: rem-calc(24px);
+						line-height: 0.4;
+					}
+					&:hover {
+						color: $dark;
 					}
 				}
 			}

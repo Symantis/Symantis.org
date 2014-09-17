@@ -5,12 +5,18 @@ body {
 	height:100%;
 	position:relative;
 }
+/* ----- Highlight color ------ */
 ::selection {
-  background: rgba(255,255,0,0.5); /* WebKit/Blink Browsers */
+	//background: rgba(255,0,0,0.4);
+  	//background: rgba(255,255,0,0.4);
+  	background: rgba(112,191,83,0.4);
 }
 ::-moz-selection {
-  background: rgba(255,255,0,0.5); /* Gecko Browsers */
+	//background: rgba(255,0,0,0.4);
+  	//background: rgba(255,255,0,0.4);
+  	background: rgba(112,191,83,0.4);
 }
+
 small {
 	@include font-regular(10px);
 }
