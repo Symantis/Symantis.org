@@ -43,6 +43,7 @@
 .community-pod {
 	padding: rem-calc(15px);
 	margin: 2.5rem 0 0.6rem 0;
+	//margin: 0.6rem 0 2rem 0;
 	float: left;
 	background-color: white;
 	width: 100%;
@@ -294,6 +295,12 @@
 				}
 			}
 		}
+	}
+	&.active {
+		//border: rem-calc(3px) $primary-color solid;
+		-webkit-box-shadow: 1px 1px 9px 0px rgba(50, 50, 50, 0.6);
+		-moz-box-shadow:    1px 1px 9px 0px rgba(50, 50, 50, 0.6);
+		box-shadow:         1px 1px 9px 0px rgba(50, 50, 50, 0.6);
 	}
 }
 
