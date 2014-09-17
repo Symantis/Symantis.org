@@ -42,7 +42,7 @@
 }
 .community-pod {
 	padding: rem-calc(15px);
-	margin: 0.6rem 0 0.6rem 0;
+	margin: 2.5rem 0 0.6rem 0;
 	float: left;
 	width: 100%;
 	position: relative;
@@ -248,4 +248,11 @@
 	}
 }
 
+.bottom-article {
+	margin-top: rem-calc(100px);
+	margin-bottom: rem-calc(5px);
+	width:100%;
+	height: rem-calc(1px);
+	background-color: $dark;
 
+}
