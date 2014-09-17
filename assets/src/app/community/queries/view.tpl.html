@@ -11,13 +11,13 @@
 		</section>
 		<section class="query-content">
 			<div class="query-content-main">
-				<p class="query-content-p">{{ query.query }}<br /><a href="#">Find it here. Link Example.</a></p>
+				<p class="query-content-p">{{ query.query }}<br /><a >Find it here. Link Example.</a></p>
 				<div class="code-snippet">
 					<code>Sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code </code>
 		        </div>
 		        <div class="image-thumbs" ng-show="query.imgs">
 		        	<div class="thumbnail-container" ng-repeat="img in query.imgs">
-		        		<a ui-sref="">
+		        		<a >
 		                    <img ng-src="{{ img.src }}" />
 		                </a>
 		        	</div>
@@ -73,7 +73,7 @@
 			</a>
 		</h4>
 		<p>
-			<a ui-sref="">Sort by <span class="icon-vote-down icon"></span></a>
+			<a >Sort by <span class="icon-vote-down icon"></span></a>
 		</p>
 	</div>
 	<div 
@@ -88,8 +88,7 @@
 			>
 			</div>
 			<p class="response-voting">
-				<a 
-					ui-sref="" 
+				<a  
 					class="vote-up" 
 					ng-click="response.votes = response.votes + 1"
 				>
@@ -99,7 +98,6 @@
 					{{ response.votes | number }}
 				</span>
 				<a 
-					ui-sref="" 
 					class="vote-down" 
 					ng-click="response.votes = response.votes - 1"
 				>
@@ -125,7 +123,7 @@
 			</p>
 			<div class="image-thumbs" ng-show="response.imgs">
 	        	<div class="thumbnail-container" ng-repeat="img in response.imgs">
-	        		<a ui-sref="">
+	        		<a >
 	                    <img ng-src="{{ img.src }}" />
 	                </a>
 	        	</div>
@@ -176,7 +174,7 @@
 			        	</a>
 			        </p>
 					<textarea name="new-comment-input" placeholder="Add Reply.."></textarea>
-					<a ui-sref="">
+					<a >
 						<div class="new-comment-submit">
 							<span class="icon-plus"></span>
 						</div>
@@ -211,7 +209,7 @@
 	</div>
 
 	<div class="view-more-comments" ng-show="query.response.length > 12">
-		<a ui-sref="">
+		<a >
 			<p>More Responses</p>
 		</a>
 	</div>
@@ -233,22 +231,22 @@
 	        	<div class="response-options">
 			        <ul>
 			        	<li class="response-options-edit">
-			        		<a ui-sref="">
+			        		<a >
 			        			<span class="icon-pencil"></span>
 			        		</a>
 			        	</li>
 			        	<li class="response-options-link">
-			        		<a ui-sref="">
+			        		<a >
 			        			<span class="icon-link"></span>
 			        		</a>
 			        	</li>
 			        	<li class="response-options-image">
-			        		<a ui-sref="">
+			        		<a >
 			        			<span class="icon-photo"></span>
 			        		</a>
 			        	</li>
 			        	<li class="response-options-code">
-			        		<a ui-sref="">
+			        		<a >
 			        			<span class="icon-code-snippet"></span>
 			        		</a>
 			        	</li>
@@ -257,16 +255,16 @@
 				<textarea name="new-response-input" placeholder="Response.."></textarea>
 			</div>
 			<div class="new-response-post">
-				<p><a ui-sref="" class="sy-button">Post</a></p>
+				<p><a class="sy-button">Post</a></p>
 			</div>
 			<div class="new-response-preview">
-				<p><a ui-sref="" class="sy-button">Preview</a></p>
+				<p><a class="sy-button">Preview</a></p>
 			</div>
 		</form>
 	</div>
 
 	<div class="response-noUser" ng-show="!currentUser">
-		<h4><a ui-sref="">Sign up</a> to Respond</h4>
+		<h4><a >Sign up</a> to Respond</h4>
 	</div>
 
 </div>

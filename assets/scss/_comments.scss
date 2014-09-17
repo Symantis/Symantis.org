@@ -147,7 +147,7 @@
 					font-size: rem-calc(16px);
 				}
 				.comment-votes {
-					@include font-semi(rem-calc(12px));
+					@include font-regular(rem-calc(12px));
 					color: darken($light, 30%);
 					padding-left: rem-calc(2px);
 				}

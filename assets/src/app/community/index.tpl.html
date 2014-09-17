@@ -33,8 +33,10 @@
                         <a >Hamish Jackson-Mee </a>created a new Manti -<a > syQuery</a><br />
                         <span>3 hours ago</span>
                     </h3>
-                    <div class="pod-options">
-                        <a ><span class="icon-vote-down"></span></a>
+                    <div class="pod-options-toggle">
+                        <a ng-click="podOptions.open = true">
+                            <span class="icon-vote-down"></span>
+                        </a>
                     </div>
                 </section>
                 <section class="pod-body">
@@ -46,11 +48,13 @@
                 </section>
                 <section class="pod-footer">
                     <div class="pod-reveal-comments">
-                        <p><a>Add/View Comments</a></p>
+                        <p><a >Add/View Comments</a></p>
                     </div>
                     <div class="pod-reveal-share">
                         <div class="reveal-share-button">
-                            <a ><span class="icon-dot-3"></span></a>
+                            <a >
+                                <span class="icon-dot-3"></span>
+                            </a>
                         </div>
                         <ul class="pod-share-options">
                             <li><a ><span class="icon-social-facebook"></span></a></li>
@@ -59,6 +63,20 @@
                             <li><a ><span class="icon-social-github"></span></a></li>
                         </ul>
                     </div>
+                </section>
+                
+                <section 
+                    class="pod-options" 
+                    ng-init="podOptions.open = false" 
+                    ng-show="podOptions.open"
+                >
+                    <p class="pod-options-exit" ng-click="podOptions.open = false">Post Options<a ><span class="icon-exit"></span></a>
+                    </p>
+                    <ul class="pod-options-list">
+                        <li><a >Remove from Feed</a></li>
+                        <li><a >Block User</a></li>
+                        <li><a >Flag as inappropriate</a></li>
+                    </ul>
                 </section>
             </li>
         </ul>

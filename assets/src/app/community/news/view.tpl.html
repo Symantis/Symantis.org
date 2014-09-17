@@ -18,7 +18,7 @@
 	        <section class="news-page-footer">
 				<div class="news-page-share">
 	                <div class="twitter-share">
-	                    <a href="#">
+	                    <a >
 	                        <div class="icon-social-twitter icon"></div>
 	                    </a>
 	                    <div class="share-count">
@@ -26,7 +26,7 @@
 	                    </div>
 	                </div>
 	                <div class="facebook-share">
-	                    <a href="#">
+	                    <a >
 	                        <div class="icon-social-facebook icon"></div>
 	                    </a>
 	                    <div class="share-count">
@@ -58,7 +58,7 @@
 					ng-class="{active: comments.selected}" 
 					ng-click="comments.selected = true"
 				>
-					{{ article.comments.length }} Comments
+					{{ article.comments.length }} Comment<span ng-show="article.comments.length > 1">s</span>
 				</a>
 			</h4>
 			<h4>
@@ -76,7 +76,7 @@
 				</a>
 			</h4>
 			<p>
-				<a ui-sref="">Sort by <span class="icon-vote-down icon"></span></a>
+				<a >Sort by <span class="icon-vote-down icon"></span></a>
 			</p>
 		</div>
 		
@@ -105,7 +105,7 @@
 					{{ comment.comment }}
 				</p>
 				<p class="comment-reply">
-					<a ui-sref="">
+					<a >
 						<span class="icon-vote-up"></span>
 						<span 
 							class="comment-votes" 
@@ -114,7 +114,7 @@
 							{{ comment.upVotes | number }}
 						</span>
 					</a>
-					<a ui-sref="">
+					<a >
 						<span class="icon-vote-down"></span>
 						<span 
 							class="comment-votes"
@@ -123,7 +123,7 @@
 							{{ comment.downVotes | number }}
 						</span>
 					</a>
-					<a class="reply-option" ui-sref="">Reply</a>
+					<a class="reply-option" >Reply</a>
 				</p>
 			</div>
 	        
@@ -171,7 +171,7 @@
 				        	</a>
 				        </p>
 						<textarea name="new-comment-input" placeholder="Add Reply.."></textarea>
-						<a ui-sref="">
+						<a >
 							<div class="new-comment-submit">
 								<span class="icon-plus"></span>
 							</div>
@@ -204,7 +204,7 @@
 		</div>
 
 		<div class="view-more-comments" ng-show="article.comments.length > 12">
-			<a ui-sref="">
+			<a >
 				<p>More Comments</p>
 			</a>
 		</div>
@@ -224,7 +224,7 @@
 		        	</a>
 		        </p>
 				<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
-				<a ui-sref=""><div class="new-comment-submit"><span class="icon-plus"></span></div></a>
+				<a ><div class="new-comment-submit"><span class="icon-plus"></span></div></a>
 			</form>
 		</div>
 

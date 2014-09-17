@@ -89,10 +89,10 @@
 				color: $gray;
 			}
 		}
-		.pod-options {
+		.pod-options-toggle {
 			position: absolute;
 			top: rem-calc(4px);
-			right: 0;
+			right: rem-calc(4px);
 			//z-index: 10;
 			a {
 				color: $gray;
@@ -179,6 +179,68 @@
 					}
 					&:last-child {
 						padding-right: rem-calc(20px);
+					}
+				}
+			}
+		}
+	}
+	.pod-options {
+		position: absolute;
+		overflow: hidden;
+		top: rem-calc(40px);
+		right: rem-calc(14px);
+		width: rem-calc(180px);
+		height: rem-calc(133px);
+		background-color: white;
+		border: rem-calc(1px) $gray solid;
+		-webkit-box-shadow: 1px 1px 8px 0px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow:    1px 1px 8px 0px rgba(50, 50, 50, 0.75);
+		box-shadow:         1px 1px 8px 0px rgba(50, 50, 50, 0.75);
+		.pod-options-exit {
+			border-bottom: rem-calc(1px) $gray solid;
+			float: left;
+			width: 100%;
+			padding: rem-calc(6px) rem-calc(8px) rem-calc(7px) rem-calc(8px);
+			margin: 0;
+			@include font-semi(rem-calc(12px));
+			color: $dark;
+			a {
+				@include font-regular(rem-calc(10px));
+				color: $gray;
+				float: right;
+				padding-top: rem-calc(3px);
+				@include transition(100ms);
+				&:hover {
+					color: $dark;
+				}
+			}
+		}
+		ul {
+			list-style: none;
+			float: left;
+			position: relative;
+			margin: 0;
+			padding: 0;
+			li {
+				width: 100%;
+				float: left;
+				border-bottom: rem-calc(1px) $light solid;
+				@include transition(100ms);
+				a {
+					@include font-regular(rem-calc(12px));
+					color: $gray;
+					padding: rem-calc(6px) rem-calc(4px) rem-calc(7px) rem-calc(8px);
+					width: 100%;
+					float: left;
+					@include transition(100ms);
+				}
+				&:last-child {
+					border-bottom: none;
+				}
+				&:hover {
+					background-color: $primary-color;
+					a {
+						color: white;
 					}
 				}
 			}
