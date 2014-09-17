@@ -1,4 +1,10 @@
-angular.module("sy.templates", ['sy.templates.sitenav', 'sy.templates.homeanimation', 'sy.templates.userimage', 'sy.templates.mainleft']);
+angular.module("sy.templates", [
+    'sy.templates.sitenav', 
+    'sy.templates.homeanimation', 
+    'sy.templates.userimage', 
+    'sy.templates.mainleft',
+    'sy.templates.scroll'
+]);
 
 /*
  * sySiteNavToggle - Provides site nav menu functionality
@@ -327,7 +333,58 @@ angular.module('sy.templates.sitenav', [])
     }
 }]);
 
+angular.module('sy.templates.scroll',['duScroll'])
+.directive('backToTop', ['$document','$window','$timeout', '$state', function ($document, $window, $timeout, $state){
+    return {
+        restrict: 'C',
+        link: function ($scope, element, attrs){
+           var scrollToTopBtn = $scope.scrollToTopBtn = element;
+            
+           //scrollToTopBtn.addClass('hide');           
 
+          $scope.toggleViewport = function(){
+            var viewport = angular.element($document[0].querySelector('.sitenav-push'));
+            var win = angular.element($window); 
+
+            var viewportHeight = viewport[0].offsetHeight;
+            var winHeight = win[0].innerHeight;
+
+            console.log(viewport[0].offsetHeight);
+            console.log(win[0].innerHeight); 
+
+            if(viewportHeight > winHeight){
+                console.log("Show");
+                scrollToTopBtn.addClass('hide');
+            }else{
+                console.log("Hide");
+                scrollToTopBtn.removeClass('hide');
+            }
+          } 
+
+          $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+            
+            $scope.toggleViewport();
+
+          });
+          $scope.scrollToTop = function(){
+            var top = 0;
+            var duration = 1000; //milliseconds
+            var viewport = angular.element($document[0].querySelector('.sitenav-push'));
+            //Scroll to the exact position
+            viewport.scrollTop(top, duration).then(function() {
+              console.log('You just scrolled to the top!');
+            });
+          }
+
+        },
+        controller: ['$scope', function($scope) {
+            $scope.backToTop = function(){
+                //console.log("Clicked!");
+                $scope.scrollToTop();
+            }
+        }]
+    }
+}]);
 
 angular.module('sy.templates.mainleft',['duScroll'])
 .directive('mainLeft', ['$document','$window','$timeout', function ($document, $window, $timeout){
