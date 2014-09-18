@@ -24,5 +24,14 @@ angular.module( 'symantis.profile.view', [
 
 })
 .controller( 'ProfileViewLeftsideCtrl', function ProfileViewLeftsideController( $scope ) {
-	//titleService.setTitle('About');
+	
+})
+.controller( 'ProfileMessageCtrl', function ProfileMessageController( $scope ) {
+
+})
+.controller( 'ProfileConnectCtrl', function ProfileConnectController( $scope ) {
+
+})
+.controller( 'ProfileInviteCtrl', function ProfileInviteController( $scope ) {
+
 });

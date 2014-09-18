@@ -3,7 +3,7 @@
         <!-- Section on left of heading -->
     </section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
-        <h1>{{ user.firstName + ' ' + user.lastName }}</h1>
+        <h1><a ui-sref="profile.view({handle: user.handle})">{{ user.firstName + ' ' + user.lastName }}</a></h1>
     </section>
     <section class="medium-0 large-2 columns heading-right">
         <!-- Section on right of heading -->
@@ -16,7 +16,7 @@
     	<!-- Section for main left header -->
         </div>
     </section>
-    <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center profile-center">
+    <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center profile-center" ui-view="profile">
     	<!-- Section for main center header -->
         <header class="profile-header profile-about-header">
         	<h3>About</h3>

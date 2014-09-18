@@ -41,6 +41,33 @@ angular.module( 'symantis.profile', ['symantis.profile.view'
 				}
 			}
 		})
+		.state('profile.view.message',{
+			url: '/message',
+			views: {
+				"profile@profile.view": {
+					controller: 'ProfileMessageCtrl',
+					templateUrl: 'profile/view/message.tpl.html'
+				}
+			}
+		})
+		.state('profile.view.connect',{
+			url: '/connect',
+			views: {
+				"profile@profile.view": {
+					controller: 'ProfileConnectCtrl',
+					templateUrl: 'profile/view/connect.tpl.html'
+				}
+			}
+		})
+		.state('profile.view.invite',{
+			url: '/invite',
+			views: {
+				"profile@profile.view": {
+					controller: 'ProfileInviteCtrl',
+					templateUrl: 'profile/view/invite.tpl.html'
+				}
+			}
+		})
 	;
 })
 
