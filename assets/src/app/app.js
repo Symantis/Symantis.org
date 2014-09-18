@@ -6,9 +6,10 @@ angular.module( 'symantis', [
 	'lodash',
 	'ngIdle',
 	'ngAnimate',
-	'mm.foundation',
-	
+
 	//Directives, Templates, Etc...
+	'mm.foundation',
+	'xeditable',
 	'sy.templates',
 
 	'templates-app',
@@ -99,6 +100,10 @@ angular.module( 'symantis', [
 .run( function run () {
 	moment.lang('en');
 	
+})
+
+.run(function(editableOptions) {
+  editableOptions.theme = 'default'; // bootstrap3 theme. Can be also 'bs2', 'default'
 })
 
 .run( function run ($rootScope, $sails, lodash) {
