@@ -1,13 +1,13 @@
 <section class="top-nav-left medium-3 large-2 large-offset-1 columns">
-	<a ui-sref="profile"><span>Profiles</span></a>
+	<a ui-sref="me"><span>My Profile</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="community.connections" ng-class="{active:isActive('/community/connections')}"><span>Connections</span></a>
+	<a ui-sref="me.connections" ng-class="{active: $state.includes('me.connections')}"><span>Connections</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="profile" ng-class="{active:isActive('/profile')}"><span>Browse</span></a>
+	<a ui-sref="me.manti" ng-class="{active: $state.includes('me.manti')}"><span>My Manti</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="profile" ng-class="{active:isActive('/profile')}"><span></span></a>
+	<a ui-sref="notifications" ng-class="{active: $state.includes('me.notifications')}"><span>Notifications</span></a>
 </section>
 				
