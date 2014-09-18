@@ -1,5 +1,7 @@
 angular.module( 'symantis.me', [
-
+	'symantis.me.connections',
+	'symantis.me.manti',
+	'symantis.me.notifications'
 ])
 
 .config(function config( $stateProvider ) {
@@ -26,6 +28,45 @@ angular.module( 'symantis.me', [
 				"leftside@profile": {
 					controller: 'MeLeftsideCtrl',
 					templateUrl: 'me/leftside.tpl.html'
+				}
+			}
+		})
+		.state( 'me.connections', {
+			url: '/connections',
+			views: {
+				"main@": {
+					controller: 'ConnectionsCtrl',
+					templateUrl: 'me/connections/index.tpl.html'
+				},
+				"leftside@me.connections": {
+					controller: 'MeConnectionsLeftsideCtrl',
+                	templateUrl: 'me/connections/leftside.tpl.html'
+				}
+			}
+		})
+		.state( 'me.manti', {
+			url: '/manti',
+			views: {
+				"main@": {
+					controller: 'MantiCtrl',
+					templateUrl: 'me/manti/index.tpl.html'
+				},
+				"leftside@me.manti": {
+					controller: 'MeMantiLeftsideCtrl',
+                	templateUrl: 'me/manti/leftside.tpl.html'
+				}
+			}
+		})
+		.state( 'me.notifications', {
+			url: '/notifications',
+			views: {
+				"main@": {
+					controller: 'MantiCtrl',
+					templateUrl: 'me/notifications/index.tpl.html'
+				},
+				"leftside@me.notifications": {
+					controller: 'MeNotificationsLeftsideCtrl',
+                	templateUrl: 'me/notifications/leftside.tpl.html'
 				}
 			}
 		})
