@@ -132,11 +132,19 @@
 						padding-top: rem-calc(5px);
 						margin-left: rem-calc(10px);
 						height: rem-calc(19px);
+						.link-hint {
+							bottom: rem-calc(-20px);
+							right: rem-calc(2px);
+						}
 					}
 					.top-nav-settings {
 						padding-top: rem-calc(4px);
 						margin-left: rem-calc(10px);
 						height: rem-calc(19px);
+						.link-hint {
+							bottom: rem-calc(-20px);
+							right: rem-calc(-20px);
+						}
 					}
 					.icon {
 						@include icon(rem-calc(16px),$gray);

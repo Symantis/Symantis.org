@@ -25,14 +25,17 @@
 								<a ui-sref="me">{{ currentUser.firstName }}</a>
 							</p>
 						</li>
-						<li class="top-nav-messages">
-							<a >
+						<li class="top-nav-messages" ng-init="messageHint.open = false">
+							<a ng-mouseover="messageHint.open = true" ng-mouseleave="messageHint.open = false">
 								<div class="icon-message icon"></div>
+								<span class="link-hint" ng-show="messageHint.open">Messages</span>
 							</a>
+							
 						</li>
-						<li class="top-nav-settings">
-							<a >
+						<li class="top-nav-settings" ng-init="settingsHint.open = false">
+							<a ng-mouseover="settingsHint.open = true" ng-mouseleave="settingsHint.open = false">
 								<div class="icon-settings icon"></div>
+								<span class="link-hint" ng-show="settingsHint.open">Settings</span>
 							</a>
 						</li>
 					</ul>
