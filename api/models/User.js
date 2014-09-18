@@ -28,6 +28,10 @@ module.exports = {
 		signature : {
 			type: 'string'
 		},
+		about : {
+			type: 'string',
+			defaultsTo: null
+		},
 		message_count: {
 			type: 'number'
 		},
