@@ -1,13 +1,7 @@
 <% if (currentUser !== undefined) { %>
 <script>
-	var currentUser = {
-		id: '<%= currentUser.id %>',
-		username: '<%= currentUser.username %>',
-		email: '<%= currentUser.email %>',
-		first_name: '<%= currentUser.first_name %>',
-		createdAt: '<%= currentUser.createdAt %>',
-		updatedAt: '<%= currentUser.updatedAt %>'
-	};
+	var currentUser = <%- JSON.stringify(currentUser) %>;
+	console.log(currentUser);
 </script>
 <% } %>
 

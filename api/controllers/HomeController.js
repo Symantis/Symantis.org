@@ -15,6 +15,8 @@ module.exports = {
 			navItems.push({url: '/register', cssClass: 'fa fa-briefcase', title: 'Register'});
 			navItems.push({url: '/login', cssClass: 'fa fa-comments', title: 'Login'});
 		}
+		
+		console.log(req.user);
 
 		res.view({
 			title: 'Home',

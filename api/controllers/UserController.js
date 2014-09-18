@@ -21,9 +21,10 @@ module.exports = {
 
 	create: function (req, res) {
 		var model = {
-			username: req.param('username'),
+			handle: req.param('handle'),
 			email: req.param('email'),
-			first_name: req.param('first_name')
+			firstName: req.param('firstName'),
+			lastName: req.param('lastName')
 		};
 
 		User.create(model)

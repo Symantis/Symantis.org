@@ -13,13 +13,14 @@ module.exports = {
 			unique: true
 		},
 		firstName: {
-			type: 'string',
-			required: true
+			type: 'string'
 		},
 		lastName: {
-			type: 'string',
-			required: true
+			type: 'string'
 		},
+		getFullName: function (){
+      		return this.firstName + ' ' + this.lastName;
+    	},
 		at : {
 			type: 'string',
 			defaultsTo: '@'
@@ -35,7 +36,10 @@ module.exports = {
 			collection: 'message',
 			via: 'user'
 		},
-		passports : { collection: 'Passport', via: 'user' }
+		passports : { 
+			collection: 'Passport', 
+			via: 'user' 
+		}
 	},
 
 	getAll: function() {

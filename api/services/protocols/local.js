@@ -24,16 +24,17 @@ var validator = require('validator');
  */
 exports.register = function (req, res, next) {
   var email    = req.param('email')
-    , username = req.param('username')
+    , handle = req.param('handle')
     , password = req.param('password')
-    , first_name = req.param('first_name');
+    , firstName = req.param('firstName')
+    , lastName = req.param('lastName');
 
   if (!email) {
     req.flash('error', 'Error.Passport.Email.Missing');
     return next(new Error('No email was entered.'));
   }
 
-  if (!username) {
+  if (!handle) {
     req.flash('error', 'Error.Passport.Username.Missing');
     return next(new Error('No username was entered.'));
   }
@@ -43,15 +44,16 @@ exports.register = function (req, res, next) {
     return next(new Error('No password was entered.'));
   }
 
-  if (!first_name) {
+  if (!firstName) {
     req.flash('error', 'Error.Passport.Email.Missing');
     return next(new Error('No first name was entered.'));
   }
 
   User.create({
-    username : username,
+    handle : handle,
     email    : email,
-  	first_name: first_name
+  	firstName: firstName,
+    lastName: lastName
   }).exec(function (err, user) {
     if (err) {
       req.flash('error', 'Error.Passport.User.Exists');
@@ -124,7 +126,7 @@ exports.login = function (req, identifier, password, next) {
     query.email = identifier;
   }
   else {
-    query.username = identifier;
+    query.handle = identifier;
   }
 
   User.findOne(query).exec(function (err, user) {

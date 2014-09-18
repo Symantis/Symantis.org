@@ -30,10 +30,10 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'index'
   },
-
+  
+  'get /logout': 'AuthController.logout',
   /*
   'get /login': 'AuthController.login',
-  'get /logout': 'AuthController.logout',
   'get /register': 'AuthController.register',
   */
 

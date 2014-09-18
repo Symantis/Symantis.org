@@ -1,5 +1,7 @@
 angular.module( 'symantis.register', [
+
 ])
+
 
 .config(function config( $stateProvider, $urlRouterProvider) {
 
@@ -7,7 +9,7 @@ angular.module( 'symantis.register', [
 		url: '/register',
 		views: {
 			"main": {
-				controller: 'registerCtrl',
+				controller: 'RegisterCtrl',
 				templateUrl: 'register/index.tpl.html'
 			},
 			"sitenav": {
@@ -25,6 +27,8 @@ angular.module( 'symantis.register', [
 		}
 	});
 })
+
+
 
 .controller( 'RegisterCtrl', function RegisterController( $scope, titleService ) {
 	titleService.setTitle('Register');
