@@ -3,13 +3,19 @@
 	<a ui-sref="profile"><span>Profiles</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="profile" ng-class="{active:isActive('/profile')}"><span>Find</span></a>
+	<a ui-sref="profile.find" ng-class="{active: $state.includes('profile.find')}">
+		<span>Find</span>
+	</a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<!-- Section for the user to browse profiles, could be suggested profiles -->
-	<a ui-sref="profile" ng-class="{active:isActive('/profile')}"><span>Browse</span></a>
+	<a ui-sref="profile.browse" ng-class="{active: $state.includes('profile.browse')}">
+		<span>Browse</span>
+	</a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="community.connections" ng-class="{active:isActive('/community/connections')}"><span></span></a>
+	<a ui-sref="profile.suggested" ng-class="{active: $state.includes('profile.suggested')}">
+		<span>Suggested</span>
+	</a>
 </section>
 				
