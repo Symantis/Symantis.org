@@ -1,37 +1,13 @@
 <!-- Section for main left header -->
-        <header class="left-header">
-            <h3><a >Online</a></h3>
-        </header>
-        <div class="left-content">
-            <div class="connections-online-nav">
-                <ul>
-                    <li class="animate-repeat" ng-repeat="user in users">
-                        <a 
-                            ui-sref="profile.view({ handle: user.handle })" 
-                            ng-show="user.status == 'online'"
-                        >
-                            <p>{{ user.firstName + ' ' + user.lastName }}</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <header class="connections-suggestions-header left-header">
-            <h3><a ui-sref="profile">Suggestions</a></h3>
-        </header>
-        <div class="left-content">
-            <div class="connections-suggestions-nav">
-                <ul>
-                    <li 
-                        class="animate-repeat" 
-                        ng-repeat="user in users"
-                    >
-                        <a ui-sref="profile.view({ handle: user.handle })">
-                            <div class="connections-suggestions-pic suggestions-{{ user.status }} generate-image" signature="{{ user.signature }}"></div>
-                            <p class="connections-suggestions-name">{{ user.firstName + ' ' + user.lastName }}</p>
-                            <p class="connections-suggestions-skills">{{ user.tags[0] }}</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<header class="left-header board-header">
+</header>
+<div class="left-content">
+<!-- Section for main left content -->
+    <div class="board-category-nav">
+        <ul>
+            <li><a class="selected">Suggestions</a></li>
+            <li><a >Recent</a></li>
+            <li><a >Trending</a></li>
+        </ul>
+    </div>
+</div>

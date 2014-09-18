@@ -20,7 +20,7 @@
     	<!-- Section for main center header -->
         <header></header>
 
-        <div class="main-content">
+        <div class="main-content" ng-show="!currentUser">
             <article class="row">
 
                 <div class="medium-6 columns about-left-section">
@@ -68,8 +68,7 @@
             </article>
         </div>
 
-
-        <ul class="community-container">
+        <ul class="community-container" ng-show="currentUser">
             <li class="community-pod" ng-class="{active: podOptions.open}">
                 <section class="pod-header">
                     <div class="pod-header-left">
@@ -147,7 +146,7 @@
                 </section>
             </li>
         </ul>
-        <!-- Section for main center content -->
+
     </section>
     <section class="medium-0 large-2 columns main-right">
         <header class="right-header">
