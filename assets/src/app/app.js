@@ -17,6 +17,7 @@ angular.module( 'symantis', [
 	'models',
 	'ngProgress',
 	'duScroll',
+	'wu.masonry',
 	
 	'symantis.header',
 	'symantis.sitenav',

@@ -49,6 +49,8 @@ var jsFilesToInject = [
   'bower_components/angular-scroll/angular-scroll.js',
   'bower_components/d3/d3.js',
   'bower_components/angular-xeditable/dist/js/xeditable.js',
+  'bower_components/masonry/dist/masonry.pkgd.js',
+  'bower_components/angular-masonry/angular-masonry.js',
   //'bower_components/jquery/dist/jquery.min.js',
   //'bower_components/foundation/js/foundation.min.js',
   //'bower_components/livereload/dist/livereload.js',
