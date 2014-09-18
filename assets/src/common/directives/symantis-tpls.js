@@ -61,7 +61,7 @@ angular.module('sy.templates.sitenav', [])
 
 
                 $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
-	    			console.log("state changed");
+	    			//console.log("state changed");
                     $scope.$broadcast('trytimeout', { status: 'canceled'});
 	    			//$scope.hide();
                     sidebar.removeClass('blur');
@@ -276,44 +276,26 @@ angular.module('sy.templates.sitenav', [])
                 //console.log(element.$parent());
 	            var win = angular.element($window);
 
-	            element.css({ 
-			    	width: element.parent()[0].offsetWidth - 50 + 'px' 
-			    });
+                $scope.resetHeader = function(numOffset){
+                    element.css({ 
+                        width: element.parent()[0].offsetWidth - numOffset + 'px' 
+                    });
+                }
+
+                $scope.resetHeader(50);
 
 			    win.bind("resize", function(){
-			    	element.css({ 
-				    	width: element.parent()[0].offsetWidth - 50 + 'px' 
-				    });
+			    	$scope.resetHeader(50);
 			    });
                 var trytimeout = angular.noop;
 
 			    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
-	    			console.log(fromState);
-                    console.log(toState);
-
-                    element.css({ 
-				    	width: element.parent()[0].offsetWidth - 50 + 'px' 
-				    });
-                    var toSplit = toState.name.split('.');
-                    var fromSplit = fromState.name.split('.');
-
-
-                    /*
-                    if((toSplit[0] != fromSplit[0])){
-                        
-                        $timeout.cancel(trytimeout);
-
-                        element.css({ 
-                            'margin-top' : - element[0].offsetHeight + 'px' 
-                        });
-
-                        trytimeout = $timeout(function(){
-                            element.css({ 
-                                'margin-top' : 0 + 'px' 
-                            }); 
-                        }, 1000);
+                   console.log(fromState);
+                    if(fromState.name == ""){
+                        $scope.resetHeader(50);
+                    }else{
+                        $scope.resetHeader(0);
                     }
-                    */
 	    		});
             }
         };
@@ -419,7 +401,7 @@ angular.module('sy.templates.userimage', [])
             type: '@'
         },
         link: function (scope, element, attrs){
-            console.log("signature: "+attrs.signature);
+            //console.log("signature: "+attrs.signature);
             
             var rand = Math.floor(attrs.signature * 10) + 1;
 
