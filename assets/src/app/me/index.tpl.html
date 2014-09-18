@@ -1,0 +1,36 @@
+<div id="heading-row" class="row fluid-row">
+	<section class="medium-3 large-2 large-offset-1 columns heading-left" ui-view="leftside">
+		<!-- Section on left of heading -->
+	</section>
+    <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
+        <h1>{{currentUser.firstName}}</h1>
+    </section>
+    <section class="medium-0 large-2 columns heading-right">
+		<!-- Section on right of heading -->
+	</section>
+</div>
+<div class="row fluid-row">
+    <section class="medium-3 large-2 large-offset-1 columns main-left" ui-veiw="leftside">
+    	<!-- Section for main left header -->
+        <header class="left-header">
+        
+        </header>
+        <div class="left-content">
+            <!-- Section for main left content -->
+        </div>
+    </section>
+    <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center">
+    	<!-- Section for main center header -->
+        <header></header>
+        <p>{{currentUser.firstName}}</p>
+        <!-- Section for main center content -->
+    </section>
+    <section class="medium-0 large-2 columns main-right">
+        <header class="right-header">
+        	<!-- Main Right Heading -->
+        </header>
+        <div class="right-content">
+        	<!-- Main Right Content -->
+        </div>
+    </section>
+</div>

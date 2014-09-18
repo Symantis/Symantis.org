@@ -46,7 +46,13 @@ angular.module( 'symantis', [
 	'symantis.creator',
 	
 	//Profile
-	'symantis.profile'
+	'symantis.profile',
+
+	//Login
+	'symantis.login',
+
+	//me
+	'symantis.me',
 
 ])
 

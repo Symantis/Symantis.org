@@ -177,6 +177,16 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'index'
   },
+
+  //Handle "/start" queries "Getting Started"
+  'get /login': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /login/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
   
   //Handle "/creator" queries
   'get /creator': {
@@ -194,6 +204,16 @@ module.exports.routes = {
     action: 'index'
   },
   'get /search/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
+  //Handle "/me" queries
+  'get /me': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /me/*': {
     controller: 'HomeController',
     action: 'index'
   },
