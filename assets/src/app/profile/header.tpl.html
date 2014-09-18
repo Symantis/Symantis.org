@@ -1,10 +1,12 @@
 <section class="top-nav-left medium-3 large-2 large-offset-1 columns">
-	<a ui-sref="profile"><span>Profiles</span></a>
+	<!-- needs to be a link to the current users profile -->
+	<a ui-sref="profile"><span>Profile</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a ui-sref="community.connections" ng-class="{active:isActive('/community/connections')}"><span>Connections</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
+	<!-- Section for the user to browse profiles, could be suggested profiles -->
 	<a ui-sref="profile" ng-class="{active:isActive('/profile')}"><span>Browse</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
