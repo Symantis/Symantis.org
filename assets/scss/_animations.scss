@@ -40,7 +40,7 @@ transition: margin .15s linear;
 }
 
 /* Main UI animation */
-$uiAnimationTime: 0.14s;
+$uiAnimationTime: 0.3s;
 
 [ui-view="main"].ng-enter, [ui-view="main"].ng-leave {
   position: absolute;

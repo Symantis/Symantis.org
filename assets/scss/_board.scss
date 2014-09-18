@@ -32,17 +32,40 @@
 		}
 	}
 }
+.board-container {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	float: left;
+	width: 100%;
+}
 .board-pod {
 	float: left;
-	width: 45%;
+	width: 47.5%;
 	position: relative;
-	margin-right: 5%;
+	padding: rem-calc(15px);
+	margin: 0.6rem 2.5% 2rem 0;
 	border: rem-calc(1px) $gray solid;
 	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	&:nth-child(2) {
 		margin-right: 0;
-		margin-left: 5%;
+		margin-left: 2.5%;
+	}
+	.pod-header {
+		float: left;
+		width: 100%;
+		position: relative;
+		.pod-user-pic {
+			width: rem-calc(40px);
+			height: rem-calc(40px);
+			float: left;
+			border: rem-calc(1px) black solid;
+			border-radius: rem-calc(20px);
+			overflow: hidden;
+			@include transition(100ms);
+		}
 	}
 }

@@ -18,7 +18,7 @@ angular.module( 'symantis.community.news', [
 })
 */
 .controller( 'NewsCtrl', function NewsController( $scope, titleService ) {
-	titleService.setTitle('news');
+	titleService.setTitle('News');
 
 	
 })
