@@ -66,11 +66,9 @@
 			>
 				New
 			</a>
-			<a 
-				ng-show="!currentUser"
-			>
-				Sign up
-			</a>
+			<span>
+				<a ng-show="!currentUser">Sign up</a> or <a ng-show="!currentUser">Log In</a>
+			</span>
 		</h4>
 		<p>
 			<a >Sort by <span class="icon-vote-down icon"></span></a>
@@ -182,7 +180,7 @@
 				</form>
 			</div>
 			<h4 class="comment-noUser" ng-show="!currentUser">
-				<a>Sign up</a> to comment
+				<a>Sign up</a> or <a >Log In</a> to comment
 			</h4>
 		</div>
 
@@ -264,7 +262,7 @@
 	</div>
 
 	<div class="response-noUser" ng-show="!currentUser">
-		<h4><a >Sign up</a> to Respond</h4>
+		<h4><a >Sign up</a> or <a >Log In</a> to Respond</h4>
 	</div>
 
 </div>
