@@ -31,9 +31,11 @@ module.exports.routes = {
     action: 'index'
   },
 
+  /*
   'get /login': 'AuthController.login',
   'get /logout': 'AuthController.logout',
   'get /register': 'AuthController.register',
+  */
 
   'post /auth/local': 'AuthController.callback',
   'post /auth/local/:action': 'AuthController.callback',
@@ -178,15 +180,7 @@ module.exports.routes = {
     action: 'index'
   },
 
-  //Handle "/start" queries "Getting Started"
-  'get /login': {
-    controller: 'HomeController',
-    action: 'index'
-  },
-  'get /login/*': {
-    controller: 'HomeController',
-    action: 'index'
-  },
+  
   
   //Handle "/creator" queries
   'get /creator': {
@@ -218,6 +212,16 @@ module.exports.routes = {
     action: 'index'
   },
 
+  //Handle "/login" queries "Login"
+  'get /login': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /login/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  
   //Handle "/register" queries
   'get /register': {
     controller: 'AuthController',

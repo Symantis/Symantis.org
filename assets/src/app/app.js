@@ -50,6 +50,8 @@ angular.module( 'symantis', [
 
 	//Login
 	'symantis.login',
+	//Register
+	'symantis.register',
 
 	//me
 	'symantis.me',
