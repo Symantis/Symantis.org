@@ -197,3 +197,37 @@ quote {
 	    }*/
 	}
 }
+.link-hint {
+	position: absolute;
+	bottom: rem-calc(-35px);
+	left: 50%;
+	margin-left: -25%;
+	z-index: 15;
+	width: auto;
+	//height: rem-calc(26px);
+	height: auto;
+	background-color: $dark;
+	@include font-regular(rem-calc(10px));
+	color: $offWhite;
+	border-radius: rem-calc(5px);
+	padding: rem-calc(5px) rem-calc(8px) rem-calc(5px) rem-calc(8px);
+	text-align: center;
+	white-space: nowrap;
+	opacity: 0;
+	&:before {
+		content:"";
+	    width:0;
+	    height:0;
+	    position:absolute;
+
+	    border-top: 8px solid transparent;
+	    border-bottom: 8px solid $dark;
+	    border-right:8px solid transparent;
+	    border-left:8px solid transparent;
+	    left:50%;
+	    top:-14px;
+	    margin-left: -8px;
+	}
+}
+
+
