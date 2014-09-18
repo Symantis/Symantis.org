@@ -1,4 +1,4 @@
-angular.module( 'symantis.community.connections', [
+angular.module( 'symantis.community.board', [
 ])
 /*
 .config(function config( $stateProvider ) {
@@ -17,14 +17,14 @@ angular.module( 'symantis.community.connections', [
 	});
 })
 */
-.controller( 'ConnectionsCtrl', function ConnectionsController( $scope, titleService ) {
-	titleService.setTitle('Connections');
+.controller( 'BoardCtrl', function BoardController( $scope, titleService ) {
+	titleService.setTitle('Board');
 
 	
 })
-.controller( 'CommunityConnectionsLeftsideCtrl', function CommunityConnectionsLeftsideController( $scope ) {
+.controller( 'CommunityBoardLeftsideCtrl', function CommunityBoardLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 })
-.controller( 'CommunityConnectionsLeftsideCtrl', function CommunityConnectionsLeftsideController( $scope ) {
+.controller( 'CommunityBoardLeftsideCtrl', function CommunityBoardLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 });

@@ -1,5 +1,5 @@
 angular.module( 'symantis.community', [
-	'symantis.community.connections',
+	'symantis.community.board',
 	'symantis.community.news',
 	'symantis.community.queries',
 	'symantis.community.tags'
@@ -77,16 +77,16 @@ angular.module( 'symantis.community', [
 				}
 			}
 		})
-		.state( 'community.connections', {
+		.state( 'community.board', {
 			url: '/connections',
 			views: {
 				"main@": {
-					controller: 'ConnectionsCtrl',
-					templateUrl: 'community/connections/index.tpl.html'
+					controller: 'BoardCtrl',
+					templateUrl: 'community/board/index.tpl.html'
 				},
-				"leftside@community.connections": {
-					controller: 'CommunityConnectionsLeftsideCtrl',
-                	templateUrl: 'community/connections/leftside.tpl.html'
+				"leftside@community.board": {
+					controller: 'CommunityBoardLeftsideCtrl',
+                	templateUrl: 'community/board/leftside.tpl.html'
 				}
 			}
 		})
