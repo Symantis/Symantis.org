@@ -16,7 +16,12 @@ angular.module( 'symantis.creator', [
 			"header": {
 				controller: 'HeaderCtrl',
 	            templateUrl: 'header/header.tpl.html'
+			},
+			"leftside@creator": {
+				controller: 'CreatorLeftsideCtrl',
+               	templateUrl: 'creator/leftside.tpl.html'
 			}
+
 		}
 	});
 })
@@ -24,5 +29,8 @@ angular.module( 'symantis.creator', [
 .controller( 'CreatorCtrl', function CreatorController( $scope, titleService ) {
 	titleService.setTitle('Creator App');
 
+	
+})
+.controller( 'CreatorLeftsideCtrl', function CreatorLeftsideController( $scope ) {
 	
 });

@@ -294,7 +294,7 @@ angular.module('sy.templates.sitenav', [])
                     if(fromState.name == ""){
                         $scope.resetHeader(50);
                     }else{
-                        $scope.resetHeader(0);
+                        $scope.resetHeader(50);
                     }
 	    		});
             }
