@@ -205,7 +205,7 @@
 			</a>
 		</div>
 
-		<div class="new-comment">
+		<div class="new-comment" ng-show="currentUser">
 			<div class="new-comment-left">
 				<div 
 					class="reply-pic generate-image" 
@@ -222,6 +222,10 @@
 				<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
 				<a ><div class="new-comment-submit"><span class="icon-plus"></span></div></a>
 			</form>
+		</div>
+
+		<div class="comments-noUser" ng-show="!currentUser">
+			<h4><a ui-sref="register">Sign up</a> or <a ui-sref="login">Log In</a> to Comment</h4>
 		</div>
 
 	</div>

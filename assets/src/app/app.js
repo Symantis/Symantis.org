@@ -146,9 +146,6 @@ angular.module( 'symantis', [
 	}, 1000);
 	config.currentUser = window.currentUser;
 
-
-	
-
 });
 
 
