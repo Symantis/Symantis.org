@@ -63,6 +63,25 @@ angular.module( 'symantis', [
 	});
 
 	$locationProvider.html5Mode(true);
+
+	$stateProvider
+		.state( '^', {
+			url: '^',
+			views: {
+				"main": {
+					controller: 'HomeCtrl',
+					templateUrl: 'home/index.tpl.html'
+				},
+				"sitenav": {
+					controller: 'SiteNavCtrl',
+	                templateUrl: 'sitenav/index.tpl.html'
+				},
+				"header": {
+					controller: 'HeaderCtrl',
+	                templateUrl: 'header/header.tpl.html'
+				},
+			}
+		});
 })
 
 .config(['$keepaliveProvider', '$idleProvider', function($keepaliveProvider, $idleProvider) {
