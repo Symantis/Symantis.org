@@ -20,8 +20,8 @@ angular.module( 'symantis.sitenav', [
     var siteItems = [
         {title: 'Home', translationKey: 'navigation:docs', url:'/home', sref:'home'},
         {title: 'Get Started', translationKey: 'navigation:start', url:'/start', sref:'start'},
-        {title: 'Documentation', translationKey: 'navigation:docs', url:'/docs', sref:'docs'},
         {title: 'Community', translationKey: 'navigation:community', url:'/community', sref:'community'},
+        {title: 'Documentation', translationKey: 'navigation:docs', url:'/docs', sref:'docs'},
         {title: 'Creator App', translationKey: 'navigation:creator', url:'/creator', sref:'creator'},
         {title: 'More', translationKey: 'navigation:more', url:'/more', sref:'more'}
     ];
