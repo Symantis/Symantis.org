@@ -67,7 +67,7 @@
 				New
 			</a>
 			<span ng-show="!currentUser">
-				<a >Sign up</a> or <a >Log In</a>
+				<a ui-sref="login">Log In</a>
 			</span>
 		</h4>
 		<p>
@@ -180,7 +180,7 @@
 				</form>
 			</div>
 			<h4 class="comment-noUser" ng-show="!currentUser">
-				<a>Sign up</a> or <a >Log In</a> to comment
+				<a ui-sref="register">Sign up</a> or <a ui-sref="login">Log In</a> to comment
 			</h4>
 		</div>
 
@@ -262,7 +262,7 @@
 	</div>
 
 	<div class="response-noUser" ng-show="!currentUser">
-		<h4><a >Sign up</a> or <a >Log In</a> to Respond</h4>
+		<h4><a ui-sref="register">Sign up</a> or <a ui-sref="login">Log In</a> to Respond</h4>
 	</div>
 
 </div>
