@@ -1,4 +1,4 @@
-angular.module( 'symantis.login', [
+angular.module( 'symantis.register', [
 ])
 
 .config(function config( $stateProvider, $urlRouterProvider) {

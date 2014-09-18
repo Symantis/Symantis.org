@@ -20,25 +20,77 @@
         <header></header>
 
         <div class="main-content">
-        	<form name="loginForm" action="/auth/local" method="post">
-		    	<div class="small-12 columns">
-		        	<label for="inputEmail">
-		        		Email
-		        	</label>
-		        	<input type="text" id="inputEmail" name="identifier" placeholder="you@youremail.com">
-		      	</div>
-		      	<div class="small-12 columns">
-		        	<label for="inputPassword">
-		        		Password
-		        	</label>
-					<input type="password" id="inputPassword" name="password" placeholder="Password">
-		        
-		   		</div>
-		    	<div class="small-12 columns">
-					<button type="submit" class="btn btn-default">Sign in</button>
-		       
-		    	</div>
-		    </form>
+        	<form action="/auth/local/register" method="post">
+              <div class="row">
+                <label for="inputEmail" class="large-2 columns">Email</label>
+                <div class="large-10 columns">
+                    <input 
+                        type="email" 
+                        id="inputEmail" 
+                        name="email" 
+                        placeholder="Email" 
+                        value=""
+                    >
+                </div>
+              </div>
+              <div class="row">
+                <label for="inputHandle" class="large-2 columns">Handle</label>
+                <div class="large-10 columns">
+                    <input 
+                        type="text" 
+                        id="inputHandle" 
+                        name="handle" 
+                        placeholder="Username" 
+                        value=""
+                    >
+                </div>
+              </div>
+              <div class="row">
+                <label for="inputPassword" class="large-2 columns">Password</label>
+                <div class="large-10 columns">
+                    <input 
+                        type="password" 
+                        class="form-control" 
+                        id="inputPassword" 
+                        name="password" 
+                        placeholder="Password" 
+                        value=""
+                    >
+                </div>
+              </div>
+
+            
+              <div class="row">
+                <label for="inputFirstName" class="large-2 columns">First Name</label>
+                <div class="large-10 columns">
+                    <input 
+                        type="text" 
+                        id="inputFirstName" 
+                        name="firstName" 
+                        placeholder="First Name" 
+                        value=""
+                    >
+                </div>
+              </div>
+              <div class="row">
+                <label for="inputLastName" class="large-2 columns">Last Name</label>
+                <div class="large-10 columns">
+                    <input 
+                        type="text" 
+                        id="inputLastName" 
+                        name="lastName" 
+                        placeholder="Last Name" 
+                        value=""
+                    >
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="large-12 columns">
+                  <button type="submit" class="button">Sign in</button>
+                </div>
+              </div>
+            </form>
         </div>
         <!-- Section for main center content -->
     </section>

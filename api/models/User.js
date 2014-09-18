@@ -2,7 +2,7 @@ var bcrypt = require('bcrypt');
 
 module.exports = {
 	attributes: {
-		username: {
+		handle: {
 			type: 'string',
 			required: true,
 			unique: true
@@ -12,9 +12,20 @@ module.exports = {
 			required: true,
 			unique: true
 		},
-		first_name: {
+		firstName: {
 			type: 'string',
 			required: true
+		},
+		lastName: {
+			type: 'string',
+			required: true
+		},
+		at : {
+			type: 'string',
+			defaultsTo: '@'
+		},
+		signature : {
+			type: 'string'
 		},
 		message_count: {
 			type: 'number'

@@ -54,7 +54,7 @@ angular.module( 'symantis', [
 	'symantis.register',
 
 	//me
-	'symantis.me',
+	'symantis.me'
 
 ])
 

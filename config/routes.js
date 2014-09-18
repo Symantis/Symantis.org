@@ -221,15 +221,15 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'index'
   },
-  
+
   //Handle "/register" queries
   'get /register': {
-    controller: 'AuthController',
-    action: 'register'
+    controller: 'HomeController',
+    action: 'index'
   },
   'get /register/*': {
-    controller: 'AuthController',
-    action: 'register'
+    controller: 'HomeController',
+    action: 'index'
   }
 
 
