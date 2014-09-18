@@ -332,9 +332,11 @@ angular.module('sy.templates.scroll',['duScroll'])
          });
 
           $scope.scrollToTop = function(){
+            
             var top = 0;
-            var duration = 1000; //milliseconds
+            
             var viewport = angular.element($document[0].querySelector('.sitenav-push'));
+            var duration = (viewport[0].offsetHeight + viewport[0].scrollTop / 2); //milliseconds
             //Scroll to the exact position
             viewport.scrollTop(top, duration).then(function() {
               console.log('You just scrolled to the top!');
