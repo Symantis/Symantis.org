@@ -23,8 +23,7 @@
             <ul class="queries-sub-nav-left">
                 <li class="queries-recent"><a >Recent</a></li>
                 <li class="queries-popular"><a >Popular</a></li>
-                <li class="queries-admin"><a >Admin</a></li>
-                <li class="queries-tags"><a >Tags</a></li>
+                <li class="queries-search"><a >Search</a></li>
             </ul>
             <ul class="queries-sub-nav-right">
                 <li class="queries-tags"><a >New</a></li>
@@ -60,7 +59,7 @@
                                 </p>
                             </li>
                             <li class="querie-replys">
-                                <a href="#">
+                                <a ui-sref="community.queries.view({id: query.id, title: query.clean() })">
                                     <div class="icon-reply icon"></div>
                                     <p class="querie-replys-num">
                                         {{ query.responses.length }}

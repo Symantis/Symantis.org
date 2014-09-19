@@ -2,6 +2,7 @@
 	<a ui-sref="me"><span>My Profile</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
+<<<<<<< HEAD
 	<a ui-sref="me.connections" ui-sref-active="active" ng-class="{active: $state.includes('me.connections')}"><span>Connections</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
@@ -9,5 +10,34 @@
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a ui-sref="me.notifications" ui-sref-active="active" ng-class="{active: $state.includes('me.notifications')}"><span>Notifications</span></a>
+=======
+	<a 
+		ui-sref="me.connections"
+
+		ng-class="{active: $state.includes('me.connections')}"
+	>
+		<span>Connections</span>
+	</a>
+</section>
+<section class="top-nav-mid medium-2 large-1 columns">
+	<a 
+		ui-sref="me.manti" 
+
+		ng-class="{active: $state.includes('me.manti')}" 
+
+		class="header-mid-center"
+	>
+		<span>My Manti</span>
+	</a>
+</section>
+<section class="top-nav-mid medium-2 large-1 columns">
+	<a 
+		ui-sref="me.notifications" 
+		
+		ng-class="{active: $state.includes('me.notifications')}"
+	>
+		<span>Notifications</span>
+	</a>
+>>>>>>> FETCH_HEAD
 </section>
 				
