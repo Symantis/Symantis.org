@@ -22,7 +22,9 @@ Symantis.org Bootstrap is a boilerplate for the initial build of Symantis.org, i
 
 Current features include: a modular angular js architecture and file structure, an example of how to include services and directives from bower (lodash, angular-moment), and authentication using PassportJs and soon to be encorporating SyQuery and SyScribe.
 
-It uses Foundation 5 Sass framework and Compass.
+It also uses MongoDB as a persistent database, to work locally with no connection to the database, you will need to alter config/models and set connections to "localDiskDb" otherwise contact Scott Wyatt to get a copy of the local.js file that connects the live database.
+
+Symantis.org uses Foundation 5 Sass framework and Compass.
 
 ### To get up and running ###
 You will need to have Sails v0.10 installed on your machine (sudo npm install sails -g) and then clone the repo, cd into the project directory and run
@@ -33,7 +35,7 @@ You will need to have Sails v0.10 installed on your machine (sudo npm install sa
     $ cd ../
     $ sails lift
 
-Once Lifted, livereload has been enabled, so any changes you make to an scss file will update live in your browser.
+Once Lifted, livereload has been enabled, so any changes you make to an scss file or to anything inside assets will update live in your browser.
 
 If you do not have Compass installed you will need to run `sudo gem install compass` and `npm install compass`
 
