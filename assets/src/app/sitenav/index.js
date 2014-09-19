@@ -22,8 +22,8 @@ angular.module( 'symantis.sitenav', [
         {title: 'Get Started', translationKey: 'navigation:start', url:'/start', sref:'start'},
         {title: 'Community', translationKey: 'navigation:community', url:'/community', sref:'community'},
         {title: 'Documentation', translationKey: 'navigation:docs', url:'/docs', sref:'docs'},
-        {title: 'Creator App', translationKey: 'navigation:creator', url:'/creator', sref:'creator'},
-        {title: 'More', translationKey: 'navigation:more', url:'/more', sref:'more'}
+        {title: 'More', translationKey: 'navigation:more', url:'/more', sref:'more'},
+        {title: 'Creator App', translationKey: 'navigation:creator', url:'/creator', sref:'creator'}
     ];
 
     $scope.siteItems = siteItems;
