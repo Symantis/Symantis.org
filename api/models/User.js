@@ -35,7 +35,7 @@ module.exports = {
 		tags : {
 			type: 'array',
 			defaultsTo : []
-		}
+		},
 		bio : {
 			type: 'string',
 			defaultsTo: null
@@ -43,7 +43,7 @@ module.exports = {
 		professed: {
 			type: 'string',
 			defaultsTo: null
-		}
+		},
 		message_count: {
 			type: 'number'
 		},
