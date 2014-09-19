@@ -28,10 +28,22 @@ module.exports = {
 		signature : {
 			type: 'string'
 		},
+		status : {
+			type: 'string',
+			defaultsTo: 'offline'
+		},
+		tags : {
+			type: 'array',
+			defaultsTo : []
+		}
 		bio : {
 			type: 'string',
 			defaultsTo: null
 		},
+		professed: {
+			type: 'string',
+			defaultsTo: null
+		}
 		message_count: {
 			type: 'number'
 		},
