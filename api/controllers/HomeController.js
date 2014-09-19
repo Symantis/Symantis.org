@@ -2,13 +2,14 @@ module.exports = {
 	index: function(req, res) {
 		var navItems = [
 			
-			{url: '/messages', cssClass: 'fa fa-comments', title: 'Messages'},
-			{url: '/about', cssClass: 'fa fa-infoc-circle', title: 'About'}
+			{url: '/messages', sref: 'messages', title: 'Messages'},
+			{url: '/about', sref: 'about', title: 'About'}
 		
 		];
+		var isAuthenticated = req.isAuthenticated();
 
-		if (req.isAuthenticated()) {
-			navItems.push({url: '/logout', cssClass: 'fa fa-comments', title: 'Logout'});
+		if (isAuthenticated) {
+			navItems.push({url: '/logout', sref: 'logout', title: 'Logout'});
 			
 			var UserModel = {
 				status: 'active',
@@ -24,16 +25,20 @@ module.exports = {
 					User.publishUpdate(req.user.id, UserModel);
 				}
 			});
-			
+
 			console.log(req.user);
 		}
 		else {
 			
-			navItems.push({url: '/register', cssClass: 'fa fa-briefcase', title: 'Register'});
-			navItems.push({url: '/login', cssClass: 'fa fa-comments', title: 'Login'});
+			navItems.push({url: '/register', title: 'Register'});
+			navItems.push({url: '/login', title: 'Login'});
 		}
 
-		
+		if(!AccessService.checkAccessArea(isAuthenticated, req.route)){
+			res.redirect('/login');
+		}
+
+		console.log(req.route);
 
 		res.view({
 			title: 'Home',

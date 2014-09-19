@@ -19,7 +19,6 @@ module.exports.policies = {
   '*': true,
 
   '*': [ 'passport' ]
-
   /*
 	// Here's an example of adding some policies to a controller
 	RabbitController: {

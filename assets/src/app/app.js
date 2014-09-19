@@ -148,46 +148,48 @@ angular.module( 'symantis', [
 	config.currentUser = window.currentUser;
 
 	//Handle Idle
-    $scope.$on('$idleEnd', function() {
-        $scope.currentUser.status = 'active';
-        $scope.currentUser.statusTime = new Date();
-        //console.log("active");
-        var newModel = {
-        	id: $scope.currentUser.id,
-        	status: $scope.currentUser.status,
-        	statusTime: $scope.currentUser.statusTime
-        };
-        UserModel.updateStatus(newModel).then(function(model){
-        	console.log(model.status);
-        });
-    });
-    $scope.$on('$idleStart', function() {
-        $scope.currentUser.status = 'inactive';
-        $scope.currentUser.statusTime = new Date();
-        
-        var newModel = {
-        	id: $scope.currentUser.id,
-        	status: $scope.currentUser.status,
-        	statusTime: $scope.currentUser.statusTime
-        };
-        UserModel.updateStatus(newModel).then(function(model){
-        	console.log(model.status);
-        });
+	if($scope.currentUser){
+	    $scope.$on('$idleEnd', function() {
+	        $scope.currentUser.status = 'active';
+	        $scope.currentUser.statusTime = new Date();
+	        //console.log("active");
+	        var newModel = {
+	        	id: $scope.currentUser.id,
+	        	status: $scope.currentUser.status,
+	        	statusTime: $scope.currentUser.statusTime
+	        };
+	        UserModel.updateStatus(newModel).then(function(model){
+	        	console.log(model.status);
+	        });
+	    });
+	    $scope.$on('$idleStart', function() {
+	        $scope.currentUser.status = 'inactive';
+	        $scope.currentUser.statusTime = new Date();
+	        
+	        var newModel = {
+	        	id: $scope.currentUser.id,
+	        	status: $scope.currentUser.status,
+	        	statusTime: $scope.currentUser.statusTime
+	        };
+	        UserModel.updateStatus(newModel).then(function(model){
+	        	console.log(model.status);
+	        });
 
-    });
-    $scope.$on('$idleTimeout', function() {
-        $scope.currentUser.status = 'offline';
-        $scope.currentUser.statusTime = new Date();
-        
-        var newModel = {
-        	id: $scope.currentUser.id,
-        	status: $scope.currentUser.status,
-        	statusTime: $scope.currentUser.statusTime
-        };
-        UserModel.updateStatus(newModel).then(function(model){
-        	console.log(model.status);
-        });
-    });
+	    });
+	    $scope.$on('$idleTimeout', function() {
+	        $scope.currentUser.status = 'offline';
+	        $scope.currentUser.statusTime = new Date();
+	        
+	        var newModel = {
+	        	id: $scope.currentUser.id,
+	        	status: $scope.currentUser.status,
+	        	statusTime: $scope.currentUser.statusTime
+	        };
+	        UserModel.updateStatus(newModel).then(function(model){
+	        	console.log(model.status);
+	        });
+	    });
+	}
 
 });
 
