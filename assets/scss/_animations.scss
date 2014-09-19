@@ -42,6 +42,7 @@ transition: margin .15s linear;
 /* Main UI animation */
 $uiAnimationTime: 0.3s;
 
+/* Defualt: When Menu Closed */
 [ui-view="main"].ng-enter, [ui-view="main"].ng-leave {
   position: absolute;
   //left: $column-gutter / 2;
@@ -84,6 +85,52 @@ $uiAnimationTime: 0.3s;
   -webkit-transform:translate3d(0, 100px, 0);
   -moz-transform:translate3d(0, 100px, 0);
   transform:translate3d(0, 100px, 0);
+}
+
+
+/* When Menu Open */
+.sy-menu-open [ui-view="main"].ng-enter, .sy-menu-open [ui-view="main"].ng-leave {
+  position: absolute;
+  //left: $column-gutter / 2;
+  
+  left: 0;
+  right: 0;
+  //padding-left: $column-gutter / 2;
+  //padding-right: $column-gutter / 2;
+  //height:100%;
+  -webkit-transition:all $uiAnimationTime ease-in-out;
+    -moz-transition:all $uiAnimationTime ease-in-out;
+    -o-transition:all $uiAnimationTime ease-in-out;
+    transition:all $uiAnimationTime ease-in-out;
+}
+
+.sy-menu-open [ui-view="main"].ng-enter {
+  opacity: 0;
+  -webkit-transform:translate3d(-100px, 0, 0);
+  -moz-transform:translate3d(-100px, 0, 0);
+  transform:translate3d(-100px, 0, 0);
+}
+
+.sy-menu-open [ui-view="main"].ng-enter-active {
+  opacity: 1;
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+  
+}
+
+.sy-menu-open [ui-view="main"].ng-leave {
+  opacity: 1; 
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
+
+.sy-menu-open [ui-view="main"].ng-leave-active {
+  opacity: 0;
+  -webkit-transform:translate3d(100px, 0, 0);
+  -moz-transform:translate3d(100px, 0, 0);
+  transform:translate3d(100px, 0, 0);
 }
 
 
