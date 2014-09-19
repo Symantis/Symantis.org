@@ -9,10 +9,23 @@ module.exports = {
 
 		if (req.isAuthenticated()) {
 			navItems.push({url: '/logout', cssClass: 'fa fa-comments', title: 'Logout'});
-
-			User.update({id: req.user.id}, {status: 'active', statusTime: new Date() }).exec(function(err, user) {
 			
+			var UserModel = {
+				status: 'active',
+				statusTime: new Date()
+			}
+			
+			User.update({id: req.user.id}, UserModel )
+			.exec(function(err, user) {
+				if(err){
+
+				}
+				else{
+					User.publishUpdate(req.user.id, UserModel);
+				}
 			});
+			
+			console.log(req.user);
 		}
 		else {
 			
@@ -20,7 +33,7 @@ module.exports = {
 			navItems.push({url: '/login', cssClass: 'fa fa-comments', title: 'Login'});
 		}
 
-		console.log(req.user);
+		
 
 		res.view({
 			title: 'Home',

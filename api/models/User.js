@@ -56,12 +56,12 @@ module.exports = {
 			collection: 'message',
 			via: 'user'
 		},
-		/*
+		
 		connections: {
 			collection: 'user',
-			via: 'collections'
+			via: 'id'
 		},
-		*/
+		
 		passports : { 
 			collection: 'Passport', 
 			via: 'user' 

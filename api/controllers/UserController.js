@@ -43,9 +43,14 @@ module.exports = {
 		if (!id) {
 			return res.badRequest('No id provided.');
 		}
+		if (!status) {
+			return res.badRequest('No status provided.');
+		}
+		var status = req.param('status');
 		var newModel = {
 			id: id,
-			status: new Date()
+			status: status,
+			statusTime: new Date()
 		};
 
 		User.update(id, newModel)
