@@ -37,5 +37,26 @@ module.exports = {
 				res.json(model);
 			}
 		});
+	},
+	updateStatus: function (req, res) {
+		var id = req.param('id');
+		if (!id) {
+			return res.badRequest('No id provided.');
+		}
+		var newModel = {
+			id: id,
+			status: new Date()
+		};
+
+		User.update(id, newModel)
+		.exec(function(err, model) {
+			if (err) {
+				return console.log(err);
+			}
+			else {
+				User.publishUpdate(id, newModel);
+				res.json(newModel);
+			}
+		});
 	}
 };

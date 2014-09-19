@@ -33,4 +33,14 @@ angular.module('models.user', ['lodash', 'services', 'ngSails',])
 
 		return deferred.promise;
 	};
+	this.updateStatus = function(newModel) {
+		var deferred = $q.defer();
+		var url = utils.prepareUrl('user/status');
+
+		$sails.post(url, newModel, function(model) {
+			return deferred.resolve(model);
+		});
+
+		return deferred.promise;
+	};
 });

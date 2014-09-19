@@ -18,6 +18,13 @@
 	>
 	</div><!-- /.sitenav -->
 
+	<div 
+		id="chatnav"
+		class="sy-chat-menu" 
+		ui-view="chatnav"
+	>
+	</div><!-- /.chatnav -->
+
 	<div class="sitenav-push">
 		<div class="sitenav-push-inner">
 			<div class="header top" ui-view="header">
@@ -35,6 +42,7 @@
 			
 		</div>
 	</div>
+	<!-- C directive backToTop -->
 	<div class="back-to-top" ng-class="{hidden: hidden}">
 		<a ng-click="backToTop()"><span class="icon-vote-up"></span></a>
 	</div>

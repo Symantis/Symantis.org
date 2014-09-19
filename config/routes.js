@@ -49,6 +49,7 @@ module.exports.routes = {
     'get /api/user': 'UserController.getAll',
     'get /api/user/:id': 'UserController.getOne',
     'post /api/user': 'UserController.create',
+    'post /api/user/status': 'UserController.updateStatus',
 
   /**
      * Message routes

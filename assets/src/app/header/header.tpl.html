@@ -21,6 +21,7 @@
 					<ul class="top-nav-userOnline" ng-show="currentUser">
 						<li class="top-nav-name">
 							<p>
+								<span class="status user-{{ currentUser.status }}"></span>
 								<span>Hi,</span>
 								<a ui-sref="me">{{ currentUser.firstName }}</a>
 							</p>

@@ -139,13 +139,55 @@ angular.module( 'symantis', [
 	});
 })
 */
-.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout) {
+.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
 	$timeout(function() {
 		ngProgress.complete();
 	}, 1000);
 	config.currentUser = window.currentUser;
+
+	//Handle Idle
+    $scope.$on('$idleEnd', function() {
+        $scope.currentUser.status = 'active';
+        $scope.currentUser.statusTime = new Date();
+        //console.log("active");
+        var newModel = {
+        	id: $scope.currentUser.id,
+        	status: $scope.currentUser.status,
+        	statusTime: $scope.currentUser.statusTime
+        };
+        UserModel.updateStatus(newModel).then(function(model){
+        	console.log(model.status);
+        });
+    });
+    $scope.$on('$idleStart', function() {
+        $scope.currentUser.status = 'inactive';
+        $scope.currentUser.statusTime = new Date();
+        
+        var newModel = {
+        	id: $scope.currentUser.id,
+        	status: $scope.currentUser.status,
+        	statusTime: $scope.currentUser.statusTime
+        };
+        UserModel.updateStatus(newModel).then(function(model){
+        	console.log(model.status);
+        });
+
+    });
+    $scope.$on('$idleTimeout', function() {
+        $scope.currentUser.status = 'offline';
+        $scope.currentUser.statusTime = new Date();
+        
+        var newModel = {
+        	id: $scope.currentUser.id,
+        	status: $scope.currentUser.status,
+        	statusTime: $scope.currentUser.statusTime
+        };
+        UserModel.updateStatus(newModel).then(function(model){
+        	console.log(model.status);
+        });
+    });
 
 });
 

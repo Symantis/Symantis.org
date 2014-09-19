@@ -32,6 +32,10 @@ module.exports = {
 			type: 'string',
 			defaultsTo: 'offline'
 		},
+		statusTime: {
+			type: 'datetime',
+			defaultsTo: new Date()
+		},
 		tags : {
 			type: 'array',
 			defaultsTo : []
@@ -52,6 +56,12 @@ module.exports = {
 			collection: 'message',
 			via: 'user'
 		},
+		/*
+		connections: {
+			collection: 'user',
+			via: 'collections'
+		},
+		*/
 		passports : { 
 			collection: 'Passport', 
 			via: 'user' 
