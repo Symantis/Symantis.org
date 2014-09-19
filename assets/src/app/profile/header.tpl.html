@@ -3,18 +3,30 @@
 	<a ui-sref="profile"><span>Profiles</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="me.connections" ng-class="{active: $state.includes('me.connections')}">
+	<a 
+		ui-sref="me.connections" 
+		ui-sref-active="active"
+		ng-class="{active: $state.includes('me.connections')}"
+	>
 		<span>Connections</span>
 	</a>
 </section>
-<section class="top-nav-mid medium-2 large-1 columns">
+<section class="top-nav-mid text-center medium-2 large-1 columns">
 	<!-- Section for the user to browse profiles, could be suggested profiles -->
-	<a ui-sref="profile.browse" ng-class="{active: $state.includes('profile.browse')}">
-		<span>Browse</span>
+	<a 
+		ui-sref="profile.find" 
+		ui-sref-active="active" 
+		ng-class="{active: $state.includes('profile.find')}"
+	>
+		<span>Find</span>
 	</a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="profile.suggested" ng-class="{active: $state.includes('profile.suggested')}">
+	<a 
+		ui-sref="profile.suggested" 
+		ui-sref-active="active" 
+		ng-class="{active: $state.includes('profile.suggested')}"
+	>
 		<span>Suggested</span>
 	</a>
 </section>

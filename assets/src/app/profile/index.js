@@ -1,4 +1,7 @@
-angular.module( 'symantis.profile', ['symantis.profile.view'
+angular.module( 'symantis.profile', [
+	'symantis.profile.view',
+	'symantis.profile.find',
+	'symantis.profile.suggested'
 ])
 
 .config(function config( $stateProvider ) {
@@ -25,6 +28,32 @@ angular.module( 'symantis.profile', ['symantis.profile.view'
 				"leftside@profile": {
 					controller: 'ProfileLeftsideCtrl',
 					templateUrl: 'profile/leftside.tpl.html'
+				}
+			}
+		})
+		.state( 'profile.find', {
+			url: '/find',
+			views: {
+				"main@": {
+					controller: 'ProfileFindCtrl',
+					templateUrl: 'profile/find/index.tpl.html'
+				},
+				"leftside@profile.find": {
+					controller: 'ProfileFindLeftsideCtrl',
+                	templateUrl: 'profile/find/leftside.tpl.html'
+				}
+			}
+		})
+		.state( 'profile.suggested', {
+			url: '/suggested',
+			views: {
+				"main@": {
+					controller: 'ProfileSuggestedCtrl',
+					templateUrl: 'profile/suggested/index.tpl.html'
+				},
+				"leftside@profile.suggested": {
+					controller: 'ProfileSuggestedLeftsideCtrl',
+                	templateUrl: 'profile/suggested/leftside.tpl.html'
 				}
 			}
 		})
@@ -68,6 +97,7 @@ angular.module( 'symantis.profile', ['symantis.profile.view'
 				}
 			}
 		})
+		
 	;
 })
 
