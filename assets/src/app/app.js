@@ -141,7 +141,7 @@ angular.module( 'symantis', [
 	});
 })
 */
-.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel, $modal) {
+.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
 	$timeout(function() {
@@ -200,6 +200,15 @@ angular.module( 'symantis', [
 			templateUrl: 'common/modals/loginModal.tpl.html',
 			controller: 'LoginModalCtrl',
 			windowClass: 'small'
+		});
+	};
+
+	$scope.searchModal = function () {
+
+		var modalInstance = $symodal.open({
+			templateUrl: 'common/modals/searchModal.tpl.html',
+			controller: 'SearchModalCtrl',
+			windowClass: 'full-screen'
 		});
 	};
 

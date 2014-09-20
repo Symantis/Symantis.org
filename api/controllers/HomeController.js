@@ -38,8 +38,6 @@ module.exports = {
 			res.redirect('/login');
 		}
 
-		console.log(req.route);
-
 		res.view({
 			title: 'Home',
 			navItems: navItems,
