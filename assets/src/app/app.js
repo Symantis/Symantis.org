@@ -19,6 +19,8 @@ angular.module( 'symantis', [
 	'duScroll',
 	'wu.masonry',
 	
+	'symantis.global.modals',
+
 	'symantis.header',
 	'symantis.sitenav',
 	'symantis.home',
@@ -139,7 +141,7 @@ angular.module( 'symantis', [
 	});
 })
 */
-.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel) {
+.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel, $modal) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
 	$timeout(function() {
@@ -190,6 +192,17 @@ angular.module( 'symantis', [
 	        });
 	    });
 	}
+
+	//Modals
+	$scope.loginModal = function () {
+
+		var modalInstance = $modal.open({
+			templateUrl: 'common/modals/loginModal.tpl.html',
+			controller: 'LoginModalCtrl',
+			windowClass: 'small'
+		});
+	};
+
 
 });
 
