@@ -24,7 +24,4 @@ angular.module( 'symantis.me.notifications', [
 })
 .controller( 'MeNotificationsLeftsideCtrl', function MeNotificationsLeftsideController( $scope ) {
 	//titleService.setTitle('About');
-})
-.controller( 'MeNotificationsLeftsideCtrl', function MeNotificationsLeftsideController( $scope ) {
-	//titleService.setTitle('About');
 });

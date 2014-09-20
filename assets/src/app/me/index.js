@@ -61,7 +61,7 @@ angular.module( 'symantis.me', [
 			url: '/notifications',
 			views: {
 				"main@": {
-					controller: 'MantiCtrl',
+					controller: 'NotificationsCtrl',
 					templateUrl: 'me/notifications/index.tpl.html'
 				},
 				"leftside@me.notifications": {
