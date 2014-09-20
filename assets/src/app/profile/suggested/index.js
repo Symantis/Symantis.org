@@ -1,7 +1,7 @@
 angular.module( 'symantis.profile.suggested', [
 ])
 
-.controller( 'ProfilesuggestedCtrl', function ProfileSuggestedontroller($scope, titleService, $state, $stateParams) {
+.controller( 'ProfileSuggestedCtrl', function ProfileSuggestedontroller($scope, titleService, $state, $stateParams) {
 	
 	titleService.setTitle('Suggested');
 
