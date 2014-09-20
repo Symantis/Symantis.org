@@ -69,7 +69,7 @@
 				>
 					New
 				</a>
-				<a ng-show="!currentUser" ui-sref="login">Log In</a>
+				<a ng-show="!currentUser" ng-click="loginModal()">Log In</a>
 			</h4>
 			<p>
 				<a >Sort by <span class="icon-vote-down icon"></span></a>
@@ -174,7 +174,7 @@
 					</form>
 				</div>
 				<h4 class="comment-noUser" ng-show="!currentUser">
-					<a ui-sref="login">Log In</a> to comment
+					<a ng-click="loginModal()">Log In</a> to reply
 				</h4>
 			</div>
 			<a 
@@ -224,7 +224,7 @@
 		</div>
 
 		<div class="comments-noUser" ng-show="!currentUser">
-			<h4><a ui-sref="register">Sign up</a> or <a ui-sref="login">Log In</a> to Comment</h4>
+			<h4><a ui-sref="register">Sign up</a> or <a ng-click="loginModal()">Log In</a> to Comment</h4>
 		</div>
 
 	</div>
