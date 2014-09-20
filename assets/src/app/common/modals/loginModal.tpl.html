@@ -1,12 +1,27 @@
 <div class="modal-window">
     <h2>Login to Symantis</h2>
-	<form class="modal-form">
+	<form 
+		class="modal-form" 
+		name="loginForm" 
+		action="/auth/local" 
+		method="post"
+	>
 		<div class="row">
 		    <div class="large-12 columns">
-		    	<input type="text" placeholder="Email" />
-		    	<input type="password" placeholder="Password" />
+		    	<input 
+		    		type="text" 
+		    		id="inputEmail" 
+		    		name="identifier" 
+		    		placeholder="Email" 
+		    	/>
+		    	<input 
+		    		type="password" 
+		    		id="inputPassword" 
+		    		name="password" 
+		    		placeholder="Password" 
+		    	/>
 		      	<button 
-		      		href="#" 
+		      		type="submit" 
 		      		class="sy-button modal-button" 
 		      	>
 		      		Sign Up
