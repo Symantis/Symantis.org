@@ -4,10 +4,16 @@
 <div class="left-content">
 <!-- Section for main left content -->
     <div class="community-category-nav">
-        <ul>
+        <ul ng-show="currentUser">
             <li><a class="selected">Whats Happening</a></li>
             <li><a >Trending</a></li>
             <li><a >Suggested</a></li>
+        </ul>
+        <ul ng-show="!currentUser">
+            <li><a class="selected">Overview</a></li>
+            <li><a >News</a></li>
+            <li><a >Queries</a></li>
+            <li><a >Board</a></li>
         </ul>
     </div>
 </div>

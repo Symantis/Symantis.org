@@ -25,9 +25,9 @@
                 <li class="queries-popular"><a >Popular</a></li>
                 <li class="queries-search"><a >Search</a></li>
             </ul>
-            <ul class="queries-sub-nav-right">
-                <li class="queries-tags"><a >New</a></li>
-                <li class="queries-tags"><a >My Posts</a></li>
+            <ul class="queries-sub-nav-right" ng-show="currentUser">
+                <li class="queries-tags" ng-show="currentUser"><a >New</a></li>
+                <li class="queries-tags" ng-show="currentUser"><a >My Posts</a></li>
             </ul>
         </header>
         <!-- Section for main center content -->
