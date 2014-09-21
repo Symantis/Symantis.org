@@ -55,11 +55,27 @@ angular.module( 'symantis.register', [
 				}
 			}
 		})
-		.state( 'register.name', {
-			url: '/name',
+		.state( 'register.confirmpassword', {
+			url: '/confirm_password',
 			views: {
 				"register@register": {
-					templateUrl: 'register/form/name.tpl.html'
+					templateUrl: 'register/form/confirmPassword.tpl.html'
+				}
+			}
+		})
+		.state( 'register.firstname', {
+			url: '/first_name',
+			views: {
+				"register@register": {
+					templateUrl: 'register/form/firstName.tpl.html'
+				}
+			}
+		})
+		.state( 'register.lastname', {
+			url: '/last_name',
+			views: {
+				"register@register": {
+					templateUrl: 'register/form/lastName.tpl.html'
 				}
 			}
 		})
