@@ -129,7 +129,13 @@ var AuthController = {
         // will available.
         else {
         	console.log('currently logged in user is: ' + req.user.username);
-          res.redirect('/me');
+          
+          if(req.param('refer')){
+            res.redirect(req.param('refer'));
+          }else{
+            res.redirect('/me');
+          }
+
         }
       });
     });

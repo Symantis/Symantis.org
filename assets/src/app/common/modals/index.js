@@ -1,7 +1,11 @@
 angular.module( 'symantis.global.modals', [
 
 ])
-.controller( 'LoginModalCtrl', function LoginModalController($scope, $modalInstance){
+.controller( 'LoginModalCtrl', function LoginModalController($scope, $location, $modalInstance){
+
+	$scope.refer = $location.path();
+
+	console.log($scope.refer);
 
 	$scope.ok = function () {
 		$modalInstance.close();
