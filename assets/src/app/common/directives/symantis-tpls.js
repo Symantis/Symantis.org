@@ -568,7 +568,7 @@ angular.module('sy.templates.homeanimation', [])
                     $timeout(function() {
                         var index = animations.indexOf(currentAnimation);
                         console.log(index);
-                        if(index+1 > animations.length){
+                        if(index+1 > animations.length || index == -1){
 
                         }else{
                             var nextAnimation = animations[index+1];
