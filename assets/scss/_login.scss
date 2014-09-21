@@ -1,22 +1,15 @@
-/*.login-container {
-	display: table;
-	height: 100%;
-	width: 100%;
-	vertical-align: middle;
-}*/
+
 .login-page {
-	margin-top: rem-calc(40px);
-	/*display: table-cell;
-	vertical-align: middle;*/
+	margin-top: rem-calc(80px);
 	.modal-form {
-		margin-top: rem-calc(20px);
+		margin-top: rem-calc(30px);
 		input[type=text], input[type=password] {
 			@include font-regular(rem-calc(18pt));
 			margin-bottom: rem-calc(1px);
 			padding: rem-calc(10px) rem-calc(0px) rem-calc(10px) rem-calc(10px);
 			border: none;
 			box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
-			border: 1px $gray solid;
+			border: 1px $light solid;
 			/*border-width: rem-calc(1px);
 			border-style: solid;*/
 			height: auto;
@@ -31,13 +24,18 @@
 				box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.4);
 			}
 		}
+		input[type=text] {
+			margin-bottom: -1px;
+		}
 		.sy-button {
 			width: 100%;
-			margin-top: rem-calc(20px);
+			margin-top: rem-calc(30px);
 			font-size: rem-calc(14px);
 			border: none;
 			background-color: $primary-color;
 			color: white;
+			padding-top: 12px;
+			padding-bottom: 12px;
 			&:hover {
 				background-color: darken($primary-color, 10%);
 			}
@@ -47,6 +45,7 @@
 		text-align: center;
 		@include font-regular(rem-calc(12px));
 		color: $gray;
+		margin-top: 20px;
 		a {
 			color: $gray;
 			text-decoration: underline;
