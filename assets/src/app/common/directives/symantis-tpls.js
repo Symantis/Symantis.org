@@ -487,6 +487,36 @@ angular.module('sy.templates.homeanimation', [])
             link: function ($scope, element, attrs){
                 console.log("Home Animation");
                 
+                var currentAnimation = 'zero';
+                var animations = [
+                    'zero',
+                    'one',
+                    'two',
+                    'three',
+                    'four',
+                    'five',
+                    'six',
+                    'seven',
+                    'eight',
+                    'nine',
+                    'ten',
+                    'eleven'
+                ];
+
+                var story = [{
+                   zero: "There are millions of people that make the internet.",
+                   one: "Some of them are designers.",
+                   two: "Some of them are developers.",
+                   three: "Some people say they are totally different.",
+                   four: "But we don’t think so.",
+                   five: "They have something in common.",
+                   six: "They are both types of creators.",
+                   seven: "Symantis brings them together.",
+                   eight: "Blurring the line between Design and Development,",
+                   nine: "and changing the way we work together.",
+                   ten: "Free, Open, Different.",
+                   eleven: "Symantis"
+                }];
                 
 
                 var w = element[0].offsetWidth,
@@ -515,6 +545,46 @@ angular.module('sy.templates.homeanimation', [])
                 var svg = d3.select(element[0]).append("svg:svg")
                     .attr("width", w)
                     .attr("height", h);
+
+
+                var text = svg.selectAll("text")
+                    .data(story)
+                    .enter()
+                    .append("text");
+
+                 var textLabel = text   
+                    .attr("x",  w / 2)
+                    .attr("y", h-10)
+                    .text(function (d) { return d.zero; })
+                    //.attr("-webkit-font-smoothing", "antialiased")
+                    //.attr("width", w)
+                    .style("text-anchor", "middle")
+                    //.attr("text-align", "center")
+                    .attr("font-family", "'open_sansregular', sans-serif")
+                    .attr("font-size", "25px")
+                    .attr("fill", "black");
+
+                var animationTime = function(){
+                    $timeout(function() {
+                        var index = animations.indexOf(currentAnimation);
+                        console.log(index);
+                        if(index+1 > animations.length){
+
+                        }else{
+                            var nextAnimation = animations[index+1];
+                            currentAnimation = nextAnimation;
+                            console.log(nextAnimation);
+                            textLabel
+                                .text(function (d) { return d[nextAnimation]; }); 
+                            
+                            animationTime();
+                        }
+                    }, 3000);
+                }  
+
+                animationTime(); 
+
+                //textLabel.text(function (d) { return d.one; });   
 
                 svg.selectAll("circle")
                     .data(nodes.slice(1))

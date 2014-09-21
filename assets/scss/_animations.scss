@@ -134,6 +134,36 @@ $uiAnimationTime: 0.3s;
 }
 
 
+[ui-view="register"].ng-enter, [ui-view="register"].ng-leave {
+  //position: absolute;
+  //left: 0;
+  //right: 0;
+  //padding-left: $column-gutter / 2;
+  //padding-right: $column-gutter / 2;
+
+  -webkit-transition:all $uiAnimationTime ease-in-out;
+    -moz-transition:all $uiAnimationTime ease-in-out;
+    -o-transition:all $uiAnimationTime ease-in-out;
+    transition:all $uiAnimationTime ease-in-out;
+}
+
+[ui-view="register"].ng-enter {
+  opacity: 0;
+}
+
+[ui-view="register"].ng-enter-active {
+  opacity: 1;
+}
+
+[ui-view="register"].ng-leave {
+  opacity: 1; 
+}
+
+[ui-view="register"].ng-leave-active {
+  opacity: 0;
+}
+
+
 [ui-view="news"].ng-enter, [ui-view="news"].ng-leave {
   //position: absolute;
   //left: 0;

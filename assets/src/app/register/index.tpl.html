@@ -1,3 +1,49 @@
+<div id="status-buttons" class="text-center">
+    <a 
+        ui-sref-active="active" 
+        ui-sref=".email"
+    >
+        <span>1</span> Email
+    </a>
+    <a 
+        ui-sref-active="active" 
+        ui-sref=".username"
+    >
+        <span>2</span> Username
+    </a>
+    <a 
+        ui-sref-active="active" 
+        ui-sref=".password"
+    >
+        <span>3</span> Password
+    </a>
+    <a 
+        ui-sref-active="active" 
+        ui-sref=".name"
+    >
+        <span>4</span> Name
+    </a>
+    <a 
+        ui-sref-active="active" 
+        ui-sref=".confirm"
+    >
+        <span>5</span> Confirm
+    </a>
+</div>
+
+<h1><a ui-sref="register">Register</a></h1>
+
+<form 
+    name="registerForm" 
+>
+    <div ui-view="register">
+
+    </div>
+</form>
+<pre>
+    {{ registerData }}
+</pre>
+
 <div id="heading-row" class="row fluid-row">
 	<section class="medium-3 large-2 large-offset-1 columns heading-left">
 	</section>
