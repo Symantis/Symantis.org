@@ -39,9 +39,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	}
 }
 .modal-button {
-	margin-top: 20px;
+	margin-top: 30px;
 }
 .modal-form {
+	margin-top: 20px;
 	input[type=text], input[type=password] {
 		@include font-regular(rem-calc(18pt));
 		margin-bottom: rem-calc(1px);
@@ -66,7 +67,45 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 	input[type=text], [type='password'] {
 		width: 60%;
 		margin-left: auto;
+		margin-right: auto;	
+	}
+	.modal-header {
+		width: 60%;
+		margin-left: auto;
 		margin-right: auto;
+		padding-left: 0.4rem;
+		padding-right: 0.4rem;
+		h2 {
+			@include font-bitter2(rem-calc(48px));
+			color: $offWhite;
+			text-align: left;
+		}
+	}
+	.sy-button {
+		color: white;
+		border-color: white;
+		width: 60%;
+		font-size: rem-calc(14px);
+		&:hover {
+			border-color: $primary-color;
+			color: white;
+		}
+	}
+	.login-modal-footer {
+		padding-top: 20px;
+		p {
+			@include font-regular(rem-calc(12px));
+			color: $light;
+			line-height: 1.6;
+			a {
+				text-decoration: underline;
+				color: $light;
+				@include transition(100ms);
+				&:hover {
+					color: white;
+				}
+			}
+		}
 	}
 }
 .tag {
