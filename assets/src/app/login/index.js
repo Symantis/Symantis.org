@@ -16,7 +16,7 @@ angular.module( 'symantis.login', [
 			},
 			"header": {
 				controller: 'HeaderCtrl',
-                templateUrl: 'header/header.tpl.html'
+                template: ''
 			},
 			"subheader@login": {
 				controller: 'LoginHeaderCtrl',

@@ -17,13 +17,16 @@ angular.module( 'symantis.register', [
                 templateUrl: 'sitenav/index.tpl.html'
 			},
 			"header": {
-				controller: 'HeaderCtrl',
-                templateUrl: 'header/header.tpl.html'
-			},
+				controller: 'RegisterHeaderCtrl',
+                templateUrl: 'register/header.tpl.html'
+			}
+			/*
+			,
 			"subheader@register": {
 				controller: 'RegisterHeaderCtrl',
                 templateUrl: 'register/header.tpl.html'
 			}
+			*/
 		}
 	});
 })
