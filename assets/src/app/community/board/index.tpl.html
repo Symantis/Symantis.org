@@ -19,7 +19,7 @@
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center connections-center">
     	<!-- Section for main center header -->
         <header></header>
-        <ul masonry class="board-container">
+        <ul masonry class="board-container" ng-show="currentUser">
             <li class="board-pod masonry-brick">
                 <section class="pod-header">
                     <div 
@@ -41,6 +41,9 @@
                 <section class="pod-footer">
                 </section>
             </li>
+        </ul>
+        <ul ng-show="!currentUser">
+            <li><h2>Please <a ng-click="loginModal()">Login</a> for this feature</h2></li>
         </ul>
     </section>
     <section class="medium-0 large-2 columns main-right">

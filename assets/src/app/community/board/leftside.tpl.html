@@ -4,11 +4,15 @@
 <div class="left-content">
 <!-- Section for main left content -->
     <div class="board-category-nav">
-        <ul>
+        <ul ng-show="currentUser">
             <li><a class="selected">Suggestions</a></li>
             <li><a >Recent</a></li>
             <li><a >Trending</a></li>
             <li><a >Filter</a></li>
+        </ul>
+        <ul ng-show="!currentUser">
+            <li><a class="selected">Overview</a></li>
+            <li><a >Example</a></li>
         </ul>
     </div>
 </div>

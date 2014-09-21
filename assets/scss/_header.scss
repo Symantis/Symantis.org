@@ -189,7 +189,8 @@
 					}
 					span {
 						color: $gray;
-						padding-left: 5px;
+						padding-left: 3px;
+						padding-right: 1px;
 					}
 					.header-signup {
 						padding-left: 10px;
@@ -197,11 +198,15 @@
 						padding-bottom: 7px;
 						padding-top: 5px;
 						margin-left: 5px;
-						border: rem-calc(1px) $primary-color solid;
+						//border: rem-calc(1px) $primary-color solid;
+						background-color: $primary-color;
+						color: white;
 						@include transition(200ms);
 						&:hover {
-							background-color: $primary-color;
+							background-color: darken($primary-color, 10%);
+							//color: $primary-color;
 							color: white;
+
 						}
 					}
 				}
