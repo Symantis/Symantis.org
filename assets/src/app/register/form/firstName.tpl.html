@@ -5,4 +5,10 @@
 	placeholder="First Name" 
 	value=""
 	ng-model="registerData.firstName"
+	required
 >
+<div
+	ng-hide="registerForm.firstName.$error.required"
+>
+	Press Enter to continue.
+</div>

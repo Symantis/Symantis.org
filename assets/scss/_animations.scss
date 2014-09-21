@@ -135,9 +135,9 @@ $uiAnimationTime: 0.3s;
 
 
 [ui-view="register"].ng-enter, [ui-view="register"].ng-leave {
-  //position: absolute;
-  //left: 0;
-  //right: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
   //padding-left: $column-gutter / 2;
   //padding-right: $column-gutter / 2;
 

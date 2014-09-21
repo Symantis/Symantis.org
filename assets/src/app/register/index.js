@@ -93,9 +93,9 @@ angular.module( 'symantis.register', [
 
 
 
-.controller( 'RegisterCtrl', function RegisterController( $scope, titleService ) {
+.controller( 'RegisterCtrl', function RegisterController( $scope, $http, titleService ) {
 	titleService.setTitle('Register');
-
+	
 	$scope.registerData = {
 		email : '',
 		username: '',

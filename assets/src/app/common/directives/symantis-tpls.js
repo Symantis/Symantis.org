@@ -628,7 +628,7 @@ angular.module('sy.templates.homeanimation', [])
                     }, time);
                 }  
 
-                animationTime(3000); 
+                animationTime(1500); 
 
                 //textLabel.text(function (d) { return d.one; });   
 

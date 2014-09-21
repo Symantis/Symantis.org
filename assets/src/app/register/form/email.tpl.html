@@ -5,4 +5,8 @@
 	placeholder="Email" 
 	value=""
 	ng-model="registerData.email"
+	required
 >
+<div 
+	ng-hide="registerForm.email.$error.required || registerForm.email.$error.email"
+>Press Enter to continue.</div>
