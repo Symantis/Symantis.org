@@ -1,0 +1,59 @@
+/*.login-container {
+	display: table;
+	height: 100%;
+	width: 100%;
+	vertical-align: middle;
+}*/
+.login-page {
+	margin-top: rem-calc(40px);
+	/*display: table-cell;
+	vertical-align: middle;*/
+	.modal-form {
+		margin-top: rem-calc(20px);
+		input[type=text], input[type=password] {
+			@include font-regular(rem-calc(18pt));
+			margin-bottom: rem-calc(1px);
+			padding: rem-calc(10px) rem-calc(0px) rem-calc(10px) rem-calc(10px);
+			border: none;
+			box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+			border: 1px $gray solid;
+			/*border-width: rem-calc(1px);
+			border-style: solid;*/
+			height: auto;
+			color: $gray;
+			&:focus {
+				border-left: 10px outset $primary-color;
+				box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+				@include transition(50ms);
+				color: $dark;
+				-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.4);
+				-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.4);
+				box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.4);
+			}
+		}
+		.sy-button {
+			width: 100%;
+			margin-top: rem-calc(20px);
+			font-size: rem-calc(14px);
+			border: none;
+			background-color: $primary-color;
+			color: white;
+			&:hover {
+				background-color: darken($primary-color, 10%);
+			}
+		}
+	}
+	p {
+		text-align: center;
+		@include font-regular(rem-calc(12px));
+		color: $gray;
+		a {
+			color: $gray;
+			text-decoration: underline;
+			@include transition(100ms);
+			&:hover {
+				color: $dark;
+			}
+		}
+	}
+}

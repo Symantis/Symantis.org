@@ -1,30 +1,31 @@
 <div class="row fluid-row">
 
-    <section class="medium-12 large-9 large-offset-1 columns main-center">
+    <section class="medium-12 large-9 large-offset-1 columns main-center login-container">
 
         <header></header>
 
-        <div class="main-content login-page medium-8 medium-offset-2 large-6 large-offset-4 columns">
-            <h1><a ui-href="login">Login</a></h1>
+        <div class="main-content login-page medium-8 medium-offset-2 large-6 large-offset-3 columns">
+            <h1><a ui-href="login">Login.</a></h1>
         	<form class="modal-form" name="loginForm" action="/auth/local" method="post">
-		    	<div class="small-12 columns">
-		        	<!-- <label for="inputEmail">
+		    	<!-- <div class="small-12 columns">
+		        	<label for="inputEmail">
 		        		Email
-		        	</label> -->
-		        	<input type="text" id="inputEmail" name="identifier" placeholder="Email">
-		      	</div>
-		      	<div class="small-12 columns">
-		        	<!-- <label for="inputPassword">
+		        	</label>
+		      	</div> -->
+                <input type="text" id="inputEmail" name="identifier" placeholder="Email">
+		      	<!-- <div class="small-12 columns">
+		        	<label for="inputPassword">
 		        		Password
-		        	</label> -->
-					<input type="password" id="inputPassword" name="password" placeholder="Password">
-		        
-		   		</div>
-		    	<div class="small-12 columns">
-					<button type="submit" class="btn btn-default sy-button">Sign in</button>
-		       
-		    	</div>
+		        	</label>
+		   		</div> -->
+                <input type="password" id="inputPassword" name="password" placeholder="Password">
+		    	<!-- <div class="small-12 columns">
+		    	</div> -->
+                <button type="submit" class="btn btn-default sy-button">Sign in</button>
 		    </form>
+            <p>
+                <a ui-sref="register" ng-click="cancel()">I need to sign up</a> - <a >I forgot my password</a>
+            </p>
         </div>
 
     </section>
