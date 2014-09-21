@@ -31,13 +31,19 @@
 			width: 100%;
 			margin-top: rem-calc(30px);
 			font-size: rem-calc(14px);
-			border: none;
-			background-color: $primary-color;
-			color: white;
+			//border: none;
+			border-color: $primary-color;
+			border-width: 2px;
+			//background-color: $primary-color;
+			//color: white;
 			padding-top: 12px;
 			padding-bottom: 12px;
+			@include font-semi(rem-calc(14px));
+			color: $primary-color;
 			&:hover {
-				background-color: darken($primary-color, 10%);
+				//background-color: darken($primary-color, 10%);
+				background-color: $primary-color;
+				color: white;
 			}
 		}
 	}
@@ -52,6 +58,7 @@
 			@include transition(100ms);
 			&:hover {
 				color: $dark;
+				//text-decoration: underline;
 			}
 		}
 	}
