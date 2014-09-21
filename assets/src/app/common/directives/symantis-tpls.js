@@ -505,19 +505,58 @@ angular.module('sy.templates.homeanimation', [])
                 ];
 
                 var story = [{
-                   start: '',
-                   zero: "There are millions of people that make the internet.",
-                   one: "Some of them are designers.",
-                   two: "Some of them are developers.",
-                   three: "Some people say they are totally different.",
-                   four: "But we don’t think so.",
-                   five: "They have something in common.",
-                   six: "They are both types of creators.",
-                   seven: "Symantis brings them together.",
-                   eight: "Blurring the line between Design and Development,",
-                   nine: "and changing the way we work together.",
-                   ten: "Free, Open, Different.",
-                   eleven: "Symantis"
+                    start: {
+                        text:'',
+                        duration: 3000
+                    },
+                    zero: {
+                        text: "There are millions of people that make the internet.",
+                        duration: 3000
+                    },
+                    one: {
+                        text: "Some of them are designers.",
+                        duration: 3000
+                    },
+                    two: {
+                        text: "Some of them are developers.",
+                        duration: 3000
+                    },
+                    three: {
+                        text: "Some people say they are totally different.",
+                        duration: 3000
+                    },
+                    four: {
+                        text: "But we don’t think so.",
+                        duration: 3000
+                    },
+                    five: {
+                        text: "They have something in common.",
+                        duration: 3000
+                    },
+                    six: {
+                        text: "They are both types of creators.",
+                        duration: 3000
+                    },
+                    seven: {
+                        text: "Symantis brings them together.",
+                        duration: 3000
+                    },
+                    eight: {
+                        text: "Blurring the line between Design and Development,",
+                        duration: 3000
+                    },
+                    nine: {
+                        text: "and changing the way we work together.",
+                        duration: 3000
+                    },
+                    ten: {
+                        text: "Free, Open, Different.",
+                        duration: 3000
+                    },
+                    eleven: {
+                        text: "Symantis",
+                        duration: 3000
+                    }
                 }];
                 
 
@@ -557,23 +596,21 @@ angular.module('sy.templates.homeanimation', [])
                  var textLabel = text   
                     .attr("x",  w / 2)
                     .attr("y", h-10)
-                    .text(function (d) { return d.zero; })
-                    //.attr("-webkit-font-smoothing", "antialiased")
-                    //.attr("width", w)
+                    .text(function (d) { return d.start.text; })
                     .style("text-anchor", "middle")
-                    //.attr("text-align", "center")
                     .attr("font-family", "'open_sansregular', sans-serif")
                     .attr("font-size", "25px")
                     .attr("fill", "black");
 
-                var animationTime = function(){
+                var animationTime = function(time){
                     $timeout(function() {
                         var index = animations.indexOf(currentAnimation);
-                        if(index+1 > animations.length || index == -1){
+                        console.log(index);
+                        if(index+2 > animations.length || index == -1){
 
                         }else{
                             var nextAnimation = animations[index+1];
-                            currentAnimation = nextAnimation;
+                            
                             //console.log(nextAnimation);
                             textLabel
                                 .style("opacity", 1)
@@ -583,14 +620,15 @@ angular.module('sy.templates.homeanimation', [])
                                 .transition()
                                 .duration(400)
                                 .style("opacity", 1)
-                                .text(function (d) { return d[nextAnimation]; });
-                            
-                            animationTime();
+                                .text(function (d) { return d[nextAnimation].text; });
+
+                            currentAnimation = nextAnimation;
+                            animationTime(3000);
                         }
-                    }, 3000);
+                    }, time);
                 }  
 
-                animationTime(); 
+                animationTime(3000); 
 
                 //textLabel.text(function (d) { return d.one; });   
 
