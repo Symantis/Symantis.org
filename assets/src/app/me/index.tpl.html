@@ -25,7 +25,11 @@
         <p>{{currentUser.firstName}}</p>
         <p>{{currentUser.status}} <span am-time-ago="currentUser.statusTime "></span></p>
 
-        <p editable-textarea="user.professed" e-cols="40">{{ user.professed || "Write a short description!" }}</p>
+        <p 
+            editable-textarea="user.professed" 
+            e-cols="40" 
+            e-ng-maxlength="140"
+        >{{ user.professed || "Write a short description!" }}</p>
 
         <p editable-textarea="user.bio" e-cols="40">{{ user.bio || "Write a bio!" }}</p>
 
