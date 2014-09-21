@@ -487,8 +487,9 @@ angular.module('sy.templates.homeanimation', [])
             link: function ($scope, element, attrs){
                 console.log("Home Animation");
                 
-                var currentAnimation = 'zero';
+                var currentAnimation = 'start';
                 var animations = [
+                    'start',
                     'zero',
                     'one',
                     'two',
@@ -504,6 +505,7 @@ angular.module('sy.templates.homeanimation', [])
                 ];
 
                 var story = [{
+                   start: '',
                    zero: "There are millions of people that make the internet.",
                    one: "Some of them are designers.",
                    two: "Some of them are developers.",
@@ -567,15 +569,21 @@ angular.module('sy.templates.homeanimation', [])
                 var animationTime = function(){
                     $timeout(function() {
                         var index = animations.indexOf(currentAnimation);
-                        console.log(index);
                         if(index+1 > animations.length || index == -1){
 
                         }else{
                             var nextAnimation = animations[index+1];
                             currentAnimation = nextAnimation;
-                            console.log(nextAnimation);
+                            //console.log(nextAnimation);
                             textLabel
-                                .text(function (d) { return d[nextAnimation]; }); 
+                                .style("opacity", 1)
+                                .transition()
+                                .duration(400)
+                                .style("opacity", 0)
+                                .transition()
+                                .duration(400)
+                                .style("opacity", 1)
+                                .text(function (d) { return d[nextAnimation]; });
                             
                             animationTime();
                         }
