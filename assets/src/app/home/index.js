@@ -17,7 +17,7 @@ angular.module( 'symantis.home', [
 			},
 			"header": {
 				controller: 'HeaderCtrl',
-                templateUrl: 'header/header.tpl.html'
+                template: ''
 			},
 			"subheader@home": {
 				controller: 'HomeHeaderCtrl',

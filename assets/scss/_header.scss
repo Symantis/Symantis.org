@@ -198,15 +198,13 @@
 						padding-bottom: 7px;
 						padding-top: 5px;
 						margin-left: 5px;
-						//border: rem-calc(1px) $primary-color solid;
-						background-color: $primary-color;
-						color: white;
+						border: rem-calc(1px) $primary-color solid;
+						//background-color: $primary-color;
+						color: $primary-color;
 						@include transition(200ms);
 						&:hover {
-							background-color: darken($primary-color, 10%);
-							//color: $primary-color;
+							background-color: $primary-color;
 							color: white;
-
 						}
 					}
 				}
