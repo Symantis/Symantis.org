@@ -5,27 +5,28 @@
         <header></header>
 
         <div class="main-content login-page medium-8 medium-offset-2 large-6 large-offset-3 columns">
-            <h1><a ui-href="login">Login.</a></h1>
-        	<form class="modal-form" name="loginForm" action="/auth/local" method="post">
-		    	<!-- <div class="small-12 columns">
-		        	<label for="inputEmail">
-		        		Email
-		        	</label>
-		      	</div> -->
-                <input type="text" id="inputEmail" name="identifier" placeholder="Email">
-		      	<!-- <div class="small-12 columns">
-		        	<label for="inputPassword">
-		        		Password
-		        	</label>
-		   		</div> -->
-                <input type="password" id="inputPassword" name="password" placeholder="Password">
-		    	<!-- <div class="small-12 columns">
-		    	</div> -->
-                <button type="submit" class="btn btn-default sy-button">Sign in</button>
-		    </form>
-            <p>
-                <a ui-sref="register" ng-click="cancel()">I need to sign up</a> - <a >I forgot my password</a>
-            </p>
+            <div class="table">
+                <div class="table-cell vertical-align">
+                    <h1><a ui-href="login">Login.</a></h1>
+                	<form class="modal-form" name="loginForm" action="/auth/local" method="post">
+        		    	
+                        <input 
+                            type="text" 
+                            id="inputEmail" 
+                            name="identifier" 
+                            placeholder="Email" 
+                            force-focus="true"
+                        >
+                        <input type="password" id="inputPassword" name="password" placeholder="Password">
+        		    	<!-- <div class="small-12 columns">
+        		    	</div> -->
+                        <button type="submit" class="btn btn-default sy-button">Sign in</button>
+        		    </form>
+                    <p>
+                        <a ui-sref="register" ng-click="cancel()">I need to sign up</a> - <a >I forgot my password</a>
+                    </p>
+                </div>
+            </div>
         </div>
 
     </section>

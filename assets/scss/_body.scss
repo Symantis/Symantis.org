@@ -34,6 +34,17 @@ quote {
 		color: $gray;
 	}
 }
+.table{
+	display:table;
+	width:100%;
+}
+.table-cell{
+	display:table-cell;
+}
+.vertical-align{
+	vertical-align:middle;
+}
+
 .dead-link {
 	cursor: default !important;
 	&:hover {
