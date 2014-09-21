@@ -24,6 +24,15 @@
         <header></header>
         <p>{{currentUser.firstName}}</p>
         <p>{{currentUser.status}} <span am-time-ago="currentUser.statusTime "></span></p>
+
+        <p editable-textarea="user.professed" e-cols="40">{{ user.professed || "Write a short description!" }}</p>
+
+        <p editable-textarea="user.bio" e-cols="40">{{ user.bio || "Write a bio!" }}</p>
+
+        <tags-input ng-model="currentUser.tags">
+            <auto-complete source="loadTags($query)"></auto-complete>
+        </tags-input>
+
         <!-- Section for main center content -->
     </section>
     <section class="medium-0 large-2 columns main-right">

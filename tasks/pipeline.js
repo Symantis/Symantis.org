@@ -51,6 +51,7 @@ var jsFilesToInject = [
   'bower_components/angular-xeditable/dist/js/xeditable.js',
   'bower_components/masonry/dist/masonry.pkgd.js',
   'bower_components/angular-masonry/angular-masonry.js',
+  'bower_components/ng-tags-input/ng-tags-input.js',
   //'bower_components/jquery/dist/jquery.min.js',
   //'bower_components/foundation/js/foundation.min.js',
   //'bower_components/livereload/dist/livereload.js',

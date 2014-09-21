@@ -22,6 +22,8 @@ module.exports = {
 
 				}
 				else{
+					req.user.status = UserModel.status;
+					req.user.statusTime = UserModel.statusTime;
 					User.publishUpdate(req.user.id, UserModel);
 				}
 			});

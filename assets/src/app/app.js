@@ -18,6 +18,7 @@ angular.module( 'symantis', [
 	'ngProgress',
 	'duScroll',
 	'wu.masonry',
+	'ngTagsInput',
 	
 	'symantis.global.modals',
 
