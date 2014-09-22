@@ -42,6 +42,12 @@
 				float: left;
 				position: relative;
 				height: rem-calc(36px);
+				a {
+					width: 100%;
+					float: left;
+					height: rem-calc(36px);
+					position: relative;
+				}
 				h3 {
 					color: $dark;
 					width: auto;
