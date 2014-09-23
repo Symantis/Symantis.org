@@ -1,6 +1,3 @@
-.board-header {
-	padding-bottom: 0 !important;
-}
 .board-category-nav {
 	ul {
 		list-style: none;
@@ -25,9 +22,63 @@
 				&:hover {
 					color: $dark;
 				}
-				&.selected {
+				&.active {
 					color: $dark;
 				}
+			}
+		}
+	}
+}
+.board-sub-nav {
+	border-bottom: rem-calc(1px) $dark solid;
+	float: left;
+	padding-bottom: rem-calc(20px);
+	ul {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		width: auto;
+		li {
+			margin: 0;
+			padding: 0;
+			width: rem-calc(70px);
+			text-align: center;
+			a {
+				@include font-regular(rem-calc(12px));
+				width: 100%;
+				color: darken($light, 10%);
+				//display: block;
+				padding-bottom: rem-calc(25px);
+				padding-top: rem-calc(25px);
+				@include transition(100ms);
+				&:hover {
+					border-top: 3px $dark solid;
+					padding-top: rem-calc(23px);
+					color: black;
+				}
+				&.active {
+					border-top: 3px $dark solid;
+					padding-top: rem-calc(23px);
+					color: black;
+				}
+			}
+		}
+	}
+	.board-sub-nav-left {
+		float: left;
+		li {
+			float: left;
+			text-align: left;
+		}
+	}
+	.board-sub-nav-right {
+		float: right;
+		li {
+			float: right;
+			text-align: right;
+			&:first-child {
+				width: rem-calc(60px);
 			}
 		}
 	}
@@ -35,7 +86,7 @@
 .board-container {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 25px 0 20px 0;
 	position: relative;
 	float: left;
 	width: 100%;
@@ -45,7 +96,7 @@
 	width: 47.5%;
 	position: relative;
 	padding: rem-calc(15px);
-	margin: 0.6rem 2.5% 2rem 0;
+	margin: 0 2.5% 2rem 0;
 	border: rem-calc(1px) $gray solid;
 	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);

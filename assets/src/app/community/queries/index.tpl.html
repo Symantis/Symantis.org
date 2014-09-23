@@ -13,21 +13,19 @@
     <section class="medium-3 large-2 large-offset-1 columns main-left queries-left">
         <div class="wrapper" ui-view="leftside">
 
-        <!-- Section for main left header -->
-        </div>
-        
+        </div>      
     </section>
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center">
     	<!-- Section for main center header -->
         <header class="queries-sub-nav">
             <ul class="queries-sub-nav-left">
-                <li class="queries-recent"><a title="Order by Most Recent">Recent</a></li>
+                <li class="queries-recent"><a title="Order by Most Recent" class="active">Recent</a></li>
                 <li class="queries-popular"><a title="Order by Most Popular">Popular</a></li>
                 <li class="queries-search"><a title="Search for Queries">Search</a></li>
             </ul>
             <ul class="queries-sub-nav-right" ng-show="currentUser">
-                <li class="queries-tags" ng-show="currentUser"><a title="New Query">New</a></li>
-                <li class="queries-tags" ng-show="currentUser"><a title="View your Queries">My Queries</a></li>
+                <li class="queries-tags"><a title="New Query">New</a></li>
+                <li class="queries-tags"><a title="View your Queries">My Queries</a></li>
             </ul>
         </header>
         <!-- Section for main center content -->

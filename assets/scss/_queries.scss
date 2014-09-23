@@ -1,26 +1,30 @@
-.queries-left {
-	h3 {
-		a {
-			text-align: left;
+.queries-category-nav {
+	ul {
+		list-style: none;
+		float: left;
+		position: relative;
+		width: 100%;
+		li {
+			padding: 0 !important;
+			margin: 0 !important;
+			line-height: 1;
+			float: left;
 			width: 100%;
-			@include font-semi(rem-calc(18px));
-			margin: 0;
-		}
-	}
-	li {
-		padding: 0;
-		margin: 0;
-		line-height: rem-calc(12px);
-		a {
-			text-align: left;
-			line-height: rem-calc(16px);
-			width: 100%;
-			@include font-regular(rem-calc(12px));
-			margin: 0;
-			padding: 0;
-			@include transition(100ms);
-			&:hover {
-				color: $gray;
+			position: relative;
+			a {
+				padding: 0 0 rem-calc(10px) 0;
+				margin: 0;
+				@include font-regular(12px);
+				color: darken($light, 10%);
+				@include transition(100ms);
+				line-height: 1.4;
+				float: left;
+				&:hover {
+					color: $dark;
+				}
+				&.active {
+					color: $dark;
+				}
 			}
 		}
 	}
@@ -43,19 +47,20 @@
 			a {
 				@include font-regular(rem-calc(12px));
 				width: 100%;
-				color: $gray;
+				color: darken($light, 10%);
 				//display: block;
 				padding-bottom: rem-calc(25px);
 				padding-top: rem-calc(25px);
 				@include transition(100ms);
 				&:hover {
-					border-top: rem-calc(2px) $dark solid;
+					border-top: 3px $dark solid;
 					padding-top: rem-calc(23px);
 					color: black;
 				}
-				&:selected {
-					border-top: rem-calc(2px) $dark solid;
+				&.active {
+					border-top: 3px $dark solid;
 					padding-top: rem-calc(23px);
+					color: black;
 				}
 			}
 		}
@@ -547,13 +552,16 @@
 						float: left;
 						padding: rem-calc(5px);
 						a {
-							color: $dark;
+							color: $gray;
 							@include transition(100ms);
 							span {
 								font-size: rem-calc(15px);
 							}
 							&:hover {
-								color: $gray;
+								color: $dark;
+							}
+							&.selected {
+								color: $dark;
 							}
 						}
 						&:first-child {

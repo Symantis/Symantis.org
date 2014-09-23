@@ -3,23 +3,36 @@
 		<!-- Section on left of heading -->
 	</section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
-        <h1><a ui-sref="community.board">Community Board</a></h1>
+        <h1><a ui-sref="community.board">Opportunities Board</a></h1>
     </section>
     <section class="medium-0 large-2 columns heading-right">
 		<!-- Section on right of heading -->
 	</section>
 </div>
+
 <div class="row fluid-row">
+
     <section class="medium-3 large-2 columns large-offset-1 main-left connections-left">
         <div class="wrapper" ui-view="leftside">
 
         </div>
-    	
     </section>
+
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center connections-center">
-    	<!-- Section for main center header -->
-        <header></header>
-        <ul masonry class="board-container" ng-show="currentUser">
+
+        <header class="board-sub-nav">
+            <ul class="board-sub-nav-left">
+                <li class="board-recent"><a title="Order by Most Recent" class="active">Recent</a></li>
+                <li class="board-popular"><a title="Order by Most Popular">Popular</a></li>
+                <li class="board-search"><a title="Search for Opportunities">Search</a></li>
+            </ul>
+            <ul class="board-sub-nav-right" ng-show="currentUser">
+                <li class="board-new"><a title="New Opportunity">New</a></li>
+                <li class="board-myPosts"><a title="View your Posts">My Posts</a></li>
+            </ul>
+        </header>
+
+        <ul masonry class="board-container">
             <li class="board-pod masonry-brick">
                 <section class="pod-header">
                     <div 
@@ -27,6 +40,14 @@
                         signature="{{ currentUser.signature }}"
                     >
                     </div>
+                    <h3><a >Title of Job</a></h3>
+                    <p>
+                        <a >
+                            Hamish Jackson-Mee
+                        </a>
+                        &middot;
+                        <span>Sep 23, 2014</span>
+                    </p>
                 </section>
                 <section class="pod-body">
                 </section>
@@ -42,10 +63,9 @@
                 </section>
             </li>
         </ul>
-        <ul ng-show="!currentUser">
-            <li><h2>Please <a ng-click="loginModal()">Login</a> for this feature</h2></li>
-        </ul>
+
     </section>
+
     <section class="medium-0 large-2 columns main-right">
         <header class="right-header">
         	<!-- Main Right Heading -->
@@ -54,4 +74,5 @@
         	<!-- Main Right Content -->
         </div>
     </section>
+
 </div>

@@ -81,6 +81,7 @@ quote {
 		@include font-bitter2(rem-calc(48px));
 		color: $dark;
 		margin: 0;
+		white-space: nowrap;
 		a {
 			color: $dark;
 		}
@@ -107,7 +108,7 @@ quote {
 	padding-right: rem-calc(30px);
 	padding-left: 0.65rem;
 	header {
-		border-top: rem-calc(2px) $dark solid;
+		border-top: 3px $dark solid;
 		padding-top: rem-calc(20px);
 		padding-bottom: rem-calc(20px);
 		width: 100%;
