@@ -53,8 +53,8 @@
 				padding-top: rem-calc(25px);
 				@include transition(100ms);
 				&:hover {
-					border-top: 3px $dark solid;
-					padding-top: rem-calc(23px);
+					//border-top: 3px $dark solid;
+					//padding-top: rem-calc(23px);
 					color: black;
 				}
 				&.active {

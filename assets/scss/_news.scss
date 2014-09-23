@@ -15,10 +15,14 @@
 					text-align: left;
 					width: 100%;
 					@include font-semi(rem-calc(18px));
+					color: darken($light, 10%);
 					margin: 0;
 					@include transition(100ms);
 					&:hover {
-						color: $primary-color;
+						color: $dark;
+					}
+					&.active {
+						color: $dark;
 					}
 				}
 			}
@@ -31,12 +35,15 @@
 					line-height: rem-calc(16px);
 					width: 100%;
 					@include font-regular(rem-calc(12px));
+					color: darken($light, 10%);
 					margin: 0;
 					padding: 0;
 					@include transition(100ms);
 					&:hover {
-						//text-decoration: underline;
-						color: $gray;
+						color: $dark;
+					}
+					&.active {
+						color: $dark;
 					}
 				}
 			}
