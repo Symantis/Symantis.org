@@ -26,18 +26,31 @@
         <p>{{currentUser.status}} <span am-time-ago="currentUser.statusTime "></span></p>
 
         <p 
-            editable-textarea="currentUser.professed" 
-            e-cols="40" 
+            editable-text="currentUser.firstName" 
             e-ng-maxlength="140"
-            editable-text="currentUser.professed" 
             onaftersave="updateUser()"
+
+        >{{ currentUser.firstName || "First Name" }}</p>
+        <p 
+            editable-text="currentUser.lastName" 
+            e-ng-maxlength="140"
+            onaftersave="updateUser()"
+
+        >{{ currentUser.lastName || "First Name" }}</p>
+
+        <p 
+            editable-textarea="currentUser.professed" 
+            e-ng-maxlength="140" 
+            e-cols="20"
+            onaftersave="updateUser()"
+
         >{{ currentUser.professed || "Write a short description!" }}</p>
 
         <p 
             editable-textarea="currentUser.bio" 
             e-cols="40"
-            editable-text="currentUser.bio" 
             onaftersave="updateUser()"
+
         >{{ currentUser.bio || "Write a bio!" }}</p>
 
         <tags-input ng-model="currentUser.tags">
