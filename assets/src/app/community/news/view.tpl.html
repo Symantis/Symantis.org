@@ -18,7 +18,7 @@
 	        <section class="news-page-footer">
 				<div class="news-page-share">
 	                <div class="twitter-share">
-	                    <a >
+	                    <a title="Share on Twitter">
 	                        <div class="icon-social-twitter icon"></div>
 	                    </a>
 	                    <div class="share-count">
@@ -26,7 +26,7 @@
 	                    </div>
 	                </div>
 	                <div class="facebook-share">
-	                    <a >
+	                    <a title="Share on Facebook">
 	                        <div class="icon-social-facebook icon"></div>
 	                    </a>
 	                    <div class="share-count">
@@ -101,21 +101,15 @@
 					{{ comment.comment }}
 				</p>
 				<p class="comment-reply">
-					<a >
+					<a title="Up Votes">
 						<span class="icon-vote-up"></span>
-						<span 
-							class="comment-votes" 
-							ng-show="comment.upVotes > 0"
-						>
+						<span class="comment-votes">
 							{{ comment.upVotes | number }}
 						</span>
 					</a>
-					<a >
+					<a title="Down Votes">
 						<span class="icon-vote-down"></span>
-						<span 
-							class="comment-votes"
-							ng-show="comment.downVotes > 0"
-						>
+						<span class="comment-votes">
 							{{ comment.downVotes | number }}
 						</span>
 					</a>

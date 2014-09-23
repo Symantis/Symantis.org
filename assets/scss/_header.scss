@@ -269,15 +269,15 @@
 						@include transition(100ms);
 						a {
 							@include font-regular(rem-calc(12px));
-							color: $gray;
-							padding: rem-calc(4px) rem-calc(4px) rem-calc(5px) rem-calc(12px);
+							color: $dark;
+							padding: rem-calc(4px) rem-calc(4px) rem-calc(5px) rem-calc(13px);
 							width: 100%;
 							float: left;
 							@include transition(100ms);
 						}
 						&:first-child {
 							a {
-								padding: rem-calc(12px) rem-calc(4px) rem-calc(13px) rem-calc(12px);
+								padding: rem-calc(12px) rem-calc(4px) rem-calc(13px) rem-calc(13px);
 							}
 						}
 						&:nth-child(2) {
@@ -297,13 +297,13 @@
 						&:last-child {
 							border-bottom: none;
 							a {
-								padding: rem-calc(12px) rem-calc(4px) rem-calc(13px) rem-calc(12px);
+								padding: rem-calc(12px) rem-calc(4px) rem-calc(13px) rem-calc(13px);
 							}
 						}
 						&:hover {
 							//background-color: $primary-color;
 							a {
-								color: $dark;
+								color: $primary-color;
 							}
 						}
 					}
@@ -311,7 +311,7 @@
 			}
 			.settings-dropdown-container:after, .settings-dropdown-container:before {
 				bottom: 100%;
-				left: 138px;
+				left: 137px;
 				border: solid transparent;
 				content: " ";
 				height: 0;

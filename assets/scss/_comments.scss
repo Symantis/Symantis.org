@@ -381,11 +381,12 @@
 .comments-noUser {
 	float: left;
 	width: 100%;
-	border-top: rem-calc(1px) $gray solid;
+	//border-top: rem-calc(1px) $gray solid;
 	margin-top: rem-calc(30px);
 	padding-top: rem-calc(10px);
+	padding-left: 3.6rem;
 	h4 {
-		@include font-semi(rem-calc(14px));
+		@include font-semi(rem-calc(18px));
 		color: $dark;
 		float: left;
 	}

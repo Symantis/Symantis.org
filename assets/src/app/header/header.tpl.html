@@ -23,14 +23,14 @@
 							<p>
 								<span class="status user-{{ currentUser.status }}"></span>
 								<span>Hi,</span>
-								<a ui-sref="me">{{ currentUser.firstName }}</a>
+								<a ui-sref="me" title="View Profile">{{ currentUser.firstName }}</a>
 							</p>
 						</li>
 						<li class="top-nav-messages" >
 								<!-- tooltip-placement="bottom" 
 								tooltip="Messages" 
 								tooltip-animation="false" -->
-							<a >
+							<a title="Messages">
 								<div class="icon-message icon"></div>
 							</a>
 						</li>
@@ -38,7 +38,7 @@
 								<!-- tooltip-placement="bottom" 
 								tooltip="Settings" 
 								tooltip-animation="false" -->
-							<a dropdown-toggle="#settings-dropdown">
+							<a dropdown-toggle="#settings-dropdown" title="Settings">
 								<div class="icon-settings icon"></div>
 							</a>
 						</li>

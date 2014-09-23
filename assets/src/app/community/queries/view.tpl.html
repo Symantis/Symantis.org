@@ -17,7 +17,7 @@
 		        </div>
 		        <div class="image-thumbs" ng-show="query.imgs">
 		        	<div class="thumbnail-container" ng-repeat="img in query.imgs">
-		        		<a >
+		        		<a title="View {{ img.name }}">
 		                    <img ng-src="{{ img.src }}" />
 		                </a>
 		        	</div>
@@ -28,7 +28,7 @@
 			<div class="querie-tags">
 	            <ul>
 	                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
-	                    <a ui-sref="community.tags.view({ tag:tag.title })">
+	                    <a ui-sref="community.tags.view({ tag:tag.title })" title="View content tagged with {{ tag.title }}">
 	                        <p>{{ tag.title }}</p>
 	                    </a>
 	                </li>
@@ -63,6 +63,7 @@
 				ng-show="currentUser"
 				ng-click="comments.selected = false" 
 				ng-class="{active: !comments.selected}"
+				title="New Response"
 			>
 				New
 			</a>
@@ -89,6 +90,7 @@
 				<a  
 					class="vote-up" 
 					ng-click="response.votes = response.votes + 1"
+					title="Up Vote this response"
 				>
 					<span class="icon-vote-up"></span>
 				</a>
@@ -98,6 +100,7 @@
 				<a 
 					class="vote-down" 
 					ng-click="response.votes = response.votes - 1"
+					title="Down Vote this response"
 				>
 					<span class="icon-vote-down"></span>
 				</a>
@@ -121,7 +124,7 @@
 			</p>
 			<div class="image-thumbs" ng-show="response.imgs">
 	        	<div class="thumbnail-container" ng-repeat="img in response.imgs">
-	        		<a >
+	        		<a title="View {{ img.name }}">
 	                    <img ng-src="{{ img.src }}" />
 	                </a>
 	        	</div>
@@ -198,6 +201,7 @@
 		<a 
 			ng-click="replies.open = false"
 			ng-show="replies.open"
+			title="Hide Replies"
 		>
 			<div class="reply-toggle">
 				<p>Hide</p>
@@ -229,22 +233,22 @@
 	        	<div class="response-options">
 			        <ul>
 			        	<li class="response-options-edit">
-			        		<a >
+			        		<a title="Insert Text">
 			        			<span class="icon-pencil"></span>
 			        		</a>
 			        	</li>
 				        <li class="response-options-link">
-							<a >
+							<a title="Insert Link">
 			        			<span class="icon-link"></span>
 							</a>
 			        	</li>
 			        	<li class="response-options-image">
-			        		<a >
+			        		<a title="Insert Image">
 			        			<span class="icon-photo"></span>
 			        		</a>
 			        	</li>
 			        	<li class="response-options-code">
-			        		<a >
+			        		<a title="Insert Code Snippet">
 			        			<span class="icon-code-snippet"></span>
 			        		</a>
 			        	</li>
