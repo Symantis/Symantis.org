@@ -198,7 +198,8 @@
 		z-index: 10;
 		overflow: hidden;
 		top: rem-calc(40px);
-		right: rem-calc(14px);
+		right: rem-calc(14px) !important;
+		left: auto !important;
 		width: rem-calc(180px);
 		height: rem-calc(133px);
 		background-color: white;

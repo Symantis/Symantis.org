@@ -69,7 +69,7 @@
         </div>
 
         <ul class="community-container" ng-show="currentUser">
-            <li class="community-pod" ng-class="{active: podOptions.open}">
+            <li class="community-pod">
                 <section class="pod-header">
                     <div class="pod-header-left">
                         <div 
@@ -83,7 +83,7 @@
                         <span>3 hours ago</span>
                     </h3>
                     <div class="pod-options-reveal">
-                        <a ng-click="podOptions.open = true">
+                        <a dropdown-toggle="#pod-options" title="Options">
                             <span class="icon-vote-down"></span>
                         </a>
                     </div>
@@ -114,16 +114,9 @@
                         </div>
                     </div>
                 </section>
-                <section 
-                    class="pod-options" 
-                    ng-init="podOptions.open = false" 
-                    ng-show="podOptions.open"
-                >
-                    <p 
-                        class="pod-options-exit" 
-                        ng-click="podOptions.open = false"
-                    >
-                        Post Options
+                <section class="pod-options" id="pod-options">
+                    <p class="pod-options-exit">
+                        Options
                         <a ><span class="icon-exit"></span></a>
                     </p>
                     <ul class="pod-options-list">

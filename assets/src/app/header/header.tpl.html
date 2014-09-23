@@ -26,25 +26,37 @@
 								<a ui-sref="me">{{ currentUser.firstName }}</a>
 							</p>
 						</li>
-						<li class="top-nav-messages" ng-init="messageHint.open = false">
-							<a ng-mouseover="messageHint.open = true" ng-mouseleave="messageHint.open = false">
+						<li class="top-nav-messages" >
+								<!-- tooltip-placement="bottom" 
+								tooltip="Messages" 
+								tooltip-animation="false" -->
+							<a >
 								<div class="icon-message icon"></div>
-								<span class="link-hint" ng-show="messageHint.open">Messages</span>
 							</a>
-							
 						</li>
-						<li class="top-nav-settings" ng-init="settingsHint.open = false">
-							<a ng-mouseover="settingsHint.open = true" ng-mouseleave="settingsHint.open = false">
+						<li class="top-nav-settings">
+								<!-- tooltip-placement="bottom" 
+								tooltip="Settings" 
+								tooltip-animation="false" -->
+							<a dropdown-toggle="#settings-dropdown">
 								<div class="icon-settings icon"></div>
-								<span class="link-hint" ng-show="settingsHint.open">Settings</span>
 							</a>
 						</li>
 					</ul>
 					<p class="top-nav-noUser" ng-show="!currentUser">
 						<a ui-sref="login">Login</a><span> or </span><a ui-sref="register" class="header-signup">Sign up</a>
 					</p>
+					<div id="settings-dropdown" class="settings-dropdown-container">
+						<ul class="settings-dropdown">
+							<li><a ui-sref="me">My Profile</a></li>
+							<li><a >Manage Manti</a></li>
+							<li><a >Sy.kit Preferences</a></li>
+							<li><a >Settings</a></li>
+							<li><a href="/logout">Log Out</a></li>
+						</ul>
+					</div>
 				</section>
-				
+
 			</section>
 		</div>
 		<div class="row fluid-row top-nav-rule-cont">

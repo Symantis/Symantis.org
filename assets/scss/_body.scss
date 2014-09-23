@@ -51,6 +51,13 @@ quote {
 		color: inherit;
 	}
 }
+.tooltip {
+	border-radius: 5px;
+	padding-top: 6px;
+	padding-bottom: 7px;
+	@include font-regular(rem-calc(11px));
+	color: white;
+}
 .home-animation{
 	overflow:hidden;
 }
