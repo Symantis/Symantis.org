@@ -101,6 +101,7 @@ body,
 		display:table;
 		z-index:-1;
 		float:right;
+		//background-color: white;
 		//background-color: $darkest;
 		//border-right: rem-calc(1px) $light solid;
 		& > .activator-icon{
@@ -116,6 +117,7 @@ body,
 	.sitenav-inner{
 		height:100%;
 		background-color: $darkest;
+		//background-color: white;
 		width:150px;
 		float:left;
 		display:table;
@@ -178,6 +180,7 @@ body,
 					a{
 						display: block;
 						color: white;
+						//color: $darkest;
 						//-webkit-transition: padding 0.1s;
 						//transition: padding 0.1s;
 						&:hover{

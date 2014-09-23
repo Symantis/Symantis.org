@@ -1,5 +1,6 @@
 body {
 	background-color: white;
+	//background-color: lighten($offWhite, 5%);
 }
 .container{
 	height:100%;
@@ -75,6 +76,7 @@ quote {
 	padding-top: rem-calc(20px);
 	min-width: 701px;
 	max-width: 2000px;
+	//background-color: lighten($offWhite, 5%);
 	h1 {
 		text-align: left;
 		width: 100%;

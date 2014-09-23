@@ -20,10 +20,10 @@
 				line-height: 1.4;
 				float: left;
 				&:hover {
-					color: $dark;
+					color: $darkest;
 				}
 				&.active {
-					color: $dark;
+					color: $darkest;
 				}
 			}
 		}
@@ -89,32 +89,43 @@
 		}
 	}
 }
+.board-center {
+	position: relative;
+	//display: block;
+	//width: 100%;
+	//text-align: center;
+}
 .board-container {
-	list-style: none;
+	//list-style: none;
 	margin: 0;
 	padding: 0;
 	position: relative;
 	float: left;
-	width: 100%;
+	width: auto;
+	height: auto;
+	//margin: 0 auto;
+	//display: inline-block;
+	margin-top: 10px;
 }
 .board-pod {
 	float: left;
-	width: 47.5%;
+	width: 300px;
+	height: auto;
 	position: relative;
-	padding: rem-calc(15px);
-	margin: 2rem 1.25% 0 1.25%;
+	background-color: white;
+	padding: 15px 15px 5px 15px;
+	margin: 20px 10px 0 10px;
 	border: rem-calc(1px) $gray solid;
 	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-	/*&:nth-child(2) {
-		margin-right: 0;
-		margin-left: 2.5%;
-	}*/
 	.pod-header {
 		float: left;
 		width: 100%;
 		position: relative;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: 1px $gray solid;
 		.pod-user-pic {
 			width: rem-calc(40px);
 			height: rem-calc(40px);
@@ -122,7 +133,112 @@
 			border: rem-calc(1px) black solid;
 			border-radius: rem-calc(20px);
 			overflow: hidden;
+			margin-right: 10px;
 			@include transition(100ms);
+		}
+		h3 {
+			float: left;
+			position: relative;
+			width: 218px;
+			@include font-semi(rem-calc(14px));
+			color: $primary-color;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			@include transition(100ms);
+			a {
+				width: 100%;
+				@include transition(100ms);
+				&:hover {
+					color: $dark;
+				}
+			}
+			&:hover {
+				color: $dark;
+				a {
+					color: $dark;
+				}
+			}
+		}
+		p {
+			float: left;
+			position: relative;
+			width: 218px;
+			padding-top: 5px;
+			color: $gray;
+			a {
+				@include font-regular(rem-calc(12px));
+				color: $gray;
+				margin-right: 2px;
+				&:hover {
+					color: $darkest;
+				}
+			}
+			span {
+				@include font-italic(rem-calc(12px));
+				color: darken($light, 10%);
+				margin-left: 2px;
+			}
+		}
+	}
+	.pod-body {
+		float: left;
+		width: 100%;
+		position: relative;
+		p {
+			float: left;
+			width: 100%;
+		}
+	}
+	.pod-footer {
+		width: 100%;
+		float: left;
+		padding-top: 10px;
+		margin-top: 10px;
+		border-top: 1px $gray solid;
+		position: relative;
+		.pod-exit {
+			float: left;
+			margin-left: 2px;
+			a {
+				float: left;
+				color: red;
+				padding: 0;
+				margin-top: 5px;
+				span {
+					font-size: rem-calc(16px);
+				}
+			}
+		}
+		.pod-more {
+			float: left;
+			margin: 0 96px 0 100px;
+			padding: 0;
+			a {
+				color: white;
+				float: left;
+				background-color: $gray;
+				padding: 2px 8px 0 8px;
+				border-radius: 4px;
+				margin: 0;
+				span {
+					font-size: rem-calc(12px);
+				}
+			}
+		}
+		.pod-accept {
+			float: left;
+			padding: 0;
+			a {
+				color: green;
+				float: left;
+				padding: 0;
+				margin-top: 3px;
+				span {
+					font-size: rem-calc(26px);
+					line-height: 0.6;
+				}
+			}
 		}
 	}
 }
