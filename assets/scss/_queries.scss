@@ -80,6 +80,12 @@
 			&:first-child {
 				width: rem-calc(60px);
 			}
+			&.queries-new {
+				a {
+					padding-right: 6px;
+					padding-left: 4px;
+				}
+			}
 		}
 	}
 }
