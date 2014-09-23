@@ -26,12 +26,19 @@
         <p>{{currentUser.status}} <span am-time-ago="currentUser.statusTime "></span></p>
 
         <p 
-            editable-textarea="user.professed" 
+            editable-textarea="currentUser.professed" 
             e-cols="40" 
             e-ng-maxlength="140"
-        >{{ user.professed || "Write a short description!" }}</p>
+            editable-text="currentUser.professed" 
+            onaftersave="updateUser()"
+        >{{ currentUser.professed || "Write a short description!" }}</p>
 
-        <p editable-textarea="user.bio" e-cols="40">{{ user.bio || "Write a bio!" }}</p>
+        <p 
+            editable-textarea="currentUser.bio" 
+            e-cols="40"
+            editable-text="currentUser.bio" 
+            onaftersave="updateUser()"
+        >{{ currentUser.bio || "Write a bio!" }}</p>
 
         <tags-input ng-model="currentUser.tags">
             <auto-complete source="loadTags($query)"></auto-complete>

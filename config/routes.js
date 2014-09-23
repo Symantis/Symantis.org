@@ -42,6 +42,8 @@ module.exports.routes = {
 
 
   // Custom routes here...
+    //**User Autocompletes
+    'get /api/tags/:tag': 'UserController.autoCompleteTags',
 
     /**
      * User routes
@@ -49,6 +51,7 @@ module.exports.routes = {
     'get /api/user': 'UserController.getAll',
     'get /api/user/:id': 'UserController.getOne',
     'post /api/user': 'UserController.create',
+    'post /api/user/update': 'UserController.update',
     'post /api/user/status': 'UserController.updateStatus',
 
   /**

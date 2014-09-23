@@ -42,11 +42,11 @@ module.exports = {
 		},
 		bio : {
 			type: 'string',
-			defaultsTo: null
+			defaultsTo: ""
 		},
 		professed: {
 			type: 'string',
-			defaultsTo: null
+			defaultsTo: ""
 		},
 		message_count: {
 			type: 'number'

@@ -73,8 +73,21 @@ angular.module( 'symantis.me', [
 	;
 })
 
-.controller( 'MeCtrl', function ProfileController( $scope, titleService ) {
+.controller( 'MeCtrl', function ProfileController( $scope, titleService, $http, UserModel ) {
 	titleService.setTitle('Me');
+	
+	$scope.loadTags = function(query) {
+		return $http.get('/api/tags/' + query);
+	};
+
+	$scope.updateUser = function (){
+		console.log($scope.currentUser);
+		UserModel.update($scope.currentUser)
+		.then(function(model){
+			console.log(model);
+		});
+	
+	}
 
 	
 })

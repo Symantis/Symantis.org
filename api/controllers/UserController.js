@@ -38,11 +38,35 @@ module.exports = {
 			}
 		});
 	},
-	updateStatus: function (req, res) {
-		var id = req.param('id');
-		if (!id) {
-			return res.badRequest('No id provided.');
+	update: function (req, res) {
+		
+		if(!req.user.id){
+			return res.badRequest('Not Logged In');
 		}
+		//console.log(req);
+		if(req.user.id != req.param('id')){
+			return res.badRequest('Not Logged In');
+		}
+		
+		console.log(req.params.all());
+
+		User.update(req.user.id, req.params.all())
+		.exec(function(err, model) {
+			User.publishUpdate(req.user.id, model);
+			return res.json(model);
+		});
+		
+	},
+	updateStatus: function (req, res) {
+		
+		if(req.user.id === "undefined" || !req.user.id ){
+			return res.badRequest('Not Logged In');
+		}
+		if(req.user.id != req.param('id')){
+			return res.badRequest('Not Logged In');
+		}
+		var id = req.user.id;
+		
 		if (!status) {
 			return res.badRequest('No status provided.');
 		}
@@ -63,5 +87,20 @@ module.exports = {
 				res.json(newModel);
 			}
 		});
+	},
+	autoCompleteTags: function (req, res) {
+		
+		var tag = req.param('tag');
+
+
+
+		var tags = [
+			'Designer',
+			'Developer',
+			'Frontend',
+			'Backend'
+		];
+
+		res.send(tags);
 	}
 };
