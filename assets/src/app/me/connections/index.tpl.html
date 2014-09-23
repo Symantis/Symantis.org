@@ -29,6 +29,7 @@
                 <h2 class="connections-name">
                     <a 
                         ui-sref="profile.view({ handle: user.handle })"
+                        title="View {{ user.firstName }}'s Profile"
                     >
                         {{ user.firstName + ' ' + user.lastName }}
                     </a>
@@ -40,11 +41,12 @@
                     <a 
                         ng-repeat="tag in user.tags" 
                         ui-sref="community.tags.view({ tag: tag })"
+                        title="View users tagged with {{ tag }}"
                     >
                         {{ tag }}
                     </a>
                 </p>
-                <a href="#">
+                <a title="Message {{ user.firstName }}">
                     <div class="connections-message">
                         <div class="icon-message"></div>
                     </div>

@@ -10,19 +10,19 @@
 <header class="profile-left-options left-header">
     <ul>
         <li>
-            <a ui-sref="profile.view.connect">
+            <a ui-sref="profile.view.connect" title="Connect with {{ user.firstName }}">
                 <h3>Connect</h3>
                 <div class="icon-plus icon"></div>
             </a>
         </li>
         <li>
-            <a ui-sref="profile.view.message">
+            <a ui-sref="profile.view.message" title="Message {{ user.firstName }}">
             <h3>Message</h3>
             <div class="icon-message icon"></div>
             </a>
         </li>
         <li>
-            <a ui-sref="profile.view.invite">
+            <a ui-sref="profile.view.invite" title="Invite {{ user.firstName }} to work with you">
             <h3>Invite</h3>
             <div class="icon-plus icon"></div>
             </a>

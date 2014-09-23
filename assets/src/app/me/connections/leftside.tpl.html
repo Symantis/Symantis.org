@@ -9,6 +9,7 @@
                         <a 
                             ui-sref="profile.view({ handle: user.handle })" 
                             ng-show="user.status == 'online'"
+                            title="View {{ user.firstName }}'s Profile"
                         >
                             <p>{{ user.firstName + ' ' + user.lastName }}</p>
                         </a>
@@ -26,8 +27,9 @@
                         class="animate-repeat" 
                         ng-repeat="user in users"
                     >
-                        <a ui-sref="profile.view({ handle: user.handle })">
-                            <div class="connections-suggestions-pic suggestions-{{ user.status }} generate-image" signature="{{ user.signature }}"></div>
+                        <a ui-sref="profile.view({ handle: user.handle })" title="View {{ user.firstName }}'s Profile">
+                            <div class="connections-suggestions-pic suggestions-{{ user.status }} generate-image" signature="{{ user.signature }}">
+                            </div>
                             <p class="connections-suggestions-name">{{ user.firstName + ' ' + user.lastName }}</p>
                             <p class="connections-suggestions-skills">{{ user.tags[0] }}</p>
                         </a>

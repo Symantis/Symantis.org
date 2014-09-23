@@ -1150,13 +1150,6 @@ var aQueries = [
 					signature: Math.random()
 				},
 				date: new Date(),
-				imgs: [ 
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					}
-				],
 				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
 				replies: [
 					{
