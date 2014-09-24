@@ -1,0 +1,223 @@
+<article class="row board-page">
+	<div class="medium-12 columns">
+
+	    <div class="news-post-content">
+	    	<!-- <section class="news-page-hero">
+		    	
+		        <img ng-show="article.img" ng-src="{{ article.img }}">
+		        
+		    </section> -->
+	        <section class="news-page-header">
+		        <h3>{{ board.title }}</h3>
+		    </section>
+		    <!-- <section class="news-page-body">
+		        <p>{{ article.description }}</p>
+		    </section>
+	        <section class="news-page-footer">
+				<div class="news-page-share">
+	                <div class="twitter-share">
+	                    <a title="Share on Twitter">
+	                        <div class="icon-social-twitter icon"></div>
+	                    </a>
+	                    <div class="share-count">
+	                        <p>{{ article.social.twitter }}</p>
+	                    </div>
+	                </div>
+	                <div class="facebook-share">
+	                    <a title="Share on Facebook">
+	                        <div class="icon-social-facebook icon"></div>
+	                    </a>
+	                    <div class="share-count">
+	                        <p>{{ article.social.facebook }}</p>
+	                    </div>
+	                </div>
+	            </div>
+		        <div class="news-page-details">
+		        	<div class="news-details">
+			        	<div class="news-details-pic author-{{ article.author.status }} generate-image" signature="{{ article.author.signature }}"></div>
+		                <p class="news-details-by">
+	                        <a ui-sref="profile.view({ handle: article.author.handle })">
+	                            {{ article.author.firstName }} {{ article.author.lastName }}
+	                        </a>
+	                    </p>
+		                <p class="news-details-on">
+	                        <span>
+	                            {{ article.date | date }}
+	                        </span>
+	                    </p>
+	                </div>
+		        </div>
+			</section> -->
+	    </div>
+
+		<!-- <div class="comments-head" ng-init="comments.selected = true">
+			<h4 class="number-comments">
+				<a 
+					ng-class="{active: comments.selected}" 
+					ng-click="comments.selected = true"
+				>
+					{{ article.comments.length }} Comment<span ng-show="article.comments.length > 1">s</span>
+				</a>
+			</h4>
+			<h4>
+				<a 
+					ng-show="currentUser"
+					ng-click="comments.selected = false" 
+					ng-class="{active: !comments.selected}"
+				>
+					New
+				</a>
+				<a ng-show="!currentUser" ng-click="loginModal()">Login</a>
+			</h4>
+			<p>
+				<a >Sort by <span class="icon-vote-down icon"></span></a>
+			</p>
+		</div>
+		
+		<div 
+			class="comment" 
+			ng-repeat="comment in article.comments"
+		>
+			<div class="comment-left">
+				<div 
+					class="comment-pic generate-image" 
+					signature="{{ comment.author.signature }}"
+				>
+				</div>
+			</div>
+			<div class="comment-content">
+				<div class="comment-details">
+		            <p>
+		            	<a ui-sref="profile.view({ handle: comment.author.handle })">
+		            		{{ comment.author.firstName }} {{ comment.author.lastName }}
+		            	</a>
+		            	&middot;
+		            	<span>{{ comment.date | date }}</span>
+		            </p>
+		        </div>
+				<p class="comment-text">
+					{{ comment.comment }}
+				</p>
+				<p class="comment-reply">
+					<a title="Up Votes">
+						<span class="icon-vote-up"></span>
+						<span class="comment-votes">
+							{{ comment.upVotes | number }}
+						</span>
+					</a>
+					<a title="Down Votes">
+						<span class="icon-vote-down"></span>
+						<span class="comment-votes">
+							{{ comment.downVotes | number }}
+						</span>
+					</a>
+				</p>
+			</div>
+	        
+			<div class="replies" ng-init="replies.open = false" ng-show="replies.open">
+				<div 
+					class="reply" 
+					ng-repeat="reply in comment.replies"
+				>
+					<div class="reply-push">
+						<div class="icon-indent icon">
+						</div>
+					</div>
+					<div class="reply-left">
+						<div class="reply-pic generate-image" signature="{{ reply.author.signature }}"></div>
+					</div>
+					<div class="reply-content">
+						<div class="reply-details">
+				            <p>
+				            	<a ui-sref="profile.view({handle: reply.author.handle})">
+				            		{{reply.author.firstName}} {{reply.author.lastName}}
+				            	</a>
+				            	&middot;
+				            	<span>
+				            		{{ reply.date | date }}
+				            	</span>
+				            </p>
+				        </div>
+						<p class="reply-text">
+							{{reply.reply}}
+						</p>
+				    </div>
+				</div>
+				<div class="new-comment" ng-show="currentUser">
+					<div class="new-comment-left">
+						<div 
+							class="reply-pic generate-image" 
+							signature="{{ currentUser.signature }}"
+						>
+						</div>
+					</div>
+					<form class="new-comment-form">
+						<p>
+				        	<a ui-sref="profile.view({handle: currentUser.handle})">
+				        		{{ currentUser.firstName }} {{ currentUser.lastName }}
+				        	</a>
+				        </p>
+						<textarea name="new-comment-input" placeholder="Add Reply.."></textarea>
+						<a >
+							<div class="new-comment-submit">
+								<span class="icon-plus"></span>
+							</div>
+						</a>
+					</form>
+				</div>
+				<h4 class="comment-noUser" ng-show="!currentUser">
+					<a ng-click="loginModal()">Login</a> to reply
+				</h4>
+			</div>
+			<a 
+	        	ng-click="replies.open = true" 
+	        	ng-show="!replies.open"
+	        >
+	        	<div class="reply-toggle">
+					<p>
+						<span ng-show="comment.replies.length > 0">Add/View Replies ({{ comment.replies.length }})</span>
+						<span ng-show="comment.replies.length < 1">Reply</span>
+					</p>
+				</div>
+			</a>
+			<a 
+				ng-click="replies.open = false"
+				ng-show="replies.open"
+			>
+				<div class="reply-toggle">
+					<p>Hide</p>
+				</div>
+			</a>
+		</div>
+
+		<div class="view-more-comments" ng-show="article.comments.length > 12">
+			<a >
+				<p>More Comments</p>
+			</a>
+		</div>
+
+		<div class="new-comment" ng-show="currentUser">
+			<div class="new-comment-left">
+				<div 
+					class="reply-pic generate-image" 
+					signature="{{ currentUser.signature }}"
+				>
+				</div>
+			</div>
+			<form class="new-comment-form">
+				<p>
+		        	<a ui-sref="profile.view({handle: currentUser.handle})">
+		        		{{ currentUser.firstName }} {{ currentUser.lastName }}
+		        	</a>
+		        </p>
+				<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
+				<a ><div class="new-comment-submit"><span class="icon-plus"></span></div></a>
+			</form>
+		</div>
+
+		<div class="comments-noUser" ng-show="!currentUser">
+			<h4><a ui-sref="register">Sign up</a> or <a ng-click="loginModal()">Login</a> to Comment</h4>
+		</div> -->
+
+	</div>
+</article>

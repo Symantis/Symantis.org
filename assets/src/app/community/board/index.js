@@ -20,10 +20,17 @@ angular.module( 'symantis.community.board', [
 .controller( 'BoardCtrl', function BoardController( $scope, titleService ) {
 	titleService.setTitle('Board');
 
-	
 })
-.controller( 'CommunityBoardLeftsideCtrl', function CommunityBoardLeftsideController( $scope ) {
-	//titleService.setTitle('About');
+.controller( 'BoardViewCtrl', function NewsViewController( $scope, titleService, $state, $stateParams  ) {
+	for(var i in $scope.opportunities){
+		if ($scope.opportunities[i].id == $stateParams.id){
+			$scope.board = $scope.opportunities[i];
+			break;
+		};
+	}
+
+	titleService.setTitle('Opportunities: ' + $scope.board.title);
+
 })
 .controller( 'CommunityBoardLeftsideCtrl', function CommunityBoardLeftsideController( $scope ) {
 	//titleService.setTitle('About');

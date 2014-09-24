@@ -78,7 +78,7 @@ angular.module( 'symantis.community', [
 			}
 		})
 		.state( 'community.board', {
-			url: '/connections',
+			url: '/board',
 			views: {
 				"main@": {
 					controller: 'BoardCtrl',
@@ -87,6 +87,15 @@ angular.module( 'symantis.community', [
 				"leftside@community.board": {
 					controller: 'CommunityBoardLeftsideCtrl',
                 	templateUrl: 'community/board/leftside.tpl.html'
+				}
+			}
+		})
+		.state( 'community.board.view', {
+			url: '/:id/:title',
+			views: {
+				"board@community.board": {
+					controller: 'BoardViewCtrl',
+					templateUrl: 'community/board/view.tpl.html'
 				}
 			}
 		})

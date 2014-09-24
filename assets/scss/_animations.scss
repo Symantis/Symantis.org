@@ -219,6 +219,32 @@ $uiAnimationTime: 0.3s;
   opacity: 0;
 }
 
+[ui-view="board"].ng-enter, [ui-view="board"].ng-leave {
+  //position: absolute;
+  //left: 0;
+  //right: 0;
+
+  -webkit-transition:all $uiAnimationTime ease-in-out;
+    -moz-transition:all $uiAnimationTime ease-in-out;
+    -o-transition:all $uiAnimationTime ease-in-out;
+    transition:all $uiAnimationTime ease-in-out;
+}
+
+[ui-view="board"].ng-enter {
+  opacity: 0;
+}
+
+[ui-view="board"].ng-enter-active {
+  opacity: 1;
+}
+
+[ui-view="board"].ng-leave {
+  opacity: 1; 
+}
+
+[ui-view="board"].ng-leave-active {
+  opacity: 0;
+}
 
 .animate-repeat {
   //line-height:40px;

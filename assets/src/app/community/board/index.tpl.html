@@ -34,7 +34,9 @@
 
         <div 
             masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile", "gutter": ".gutter-sizer" }' 
-            class="board-container">
+            class="board-container" 
+            ui-view="board"
+        >
             <div class="gutter-sizer"></div>
             <div 
                 masonry-tile 
@@ -49,7 +51,7 @@
                             signature="{{ board.author.signature }}"
                         >
                         </div>
-                        <h3><a >{{ board.title }}</a></h3>
+                        <h3><a ui-sref="community.board.view({id: board.id, title: board.clean() })">{{ board.title }}</a></h3>
                         <p>
                             <a >
                                 {{board.author.firstName }} {{board.author.lastName }}
@@ -71,7 +73,7 @@
                             <a title="Accept this Opportunity"><span class="icon-check-mark-circle icon"></span></a>
                         </div> -->
                         <div class="pod-more option">
-                            <a title="More about this Opportunity"><span class="icon-arrow-circle-right icon"></span></a>
+                            <a title="More about this Opportunity" ui-sref="community.board.view({id: board.id, title: board.clean() })"><span class="icon-arrow-circle-right icon"></span></a>
                         </div>
                     </section>
                 </div>
