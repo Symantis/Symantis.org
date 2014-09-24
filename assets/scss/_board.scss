@@ -64,6 +64,11 @@
 				}
 			}
 		}
+		&:after{
+			clear:both;
+			display:block;
+			content:"";
+		}
 	}
 	.board-sub-nav-left {
 		float: left;
@@ -88,7 +93,14 @@
 			}
 		}
 	}
+	&:after{
+		clear:both;
+		display:block;
+		content:"";
+	}
+
 }
+
 .board-center {
 	position: relative;
 	//display: block;
@@ -100,7 +112,7 @@
 	margin: 0;
 	padding: 0;
 	position: relative;
-	float: left;
+	//float: left;
 	width: auto;
 	height: auto;
 	//margin: 0 auto;
@@ -108,8 +120,8 @@
 	margin-top: 10px;
 }
 .board-pod {
-	float: left;
-	width: 300px;
+	//float: left;
+	width: 33.333%;
 	height: auto;
 	position: relative;
 	background-color: white;

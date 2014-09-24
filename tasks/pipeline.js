@@ -31,7 +31,8 @@ var jsFilesToInject = [
   //
 
   'bower_components/angular/angular.js',
-  //'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+  'bower_components/masonry/dist/masonry.pkgd.js',
+  'bower_components/imagesloaded/imagesloaded.js',
   'bower_components/angular-foundation/mm-foundation-tpls.min.js',
   'bower_components/angular-ui-router/release/angular-ui-router.js',
   'bower_components/angular-ui-utils/modules/route/route.js',
@@ -49,12 +50,11 @@ var jsFilesToInject = [
   'bower_components/angular-scroll/angular-scroll.js',
   'bower_components/d3/d3.js',
   'bower_components/angular-xeditable/dist/js/xeditable.js',
-  'bower_components/masonry/dist/masonry.pkgd.js',
-  'bower_components/angular-masonry/angular-masonry.js',
+  'bower_components/angular-masonry-directive/src/angular-masonry-directive.js',
+  //'bower_components/angular-masonry/angular-masonry.js',
   'bower_components/ng-tags-input/ng-tags-input.js',
   //'bower_components/jquery/dist/jquery.min.js',
   //'bower_components/foundation/js/foundation.min.js',
-  //'bower_components/livereload/dist/livereload.js',
 
 
   // All of the rest of your app scripts
