@@ -42,6 +42,8 @@
                 masonry-tile 
                 ng-repeat="board in opportunities" 
                 class="tile board-pod-wrap"
+                ng-init="pod.active = true"
+                ng-class="{deactivate: !pod.active}"
             >
 
                 <div class="board-pod">
@@ -67,13 +69,23 @@
                     </section>
                     <section class="pod-footer">
                         <div class="pod-exit option">
-                            <a title="Remove this Opportunity"><span class="icon-delete-circle icon"></span></a>
+                            <a 
+                                title="Remove this Opportunity" 
+                                ng-click="pod.active = false"
+                            >
+                                <span class="icon-delete-circle icon"></span>
+                            </a>
                         </div>
                         <!-- <div class="pod-accept option">
                             <a title="Accept this Opportunity"><span class="icon-check-mark-circle icon"></span></a>
                         </div> -->
                         <div class="pod-more option">
-                            <a title="More about this Opportunity" ui-sref="community.board.view({id: board.id, title: board.clean() })"><span class="icon-arrow-circle-right icon"></span></a>
+                            <a 
+                                title="More about this Opportunity" 
+                                ui-sref="community.board.view({id: board.id, title: board.clean() })"
+                            >
+                                <span class="icon-arrow-circle-right icon"></span>
+                            </a>
                         </div>
                     </section>
                 </div>

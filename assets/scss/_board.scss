@@ -133,6 +133,29 @@
 	}
 	margin-bottom: 24px;
 }
+.deactivate.board-pod-wrap {
+	display: none !important; 
+	width: 0 !important;
+	height: 0 !important;
+	visibility: hidden !important;
+	position: fixed !important;
+	left: -9999px !important;
+	top: -9999px !important;
+	/*&:after{
+		content:"";
+		clear:both;
+		display:none;
+	}
+	.board-pod {
+		display: none !important; 
+		width: 0 !important;
+		height: 0 !important;
+		visibility: hidden !important;
+		position: fixed !important;
+		left: -9999px !important;
+		top: -9999px !important;
+	}*/
+}
 .board-pod {
 	//float: left;
 	//height: auto;
