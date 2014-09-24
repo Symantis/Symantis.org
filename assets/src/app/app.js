@@ -17,7 +17,7 @@ angular.module( 'symantis', [
 	'models',
 	'ngProgress',
 	'duScroll',
-	'wu.masonry',
+	'masonry',
 	'ngTagsInput',
 	
 	'symantis.global.modals',
@@ -123,7 +123,11 @@ angular.module( 'symantis', [
 	$rootScope.users = aUsers;
 	$rootScope.queries = aQueries;
 	$rootScope.articles = aArticles;
+<<<<<<< HEAD
 	$rootScope.opportunities = aOpportunities;
+=======
+	$rootScope.opprotunities = aOpprotunities;
+>>>>>>> FETCH_HEAD
 
 })
 /*
@@ -1335,6 +1339,72 @@ var aQueries = [
 		]
 	}
 ]
+var aOpprotunities = [
+	{
+		id: 1,
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		date: new Date(),
+		title: 'Title of Job Blah Blah Blah',
+		description: 'Extra Long for testing, just so it is longer than the others. Never before has there been a place where digital creators from all walks of life can come together and feed off each other. Much like Stack Exchange all of the content is user generated.',
+
+	},
+	{
+		id: 2,
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		date: new Date(),
+		title: 'Title of Job Blah Blah Blah',
+		description: 'Never before has there been a place where digital creators from all walks of life can come together and feed off each other. Much like Stack Exchange all of the content is user generated.',
+		
+	},
+	{
+		id: 3,
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		date: new Date(),
+		title: 'Title of Job Blah Blah Blah',
+		description: 'Never before has there been a place where digital creators from all walks of life can come together and feed off each other. Much like Stack Exchange all of the content is user generated.',
+		
+	},
+	{
+		id: 4,
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		date: new Date(),
+		title: 'Title of Job Blah Blah Blah',
+		description: 'Never before has there been a place where digital creators from all walks of life can come together and feed off each other. Much like Stack Exchange all of the content is user generated.',
+		
+	}
+];
 
 var aArticles = [
 	{

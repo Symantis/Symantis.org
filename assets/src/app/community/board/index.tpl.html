@@ -32,6 +32,7 @@
             </ul>
         </header>
 
+<<<<<<< HEAD
         <div class="board-container">
 
             <div class="board-pod">
@@ -46,6 +47,27 @@
                 </section>
                 <section class="pod-body">
                     <p class="pod-description">Never before has there been a place where digital creators from all walks of life can come together and feed off each other. Much like Stack Exchange all of the content is user generated.</p>
+=======
+        <div masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile"}' class="board-container">
+            <div masonry-tile ng-repeat="board in opprotunities" class="tile board-pod">
+                <section class="pod-header">
+                    <div 
+                        class="pod-user-pic generate-image" 
+                        signature="{{ board.author.signature }}"
+                    >
+                    </div>
+                    <h3><a >{{ board.title }}</a></h3>
+                    <p>
+                        <a >
+                            {{board.author.firstName }} {{board.author.lastName }}
+                        </a>
+                        &middot;
+                        <span>{{ board.date | date }}</span>
+                    </p>
+                </section>
+                <section class="pod-body">
+                    <p class="pod-description">{{ board.description }}</p>
+>>>>>>> FETCH_HEAD
                 </section>
                 <section class="pod-footer">
                     <div class="pod-exit option">
