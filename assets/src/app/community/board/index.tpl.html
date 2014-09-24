@@ -37,7 +37,7 @@
             class="board-container row">
             <div 
                 masonry-tile 
-                ng-repeat="board in opprotunities" 
+                ng-repeat="board in opportunities" 
                 class="tile board-pod large-4 columns"
 
             >
@@ -57,7 +57,9 @@
                     </p>
                 </section>
                 <section class="pod-body">
-                    <p class="pod-description">{{ board.description }}</p>
+                    <p class="pod-description">
+                        {{ board.description }}
+                    </p>
                 </section>
                 <section class="pod-footer">
                     <div class="pod-exit option">
@@ -71,6 +73,7 @@
                     </div>
                 </section>
             </div>
+
         </div>
 
     </section>

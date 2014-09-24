@@ -123,8 +123,7 @@ angular.module( 'symantis', [
 	$rootScope.users = aUsers;
 	$rootScope.queries = aQueries;
 	$rootScope.articles = aArticles;
-	$rootScope.opprotunities = aOpprotunities;
-
+	$rootScope.opportunities = aOpportunities;
 })
 /*
 .config(function config( $stateProvider ) {
@@ -1335,73 +1334,6 @@ var aQueries = [
 		]
 	}
 ]
-var aOpprotunities = [
-	{
-		id: 1,
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "theman",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		},
-		date: new Date(),
-		title: 'Title of Job Blah Blah Blah',
-		description: 'Extra Long for testing, just so it is longer than the others. Never before has there been a place where digital creators from all walks of life can come together and feed off each other. Much like Stack Exchange all of the content is user generated.',
-
-	},
-	{
-		id: 2,
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "theman",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		},
-		date: new Date(),
-		title: 'Title of Job Blah Blah Blah',
-		description: 'Never before has there been a place where digital creators from all walks of life can come together and feed off each other. Much like Stack Exchange all of the content is user generated.',
-		
-	},
-	{
-		id: 3,
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "theman",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		},
-		date: new Date(),
-		title: 'Title of Job Blah Blah Blah',
-		description: 'Never before has there been a place where digital creators from all walks of life can come together and feed off each other. Much like Stack Exchange all of the content is user generated.',
-		
-	},
-	{
-		id: 4,
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "theman",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		},
-		date: new Date(),
-		title: 'Title of Job Blah Blah Blah',
-		description: 'Never before has there been a place where digital creators from all walks of life can come together and feed off each other. Much like Stack Exchange all of the content is user generated.',
-		
-	}
-];
-
 var aArticles = [
 	{
 		id: 1,
@@ -1691,6 +1623,192 @@ var aArticles = [
 					}
 				]
 			}
+		]
+	}
+]
+var aOpportunities = [
+	{
+		id: '1',
+		title: 'Help with my first eCommerce site',
+		totalViews: '132',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+		opportunity: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+		imgs: [
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			},
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			},
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			}
+		],
+		tags: [
+			{
+				title: 'Visuals',
+				privillege: 'none',
+			},
+			{
+				title: 'Front-end',
+				privillege: 'none',
+			}
+		],
+		questions: [
+
+		]
+	},
+	{
+		id: '1',
+		title: 'Help with my first eCommerce site',
+		totalViews: '132',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+		opportunity: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+		imgs: [
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			},
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			},
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			}
+		],
+		tags: [
+			{
+				title: 'Visuals',
+				privillege: 'none',
+			},
+			{
+				title: 'Front-end',
+				privillege: 'none',
+			}
+		],
+		questions: [
+
+		]
+	},
+	{
+		id: '1',
+		title: 'Help with my first eCommerce site',
+		totalViews: '132',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		description: 'Little Bit longer for fun! Gotta test alll the fun mason stuff Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+		opportunity: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+		imgs: [
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			},
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			},
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			}
+		],
+		tags: [
+			{
+				title: 'Visuals',
+				privillege: 'none',
+			},
+			{
+				title: 'Front-end',
+				privillege: 'none',
+			}
+		],
+		questions: [
+
+		]
+	},
+	{
+		id: '1',
+		title: 'Help with my first eCommerce site',
+		totalViews: '132',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+		opportunity: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+		imgs: [
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			},
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			},
+			{
+				name: 'placeholder',
+				src: 'http://placehold.it/350x150',
+				caption: 'This is an example image.'
+			}
+		],
+		tags: [
+			{
+				title: 'Visuals',
+				privillege: 'none',
+			},
+			{
+				title: 'Front-end',
+				privillege: 'none',
+			}
+		],
+		questions: [
+
 		]
 	}
 ]
