@@ -171,6 +171,7 @@
 				@include font-regular(rem-calc(12px));
 				color: $gray;
 				margin-right: 2px;
+				//display: inline-block;
 				&:hover {
 					color: $darkest;
 				}
@@ -179,6 +180,8 @@
 				@include font-italic(rem-calc(12px));
 				color: darken($light, 10%);
 				margin-left: 2px;
+				//white-space: nowrap;
+				//display: inline-block;
 			}
 		}
 	}
