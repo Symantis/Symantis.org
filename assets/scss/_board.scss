@@ -140,6 +140,7 @@
 			float: left;
 			position: relative;
 			width: 218px;
+			padding-top: 2px;
 			@include font-semi(rem-calc(14px));
 			color: $primary-color;
 			white-space: nowrap;
@@ -164,7 +165,7 @@
 			float: left;
 			position: relative;
 			width: 218px;
-			padding-top: 5px;
+			padding-top: 1px;
 			color: $gray;
 			a {
 				@include font-regular(rem-calc(12px));
@@ -197,46 +198,18 @@
 		margin-top: 10px;
 		border-top: 1px $gray solid;
 		position: relative;
-		.pod-exit {
-			float: left;
-			margin-left: 2px;
+		text-align: center;
+		.option {
+			display: inline-block;
+			padding: 0 5px 0 5px;
 			a {
-				float: left;
-				color: red;
-				padding: 0;
-				margin-top: 5px;
+				color: $light;
+				@include transition(100ms);
 				span {
-					font-size: rem-calc(16px);
+					font-size: rem-calc(24px);
 				}
-			}
-		}
-		.pod-more {
-			float: left;
-			margin: 0 96px 0 100px;
-			padding: 0;
-			a {
-				color: white;
-				float: left;
-				background-color: $gray;
-				padding: 2px 8px 0 8px;
-				border-radius: 4px;
-				margin: 0;
-				span {
-					font-size: rem-calc(12px);
-				}
-			}
-		}
-		.pod-accept {
-			float: left;
-			padding: 0;
-			a {
-				color: green;
-				float: left;
-				padding: 0;
-				margin-top: 3px;
-				span {
-					font-size: rem-calc(26px);
-					line-height: 0.6;
+				&:hover {
+					color: $dark;
 				}
 			}
 		}

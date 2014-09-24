@@ -230,3 +230,18 @@
 .icon-dot-3:before {
   content: "t";
 }
+.icon-left-arrow:before {
+  content: "A";
+}
+.icon-right-arrow:before {
+  content: "B";
+}
+.icon-check-mark-circle:before {
+  content: "v";
+}
+.icon-delete-circle:before {
+  content: "z";
+}
+.icon-arrow-circle-right:before {
+  content: "C";
+}
