@@ -32,6 +32,7 @@
             </ul>
         </header>
 
+<<<<<<< HEAD
         <div masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile"}' class="board-container">
 
             <div masonry-tile ng-repeat="board in opportunities" class="tile board-pod">
@@ -64,6 +65,52 @@
                         <a title="More about this Opportunity"><span class="icon-arrow-circle-right icon"></span></a>
                     </div>
                 </section>
+=======
+
+        <div 
+            masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile", "gutter": ".gutter-sizer" }' 
+            class="board-container">
+            <div class="gutter-sizer"></div>
+            <div 
+                masonry-tile 
+                ng-repeat="board in opportunities" 
+                class="tile board-pod-wrap"
+
+            >
+                <div class="board-pod">
+                    <section class="pod-header">
+                        <div 
+                            class="pod-user-pic generate-image" 
+                            signature="{{ board.author.signature }}"
+                        >
+                        </div>
+                        <h3><a >{{ board.title }}</a></h3>
+                        <p>
+                            <a >
+                                {{board.author.firstName }} {{board.author.lastName }}
+                            </a>
+                            &middot;
+                            <span>{{ board.date | date }}</span>
+                        </p>
+                    </section>
+                    <section class="pod-body">
+                        <p class="pod-description">
+                            {{ board.description }}
+                        </p>
+                    </section>
+                    <section class="pod-footer">
+                        <div class="pod-exit option">
+                            <a title="Remove this Opportunity"><span class="icon-delete-circle icon"></span></a>
+                        </div>
+                        <!-- <div class="pod-accept option">
+                            <a title="Accept this Opportunity"><span class="icon-check-mark-circle icon"></span></a>
+                        </div> -->
+                        <div class="pod-more option">
+                            <a title="More about this Opportunity"><span class="icon-arrow-circle-right icon"></span></a>
+                        </div>
+                    </section>
+                </div>
+>>>>>>> FETCH_HEAD
             </div>
 
         </div>
