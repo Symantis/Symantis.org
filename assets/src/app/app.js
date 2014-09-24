@@ -1333,7 +1333,7 @@ var aQueries = [
 			}
 		]
 	}
-]
+];
 var aArticles = [
 	{
 		id: 1,
