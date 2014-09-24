@@ -109,24 +109,24 @@
 }
 .board-container {
 	//list-style: none;
-	margin: 0;
-	padding: 0;
-	position: relative;
+	//margin: 0;
+	//padding: 0;
+	//position: relative;
 	//float: left;
-	width: auto;
-	height: auto;
+	//width: auto;
+	//height: auto;
 	//margin: 0 auto;
 	//display: inline-block;
 	margin-top: 10px;
 }
 .board-pod {
 	//float: left;
-	width: 33.333%;
+	//width: 33.333%;
 	height: auto;
 	position: relative;
 	background-color: white;
 	padding: 15px 15px 5px 15px;
-	margin: 20px 10px 0 10px;
+	//margin: 20px 10px 0 10px;
 	border: rem-calc(1px) $gray solid;
 	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
@@ -139,19 +139,21 @@
 		margin-bottom: 10px;
 		border-bottom: 1px $gray solid;
 		.pod-user-pic {
-			width: rem-calc(40px);
-			height: rem-calc(40px);
+			position:absolute;
+			width: 40px;
+			height: 40px;
 			float: left;
 			border: rem-calc(1px) black solid;
 			border-radius: rem-calc(20px);
 			overflow: hidden;
-			margin-right: 10px;
+			
 			@include transition(100ms);
 		}
 		h3 {
-			float: left;
+			padding-left: 10px;
+			margin-left: 40px;
+			//float: left;
 			position: relative;
-			width: 218px;
 			padding-top: 2px;
 			@include font-semi(rem-calc(14px));
 			color: $primary-color;
@@ -174,9 +176,11 @@
 			}
 		}
 		p {
-			float: left;
+			padding-left: 10px;
+			margin-left: 40px;
+			//float: left;
 			position: relative;
-			width: 218px;
+			//width: 218px;
 			padding-top: 1px;
 			color: $gray;
 			a {
