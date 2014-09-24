@@ -8,20 +8,25 @@ body {
 	.top-nav-container {
 
 		/* ---- Header color ---- */
+
 		background-color: lighten($offWhite, 5%);
 		//background-color: white;
 		.row.fluid-row {
 			//background-color: white;
 		}
+
 		/* ---- */
 
 		/* ---- header shadow ---- */
+
 		/*-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
 		-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.5);
 		box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.5);*/
+
 		/* ---- */
 
-		/* ------ Full width Header -------- */
+		/* ---- Full width Header ---- */
+
 		/*.top-nav-rule-cont {
 			padding-left: 0;
 			padding-right: 0;
@@ -36,6 +41,7 @@ body {
 		.top-nav-rule-inner {
 			background-color: rgba(255,255,255,0);
 		}*/
+
 		/* ---- End ---- */
 	}
 }
@@ -84,12 +90,19 @@ body {
 		}
 	}
 }
-.sy-effect.sy-menu-open.blur .sitenav-push{
+
+/* ---- No blur ---- */
+
+/*.sy-effect.sy-menu-open.blur .sitenav-push{
 	opacity:0.4;
 	-webkit-filter: none;
   	filter: none;
-}
+}*/
+
+/* ---- */
+
 /* ---- Menu Open ---- */
+
 /*.sy-effect.sy-menu-open .sy-effect.sitenav {
 	box-shadow: none;
 	.activator{
@@ -98,6 +111,7 @@ body {
 	.sitenav-inner{
 	}
 }*/
+
 /* ----- */
 
 

@@ -178,6 +178,10 @@ and (min-width : rem-calc(1824px)) {
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
-
+	.sy-effect.sy-menu-open.blur .sitenav-push{
+		opacity:0.4;
+		-webkit-filter: none;
+	  	filter: none;
+	}
 
 }
