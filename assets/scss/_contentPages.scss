@@ -11,7 +11,7 @@
 	position: relative;
 	border-top: 1px $light solid;
 	border-bottom: 1px $light solid;
-	height: 400px;
+	height: 500px;
 	&:first-child {
 		border-top: none;
 		.gr-top-rule {
@@ -81,7 +81,7 @@
 			width: 0;
 			height: 0;
 			border-style: solid;
-			border-width: 400px 200px 0 0;
+			border-width: 500px 200px 0 0;
 			border-color: white transparent transparent transparent;
 		}
 		&:before {
@@ -93,7 +93,7 @@
 			width: 0;
 			height: 0;
 			border-style: solid;
-			border-width: 400px 200px 0 0;
+			border-width: 500px 200px 0 0;
 			border-color: $light transparent transparent transparent;
 		}
 	}
@@ -123,7 +123,7 @@
 	position: relative;
 	border-top: 1px $light solid;
 	border-bottom: 1px $light solid;
-	height: 400px;
+	height: 500px;
 	&:first-child {
 		border-top: none;
 		.gr-top-rule {
@@ -193,7 +193,7 @@
 			width: 0;
 			height: 0;
 			border-style: solid;
-			border-width: 0 200px 400px 0;
+			border-width: 0 200px 500px 0;
 			border-color: transparent white transparent transparent;
 		}
 		&:before {
@@ -205,7 +205,7 @@
 			width: 0;
 			height: 0;
 			border-style: solid;
-			border-width: 0 200px 400px 0;
+			border-width: 0 200px 500px 0;
 			border-color: transparent $light transparent transparent;
 		}
 	}
