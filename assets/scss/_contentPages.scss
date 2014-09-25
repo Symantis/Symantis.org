@@ -1,3 +1,6 @@
+
+$transtime: 500ms;
+
 .gr-container {
 	float: left;
 	width: 100%;
@@ -39,9 +42,11 @@
 	}
 	.gr-top-rule {
 		display: none;
+		@include transition($transtime);
 	}
 	.gr-bottom-rule {
 		display: none;
+		@include transition($transtime);
 	}
 	.gr-text {
 		position: absolute;
@@ -50,6 +55,7 @@
 		width: 40%;
 		display: table;
 		z-index: 10;
+		@include transition($transtime);
 		.gr-text-inner {
 			display: table-cell;
 			vertical-align: middle;
@@ -76,6 +82,7 @@
 		left: 0;
 		z-index: 9;
 		background-color: white;
+		@include transition($transtime);
 		&:after {
 			content: '';
 			display: block;
@@ -109,6 +116,7 @@
 		height: 100%;
 		display: table;
 		z-index: 8;
+		@include transition($transtime);
 		.gr-image-inner {
 			display: table-cell;
 			vertical-align: middle;
@@ -155,9 +163,11 @@
 	}
 	.gr-top-rule {
 		display: none;
+		@include transition($transtime);
 	}
 	.gr-bottom-rule {
 		display: none;
+		@include transition($transtime);
 	}
 	.gr-text {
 		position: absolute;
@@ -166,6 +176,7 @@
 		width: 40%;
 		display: table;
 		z-index: 10;
+		@include transition($transtime);
 		.gr-text-inner {
 			display: table-cell;
 			vertical-align: middle;
@@ -192,6 +203,7 @@
 		right: 0;
 		z-index: 9;
 		background-color: white;
+		@include transition($transtime);
 		&:after {
 			content: '';
 			display: block;
@@ -225,6 +237,7 @@
 		height: 100%;
 		display: table;
 		z-index: 8;
+		@include transition($transtime);
 		.gr-image-inner {
 			display: table-cell;
 			vertical-align: middle;
@@ -250,5 +263,45 @@
 	&.top-statement {
 		text-align: left;
 		padding: 10px 0 30px 0;
+	}
+}
+.gr-reveal:hover {
+	.gr-top-rule {
+		opacity: 0;
+		left: 40%;
+	}
+	.gr-bottom-rule {
+		opacity: 0;
+		right: 40%;
+	}
+	.gr-image {
+		right: -20px;
+	}
+	.gr-cover {
+		left: -80px;
+		opacity: 0;
+	}
+	.gr-text {
+		left: -20px;
+	}
+}
+.gr-reveal-reverse:hover {
+	.gr-top-rule {
+		opacity: 0;
+		right: 40%;
+	}
+	.gr-bottom-rule {
+		opacity: 0;
+		left: 40%;
+	}
+	.gr-image {
+		left: -20px;
+	}
+	.gr-cover {
+		right: -80px;
+		opacity: 0;
+	}
+	.gr-text {
+		right: -20px;
 	}
 }
