@@ -118,7 +118,16 @@ and (max-width : rem-calc(1024px)) {
 			width: 100%;
 		}
 	}
-	
+	.gr-reveal:hover {
+		.gr-cover {
+			left: -30px;
+		}
+	}
+	.gr-reveal-reverse:hover {
+		.gr-cover {
+			right: -30px;
+		}
+	}
 }
 
 // Desktops & Laptops & Above ----------- 
