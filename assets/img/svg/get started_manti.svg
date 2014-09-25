@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1200px" height="890px" viewBox="0 0 1200 890" enable-background="new 0 0 1200 890" xml:space="preserve">
+<path fill="#CCCCCC" d="M1200,36H0V6.99C0,2.578,3.388-1,7.566-1h1184.955C1196.7-1,1200,2.578,1200,6.99V36z"/>
+<circle opacity="0.71" fill="#E74C3C" cx="20.917" cy="18.977" r="7.526"/>
+<circle opacity="0.71" fill="#F1C40F" cx="45.546" cy="18.977" r="7.525"/>
+<circle opacity="0.71" fill="#2ECC71" cx="70.176" cy="18.977" r="7.526"/>
+<path fill="#E6E6E6" d="M266.886,13.359c-0.632-1.901-2.147-3.359-4.794-3.359H116.663c-2.647,0-4.162,1.525-4.794,3.359
+	l-6.392,20.028C104.927,34.982,102.28,36,102.28,36h174.195c0,0-2.646-0.867-3.196-2.612L266.886,13.359z"/>
+<path fill="#F2F2F2" d="M1200,881.055c0,5.354-3.67,9.945-8.306,9.945H8.394C3.758,891,0,886.409,0,881.055V69h1200V881.055z"/>
+<rect y="36" fill="#E6E6E6" width="1200" height="33"/>
+<g>
+	<g>
+		<rect x="345" y="610" fill="#C7403D" width="510" height="178"/>
+	</g>
+	<rect x="381" y="590" fill="#C7403D" width="105" height="26"/>
+	<rect x="715" y="590" fill="#C7403D" width="105" height="26"/>
+	<rect x="546" y="590" fill="#C7403D" width="105" height="26"/>
+</g>
+<g>
+	<g>
+		<rect x="345" y="433" fill="#3C948B" width="510" height="178"/>
+	</g>
+	<rect x="381" y="408" fill="#3C948B" width="105" height="26"/>
+	<rect x="715" y="408" fill="#3C948B" width="105" height="26"/>
+	<rect x="546" y="408" fill="#3C948B" width="105" height="26"/>
+</g>
+<g>
+	<g>
+		<rect x="345" y="163" fill="#3D8BC7" width="510" height="179"/>
+	</g>
+	<rect x="381" y="142" fill="#3D8BC7" width="105" height="30"/>
+	<rect x="715" y="142" fill="#3D8BC7" width="105" height="30"/>
+	<rect x="546" y="142" fill="#3D8BC7" width="105" height="30"/>
+</g>
+<text transform="matrix(1 0 0 1 436.8164 271.75)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="48">Parallax Scroll</text>
+<text transform="matrix(1 0 0 1 452.7769 537.75)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="48">Color Theme</text>
+<text transform="matrix(1 0 0 1 453.2344 714.75)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="48">E-Commerce</text>
+</svg>
