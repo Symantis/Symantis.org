@@ -1,0 +1,242 @@
+.gr-container {
+	float: left;
+	width: 100%;
+	position: relative;
+	height: 100%;
+	padding-top: 0.5rem !important;
+}
+.gr-content {
+	float: left;
+	width: 100%;
+	position: relative;
+	border-top: 1px $light solid;
+	border-bottom: 1px $light solid;
+	height: 400px;
+	&:first-child {
+		border-top: none;
+		.gr-top-rule {
+			display: block;
+			width: 100px;
+			position: absolute;
+			top: 0;
+			left: 60%;
+			height: 1px;
+			background-color: $light;
+		}
+	}
+	&:last-child {
+		border-bottom: none;
+		.gr-bottom-rule {
+			display: block;
+			width: 100px;
+			position: absolute;
+			bottom: 0;
+			right: 60%;
+			height: 1px;
+			background-color: $light;
+			z-index: 13;
+		}
+	}
+	.gr-top-rule {
+		display: none;
+	}
+	.gr-bottom-rule {
+		display: none;
+	}
+	.gr-text {
+		position: absolute;
+		left: 0;
+		height: 100%;
+		width: 40%;
+		display: table;
+		z-index: 10;
+		.gr-text-inner {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			h3 {
+				@include font-semi(rem-calc(18px));
+				color: $dark;
+				line-height: 1.6;
+			}
+			p {
+				@include font-regular(rem-calc(12px));
+				color: $dark;
+			}
+		}
+	}
+	.gr-cover {
+		position: absolute;
+		width: 37%;
+		height: 100%;
+		left: 0;
+		z-index: 9;
+		background-color: white;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 99.5%;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 400px 200px 0 0;
+			border-color: white transparent transparent transparent;
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 400px 200px 0 0;
+			border-color: $light transparent transparent transparent;
+		}
+	}
+	.gr-image {
+		position: absolute;
+		width: 70%;
+		max-width: 500px;
+		right: 0;
+		height: 100%;
+		display: table;
+		z-index: 8;
+		.gr-image-inner {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			img {
+				width: 100%;
+				height: auto;
+				max-width: 100%;
+			}
+		}
+	}
+}
+.gr-content-reverse {
+	float: left;
+	width: 100%;
+	position: relative;
+	border-top: 1px $light solid;
+	border-bottom: 1px $light solid;
+	height: 400px;
+	&:first-child {
+		border-top: none;
+		.gr-top-rule {
+			display: block;
+			width: 100px;
+			position: absolute;
+			top: 0;
+			right: 60%;
+			height: 1px;
+			background-color: $light;
+		}
+	}
+	&:last-child {
+		border-bottom: none;
+		.gr-bottom-rule {
+			display: block;
+			width: 100px;
+			position: absolute;
+			bottom: 0;
+			left: 60%;
+			height: 1px;
+			background-color: $light;
+			z-index: 13;
+		}
+	}
+	.gr-top-rule {
+		display: none;
+	}
+	.gr-bottom-rule {
+		display: none;
+	}
+	.gr-text {
+		position: absolute;
+		right: 0;
+		height: 100%;
+		width: 40%;
+		display: table;
+		z-index: 10;
+		.gr-text-inner {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			h3 {
+				@include font-semi(rem-calc(18px));
+				color: $dark;
+				line-height: 1.6;
+			}
+			p {
+				@include font-regular(rem-calc(12px));
+				color: $dark;
+			}
+		}
+	}
+	.gr-cover {
+		position: absolute;
+		width: 37%;
+		height: 100%;
+		right: 0;
+		z-index: 9;
+		background-color: white;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 99.5%;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 200px 400px 0;
+			border-color: transparent white transparent transparent;
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 100%;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 200px 400px 0;
+			border-color: transparent $light transparent transparent;
+		}
+	}
+	.gr-image {
+		position: absolute;
+		width: 70%;
+		max-width: 500px;
+		left: 0;
+		height: 100%;
+		display: table;
+		z-index: 8;
+		.gr-image-inner {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			img {
+				width: 100%;
+				height: auto;
+				max-width: 100%;
+			}
+		}
+	}
+}
+.gr-statement {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 50px 0 50px 0;
+	text-align: center;
+	h2 {
+		@include font-semi(rem-calc(24px));
+		color: $gray;
+	}
+}
