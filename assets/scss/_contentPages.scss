@@ -12,40 +12,26 @@ $transtime: 500ms;
 	float: left;
 	width: 100%;
 	position: relative;
-	border-top: 1px $light solid;
-	border-bottom: 1px $light solid;
 	height: 500px;
-	&:first-child {
-		border-top: none;
-		.gr-top-rule {
-			display: block;
-			width: 100px;
-			position: absolute;
-			top: 0;
-			left: 60%;
-			height: 1px;
-			background-color: $light;
-		}
-	}
-	&:last-child {
-		border-bottom: none;
-		.gr-bottom-rule {
-			display: block;
-			width: 100px;
-			position: absolute;
-			bottom: 0;
-			right: 60%;
-			height: 1px;
-			background-color: $light;
-			z-index: 13;
-		}
-	}
 	.gr-top-rule {
-		display: none;
+		display: block;
+		width: 100px;
+		position: absolute;
+		top: 0;
+		left: 60%;
+		height: 1px;
+		background-color: $light;
 		@include transition($transtime);
 	}
 	.gr-bottom-rule {
-		display: none;
+		display: block;
+		width: 100px;
+		position: absolute;
+		bottom: 0;
+		right: 60%;
+		height: 1px;
+		background-color: $light;
+		z-index: 13;
 		@include transition($transtime);
 	}
 	.gr-text {
@@ -133,40 +119,26 @@ $transtime: 500ms;
 	float: left;
 	width: 100%;
 	position: relative;
-	border-top: 1px $light solid;
-	border-bottom: 1px $light solid;
 	height: 500px;
-	&:first-child {
-		border-top: none;
-		.gr-top-rule {
-			display: block;
-			width: 100px;
-			position: absolute;
-			top: 0;
-			right: 60%;
-			height: 1px;
-			background-color: $light;
-		}
-	}
-	&:last-child {
-		border-bottom: none;
-		.gr-bottom-rule {
-			display: block;
-			width: 100px;
-			position: absolute;
-			bottom: 0;
-			left: 60%;
-			height: 1px;
-			background-color: $light;
-			z-index: 13;
-		}
-	}
 	.gr-top-rule {
-		display: none;
+		display: block;
+		width: 100px;
+		position: absolute;
+		top: 0;
+		right: 60%;
+		height: 1px;
+		background-color: $light;
 		@include transition($transtime);
 	}
 	.gr-bottom-rule {
-		display: none;
+		display: block;
+		width: 100px;
+		position: absolute;
+		bottom: 0;
+		left: 60%;
+		height: 1px;
+		background-color: $light;
+		z-index: 13;
 		@include transition($transtime);
 	}
 	.gr-text {
@@ -209,7 +181,7 @@ $transtime: 500ms;
 			display: block;
 			position: absolute;
 			top: 0;
-			right: 99.5%;
+			right: 99.3%;
 			width: 0;
 			height: 0;
 			border-style: solid;
@@ -256,6 +228,11 @@ $transtime: 500ms;
 	position: relative;
 	padding: 50px 0 50px 0;
 	text-align: center;
+	border-top: 1px $light solid;
+	border-bottom: 1px $light solid;
+	background-color: white;
+	z-index: 15;
+	margin-top: -1px;
 	h2 {
 		@include font-semi(rem-calc(24px));
 		color: $dark;
