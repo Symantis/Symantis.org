@@ -357,10 +357,11 @@
 		}
 
 		/* ------ Full width Header -------- */
-		/*.top-nav-rule-cont {
+		.top-nav-rule-cont {
 			padding-left: 0;
 			padding-right: 0;
-			//background-color: $gray;
+			background-color: $dark;
+			height: 1px;
 		}
 		.top-nav-rule {
 			padding-left: 0;
@@ -369,8 +370,8 @@
 			//margin-right: -50px;
 		}
 		.top-nav-rule-inner {
-			//background-color: none;
-		}*/
+			background-color: rgba(255,255,255,0);
+		}
 		/* ---- End ---- */
 	}
 }
