@@ -59,12 +59,13 @@ module.exports = {
 	},
 	updateStatus: function (req, res) {
 		
-		if(req.user.id === "undefined" || !req.user.id ){
+		if(req.user === "undefined" || !req.user.id ){
 			return res.badRequest('Not Logged In');
 		}
-		if(req.user.id != req.param('id')){
+		if(req.user === "undefined" || (req.user.id != req.param('id'))){
 			return res.badRequest('Not Logged In');
 		}
+
 		var id = req.user.id;
 		
 		if (!status) {
