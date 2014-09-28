@@ -1,7 +1,9 @@
 angular.module( 'symantis.me', [
 	'symantis.me.connections',
+	'symantis.me.settings',
 	'symantis.me.manti',
-	'symantis.me.notifications'
+	'symantis.me.notifications',
+	'symantis.me.sykit'
 ])
 
 .config(function config( $stateProvider ) {
@@ -57,6 +59,19 @@ angular.module( 'symantis.me', [
 				}
 			}
 		})
+		.state( 'me.settings', {
+			url: '/settings',
+			views: {
+				"main@": {
+					controller: 'MeSettingsCtrl',
+					templateUrl: 'me/settings/index.tpl.html'
+				},
+				"leftside@me.settings": {
+					controller: 'MeSettingsLeftsideCtrl',
+                	templateUrl: 'me/settings/leftside.tpl.html'
+				}
+			}
+		})
 		.state( 'me.notifications', {
 			url: '/notifications',
 			views: {
@@ -67,6 +82,19 @@ angular.module( 'symantis.me', [
 				"leftside@me.notifications": {
 					controller: 'MeNotificationsLeftsideCtrl',
                 	templateUrl: 'me/notifications/leftside.tpl.html'
+				}
+			}
+		})
+		.state( 'me.sykit', {
+			url: '/sykit',
+			views: {
+				"main@": {
+					controller: 'SykitCtrl',
+					templateUrl: 'me/sykit/index.tpl.html'
+				},
+				"leftside@me.sykit": {
+					controller: 'SykitLeftsideCtrl',
+                	templateUrl: 'me/sykit/leftside.tpl.html'
 				}
 			}
 		})
