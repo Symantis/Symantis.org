@@ -51,6 +51,14 @@ $transtime: 500ms;
 				color: $dark;
 				line-height: 1.6;
 				padding-bottom: 10px;
+				&.with-sub {
+					padding-bottom: 0;
+				}
+			}
+			h4 {
+				@include font-italic(rem-calc(14px));
+				color: $gray;
+				line-height: 1;
 			}
 			p {
 				@include font-regular(rem-calc(12px));
@@ -158,6 +166,14 @@ $transtime: 500ms;
 				color: $dark;
 				line-height: 1.6;
 				padding-bottom: 10px;
+				&.with-sub {
+					padding-bottom: 0;
+				}
+			}
+			h4 {
+				@include font-italic(rem-calc(14px));
+				color: $gray;
+				line-height: 1;
 			}
 			p {
 				@include font-regular(rem-calc(12px));
@@ -222,6 +238,15 @@ $transtime: 500ms;
 		}
 	}
 }
+.gr-statement-blank {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 10px;
+	text-align: center;
+	border-top: 1px $light solid;
+	border-bottom: 1px $light solid;
+}
 .gr-statement {
 	float: left;
 	width: 100%;
@@ -236,6 +261,10 @@ $transtime: 500ms;
 	h2 {
 		@include font-semi(rem-calc(24px));
 		color: $dark;
+	}
+	img {
+		max-height: 100px;
+		width: auto;
 	}
 	&.top-statement {
 		text-align: left;
