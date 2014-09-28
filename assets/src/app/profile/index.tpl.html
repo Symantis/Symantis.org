@@ -3,7 +3,9 @@
 		<!-- Section on left of heading -->
 	</section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
-        <h1>Suggested Profiles</h1>
+        <h1>
+            <a ui-sref="profile">Profiles</a>
+        </h1>
     </section>
     <section class="medium-0 large-2 columns heading-right">
 		<!-- Section on right of heading -->
@@ -22,7 +24,40 @@
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center">
     	<!-- Section for main center header -->
         <header></header>
-        <p>Maybe Search for members?</p>
+        <div class="row connections-container">
+            <article 
+                class="animate-repeat connections-individual medium-6"
+                ng-repeat="user in users track by $index"
+            >
+                <div class="connections-pic connections-{{ user.status }} generate-image" signature="{{ user.signature }}"></div>
+                <h2 class="connections-name">
+                    <a 
+                        ui-sref="profile.view({ handle: user.handle })"
+                        title="View {{ user.firstName }}'s Profile"
+                    >
+                        {{ user.firstName + ' ' + user.lastName }}
+                    </a>
+                </h2>
+                <p class="connections-bio">
+                    {{ user.professed }}
+                </p>
+                <p class="connections-skills">
+                    <a 
+                        ng-repeat="tag in user.tags" 
+                        ui-sref="community.tags.view({ tag: tag.text })"
+                        title="View users tagged with {{ tag.text }}"
+                    >
+                        {{ tag.text }}
+                    </a>
+                </p>
+                <a title="Message {{ user.firstName }}">
+                    <div class="connections-message">
+                        <div class="icon-message"></div>
+                    </div>
+                </a>
+            </article>
+        </div>
+
         <!-- Section for main center content -->
     </section>
     <section class="medium-0 large-2 columns main-right">

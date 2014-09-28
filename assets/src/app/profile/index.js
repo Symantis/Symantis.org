@@ -11,7 +11,12 @@ angular.module( 'symantis.profile', [
 			views: {
 				"main": {
 					controller: 'ProfileCtrl',
-					templateUrl: 'profile/index.tpl.html'
+					templateUrl: 'profile/index.tpl.html',
+					resolve : {
+			            users : function(UserModel, $stateParams) {
+			                return UserModel.getAll();
+			            }
+		        	}
 				},
 				"sitenav": {
 					controller: 'SiteNavCtrl',
@@ -62,7 +67,12 @@ angular.module( 'symantis.profile', [
 			views: {
 				"main@": {
 					controller: 'ProfileViewCtrl',
-					templateUrl: 'profile/view/index.tpl.html'
+					templateUrl: 'profile/view/index.tpl.html',
+					resolve : {
+			            user : function(UserModel, $stateParams) {
+			                return UserModel.getByHandle($stateParams.handle);
+			            }
+		        	}
 				},
 				"leftside@profile.view": {
 					controller: 'ProfileViewLeftsideCtrl',
@@ -101,14 +111,15 @@ angular.module( 'symantis.profile', [
 	;
 })
 
-.controller( 'ProfileCtrl', function ProfileController( $scope, titleService ) {
+.controller( 'ProfileCtrl', function ProfileController( $scope, titleService, users ) {
 	titleService.setTitle('Profile');
+	$scope.users = users;
 
 	
 })
-.controller( 'ProfileHeaderCtrl', function ProfileHeaderController( $scope, titleService ) {
-	//titleService.setTitle('About');
+.controller( 'ProfileHeaderCtrl', function ProfileHeaderController( $scope ) {
+
 })
 .controller( 'ProfileLeftsideCtrl', function ProfileLeftsideController( $scope ) {
-	//titleService.setTitle('About');
+
 });

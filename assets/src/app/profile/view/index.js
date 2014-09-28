@@ -5,11 +5,13 @@ angular.module( 'symantis.profile.view', [
 	
 })
 
-.controller( 'ProfileViewCtrl', function ProfileViewController($scope, titleService, $state, $stateParams) {
+.controller( 'ProfileViewCtrl', function ProfileViewController(user, $scope, titleService, $state, $stateParams) {
 	
 	
-	$scope.user = {};
+	$scope.user = user;
+	titleService.setTitle($scope.user.firstName+'\'s' + ' Profile');
 
+	/*
 	for(var i in $scope.users){
 		
 		if($scope.users[i].handle == $stateParams.handle){
@@ -21,6 +23,7 @@ angular.module( 'symantis.profile.view', [
 		}
 		//console.log($stateParams.handle+' '+$scope.users[i].handle);
 	}
+	*/
 
 })
 .controller( 'ProfileViewLeftsideCtrl', function ProfileViewLeftsideController( $scope ) {

@@ -19,6 +19,16 @@ module.exports = {
 		});
 	},
 
+	getByHandle: function(req, res) {
+		User.getOne({handle: req.param('handle')})
+		.spread(function(model) {
+			res.json(model);
+		})
+		.fail(function(err) {
+			// res.send(404);
+		});
+	},
+
 	create: function (req, res) {
 		var model = {
 			handle: req.param('handle'),

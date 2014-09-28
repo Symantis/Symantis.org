@@ -160,6 +160,7 @@ body,
 						@include transition(0.1s);
 						-webkit-transition: opacity $animationTime;
 						transition: opacity $animationTime;
+						cursor: pointer;
 					}
 				}
 			}
@@ -348,6 +349,7 @@ body,
 	display: none;
 }
 
+/*
 .sy-effect.sy-menu-top-open .sy-effect.sitenav{
 	.sitenav-inner{
 		width:150px;
@@ -364,6 +366,8 @@ body,
 		}
 	}
 }
+*/
+/*
 .sy-effect.sy-menu-bottom-open .sy-effect.sitenav{
 	.sitenav-inner{
 		//width:150px;
@@ -380,4 +384,5 @@ body,
 		}
 	}
 }
+*/
 

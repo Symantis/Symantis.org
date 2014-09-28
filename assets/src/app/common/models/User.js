@@ -23,6 +23,18 @@ angular.module('models.user', ['lodash', 'services', 'ngSails',])
 		return deferred.promise;
 	};
 
+	this.getByHandle = function(handle) {
+		var deferred = $q.defer();
+		var url = utils.prepareUrl('user/handle/' + handle);
+
+		$sails.get(url, function(model) {
+			return deferred.resolve(model);
+		});
+
+		return deferred.promise;
+	};
+
+
 	this.create = function(newModel) {
 		var deferred = $q.defer();
 		var url = utils.prepareUrl('user');
