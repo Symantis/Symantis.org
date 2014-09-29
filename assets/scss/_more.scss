@@ -45,3 +45,40 @@
 .kit-left {
 	padding-top: 20px;
 }
+.team-header {
+	width: 100%;
+	position: relative;
+}
+.team-statement {
+	width: 100%;
+	position: relative;
+	padding: 0px 0 40px 0;
+	//text-align: center;
+	border-bottom: 1px $light solid;
+	background-color: white;
+	margin-top: -1px;
+	h2 {
+		@include font-semi(rem-calc(24px));
+		color: $dark;
+	}
+}
+.rc-statement {
+	width: 100%;
+	position: relative;
+	padding: 0px 0 15px 0;
+	//text-align: center;
+	border-bottom: 1px $light solid;
+	background-color: white;
+	margin-top: -1px;
+	h2 {
+		@include font-semi(rem-calc(24px));
+		color: $dark;
+	}
+}
+.rc-description {
+	padding-bottom: 10px;
+}
+#rc-user {
+	color: $primary-color;
+}
+

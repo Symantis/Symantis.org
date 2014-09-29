@@ -6,7 +6,7 @@ angular.module( 'symantis.more.contact', [
 })
 
 .controller( 'ContactCtrl', function ContactController( $scope, titleService ) {
-	titleService.setTitle('Contact');
+	titleService.setTitle('SyKit');
 })
 .controller( 'ContactHeaderCtrl', function ContactHeaderController( $scope, titleService ) {
 	//titleService.setTitle('Contact');

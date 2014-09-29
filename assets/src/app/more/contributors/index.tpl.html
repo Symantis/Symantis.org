@@ -15,27 +15,56 @@
     	<!-- Section for main left header -->
         </div>
 	</section>
-	<section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center about-center">
+	<section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center">
 		<header class="main-header">
 		</header>
 
-		<div class="main-content gr-container">
-
-			<article class="gr-statement gr-top-p">
+		<div class="main-content team-header">
+			<article class="team-statement">
 				<h2>Firstly, a big thank you to all the amazing contributors.</h2>
-				<p>Symantis is an open-source, socially driven enterprise, meaning without its community it simply wouldn't work. We would like this opportunity to thank everyone that has contributed and made Symantis what it is. To find out more about our contributors head over to <a ui-sref="me.connections">Connections</a> and search for contributors. If you haven't got an account you will need to <a ui-sref="register">Sign up</a> first.</p>
+				<p>Symantis is an open-source, socially driven enterprise, meaning without its community it simply wouldn't work. We would like this opportunity to thank everyone that has contributed and made Symantis what it is. To find out more about our contributors head over to <a ui-sref="me.connections">Connections</a> and search contributors. If you haven't got an account you will need to <a ui-sref="register">Sign up</a> first.</p>
 			</article>
-
-			<article class="recent-contributors">
-				<ul>
-					<li>
-						<section class="rc-left">
-						</section>
-					</li>
-				</ul>
-			</article>
-
 		</div>
+
+		<div class="main-content team-header">
+			<article class="rc-statement">
+				<h2>Recent Contributors.</h2>
+			</article>
+		</div>
+
+		<div 
+            masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile", "gutter": ".gutter-sizer" }' 
+            class="board-container" 
+            ui-view="board"
+        >
+            <div class="gutter-sizer"></div>
+            <div 
+                masonry-tile 
+                ng-repeat="board in opportunities" 
+                class="tile board-pod-wrap"
+                ng-init="pod.active = true"
+                ng-class="{deactivate: !pod.active}"
+            >
+
+                <div class="board-pod">
+                    <section class="pod-header">
+                        <div 
+                            class="pod-user-pic generate-image" 
+                            signature="{{ board.author.signature }}"
+                        >
+                        </div>
+                        <p><a id="rc-user">{{board.author.firstName }} {{board.author.lastName }}</a><br /><span>{{ board.date | date }}</span></p>
+                    </section>
+                    <section class="pod-body">
+                        <p class="pod-description rc-description">
+                            {{ board.description }}
+                        </p>
+                    </section>
+                </div>
+
+            </div>
+
+        </div>
 
 	</section>
 

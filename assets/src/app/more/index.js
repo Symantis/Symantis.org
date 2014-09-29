@@ -38,7 +38,7 @@ angular.module( 'symantis.more', [
 			}
 		})
 		.state( 'more.contact', {
-			url: '/contact',
+			url: '/sykit',
 			views: {
 				"main@": {
 					controller: 'ContactCtrl',
