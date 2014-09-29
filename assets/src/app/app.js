@@ -19,6 +19,7 @@ angular.module( 'symantis', [
 	'duScroll',
 	'masonry',
 	'ngTagsInput',
+	'pascalprecht.github-adapter',
 	
 	'symantis.global.modals',
 
