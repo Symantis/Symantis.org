@@ -190,7 +190,7 @@ body,
 						}
 						
 					}
-					&:last-child {
+					&:nth-child(6) {
 						width: 120px;
 						a {
 							border-top: rem-calc(1px) $gray solid;

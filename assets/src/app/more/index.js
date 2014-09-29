@@ -1,7 +1,7 @@
 angular.module( 'symantis.more', [
 	'symantis.more.extras',
 	'symantis.more.contributors',
-	'symantis.more.contact'
+	'symantis.more.sykit'
 ])
 
 .config(function config( $stateProvider ) {
@@ -37,16 +37,16 @@ angular.module( 'symantis.more', [
 				*/
 			}
 		})
-		.state( 'more.contact', {
+		.state( 'more.sykit', {
 			url: '/sykit',
 			views: {
 				"main@": {
-					controller: 'ContactCtrl',
-					templateUrl: 'more/contact/index.tpl.html'
+					controller: 'SykitCtrl',
+					templateUrl: 'more/sykit/index.tpl.html'
 				},
-				"leftside@more.contact": {
-					controller: 'ContactLeftsideCtrl',
-                	templateUrl: 'more/contact/leftside.tpl.html'
+				"leftside@more.sykit": {
+					controller: 'SykitLeftsideCtrl',
+                	templateUrl: 'more/sykit/leftside.tpl.html'
 				}
 			}
 		})
