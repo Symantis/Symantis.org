@@ -1,4 +1,4 @@
-angular.module( 'symantis.more.extras', [
+angular.module( 'symantis.more.donate', [
 ])
 
 .config(function config( $stateProvider ) {
@@ -27,12 +27,12 @@ angular.module( 'symantis.more.extras', [
 	*/
 })
 
-.controller( 'ExtrasCtrl', function ExtrasController( $scope, titleService ) {
-	titleService.setTitle('Extras');
+.controller( 'DonateCtrl', function DonateController( $scope, titleService ) {
+	titleService.setTitle('Donate');
 })
-.controller( 'ExtrasHeaderCtrl', function ExtrasHeaderController( $scope, titleService ) {
+.controller( 'DonateHeaderCtrl', function DonateHeaderController( $scope, titleService ) {
 	//titleService.setTitle('About');
 })
-.controller( 'ExtrasLeftsideCtrl', function ExtrasLeftsideController( $scope ) {
+.controller( 'DonateLeftsideCtrl', function DonateLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 });

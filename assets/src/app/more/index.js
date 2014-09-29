@@ -1,5 +1,5 @@
 angular.module( 'symantis.more', [
-	'symantis.more.extras',
+	'symantis.more.donate',
 	'symantis.more.contributors',
 	'symantis.more.sykit'
 ])
@@ -50,16 +50,16 @@ angular.module( 'symantis.more', [
 				}
 			}
 		})
-		.state( 'more.extras', {
-			url: '/extras',
+		.state( 'more.donate', {
+			url: '/donate',
 			views: {
 				"main@": {
-					controller: 'ExtrasCtrl',
-					templateUrl: 'more/extras/index.tpl.html'
+					controller: 'DonateCtrl',
+					templateUrl: 'more/donate/index.tpl.html'
 				},
-				"leftside@more.extras": {
-					controller: 'ExtrasLeftsideCtrl',
-                	templateUrl: 'more/extras/leftside.tpl.html'
+				"leftside@more.donate": {
+					controller: 'DonateLeftsideCtrl',
+                	templateUrl: 'more/donate/leftside.tpl.html'
 				}
 			}
 		})
