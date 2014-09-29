@@ -2,12 +2,42 @@
 <div class="left-content more-left-content">
 	<!-- Main Left Content -->
 	<div class="more-category-nav">
-		<ul>
-			<li><a class="selected">The Symantis system</a></li>
-			<li><a >Our Community</a></li>
-			<li><a >Why Symantis?</a></li>
-			<li><a >The Creator App</a></li>
-			<li><a >Hardware</a></li>
+		<ul 
+			du-spy-context
+			duScrollGreedy="true"
+			du-scroll-container="sitenav-push"
+		>
+			<li>
+				<a 
+					href="#more-philosophy" 
+					du-smooth-scroll 
+					offset="55"
+					du-scrollspy="more-philosophy"
+				>
+					Our Philosophy
+				</a>
+			</li>
+			<li>
+				<a 
+					href="#more-model" 
+					du-smooth-scroll
+					offset="55" 
+					du-scrollspy="more-model"
+				>
+					Buisness Model
+				</a>
+			</li>
+			<li>
+				<a 
+					href="#more-currency" 
+					du-smooth-scroll 
+					offset="55"
+					du-scrollspy="more-currency"
+				>
+					Symantis Currency
+				</a>
+			</li>
+
 		</ul>
 	</div>
 

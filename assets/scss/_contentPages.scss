@@ -271,6 +271,16 @@ $transtime: 500ms;
 		padding: 10px 0 30px 0;
 	}
 }
+.gr-top-p {
+	text-align: left !important;
+	padding: 10px 0px 50px 0px;
+	border-top: none;
+}
+.gr-second-p {
+	padding-top: 10px;
+}
+
+
 .gr-reveal:hover {
 	.gr-top-rule {
 		opacity: 0;
@@ -310,13 +320,4 @@ $transtime: 500ms;
 	.gr-text {
 		right: -20px;
 	}
-}
-
-.gr-top-p {
-	text-align: left !important;
-	padding: 10px 0px 50px 0px;
-	border-top: none;
-}
-.gr-second-p {
-	padding-top: 10px;
 }

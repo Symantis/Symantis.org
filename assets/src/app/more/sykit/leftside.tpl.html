@@ -2,10 +2,42 @@
 <div class="left-content more-left-content">
 	<!-- Main Left Content -->
 	<div class="more-category-nav kit-left">
-		<ul>
-			<li><a class="selected">About</a></li>
-			<li><a >Features</a></li>
-			<li><a >Buy</a></li>
+		<ul 
+			du-spy-context
+			duScrollGreedy="true"
+			du-scroll-container="sitenav-push"
+		>
+			<li>
+				<a 
+					href="#sykit-about" 
+					du-smooth-scroll 
+					offset="55"
+					du-scrollspy="sykit-about"
+				>
+					About
+				</a>
+			</li>
+			<li>
+				<a 
+					href="#sykit-features" 
+					du-smooth-scroll
+					offset="55" 
+					du-scrollspy="sykit-features"
+				>
+					Features
+				</a>
+			</li>
+			<li>
+				<a 
+					href="#sykit-buy" 
+					du-smooth-scroll 
+					offset="55"
+					du-scrollspy="sykit-buy"
+				>
+					Buy
+				</a>
+			</li>
+
 		</ul>
 	</div>
 

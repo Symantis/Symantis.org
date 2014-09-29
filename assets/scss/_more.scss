@@ -81,4 +81,32 @@
 #rc-user {
 	color: $primary-color;
 }
+.more-container {
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	.row {
+		margin: 0;
+	}
+	section {
+		&:nth-child(odd) {
+			padding-left: 0;
+		}
+		&:nth-child(even) {
+			padding-right: 0;
+		}
+	}
+	.gr-container {
+		&:nth-child(1n + 1) {
+			padding-top: 0 !important;
+		}
+		h4 {
+			@include font-semi(rem-calc(14px));
+			color: $dark;
+			line-height: 2;
+			text-align: left;
+		}
+	}
+}
 
