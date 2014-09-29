@@ -4,17 +4,61 @@
 <div class="left-content">
 <!-- Section for main left content -->
     <div class="community-category-nav">
-        <ul ng-show="currentUser">
+        <ul ng-if="currentUser">
             <li><a class="selected">Whats Happening</a></li>
             <li><a >Trending</a></li>
             <li><a >Suggested</a></li>
         </ul>
-        <ul ng-show="!currentUser">
-            <li><a class="selected">Overview</a></li>
-            <li><a >News</a></li>
-            <li><a >Queries</a></li>
-            <li><a >Board</a></li>
-            <li><a >Connections</a></li>
+        <ul 
+            ng-if="!currentUser"
+            du-spy-context
+            duScrollGreedy="true"
+            du-scroll-container="sitenav-push"
+        >
+            <li>
+                <a 
+                    href="#overview" 
+                    du-smooth-scroll 
+                    offset="55"
+                    du-scrollspy="overview"
+                >
+                    Overview
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="#news" 
+                    du-smooth-scroll 
+                    offset="55"
+                    du-scrollspy="news"
+                >
+                News</a>
+            </li>
+            <li>
+                <a 
+                    href="#queries" 
+                    du-smooth-scroll 
+                    offset="55"
+                    du-scrollspy="queries"
+                >
+                Queries</a>
+            </li>
+            <li>
+                <a 
+                    href="#board" 
+                    du-smooth-scroll 
+                    offset="55"
+                    du-scrollspy="board"
+                >Board</a>
+            </li>
+            <li>
+                <a 
+                    href="#connections" 
+                    du-smooth-scroll 
+                    offset="55"
+                    du-scrollspy="connections"
+                >Connections</a>
+            </li>
         </ul>
     </div>
 </div>
