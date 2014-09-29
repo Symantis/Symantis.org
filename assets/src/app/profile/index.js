@@ -13,7 +13,7 @@ angular.module( 'symantis.profile', [
 					controller: 'ProfileCtrl',
 					templateUrl: 'profile/index.tpl.html',
 					resolve : {
-			            users : function(UserModel, $stateParams) {
+			            users : function(UserModel) {
 			                return UserModel.getAll();
 			            }
 		        	}
@@ -70,7 +70,8 @@ angular.module( 'symantis.profile', [
 					templateUrl: 'profile/view/index.tpl.html',
 					resolve : {
 			            user : function(UserModel, $stateParams) {
-			                return UserModel.getByHandle($stateParams.handle);
+			                console.log($stateParams.handle);
+			                return UserModel.getOneByHandle($stateParams.handle);
 			            }
 		        	}
 				},

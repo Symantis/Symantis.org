@@ -61,7 +61,16 @@ module.exports = {
 			collection: 'user',
 			via: 'id'
 		},
-		
+		//TODO Collection or Tracker
+		manti: {
+			type: 'array',
+			defaultsTo: []
+		},
+		//TODO Collection or Tracker
+		contributions: {
+			type: 'array',
+			defaultsTo: []
+		},
 		passports : { 
 			collection: 'Passport', 
 			via: 'user' 
@@ -77,6 +86,13 @@ module.exports = {
 
 	getOne: function(id) {
 		return User.findOne(id)
+		.then(function (model) {
+			return [model];
+		});
+	},
+
+	getOneHandle: function(handle) {
+		return User.findOne({ handle: handle })
 		.then(function (model) {
 			return [model];
 		});

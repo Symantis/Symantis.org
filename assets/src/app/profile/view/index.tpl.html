@@ -29,7 +29,7 @@
         </header>
         <article class="profile-manti-content">
             <ul>
-        		<li class="row current-manti" ng-repeat="manti in user.curManti">
+        		<li class="row current-manti" ng-repeat="manti in user.manti">
                     <div class="medium-2 large-1 columns current-manti-view">
                         <a ><p>View</p></a>
                     </div>
@@ -45,7 +45,7 @@
         </header>
         <article class="profile-contributions-content">
             <ul>
-            	<li class="row recent-contribution" ng-repeat="contribution in user.reContributions">
+            	<li class="row recent-contribution" ng-repeat="contribution in user.contributions">
                     <div class="medium-2 large-1 columns recent-contribution-category">
                         <a ><p>{{ contribution.type }}</p></a>
                     </div>
