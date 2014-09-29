@@ -28,7 +28,17 @@
 				&.selected {
 					color: $dark;
 				}
+				span {
+					float: left;
+					font-size: rem-calc(28px);
+					margin-top: -8px;
+					margin-right: 10px;
+					//line-height: 0.4;
+				}
 			}
 		}
 	}
+}
+.social-left {
+	padding-top: 20px;
 }
