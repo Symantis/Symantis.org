@@ -53,10 +53,11 @@
 					width: auto;
 					position: absolute;
 					left: 0;
+					@include font-regular(rem-calc(14px));
 					@include transition(100ms);
 				}
 				.icon {
-					@include icon(rem-calc(20px),$dark);
+					@include icon(rem-calc(14px),$dark);
 					float: right;
 					position: absolute;
 					top: rem-calc(5px);

@@ -27,7 +27,7 @@ angular.module( 'symantis.me', [
 					controller: 'MeHeaderCtrl',
                 	templateUrl: 'me/header.tpl.html'
 				},
-				"leftside@profile": {
+				"leftside@me": {
 					controller: 'MeLeftsideCtrl',
 					templateUrl: 'me/leftside.tpl.html'
 				}

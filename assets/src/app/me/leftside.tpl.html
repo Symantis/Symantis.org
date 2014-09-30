@@ -1,7 +1,19 @@
-		<header></header>
-		<div class="left-content about-left-content">
-			<!-- Main Left Content -->
-			<ul class="about-left-nav">
-		
-			</ul>
-		</div>
+<header class="profile-left-user left-header">
+    <h3>
+        {{ currentUser.firstName + ' ' + currentUser.lastName }}
+    </h3>
+    <small>{{ currentUser.at }}{{ currentUser.handle }}</small>
+    <div class="profile-pic">
+        <div class="profile-pic-inner online generate-image" signature="{{ currentUser.signature }}"></div>
+    </div>
+</header>
+<header class="profile-left-options left-header">
+    <ul>
+        <li>
+            <a ui-sref="me.settings">
+                <h3>Edit Profile</h3>
+                <div class="icon-settings icon"></div>
+            </a>
+        </li>
+    </ul>
+</header>
