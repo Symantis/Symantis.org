@@ -3,13 +3,13 @@
 	<a 
 		ui-sref="profile"
 	>
-	<span>Profiles</span></a>
+	<span>@userHandle</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a 
-		ui-sref="me.connections" 
+		ui-sref="profile.connections" 
 		ui-sref-active="active"
-		ng-class="{active: $state.includes('me.connections')}"
+		ng-class="{active: $state.includes('profile.connections')}"
 	>
 		<span>Connections</span>
 	</a>
@@ -17,20 +17,20 @@
 <section class="top-nav-mid text-center medium-2 large-1 columns">
 	<!-- Section for the user to browse profiles, could be suggested profiles -->
 	<a 
-		ui-sref="profile.find" 
+		ui-sref="profile.manti" 
 		ui-sref-active="active" 
-		ng-class="{active: $state.includes('profile.find')}"
+		ng-class="{active: $state.includes('profile.manti')}"
 	>
-		<span>Find</span>
+		<span>Manti</span>
 	</a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a 
-		ui-sref="profile.suggested" 
+		ui-sref="profile.activity" 
 		ui-sref-active="active" 
-		ng-class="{active: $state.includes('profile.suggested')}"
+		ng-class="{active: $state.includes('profile.activity')}"
 	>
-		<span>Suggested</span>
+		<span>Activity</span>
 	</a>
 </section>
 				

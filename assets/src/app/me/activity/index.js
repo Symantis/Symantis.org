@@ -1,4 +1,4 @@
-angular.module( 'symantis.me.notifications', [
+angular.module( 'symantis.me.activity', [
 ])
 /*
 .config(function config( $stateProvider ) {
@@ -17,11 +17,11 @@ angular.module( 'symantis.me.notifications', [
 	});
 })
 */
-.controller( 'NotificationsCtrl', function MantiController( $scope, titleService ) {
-	titleService.setTitle('My Notifications');
+.controller( 'ActivityCtrl', function ActivityController( $scope, titleService ) {
+	titleService.setTitle('My Activity');
 
 	
 })
-.controller( 'MeNotificationsLeftsideCtrl', function MeNotificationsLeftsideController( $scope ) {
+.controller( 'MeActivityLeftsideCtrl', function MeActivityLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 });

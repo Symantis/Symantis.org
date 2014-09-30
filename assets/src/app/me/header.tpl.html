@@ -1,5 +1,5 @@
 <section class="top-nav-left medium-3 large-2 large-offset-1 columns">
-	<a ui-sref="me"><span>My Profile</span></a>
+	<a ui-sref="me"><span>{{ currentUser.at }}{{ currentUser.handle }} </span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a 
@@ -24,11 +24,11 @@
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a 
-		ui-sref="me.notifications" 
+		ui-sref="me.activity" 
 		ui-sref-active="active"
-		ng-class="{active: $state.includes('me.notifications')}"
+		ng-class="{active: $state.includes('me.activity')}"
 	>
-		<span>Notifications</span>
+		<span>Activity</span>
 	</a>
 </section>
 				

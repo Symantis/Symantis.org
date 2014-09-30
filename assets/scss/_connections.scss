@@ -27,6 +27,18 @@
 			}
 		}
 	}
+	.connections-online-nav {
+		padding-top: 18px;
+		border-top: 1px $gray solid;
+		ul {
+			li {
+				padding-bottom: 0;
+			}
+		}
+	}
+	.online-header {
+		padding-bottom: 18px;
+	}
 	.connections-suggestions-header {
 		margin-top: rem-calc(20px);
 	}

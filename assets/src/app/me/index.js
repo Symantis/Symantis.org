@@ -2,7 +2,7 @@ angular.module( 'symantis.me', [
 	'symantis.me.connections',
 	'symantis.me.settings',
 	'symantis.me.manti',
-	'symantis.me.notifications',
+	'symantis.me.activity',
 	'symantis.me.sykit'
 ])
 
@@ -72,16 +72,16 @@ angular.module( 'symantis.me', [
 				}
 			}
 		})
-		.state( 'me.notifications', {
-			url: '/notifications',
+		.state( 'me.activity', {
+			url: '/activity',
 			views: {
 				"main@": {
-					controller: 'NotificationsCtrl',
-					templateUrl: 'me/notifications/index.tpl.html'
+					controller: 'ActivityCtrl',
+					templateUrl: 'me/activity/index.tpl.html'
 				},
-				"leftside@me.notifications": {
-					controller: 'MeNotificationsLeftsideCtrl',
-                	templateUrl: 'me/notifications/leftside.tpl.html'
+				"leftside@me.activity": {
+					controller: 'MeActivityLeftsideCtrl',
+                	templateUrl: 'me/activity/leftside.tpl.html'
 				}
 			}
 		})

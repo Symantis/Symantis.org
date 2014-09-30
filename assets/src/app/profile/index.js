@@ -1,7 +1,8 @@
 angular.module( 'symantis.profile', [
-	'symantis.profile.view',
-	'symantis.profile.find',
-	'symantis.profile.suggested'
+	'symantis.profile.connections',
+	'symantis.profile.manti',
+	'symantis.profile.activity',
+	'symantis.profile.view'
 ])
 
 .config(function config( $stateProvider ) {
@@ -36,29 +37,42 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
-		.state( 'profile.find', {
-			url: '/find',
+		.state( 'profile.connections', {
+			url: '/connections',
 			views: {
 				"main@": {
-					controller: 'ProfileFindCtrl',
-					templateUrl: 'profile/find/index.tpl.html'
+					controller: 'ProfileConnectionsCtrl',
+					templateUrl: 'profile/connections/index.tpl.html'
 				},
-				"leftside@profile.find": {
-					controller: 'ProfileFindLeftsideCtrl',
-                	templateUrl: 'profile/find/leftside.tpl.html'
+				"leftside@profile.connections": {
+					controller: 'ProfileConnectionsLeftsideCtrl',
+                	templateUrl: 'profile/connections/leftside.tpl.html'
 				}
 			}
 		})
-		.state( 'profile.suggested', {
-			url: '/suggested',
+		.state( 'profile.manti', {
+			url: '/manti',
 			views: {
 				"main@": {
-					controller: 'ProfileSuggestedCtrl',
-					templateUrl: 'profile/suggested/index.tpl.html'
+					controller: 'ProfileMantiCtrl',
+					templateUrl: 'profile/manti/index.tpl.html'
 				},
-				"leftside@profile.suggested": {
-					controller: 'ProfileSuggestedLeftsideCtrl',
-                	templateUrl: 'profile/suggested/leftside.tpl.html'
+				"leftside@profile.manti": {
+					controller: 'ProfileMantiLeftsideCtrl',
+                	templateUrl: 'profile/manti/leftside.tpl.html'
+				}
+			}
+		})
+		.state( 'profile.activity', {
+			url: '/activity',
+			views: {
+				"main@": {
+					controller: 'ProfileActivityCtrl',
+					templateUrl: 'profile/activity/index.tpl.html'
+				},
+				"leftside@profile.activity": {
+					controller: 'ProfileActivityLeftsideCtrl',
+                	templateUrl: 'profile/activity/leftside.tpl.html'
 				}
 			}
 		})
