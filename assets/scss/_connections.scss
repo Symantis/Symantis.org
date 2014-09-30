@@ -29,15 +29,30 @@
 	}
 	.connections-online-nav {
 		padding-top: 18px;
-		border-top: 1px $gray solid;
+		//border-top: 1px $gray solid;
 		ul {
 			li {
-				padding-bottom: 0;
+				padding-bottom: 5px;
+				&:last-child {
+					padding-bottom: 0;
+				}
 			}
 		}
 	}
 	.online-header {
-		padding-bottom: 18px;
+		padding-bottom: 0;
+		h3 {
+			padding-bottom: 18px;
+			//border-bottom: 1px $gray solid;
+		}
+		.bottom-rule {
+			width: 20%;
+			height: 1px;
+			display: block;
+			padding: 0;
+			margin: 0;
+			background-color: $gray;
+		}
 	}
 	.connections-suggestions-header {
 		margin-top: rem-calc(20px);
@@ -88,9 +103,63 @@
 		}
 	}
 }
+.connections-sub-nav {
+	border-bottom: rem-calc(1px) $dark solid;
+	float: left;
+	padding-bottom: rem-calc(20px);
+	ul {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		width: auto;
+		li {
+			margin: 0;
+			padding: 0;
+			width: rem-calc(70px);
+			text-align: center;
+			a {
+				@include font-regular(rem-calc(12px));
+				width: 100%;
+				color: darken($light, 10%);
+				//display: block;
+				padding-bottom: rem-calc(25px);
+				padding-top: rem-calc(25px);
+				@include transition(100ms);
+				&:hover {
+					//border-top: 3px $dark solid;
+					//padding-top: rem-calc(23px);
+					color: black;
+				}
+				&.active {
+					border-top: 3px $dark solid;
+					padding-top: rem-calc(23px);
+					color: black;
+				}
+			}
+		}
+	}
+	.connections-sub-nav-left {
+		float: left;
+		li {
+			float: left;
+			text-align: left;
+		}
+	}
+	.connections-sub-nav-right {
+		float: right;
+		li {
+			float: right;
+			text-align: right;
+		}
+	}
+}
 .connections-container {
+	padding-top: rem-calc(20px);
 	padding-left: rem-calc(20px);
 	padding-right: rem-calc(20px);
+	float: left;
+	position: relative;
 	.connections-individual {
 		margin-top: rem-calc(10px);
 		margin-bottom: rem-calc(20px);

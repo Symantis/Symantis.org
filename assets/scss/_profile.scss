@@ -20,7 +20,7 @@
 			width: 100%;
 			height: 0;
 			padding-bottom: 100%;
-			margin-bottom: rem-calc(20px);
+			margin-bottom: 25px;
 			.profile-pic-inner {
 				position: absolute;
 				width: 100%;
@@ -33,6 +33,7 @@
 	}
 	.profile-left-options {
 		float: left;
+		border-top: 1px $light solid;
 		ul {
 			list-style: none;
 			padding: 0;
@@ -41,40 +42,99 @@
 				width: 100%;
 				float: left;
 				position: relative;
-				height: rem-calc(36px);
+				height: rem-calc(26px);
 				a {
 					width: 100%;
 					float: left;
-					height: rem-calc(36px);
+					height: rem-calc(26px);
 					position: relative;
 				}
 				h3 {
-					color: $dark;
 					width: auto;
 					position: absolute;
-					left: 0;
-					@include font-regular(rem-calc(14px));
+					left: 26px;
+					@include font-regular(rem-calc(12px));
+					color: $gray;
 					@include transition(100ms);
 				}
 				.icon {
-					@include icon(rem-calc(14px),$dark);
-					float: right;
+					@include icon(rem-calc(12px),$gray);
 					position: absolute;
-					top: rem-calc(5px);
-					right: 0;
+					top: 2px;
+					left: 0;
 					@include transition(100ms);
 				}
+			}
+			.profile-option {
 				&:hover h3 {
-					color: $primary-color;
+					color: $dark;
 				}
 				&:hover .icon {
-					color: $primary-color;
+					color: $dark;
+				}
+			}
+			.profile-connections {
+				height: 90px;
+				float: left;
+				width: 100%;
+				margin-bottom: 20px;
+				.connections-stats {
+					float: left;
+					width: 100%;
+					height: 90px;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					border-bottom: 1px $light solid;
+					li {
+						width: 33.333%;
+						float: left;
+						text-align: center;
+						position: relative;
+						height: 100%;
+						&:first-child {
+							text-align: left;
+							h3 {
+								text-align: left;
+								padding-left: 8px;
+							}
+						}
+						&:last-child {
+							text-align: right;
+							h3 {
+								text-align: right;
+								padding-right: 10px;
+							}
+						}
+						.icon {
+							width: 100%;
+							font-size: rem-calc(44px);
+							position: absolute;
+							top: 0;
+						}
+						h3 {
+							width: 100%;
+							position: absolute;
+							top: 50px;
+							left: 0;
+							text-align: center;
+						}
+						&:hover {
+							h3 {
+								color: $dark;
+							}
+							.icon {
+								color: $dark;
+							}
+						}
+					}
 				}
 			}
 		}
 	}
 }
 .profile-center {
+	position: relative;
 	h3 {
 		@include font-semi(rem-calc(22px));
 	}
@@ -84,6 +144,22 @@
 	.profile-about-header {
 		h3 {
 			padding-bottom: rem-calc(15px);
+		}
+	}
+	.profile-edit {
+		position: absolute;
+		top: 22px;
+		right: 0;
+		padding: 3px 10px 3px 25px;
+		color: $primary-color;
+		border-color: $primary-color;
+		span {
+			position: absolute;
+			top: 4px;
+			left: 6px;
+		}
+		&:hover {
+			color: white;
 		}
 	}
 	.profile-manti-header {

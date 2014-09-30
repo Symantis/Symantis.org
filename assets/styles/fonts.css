@@ -245,3 +245,15 @@
 .icon-arrow-circle-right:before {
   content: "C";
 }
+.icon-minus:before {
+  content: "D";
+}
+.icon-1way-1:before {
+  content: "E";
+}
+.icon-1way-2:before {
+  content: "F";
+}
+.icon-2way:before {
+  content: "G";
+}

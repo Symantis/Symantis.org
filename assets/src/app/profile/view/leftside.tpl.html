@@ -9,22 +9,28 @@
 </header>
 <header class="profile-left-options left-header">
     <ul>
-        <li>
+        <li class="profile-option">
             <a ui-sref="profile.view.connect" title="Connect with {{ user.firstName }}">
-                <h3>Connect</h3>
+                <h3>Connect with User</h3>
                 <div class="icon-plus icon"></div>
             </a>
         </li>
-        <li>
+        <li class="profile-option">
             <a ui-sref="profile.view.message" title="Message {{ user.firstName }}">
-            <h3>Message</h3>
-            <div class="icon-message icon"></div>
+                <h3>Message</h3>
+                <div class="icon-message icon"></div>
             </a>
         </li>
-        <li>
+        <li class="profile-option">
             <a ui-sref="profile.view.invite" title="Invite {{ user.firstName }} to work with you">
-            <h3>Invite</h3>
-            <div class="icon-plus icon"></div>
+                <h3>Invite to Manti</h3>
+                <div class="icon-plus icon"></div>
+            </a>
+        </li>
+        <li class="profile-option">
+            <a ui-sref="profile.view.invite" title="Remove {{ user.firstName }} from your Connections">
+                <h3>Remove Connection</h3>
+                <div class="icon-minus icon"></div>
             </a>
         </li>
     </ul>

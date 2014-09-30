@@ -3,7 +3,7 @@
 		<!-- Section on left of heading -->
 	</section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
-        <h1><a ui-sref="profile.view({ handle: currentUser.handle })">{{currentUser.firstName}} {{currentUser.lastName}}</a></h1>
+        <h1><a class="dead-link">{{currentUser.firstName}} {{currentUser.lastName}}</a></h1>
     </section>
     <section class="medium-0 large-2 columns heading-right">
 		<!-- Section on right of heading -->
@@ -20,6 +20,7 @@
         <header class="profile-header profile-about-header">
             <h3>About</h3>
         </header>
+        <button class="sy-button profile-edit" ui-sref="me.settings">Edit Profile<span class="icon-settings"></span></button>
         <article class="profile-about-content">
             <p>{{ currentUser.bio || "Write a bio!" }}</p>
         </article>

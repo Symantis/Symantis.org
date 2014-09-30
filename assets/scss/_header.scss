@@ -69,7 +69,7 @@
 			}
 			.top-nav-mid {
 				//background-color: white;
-				padding-top: rem-calc(15px);
+				padding-top: rem-calc(16px);
 				padding-bottom: rem-calc(15px);
 				float:left;
 				a {
@@ -77,8 +77,8 @@
 					font-size: rem-calc(13px);
 					span{
 						color: $gray;
-						margin-top: rem-calc(5px);
-						padding-top: rem-calc(5px);
+						margin-top: rem-calc(6px);
+						padding-top: rem-calc(6px);
 						@include transition(200ms);
 					}
 					&:hover {

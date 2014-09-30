@@ -19,15 +19,17 @@
     </section>
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center connections-center">
 
-        <header class="queries-sub-nav">
-            <ul class="queries-sub-nav-left">
-                <li class="queries-recent"><a title="Order by Most Recent" class="active">One-Way</a></li>
-                <li class="queries-popular"><a title="Order by Most Popular">Two-Way</a></li>
-                <li class="queries-search"><a title="Search for Queries">Search</a></li>
+        <header class="connections-sub-nav">
+            <ul class="connections-sub-nav-left">
+                <li class="connections-all"><a class="active">View All</a></li>
+                <li class="connections-recent"><a >One-Way</a></li>
+                <li class="connections-popular"><a >Two-Way</a></li>
+                
             </ul>
-            <ul class="queries-sub-nav-right" ng-show="currentUser">
+            <ul class="connections-sub-nav-right" ng-show="currentUser">
                 <!-- <li class="queries-new"><a title="New Query">Find New</a></li> -->
-                <li class="queries-myQueries"><a title="View your Queries">Add New</a></li>
+                <li class="connections-search"><a >Search</a></li>
+                <li><a title="Find New Connections">Browse</a></li>
             </ul>
         </header>
 
@@ -40,7 +42,6 @@
                 <h2 class="connections-name">
                     <a 
                         ui-sref="profile.view({ handle: user.handle })"
-                        title="View {{ user.firstName }}'s Profile"
                     >
                         {{ user.firstName + ' ' + user.lastName }}
                     </a>

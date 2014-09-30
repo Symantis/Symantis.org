@@ -3,7 +3,7 @@
         <!-- Section on left of heading -->
     </section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
-        <h1><a class="dead-link" ui-sref="profile.view({handle: user.handle})">{{ user.firstName + ' ' + user.lastName }}</a></h1>
+        <h1><a class="dead-link">{{ user.firstName + ' ' + user.lastName }}</a></h1>
     </section>
     <section class="medium-0 large-2 columns heading-right">
         <!-- Section on right of heading -->
@@ -22,7 +22,7 @@
         	<h3>About</h3>
         </header>
         <article class="profile-about-content">
-        	<p editable-textarea="user.bio" e-cols="40">{{ user.bio || "Write a bio!" }}</p>
+        	<p>{{ user.bio || "No information" }}</p>
         </article>
         <header class="profile-header profile-manti-header">
         	<h3>Current Manti</h3>
