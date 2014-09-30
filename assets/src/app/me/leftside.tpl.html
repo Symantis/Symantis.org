@@ -10,31 +10,31 @@
 <header class="profile-left-options left-header">
     <ul>
         <li class="profile-connections">
-            <ul class="connections-stats">
-                <li >
-                    <a title="One-way Connections From You">
-                        <div class="icon-1way-2 icon"></div>
-                        <h3>344</h3> 
-                    </a>
-                </li>
-                <li>
-                    <a title="Two-way Connections">
-                        <div class="icon-2way icon"></div>
-                        <h3>344</h3> 
-                    </a>
-                </li>
-                <li>
-                    <a title="One-way Connections To You">
-                        <div class="icon-1way-1 icon"></div>
-                        <h3>344</h3> 
-                    </a>
-                </li>
-            </ul>
+            <a title="View Connection Statistics" dropdown-toggle="#connections-table">
+                <div class="icon-2way icon"></div>
+                <h3>Connections <span>369</span></h3> 
+            </a>
+        </li>
+        <li class="profile-connections-tab">
+            <table id="connections-table" class="connections-table">
+                <tr>
+                    <td><a >Incoming Connections</a></td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td><a >Out-going Connections</a></td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td><a >Two-way Connections</a></td>
+                    <td>123</td>
+                </tr>
+            </table>
         </li>
         <li class="profile-option">
             <a ui-sref="me.settings">
                 <div class="icon-settings icon"></div>
-                <h3>Edit Profile</h3> 
+                <h3>Settings</h3> 
             </a>
         </li>
     </ul>

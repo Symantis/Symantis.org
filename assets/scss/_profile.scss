@@ -74,60 +74,63 @@
 				}
 			}
 			.profile-connections {
-				height: 90px;
-				float: left;
-				width: 100%;
-				margin-bottom: 20px;
-				.connections-stats {
-					float: left;
-					width: 100%;
-					height: 90px;
-					list-style: none;
-					margin: 0;
-					padding: 0;
-					border-bottom: 1px $light solid;
-					li {
-						width: 33.333%;
-						float: left;
-						text-align: center;
-						position: relative;
-						height: 100%;
-						&:first-child {
-							text-align: left;
-							h3 {
-								text-align: left;
-								padding-left: 8px;
-							}
-						}
-						&:last-child {
-							text-align: right;
-							h3 {
-								text-align: right;
-								padding-right: 10px;
-							}
-						}
-						.icon {
-							width: 100%;
-							font-size: rem-calc(44px);
-							position: absolute;
-							top: 0;
-						}
-						h3 {
-							width: 100%;
-							position: absolute;
-							top: 50px;
-							left: 0;
-							text-align: center;
-						}
-						&:hover {
-							h3 {
-								color: $dark;
-							}
-							.icon {
-								color: $dark;
-							}
-						}
+				//margin-bottom: 10px;
+				.icon {
+					font-size: rem-calc(18px);
+					margin-left: -3px;
+					margin-top: -3px;
+				}
+				h3 {
+					position: relative;
+					span {
+						background-color: $light;
+						border-radius: 2px;
+						padding: 2px 6px 2px 6px;
+						color: white;
+						margin-left: 5px;
 					}
+				}
+				&:hover h3 {
+					color: $dark;
+				}
+				&:hover .icon {
+					color: $dark;
+				}
+			}
+			.profile-connections-tab {
+				height: auto;
+				//padding-top: 10px;
+				.connections-table {
+					float: left;
+					margin-top: 10px;
+					width: 100%;
+					position: relative;
+					border: 1px $light solid;
+					a {
+						height: auto;
+					}
+				}
+				.connections-table:after, .connections-table:before {
+					bottom: 100%;
+					left: 25%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+				}
+				.connections-table:after {
+					border-color: rgba(255, 255, 255, 0);
+					border-bottom-color: white;
+					border-width: 7px;
+					margin-left: -7px;
+				}
+				.connections-table:before {
+					border-color: rgba(46, 48, 44, 0);
+					border-bottom-color: $light;
+					border-width: 8px;
+					margin-left: -8px;
 				}
 			}
 		}
@@ -135,6 +138,9 @@
 }
 .profile-center {
 	position: relative;
+	header {
+		border-top-color: $gray;
+	}
 	h3 {
 		@include font-semi(rem-calc(22px));
 	}
@@ -142,6 +148,7 @@
 		@include font-regular(rem-calc(12px));
 	}
 	.profile-about-header {
+		border-top-color: $dark;
 		h3 {
 			padding-bottom: rem-calc(15px);
 		}
@@ -150,8 +157,9 @@
 		position: absolute;
 		top: 22px;
 		right: 0;
-		padding: 3px 10px 3px 25px;
-		color: $primary-color;
+		padding: 3px 10px 3px 10px;
+		color: white;
+		background-color: $primary-color;
 		border-color: $primary-color;
 		span {
 			position: absolute;
@@ -159,7 +167,8 @@
 			left: 6px;
 		}
 		&:hover {
-			color: white;
+			color: $primary-color;
+			background-color: white;
 		}
 	}
 	.profile-manti-header {

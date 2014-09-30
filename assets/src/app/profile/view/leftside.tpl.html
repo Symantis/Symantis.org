@@ -9,6 +9,28 @@
 </header>
 <header class="profile-left-options left-header">
     <ul>
+        <li class="profile-connections">
+            <a title="View Connection Statistics" dropdown-toggle="#connections-table">
+                <div class="icon-2way icon"></div>
+                <h3>Connections <span>369</span></h3> 
+            </a>
+        </li>
+        <li class="profile-connections-tab">
+            <table id="connections-table" class="connections-table">
+                <tr>
+                    <td><a >Incoming Connections</a></td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td><a >Out-going Connections</a></td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td><a >Two-way Connections</a></td>
+                    <td>123</td>
+                </tr>
+            </table>
+        </li>
         <li class="profile-option">
             <a ui-sref="profile.view.connect" title="Connect with {{ user.firstName }}">
                 <h3>Connect with User</h3>
@@ -23,7 +45,7 @@
         </li>
         <li class="profile-option">
             <a ui-sref="profile.view.invite" title="Invite {{ user.firstName }} to work with you">
-                <h3>Invite to Manti</h3>
+                <h3>Invite to Project</h3>
                 <div class="icon-plus icon"></div>
             </a>
         </li>

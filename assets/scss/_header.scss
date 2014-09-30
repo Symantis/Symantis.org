@@ -249,9 +249,9 @@
 			}
 			.settings-dropdown-container {
 				position: absolute;
-				z-index: 1000;
+				z-index: 999;
 				//overflow: hidden;
-				top: 54px !important;
+				top: 55px !important;
 				right: -4px !important;
 				left: auto !important;
 				width: rem-calc(150px);
