@@ -109,6 +109,11 @@
 					a {
 						height: auto;
 					}
+					tr {
+						td {
+							font-size: rem-calc(12px);
+						}
+					}
 				}
 				.connections-table:after, .connections-table:before {
 					bottom: 100%;
