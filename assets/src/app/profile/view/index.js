@@ -5,12 +5,13 @@ angular.module( 'symantis.profile.view', [
 	
 })
 
-.controller( 'ProfileViewCtrl', function ProfileViewController($scope, titleService, $state, $stateParams, user) {
+.controller( 'ProfileViewCtrl', function ProfileViewController($scope, user, titleService, $state, $stateParams) {
 	
 	
 	$scope.user = user;
-	titleService.setTitle($scope.user.firstName+'\'s' + ' Profile');
 	console.log(user);
+	titleService.setTitle($scope.user.firstName+'\'s' + ' Profile');
+	
 	/*
 	for(var i in $scope.users){
 		

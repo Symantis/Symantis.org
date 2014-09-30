@@ -70,10 +70,11 @@ angular.module( 'symantis.profile', [
 					templateUrl: 'profile/view/index.tpl.html',
 					resolve : {
 			            user : function(UserModel, $stateParams) {
-			                console.log($stateParams.handle);
-			                return UserModel.getOneByHandle($stateParams.handle);
+			                console.log($stateParams.id);
+			                return UserModel.getOne($stateParams.id);
 			            }
 		        	}
+		        	
 				},
 				"leftside@profile.view": {
 					controller: 'ProfileViewLeftsideCtrl',

@@ -32,7 +32,7 @@
                 <div class="connections-pic connections-{{ user.status }} generate-image" signature="{{ user.signature }}"></div>
                 <h2 class="connections-name">
                     <a 
-                        ui-sref="profile.view({ handle: user.handle })"
+                        ui-sref="profile.view({ id: user.id, handle: user.handle })"
                         title="View {{ user.firstName }}'s Profile"
                     >
                         {{ user.firstName + ' ' + user.lastName }}

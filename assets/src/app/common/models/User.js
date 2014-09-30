@@ -25,10 +25,15 @@ angular.module('models.user', ['lodash', 'services', 'ngSails',])
 
 
 	this.getOneByHandle = function(handle) {
+		
+		console.log(handle);
+
 		var deferred = $q.defer();
 		var url = utils.prepareUrl('user/handle/' + handle);
 
 		$sails.get(url, function(model) {
+			console.log("Getting User...");
+			//console.log(model);
 			return deferred.resolve(model);
 		});
 

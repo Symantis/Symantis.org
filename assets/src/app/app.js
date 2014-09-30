@@ -121,6 +121,7 @@ angular.module( 'symantis', [
 
 .run( function run ($rootScope, $sails, lodash) {
 	$rootScope.currentUser = window.currentUser;
+	$rootScope.user = {};
 	$rootScope.users = aUsers;
 	$rootScope.queries = aQueries;
 	$rootScope.articles = aArticles;

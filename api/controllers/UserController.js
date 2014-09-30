@@ -15,17 +15,18 @@ module.exports = {
 			res.json(model);
 		})
 		.fail(function(err) {
-			res.send(404);
+			res.serverError(err);
 		});
 	},
 
 	getOneByHandle: function(req, res) {
 		User.getOneHandle(req.param('handle'))
 		.spread(function(model) {
+			console.log(model);
 			res.json(model);
 		})
 		.fail(function(err) {
-			res.send(404);
+			res.serverError(err);
 		});
 	},
 
