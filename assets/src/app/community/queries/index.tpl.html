@@ -22,7 +22,7 @@
                 <li class="queries-sort"><a dropdown-toggle="#querie-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
             <div class="sub-nav-search">
-                <input class="sub-search-field" type="search" name="sub-search-field" placeholder="Search" />
+                <input class="sub-search-field" ng-model="query" type="search" name="sub-search-field" placeholder="Search" />
             </div>
             <ul class="queries-sub-nav-right" ng-show="currentUser">
                 <li class="queries-new"><a ui-sref="community.queries.new" title="New Query"><span class="icon-plus"></span></a></li>
@@ -40,7 +40,7 @@
         <!-- Section for main center content -->
         <div class="row" ui-view="queries">
             <div class="medium-12 columns queries-main-container">
-                <article ng-repeat="query in queries" class="querie-overview">
+                <article ng-repeat="query in queries | filter:query" class="animate-repeat querie-overview">
                     <div class="querie-overview-main">
                         <h3>
                             <a ui-sref="community.queries.view({id: query.id, title: query.clean() })">
