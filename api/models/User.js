@@ -86,13 +86,15 @@ module.exports = {
 
 	getOne: function(id) {
 		return User.findOne(id)
+		//.populate('connections')
 		.then(function (model) {
 			return [model];
 		});
 	},
 
-	getOneHandle: function(handle) {
+	getOneByHandle: function(handle) {
 		return User.findOne({ handle: handle })
+		//.populate('connections')
 		.then(function (model) {
 			return [model];
 		});

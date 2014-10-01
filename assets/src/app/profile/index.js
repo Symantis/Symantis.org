@@ -8,16 +8,19 @@ angular.module( 'symantis.profile', [
 .config(function config( $stateProvider ) {
 	$stateProvider
 		.state( 'profile', {
-			url: '/profile',
+			url: '/@',
+			resolve : {
+			    users : function(UserModel) {
+			        return UserModel.getAll();
+			    },
+			    user : function(){
+			    	return {};
+			    }
+		    },
 			views: {
 				"main": {
 					controller: 'ProfileCtrl',
 					templateUrl: 'profile/index.tpl.html',
-					resolve : {
-			            users : function(UserModel) {
-			                return UserModel.getAll();
-			            }
-		        	}
 				},
 				"sitenav": {
 					controller: 'SiteNavCtrl',
@@ -37,7 +40,43 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
-		.state( 'profile.connections', {
+		
+		.state('profile.view',{
+			url: ':handle',
+			resolve : {
+			    user : function($stateParams, UserModel) {
+			        return { handle: $stateParams.handle };
+			                //return UserModel.getOneByHandle($stateParams.handle);
+			    }
+		    },
+			views: {
+				"main@": {
+					controller: 'ProfileViewCtrl',
+					templateUrl: 'profile/view/index.tpl.html',
+					/*
+					resolve : {
+			            user : function(UserModel, $stateParams) {
+			                //console.log($stateParams.id);
+			               // var deferred = $q.defer();
+			                //console.log($stateParams.handle);
+			                return UserModel.getOneByHandle($stateParams.handle);
+			                
+			            }
+		        	}
+		        	*/
+		        	
+				},
+				"leftside@profile.view": {
+					controller: 'ProfileViewLeftsideCtrl',
+					templateUrl: 'profile/view/leftside.tpl.html'
+				},
+				"subheader@profile": {
+					controller: 'ProfileHeaderCtrl',
+                	templateUrl: 'profile/header.tpl.html'
+				}
+			}
+		})
+		.state( 'profile.view.connections', {
 			url: '/connections',
 			views: {
 				"main@": {
@@ -50,7 +89,7 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
-		.state( 'profile.manti', {
+		.state( 'profile.view.manti', {
 			url: '/manti',
 			views: {
 				"main@": {
@@ -63,7 +102,7 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
-		.state( 'profile.activity', {
+		.state( 'profile.view.activity', {
 			url: '/activity',
 			views: {
 				"main@": {
@@ -76,26 +115,7 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
-		.state('profile.view',{
-			url: '/:handle',
-			views: {
-				"main@": {
-					controller: 'ProfileViewCtrl',
-					templateUrl: 'profile/view/index.tpl.html',
-					resolve : {
-			            user : function(UserModel, $stateParams) {
-			                console.log($stateParams.id);
-			                return UserModel.getOne($stateParams.id);
-			            }
-		        	}
-		        	
-				},
-				"leftside@profile.view": {
-					controller: 'ProfileViewLeftsideCtrl',
-					templateUrl: 'profile/view/leftside.tpl.html'
-				}
-			}
-		})
+
 		.state('profile.view.message',{
 			url: '/message',
 			views: {
@@ -133,8 +153,8 @@ angular.module( 'symantis.profile', [
 
 	
 })
-.controller( 'ProfileHeaderCtrl', function ProfileHeaderController( $scope ) {
-
+.controller( 'ProfileHeaderCtrl', function ProfileHeaderController( $scope, user ) {
+	$scope.user = user;
 })
 .controller( 'ProfileLeftsideCtrl', function ProfileLeftsideController( $scope ) {
 

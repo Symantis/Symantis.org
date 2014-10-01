@@ -23,18 +23,30 @@ angular.module('models.user', ['lodash', 'services', 'ngSails',])
 		return deferred.promise;
 	};
 
-
+	/*
 	this.getOneByHandle = function(handle) {
 		
-		console.log(handle);
+		//console.log(handle);
 
 		var deferred = $q.defer();
 		var url = utils.prepareUrl('user/handle/' + handle);
-
+		//url = utils.prepareUrl('user/handle/Scottie');
 		$sails.get(url, function(model) {
-			console.log("Getting User...");
-			//console.log(model);
+			//console.log("Getting User...");
 			return deferred.resolve(model);
+		});
+
+		return deferred.promise;
+	};
+	*/
+
+
+	this.getOneByHandle = function(handle) {
+		var deferred = $q.defer();
+		var url = utils.prepareUrl('user/handle/'+handle);
+
+		$sails.get(url, function(models) {
+			return deferred.resolve(models);
 		});
 
 		return deferred.promise;

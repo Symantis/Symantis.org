@@ -136,7 +136,7 @@ module.exports.routes = {
     action: 'index'
   },
 
-  //Handle "/community" queries "Community Section, News, Queries"
+  //Handle "/profile" queries
   'get /profile': {
     controller: 'HomeController',
     action: 'index'
@@ -145,6 +145,28 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'index'
   },
+  'get /@*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /@:handle': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /@:handle/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /:org@:handle': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /:org@:handle/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
+
 
   //Handle "/help" queries "Help Section"
   'get /help': {
@@ -186,8 +208,6 @@ module.exports.routes = {
     action: 'index'
   },
 
-  
-  
   //Handle "/creator" queries
   'get /creator': {
     controller: 'HomeController',

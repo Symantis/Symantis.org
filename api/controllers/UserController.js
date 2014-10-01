@@ -20,14 +20,17 @@ module.exports = {
 	},
 
 	getOneByHandle: function(req, res) {
-		User.getOneHandle(req.param('handle'))
+
+		User.getOneByHandle(req.param('handle'))
 		.spread(function(model) {
-			console.log(model);
 			res.json(model);
+
 		})
 		.fail(function(err) {
+			//res.send(404);
 			res.serverError(err);
 		});
+
 	},
 
 	create: function (req, res) {
@@ -103,8 +106,6 @@ module.exports = {
 	autoCompleteTags: function (req, res) {
 		
 		var tag = req.param('tag');
-
-
 
 		var tags = [
 			'Designer',

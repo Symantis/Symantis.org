@@ -1,15 +1,15 @@
 <section class="top-nav-left medium-3 large-2 large-offset-1 columns">
 	<!-- needs to be a link to the current users profile -->
 	<a 
-		ui-sref="profile"
+		ui-sref="profile.view"
 	>
-	<span>@userHandle</span></a>
+	<span>@{{ user.handle }}</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a 
-		ui-sref="profile.connections" 
+		ui-sref="profile.view.connections" 
 		ui-sref-active="active"
-		ng-class="{active: $state.includes('profile.connections')}"
+		ng-class="{active: $state.includes('profile.view.connections')}"
 	>
 		<span>Connections</span>
 	</a>
@@ -17,18 +17,18 @@
 <section class="top-nav-mid text-center medium-2 large-1 columns">
 	<!-- Section for the user to browse profiles, could be suggested profiles -->
 	<a 
-		ui-sref="profile.manti" 
+		ui-sref="profile.view.manti" 
 		ui-sref-active="active" 
-		ng-class="{active: $state.includes('profile.manti')}"
+		ng-class="{active: $state.includes('profile.view.manti')}"
 	>
 		<span>Manti</span>
 	</a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a 
-		ui-sref="profile.activity" 
+		ui-sref="profile.view.activity" 
 		ui-sref-active="active" 
-		ng-class="{active: $state.includes('profile.activity')}"
+		ng-class="{active: $state.includes('profile.view.activity')}"
 	>
 		<span>Activity</span>
 	</a>
