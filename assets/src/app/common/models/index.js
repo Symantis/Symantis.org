@@ -1,4 +1,5 @@
 angular.module('models', [
 	'models.message',
-	'models.user'
+	'models.user',
+	'models.system'
 ]);

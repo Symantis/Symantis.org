@@ -40,7 +40,7 @@
             <div class="gutter-sizer"></div>
             <div 
                 masonry-tile 
-                ng-repeat="board in opportunities" 
+                ng-repeat="commit in commits" 
                 class="tile board-pod-wrap"
                 ng-init="pod.active = true"
                 ng-class="{deactivate: !pod.active}"
@@ -49,16 +49,27 @@
                 <div class="board-pod">
                     <section class="pod-header">
                         <div 
-                            class="pod-user-pic generate-image" 
-                            signature="{{ board.author.signature }}"
+                            class="pod-user-pic"
+                            
                         >
+                            <img ng-src="{{ commit.author.avatar_url }}" />
                         </div>
-                        <p><a id="rc-user">{{board.author.firstName }} {{board.author.lastName }}</a><br /><span>{{ board.date | date }}</span></p>
+                        <p>
+                            <a 
+                                href="{{ commit.author.html_url }}" id="rc-user"
+                            >
+                                {{commit.author.login }}
+                            </a>
+                            <br /><span>{{ commit.commit.author.date | date }}</span>
+                        </p>
                     </section>
                     <section class="pod-body">
                         <p class="pod-description rc-description">
-                            {{ board.description }}
+                            {{ commit.commit.message }}
+
+
                         </p>
+                        <div>{{ commit.commit.comment_count }} Comments</div>
                     </section>
                 </div>
 

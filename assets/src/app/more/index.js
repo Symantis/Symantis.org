@@ -68,7 +68,12 @@ angular.module( 'symantis.more', [
 			views: {
 				"main@": {
 					controller: 'ContributorsCtrl',
-					templateUrl: 'more/contributors/index.tpl.html'
+					templateUrl: 'more/contributors/index.tpl.html',
+					resolve : {
+			            commits : function(SystemModel) {
+			                return SystemModel.getRecentCommits();
+			            }
+		        	}
 				},
 				"leftside@more.contributors": {
 					controller: 'ContributorsLeftsideCtrl',

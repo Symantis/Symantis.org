@@ -5,8 +5,11 @@ angular.module( 'symantis.more.contributors', [
 	
 })
 
-.controller( 'ContributorsCtrl', function ContributorsController( $scope, titleService ) {
+.controller( 'ContributorsCtrl', function ContributorsController( $scope, titleService, commits ) {
 	titleService.setTitle('Contributors');
+
+	$scope.commits = commits;
+
 })
 .controller( 'ContributorsHeaderCtrl', function ContributorsHeaderController( $scope, titleService ) {
 	//titleService.setTitle('About');

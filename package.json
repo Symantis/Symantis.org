@@ -45,6 +45,7 @@
   "author": "Scott Wyatt",
   "license": "MIT",
   "devDependencies": {
+    "github": "^0.2.2",
     "grunt-contrib-compass": "^0.9.0"
   }
 }

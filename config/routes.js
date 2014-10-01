@@ -44,6 +44,7 @@ module.exports.routes = {
   // Custom routes here...
     //**User Autocompletes
     'get /api/tags/:tag': 'UserController.autoCompleteTags',
+    'get /api/system/commits': 'UserController.getRecentCommits',
 
     /**
      * User routes

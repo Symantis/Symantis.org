@@ -114,5 +114,27 @@ module.exports = {
 		];
 
 		res.send(tags);
+	},
+	getRecentCommits: function (req, res) {
+
+		var github = new sails.GitHubApi({
+	    	// required
+	    	version: "3.0.0",
+	    	// optional
+	    	timeout: 5000
+		});
+
+		github.repos.getCommits({
+		    user: "Symantis",
+		    repo: "Symantis.org",
+		    per_page: "20"
+
+		}, function(err, data) {
+		    //console.log(data);
+
+		    res.json(data);
+		});
+
 	}
+
 };

@@ -11,6 +11,8 @@
 module.exports.bootstrap = function (cb) {
 
   	sails.Nodemailer = require('nodemailer');
+  	sails.GitHubApi = require("github");
+
 	/*
 	var transporter = nodemailer.createTransport();
 	transporter.sendMail({
