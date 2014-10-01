@@ -20,6 +20,7 @@ angular.module( 'symantis', [
 	'masonry',
 	'ngTagsInput',
 	'pascalprecht.github-adapter',
+	'angular-markdown',
 	
 	'symantis.global.modals',
 

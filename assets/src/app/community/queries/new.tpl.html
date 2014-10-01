@@ -1,1 +1,26 @@
-New Query
+
+	<div class="small-12 columns">
+		<form name="newQueryForm">
+			<input 
+				type="text" 
+				name="title"
+				placeholder="Query Title"
+				ng-model="newQuery.title"
+			>
+			<markdown extensions="github, table">
+# Example
+
+This is an **example**. Markdown goes `here`.
+
+## Table
+
+| Col 1   | Col 2                                              |
+|======== |====================================================|
+|**bold** | ![Valid XHTML] (http://w3.org/Icons/valid-xhtml10) |
+| Plain   | Value
+        </markdown>
+			<tags-input ng-model="newQuery.tags">
+	            <auto-complete source="loadTags($query)"></auto-complete>
+	        </tags-input>
+        </form>
+	</div>

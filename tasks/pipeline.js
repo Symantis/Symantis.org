@@ -54,6 +54,11 @@ var jsFilesToInject = [
   //'bower_components/angular-masonry/angular-masonry.js',
   'bower_components/ng-tags-input/ng-tags-input.js',
   'bower_components/angular-github-adapter/angular-github-adapter.js',
+  'bower_components/showdown/src/showdown.js',
+  'bower_components/showdown/src/extensions/github.js',
+  'bower_components/showdown/src/extensions/table.js',
+  'bower_components/angular-markdown/angular.markdown.js',
+
   //'bower_components/jquery/dist/jquery.min.js',
   //'bower_components/foundation/js/foundation.min.js',
 
