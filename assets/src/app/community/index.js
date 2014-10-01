@@ -77,6 +77,15 @@ angular.module( 'symantis.community', [
 				}
 			}
 		})
+		.state( 'community.queries.new', {
+			url: '/new',
+			views: {
+				"queries@community.queries": {
+					controller: 'QueriesNewCtrl',
+					templateUrl: 'community/queries/new.tpl.html'
+				}
+			}
+		})
 		.state( 'community.board', {
 			url: '/board',
 			views: {
@@ -96,6 +105,15 @@ angular.module( 'symantis.community', [
 				"board@community.board": {
 					controller: 'BoardViewCtrl',
 					templateUrl: 'community/board/view.tpl.html'
+				}
+			}
+		})
+		.state( 'community.board.new', {
+			url: '/new',
+			views: {
+				"board@community.board": {
+					controller: 'BoardNewCtrl',
+					templateUrl: 'community/board/new.tpl.html'
 				}
 			}
 		})

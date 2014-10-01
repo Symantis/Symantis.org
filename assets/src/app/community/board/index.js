@@ -32,6 +32,12 @@ angular.module( 'symantis.community.board', [
 	titleService.setTitle('Opportunities: ' + $scope.board.title);
 
 })
+.controller( 'BoardNewCtrl', function BoardNewController( $scope, titleService ) {
+
+	titleService.setTitle('New Opportunity');
+
+	
+})
 .controller( 'CommunityBoardLeftsideCtrl', function CommunityBoardLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 });

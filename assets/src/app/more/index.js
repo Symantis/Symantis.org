@@ -74,15 +74,25 @@ angular.module( 'symantis.more', [
 				"board@more.contributors":{
 					controller: 'ContributorsBoardCtrl',
 					templateUrl: 'more/contributors/board.tpl.html',
-					/*
+					
 					resolve : {
-			            commits : function(SystemModel) {
+			            commits : function(SystemModel, $q) {
+			            	var deferred = $q.defer();
+
+			            	/*
 			                return SystemModel.getRecentCommits().then(function (data) {
                    					return data;
                				});
+							*/
+							/*
+							SystemModel.getRecentCommits().then(function (data) {
+                   				deferred.resolve(data);
+                   			});
+							*/
+							//return deferred.promise;
 			            }
 		        	}
-		        	*/
+		        	
 				},
 				"leftside@more.contributors": {
 					controller: 'ContributorsLeftsideCtrl',

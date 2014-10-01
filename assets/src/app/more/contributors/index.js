@@ -9,11 +9,11 @@ angular.module( 'symantis.more.contributors', [
 	titleService.setTitle('Contributors');
 
 })
-.controller( 'ContributorsBoardCtrl', function ContributorsBoardController( $scope, SystemModel) {
+.controller( 'ContributorsBoardCtrl', function ContributorsBoardController( $scope, SystemModel, commits) {
 
 	$scope.commits = {}; 
 	$scope.loading = true;
-	
+
 	SystemModel.getRecentCommits().then(function(data){
 		$scope.loading = false;
 		$scope.commits = data;

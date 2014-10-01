@@ -34,6 +34,12 @@ angular.module( 'symantis.community.queries', [
 
 	
 })
+.controller( 'QueriesNewCtrl', function QueriesNewController( $scope, titleService ) {
+
+	titleService.setTitle('New Query');
+
+	
+})
 .controller( 'CommunityQueriesLeftsideCtrl', function CommunityQueriesLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 });
