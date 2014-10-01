@@ -140,8 +140,10 @@
 			float: left;
 			text-align: left;
 			&.connections-sort {
+				@include no-highlight;
 				a {
 					color: $dark;
+					@include no-highlight;
 					.icon {
 						padding-left: 4px;
 						position: relative;

@@ -72,7 +72,9 @@
 			float: left;
 			text-align: left;
 			&.queries-sort {
+				@include no-highlight;
 				a {
+					@include no-highlight;
 					color: $dark;
 					.icon {
 						padding-left: 4px;
@@ -364,6 +366,11 @@
 	.comments-head {
 		margin-bottom: rem-calc(10px);
 		position: relative;
+		p {
+			a {
+				@include no-highlight;
+			}
+		}
 	}
 	.querie-response-sort {
 		top: 85px !important;
@@ -371,7 +378,7 @@
 		right: 0 !important;
 	}
 	.querie-response-sort:after, .querie-response-sort:before {
-		left: 100px;
+		left: 120px;
 	}
 	.comment {
 		padding: rem-calc(10px);

@@ -285,6 +285,7 @@
 	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	@include no-highlight;
 	.sort-menu {
 		list-style: none;
 		float: left;

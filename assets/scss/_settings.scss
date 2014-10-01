@@ -90,4 +90,9 @@ $reveal-close-weight: light;
 	-moz-box-shadow:    2px 3px 15px 0px rgba(0, 0, 0, $opac);
 	box-shadow:         2px 3px 15px 0px rgba(0, 0, 0, $opac);
 }
+@mixin no-highlight {
+	-webkit-user-select: none;      
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
 

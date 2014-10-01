@@ -65,13 +65,14 @@
 				padding-right: 1.875rem;
 				@include font-bold(rem-calc(13px));
 				color: $primary-color;
-				
+				@include no-highlight;
 			}
 			.top-nav-mid {
 				//background-color: white;
 				padding-top: rem-calc(16px);
 				padding-bottom: rem-calc(15px);
 				float:left;
+				@include no-highlight;
 				a {
 					color: $gray;
 					font-size: rem-calc(13px);
@@ -102,11 +103,13 @@
 				padding-right: 0;
 				//background-color: white;
 				text-align: right;
+				@include no-highlight;
 				.top-nav-userOnline {
 					margin: 0;
 					float: right;
 					max-width: rem-calc(200px);
 					list-style: none;
+					@include no-highlight;
 					li {
 						float: left;
 					}
@@ -125,6 +128,7 @@
 						}
 						a {
 							color: $primary-color;
+							@include no-highlight;
 							&:hover {
 								color: darken($primary-color, 10%);
 							}
@@ -160,6 +164,7 @@
 						padding-top: rem-calc(5px);
 						margin-left: rem-calc(10px);
 						height: rem-calc(19px);
+						@include no-highlight;
 						.tooltip {
 							left: auto !important;
 							right: 0;
@@ -178,6 +183,7 @@
 						padding-top: rem-calc(4px);
 						margin-left: rem-calc(10px);
 						height: rem-calc(19px);
+						@include no-highlight;
 						.tooltip {
 							margin-top: 7px;
 							left: auto !important;
@@ -221,6 +227,7 @@
 					padding-bottom: rem-calc(2px);
 					a {
 						display: inline;
+						@include no-highlight;
 						&:hover {
 							color: black;
 						}

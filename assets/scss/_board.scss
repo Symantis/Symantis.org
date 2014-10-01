@@ -76,8 +76,10 @@
 			float: left;
 			text-align: left;
 			&.board-sort {
+				@include no-highlight;
 				padding-top: 2px;
 				a {
+					@include no-highlight;
 					color: $dark;
 					.icon {
 						padding-left: 4px;
