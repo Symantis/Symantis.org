@@ -6,6 +6,7 @@
 	value=""
 	ng-model="registerData.email"
 	required
+	ng-enter="nextStep(registerForm.email, 'username')"
 >
 <div 
 	ng-hide="registerForm.email.$error.required || registerForm.email.$error.email"

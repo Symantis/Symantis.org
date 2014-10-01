@@ -4,6 +4,7 @@ angular.module( 'symantis.register', [
 
 
 .config(function config( $stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.when('/register', '/register/email');
 
 	$stateProvider
 		.state( 'register', {
@@ -93,7 +94,7 @@ angular.module( 'symantis.register', [
 
 
 
-.controller( 'RegisterCtrl', function RegisterController( $scope, $http, titleService ) {
+.controller( 'RegisterCtrl', function RegisterController( $scope, $state, titleService ) {
 	titleService.setTitle('Register');
 	
 	$scope.registerData = {
@@ -104,6 +105,13 @@ angular.module( 'symantis.register', [
 		firstName: '',
 		lastName: ''
 	};
+
+	$scope.nextStep = function(field, state){
+		console.log(field);
+		if(field.$valid){
+			$state.go('register.'+state);
+		}
+	}
 
 })
 .controller( 'RegisterHeaderCtrl', function RegisterHeaderController( $scope ) {

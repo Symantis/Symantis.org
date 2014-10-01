@@ -6,6 +6,7 @@
 	value=""
 	ng-model="registerData.lastName"
 	required
+	ng-enter="nextStep(registerForm.lastName, 'confirm')"
 >
 <div
 	ng-hide="registerForm.lastName.$error.required"

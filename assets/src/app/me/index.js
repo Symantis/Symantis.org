@@ -6,7 +6,10 @@ angular.module( 'symantis.me', [
 	'symantis.me.sykit'
 ])
 
-.config(function config( $stateProvider ) {
+.config(function config($stateProvider, $urlRouterProvider ) {
+	
+	//$urlRouterProvider.when('/*me', '/login');	
+
 	$stateProvider
 		.state( 'me', {
 			url: '/me',
