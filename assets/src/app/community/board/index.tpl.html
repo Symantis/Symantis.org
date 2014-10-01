@@ -22,7 +22,7 @@
 
         <header class="board-sub-nav">
             <ul class="board-sub-nav-left">
-                <li class="board-sort"><a >Sort By <span class="icon-vote-down icon"></span></a></li>
+                <li class="board-sort"><a dropdown-toggle="#board-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
             <div class="sub-nav-search">
                 <input class="sub-search-field" type="search" name="sub-search-field" placeholder="Search" />
@@ -32,6 +32,14 @@
                 <li class="board-myPosts"><a title="View your Posts">My Posts</a></li>
             </ul>
         </header>
+        <div class="sort-container" id="board-sort-menu">
+            <ul class="sort-menu">
+                <li><a class="active">Most Recent <span class="icon-check icon"></span></a></li>
+                <li><a >Most Popular <span class="icon-check icon"></span></a></li>
+                <li><a >Viewed <span class="icon-check icon"></span></a></li>
+                <li ng-show="currentUser"><a >From Connections <span class="icon-check icon"></span></a></li>
+            </ul>
+        </div>
 
         <div 
             masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile", "gutter": ".gutter-sizer" }' 

@@ -33,6 +33,7 @@
 	border-bottom: rem-calc(1px) $dark solid;
 	float: left;
 	padding-bottom: rem-calc(20px);
+	position: relative;
 	ul {
 		position: relative;
 		margin: 0;
@@ -112,8 +113,7 @@
 		}
 	}
 }
-.queries-main-container {
-}
+
 .querie-overview {
 	position: relative;
 	float: left;
@@ -363,6 +363,15 @@
 	}
 	.comments-head {
 		margin-bottom: rem-calc(10px);
+		position: relative;
+	}
+	.querie-response-sort {
+		top: 85px !important;
+		left: auto !important;
+		right: 0 !important;
+	}
+	.querie-response-sort:after, .querie-response-sort:before {
+		left: 100px;
 	}
 	.comment {
 		padding: rem-calc(10px);

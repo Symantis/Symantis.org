@@ -72,9 +72,17 @@
 			</span>
 		</h4>
 		<p>
-			<a >Sort by <span class="icon-vote-down icon"></span></a>
+			<a dropdown-toggle="#querie-response-sort-menu">Sort by <span class="icon-vote-down icon"></span></a>
 		</p>
+		<div class="sort-container querie-response-sort" id="querie-response-sort-menu">
+	        <ul class="sort-menu">
+	            <li><a class="active">Most Recent <span class="icon-check icon"></span></a></li>
+	            <li><a >Most Votes <span class="icon-check icon"></span></a></li>
+	            <li><a >Best Anwser <span class="icon-check icon"></span></a></li>
+	        </ul>
+	    </div>
 	</div>
+
 	<div 
 		class="comment" 
 		ng-repeat="response in query.responses | orderBy : 'votes' : true "

@@ -255,7 +255,7 @@
 		border-radius: 5px;
 		-webkit-box-shadow: none;
 		box-shadow: none;
-		padding: 5px 6px 5px 6px;
+		padding: 6px 6px 8px 6px;
 		margin: 0;
 		@include font-regular(rem-calc(12px));
 		height: 27px;
@@ -270,6 +270,99 @@
 		}
 	}
 }
+
+.sort-container {
+	position: absolute;
+	z-index: 999;
+	top: 68px !important;
+	left: 12px !important;
+	right: auto !important;
+	width: 150px;
+	background-color: white;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border: rem-calc(1px) $dark solid;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	.sort-menu {
+		list-style: none;
+		float: left;
+		position: relative;
+		margin: 0;
+		padding: 8px 8px 4px 8px;
+		li {
+			width: 100%;
+			float: left;
+			border-bottom: rem-calc(1px) $light solid;
+			text-align: left;
+			@include transition(100ms);
+			padding: 5px 5px 5px 5px;
+			//border-radius: 3px;
+			a {
+				@include font-regular(rem-calc(12px));
+				color: $dark;
+				padding-top: 3px;
+				padding-bottom: 3px;
+				padding-left: 17px;
+				padding-right: 10px;
+				width: 148px;
+				float: left;
+				margin-left: -13px;
+				margin-right: -13px;
+				@include transition(100ms);
+				.icon {
+					float: right;
+					position: relative;
+					font-size: rem-calc(14px);
+					margin-bottom: -5px;
+					display: none;
+				}
+				&:hover {
+					background-color: $primary-color;
+					color: white;
+				}
+			}
+			.active {
+				.icon {
+					display: block;
+				}
+			}
+			/*&:hover {
+				background-color: $primary-color;
+				a {
+					color: white;
+				}
+			}*/
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}
+.sort-container:after, .sort-container:before {
+	bottom: 100%;
+	left: 25px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.sort-container:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: white;
+	border-width: 7px;
+	margin-left: -7px;
+}
+.sort-container:before {
+	border-color: rgba(46, 48, 44, 0);
+	border-bottom-color: $dark;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
 #search-category-1 {
 	padding-top: rem-calc(10px);
 }

@@ -19,7 +19,7 @@
     	<!-- Section for main center header -->
         <header class="queries-sub-nav">
             <ul class="queries-sub-nav-left">
-                <li class="queries-sort"><a >Sort By <span class="icon-vote-down icon"></span></a></li>
+                <li class="queries-sort"><a dropdown-toggle="#querie-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
             <div class="sub-nav-search">
                 <input class="sub-search-field" type="search" name="sub-search-field" placeholder="Search" />
@@ -29,6 +29,14 @@
                 <li class="queries-myQueries"><a title="View your Queries">My Queries</a></li>
             </ul>
         </header>
+        <div class="sort-container" id="querie-sort-menu">
+            <ul class="sort-menu">
+                <li><a >Most Recent <span class="icon-check icon"></span></a></li>
+                <li><a class="active">Most Viewed <span class="icon-check icon"></span></a></li>
+                <li><a >Answered <span class="icon-check icon"></span></a></li>
+                <li><a >Unanswered <span class="icon-check icon"></span></a></li>
+            </ul>
+        </div>
         <!-- Section for main center content -->
         <div class="row" ui-view="queries">
             <div class="medium-12 columns queries-main-container">

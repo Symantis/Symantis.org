@@ -19,7 +19,7 @@
 
         <header class="connections-sub-nav">
             <ul class="connections-sub-nav-left">
-                <li class="connections-sort"><a >Sort By <span class="icon-vote-down icon"></span></a></li>
+                <li class="connections-sort"><a dropdown-toggle="#connections-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
             <div class="sub-nav-search">
                 <input class="sub-search-field" type="search" name="sub-search-field" placeholder="Search" />
@@ -28,6 +28,14 @@
                 <li class="connections-new"><a title="New Connection" ng-click="searchModal()"><span class="icon-plus"></span></a></li>
             </ul>
         </header>
+        <div class="sort-container" id="connections-sort-menu">
+            <ul class="sort-menu">
+                <li><a class="active">Most Recent <span class="icon-check icon"></span></a></li>
+                <li><a >Most Viewed <span class="icon-check icon"></span></a></li>
+                <li><a >Answered <span class="icon-check icon"></span></a></li>
+                <li><a >Unanswered <span class="icon-check icon"></span></a></li>
+            </ul>
+        </div>
 
         <div class="row connections-container">
             <article 
