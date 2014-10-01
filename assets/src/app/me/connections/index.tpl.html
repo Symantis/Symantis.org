@@ -13,23 +13,19 @@
     <section class="medium-3 large-2 columns large-offset-1 main-left connections-left">
         <div class="wrapper" ui-view="leftside">
 
-        <!-- Section for main left header -->
         </div>
-    	
     </section>
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center connections-center">
 
         <header class="connections-sub-nav">
             <ul class="connections-sub-nav-left">
-                <li class="connections-all"><a class="active">View All</a></li>
-                <li class="connections-recent"><a >One-Way</a></li>
-                <li class="connections-popular"><a >Two-Way</a></li>
-                
+                <li class="connections-sort"><a >Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
+            <div class="sub-nav-search">
+                <input class="sub-search-field" type="search" name="sub-search-field" placeholder="Search" />
+            </div>
             <ul class="connections-sub-nav-right" ng-show="currentUser">
-                <!-- <li class="queries-new"><a title="New Query">Find New</a></li> -->
-                <li class="connections-search"><a >Search</a></li>
-                <li><a title="Find New Connections">Browse</a></li>
+                <li class="connections-new"><a title="New Connection" ng-click="searchModal()"><span class="icon-plus"></span></a></li>
             </ul>
         </header>
 

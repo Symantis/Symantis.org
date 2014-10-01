@@ -75,6 +75,17 @@
 		li {
 			float: left;
 			text-align: left;
+			&.board-sort {
+				padding-top: 2px;
+				a {
+					color: $dark;
+					.icon {
+						padding-left: 4px;
+						position: relative;
+						bottom: -.1rem;
+					}
+				}
+			}
 		}
 	}
 	.board-sub-nav-right {
@@ -83,17 +94,30 @@
 			float: right;
 			text-align: right;
 			&:first-child {
-				width: rem-calc(60px);
+				width: auto;
 			}
 			&.board-new {
 				a {
-					padding-right: 6px;
-					padding-left: 4px;
+					float: right;
+					width: 26px;
+					height: 26px;
+					padding: 4px 6px 4px 6px;
+					margin-right: 6px;
+					margin-left: 20px;
+					border: 1px darken($light, 10%) solid;
+					border-radius: 50%;
+					span {
+						padding: 0;
+						//font-size: rem-calc(14px);
+					}
+					&:hover {
+						border-color: black;
+					}
 				}
 			}
 		}
 	}
-	&:after{
+	&:after{ 
 		clear:both;
 		display:block;
 		content:"";

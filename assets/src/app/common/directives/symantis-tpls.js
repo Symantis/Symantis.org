@@ -401,11 +401,11 @@ angular.module('sy.templates.mainleft',['duScroll'])
             angular.element(wind).bind("scroll", function() {
                 var lockTop = angular.element($document[0].querySelector('.top-nav-container'));
                 var scrollTop = wind.scrollTop();
-                var offset = scrollTop - 108;
+                var offset = scrollTop - 107;
                 //console.log(offset);
                 //console.log(lockTop[0].offsetHeight);
 
-                if(scrollTop > 108){
+                if(scrollTop > 107){
                     //console.log('lock');
                     element.css('margin-top' , offset+'px');
                 }else{

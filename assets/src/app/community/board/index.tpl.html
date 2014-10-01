@@ -22,12 +22,13 @@
 
         <header class="board-sub-nav">
             <ul class="board-sub-nav-left">
-                <li class="board-recent"><a title="Order by Most Recent" class="active">Recent</a></li>
-                <li class="board-popular"><a title="Order by Most Popular">Popular</a></li>
-                <li class="board-search"><a title="Search for Opportunities">Search</a></li>
+                <li class="board-sort"><a >Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
+            <div class="sub-nav-search">
+                <input class="sub-search-field" type="search" name="sub-search-field" placeholder="Search" />
+            </div>
             <ul class="board-sub-nav-right" ng-show="currentUser">
-                <li class="board-new"><a title="New Opportunity">New</a></li>
+                <li class="board-new"><a title="New Opportunity"><span class="icon-plus"></span></a></li>
                 <li class="board-myPosts"><a title="View your Posts">My Posts</a></li>
             </ul>
         </header>

@@ -121,7 +121,7 @@
 			a {
 				@include font-regular(rem-calc(12px));
 				width: 100%;
-				color: darken($light, 10%);
+				color: $gray;
 				//display: block;
 				padding-bottom: rem-calc(25px);
 				padding-top: rem-calc(25px);
@@ -129,11 +129,6 @@
 				&:hover {
 					//border-top: 3px $dark solid;
 					//padding-top: rem-calc(23px);
-					color: black;
-				}
-				&.active {
-					border-top: 3px $dark solid;
-					padding-top: rem-calc(23px);
 					color: black;
 				}
 			}
@@ -144,13 +139,46 @@
 		li {
 			float: left;
 			text-align: left;
+			&.connections-sort {
+				a {
+					color: $dark;
+					.icon {
+						padding-left: 4px;
+						position: relative;
+						bottom: -.1rem;
+					}
+				}
+			}
 		}
+		
 	}
 	.connections-sub-nav-right {
 		float: right;
 		li {
 			float: right;
 			text-align: right;
+			&:first-child {
+				width: auto;
+			}
+			&.connections-new {
+				a {
+					float: right;
+					width: 26px;
+					height: 26px;
+					padding: 4px 6px 4px 6px;
+					margin-right: 6px;
+					margin-left: 20px;
+					border: 1px $gray solid;
+					border-radius: 50%;
+					span {
+						padding: 0;
+						//font-size: rem-calc(14px);
+					}
+					&:hover {
+						border-color: black;
+					}
+				}
+			}
 		}
 	}
 }
