@@ -5,10 +5,18 @@ angular.module( 'symantis.more.contributors', [
 	
 })
 
-.controller( 'ContributorsCtrl', function ContributorsController( $scope, titleService, commits ) {
+.controller( 'ContributorsCtrl', function ContributorsController( $scope, titleService) {
 	titleService.setTitle('Contributors');
 
-	$scope.commits = commits;
+})
+.controller( 'ContributorsBoardCtrl', function ContributorsBoardController( $scope, SystemModel) {
+
+	$scope.commits = {}; 
+	$scope.loading = true;
+	SystemModel.getRecentCommits().then(function(data){
+		$scope.loading = false;
+		$scope.commits = data;
+	});
 
 })
 .controller( 'ContributorsHeaderCtrl', function ContributorsHeaderController( $scope, titleService ) {

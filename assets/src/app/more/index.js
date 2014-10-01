@@ -69,11 +69,20 @@ angular.module( 'symantis.more', [
 				"main@": {
 					controller: 'ContributorsCtrl',
 					templateUrl: 'more/contributors/index.tpl.html',
+					
+				},
+				"board@more.contributors":{
+					controller: 'ContributorsBoardCtrl',
+					templateUrl: 'more/contributors/board.tpl.html',
+					/*
 					resolve : {
 			            commits : function(SystemModel) {
-			                return SystemModel.getRecentCommits();
+			                return SystemModel.getRecentCommits().then(function (data) {
+                   					return data;
+               				});
 			            }
 		        	}
+		        	*/
 				},
 				"leftside@more.contributors": {
 					controller: 'ContributorsLeftsideCtrl',
