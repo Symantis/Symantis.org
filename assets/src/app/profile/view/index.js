@@ -11,8 +11,8 @@ angular.module( 'symantis.profile.view', [
 	$scope.user = user;
 	
 	UserModel.getOneByHandle($stateParams.handle).then(function(model){
-		$scope.user = model;
 		console.log($scope.user);
+		$scope.user = model;
 	});
 	
 
