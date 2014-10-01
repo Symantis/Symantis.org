@@ -13,6 +13,7 @@ angular.module( 'symantis.more.contributors', [
 
 	$scope.commits = {}; 
 	$scope.loading = true;
+	
 	SystemModel.getRecentCommits().then(function(data){
 		$scope.loading = false;
 		$scope.commits = data;
