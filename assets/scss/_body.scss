@@ -1,10 +1,7 @@
 body {
 	background-color: white;
 	//background-color: lighten($offWhite, 5%);
-}
-.container{
-	height:100%;
-	//position:relative;
+	height: 100%;
 }
 /* ----- Highlight color ------ */
 ::selection {
@@ -76,6 +73,7 @@ quote {
 	padding-top: rem-calc(20px);
 	min-width: 701px;
 	max-width: 2000px;
+	@include no-highlight;
 	//background-color: lighten($offWhite, 5%);
 	h1 {
 		text-align: left;
@@ -250,7 +248,52 @@ quote {
 	    margin-left: -8px;
 	}
 }
+
 [ui-view="main"]{
-	margin-bottom:100px;
+	padding-bottom: 80px;
+}
+.fluid-row {
+	display: block;
+}
+.container{
+	//height:100%;
+	min-height: 100%;
+	//float: left;
+	display: block;
+	position:relative;
+	margin-bottom: -80px;
+}
+.sitenav-push-inner {
+	height: 100%;
+}
+.footer {
+	border-top: 1px $light solid;
+	height: 80px;
+	display: block;
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	.footer-nav {
+		display: block;
+		list-style: none;
+		li {
+			line-height: 40px;
+			display: inline-block;
+			padding: 0 5px 0 5px;
+			@include font-regular(rem-calc(12px));
+			a {
+				color: $primary-color;
+				@include transition(100ms);
+				&:hover {
+					color: darken($primary-color, 15%);
+				}
+			}
+		}
+		&.right {
+			float: right;
+			padding-right: 80px;
+		}
+	}
 }
 
