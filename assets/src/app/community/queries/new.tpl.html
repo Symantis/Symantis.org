@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 	<div class="small-12 columns">
 		<form name="newQueryForm">
@@ -24,3 +25,49 @@ This is an **example**. Markdown goes `here`.
 	        </tags-input>
         </form>
 	</div>
+=======
+<div class="medium-12 columns new-query-page">
+	<h3>New Query as <a ui-sref="me">{{ currentUser.firstName }} {{ currentUser.lastName }}</a></h3>
+
+	<div class="new-query">
+		<form class="new-query-form">
+	        <div class="new-query-inner">
+	        	<div class="query-options">
+			        <ul>
+			        	<li class="query-options-edit">
+			        		<a title="Insert Text" class="selected">
+			        			<span class="text-icon">Aa</span>
+			        		</a>
+			        	</li>
+				        <li class="query-options-link">
+							<a title="Insert Link">
+			        			<span class="icon-link"></span>
+							</a>
+			        	</li>
+			        	<li class="query-options-image">
+			        		<a title="Insert Image">
+			        			<span class="icon-photo"></span>
+			        		</a>
+			        	</li>
+			        	<li class="query-options-code">
+			        		<a title="Insert Code Snippet">
+			        			<span class="icon-code-snippet"></span>
+			        		</a>
+			        	</li>
+			        </ul>
+			    </div>
+				<textarea name="new-query-input" placeholder="Whats your Query?"></textarea>
+			</div>
+			<tags-input class="new-query-tag" ng-model="currentUser.tags">
+	            <auto-complete source="loadTags($query)"></auto-complete>
+	        </tags-input>
+			<div class="new-query-post">
+				<p><a class="sy-button">Post</a></p>
+			</div>
+			<div class="new-query-preview">
+				<p><a class="sy-button">Preview</a></p>
+			</div>
+		</form>
+	</div>
+</div>
+>>>>>>> FETCH_HEAD

@@ -128,6 +128,21 @@ and (max-width : rem-calc(1024px)) {
 			right: -30px;
 		}
 	}
+	.footer {
+		.footer-nav {
+			padding-left: 0;
+			&.right {
+				padding-right: 40px;
+			}
+		}
+		.footer-logo {
+			width: 40px;
+			margin-left: 0;
+			.footer-mantis {
+				display: none;
+			}
+		}
+	}
 }
 
 // Desktops & Laptops & Above ----------- 

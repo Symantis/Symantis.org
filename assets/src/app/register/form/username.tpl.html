@@ -1,15 +1,18 @@
 <input
 	type="text"
 	id="inputUsername"
+	class="signup-input"
 	name="handle"
 	placeholder="Username"
 	value=""
+	force-focus="true"
 	ng-model="registerData.username"
 	required
 	ng-enter="nextStep(registerForm.handle, 'password')"
 >
 <div
 	ng-hide="registerForm.handle.$error.required"
+	class="signup-prompt"
 >
-	Press Enter to continue.
+	<p>Press Enter to continue.</P>
 </div>

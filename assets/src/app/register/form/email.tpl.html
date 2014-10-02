@@ -2,12 +2,17 @@
 	type="email" 
 	id="inputEmail" 
 	name="email" 
+	class="signup-input"
 	placeholder="Email" 
 	value=""
+	force-focus="true"
 	ng-model="registerData.email"
 	required
 	ng-enter="nextStep(registerForm.email, 'username')"
 >
 <div 
 	ng-hide="registerForm.email.$error.required || registerForm.email.$error.email"
->Press Enter to continue.</div>
+	class="signup-prompt"
+>
+	<p>Press Enter to continue.</P>
+</div>

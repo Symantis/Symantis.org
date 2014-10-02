@@ -109,3 +109,42 @@
 		}
 	}
 }
+.sy-donate {
+	margin-top: 40px;
+	position: relative;
+	float: left;
+	.row {
+		float: left;
+		width: 100%;
+		margin-left: 0;
+		.columns:first-child {
+			padding-left: 0;
+		}
+		.columns:last-child {
+			padding-right: 0;
+		}
+		.sy-donate-submit {
+			text-align: right;
+		}
+		&:last-child {
+			//padding-bottom: 40px;
+		}
+	}
+	.sy-button {
+		margin-bottom: 0;
+	}
+}
+.paypal-donate {
+	float: left;
+	position: relative;
+	width: 100%;
+	border-top: 1px $light solid;
+	padding-top: 40px;
+	margin-top: 40px;
+	h3 {
+		@include font-semi(rem-calc(14px));
+		float: left;
+		width: auto;
+		padding-right: 30px;
+	}
+}

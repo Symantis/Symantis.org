@@ -96,7 +96,7 @@ tags-input .input:focus {
   //border: none;
   background: none;
   border: 1px $gray solid;
-  border-radius: 6px;
+  border-radius: 3px;
 }
 tags-input .tags {
   -moz-appearance: textfield;
@@ -109,7 +109,6 @@ tags-input .tags {
   outline: none;
   background-color: white;
   border: 1px solid darkgray;
-  //box-shadow: 1px 1px 1px 0 lightgray inset;
   height: 100%;
 }
 tags-input .tags.focused {
@@ -132,7 +131,7 @@ tags-input .tags .tag-item {
   height: 26px;
   line-height: 25px;
   //border: 1px solid #acacac;
-  border-radius: 6px;
+  border-radius: 3px;
   background: $primary-color;
   color: white;
 }

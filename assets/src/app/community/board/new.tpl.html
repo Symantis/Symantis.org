@@ -1,1 +1,40 @@
-New Board
+<div class="new-opportunity-page">
+	<h3>New Opportunity by <a ui-sref="me">{{ currentUser.firstName }} {{ currentUser.lastName }}</a></h3>
+	<div class="new-opportunity">
+		<form class="new-opportunity-form">
+	        <div class="new-opportunity-inner">
+	        	<div class="opportunity-options">
+			        <ul>
+			        	<li class="opportunity-options-edit">
+			        		<a title="Insert Text" class="selected">
+			        			<span class="text-icon">Aa</span>
+			        		</a>
+			        	</li>
+				        <li class="opportunity-options-link">
+							<a title="Insert Link">
+			        			<span class="icon-link"></span>
+							</a>
+			        	</li>
+			        	<li class="opportunity-options-image">
+			        		<a title="Insert Image">
+			        			<span class="icon-photo"></span>
+			        		</a>
+			        	</li>
+			        	<li class="opportunity-options-code">
+			        		<a title="Insert Code Snippet">
+			        			<span class="icon-code-snippet"></span>
+			        		</a>
+			        	</li>
+			        </ul>
+			    </div>
+				<textarea name="new-opportunity-input" placeholder="Whats the Opportunity?"></textarea>
+			</div>
+			<div class="new-opportunity-post">
+				<p><a class="sy-button">Post</a></p>
+			</div>
+			<div class="new-opportunity-preview">
+				<p><a class="sy-button">Preview</a></p>
+			</div>
+		</form>
+	</div>
+</div>

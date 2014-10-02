@@ -63,3 +63,220 @@
 		}
 	}
 }
+
+/* ---- Register page ---- */
+
+.register-center {
+	width: 100%;
+	//display: table;
+	padding: 0;
+	margin: 0;
+	height: 360px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -220px;
+	&:before{
+		content: ""; 
+		display: table; 
+		clear: both;
+	}
+}
+.register-container {
+	width: 640px;
+	margin: 0 auto 0 auto;
+	h1 {
+		//text-align: center;
+		padding: 0 20px 20px 0;
+		border-bottom: 1px $gray solid
+	}
+	p.has-account {
+		//text-align: center;
+		width: 100%;
+		float: left;
+		color: darken($light, 10%);
+		margin-top: 110px;
+		a {
+			color: darken($light, 10%);
+			text-decoration: underline;
+			@include transition(100ms);
+			&:hover {
+				color: $dark;
+			}
+		}
+	}
+	.signup-nav {
+		list-style: none;
+		width: 100%;
+		position: relative;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		height: 90px;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		li {
+			display: inline-block;
+			position: relative;
+			text-align: center;
+			float: left;
+			width: 10%;
+			margin: 0;
+			padding: 0;
+			padding-top: 8px;
+			a {
+				color: $light;
+				@include transition(100ms);
+				span {
+					width: 100%;
+					text-align: center;
+					border: 1px $light solid;
+					border-radius: 50%;
+					//margin-bottom: 10px;
+					padding: 5px 10px;
+				}
+				p {
+					padding-top: 10px;
+					width: 100%;
+					text-align: center;
+					color: $light;
+				}
+				&:hover {
+					color: $dark;
+					span {
+						border-color: $dark;
+					}
+					p {
+						color: $dark;
+					}
+				}
+				&.active {
+					color: $dark;
+					span {
+						border-color: $dark;
+					}
+					p {
+						color: $dark;
+					}
+				}
+			}
+			
+			&.linker {
+				width: 4.5827%;
+				padding-top: 0;
+				border: none;
+			}
+			/*&:first-child {
+				border-left: 1px $light solid;
+			}
+			&:last-child {
+				border-right: 1px $light solid;
+				width: 12%;
+			}*/
+		}
+	}
+	.form-elements {
+		position: relative;
+		button::-moz-focus-inner,
+		input[type="reset"]::-moz-focus-inner,
+		input[type="button"]::-moz-focus-inner,
+		input[type="submit"]::-moz-focus-inner,
+		input[type="file"] > input[type="button"]::-moz-focus-inner {
+		    border: none;
+		}
+		.signup-input {
+			position: absolute;
+			top: 0;
+			height: 50px;
+			//padding: 5px 5px 5px 15px;
+			&::-webkit-input-placeholder { @include font-regular(rem-calc(30px)); color: $light; }
+			&:-moz-placeholder { @include font-regular(rem-calc(30px)); color: $light; opacity: 1; }
+			&::-moz-placeholder { @include font-regular(rem-calc(30px)); color: $light; opacity: 1; }
+			&:-ms-input-placeholder { @include font-regular(rem-calc(30px)); color: $light; }
+			background: rgba(255,255,255,0.0);
+			border: none;
+			border-color: inherit;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			@include font-regular(rem-calc(30px));
+			border-bottom: 1px $gray solid;
+			padding: 0 0 5px 0;
+			@include transition(200ms);
+			&:focus {
+				background: rgba(255,255,255,0.0);
+				outline: 0;
+				outline: none;
+				border-color: inherit;
+				//border-left: 2px outset $primary-color;
+				//padding-left: 15px;
+				border-bottom: 4px $primary-color solid;
+				@include transition(50ms);
+				color: $dark;
+			}
+		}
+		.signup-prompt {
+			position: absolute;
+			top: 60px;
+			width: 100%;
+			p {
+				@include font-regular(rem-calc(14px));
+				color: $primary-color !important;
+			}
+		}
+		.confirm-page {
+			width: 100%;
+			padding: 10px 0 15px 0;
+			border-top: 1px $light solid;
+			//border-bottom: 1px $light solid;
+			position: absolute;
+			top: -10px;
+		}
+		.signup-confirm {
+			float: left;
+			width: auto;
+			padding: 5px 0 15px 0;
+			border-bottom: 1px $light solid;
+			@include font-semi(rem-calc(14px));
+		}
+		.signup-confirm-items {
+			list-style: none;
+			float: left;
+			margin-top: 8px;
+			margin-left: 20px;
+			margin-bottom: 8px;
+			li {
+				@include font-regular(rem-calc(12px));
+				span {
+					color: $primary-color;
+				}
+			}
+		}
+		.signup-button {
+			position: absolute;
+			right: 0;
+			bottom: 10px;
+			width: 200px;
+			@include font-semi(rem-calc(14px));
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border: 2px $primary-color solid;
+			color: $primary-color;
+			&:hover {
+				color: white;
+			}
+			&:active {
+				background-color: $primary-color;
+				color: white;
+			}
+			&:focus {
+				background-color: $primary-color;
+				color: white;
+			}
+		}
+	}
+}
+
+
+
+
+

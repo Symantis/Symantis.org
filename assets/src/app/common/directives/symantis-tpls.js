@@ -37,6 +37,11 @@ angular.module('sy.templates.inputs', [])
                     scope.$eval(attrs.ngEnter, {'event': event});
                 });
                 event.preventDefault();
+            } else if(event.which === 9){
+                scope.$apply(function(){
+                    scope.$eval(attrs.ngEnter, {'event': event});
+                });
+                event.preventDefault();
             }
         });
     };
@@ -439,13 +444,16 @@ angular.module('sy.templates.userimage', [])
 
             var w = element[0].offsetWidth;
             var h = element[0].offsetHeight;
+            var red = "#C74D3D";
+            var blue = "#3D8BC7";
+            var green = "#3C948B";
 
             var mouse = [ w / 2 , h / 2],
                 count = 0,
                 color = d3.scale
                         .linear()
-                        .domain([0, 7])
-                        .range(["red", "green", "blue", "orange", "yellow", "pink", "gold"]);
+                        .domain([0, 3])
+                        .range([red, blue, green]);
 
             var svg = d3.select(element[0]).append("svg")
                 .attr("width", w)
