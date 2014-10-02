@@ -169,7 +169,7 @@ quote {
 }
 .back-to-top {
 	position: fixed;
-	bottom: 14px;
+	bottom: 20px;
 	right: 25px;
 	z-index:100;
 	opacity: 1;
@@ -179,7 +179,7 @@ quote {
 	}
 	a {
 		span {
-			font-size: rem-calc(40px);
+			font-size: rem-calc(30px);
 			color: $primary-color;
 			@include transition(200ms);
 			&:hover {
@@ -277,6 +277,8 @@ quote {
 	.footer-nav {
 		display: block;
 		list-style: none;
+		padding-left: 8%;
+		margin-bottom: 0;
 		li {
 			line-height: 40px;
 			display: inline-block;
@@ -292,7 +294,27 @@ quote {
 		}
 		&.right {
 			float: right;
-			padding-right: 80px;
+			padding-right: 16%;
+			padding-left: 0;
+		}
+	}
+	.footer-logo {
+		position: absolute;
+		width: 160px;
+		top: 26px;
+		left: 50%;
+		margin-left: -80px;
+		@include font-semi(rem-calc(30px));
+		opacity: 0.5;
+		@include transition(200ms);
+		.footer-sy {
+			color: $primary-color;
+		}
+		.footer-mantis {
+			color: $light;
+		}
+		&:hover {
+			opacity: 0.9;
 		}
 	}
 }
