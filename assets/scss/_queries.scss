@@ -679,17 +679,6 @@
 		position: relative;
 		float: left;
 		width: 100%;
-		.new-query-title {
-			@include font-semi(rem-calc(14px));
-			a {
-				color: $primary-color;
-				padding-bottom: rem-calc(10px);
-				display: inline-block;
-				&:hover {
-					color: darken($primary-color, 20%);
-				}
-			}
-		}
 		.new-query-inner {
 			float: left;
 			width: 100%;
