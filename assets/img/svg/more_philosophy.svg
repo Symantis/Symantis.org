@@ -4,7 +4,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="1024px" height="768px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
 <g>
-	<circle fill="#3C948B" cx="203.03" cy="219.001" r="121.065"/>
+	<circle fill="#3D8BC7" cx="203.03" cy="219.001" r="121.065"/>
 	<path fill="#FFFFFF" d="M248.929,171.691c-8,0-14.485,6.484-14.485,14.485c0,0.754,0.11,1.479,0.222,2.208L197.4,202.668
 		c-3.092-4.75-8.43-7.907-14.52-7.907c-4.218,0-8.042,1.569-11.046,4.078l-7.789-5.821c0.32-1.029,0.536-2.1,0.536-3.23
 		c0-6.05-4.91-10.963-10.96-10.963c-6.057,0-10.972,4.913-10.972,10.963c0,6.058,4.915,10.972,10.972,10.972
@@ -28,7 +28,7 @@
 	</g>
 </g>
 <g>
-	<circle fill="#3C948B" cx="821.148" cy="219" r="121.065"/>
+	<circle fill="#C7403D" cx="821.148" cy="219" r="121.065"/>
 	<g>
 		<text transform="matrix(1 0 0 1 793.4473 301.25)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15">Passion</text>
 	</g>
@@ -57,26 +57,24 @@
 			c0-10.043,8.144-18.188,18.188-18.188C830.983,519.113,839.125,527.258,839.125,537.301z"/>
 	</g>
 </g>
+<circle fill="#3D8BC7" cx="511.911" cy="549" r="121.065"/>
 <g>
-	<circle fill="#3C948B" cx="511.911" cy="549" r="121.065"/>
-	<g>
-		<text transform="matrix(1 0 0 1 470.6641 631.251)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15">Technology</text>
-	</g>
-	<polygon fill="#FFFFFF" stroke="#3C948B" stroke-width="4" stroke-miterlimit="10" points="554.636,520 457.136,520 469.187,502 
-		566.687,502 	"/>
-	<rect x="458" y="522" fill="#FFFFFF" stroke="#3C948B" stroke-width="4" stroke-miterlimit="10" width="97" height="35"/>
-	<rect x="458" y="560" fill="#FFFFFF" stroke="#3C948B" stroke-width="4" stroke-miterlimit="10" width="97" height="35"/>
-	<polygon fill="#FFFFFF" stroke="#3C948B" stroke-width="4" stroke-miterlimit="10" points="568,538.592 556,559.408 556,521.062 
-		568,500.25 	"/>
-	<polygon fill="#FFFFFF" stroke="#3C948B" stroke-width="4" stroke-miterlimit="10" points="568,576.935 556,597.75 556,559.408 
-		568,538.592 	"/>
-	<path fill="#FFFFFF" stroke="#3C948B" stroke-width="2" stroke-miterlimit="10" d="M472,515v-5.539c0,0,5-4.207,10,0V515"/>
-	<path fill="#FFFFFF" stroke="#3C948B" stroke-width="2" stroke-miterlimit="10" d="M494,515v-5.539c0,0,5-4.207,10,0V515"/>
-	<path fill="#FFFFFF" stroke="#3C948B" stroke-width="2" stroke-miterlimit="10" d="M516,515v-5.539c0,0,5-4.207,10,0V515"/>
-	<path fill="#FFFFFF" stroke="#3C948B" stroke-width="2" stroke-miterlimit="10" d="M538,515v-5.539c0,0,5-4.207,10,0V515"/>
+	<text transform="matrix(1 0 0 1 470.6641 631.251)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15">Technology</text>
 </g>
+<polygon fill="#FFFFFF" stroke="#3D8BC7" stroke-width="4" stroke-miterlimit="10" points="554.636,520 457.136,520 469.187,502 
+	566.687,502 "/>
+<rect x="458" y="522" fill="#FFFFFF" stroke="#3D8BC7" stroke-width="4" stroke-miterlimit="10" width="97" height="35"/>
+<rect x="458" y="560" fill="#FFFFFF" stroke="#3D8BC7" stroke-width="4" stroke-miterlimit="10" width="97" height="35"/>
+<polygon fill="#FFFFFF" stroke="#3D8BC7" stroke-width="4" stroke-miterlimit="10" points="568,538.592 556,559.408 556,521.062 
+	568,500.25 "/>
+<polygon fill="#FFFFFF" stroke="#3D8BC7" stroke-width="4" stroke-miterlimit="10" points="568,576.935 556,597.75 556,559.408 
+	568,538.592 "/>
+<path fill="#FFFFFF" stroke="#3D8BC7" stroke-width="2" stroke-miterlimit="10" d="M472,515v-5.539c0,0,5-4.207,10,0V515"/>
+<path fill="#FFFFFF" stroke="#3D8BC7" stroke-width="2" stroke-miterlimit="10" d="M494,515v-5.539c0,0,5-4.207,10,0V515"/>
+<path fill="#FFFFFF" stroke="#3D8BC7" stroke-width="2" stroke-miterlimit="10" d="M516,515v-5.539c0,0,5-4.207,10,0V515"/>
+<path fill="#FFFFFF" stroke="#3D8BC7" stroke-width="2" stroke-miterlimit="10" d="M538,515v-5.539c0,0,5-4.207,10,0V515"/>
 <g>
-	<circle fill="#3C948B" cx="202.852" cy="549.001" r="121.065"/>
+	<circle fill="#C7403D" cx="202.852" cy="549.001" r="121.065"/>
 	<g>
 		<text transform="matrix(1 0 0 1 161.7158 630)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15">Innovation</text>
 	</g>
