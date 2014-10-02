@@ -1,13 +1,15 @@
-
-<ul>
-	<li>Name: <span>{{ registerData.firstName }} {{ registerData.lastName }}</span></li>
-	<li>Email: <span>{{ registerData.email }}</span></li>
-	<li>Username: <span>@{{ registerData.username }}</span></li>
-</ul>
-<button 
-	class="button signup-button" 
-	type="submit" 
-	ng-click="submit()"
->
-	Register
-</button>
+<div class="confirm-page">
+	<p class="signup-confirm">Confirm?</p>
+	<ul class="signup-confirm-items">
+		<li>Name: <span>{{ registerData.firstName }} {{ registerData.lastName }}</span></li>
+		<li>Email: <span>{{ registerData.email }}</span></li>
+		<li>Username: <span>@{{ registerData.username }}</span></li>
+	</ul>
+	<button 
+		class="button signup-button sy-button" 
+		type="submit" 
+		ng-click="submit()"
+	>
+		Register
+	</button>
+</div>

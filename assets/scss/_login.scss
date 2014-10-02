@@ -95,7 +95,7 @@
 		width: 100%;
 		float: left;
 		color: darken($light, 10%);
-		margin-top: 85px;
+		margin-top: 110px;
 		a {
 			color: darken($light, 10%);
 			text-decoration: underline;
@@ -221,6 +221,45 @@
 			p {
 				@include font-regular(rem-calc(14px));
 				color: $primary-color !important;
+			}
+		}
+		.confirm-page {
+			width: 100%;
+			padding: 10px 0 15px 0;
+			border-top: 1px $light solid;
+			border-bottom: 1px $light solid;
+			position: absolute;
+			top: -10px;
+		}
+		.signup-confirm {
+			float: left;
+			width: auto;
+			padding: 5px 0 15px 0;
+			border-bottom: 1px $light solid;
+			@include font-semi(rem-calc(14px));
+		}
+		.signup-confirm-items {
+			list-style: none;
+			float: left;
+			margin-top: 8px;
+			margin-left: 20px;
+			margin-bottom: 8px;
+			li {
+				@include font-regular(rem-calc(12px));
+				span {
+					color: $primary-color;
+				}
+			}
+		}
+		.signup-button {
+			position: absolute;
+			right: 0;
+			bottom: 10px;
+			width: 200px;
+			border-color: $primary-color;
+			color: $primary-color;
+			&:hover {
+				color: white;
 			}
 		}
 	}
