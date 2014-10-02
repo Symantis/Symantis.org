@@ -227,7 +227,7 @@
 			width: 100%;
 			padding: 10px 0 15px 0;
 			border-top: 1px $light solid;
-			border-bottom: 1px $light solid;
+			//border-bottom: 1px $light solid;
 			position: absolute;
 			top: -10px;
 		}
@@ -256,7 +256,10 @@
 			right: 0;
 			bottom: 10px;
 			width: 200px;
-			border-color: $primary-color;
+			@include font-semi(rem-calc(14px));
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border: 2px $primary-color solid;
 			color: $primary-color;
 			&:hover {
 				color: white;
