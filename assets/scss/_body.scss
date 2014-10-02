@@ -169,7 +169,7 @@ quote {
 }
 .back-to-top {
 	position: fixed;
-	bottom: 20px;
+	bottom: -14px;
 	right: 25px;
 	z-index:100;
 	opacity: 1;
@@ -179,7 +179,7 @@ quote {
 	}
 	a {
 		span {
-			font-size: rem-calc(30px);
+			font-size: rem-calc(90px);
 			color: $primary-color;
 			@include transition(200ms);
 			&:hover {
@@ -250,7 +250,7 @@ quote {
 }
 
 [ui-view="main"]{
-	padding-bottom: 80px;
+	padding-bottom: 55px;
 }
 .fluid-row {
 	display: block;
@@ -261,18 +261,18 @@ quote {
 	//float: left;
 	display: block;
 	position:relative;
-	margin-bottom: -80px;
+	margin-bottom: -55px;
 }
 .sitenav-push-inner {
 	height: 100%;
 }
 .footer {
 	border-top: 1px $light solid;
-	height: 80px;
+	height: 55px;
 	display: block;
 	margin: 0;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 8px;
+	padding-bottom: 10px;
 	position: relative;
 	.footer-nav {
 		display: block;
@@ -301,7 +301,7 @@ quote {
 	.footer-logo {
 		position: absolute;
 		width: 160px;
-		top: 26px;
+		top: 14px;
 		left: 50%;
 		margin-left: -80px;
 		@include font-semi(rem-calc(30px));
