@@ -5,6 +5,7 @@
 	class="signup-input"
 	placeholder="First Name" 
 	value=""
+	force-focus="true"
 	ng-model="registerData.firstName"
 	required
 	ng-enter="nextStep(registerForm.firstName, 'lastname')"

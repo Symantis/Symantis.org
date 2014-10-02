@@ -37,6 +37,11 @@ angular.module('sy.templates.inputs', [])
                     scope.$eval(attrs.ngEnter, {'event': event});
                 });
                 event.preventDefault();
+            } else if(event.which === 9){
+                scope.$apply(function(){
+                    scope.$eval(attrs.ngEnter, {'event': event});
+                });
+                event.preventDefault();
             }
         });
     };

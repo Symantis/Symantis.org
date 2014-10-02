@@ -1,10 +1,9 @@
 
-Confirm
-<div>{{ registerData.email }}</div>
-<div>{{ registerData.password }}</div>
-<div>{{ registerData.username }}</div>
-<div>{{ registerData.firstName }}</div>
-<div>{{ registerData.lastName }}</div>
+<ul>
+	<li>Name: <span>{{ registerData.firstName }} {{ registerData.lastName }}</span></li>
+	<li>Email: <span>{{ registerData.email }}</span></li>
+	<li>Username: <span>@{{ registerData.username }}</span></li>
+</ul>
 <button 
 	class="button signup-button" 
 	type="submit" 

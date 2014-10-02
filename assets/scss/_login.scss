@@ -188,30 +188,30 @@
 			position: absolute;
 			top: 0;
 			height: 50px;
-			font-size: rem-calc(20px);
-			padding: 5px 5px 5px 15px;
-			&::-webkit-input-placeholder { @include font-regular(rem-calc(20px)); color: $light; }
-			&:-moz-placeholder { @include font-regular(rem-calc(20px)); color: $light; opacity: 1; }
-			&::-moz-placeholder { @include font-regular(rem-calc(20px)); color: $light; opacity: 1; }
-			&:-ms-input-placeholder { @include font-regular(rem-calc(20px)); color: $light; }
+			//padding: 5px 5px 5px 15px;
+			&::-webkit-input-placeholder { @include font-regular(rem-calc(30px)); color: $light; }
+			&:-moz-placeholder { @include font-regular(rem-calc(30px)); color: $light; opacity: 1; }
+			&::-moz-placeholder { @include font-regular(rem-calc(30px)); color: $light; opacity: 1; }
+			&:-ms-input-placeholder { @include font-regular(rem-calc(30px)); color: $light; }
 			background: rgba(255,255,255,0.0);
 			border: none;
 			border-color: inherit;
 			-webkit-box-shadow: none;
 			box-shadow: none;
-			@include font-regular(rem-calc(20px));
-			border: 1px $gray solid;
+			@include font-regular(rem-calc(30px));
+			border-bottom: 1px $gray solid;
+			padding: 0 0 5px 0;
+			@include transition(200ms);
 			&:focus {
 				background: rgba(255,255,255,0.0);
 				outline: 0;
 				outline: none;
 				border-color: inherit;
-				border-left: 10px outset $primary-color;
+				//border-left: 2px outset $primary-color;
+				//padding-left: 15px;
+				border-bottom: 4px $primary-color solid;
 				@include transition(50ms);
 				color: $dark;
-				-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-				-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-				box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 			}
 		}
 		.signup-prompt {
