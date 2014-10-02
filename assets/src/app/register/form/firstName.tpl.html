@@ -2,6 +2,7 @@
 	type="text" 
 	id="inputFirstName" 
 	name="firstName" 
+	class="signup-input"
 	placeholder="First Name" 
 	value=""
 	ng-model="registerData.firstName"
@@ -10,6 +11,7 @@
 >
 <div
 	ng-hide="registerForm.firstName.$error.required"
+	class="signup-prompt"
 >
-	Press Enter to continue.
+	<p>Press Enter to continue.</P>
 </div>

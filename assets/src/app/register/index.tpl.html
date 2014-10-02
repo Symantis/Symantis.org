@@ -1,75 +1,76 @@
-<div id="status-buttons" class="text-center">
-    <a 
-        class="formStep"
-        ui-sref-active="active" 
-        ui-sref=".email"
-    >
-        <span>1</span> Email
-    </a>
+<div class="row fluid-row register-center">
+
+    <section class="register-container">    
+
+        <h1>Signup.</h1>
+
+        <ul id="status-buttons" class="signup-nav">
+            <li class="formStep">
+                <a class="formStep-link" ui-sref-active="active" ui-sref=".email">
+                    <span class="stage">1</span>
+                    <p>Email</p>
+                </a>
+            </li>
+            <li class="linker"><hr /></li>
+            <li class="formStep">
+                <a class="formStep-link" ui-sref-active="active" ui-sref=".username">
+                    <span class="stage">2</span>
+                    <p>Username</p>
+                </a>
+            </li>
+            <li class="linker"><hr /></li>
+            <li class="formStep">
+                <a class="formStep-link" ui-sref-active="active" ui-sref=".password">
+                    <span class="stage">3</span>
+                    <p>Password</p>
+                </a>
+            </li>
+            <li class="linker"><hr /></li>
+            <li class="formStep">
+                <a class="formStep-link" ui-sref-active="active" ui-sref=".confirmpassword">
+                    <span class="stage">4</span>
+                    <p>Confirm Password</p>
+                </a>
+            </li>
+            <li class="linker"><hr /></li>
+            <li class="formStep">
+                <a class="formStep-link" ui-sref-active="active" ui-sref=".firstname">
+                    <span class="stage">5</span>
+                    <p>First Name</p>
+                </a>
+            </li>
+            <li class="linker"><hr /></li>
+            <li class="formStep">
+                <a class="formStep-link" ui-sref-active="active" ui-sref=".lastname">
+                    <span class="stage">6</span>
+                    <p>Last Name</p>
+                </a>
+            </li>
+            <li class="linker"><hr /></li>
+            <li class="formStep">
+                <a class="formStep-link" ui-sref-active="active" ui-sref=".Confirm">
+                    <span class="stage">7</span>
+                    <p>Confirm</p>
+                </a>
+            </li>
+        </ul>
+
+        <form name="registerForm">
+            <div ui-view="register" class="form-elements">
+
+            </div>
+        </form>
+
+        <pre class="hide">
+            {{ registerData }}
+        </pre>
+
+        <p class="has-account">Already have an account? <a ui-sref="login">Sign in.</a></p>
+
+    </section>
     
-    <a 
-        class="formStep"
-        ui-sref-active="active" 
-        ui-sref=".username"
-    >
-        <span>2</span> Username
-    </a>
-
-    <a 
-        class="formStep"
-        ui-sref-active="active" 
-        ui-sref=".password"
-    >
-        <span>3</span> Password
-    </a>
-
-    <a 
-        class="formStep"
-        ui-sref-active="active" 
-        ui-sref=".confirmpassword"
-    >
-        <span>4</span> Confirm Password
-    </a>
-
-    <a 
-        class="formStep"
-        ui-sref-active="active" 
-        ui-sref=".firstname"
-    >
-        <span>5</span> First Name
-    </a>
-
-    <a 
-        class="formStep"
-        ui-sref-active="active" 
-        ui-sref=".lastname"
-    >
-        <span>6</span> Last Name
-    </a>
-
-    <a 
-        class="formStep"
-        ui-sref-active="active" 
-        ui-sref=".confirm"
-    >
-        <span>7</span> Confirm
-    </a>
 </div>
-
-<h1><a ui-sref="register">Register</a></h1>
-
-<form 
-    name="registerForm" 
->
-    <div ui-view="register">
-
-    </div>
-</form>
-<pre class="hide">
-    {{ registerData }}
-</pre>
-
-<div id="heading-row" class="row fluid-row">
+<!-- <div id="heading-row" class="row fluid-row">
 	<section class="medium-3 large-2 large-offset-1 columns heading-left">
 	</section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
@@ -83,11 +84,9 @@
     <section class="medium-3 large-2 large-offset-1 columns main-left">
         <div class="wrapper" ui-view="leftside">
 
-        <!-- Section for main left header -->
         </div>
     </section>
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center">
-    	<!-- Section for main center header -->
         <header></header>
 
         <div class="main-content">
@@ -163,14 +162,12 @@
               </div>
             </form>
         </div>
-        <!-- Section for main center content -->
+
     </section>
     <section class="medium-0 large-2 columns main-right">
         <header class="right-header">
-        	<!-- Main Right Heading -->
         </header>
         <div class="right-content">
-        	<!-- Main Right Content -->
         </div>
     </section>
-</div>
+</div> -->
