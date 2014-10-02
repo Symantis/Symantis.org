@@ -666,5 +666,124 @@
 		float: left;
 	}
 }
+.new-query-page {
+	position: relative;
+	padding-top: 25px;
+}
+.new-query {
+	padding-top: 15px;
+	width: 100%;
+	position: relative;
+	float: left;
+	.new-query-form {
+		position: relative;
+		float: left;
+		width: 100%;
+		.new-query-title {
+			@include font-semi(rem-calc(14px));
+			a {
+				color: $primary-color;
+				padding-bottom: rem-calc(10px);
+				display: inline-block;
+				&:hover {
+					color: darken($primary-color, 20%);
+				}
+			}
+		}
+		.new-query-inner {
+			float: left;
+			width: 100%;
+			position: relative;
+			border: rem-calc(1px) $gray solid;
+			min-height: 180px;
+			.query-options {
+				padding: rem-calc(15px);
+				padding-bottom: 0;
+				width: 100%;
+				float: left;
+				position: relative;
+				padding-bottom: 0;
+				padding-top: rem-calc(4px);
+				ul {
+					list-style: none;
+					position: relative;
+					float: left;
+					width: 100%;
+					border-bottom: rem-calc(1px) $gray solid;
+					margin: 0;
+					li {
+						float: left;
+						padding: rem-calc(5px);
+						a {
+							color: $gray;
+							@include transition(100ms);
+							span {
+								font-size: rem-calc(15px);
+							}
+							.text-icon {
+								font-size: rem-calc(14px);
+							}
+							&:hover {
+								color: $dark;
+							}
+							&.selected {
+								color: $dark;
+							}
+						}
+						&:first-child {
+							padding-left: 0;
+						}
+					}
+					.query-options-edit {
+						margin-top: -2px;
+					}
+				}
+			}
+			textarea {
+				resize: vertical;
+				outline: none;
+				outline: 0;
+				margin: 0;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				border: none;
+				background: rgba(255,255,255,0.0);
+				height: 180px;
+				width: 100%;
+				float: left;
+				padding: rem-calc(15px);
+			}
+		}
+		.new-query-tag {
+			float: left;
+			width: 100%;
+			//height: 50px;
+			position: relative;
+			margin-top: 10px;
+		}
+		.new-query-post {
+			float: right;
+			width: auto;
+			p {
+				padding: rem-calc(10px);
+				padding-right: 0;
+				.sy-button {
+					margin-top: 0;
+				}
+			}
+		}
+		.new-query-preview {
+			float: right;
+			width: auto;
+			p {
+				padding: rem-calc(10px);
+				padding-right: 0;
+				.sy-button {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
 
 
