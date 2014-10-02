@@ -264,6 +264,14 @@
 			&:hover {
 				color: white;
 			}
+			&:active {
+				background-color: $primary-color;
+				color: white;
+			}
+			&:focus {
+				background-color: $primary-color;
+				color: white;
+			}
 		}
 	}
 }
