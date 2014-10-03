@@ -1,6 +1,21 @@
-
+.login-container {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 340px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -170px;
+	&:before{
+		content: ""; 
+		display: table; 
+		clear: both;
+	}
+}
 .login-page {
-	margin-top: rem-calc(80px);
+	width: 560px;
+	margin: 0 auto 0 auto;
 	.modal-form {
 		margin-top: rem-calc(30px);
 		input[type=text], input[type=password] {
@@ -61,6 +76,9 @@
 				//text-decoration: underline;
 			}
 		}
+		&.lead {
+			text-align: left;
+		}
 	}
 }
 
@@ -68,14 +86,13 @@
 
 .register-center {
 	width: 100%;
-	//display: table;
 	padding: 0;
 	margin: 0;
 	height: 360px;
 	display: block;
 	position: absolute;
 	top: 50%;
-	margin-top: -220px;
+	margin-top: -200px;
 	&:before{
 		content: ""; 
 		display: table; 
@@ -89,21 +106,6 @@
 		//text-align: center;
 		padding: 0 20px 20px 0;
 		border-bottom: 1px $gray solid
-	}
-	p.has-account {
-		//text-align: center;
-		width: 100%;
-		float: left;
-		color: darken($light, 10%);
-		margin-top: 110px;
-		a {
-			color: darken($light, 10%);
-			text-decoration: underline;
-			@include transition(100ms);
-			&:hover {
-				color: $dark;
-			}
-		}
 	}
 	.signup-nav {
 		list-style: none;
@@ -274,6 +276,47 @@
 			&:focus {
 				background-color: $primary-color;
 				color: white;
+			}
+		}
+	}
+	p.has-account {
+		//text-align: center;
+		width: auto;
+		float: left;
+		color: darken($light, 10%);
+		margin-top: 110px;
+		padding-left: 110px;
+		a {
+			color: darken($light, 10%);
+			text-decoration: underline;
+			@include transition(100ms);
+			&:hover {
+				color: $dark;
+			}
+		}
+	}
+	.signup-links {
+		list-style: none;
+		float: left;
+		width: auto;
+		position: relative;
+		margin: 0;
+		border-left: 1px $light solid;
+		margin-top: 106px;
+		margin-left: 20px;
+		padding-left: 14px;
+		padding-top: 0;
+		li {
+			display: inline-block;
+			text-align: center;
+			padding: 0 6px 0 6px;
+			a {
+				@include font-regular(rem-calc(12px));
+				color: darken($light, 10%);
+				@include transition(100ms);
+				&:hover {
+					color: $dark;
+				}
 			}
 		}
 	}

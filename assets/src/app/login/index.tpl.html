@@ -1,41 +1,28 @@
-<div class="row fluid-row">
-
-    <section class="medium-12 large-9 large-offset-1 columns main-center login-container">    
-
-        <div class="main-content login-page medium-8 medium-offset-2 large-7 large-offset-3 columns">
-            <div class="table">
-                <div class="table-cell vertical-align">
-                    <h1><a ui-href="login">Login.</a></h1>
-                	<form class="modal-form" name="loginForm" action="/auth/local" method="post">
-        		    	
-                        <input 
-                            type="text" 
-                            id="inputEmail" 
-                            name="identifier" 
-                            placeholder="Email" 
-                            force-focus="true"
-                            required
-                            ng-class="{error: loginForm.identifier.$error.required && loginForm.identifier.$touched }"
-                        >
-                        <input 
-                            type="password" 
-                            id="inputPassword" 
-                            name="password" 
-                            placeholder="Password"
-                            required
-                            ng-class="{error: loginForm.password.$error.required  && loginForm.password.$touched }"
-                        >
-        		    	<!-- <div class="small-12 columns">
-        		    	</div> -->
-                        <button type="submit" class="btn btn-default sy-button">Sign In</button>
-        		    </form>
-                    <p>
-                        <a ui-sref="register" ng-click="cancel()">I need to sign up</a> - <a ui-sref="login.forgot">I forgot my password</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    
+<div class="row fluid-row login-container">    
+	<section class="login-page">
+		<h1><a ui-href="login">Login.</a></h1>
+		<form class="modal-form" name="loginForm" action="/auth/local" method="post">
+			<input 
+				type="text" 
+				id="inputEmail" 
+				name="identifier" 
+				placeholder="Email" 
+				force-focus="true"
+				required
+				ng-class="{error: loginForm.identifier.$error.required && loginForm.identifier.$touched }"
+			>
+			<input 
+				type="password" 
+				id="inputPassword" 
+				name="password" 
+				placeholder="Password"
+				required
+				ng-class="{error: loginForm.password.$error.required  && loginForm.password.$touched }"
+			>
+			<button type="submit" class="btn btn-default sy-button">Sign In</button>
+		</form>
+		<p>
+			<a ui-sref="register" ng-click="cancel()">I need to sign up</a> - <a ui-sref="login.forgot">I forgot my password</a>
+		</p>
+	</section>
 </div>
