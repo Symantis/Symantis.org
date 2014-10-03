@@ -14,8 +14,17 @@
                             name="identifier" 
                             placeholder="Email" 
                             force-focus="true"
+                            required
+                            ng-class="{error: loginForm.identifier.$error.required && loginForm.identifier.$touched }"
                         >
-                        <input type="password" id="inputPassword" name="password" placeholder="Password">
+                        <input 
+                            type="password" 
+                            id="inputPassword" 
+                            name="password" 
+                            placeholder="Password"
+                            required
+                            ng-class="{error: loginForm.password.$error.required  && loginForm.password.$touched }"
+                        >
         		    	<!-- <div class="small-12 columns">
         		    	</div> -->
                         <button type="submit" class="btn btn-default sy-button">Sign In</button>

@@ -15,13 +15,17 @@
 		    		type="text" 
 		    		id="inputEmail" 
 		    		name="identifier" 
-		    		placeholder="Email" 
+		    		placeholder="Email"
+		    		required
+		    		ng-class="{error: loginForm.identifier.$error.required && loginForm.identifier.$touched }"
 		    	/>
 		    	<input 
 		    		type="password" 
 		    		id="inputPassword" 
 		    		name="password" 
-		    		placeholder="Password" 
+		    		placeholder="Password"
+		    		required 
+		    		ng-class="{error: loginForm.password.$error.required && loginForm.password.$touched }"
 		    	/>
 		    	<input 
 		    		type="hidden"

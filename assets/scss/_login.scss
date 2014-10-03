@@ -213,6 +213,9 @@
 				@include transition(50ms);
 				color: $dark;
 			}
+			&.ng-dirty.ng-invalid:focus {
+				border-bottom: 4px red solid;
+			}
 		}
 		.signup-prompt {
 			position: absolute;
