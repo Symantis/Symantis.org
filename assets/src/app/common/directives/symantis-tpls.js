@@ -80,9 +80,10 @@ angular.module('sy.templates.timeline', [])
             postpone = $timeout(function() {
                 createStoryJS({
                     type:       'timeline',
-                    width:      width,
+                    width:      '100%',
                     height:     '600',
                     source:     data,
+                    hash_bookmark:      true,
                     embed_id:   'sy-timeline',
                     //css:        'lib/timelinejs/css/timeline.css',
                     //js:         'lib/timelinejs/js/timeline.js'
