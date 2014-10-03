@@ -17,6 +17,10 @@ angular.module( 'symantis.privacy', [
 				controller: 'HeaderCtrl',
 				templateUrl: 'header/header.tpl.html'
 			},
+			"footer": {
+				controller: 'FooterCtrl',
+				templateUrl: 'footer/index.tpl.html'
+			},
 			"subheader@privacy": {
 				controller: 'PrivacyHeaderCtrl',
                 templateUrl: 'privacy/header.tpl.html'

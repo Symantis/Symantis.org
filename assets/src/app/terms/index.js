@@ -17,6 +17,10 @@ angular.module( 'symantis.terms', [
 				controller: 'HeaderCtrl',
 				templateUrl: 'header/header.tpl.html'
 			},
+			"footer": {
+				controller: 'FooterCtrl',
+				templateUrl: 'footer/index.tpl.html'
+			},
 			"subheader@terms": {
 				controller: 'TermsHeaderCtrl',
                 templateUrl: 'terms/header.tpl.html'

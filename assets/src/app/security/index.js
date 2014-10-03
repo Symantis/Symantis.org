@@ -17,6 +17,10 @@ angular.module( 'symantis.security', [
 				controller: 'HeaderCtrl',
 				templateUrl: 'header/header.tpl.html'
 			},
+			"footer": {
+				controller: 'FooterCtrl',
+				templateUrl: 'footer/index.tpl.html'
+			},
 			"subheader@security": {
 				controller: 'SecurityHeaderCtrl',
                 templateUrl: 'security/header.tpl.html'
