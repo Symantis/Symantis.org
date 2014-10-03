@@ -21,6 +21,7 @@ angular.module( 'symantis', [
 	'ngTagsInput',
 	'pascalprecht.github-adapter',
 	'angular-markdown',
+	'directives.inputMatch',
 	
 	'symantis.global.modals',
 

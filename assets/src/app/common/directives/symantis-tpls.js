@@ -17,8 +17,12 @@ angular.module("sy.templates", [
 angular.module('sy.templates.inputs', [])
 .directive('forceFocus', function($timeout) {
   return {
-    scope: { trigger: '@forceFocus' },
-    link: function(scope, element) {
+    replace: false,
+    //scope: { trigger: '@forceFocus' },
+    link: function(scope, element, attrs) {
+      
+      element[0].focus();
+
       scope.$watch('trigger', function(value) {
         if(value === "true") { 
           $timeout(function() {
