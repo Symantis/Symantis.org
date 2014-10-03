@@ -5,8 +5,11 @@
         <div class="main-content login-page medium-8 medium-offset-2 large-7 large-offset-3 columns">
             <div class="table">
                 <div class="table-cell vertical-align">
-                    <h1><a ui-href="login">Login.</a></h1>
-                	<form class="modal-form" name="loginForm" action="/auth/local" method="post">
+                    <h1>
+                        <a ui-href="login">Forgot Password.</a>
+                    </h1>
+                    <p class="lead">Forgot your password? Enter your email and a new password will be sent to you.</p>
+                	<form class="modal-form" name="loginForm" action="/auth/recover" method="post">
         		    	
                         <input 
                             type="text" 
@@ -17,20 +20,12 @@
                             required
                             ng-class="{error: loginForm.identifier.$error.required && loginForm.identifier.$touched }"
                         >
-                        <input 
-                            type="password" 
-                            id="inputPassword" 
-                            name="password" 
-                            placeholder="Password"
-                            required
-                            ng-class="{error: loginForm.password.$error.required  && loginForm.password.$touched }"
-                        >
         		    	<!-- <div class="small-12 columns">
         		    	</div> -->
-                        <button type="submit" class="btn btn-default sy-button">Sign In</button>
+                        <button type="submit" class="btn btn-default sy-button">Send New Password</button>
         		    </form>
                     <p>
-                        <a ui-sref="register" ng-click="cancel()">I need to sign up</a> - <a ui-sref="login.forgot">I forgot my password</a>
+                        <a ui-sref="register" ng-click="cancel()">I need to sign up</a> - <a ui-sref="login">I need to login</a>
                     </p>
                 </div>
             </div>
