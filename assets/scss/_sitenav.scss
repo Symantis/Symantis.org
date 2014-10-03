@@ -142,6 +142,7 @@ body,
 						padding-left:15px;
 						width:50px;
 						color:$primary-color;
+						cursor: pointer;
 					}
 					.search{
 						@include font-regular(rem-calc(16px));
@@ -165,8 +166,6 @@ body,
 				padding-left:12px;
 				z-index:99;
 				line-height: rem-calc(15);
-				
-				
 				li{
 					width:100%;
 					display:block;
@@ -178,7 +177,6 @@ body,
 						&:hover{
 							color: $primary-color;
 						}
-						
 					}
 					&:nth-child(6) {
 						width: 120px;

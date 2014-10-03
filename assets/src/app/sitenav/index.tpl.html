@@ -21,17 +21,17 @@
 </div>
 <div class="sitenav-inner" ng-controller="SiteNavCtrl">
     <ul class="top sy-nav-top-toggle">
-      <li ng-click="searchModal()">
+      <li class="sitenav-search-button" ng-click="searchModal()">
         <span class="search-icon"><i class="icon icon-search"></i></span><span class="search">Search</span>
       </li>
     </ul>
-   
+
     <ul class="middle" >
     	<li ng-repeat="siteItem in siteItems">
         	<a ui-sref-active="active" ui-sref="{{siteItem.sref}}">{{siteItem.title}}</a>
     	</li>
     </ul>
-    
+
     <ul class="bottom sy-nav-bottom-toggle" >
       <li class="logo">
         <a href="/home">
