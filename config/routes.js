@@ -226,6 +226,17 @@ module.exports.routes = {
     action: 'index'
   },
 
+  //Handle "/creator" queries "Creator App"
+  'get /roadmap': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /roadmap/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
+
   //Handle "/start" queries "Getting Started"
   'get /start': {
     controller: 'HomeController',

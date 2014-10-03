@@ -43,7 +43,7 @@ angular.module( 'symantis', [
 	'symantis.privacy',
 	//Security
 	'symantis.security',
-	
+	'symantis.roadmap',
 	//More
 	'symantis.more',
 
