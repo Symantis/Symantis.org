@@ -1,14 +1,13 @@
-<<<<<<< HEAD
 
-	<div class="small-12 columns">
-		<form name="newQueryForm">
-			<input 
+<div class="small-12 columns">
+
+	<input 
 				type="text" 
 				name="title"
 				placeholder="Query Title"
 				ng-model="newQuery.title"
 			>
-			<markdown extensions="github, table">
+	<markdown extensions="github, table">
 # Example
 
 This is an **example**. Markdown goes `here`.
@@ -19,18 +18,13 @@ This is an **example**. Markdown goes `here`.
 |======== |====================================================|
 |**bold** | ![Valid XHTML] (http://w3.org/Icons/valid-xhtml10) |
 | Plain   | Value
-        </markdown>
-			<tags-input ng-model="newQuery.tags">
-	            <auto-complete source="loadTags($query)"></auto-complete>
-	        </tags-input>
-        </form>
-	</div>
-=======
+    </markdown>
+</div>
 <div class="medium-12 columns new-query-page">
 	<h3>New Query as <a ui-sref="me">{{ currentUser.firstName }} {{ currentUser.lastName }}</a></h3>
 
 	<div class="new-query">
-		<form class="new-query-form">
+		<form class="new-query-form" name="newQueryForm">
 	        <div class="new-query-inner">
 	        	<div class="query-options">
 			        <ul>
@@ -70,4 +64,3 @@ This is an **example**. Markdown goes `here`.
 		</form>
 	</div>
 </div>
->>>>>>> FETCH_HEAD

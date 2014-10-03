@@ -36,6 +36,12 @@ angular.module( 'symantis', [
 	
 	//Documentation
 	'symantis.docs',
+	//Terms
+	'symantis.terms',
+	//Privacy
+	'symantis.privacy',
+	//Security
+	'symantis.security',
 	
 	//More
 	'symantis.more',

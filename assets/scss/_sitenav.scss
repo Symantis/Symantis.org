@@ -29,7 +29,7 @@ body,
 .sitenav-push {
 	position: relative;
 	left: 0;
-	z-index: 99;
+	z-index: 0;
 	height: 100%;
 	-webkit-transition: -webkit-filter $animationTime, opacity $animationTime, -webkit-transform $animationTime;
 	transition: filter $animationTime, opacity $animationTime, transform $animationTime;
@@ -90,7 +90,6 @@ body,
 .sitenav{
 	-webkit-transition: left $animationTime;
 	transition: left $animationTime;
-	//border-right: rem-calc(1px) $light solid;
 	.trident{
 		fill: #ffffff;
 	}
@@ -99,11 +98,8 @@ body,
 		height: 100%;
 		text-align:center;
 		display:table;
-		z-index:-1;
 		float:right;
-		//background-color: white;
 		background-color: $darkest;
-		//border-right: rem-calc(1px) $light solid;
 		& > .activator-icon{
 			display:table-cell;
 			width:50px;
@@ -117,7 +113,6 @@ body,
 	.sitenav-inner{
 		height:100%;
 		background-color: $darkest;
-		//background-color: white;
 		width:150px;
 		float:left;
 		display:table;
@@ -156,10 +151,10 @@ body,
 						white-space: nowrap;
 						position:relative;
 						top:-3px;
-						opacity:0;
-						@include transition(0.1s);
-						-webkit-transition: opacity $animationTime;
-						transition: opacity $animationTime;
+						//opacity:0;
+						//@include transition(0.1s);
+						//-webkit-transition: opacity $animationTime;
+						//transition: opacity $animationTime;
 						cursor: pointer;
 					}
 				}
@@ -170,8 +165,7 @@ body,
 				padding-left:12px;
 				z-index:99;
 				line-height: rem-calc(15);
-				//-webkit-transition: all $animationTime;
-				//transition: all $animationTime;
+				
 				
 				li{
 					width:100%;
@@ -181,11 +175,7 @@ body,
 					a{
 						display: block;
 						color: white;
-						//color: $darkest;
-						//-webkit-transition: padding 0.1s;
-						//transition: padding 0.1s;
 						&:hover{
-							//padding-left:5px;
 							color: $primary-color;
 						}
 						
@@ -228,10 +218,10 @@ body,
 						padding-left:2px;
 						color: white;
 						white-space: nowrap;
-						opacity:0;
-						@include transition(0.1s);
-						-webkit-transition: opacity $animationTime;
-						transition: opacity $animationTime;
+						//opacity:0;
+						//@include transition(0.1s);
+						//-webkit-transition: opacity $animationTime;
+						//transition: opacity $animationTime;
 
 					}
 				}
@@ -295,11 +285,8 @@ body,
 	width: 200px;
 	left: 0;
 
-	//@include drop-shadow(0.3);
-
 	.activator{
 		width: 50px;
-		//border-right: none;
 		& > .activator-icon{
 			width: 50px;
 
@@ -307,21 +294,20 @@ body,
 	}
 	.sitenav-inner{
 		width:150px;
-		//@include drop-shadow(0.3);
 		ul{
 			&.top{
 				width:150px;
 				left:0px;
 				li{
 					.search{
-						opacity:1.0;
-						@include transition($animationTime);
+						//opacity:1.0;
+						//@include transition($animationTime);
 					}
 				}
 			}
 			&.middle{
 				width:150px;
-				//padding-left:15px;
+				
 				li{
 					a{
 						display:block;
@@ -335,8 +321,8 @@ body,
 					.sy{
 					}
 					.mantis{
-						opacity:1.0;
-						@include transition($animationTime);
+						//opacity:1.0;
+						//@include transition($animationTime);
 					}
 				}
 			}
@@ -348,41 +334,3 @@ body,
 .sy-effect.sitenav::after {
 	display: none;
 }
-
-/*
-.sy-effect.sy-menu-top-open .sy-effect.sitenav{
-	.sitenav-inner{
-		width:150px;
-		ul{
-			&.top{
-				width:150px;
-				li{
-					.search{
-						opacity:1.0;
-						color: $gray;
-					}
-				}
-			}
-		}
-	}
-}
-*/
-/*
-.sy-effect.sy-menu-bottom-open .sy-effect.sitenav{
-	.sitenav-inner{
-		//width:150px;
-		ul{
-			//width:150px;
-			&.bottom{
-				li.logo{
-					.mantis{
-						opacity:1.0;
-						color: $gray;
-					}
-				}
-			}
-		}
-	}
-}
-*/
-

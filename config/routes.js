@@ -198,6 +198,34 @@ module.exports.routes = {
     action: 'index'
   },
 
+  //Handle "/creator" queries "Creator App"
+  'get /terms': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /terms/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  //Handle "/creator" queries "Creator App"
+  'get /privacy': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /privacy/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  //Handle "/creator" queries "Creator App"
+  'get /security': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /security/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+
   //Handle "/start" queries "Getting Started"
   'get /start': {
     controller: 'HomeController',
