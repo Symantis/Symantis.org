@@ -98,6 +98,7 @@ quote {
 		width: 100%;
 		@include font-regular(rem-calc(12px));
 		margin: 0;
+		word-wrap: break-word;
 	}
 }
 .sub-heading {
