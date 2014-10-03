@@ -18,6 +18,10 @@ angular.module( 'symantis.creator', [
 					controller: 'HeaderCtrl',
 		            templateUrl: 'header/header.tpl.html'
 				},
+				"footer": {
+					controller: 'FooterCtrl',
+	                templateUrl: 'footer/index.tpl.html'
+				},
 				"subheader@creator": {
 					controller: 'CreatorHeaderCtrl',
                 	templateUrl: 'creator/header.tpl.html'

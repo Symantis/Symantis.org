@@ -27,6 +27,7 @@ angular.module( 'symantis', [
 	'symantis.header',
 	'symantis.sitenav',
 	'symantis.home',
+	'symantis.footer',
 
 	'symantis.messages',
 	'symantis.kitchen',
@@ -94,6 +95,10 @@ angular.module( 'symantis', [
 				"header": {
 					controller: 'HeaderCtrl',
 	                templateUrl: 'header/header.tpl.html'
+				},
+				"footer": {
+					controller: 'FooterCtrl',
+	                templateUrl: 'footer/index.tpl.html'
 				},
 			}
 		});

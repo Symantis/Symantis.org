@@ -30,6 +30,10 @@ angular.module( 'symantis.profile', [
 					controller: 'HeaderCtrl',
 	                templateUrl: 'header/header.tpl.html'
 				},
+				"footer": {
+					controller: 'FooterCtrl',
+	                templateUrl: 'footer/index.tpl.html'
+				},
 				"subheader@profile": {
 					controller: 'ProfileHeaderCtrl',
                 	templateUrl: 'profile/header.tpl.html'

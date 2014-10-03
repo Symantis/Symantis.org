@@ -15,6 +15,10 @@ angular.module( 'symantis.home', [
 				controller: 'SiteNavCtrl',
                 templateUrl: 'sitenav/index.tpl.html'
 			},
+			"footer": {
+				controller: 'FooterCtrl',
+                template: ''
+			},
 			"header": {
 				controller: 'HeaderCtrl',
                 template: ''

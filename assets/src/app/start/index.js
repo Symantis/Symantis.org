@@ -17,6 +17,10 @@ angular.module( 'symantis.start', [
 				controller: 'HeaderCtrl',
 	            templateUrl: 'header/header.tpl.html'
 			},
+			"footer": {
+				controller: 'FooterCtrl',
+                templateUrl: 'footer/index.tpl.html'
+			},
 			"subheader@start": {
 				controller: 'StartHeaderCtrl',
                 templateUrl: 'start/header.tpl.html'

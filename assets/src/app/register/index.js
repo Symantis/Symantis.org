@@ -21,15 +21,11 @@ angular.module( 'symantis.register', [
 				"header": {
 					controller: 'RegisterHeaderCtrl',
 	                templateUrl: 'register/header.tpl.html'
+				},
+				"footer": {
+					controller: 'FooterCtrl',
+	                template: ''
 				}
-
-				/*
-				,
-				"subheader@register": {
-					controller: 'RegisterHeaderCtrl',
-	                templateUrl: 'register/header.tpl.html'
-				}
-				*/
 			}
 		})
 		.state( 'register.email', {

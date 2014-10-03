@@ -21,6 +21,10 @@ angular.module( 'symantis.more', [
 					controller: 'HeaderCtrl',
 	                templateUrl: 'header/header.tpl.html'
 				},
+				"footer": {
+					controller: 'FooterCtrl',
+	                templateUrl: 'footer/index.tpl.html'
+				},
 				"subheader@more": {
 					controller: 'MoreHeaderCtrl',
 	                templateUrl: 'more/header.tpl.html'
@@ -29,12 +33,6 @@ angular.module( 'symantis.more', [
 					controller: 'MoreLeftsideCtrl',
 	                templateUrl: 'more/leftside.tpl.html'
 				}
-				/*
-				"header": {
-					controller: 'AboutHeaderCtrl',
-	                templateUrl: 'about/header.tpl.html'
-				}
-				*/
 			}
 		})
 		.state( 'more.sykit', {
