@@ -26,7 +26,8 @@ module.exports = {
 			defaultsTo: '@'
 		},
 		signature : {
-			type: 'string'
+			type: 'string',
+			defaultsTo: new Date().getTime()
 		},
 		status : {
 			type: 'string',

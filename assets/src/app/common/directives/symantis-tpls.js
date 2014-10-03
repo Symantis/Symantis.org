@@ -345,7 +345,7 @@ angular.module('sy.templates.sitenav', [])
         link: function($scope, element, attrs){
             
             //element.attr('dropdown-toggle', "#topNavLeftNav");
-            console.log(element);
+            //console.log(element);
         }
     }
 }]);
