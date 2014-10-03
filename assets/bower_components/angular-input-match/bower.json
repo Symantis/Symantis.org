@@ -1,0 +1,36 @@
+{
+  "authors": ["dev@intervalbraining.com"],
+  "dependencies": {
+    "angular": ">= 1.0.8"
+  },
+  "description": "ngModel validation for matching model attributes",
+  "devDependencies": {
+    "angular-mocks": ">=1.0.8"
+  },
+  "homepage": "https://github.com/interval-braining/angular-input-match",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "build",
+    "config",
+    "files.js",
+    "Gruntfile.js",
+    "node_modules",
+    "package.json",
+    "src",
+    "test"
+  ],
+  "keywords": [
+    "angular",
+    "input",
+    "match",
+    "ngModel",
+    "validation"
+  ],
+  "license": "MIT",
+  "main": [
+    "dist/angular-input-match.js"
+  ],
+  "name": "angular-input-match",
+  "version": "0.0.2"
+}
