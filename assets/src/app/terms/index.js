@@ -39,7 +39,7 @@ angular.module( 'symantis.terms', [
 
 	
 })
-.controller( 'DocsLeftsideCtrl', function DocsLeftsideController( $scope ) {
+.controller( 'TermsLeftsideCtrl', function TermsLeftsideController( $scope ) {
 	//titleService.setTitle('Docs');
 
 	

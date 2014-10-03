@@ -39,7 +39,7 @@ angular.module( 'symantis.privacy', [
 
 	
 })
-.controller( 'DocsLeftsideCtrl', function DocsLeftsideController( $scope ) {
+.controller( 'PrivacyLeftsideCtrl', function PrivacyLeftsideController( $scope ) {
 	//titleService.setTitle('Docs');
 
 	

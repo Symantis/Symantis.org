@@ -90,7 +90,6 @@ body,
 .sitenav{
 	-webkit-transition: left $animationTime;
 	transition: left $animationTime;
-	//border-right: rem-calc(1px) $light solid;
 	.trident{
 		fill: #ffffff;
 	}
@@ -99,11 +98,8 @@ body,
 		height: 100%;
 		text-align:center;
 		display:table;
-		z-index:-1;
 		float:right;
-		//background-color: white;
 		background-color: $darkest;
-		//border-right: rem-calc(1px) $light solid;
 		& > .activator-icon{
 			display:table-cell;
 			width:50px;
@@ -117,7 +113,6 @@ body,
 	.sitenav-inner{
 		height:100%;
 		background-color: $darkest;
-		//background-color: white;
 		width:150px;
 		float:left;
 		display:table;
@@ -295,8 +290,6 @@ body,
 	width: 200px;
 	left: 0;
 
-	//@include drop-shadow(0.3);
-
 	.activator{
 		width: 50px;
 		//border-right: none;
@@ -307,7 +300,6 @@ body,
 	}
 	.sitenav-inner{
 		width:150px;
-		//@include drop-shadow(0.3);
 		ul{
 			&.top{
 				width:150px;
@@ -348,41 +340,3 @@ body,
 .sy-effect.sitenav::after {
 	display: none;
 }
-
-/*
-.sy-effect.sy-menu-top-open .sy-effect.sitenav{
-	.sitenav-inner{
-		width:150px;
-		ul{
-			&.top{
-				width:150px;
-				li{
-					.search{
-						opacity:1.0;
-						color: $gray;
-					}
-				}
-			}
-		}
-	}
-}
-*/
-/*
-.sy-effect.sy-menu-bottom-open .sy-effect.sitenav{
-	.sitenav-inner{
-		//width:150px;
-		ul{
-			//width:150px;
-			&.bottom{
-				li.logo{
-					.mantis{
-						opacity:1.0;
-						color: $gray;
-					}
-				}
-			}
-		}
-	}
-}
-*/
-
