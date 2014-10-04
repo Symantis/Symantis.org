@@ -596,6 +596,15 @@
 			}
 		}
 	}
+	.board-question-sort {
+		top: 85px !important;
+		left: auto !important;
+		right: 0 !important;
+		border-radius: 4px;
+	}
+	.board-question-sort:after, .board-question-sort:before {
+		left: 120px;
+	}
 	.replies {
 		.new-comment {
 			padding-top: rem-calc(10px);

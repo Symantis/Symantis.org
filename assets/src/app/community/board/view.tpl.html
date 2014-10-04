@@ -71,8 +71,14 @@
 				<a ng-show="!currentUser" ng-click="loginModal()">Login</a>
 			</h4>
 			<p>
-				<a >Sort by <span class="icon-vote-down icon"></span></a>
+				<a dropdown-toggle="#board-question-sort-menu">Sort by <span class="icon-vote-down icon"></span></a>
 			</p>
+			<div class="sort-container board-question-sort" id="board-question-sort-menu">
+		        <ul class="sort-menu">
+		            <li><a class="active">Most Recent <span class="icon-check icon"></span></a></li>
+		            <li><a >Most Popular <span class="icon-check icon"></span></a></li>
+		        </ul>
+		    </div>
 		</div>
 		
 		<div 
@@ -99,8 +105,22 @@
 				<p class="comment-text">
 					{{ question.question }}
 				</p>
+				<p class="comment-reply">
+					<a title="Up Votes">
+						<span class="icon-vote-up"></span>
+						<span class="comment-votes">
+							{{ question.upVotes | number }}
+						</span>
+					</a>
+					<a title="Down Votes">
+						<span class="icon-vote-down"></span>
+						<span class="comment-votes">
+							{{ question.downVotes | number }}
+						</span>
+					</a>
+				</p>
 			</div>
-	        
+
 			<div class="replies" ng-init="replies.open = false" ng-show="replies.open">
 				<div 
 					class="reply" 

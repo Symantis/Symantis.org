@@ -72,8 +72,14 @@
 				<a ng-show="!currentUser" ng-click="loginModal()">Login</a>
 			</h4>
 			<p>
-				<a >Sort by <span class="icon-vote-down icon"></span></a>
+				<a dropdown-toggle="#news-comments-sort-menu">Sort by <span class="icon-vote-down icon"></span></a>
 			</p>
+			<div class="sort-container news-comments-sort" id="news-comments-sort-menu">
+		        <ul class="sort-menu">
+		            <li><a class="active">Most Recent <span class="icon-check icon"></span></a></li>
+		            <li><a >Most Popular <span class="icon-check icon"></span></a></li>
+		        </ul>
+		    </div>
 		</div>
 		
 		<div 

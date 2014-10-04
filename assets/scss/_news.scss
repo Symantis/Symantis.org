@@ -419,6 +419,15 @@
 			}
 		}
 	}
+	.news-comments-sort {
+		top: 85px !important;
+		left: auto !important;
+		right: 0 !important;
+		border-radius: 4px;
+	}
+	.news-comments-sort:after, .news-comments-sort:before {
+		left: 120px;
+	}
 	.replies {
 		.new-comment {
 			padding-top: rem-calc(10px);

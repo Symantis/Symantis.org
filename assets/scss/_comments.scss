@@ -4,6 +4,7 @@
 	padding-top: rem-calc(40px);
 	margin-bottom: rem-calc(20px);
 	border-bottom: rem-calc(1px) $light solid;
+	position: relative;
 	h4 {
 		@include font-semi(rem-calc(18px));
 		padding: 0;
