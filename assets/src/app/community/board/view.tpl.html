@@ -1,26 +1,27 @@
 <article class="row board-page">
 	<div class="medium-12 columns">
-
-	    <div class="news-post-content">
-	    	<!-- <section class="news-page-hero">
-		    	
-		        <img ng-show="article.img" ng-src="{{ article.img }}">
-		        
-		    </section> -->
-	        <section class="news-page-header">
+	    <div class="board-post-content">
+	        <section class="board-page-header">
 		        <h3>{{ board.title }}</h3>
 		    </section>
-		    <!-- <section class="news-page-body">
-		        <p>{{ article.description }}</p>
+		    <section class="board-page-body">
+		        <p>{{ board.opportunity }}</p>
+		        <div class="image-thumbs" ng-show="board.imgs">
+		        	<div class="thumbnail-container" ng-repeat="img in board.imgs">
+		        		<a title="View {{ img.name }}">
+		                    <img ng-src="{{ img.src }}" />
+		                </a>
+		        	</div>
+			    </div>
 		    </section>
-	        <section class="news-page-footer">
-				<div class="news-page-share">
+	        <section class="board-page-footer">
+				<div class="board-page-share">
 	                <div class="twitter-share">
 	                    <a title="Share on Twitter">
 	                        <div class="icon-social-twitter icon"></div>
 	                    </a>
 	                    <div class="share-count">
-	                        <p>{{ article.social.twitter }}</p>
+	                        <p>{{ board.social.twitter }}</p>
 	                    </div>
 	                </div>
 	                <div class="facebook-share">
@@ -28,35 +29,35 @@
 	                        <div class="icon-social-facebook icon"></div>
 	                    </a>
 	                    <div class="share-count">
-	                        <p>{{ article.social.facebook }}</p>
+	                        <p>{{ board.social.facebook }}</p>
 	                    </div>
 	                </div>
 	            </div>
-		        <div class="news-page-details">
-		        	<div class="news-details">
-			        	<div class="news-details-pic author-{{ article.author.status }} generate-image" signature="{{ article.author.signature }}"></div>
-		                <p class="news-details-by">
-	                        <a ui-sref="profile.view({ handle: article.author.handle })">
-	                            {{ article.author.firstName }} {{ article.author.lastName }}
+		        <div class="board-page-details">
+		        	<div class="board-details">
+			        	<div class="board-details-pic author-{{ board.author.status }} generate-image" signature="{{ board.author.signature }}"></div>
+		                <p class="board-details-by">
+	                        <a ui-sref="profile.view({ handle: board.author.handle })">
+	                            {{ board.author.firstName }} {{ board.author.lastName }}
 	                        </a>
 	                    </p>
-		                <p class="news-details-on">
+		                <p class="board-details-on">
 	                        <span>
-	                            {{ article.date | date }}
+	                            {{ board.date | date }}
 	                        </span>
 	                    </p>
 	                </div>
 		        </div>
-			</section> -->
+			</section>
 	    </div>
 
-		<!-- <div class="comments-head" ng-init="comments.selected = true">
+		<div class="comments-head" ng-init="comments.selected = true">
 			<h4 class="number-comments">
 				<a 
 					ng-class="{active: comments.selected}" 
 					ng-click="comments.selected = true"
 				>
-					{{ article.comments.length }} Comment<span ng-show="article.comments.length > 1">s</span>
+					{{ board.questions.length }} Question<span ng-show="board.questions.length > 1">s</span>
 				</a>
 			</h4>
 			<h4>
@@ -76,48 +77,34 @@
 		
 		<div 
 			class="comment" 
-			ng-repeat="comment in article.comments"
+			ng-repeat="question in board.questions"
 		>
 			<div class="comment-left">
 				<div 
 					class="comment-pic generate-image" 
-					signature="{{ comment.author.signature }}"
+					signature="{{ question.author.signature }}"
 				>
 				</div>
 			</div>
 			<div class="comment-content">
 				<div class="comment-details">
 		            <p>
-		            	<a ui-sref="profile.view({ handle: comment.author.handle })">
-		            		{{ comment.author.firstName }} {{ comment.author.lastName }}
+		            	<a ui-sref="profile.view({ handle: question.author.handle })">
+		            		{{ question.author.firstName }} {{ question.author.lastName }}
 		            	</a>
 		            	&middot;
-		            	<span>{{ comment.date | date }}</span>
+		            	<span>{{ question.date | date }}</span>
 		            </p>
 		        </div>
 				<p class="comment-text">
-					{{ comment.comment }}
-				</p>
-				<p class="comment-reply">
-					<a title="Up Votes">
-						<span class="icon-vote-up"></span>
-						<span class="comment-votes">
-							{{ comment.upVotes | number }}
-						</span>
-					</a>
-					<a title="Down Votes">
-						<span class="icon-vote-down"></span>
-						<span class="comment-votes">
-							{{ comment.downVotes | number }}
-						</span>
-					</a>
+					{{ question.question }}
 				</p>
 			</div>
 	        
 			<div class="replies" ng-init="replies.open = false" ng-show="replies.open">
 				<div 
 					class="reply" 
-					ng-repeat="reply in comment.replies"
+					ng-repeat="reply in question.replies"
 				>
 					<div class="reply-push">
 						<div class="icon-indent icon">
@@ -175,8 +162,8 @@
 	        >
 	        	<div class="reply-toggle">
 					<p>
-						<span ng-show="comment.replies.length > 0">Add/View Replies ({{ comment.replies.length }})</span>
-						<span ng-show="comment.replies.length < 1">Reply</span>
+						<span ng-show="question.replies.length > 0">Add/View Replies ({{ question.replies.length }})</span>
+						<span ng-show="question.replies.length < 1">Reply</span>
 					</p>
 				</div>
 			</a>
@@ -190,9 +177,9 @@
 			</a>
 		</div>
 
-		<div class="view-more-comments" ng-show="article.comments.length > 12">
+		<div class="view-more-comments" ng-show="board.questions.length > 12">
 			<a >
-				<p>More Comments</p>
+				<p>More Questions</p>
 			</a>
 		</div>
 
@@ -210,14 +197,14 @@
 		        		{{ currentUser.firstName }} {{ currentUser.lastName }}
 		        	</a>
 		        </p>
-				<textarea name="new-comment-input" placeholder="Add Comment.."></textarea>
+				<textarea name="new-comment-input" placeholder="Ask Question.."></textarea>
 				<a ><div class="new-comment-submit"><span class="icon-plus"></span></div></a>
 			</form>
 		</div>
 
 		<div class="comments-noUser" ng-show="!currentUser">
-			<h4><a ui-sref="register">Sign up</a> or <a ng-click="loginModal()">Login</a> to Comment</h4>
-		</div> -->
+			<h4><a ui-sref="register">Sign up</a> or <a ng-click="loginModal()">Login</a> to ask a question.</h4>
+		</div>
 
 	</div>
 </article>
