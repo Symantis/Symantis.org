@@ -34,6 +34,9 @@
 			    </div>
 				<textarea name="new-opportunity-input" placeholder="Whats the Opportunity?"></textarea>
 			</div>
+			<tags-input class="new-opportunity-tag" ng-model="newQuery.tags">
+	            <auto-complete source="loadTags($query)"></auto-complete>
+	        </tags-input>
 			<div class="new-opportunity-post">
 				<p><a class="sy-button">Post</a></p>
 			</div>
