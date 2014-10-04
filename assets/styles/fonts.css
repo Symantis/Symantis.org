@@ -260,3 +260,6 @@
 .icon-click-hand:before {
   content: "I";
 }
+.icon-arrow-up:before {
+  content: "H";
+}
