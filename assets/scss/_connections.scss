@@ -206,6 +206,24 @@
 			float: left;
 			margin: 0;
 		}
+		.connection-type {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			border-radius: 50%;
+			top: 5px ;
+			left: 15px;
+			border: 1px black solid;
+			background-color: $offWhite;
+			opacity: 1;
+			margin: 0;
+			padding: 0;
+			.icon {
+				padding: 6px 5px 6px 5px;
+				display: block;
+				line-height: 10px;
+			}
+		}
 		.connections-name {
 			padding-left: rem-calc(10px);
 			line-height: rem-calc(24px);

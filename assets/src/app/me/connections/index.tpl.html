@@ -42,6 +42,7 @@
                 class="animate-repeat connections-individual medium-6 columns"
                 ng-repeat="user in users | filter:query track by $index"
             >
+                <div class="connection-type"><span class="icon-2way icon"></span></div>
                 <div class="connections-pic connections-{{ user.status }} generate-image" signature="{{ user.signature }}"></div>
                 <h2 class="connections-name">
                     <a 
