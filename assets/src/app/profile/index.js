@@ -48,9 +48,9 @@ angular.module( 'symantis.profile', [
 		.state('profile.view',{
 			url: ':handle',
 			resolve : {
-			    user : function($stateParams, UserModel) {
+			    user : function($stateParams) {
 			        return { handle: $stateParams.handle };
-			                //return UserModel.getOneByHandle($stateParams.handle);
+			        //return UserModel.getOneByHandle($stateParams.handle);
 			    }
 		    },
 			views: {
@@ -157,8 +157,9 @@ angular.module( 'symantis.profile', [
 
 	
 })
-.controller( 'ProfileHeaderCtrl', function ProfileHeaderController( $scope, user ) {
+.controller( 'ProfileHeaderCtrl', function ProfileHeaderController( $scope, user) {
 	$scope.user = user;
+
 })
 .controller( 'ProfileLeftsideCtrl', function ProfileLeftsideController( $scope ) {
 

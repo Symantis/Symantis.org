@@ -1,4 +1,15 @@
 module.exports = {
+	getLike: function(req, res) {
+		User.find({ handle: { 'like': '%'+req.param('handle')+'%' }})
+		.exec(function(err, users){
+			if(err){
+
+			}
+			else{
+				res.json(users);
+			}
+		});
+	},
 	getAll: function(req, res) {
 		User.getAll()
 		.spread(function(models) {

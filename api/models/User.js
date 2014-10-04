@@ -92,7 +92,6 @@ module.exports = {
 			return [model];
 		});
 	},
-
 	getOneByHandle: function(handle) {
 		return User.findOne({ handle: handle })
 		//.populate('connections')

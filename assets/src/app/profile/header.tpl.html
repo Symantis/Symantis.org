@@ -3,7 +3,7 @@
 	<a 
 		ui-sref="profile.view"
 	>
-	<span>@{{ user.handle }}</span></a>
+	<span>{{ user.at || '@' }}{{ user.handle }}</span></a>
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a 

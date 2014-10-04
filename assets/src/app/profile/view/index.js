@@ -5,14 +5,14 @@ angular.module( 'symantis.profile.view', [
 	
 })
 
-.controller( 'ProfileViewCtrl', function ProfileViewController($scope, user, titleService, $state, $stateParams, UserModel) {
+.controller( 'ProfileViewCtrl', function ProfileViewController($http, $scope, user, titleService, $state, $stateParams, UserModel) {
 	
 		
 	$scope.user = user;
-	
-	UserModel.getOneByHandle($stateParams.handle).then(function(model){
-		console.log($scope.user);
-		$scope.user = model;
+
+	$http.get('/api/user/handle/' + user.handle).then(function(res){
+		console.log(res.data);
+		$scope.user = res.data;
 	});
 	
 
