@@ -55,14 +55,14 @@
                 <article ng-repeat="query in queries track by query.id | filter:queryValue " class="animate-repeat querie-overview">
                     <div class="querie-overview-main">
                         <h3>
-                            <a ui-sref="community.queries.view({id: query.id, title: query.clean() })">
+                            <a ui-sref="community.queries.view({id: query.id, title: query.clean })">
                                 {{ query.title }}
                             </a>
                         </h3>
                         <div class="querie-tags">
                             <ul>
                                 <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
-                                    <a ui-sref="community.tags.view({ tag:tag.text })" title="View content tagged with {{ tag.title }}">
+                                    <a ui-sref="community.tags.view({ tag:tag.text })" title="View content tagged with {{ tag.text }}">
                                         <p>{{ tag.text }}</p>
                                     </a>
                                 </li>
@@ -78,7 +78,7 @@
                                 </p>
                             </li>
                             <li class="querie-replys">
-                                <a ui-sref="community.queries.view({id: query.id, title: query.clean() })" title="View Responses">
+                                <a ui-sref="community.queries.view({id: query.id, title: query.clean })" title="View Responses">
                                     <div class="icon-reply icon"></div>
                                     <p class="querie-replys-num">
                                         {{ query.totalResponses || 0 }}

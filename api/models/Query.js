@@ -13,6 +13,9 @@ module.exports = {
   			type: 'string',
 			required: true
 		},
+		clean: {
+			type: 'string'
+		},
 		category: {
 			collection: 'category',
 			via: 'title'

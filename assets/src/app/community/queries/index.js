@@ -17,12 +17,13 @@ angular.module( 'symantis.community.queries', [
 	});
 })
 */
-.controller( 'QueriesCtrl', function QueriesController( $http, $scope, titleService, cache ) {
+.controller( 'QueriesCtrl', function QueriesController( $http, $scope, $state, titleService, cache ) {
 	titleService.setTitle('Queries');
 
 
 	 $scope.searchQueries = function(query) {
 	 	console.log(query);
+	 	$state.go('community.queries');
 	    return $http.get('/api/query/like/' + query).then(function(res){
 	      //var queries = [];
 	      console.log(res.data);

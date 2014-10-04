@@ -46,6 +46,7 @@ module.exports = {
 		
 		var model = {
 			title: req.param('title'),
+			clean: req.param('title').replace(/[\s]/g, '-'),
 			query: req.param('query'),
 			tags: req.param('tags'),
 			author: author

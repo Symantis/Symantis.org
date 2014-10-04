@@ -3,7 +3,7 @@
 		<section class="querie-header">
 		    <div class="querie-header-title">
 		        <h3>
-		        	<a ui-sref="community.queries.view({id: query.id, title: query.clean() })">
+		        	<a ui-sref="community.queries.view({id: query.id, title: query.clean })">
 		        		{{ query.title }}
 		        	</a>
 		        </h3>
@@ -26,7 +26,7 @@
 			<div class="querie-tags">
 	            <ul>
 	                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
-	                    <a ui-sref="community.tags.view({ tag:tag.title })" title="View content tagged with {{ tag.title }}">
+	                    <a ui-sref="community.tags.view({ tag:tag.text })" title="View content tagged with {{ tag.text }}">
 	                        <p>{{ tag.text }}</p>
 	                    </a>
 	                </li>
@@ -80,6 +80,7 @@
 	        </ul>
 	    </div>
 	</div>
+	
 	<div class="new-response" ng-show="currentUser && !comments.selected">
 		<form class="new-response-form">
 			<p class="new-response-title">
@@ -270,7 +271,9 @@
 			<p>More Responses</p>
 		</a>
 	</div>
-
+	<div ng-show="comments.selected && (!query.responses || query.responses.length == 0)">
+		<p>Be the first to respond!</p>
+	</div>
 	<div class="response-noUser" ng-show="!currentUser">
 		<h4><a ui-sref="register">Sign up</a> or <a ng-click="loginModal()">Login</a> to Respond</h4>
 	</div>

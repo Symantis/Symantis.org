@@ -137,7 +137,10 @@ angular.module( 'symantis', [
 	$rootScope.user = {};
 	$rootScope.users = aUsers;
 	$rootScope.cachedUsers = []; 
+
+	$rootScope.query = {};
 	$rootScope.queries = aQueries;
+	
 	$rootScope.articles = aArticles;
 	$rootScope.opportunities = aOpportunities;
 	$rootScope.alerts =  [];
@@ -533,9 +536,7 @@ var aQueries = [
 	{
 		id: 1,
 		title: 'Problems with installation of Symantis v 2.0 on Windows 8',
-		clean: function(){
-			return this.title.replace(/[\s]/g, '-');
-		},
+		clean: 'test-test-test',
 		category: {
 			title: 'Question'
 		},
@@ -636,9 +637,7 @@ var aQueries = [
 	{
 		id: 2,
 		title: 'Symantis quick install on RasPi',
-		clean: function(){
-			return this.title.replace(/[\s]/g, '-');
-		},
+		clean: 'test-test-test',
 		category: {
 			title: 'Question'
 		},
@@ -726,9 +725,7 @@ var aQueries = [
 	{
 		id: 3,
 		title: 'Working together on different platforms',
-		clean: function(){
-			return this.title.replace(/[\s]/g, '-');
-		},
+		clean: 'test-test-test',
 		category: {
 			title: 'Question'
 		},
@@ -930,9 +927,7 @@ var aQueries = [
 	{
 		id: 4,
 		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
-		clean: function(){
-			return this.title.replace(/[\s]/g, '-');
-		},
+		clean: 'test-test-test',
 		category: {
 			title: 'Question'
 		},
@@ -1059,9 +1054,7 @@ var aQueries = [
 	{
 		id: 5,
 		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
-		clean: function(){
-			return this.title.replace(/[\s]/g, '-');
-		},
+		clean: 'test-test-test',
 		category: {
 			title: 'Question'
 		},
@@ -1114,9 +1107,7 @@ var aQueries = [
 	{
 		id: 6,
 		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
-		clean: function(){
-			return this.title.replace(/[\s]/g, '-');
-		},
+		clean: 'test-test-test',
 		category: {
 			title: 'Question'
 		},
@@ -1218,9 +1209,7 @@ var aQueries = [
 	{
 		id: 7,
 		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
-		clean: function(){
-			return this.title.replace(/[\s]/g, '-');
-		},
+		clean: 'test-test-test',
 		category: {
 			title: 'Question'
 		},
