@@ -20,7 +20,17 @@ module.exports = {
 	},
 
 	getOneByHandle: function(req, res) {
+		User.findOne({ handle: req.param('handle') })
+		.exec(function(err,user){
+			if(err){
 
+			}
+			else{
+				res.json(user);
+			}
+		});
+
+		/*
 		User.getOneByHandle(req.param('handle'))
 		.spread(function(model) {
 			res.json(model);
@@ -30,6 +40,7 @@ module.exports = {
 			//res.send(404);
 			res.serverError(err);
 		});
+		*/
 
 	},
 

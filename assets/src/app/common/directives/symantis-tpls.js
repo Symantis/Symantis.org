@@ -129,6 +129,26 @@ angular.module('sy.templates.inputs', [])
             }
         });
     };
+})
+.directive('same', function () {
+  return {
+    require: '?ngModel',
+    restrict: 'A',
+    scope: { same: '=' },
+    link: function (scope, elem, attrs, ctrl) {
+        if(!ctrl) { 
+            return; 
+        }
+        scope.$watch(
+          function() {
+            return (ctrl.$pristine && angular.isUndefined(ctrl.$modelValue)) || scope.same === ctrl.$modelValue;
+          },
+          function(currentValue) {
+            ctrl.$setValidity('same', currentValue);
+          }
+        );
+    }
+  }
 });
 
 angular.module('sy.templates.sitenav', [])

@@ -1,7 +1,7 @@
 /**
- * QueryController
+ * CategoryController
  *
- * @description :: Server-side logic for managing queries
+ * @description :: Server-side logic for managing categories
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 

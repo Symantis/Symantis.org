@@ -21,7 +21,7 @@ angular.module( 'symantis', [
 	'ngTagsInput',
 	'pascalprecht.github-adapter',
 	'angular-markdown',
-	'directives.inputMatch',
+	//'directives.inputMatch',
 	
 	'symantis.global.modals',
 
@@ -139,6 +139,7 @@ angular.module( 'symantis', [
 	$rootScope.queries = aQueries;
 	$rootScope.articles = aArticles;
 	$rootScope.opportunities = aOpportunities;
+	$rootScope.alerts =  [];
 })
 /*
 .config(function config( $stateProvider ) {

@@ -42,8 +42,9 @@ module.exports.routes = {
 
 
   // Custom routes here...
-    //**User Autocompletes
-    'get /api/tags/:tag': 'UserController.autoCompleteTags',
+    //**Tag Autocompletes
+    'get /api/tags/:tag': 'TagController.autoCompleteTags',
+    
     'get /api/system/commits': 'UserController.getRecentCommits',
 
     /**
@@ -64,6 +65,16 @@ module.exports.routes = {
     'get /api/message/:id': 'MessageController.getOne',
     'post /api/message': 'MessageController.create',
     'delete /api/message/:id': 'MessageController.destroy',
+
+    /**
+     * Query routes
+     *
+     */
+    'get /api/query': 'QueryController.getAll',
+    'get /api/query/like/:title': 'QueryController.getLike',
+    'get /api/query/:id': 'QueryController.getOne',
+    'post /api/query': 'QueryController.create',
+    'delete /api/query/:id': 'QueryController.destroy',
 
 
   // If a request to a URL doesn't match any of the custom routes above, it is matched 

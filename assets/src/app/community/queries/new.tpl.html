@@ -1,65 +1,108 @@
-
-<div class="small-12 columns">
-
-	<input 
-				type="text" 
-				name="title"
-				placeholder="Query Title"
-				ng-model="newQuery.title"
-			>
-	<markdown extensions="github, table">
-# Example
-
-This is an **example**. Markdown goes `here`.
-
-## Table
-
-| Col 1   | Col 2                                              |
-|======== |====================================================|
-|**bold** | ![Valid XHTML] (http://w3.org/Icons/valid-xhtml10) |
-| Plain   | Value
-    </markdown>
-</div>
 <div class="medium-12 columns new-query-page">
 	<h3>New Query as <a ui-sref="me">{{ currentUser.firstName }} {{ currentUser.lastName }}</a></h3>
-
-	<div class="new-query">
+	
+	<div class="query-page new-query">
 		<form class="new-query-form" name="newQueryForm">
-	        <div class="new-query-inner">
-	        	<div class="query-options">
-			        <ul>
-			        	<li class="query-options-edit">
-			        		<a title="Insert Text" class="selected">
-			        			<span class="text-icon">Aa</span>
-			        		</a>
-			        	</li>
-				        <li class="query-options-link">
-							<a title="Insert Link">
-			        			<span class="icon-link"></span>
-							</a>
-			        	</li>
-			        	<li class="query-options-image">
-			        		<a title="Insert Image">
-			        			<span class="icon-photo"></span>
-			        		</a>
-			        	</li>
-			        	<li class="query-options-code">
-			        		<a title="Insert Code Snippet">
-			        			<span class="icon-code-snippet"></span>
-			        		</a>
-			        	</li>
-			        </ul>
-			    </div>
-				<textarea name="new-query-input" placeholder="Whats your Query?"></textarea>
+			<div 
+				ng-init="newQuery.preview = false"
+				ng-show="newQuery.preview"
+				class="query-post preview"
+			>
+				<section class="querie-header">
+				    <div class="querie-header-title">
+				        <h3>
+				        	<a>
+				        		{{ newQuery.title || "Add a title"}}
+				        	</a>
+				        </h3>
+				    </div>
+				</section>
+				<section class="query-content">
+					<div class="query-content-main">
+						<markdown ng-model="newQuery.query" strip="true" extensions="github, table">
+						Add Some Markdown!
+						</markdown>
+					</div>
+				</section>
+				<section class="query-footer">	
+					<div class="querie-tags">
+			            <ul>
+			                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in newQuery.tags">
+			                    <a title="View content tagged with {{ tag.title }}">
+			                        <p>{{ tag.text }}</p>
+			                    </a>
+			                </li>
+			            </ul>
+					</div>
+				</section>
 			</div>
-			<tags-input class="new-query-tag" ng-model="currentUser.tags">
-	            <auto-complete source="loadTags($query)"></auto-complete>
-	        </tags-input>
+			<div 
+				class="query-post preview"
+				ng-hide="newQuery.preview"
+			>
+				<input 
+					type="text" 
+					name="title"
+					placeholder="Query Title"
+					ng-model="newQuery.title"
+					required
+				>
+		        <div class="new-query-inner">
+		        	<div class="query-options">
+				        <ul>
+				        	<li class="query-options-edit">
+				        		<a title="Insert Text" class="selected">
+				        			<span class="text-icon">Aa</span>
+				        		</a>
+				        	</li>
+					        <li class="query-options-link">
+								<a title="Insert Link">
+				        			<span class="icon-link"></span>
+								</a>
+				        	</li>
+				        	<li class="query-options-image">
+				        		<a title="Insert Image">
+				        			<span class="icon-photo"></span>
+				        		</a>
+				        	</li>
+				        	<li class="query-options-code">
+				        		<a title="Insert Code Snippet">
+				        			<span class="icon-code-snippet"></span>
+				        		</a>
+				        	</li>
+				        </ul>
+				    </div>
+					<textarea 
+						name="newQuery" 
+						placeholder="Whats your Query?"
+						ng-model="newQuery.query"
+						required
+					></textarea>
+				</div>
+				<tags-input class="new-query-tag" ng-model="newQuery.tags">
+		            <auto-complete source="loadTags($query)"></auto-complete>
+		        </tags-input>
+	        </div>
 			<div class="new-query-post">
-				<p><a class="sy-button">Post</a></p>
+				<p>
+					<a 
+						class="sy-button"
+						ng-click="submitQuery(newQueryForm)"
+					>
+						Post
+					</a>
+				</p>
 			</div>
 			<div class="new-query-preview">
-				<p><a class="sy-button">Preview</a></p>
+				<p>
+					<a 
+						ng-click="newQuery.preview = !newQuery.preview"
+						class="sy-button" 
+					>
+						<span ng-hide="newQuery.preview">Preview</span>
+						<span ng-show="newQuery.preview">Edit</span>
+					</a>
+				</p>
 			</div>
 		</form>
 	</div>

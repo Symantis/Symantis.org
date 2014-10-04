@@ -22,7 +22,16 @@
                 <li class="queries-sort"><a dropdown-toggle="#querie-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
             <div class="sub-nav-search">
-                <input class="sub-search-field" ng-model="query" type="search" name="sub-search-field" placeholder="Search" />
+                <input 
+                    class="sub-search-field" 
+                    type="search" 
+                    name="subSearchField" 
+                    placeholder="Search" 
+                    ng-model="queryValue"
+                    typeahead="query.id as query.title for query in searchQueries($viewValue) | filter:$viewValue" typeahead-loading="loadingQueries"
+                />
+                <i ng-show="loadingQueries" class="icon-refresh icon"></i>
+
             </div>
             <ul class="queries-sub-nav-right" ng-show="currentUser">
                 <li class="queries-new"><a ui-sref="community.queries.new" title="New Query"><span class="icon-plus"></span></a></li>
@@ -37,10 +46,13 @@
                 <li><a >Unanswered <span class="icon-check icon"></span></a></li>
             </ul>
         </div>
+        <section class="clearfix">
+            <alert class="animate-repeat" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        </section>
         <!-- Section for main center content -->
         <div class="row" ui-view="queries">
             <div class="medium-12 columns queries-main-container">
-                <article ng-repeat="query in queries | filter:query" class="animate-repeat querie-overview">
+                <article ng-repeat="query in queries | filter:queryValue" class="animate-repeat querie-overview">
                     <div class="querie-overview-main">
                         <h3>
                             <a ui-sref="community.queries.view({id: query.id, title: query.clean() })">
