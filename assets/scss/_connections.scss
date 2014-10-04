@@ -211,10 +211,10 @@
 			height: 30px;
 			position: absolute;
 			border-radius: 50%;
-			top: 5px ;
-			left: 15px;
+			top: 4px ;
+			left: 14px;
 			border: 1px black solid;
-			background-color: $offWhite;
+			background-color: white;
 			opacity: 1;
 			margin: 0;
 			padding: 0;
@@ -223,6 +223,7 @@
 				display: block;
 				line-height: 10px;
 				font-size: rem-calc(18px);
+				color: black;
 			}
 		}
 		.connections-name {
