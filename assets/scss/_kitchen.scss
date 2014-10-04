@@ -175,7 +175,7 @@
 	left: 0;
 	top: 0;
 }
-.code-snippet {
+pre {
 	width: 100%;
 	background-color: #f8f8f8;
 	border: rem-calc(1px) solid #dfdfdf;
@@ -185,7 +185,7 @@
 	border-bottom-right-radius: rem-calc(5px);
 	border-top-right-radius: rem-calc(5px);
 	max-height: rem-calc(400px);
-	overflow: scroll;
+	overflow: auto;
 	code {
 		padding: none;
 		border: none;

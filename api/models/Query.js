@@ -64,13 +64,14 @@ module.exports = {
 	},
 	getAll: function() {
 		return Query.find()
+		.populate('author')
 		.then(function (models) {
 			return [models];
 		});
 	},
 	getOne: function(id) {
 		return Query.findOne(id)
-		//.populate('connections')
+		.populate('author')
 		.then(function (model) {
 			return [model];
 		});

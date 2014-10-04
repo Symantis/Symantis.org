@@ -12,6 +12,16 @@ module.exports = {
 			type: 'int',
 			defaultsTo: 0
 		},
+		voters: {
+			collection: 'user',
+			via: 'handle'
+		},
+		/*
+		voters: {
+			collection: 'user',
+			via: 'id'
+		},
+		*/
 		solution: {
 			type: 'boolean',
 			defaultsTo: false

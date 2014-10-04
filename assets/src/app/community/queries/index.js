@@ -42,13 +42,28 @@ angular.module( 'symantis.community.queries', [
 
 	
 })
-.controller( 'QueriesViewCtrl', function QueriesViewController( $scope, titleService, $state, $stateParams  ) {
+.controller( 'QueriesViewCtrl', function QueriesViewController($http, $scope, titleService, $state, $stateParams, query, cache ) {
+	
+	$scope.query = query;
+
+
+	var inCache = cache.checkQueryCache($scope.cachedQueries, query.id);
+	if(inCache){
+		$scope.query = cache.getCachedQuery($scope.cachedQueries, query.id);
+	}else{
+		$http.get('/api/query/' + query.id).then(function(res){
+			$scope.query = res.data;
+			cache.cacheNewQuery($scope.cachedQueries, $scope.query);
+		});
+	}
+	/*
 	for(var i in $scope.queries){
 		if ($scope.queries[i].id == $stateParams.id){
 			$scope.query = $scope.queries[i];
 			break;
 		};
 	}
+	*/
 
 	titleService.setTitle('Query: ' + $scope.query.title);
 
@@ -89,6 +104,10 @@ angular.module( 'symantis.community.queries', [
 	}
 
 	
+})
+.controller( 'QueriesMineCtrl', function QueriesMineController($scope, titleService) {
+	titleService.setTitle('My Queries');
+
 })
 .controller( 'CommunityQueriesLeftsideCtrl', function CommunityQueriesLeftsideController( $scope ) {
 	//titleService.setTitle('About');

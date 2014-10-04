@@ -73,6 +73,12 @@ angular.module( 'symantis.community', [
 		})
 		.state( 'community.queries.view', {
 			url: '/:id/:title',
+			resolve : {
+			    query : function($stateParams) {
+			        return { id: $stateParams.id, clean: $stateParams.title };
+			        //return UserModel.getOneByHandle($stateParams.handle);
+			    }
+		    },
 			views: {
 				"queries@community.queries": {
 					controller: 'QueriesViewCtrl',
@@ -86,6 +92,15 @@ angular.module( 'symantis.community', [
 				"queries@community.queries": {
 					controller: 'QueriesNewCtrl',
 					templateUrl: 'community/queries/new.tpl.html'
+				}
+			}
+		})
+		.state( 'community.queries.mine', {
+			url: '/mine',
+			views: {
+				"queries@community.queries": {
+					controller: 'QueriesMineCtrl',
+					templateUrl: 'community/queries/mine.tpl.html'
 				}
 			}
 		})
@@ -104,6 +119,10 @@ angular.module( 'symantis.community', [
 		})
 		.state( 'community.board.view', {
 			url: '/:id/:title',
+			opportunity : function($stateParams) {
+			        return { id: $stateParams.id, clean: $stateParams.title };
+			        //return UserModel.getOneByHandle($stateParams.handle);
+			},
 			views: {
 				"board@community.board": {
 					controller: 'BoardViewCtrl',

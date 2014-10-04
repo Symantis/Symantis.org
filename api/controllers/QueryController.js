@@ -7,7 +7,9 @@
 
 module.exports = {
 	getLike: function(req, res) {
-		Query.find({ title: { 'like': '%'+req.param('title')+'%' }})
+		Query
+		.find({ title: { 'like': '%'+req.param('title')+'%' }})
+		.populate('author')
 		.exec(function(err,queries){
 			if(err){
 
@@ -31,6 +33,20 @@ module.exports = {
 	},
 
 	getOne: function(req, res) {
+		/*
+		Query
+		.find({id: req.param('id')})
+		.populate('author')
+		.exec(function(err, queries){
+			if(err){
+
+			}
+			else{
+				res.json(queries[0]);
+			}
+		});
+*/
+		
 		Query.getOne(req.param('id'))
 		.spread(function(model) {
 			Query.subscribe(req.socket, model);
@@ -39,6 +55,7 @@ module.exports = {
 		.fail(function(err) {
 			res.send(404);
 		});
+		
 	},
 
 	create: function (req, res) {

@@ -28,7 +28,7 @@ module.exports = {
 		return Message.find()
 		// TODO: sort by createdAt DESC does not work here, something to do with a camelCase key names bug
 		.sort({createdAt: 'desc'})
-		.populate('user')
+		//.populate('user')
 		.then(function (models) {
 			return [models];
 		});
@@ -36,7 +36,7 @@ module.exports = {
 
 	getOne: function(id) {
 		return Message.findOne(id)
-		.populate('user')
+		//.populate('user')
 		.then(function (model) {
 			// you have the option to do something with the model here if needed, before returning it to the controller
 			return [model];

@@ -140,9 +140,13 @@ angular.module( 'symantis', [
 
 	$rootScope.query = {};
 	$rootScope.queries = aQueries;
+	$rootScope.cachedQueries = [];
 	
 	$rootScope.articles = aArticles;
+	$rootScope.opportunity = {};
 	$rootScope.opportunities = aOpportunities;
+	$rootScope.cachedOpportunities = [];
+	
 	$rootScope.alerts =  [];
 })
 /*
