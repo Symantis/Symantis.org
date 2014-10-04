@@ -260,10 +260,9 @@
 				z-index: 999;
 				//overflow: hidden;
 				top: 55px !important;
-				right: -4px !important;
+				right: -6px !important;
 				left: auto !important;
-				width: rem-calc(150px);
-				//height: rem-calc(200px);
+				width: 154px;
 				background-color: white;
 				border-bottom-right-radius: 4px;
 				border-bottom-left-radius: 4px;
@@ -276,76 +275,81 @@
 					float: left;
 					position: relative;
 					margin: 0;
-					padding: 0 10px 0 10px;
+					padding: 7px 10px 4px 10px;
 					li {
 						width: 100%;
 						float: left;
 						border-bottom: rem-calc(1px) $light solid;
 						text-align: left;
 						@include transition(100ms);
+						padding: 8px 5px 8px 5px;
+						//border-radius: 3px;
 						a {
 							@include font-regular(rem-calc(12px));
 							color: $dark;
-							padding: rem-calc(4px) rem-calc(4px) rem-calc(5px) rem-calc(13px);
-							width: 100%;
+							padding-top: 3px;
+							padding-bottom: 3px;
+							padding-left: 23px;
+							padding-right: 14px;
+							width: 152px;
 							float: left;
+							margin-left: -15px;
+							margin-right: -15px;
 							@include transition(100ms);
+							.icon {
+								float: right;
+								position: relative;
+								font-size: rem-calc(14px);
+								margin-bottom: -5px;
+								display: none;
+							}
+							&:hover {
+								background-color: $primary-color;
+								color: white;
+							}
 						}
 						&.header-balance {
-							a {
-								span {
-									background-color: $light;
-									border-radius: 2px;
-									padding: 2px 6px 2px 6px;
-									color: $dark;
-									margin-left: 5px;
-									font-size: rem-calc(11px);
-								}
+							span {
+								background-color: $light;
+								border-radius: 2px;
+								padding: 2px 6px 2px 6px;
+								color: white;
+								margin-left: 5px;
+							}
+						}
+						.active {
+							.icon {
+								display: block;
 							}
 						}
 						&:first-child {
 							border-bottom: none;
-							a {
-								padding-top: rem-calc(12px);
-							}
+							padding-bottom: 0;
 						}
 						&:nth-child(2) {
-							a {
-								padding-bottom: rem-calc(12px);
-							}
+							padding-top: 0;
 						}
 						&:nth-child(3) {
 							border-bottom: none;
-							a {
-								padding-top: rem-calc(12px);
-							}
+							padding-bottom: 0;
 						}
 						&:nth-child(4) {
+							padding-top: 0;
 							border-bottom: none;
+							padding-bottom: 0;
 						}
 						&:nth-child(5) {
-							a {
-								padding-bottom: rem-calc(12px);
-							}
+							padding-top: 0;
 						}
 						&:last-child {
 							border-bottom: none;
-							a {
-								padding: rem-calc(12px) rem-calc(4px) rem-calc(13px) rem-calc(13px);
-							}
-						}
-						&:hover {
-							//background-color: $primary-color;
-							a {
-								color: $primary-color;
-							}
 						}
 					}
 				}
 			}
 			.settings-dropdown-container:after, .settings-dropdown-container:before {
 				bottom: 100%;
-				left: 137px;
+				left: 140px;
 				border: solid transparent;
 				content: " ";
 				height: 0;
