@@ -5,15 +5,20 @@ angular.module( 'symantis.profile.view', [
 	
 })
 
-.controller( 'ProfileViewCtrl', function ProfileViewController($http, $scope, user, titleService, $state, $stateParams, UserModel) {
+.controller( 'ProfileViewCtrl', function ProfileViewController($http, $scope, user, titleService, $state, $stateParams, UserModel, cache) {
 	
 		
 	$scope.user = user;
 
-	$http.get('/api/user/handle/' + user.handle).then(function(res){
-		console.log(res.data);
-		$scope.user = res.data;
-	});
+	var inCache = cache.checkUserCache($scope.cachedUsers, user.handle);
+	if(inCache){
+		$scope.user = cache.getCachedUser($scope.cachedUsers, user.handle);
+	}else{
+		$http.get('/api/user/handle/' + user.handle).then(function(res){
+			$scope.user = res.data;
+			cache.cacheNewUser($scope.cachedUsers, $scope.user);
+		});
+	}
 	
 
 	titleService.setTitle($scope.user.firstName+'\'s' + ' Profile');

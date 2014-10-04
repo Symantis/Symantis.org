@@ -136,6 +136,7 @@ angular.module( 'symantis', [
 	$rootScope.currentUser = window.currentUser;
 	$rootScope.user = {};
 	$rootScope.users = aUsers;
+	$rootScope.cachedUsers = []; 
 	$rootScope.queries = aQueries;
 	$rootScope.articles = aArticles;
 	$rootScope.opportunities = aOpportunities;
