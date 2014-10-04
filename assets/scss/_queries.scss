@@ -260,9 +260,9 @@
 						}
 					}
 				}
-				.code-snippet {
+				code {
 					margin-top: rem-calc(20px);
-					float: left;
+					//float: left;
 					position: relative;
 				}
 				.image-thumbs {
@@ -443,10 +443,10 @@
 				margin-bottom: rem-calc(8px);
 				border-bottom: rem-calc(1px) $gray solid;
 			}
-			.code-snippet {
+			code {
 				margin-top: rem-calc(7px);
 				margin-bottom: rem-calc(7px);
-				float: left;
+				//float: left;
 				//background-color: darken($offWhite, 10%);
 			}
 			.image-thumbs {

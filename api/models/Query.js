@@ -18,7 +18,7 @@ module.exports = {
 			via: 'title'
 		},
 		tags: {
-			type: 'array',
+			type: 'json',
 			defaultsTo: []
 		},
 		author:{
@@ -33,7 +33,7 @@ module.exports = {
 			type: 'int',
 			defaultsTo: 0
 		},
-		totalView: {
+		totalViews: {
 			type: 'int',
 			defaultsTo: 0
 		},
@@ -58,6 +58,19 @@ module.exports = {
 			via: 'id'
 		}
 
+	},
+	getAll: function() {
+		return Query.find()
+		.then(function (models) {
+			return [models];
+		});
+	},
+	getOne: function(id) {
+		return Query.findOne(id)
+		//.populate('connections')
+		.then(function (model) {
+			return [model];
+		});
 	}
 };
 

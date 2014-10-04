@@ -541,15 +541,15 @@ var aQueries = [
 		},
 		tags: [
 			{
-				title: 'Admin',
+				text: 'Admin',
 				privillege: 'admin',
 			},
 			{
-				title: 'v2.0',
+				text: 'v2.0',
 				privillege: 'none',
 			},
 			{
-				title: 'Install',
+				text: 'Install',
 				privillege: 'none',
 			}
 		],
@@ -644,15 +644,15 @@ var aQueries = [
 		},
 		tags: [
 			{
-				title: 'Admin',
+				text: 'Admin',
 				privillege: 'admin',
 			},
 			{
-				title: 'v2.0',
+				text: 'v2.0',
 				privillege: 'none',
 			},
 			{
-				title: 'Install',
+				text: 'Install',
 				privillege: 'none',
 			}
 		],
@@ -734,15 +734,15 @@ var aQueries = [
 		},
 		tags: [
 			{
-				title: 'Question',
+				text: 'Question',
 				privillege: 'none',
 			},
 			{
-				title: 'v2.0',
+				text: 'v2.0',
 				privillege: 'none',
 			},
 			{
-				title: 'Install',
+				text: 'Install',
 				privillege: 'none',
 			}
 		],
@@ -938,15 +938,15 @@ var aQueries = [
 		},
 		tags: [
 			{
-				title: 'Question',
+				text: 'Question',
 				privillege: 'none',
 			},
 			{
-				title: 'v2.0',
+				text: 'v2.0',
 				privillege: 'none',
 			},
 			{
-				title: 'Install',
+				text: 'Install',
 				privillege: 'none',
 			}
 		],
@@ -1067,15 +1067,15 @@ var aQueries = [
 		},
 		tags: [
 			{
-				title: 'Question',
+				text: 'Question',
 				privillege: 'none',
 			},
 			{
-				title: 'v2.0',
+				text: 'v2.0',
 				privillege: 'none',
 			},
 			{
-				title: 'Install',
+				text: 'Install',
 				privillege: 'none',
 			}
 		],
@@ -1122,15 +1122,15 @@ var aQueries = [
 		},
 		tags: [
 			{
-				title: 'Question',
+				text: 'Question',
 				privillege: 'none',
 			},
 			{
-				title: 'v2.0',
+				text: 'v2.0',
 				privillege: 'none',
 			},
 			{
-				title: 'Install',
+				text: 'Install',
 				privillege: 'none',
 			}
 		],
@@ -1226,15 +1226,15 @@ var aQueries = [
 		},
 		tags: [
 			{
-				title: 'Question',
+				text: 'Question',
 				privillege: 'none',
 			},
 			{
-				title: 'v2.0',
+				text: 'v2.0',
 				privillege: 'none',
 			},
 			{
-				title: 'Install',
+				text: 'Install',
 				privillege: 'none',
 			}
 		],

@@ -28,7 +28,7 @@
                     name="subSearchField" 
                     placeholder="Search" 
                     ng-model="queryValue"
-                    typeahead="query.id as query.title for query in searchQueries($viewValue) | filter:$viewValue" typeahead-loading="loadingQueries"
+                    ng-search="searchQueries(queryValue)"
                 />
                 <i ng-show="loadingQueries" class="icon-refresh icon"></i>
 
@@ -52,7 +52,7 @@
         <!-- Section for main center content -->
         <div class="row" ui-view="queries">
             <div class="medium-12 columns queries-main-container">
-                <article ng-repeat="query in queries | filter:queryValue" class="animate-repeat querie-overview">
+                <article ng-repeat="query in queries track by query.id | filter:queryValue " class="animate-repeat querie-overview">
                     <div class="querie-overview-main">
                         <h3>
                             <a ui-sref="community.queries.view({id: query.id, title: query.clean() })">
@@ -62,8 +62,8 @@
                         <div class="querie-tags">
                             <ul>
                                 <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
-                                    <a ui-sref="community.tags.view({ tag:tag.title })" title="View content tagged with {{ tag.title }}">
-                                        <p>{{ tag.title }}</p>
+                                    <a ui-sref="community.tags.view({ tag:tag.text })" title="View content tagged with {{ tag.title }}">
+                                        <p>{{ tag.text }}</p>
                                     </a>
                                 </li>
                             </ul>
@@ -74,14 +74,14 @@
                             <li class="querie-views">
                                 <div class="icon-view icon"></div>
                                 <p class="querie-views-num">
-                                    {{ query.totalViews | number }}
+                                    {{ query.totalViews || 0 }}
                                 </p>
                             </li>
                             <li class="querie-replys">
                                 <a ui-sref="community.queries.view({id: query.id, title: query.clean() })" title="View Responses">
                                     <div class="icon-reply icon"></div>
                                     <p class="querie-replys-num">
-                                        {{ query.responses.length }}
+                                        {{ query.totalResponses || 0 }}
                                     </p>
                                 </a>
                             </li>

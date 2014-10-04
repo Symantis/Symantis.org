@@ -11,10 +11,8 @@
 		</section>
 		<section class="query-content">
 			<div class="query-content-main">
-				<p class="query-content-p">{{ query.query }}<br /><a >Find it here. Link Example.</a></p>
-				<div class="code-snippet">
-					<code>Sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code sample code </code>
-		        </div>
+				<markdown ng-model="query.query" strip="true" extensions="github, table">
+				</markdown>
 		        <div class="image-thumbs" ng-show="query.imgs">
 		        	<div class="thumbnail-container" ng-repeat="img in query.imgs">
 		        		<a title="View {{ img.name }}">
@@ -29,7 +27,7 @@
 	            <ul>
 	                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
 	                    <a ui-sref="community.tags.view({ tag:tag.title })" title="View content tagged with {{ tag.title }}">
-	                        <p>{{ tag.title }}</p>
+	                        <p>{{ tag.text }}</p>
 	                    </a>
 	                </li>
 	            </ul>

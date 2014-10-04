@@ -130,6 +130,19 @@ angular.module('sy.templates.inputs', [])
         });
     };
 })
+.directive('ngSearch', function() {
+    return {
+    require: 'ngModel',
+    restrict: 'A',
+    link: function (scope, element, attrs, modelCtrl) {
+        element.bind("keyup", function(event) {    
+            scope.$apply(function(){
+               scope.$eval(attrs.ngSearch, {'event': event});
+            });
+        });
+    }
+  }
+})
 .directive('same', function () {
   return {
     require: '?ngModel',

@@ -17,20 +17,24 @@ angular.module( 'symantis.community.queries', [
 	});
 })
 */
-.controller( 'QueriesCtrl', function QueriesController( $http, $scope, titleService ) {
+.controller( 'QueriesCtrl', function QueriesController( $http, $scope, titleService, cache ) {
 	titleService.setTitle('Queries');
 
 
 	 $scope.searchQueries = function(query) {
+	 	console.log(query);
 	    return $http.get('/api/query/like/' + query).then(function(res){
-	      var queries = [];
+	      //var queries = [];
 	      console.log(res.data);
 	      angular.forEach(res.data, function(item){
-	        queries.push({id: item.id, title: item.title});
+	      	if(!cache.checkQueryCache($scope.queries, item.id)){
+	      		return cache.cacheNewQuery($scope.queries, item);
+	      	}
+	        //queries.push({id: item.id, title: item.title});
 	        //$scope.queries.push(item);
 	      });
 
-	      return queries;
+	      //return queries;
 	    });
 	  };
 

@@ -11,7 +11,22 @@ angular.module( 'services.cache', ['lodash'])
 		},
 		getCachedUser: function(users, identifier){
 			return _.find(users, {handle: identifier});
-		}
+		},
+		cacheUser: function(users, user){
+			_.map(users,function(user){
+     			return (el==='a') ? x : el;
+			})
+		},
+
+
+
+		checkQueryCache: function(queries, id){
+			return _.some(queries, {id: id});
+		},
+		cacheNewQuery: function(queries, query){
+			return queries.push(query);
+		},
+
 	};
 
 });
