@@ -1,6 +1,6 @@
 <header class="profile-left-user left-header">
     <h3>
-        {{ user.firstName + ' ' + user.lastName }}
+        {{ user.firstName || user.handle}} {{ user.lastName }}
     </h3>
     <small>{{ user.at }}{{ user.handle }}</small>
     <div class="profile-pic">
