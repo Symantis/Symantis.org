@@ -47,13 +47,15 @@
             </div>
 		</section>
 	</div>
-	<div class="comments-head" ng-init="comments.selected = true">
+	<div 
+		class="comments-head" 
+	>
 		<h4 class="number-comments">
 			<a 
 				ng-class="{active: comments.selected}" 
 				ng-click="comments.selected = true"
 			>
-				{{ query.responses.length }} Response<span ng-show="query.responses.length > 1">s</span>
+				{{ query.responses.length || 0 }} Response<span ng-show="query.responses.length != 1">s</span>
 			</a>
 		</h4>
 		<h4>

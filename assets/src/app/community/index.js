@@ -60,6 +60,15 @@ angular.module( 'symantis.community', [
 		})
 		.state( 'community.queries', {
 			url: '/queries',
+			resolve: {
+				queries : function($rootScope, QueryModel) {
+			        if($rootScope.queries.length == 0){
+			        	return QueryModel.getAll();
+			    	}else{
+			    		return $rootScope.queries;
+			    	}
+				}
+			},
 			views: {
 				"main@": {
 					controller: 'QueriesCtrl',
@@ -106,6 +115,12 @@ angular.module( 'symantis.community', [
 		})
 		.state( 'community.board', {
 			url: '/board',
+			resolve: {
+				opportunities : function() {
+				        return {};
+				        //return UserModel.getOneByHandle($stateParams.handle);
+				}
+			},
 			views: {
 				"main@": {
 					controller: 'BoardCtrl',
@@ -119,9 +134,11 @@ angular.module( 'symantis.community', [
 		})
 		.state( 'community.board.view', {
 			url: '/:id/:title',
-			opportunity : function($stateParams) {
-			        return { id: $stateParams.id, clean: $stateParams.title };
-			        //return UserModel.getOneByHandle($stateParams.handle);
+			resolve: {
+				opportunity : function($stateParams) {
+				        return { id: $stateParams.id, clean: $stateParams.title };
+				        //return UserModel.getOneByHandle($stateParams.handle);
+				}
 			},
 			views: {
 				"board@community.board": {

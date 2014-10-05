@@ -8,6 +8,10 @@
 module.exports = {
 
 	attributes: {
+		rid: {
+  			type: 'integer',
+    		autoIncrement: true
+  		},
 		votes: {
 			type: 'int',
 			defaultsTo: 0

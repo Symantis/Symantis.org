@@ -1,6 +1,6 @@
 angular.module( 'services.cache', ['lodash'])
 
-.service('cache', function(lodash, config, $timeout) {
+.service('cache', function(lodash, config, $timeout, QueryModel) {
 
 	return {
 		checkUserCache: function(users, identifier){
@@ -18,8 +18,13 @@ angular.module( 'services.cache', ['lodash'])
 			})
 		},
 
-
-
+		cacheQueries: function(queries){
+			if(queries.length == 0){
+				return queries = QueryModel.getAll();
+			}else{
+			    return queries;
+			}
+		},
 		checkQueryCache: function(queries, id){
 			return _.some(queries, {id: id});
 		},

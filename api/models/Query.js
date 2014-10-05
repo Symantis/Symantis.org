@@ -8,7 +8,10 @@
 module.exports = {
 
 	attributes: {
-  	
+  		qid: {
+  			type: 'integer',
+    		autoIncrement: true
+  		},
   		title: {
   			type: 'string',
 			required: true
@@ -58,8 +61,9 @@ module.exports = {
 		},
 		responses: {
 			collection: 'response',
-			via: 'id'
+			via: 'rid'
 		}
+
 
 	},
 	getAll: function() {
@@ -72,9 +76,24 @@ module.exports = {
 	getOne: function(id) {
 		return Query.findOne(id)
 		.populate('author')
+		//.populate('responses')
 		.then(function (model) {
+			model.totalViews = model.totalViews + 1;
+			Query.addViewCount(id, model.totalViews);
 			return [model];
 		});
+	},
+	addViewCount: function(id, views){
+		//[model].totalViews = [model].totalViews++;
+		//Query.addViewCount(id, [model].totalViews);
+		console.log(views);
+		Query.update(id, { totalViews: views })
+		.exec(function(err, models){
+			if (err) {
+				return res.serverError(err);
+			}
+		});
+		
 	}
 };
 

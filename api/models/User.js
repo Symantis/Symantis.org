@@ -2,6 +2,10 @@ var bcrypt = require('bcrypt');
 
 module.exports = {
 	attributes: {
+		uid: {
+  			type: 'integer',
+    		autoIncrement: true
+  		},
 		handle: {
 			type: 'string',
 			required: true,

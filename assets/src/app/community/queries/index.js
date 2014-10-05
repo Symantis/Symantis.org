@@ -17,9 +17,10 @@ angular.module( 'symantis.community.queries', [
 	});
 })
 */
-.controller( 'QueriesCtrl', function QueriesController( $http, $scope, $state, titleService, cache ) {
+.controller( 'QueriesCtrl', function QueriesController( $http, $scope, $state, titleService, queries, cache ) {
 	titleService.setTitle('Queries');
 
+	$scope.queries = queries;
 
 	 $scope.searchQueries = function(query) {
 	 	console.log(query);
@@ -67,6 +68,11 @@ angular.module( 'symantis.community.queries', [
 
 	titleService.setTitle('Query: ' + $scope.query.title);
 
+	$scope.comments = {};
+	$scope.comments.selected = true;
+	if(!query.responses || query.responses.length == 0){
+		$scope.comments.selected = false;
+	}
 	
 })
 .controller( 'QueriesNewCtrl', function QueriesNewController( $http, $scope, titleService, QueryModel, utils ) {
