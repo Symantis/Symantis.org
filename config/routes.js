@@ -74,6 +74,7 @@ module.exports.routes = {
     'get /api/query/like/:title': 'QueryController.getLike',
     'get /api/query/:id': 'QueryController.getOne',
     'post /api/query': 'QueryController.create',
+    'post /api/query/update': 'QueryController.update',
     'delete /api/query/:id': 'QueryController.destroy',
 
 

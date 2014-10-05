@@ -13,7 +13,7 @@ module.exports = {
     		autoIncrement: true
   		},
 		votes: {
-			type: 'int',
+			type: 'integer',
 			defaultsTo: 0
 		},
 		voters: {

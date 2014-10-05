@@ -36,11 +36,11 @@ module.exports = {
 			defaultsTo: 0.00
 		},
 		totalResponses: {
-			type: 'int',
+			type: 'integer',
 			defaultsTo: 0
 		},
 		totalViews: {
-			type: 'int',
+			type: 'integer',
 			defaultsTo: 0
 		},
 		imgs: {
@@ -78,7 +78,7 @@ module.exports = {
 		.populate('author')
 		//.populate('responses')
 		.then(function (model) {
-			model.totalViews = model.totalViews + 1;
+			model.totalViews = parseInt(model.totalViews) + 1;
 			Query.addViewCount(id, model.totalViews);
 			return [model];
 		});
@@ -92,8 +92,12 @@ module.exports = {
 			if (err) {
 				return res.serverError(err);
 			}
+			else{
+				Query.publishUpdate(id, { totalViews: views });
+			}
 		});
 		
-	}
+	},
+
 };
 

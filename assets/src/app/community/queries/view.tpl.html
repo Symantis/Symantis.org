@@ -3,10 +3,17 @@
 		<section class="querie-header">
 		    <div class="querie-header-title">
 		        <h3>
+		        	
 		        	<a ui-sref="community.queries.view({id: query.id, title: query.clean })">
 		        		{{ query.title || query.clean }}
 		        	</a>
 		        </h3>
+		        <a 
+		        	ng-if="query.author.id == currentUser.id"
+		        	ui-sref="community.queries.edit({ id: query.id })"
+		        >
+		        	Edit
+		        </a>
 		    </div>
 		</section>
 		<section class="query-content">
@@ -25,7 +32,7 @@
 		<section class="query-footer">
 			<div class="querie-tags">
 	            <ul>
-	                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
+	                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags track by $index">
 	                    <a ui-sref="community.tags.view({ tag:tag.text })" title="View content tagged with {{ tag.text }}">
 	                        <p>{{ tag.text }}</p>
 	                    </a>

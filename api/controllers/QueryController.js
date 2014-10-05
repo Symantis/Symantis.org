@@ -80,7 +80,32 @@ module.exports = {
 			}
 		});
 	},
+	update: function (req, res) {
+		var id = req.param('id');
+		if (!id) {
+			return res.badRequest('No id provided.');
+		}
+		
+		var model = {
+			title: req.param('title'),
+			clean: req.param('title').replace(/[\s]/g, '-'),
+			query: req.param('query'),
+			tags: req.param('tags')
+		}
 
+		Query.update(id, model)
+		.exec(function(err, query) {
+			if (err) {
+				return console.log(err);
+			}
+			else {
+				Query.publishUpdate(id, model);
+				res.json(model);
+			}
+		});
+
+	},
+	
 	destroy: function (req, res) {
 		var id = req.param('id');
 		if (!id) {

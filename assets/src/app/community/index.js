@@ -61,12 +61,8 @@ angular.module( 'symantis.community', [
 		.state( 'community.queries', {
 			url: '/queries',
 			resolve: {
-				queries : function($rootScope, QueryModel) {
-			        if($rootScope.queries.length == 0){
-			        	return QueryModel.getAll();
-			    	}else{
-			    		return $rootScope.queries;
-			    	}
+				queries : function($rootScope, cache) {
+					return cache.cacheQueries($rootScope.queries);
 				}
 			},
 			views: {
@@ -92,6 +88,23 @@ angular.module( 'symantis.community', [
 				"queries@community.queries": {
 					controller: 'QueriesViewCtrl',
 					templateUrl: 'community/queries/view.tpl.html'
+				}
+			}
+		})
+		.state( 'community.queries.edit', {
+			url: '/:id',
+			resolve : {
+			    query : function($stateParams) {
+			        return { id: $stateParams.id };
+			        
+			        //return { id: $stateParams.id, clean: $stateParams.title };
+			        //return UserModel.getOneByHandle($stateParams.handle);
+			    }
+		    },
+			views: {
+				"queries@community.queries": {
+					controller: 'QueriesEditCtrl',
+					templateUrl: 'community/queries/edit.tpl.html'
 				}
 			}
 		})
@@ -185,7 +198,7 @@ angular.module( 'symantis.community', [
 })
 .controller( 'CommunityHeaderCtrl', function CommunityHeaderController( $scope, $state, titleService ) {
 	$scope.$state = $state;
-	console.log($scope.$state);
+	//console.log($scope.$state);
 	//titleService.setTitle('About');
 })
 .controller( 'CommunityLeftsideCtrl', function CommunityLeftsideController( $scope ) {

@@ -17,7 +17,7 @@ angular.module( 'symantis.community.queries', [
 	});
 })
 */
-.controller( 'QueriesCtrl', function QueriesController( $http, $scope, $state, titleService, queries, cache ) {
+.controller( 'QueriesCtrl', function QueriesController( $http, $sails, $scope, $state, titleService, queries, cache ) {
 	titleService.setTitle('Queries');
 
 	$scope.queries = queries;
@@ -40,31 +40,35 @@ angular.module( 'symantis.community.queries', [
 	    });
 	  };
 
+	$sails.on('query', function (envelope) {
+		switch(envelope.verb) {
+			
+			case 'created':
+				cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'addedTo':
+				//cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'updated':
+				cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
+				//lodash.
+				//$scope.queries.unshift(envelope.data);
+				break;
+			case 'destroyed':
+				cache.removeQueryFromCache($scope.queries, envelope.id);
+				
+				break;
+		}
+	});
 
 	
 })
 .controller( 'QueriesViewCtrl', function QueriesViewController($http, $scope, titleService, $state, $stateParams, query, cache ) {
 	
 	$scope.query = query;
-
-
-	var inCache = cache.checkQueryCache($scope.cachedQueries, query.id);
-	if(inCache){
-		$scope.query = cache.getCachedQuery($scope.cachedQueries, query.id);
-	}else{
-		$http.get('/api/query/' + query.id).then(function(res){
-			$scope.query = res.data;
-			cache.cacheNewQuery($scope.cachedQueries, $scope.query);
-		});
-	}
-	/*
-	for(var i in $scope.queries){
-		if ($scope.queries[i].id == $stateParams.id){
-			$scope.query = $scope.queries[i];
-			break;
-		};
-	}
-	*/
+	$scope.query = cache.resolveQueryCache($scope.queries, query.id);
 
 	titleService.setTitle('Query: ' + $scope.query.title);
 
@@ -74,6 +78,42 @@ angular.module( 'symantis.community.queries', [
 		$scope.comments.selected = false;
 	}
 	
+})
+.controller( 'QueriesEditCtrl', function QueriesEditController( $http, $scope, query, titleService, cache, QueryModel, utils ) {
+	
+	$scope.query = query;
+	$scope.query = cache.resolveQueryCache($scope.queries, query.id);
+	
+	$scope.editQuery = {
+		preview: false,
+		title: $scope.query.title,
+		query: $scope.query.query,
+		tags: $scope.query.tags || []
+	}
+
+	titleService.setTitle('Edit Query');
+
+	$scope.loadTags = function(query) {
+		return $http.get('/api/tags/' + query);
+	};
+
+	$scope.updateQuery = function(form){
+		if(form.$valid){
+			var model = {
+				id: $scope.query.id,
+				title: $scope.editQuery.title,
+				query: $scope.editQuery.query,
+				tags: angular.toJson($scope.editQuery.tags),
+			}
+
+			console.log(model);
+			QueryModel.update(model).then(function (newModel){
+				utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your Query was updated successfully.' } );	
+			});
+		}else{
+			utils.sectionAlert($scope.alerts, { type: 'alert', msg: 'Opps, some things are missing... Try again' } );
+		}
+	}
 })
 .controller( 'QueriesNewCtrl', function QueriesNewController( $http, $scope, titleService, QueryModel, utils ) {
 
