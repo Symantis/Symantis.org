@@ -2,8 +2,7 @@ angular.module( 'symantis.me', [
 	'symantis.me.connections',
 	'symantis.me.settings',
 	'symantis.me.manti',
-	'symantis.me.activity',
-	'symantis.me.sykit'
+	'symantis.me.activity'
 ])
 
 .config(function config($stateProvider, $urlRouterProvider ) {
