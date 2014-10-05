@@ -12,9 +12,6 @@ angular.module( 'symantis.profile', [
 			resolve : {
 			    users : function(UserModel) {
 			        return UserModel.getAll();
-			    },
-			    user : function(){
-			    	return {};
 			    }
 		    },
 			views: {
@@ -49,6 +46,7 @@ angular.module( 'symantis.profile', [
 			url: ':handle',
 			resolve : {
 			    user : function($stateParams) {
+			        console.log($stateParams);
 			        return { handle: $stateParams.handle };
 			        //return UserModel.getOneByHandle($stateParams.handle);
 			    }
@@ -151,9 +149,33 @@ angular.module( 'symantis.profile', [
 	;
 })
 
-.controller( 'ProfileCtrl', function ProfileController( $scope, titleService, users ) {
+.controller( 'ProfileCtrl', function ProfileController( $sails, $scope, titleService, users, cache ) {
 	titleService.setTitle('Profile');
 	$scope.users = users;
+
+
+	$sails.on('user', function (envelope) {
+		switch(envelope.verb) {
+			
+			case 'created':
+				cache.cacheuserUser($scope.users, envelope.data);
+				
+				break;
+			case 'addedTo':
+				//cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'updated':
+				cache.cacheUpdatedUser($scope.users, envelope.id, envelope.data);
+				//lodash.
+				//$scope.queries.unshift(envelope.data);
+				break;
+			case 'destroyed':
+				cache.removeUserFromCache($scope.users, envelope.id);
+				
+				break;
+		}
+	});
 
 	
 })

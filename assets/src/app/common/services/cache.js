@@ -4,13 +4,14 @@ angular.module( 'services.cache', ['lodash'])
 
 	return {
 		
-		resolveUserCache: function(users, id){
-			if(this.checkUserCache(users, id)){
-				return this.getCachedUser(users, id);
+		resolveUserCache: function(users, handle){
+			if(this.checkUserCache(users, handle)){
+				return this.getCachedUser(users, handle);
 			}else{
 				 var self = this;
-				 return UserModel.getOne(id).then(function(user){
-				 	self.cacheUserQuery(users, user);
+				 console.log(handle);
+				 return UserModel.getOneHandle(handle).then(function(user){
+				 	self.cacheNewUser(users, user);
 				 	console.log(user);
 				 	return user;
 				 });
@@ -19,21 +20,16 @@ angular.module( 'services.cache', ['lodash'])
 		checkUserCache: function(users, identifier){
 			return _.some(users, {handle: identifier});
 		},
-		cacheUpdatedUser: function(users, id, data){
-			var user = _.find(users, {id: id});
+		cacheUpdatedUser: function(users, handle, data){
+			var user = _.find(users, {handle: handle});
 					   _.merge(user, data);
 			return users;
 		},
 		cacheNewUser: function(users, user){
 			return users.push(user);
 		},
-		getCachedUser: function(users, identifier){
-			return _.find(users, {handle: identifier});
-		},
-		cacheUser: function(users, user){
-			_.map(users,function(u){
-     			return (u.handle === user.handle) ? user : u;
-			})
+		getCachedUser: function(users, handle){
+			return _.find(users, {handle: handle});
 		},
 
 		resolveQueryCache: function(queries, id){

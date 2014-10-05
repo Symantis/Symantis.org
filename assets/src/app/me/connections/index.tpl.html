@@ -22,7 +22,14 @@
                 <li class="connections-sort"><a dropdown-toggle="#connections-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
             <div class="sub-nav-search">
-                <input class="sub-search-field" ng-model="query" type="search" name="sub-search-field" placeholder="Search" />
+                <input 
+                    class="sub-search-field" 
+                    ng-model="queryValue" 
+                    type="search" 
+                    name="sub-search-field" 
+                    placeholder="Search" 
+                    ng-search="searchConnections(queryValue)"
+                />
             </div>
             <ul class="connections-sub-nav-right" ng-show="currentUser">
                 <li class="connections-new"><a title="New Connection" ng-click="searchModal()"><span class="icon-plus"></span></a></li>
@@ -40,7 +47,7 @@
         <div class="row connections-container">
             <article 
                 class="animate-repeat connections-individual medium-6 columns"
-                ng-repeat="user in users | filter:query track by $index"
+                ng-repeat="user in users | filter:queryValue track by $index"
             >
                 <div class="connection-type"><span class="icon-2way icon"></span></div>
                 <div class="connections-pic connections-{{ user.status }} generate-image" signature="{{ user.signature }}"></div>

@@ -95,11 +95,13 @@ module.exports = {
 		.then(function (model) {
 			return [model];
 		});
+
 	},
 	getOneByHandle: function(handle) {
 		return User.findOne({ handle: handle })
 		//.populate('connections')
 		.then(function (model) {
+			console.log(model);
 			return [model];
 		});
 	}

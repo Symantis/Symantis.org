@@ -251,6 +251,7 @@ var oCurrentUser = {
 	signature: Math.random()
 }
 var aUsers = [
+	/*
 	{
 		id: 1, 
 		firstName: "Hamish",
@@ -308,6 +309,7 @@ var aUsers = [
 			}
 		]
 	},
+	*/
 	{
 		id: 2, 
 		firstName: "Scott",

@@ -25,7 +25,14 @@
                 <li class="board-sort"><a dropdown-toggle="#board-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
             <div class="sub-nav-search">
-                <input class="sub-search-field" type="search" name="sub-search-field" ng-model="query" placeholder="Search" />
+                <input 
+                    class="sub-search-field" 
+                    type="search" 
+                    name="sub-search-field" 
+                    ng-model="queryValue"
+                    placeholder="Search"
+                    ng-search="searchOpportunities(queryValue)" 
+                />
             </div>
             <ul class="board-sub-nav-right" ng-show="currentUser">
                 <li class="board-new"><a ui-sref="community.board.new" title="New Opportunity"><span class="icon-plus"></span></a></li>
@@ -51,7 +58,7 @@
             <div class="gutter-sizer"></div>
             <div 
                 masonry-tile 
-                ng-repeat="board in opportunities | filter:query" 
+                ng-repeat="board in opportunities | filter:queryValue" 
                 class="animate-repeat tile board-pod-wrap"
                 ng-init="pod.active = true"
                 ng-class="{deactivate: !pod.active}"
