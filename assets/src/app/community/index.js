@@ -91,12 +91,20 @@ angular.module( 'symantis.community', [
 				}
 			}
 		})
+		.state( 'community.queries.new', {
+			url: '/new',
+			views: {
+				"queries@community.queries": {
+					controller: 'QueriesNewCtrl',
+					templateUrl: 'community/queries/new.tpl.html'
+				}
+			}
+		})
 		.state( 'community.queries.edit', {
 			url: '/:id',
 			resolve : {
 			    query : function($stateParams) {
 			        return { id: $stateParams.id };
-			        
 			        //return { id: $stateParams.id, clean: $stateParams.title };
 			        //return UserModel.getOneByHandle($stateParams.handle);
 			    }
@@ -105,15 +113,6 @@ angular.module( 'symantis.community', [
 				"queries@community.queries": {
 					controller: 'QueriesEditCtrl',
 					templateUrl: 'community/queries/edit.tpl.html'
-				}
-			}
-		})
-		.state( 'community.queries.new', {
-			url: '/new',
-			views: {
-				"queries@community.queries": {
-					controller: 'QueriesNewCtrl',
-					templateUrl: 'community/queries/new.tpl.html'
 				}
 			}
 		})
