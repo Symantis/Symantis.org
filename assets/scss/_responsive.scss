@@ -143,6 +143,11 @@ and (max-width : rem-calc(1024px)) {
 			}
 		}
 	}
+	.settings-row {
+		.editable-option {
+			width: 200px;
+		}
+	}
 }
 
 // Desktops & Laptops & Above ----------- 

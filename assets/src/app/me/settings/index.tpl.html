@@ -56,15 +56,16 @@
 
         <section class="settings-row">
             <p class="settings-title">Description:</p>
-          
-                <input  
-                    class="settings-option"
-                    type="text"
-                    value="{{ currentUser.professed }}"
-                ></input>
-          
+            <div class="editable-option">
+                <p  class="settings-option"
+                    editable-textarea="currentUser.professed" 
+                    e-ng-maxlength="140" 
+                    e-cols="20"
+                    onaftersave="updateUser()"
+                >{{ currentUser.professed || "Write a short description!" }}</p>
+            </div>
         </section>
-
+        
         
 
         <p 

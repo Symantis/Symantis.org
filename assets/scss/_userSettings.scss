@@ -8,6 +8,8 @@ Build date: 2014-01-10
 	margin:0;
 	width: 100%;
 	height: auto;
+	display: inline-block;
+	white-space: nowrap;
 }
 .editable-wrap .editable-controls,.editable-wrap .editable-error{
 	margin-bottom:0;
@@ -17,16 +19,33 @@ Build date: 2014-01-10
 }
 .editable-wrap .editable-input{
 	width: 100%;
-	position: relative;
 	height: auto;
+	@include font-regular(rem-calc(14px));
+	color: $dark;
+	padding: 5px 10px 5px 10px;
+	line-height: 1.4;
+	display: inline-block;
 }
 .editable-buttons{
-	width: 100%;
-	text-align: right;
+	width: 200px;
+	display: inline-block;
+	vertical-align: top;
 }
 .editable-buttons button{
 	margin-left:5px;
-	float: right;
+	margin-bottom: 0;
+	padding: 5px 10px 7px 10px;
+	@include font-regular(rem-calc(12px));
+	height: auto;
+	width: auto;
+	color: $primary-color;
+	background-color: transparent;
+	border: 1px $primary-color solid;
+	@include transition(100ms);
+	&:hover {
+		background-color: $primary-color;
+		color: white;
+	}
 }
 .editable-input.editable-has-buttons{
 	width:100%;
@@ -144,21 +163,32 @@ Build date: 2014-01-10
 		width: 100px;
 		padding: 5px 0 5px 0;
 		display: inline-block;
+		vertical-align: top;
 		@include font-semi(rem-calc(12px));
 		color: $dark;
 	}
 	.editable-option {
 		display: inline-block;
-		border: 1px $light solid;
-		padding: 5px 10px 5px 10px;
-		width: calc(100% - 106px);
+		width: 300px;
+		.editable-controls {
+			textarea {
+				resize: vertical;
+			}
+		}
 	}
 	p.settings-option {
 		//width: auto;
-		display: block;
+		position: relative;
 		cursor: text;
 		@include font-regular(rem-calc(14px));
 		color: $gray;
+		padding: 5px 10px 5px 10px;
+		border: 1px darken($light, 10%) solid;
+		line-height: 1.4;
+		-webkit-box-shadow: inset 0px 0px 2px 0px rgba(50, 50, 50, 0.2);
+		-moz-box-shadow:    inset 0px 0px 2px 0px rgba(50, 50, 50, 0.2);
+		box-shadow:         inset 0px 0px 2px 0px rgba(50, 50, 50, 0.2);
+		@include transition(100ms);
 	}
 }
 
