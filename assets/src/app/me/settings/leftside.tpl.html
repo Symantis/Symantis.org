@@ -1,11 +1,16 @@
 <!-- Section for main left header -->
-        <header class="left-header">
-            <h3><a >Title</a></h3>
-        </header>
-        <div class="left-content">
-            <div class="connections-online-nav">
-                <ul>
-                    
-                </ul>
-            </div>
-        </div>
+<header class="left-header settings-left-header">
+</header>
+<div class="left-content">
+    <div class="settings-category-nav">
+        <ul ng-if="currentUser">
+            <li><a class="selected">General</a></li>
+            <li><a >Account Settings</a></li>
+            <li><a >Emails</a></li>
+            <li><a >Notifications</a></li>
+            <li><a >Security</a></li>
+            <li><a >Manti</a></li>
+            <li><a >Sy.Kit</a></li>
+        </ul>
+    </div>
+</div>
