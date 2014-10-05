@@ -61,7 +61,7 @@
                         </h3>
                         <div class="querie-tags">
                             <ul>
-                                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags">
+                                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags track by $index">
                                     <a ui-sref="community.tags.view({ tag:tag.text })" title="View content tagged with {{ tag.text }}">
                                         <p>{{ tag.text }}</p>
                                     </a>

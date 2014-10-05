@@ -91,6 +91,15 @@ angular.module( 'symantis.community', [
 				}
 			}
 		})
+		.state( 'community.queries.mine', {
+			url: '/mine',
+			views: {
+				"queries@community.queries": {
+					controller: 'QueriesMineCtrl',
+					templateUrl: 'community/queries/mine.tpl.html'
+				}
+			}
+		})
 		.state( 'community.queries.new', {
 			url: '/new',
 			views: {
@@ -116,15 +125,7 @@ angular.module( 'symantis.community', [
 				}
 			}
 		})
-		.state( 'community.queries.mine', {
-			url: '/mine',
-			views: {
-				"queries@community.queries": {
-					controller: 'QueriesMineCtrl',
-					templateUrl: 'community/queries/mine.tpl.html'
-				}
-			}
-		})
+		
 		.state( 'community.board', {
 			url: '/board',
 			resolve: {
