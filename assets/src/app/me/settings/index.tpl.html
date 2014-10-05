@@ -20,29 +20,52 @@
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center connections-center" ui-view="settings">
     	<!-- Section for main center header -->
         <header></header>
-        <p>{{currentUser.at}}{{currentUser.handle}}</p>
-        <p>{{currentUser.status}} <span am-time-ago="currentUser.statusTime "></span></p>
 
-        <p 
-            editable-text="currentUser.firstName" 
-            e-ng-maxlength="140"
-            onaftersave="updateUser()"
+        <section class="settings-header">
+            <h3>Public Profile</h3>
+        </section>
 
-        >{{ currentUser.firstName || "First Name" }}</p>
-        <p 
-            editable-text="currentUser.lastName" 
-            e-ng-maxlength="140"
-            onaftersave="updateUser()"
+        <section class="settings-row">
+            <p class="settings-title">Handle:</p>
+            <div class="editable-option">
+                <p class="settings-option">{{currentUser.at}}{{currentUser.handle}}</p>
+            </div>
+        </section>
 
-        >{{ currentUser.lastName || "First Name" }}</p>
+        <section class="settings-row">
+            <p class="settings-title">First Name:</p>
+            <div class="editable-option">
+                <p  class="settings-option" 
+                    editable-text="currentUser.firstName" 
+                    e-ng-maxlength="140"
+                    onaftersave="updateUser()"
+                >{{ currentUser.firstName || "First Name" }}</p>
+            </div>
+        </section>
 
-        <p 
-            editable-textarea="currentUser.professed" 
-            e-ng-maxlength="140" 
-            e-cols="20"
-            onaftersave="updateUser()"
+        <section class="settings-row">
+            <p class="settings-title">Last Name:</p>
+            <div class="editable-option">
+                <p  class="settings-option"
+                    editable-text="currentUser.lastName" 
+                    e-ng-maxlength="140"
+                    onaftersave="updateUser()"
+                >{{ currentUser.lastName || "First Name" }}</p>
+            </div>
+        </section>
 
-        >{{ currentUser.professed || "Write a short description!" }}</p>
+        <section class="settings-row">
+            <p class="settings-title">Description:</p>
+          
+                <input  
+                    class="settings-option"
+                    type="text"
+                    value="{{ currentUser.professed }}"
+                ></input>
+          
+        </section>
+
+        
 
         <p 
             editable-textarea="currentUser.bio" 

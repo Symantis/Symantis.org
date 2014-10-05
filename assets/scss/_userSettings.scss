@@ -86,20 +86,19 @@ Build date: 2014-01-10
 			position: relative;
 			&:first-child {
 				a {
-					border-top: 1px $offWhite solid;
+					border-top: 1px $light solid;
 				}
 			}
 			a {
 				width: 100%;
-				padding: 10px 5px 10px 0;
+				padding: 10px 10px 10px 0;
 				margin: 0;
 				@include font-regular(12px);
 				color: $light;
 				@include transition(100ms);
 				line-height: 1.4;
 				float: left;
-				border-bottom: 1px $offWhite solid;
-
+				border-bottom: 1px $light solid;
 				&:hover {
 					color: $dark;
 				}
@@ -109,12 +108,57 @@ Build date: 2014-01-10
 					//background-color: $gray;
 					padding-left: 10px;
 					border-left: 4px $primary-color solid;
+					padding-right: 2px;
 				}
 				span {
 					float: right;
 				}
 			}
 		}
+	}
+}
+
+.settings-header {
+	padding-top: 7px;
+	padding-bottom: 8px;
+	width: 100%;
+	border-bottom: 1px $light solid;
+	margin-bottom: 17px;
+	h3 {
+		@include font-semi(rem-calc(18px));
+		color: $primary-color;
+	}
+}
+.settings-row {
+	width: 100%;
+	height: auto;
+	//padding: 20px 15px 19px 10px;
+	//border: 1px $offWhite solid;
+	padding: 20px 0 19px 0;
+	box-sizing: border-box;
+	//margin-top: -1px;
+	&:first-child(even) {
+		margin-top: 0;
+	}
+	.settings-title {
+		width: 100px;
+		padding: 5px 0 5px 0;
+		display: inline-block;
+		@include font-semi(rem-calc(12px));
+		color: $dark;
+	}
+	.editable-option {
+		display: inline-block;
+		border: 1px $light solid;
+		padding: 5px 10px 5px 10px;
+		width: calc(100% - 106px);
+	}
+	p.settings-option {
+		//width: auto;
+		display: block;
+		cursor: text;
+		@include font-regular(rem-calc(14px));
+		color: $gray;
 	}
 }
 

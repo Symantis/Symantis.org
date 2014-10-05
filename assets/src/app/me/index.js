@@ -146,19 +146,6 @@ angular.module( 'symantis.me', [
 				}
 			}
 		})
-		.state( 'me.sykit', {
-			url: '/sykit',
-			views: {
-				"main@": {
-					controller: 'SykitCtrl',
-					templateUrl: 'me/sykit/index.tpl.html'
-				},
-				"leftside@me.sykit": {
-					controller: 'SykitLeftsideCtrl',
-                	templateUrl: 'me/sykit/leftside.tpl.html'
-				}
-			}
-		})
 	;
 })
 
