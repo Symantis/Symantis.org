@@ -233,5 +233,10 @@ Build date: 2014-01-10
 		box-shadow:         inset 0px 0px 2px 0px rgba(50, 50, 50, 0.2);
 		@include transition(100ms);
 	}
+	h3.no-settings {
+		width: 100%;
+		text-align: center;
+	}
 }
+
 
