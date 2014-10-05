@@ -55,8 +55,17 @@
         </section>
 
         <section class="settings-row">
-            <p class="settings-title">Description:</p>
-            <div class="editable-option">
+            <p class="settings-title settings-large">User Tags:</p>
+            <div class="editable-option-large">
+                <tags-input ng-model="currentUser.tags" class="settings-tags-option">
+                    <auto-complete source="loadTags($query)"></auto-complete>
+                </tags-input>
+            </div>
+        </section>
+
+        <section class="settings-row">
+            <p class="settings-title settings-large">Description:</p>
+            <div class="editable-option-large">
                 <p  class="settings-option"
                     editable-textarea="currentUser.professed" 
                     e-ng-maxlength="140" 
@@ -65,19 +74,23 @@
                 >{{ currentUser.professed || "Write a short description!" }}</p>
             </div>
         </section>
+
+        <section class="settings-row">
+            <p class="settings-title settings-large">About:</p>
+            <div class="editable-option-large">
+                <p  class="settings-option" 
+                    editable-textarea="currentUser.bio" 
+                    e-cols="40"
+                    onaftersave="updateUser()"
+                >{{ currentUser.bio || "Write a bio!" }}</p>
+            </div>
+        </section>
         
         
 
-        <p 
-            editable-textarea="currentUser.bio" 
-            e-cols="40"
-            onaftersave="updateUser()"
+        
 
-        >{{ currentUser.bio || "Write a bio!" }}</p>
-
-        <tags-input ng-model="currentUser.tags">
-            <auto-complete source="loadTags($query)"></auto-complete>
-        </tags-input>
+        
 
         <!-- Section for main center content -->
     </section>

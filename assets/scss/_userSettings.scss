@@ -159,6 +159,9 @@ Build date: 2014-01-10
 	&:first-child(even) {
 		margin-top: 0;
 	}
+	&:last-child {
+		margin-bottom: 30px;
+	}
 	.settings-title {
 		width: 100px;
 		padding: 5px 0 5px 0;
@@ -166,13 +169,53 @@ Build date: 2014-01-10
 		vertical-align: top;
 		@include font-semi(rem-calc(12px));
 		color: $dark;
+		&.settings-large {
+			margin-bottom: 5px;
+		}
 	}
 	.editable-option {
 		display: inline-block;
 		width: 300px;
+	}
+	.editable-option-large {
+		display: inline-block;
+		position: relative;
+		width: calc(100% - 120px);
+		box-sizing: border-box;
+		.editable-wrap {
+			height: 80px;
+			box-sizing: border-box;
+		}
 		.editable-controls {
+			position: relative;
+			.editable-buttons {
+				position: absolute;
+				bottom: -30px;
+				right: 0;
+				text-align: right;
+			}
 			textarea {
 				resize: vertical;
+				//width: 100%;
+				height:100%;
+				margin: 0;
+				box-sizing: border-box;
+			}
+		}
+		.settings-option {
+			height: 86px;
+		}
+		.settings-tags-option {
+			border: 1px darken($light, 10%) solid;
+			-webkit-box-shadow: inset 0px 0px 2px 0px rgba(50, 50, 50, 0.2) !important;
+			-moz-box-shadow:    inset 0px 0px 2px 0px rgba(50, 50, 50, 0.2) !important;
+			box-shadow:         inset 0px 0px 2px 0px rgba(50, 50, 50, 0.2) !important;
+			@include transition(100ms);
+			.host {
+				margin: 0;
+				box-shadow: none;
+				outline: none;
+				margin: -1px;
 			}
 		}
 	}
