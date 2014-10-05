@@ -86,25 +86,29 @@ Build date: 2014-01-10
 			position: relative;
 			&:first-child {
 				a {
-					padding-top: 0;
+					border-top: 1px $offWhite solid;
 				}
 			}
 			a {
 				width: 100%;
-				padding: 10px 0 10px 0;
+				padding: 10px 5px 10px 0;
 				margin: 0;
 				@include font-regular(12px);
 				color: $light;
 				@include transition(100ms);
 				line-height: 1.4;
 				float: left;
-				border-bottom: 1px $light solid;
+				border-bottom: 1px $offWhite solid;
+
 				&:hover {
 					color: $dark;
 				}
 				&.active {
 					color: $dark;
-					border-bottom: 1px $dark solid;
+					//border-bottom: none;
+					//background-color: $gray;
+					padding-left: 10px;
+					border-left: 4px $primary-color solid;
 				}
 				span {
 					float: right;
