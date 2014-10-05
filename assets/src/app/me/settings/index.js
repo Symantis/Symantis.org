@@ -36,3 +36,21 @@ angular.module( 'symantis.me.settings', [
 .controller( 'MeSettingsLeftsideCtrl', function MeSettingsLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 })
+.controller( 'MeSettingsAccountCtrl', function MeSettingsAccountController( $scope ) {
+
+})
+.controller( 'MeSettingsEmailsCtrl', function MeSettingsEmailsController( $scope ) {
+
+})
+.controller( 'MeSettingsNotificationsCtrl', function MeSettingsNotificationsController( $scope ) {
+
+})
+.controller( 'MeSettingsSecurityCtrl', function MeSettingsSecurityController( $scope ) {
+
+})
+.controller( 'MeSettingsMantiCtrl', function MeSettingsMantiController( $scope ) {
+
+})
+.controller( 'MeSettingsSykitCtrl', function MeSettingsSykitController( $scope ) {
+
+})

@@ -79,6 +79,60 @@ angular.module( 'symantis.me', [
 				}
 			}
 		})
+		.state('me.settings.account',{
+			url: '/account',
+			views: {
+				"settings@me.settings": {
+					controller: 'MeSettingsAccountCtrl',
+					templateUrl: 'me/settings/account.tpl.html'
+				}
+			}
+		})
+		.state('me.settings.emails',{
+			url: '/emails',
+			views: {
+				"settings@me.settings": {
+					controller: 'MeSettingsEmailsCtrl',
+					templateUrl: 'me/settings/emails.tpl.html'
+				}
+			}
+		})
+		.state('me.settings.notifications',{
+			url: '/notifications',
+			views: {
+				"settings@me.settings": {
+					controller: 'MeSettingsNotificationsCtrl',
+					templateUrl: 'me/settings/notifications.tpl.html'
+				}
+			}
+		})
+		.state('me.settings.security',{
+			url: '/security',
+			views: {
+				"settings@me.settings": {
+					controller: 'MeSettingsSecurityCtrl',
+					templateUrl: 'me/settings/security.tpl.html'
+				}
+			}
+		})
+		.state('me.settings.manti',{
+			url: '/manti',
+			views: {
+				"settings@me.settings": {
+					controller: 'MeSettingsMantiCtrl',
+					templateUrl: 'me/settings/manti.tpl.html'
+				}
+			}
+		})
+		.state('me.settings.sykit',{
+			url: '/sykit',
+			views: {
+				"settings@me.settings": {
+					controller: 'MeSettingsSykitCtrl',
+					templateUrl: 'me/settings/sykit.tpl.html'
+				}
+			}
+		})
 		.state( 'me.activity', {
 			url: '/activity',
 			views: {

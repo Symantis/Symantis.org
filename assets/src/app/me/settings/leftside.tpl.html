@@ -4,13 +4,13 @@
 <div class="left-content">
     <div class="settings-category-nav">
         <ul ng-if="currentUser">
-            <li><a class="selected">General</a></li>
-            <li><a >Account Settings</a></li>
-            <li><a >Emails</a></li>
-            <li><a >Notifications</a></li>
-            <li><a >Security</a></li>
-            <li><a >Manti</a></li>
-            <li><a >Sy.Kit</a></li>
+            <li><a ui-sref="me.settings" ui-sref-active="active">General<span class="icon-right-arrow"></span></a></li>
+            <li><a ui-sref="me.settings.account" ui-sref-active="active">Account<span class="icon-right-arrow"></span></a></li>
+            <li><a ui-sref="me.settings.emails" ui-sref-active="active">Emails<span class="icon-right-arrow"></span></a></li>
+            <li><a ui-sref="me.settings.notifications" ui-sref-active="active">Notifications<span class="icon-right-arrow"></span></a></li>
+            <li><a ui-sref="me.settings.security" ui-sref-active="active">Security<span class="icon-right-arrow"></span></a></li>
+            <li><a ui-sref="me.settings.manti" ui-sref-active="active">Manti<span class="icon-right-arrow"></span></a></li>
+            <li><a ui-sref="me.settings.sykit" ui-sref-active="active">Sy.Kit<span class="icon-right-arrow"></span></a></li>
         </ul>
     </div>
 </div>
