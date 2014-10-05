@@ -43,5 +43,13 @@ angular.module('models.query', ['lodash', 'services', 'ngSails',])
 
 		return deferred.promise;
 	};
+	this.updateViews = function(newModel) {
+		var deferred = $q.defer();
+		var url = utils.prepareUrl('query/update/views');
+		$sails.post(url, newModel, function(model) {
+			return deferred.resolve(model);
+		});
+		return deferred.promise;
+	};
 
 });

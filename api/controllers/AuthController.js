@@ -128,7 +128,7 @@ var AuthController = {
         // Upon successful login, send the user to the homepage were req.user
         // will available.
         else {
-        	console.log('currently logged in user is: ' + req.user.username);
+        	console.log('currently logged in user is: ' + req.user.handle);
           
           if(req.param('refer')){
             res.redirect(req.param('refer'));

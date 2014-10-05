@@ -28,7 +28,7 @@ module.exports = {
 				}
 			});
 
-			console.log(req.user);
+			//console.log(req.user);
 		}
 		else {
 			

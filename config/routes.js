@@ -75,6 +75,7 @@ module.exports.routes = {
     'get /api/query/:id': 'QueryController.getOne',
     'post /api/query': 'QueryController.create',
     'post /api/query/update': 'QueryController.update',
+    'post /api/query/update/views': 'QueryController.updateViews',
     'delete /api/query/:id': 'QueryController.destroy',
 
 

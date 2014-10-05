@@ -9,7 +9,7 @@ angular.module( 'services.cache', ['lodash'])
 				return this.getCachedUser(users, handle);
 			}else{
 				 var self = this;
-				 console.log(handle);
+				 console.log(handle);				 
 				 return UserModel.getOneHandle(handle).then(function(user){
 				 	self.cacheNewUser(users, user);
 				 	console.log(user);
@@ -37,12 +37,21 @@ angular.module( 'services.cache', ['lodash'])
 				return this.getCachedQuery(queries, id);
 			}else{
 				 var self = this;
+				 console.log(this);
 				 return QueryModel.getOne(id).then(function(query){
-				 	self.cacheNewQuery(queries, query);
-				 	console.log(query);
+				 	//return self.cacheNewQuery(queries, query);
+				 	//console.log(query);
+				 	//queries.push(query);
 				 	return query;
 				 });
 			}
+		},
+		resolveQueriesCache: function(){
+			console.log("getting queries...");
+			return queries = QueryModel.getAll().then(function(models){
+				console.log(models);	
+				return models;
+			});
 		},
 		cacheQueries: function(queries){
 			if(queries.length == 0){
@@ -60,7 +69,9 @@ angular.module( 'services.cache', ['lodash'])
 			return queries;
 		},
 		cacheNewQuery: function(queries, query){
-			return queries.push(query);
+			
+			 queries.push(query);
+			 return query;
 		},
 		getCachedQuery: function(queries, id){
 			return _.find(queries, {id: id});

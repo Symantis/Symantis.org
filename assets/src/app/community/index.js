@@ -60,11 +60,34 @@ angular.module( 'symantis.community', [
 		})
 		.state( 'community.queries', {
 			url: '/queries',
+			
 			resolve: {
-				queries : function($rootScope, cache) {
-					return cache.cacheQueries($rootScope.queries);
+				cache : 'cache',
+				queries: function(cache, $rootScope){
+					return $rootScope.queries = cache.cacheQueries($rootScope.queries);
 				}
+				/*
+				queries : function($q, $rootScope, cache) {
+					//console.log($rootScope.queries);
+					//return cache.cacheQueries($rootScope.queries);
+					
+					
+					console.log($rootScope.queries);
+					var deferred = $q.defer();
+			        cache.cacheQueries($rootScope.queries).then(function(r) {
+			            //$rootScope.queries = r;
+			            //deferred.resolve(r);
+			            deferred.resolve(r);
+			            //$rootScope.queries = r;
+			        });
+			        return deferred.promise;
+			        
+			        
+
+				}
+				*/
 			},
+			
 			views: {
 				"main@": {
 					controller: 'QueriesCtrl',
@@ -80,8 +103,11 @@ angular.module( 'symantis.community', [
 			url: '/:id/:title',
 			resolve : {
 			    query : function($stateParams) {
-			        return { id: $stateParams.id, clean: $stateParams.title };
-			        //return UserModel.getOneByHandle($stateParams.handle);
+			    	return {id: $stateParams.id, clean: $stateParams.title};	
+			    	//console.log($stateParams);
+			    	//console.log($rootScope.queries);
+			    	//return $rootScope.query = cache.resolveQueryCache($rootScope.queries, $stateParams.id);
+			        
 			    }
 		    },
 			views: {

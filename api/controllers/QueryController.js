@@ -33,20 +33,6 @@ module.exports = {
 	},
 
 	getOne: function(req, res) {
-		/*
-		Query
-		.find({id: req.param('id')})
-		.populate('author')
-		.exec(function(err, queries){
-			if(err){
-
-			}
-			else{
-				res.json(queries[0]);
-			}
-		});
-*/
-		
 		Query.getOne(req.param('id'))
 		.spread(function(model) {
 			Query.subscribe(req.socket, model);
@@ -55,7 +41,6 @@ module.exports = {
 		.fail(function(err) {
 			res.send(404);
 		});
-		
 	},
 
 	create: function (req, res) {
@@ -105,7 +90,22 @@ module.exports = {
 		});
 
 	},
-	
+	updateViews: function (req, res) {
+		Query.addViewCount(req.param('id'));
+		res.send(200);
+		/*
+		Query.findOne(req.param('id'))
+		.exec(function( err, model ){
+			if(err){
+
+			}
+			else{
+				Query.addViewCount(model.id, model.totalViews);
+				res.send(200);
+			}
+		});
+		*/
+	},
 	destroy: function (req, res) {
 		var id = req.param('id');
 		if (!id) {

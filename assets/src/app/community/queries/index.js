@@ -17,10 +17,17 @@ angular.module( 'symantis.community.queries', [
 	});
 })
 */
-.controller( 'QueriesCtrl', function QueriesController( $http, $sails, $scope, $state, titleService, queries, cache ) {
+.controller( 'QueriesCtrl', function QueriesController( $http, $sails, $scope, $state, titleService, cache, queries ) {
 	titleService.setTitle('Queries');
 
 	$scope.queries = queries;
+	/*
+	$scope.queries = cache.cacheQueries($scope.queries).then(function(r) {
+			return r;
+	});
+	*/
+	//$scope.queries = cache.cacheQueries($scope.queries);
+	//$scope.queries = cache.resolveQueriesCache($scope.queries);
 
 	 $scope.searchQueries = function(query) {
 	 	console.log(query);
@@ -65,10 +72,13 @@ angular.module( 'symantis.community.queries', [
 
 	
 })
-.controller( 'QueriesViewCtrl', function QueriesViewController($http, $scope, titleService, $state, $stateParams, query, cache ) {
+.controller( 'QueriesViewCtrl', function QueriesViewController($scope, titleService, $state, query, cache, QueryModel ) {
 	
 	$scope.query = query;
+
 	$scope.query = cache.resolveQueryCache($scope.queries, query.id);
+	
+	QueryModel.updateViews({id: query.id });
 
 	titleService.setTitle('Query: ' + $scope.query.title);
 

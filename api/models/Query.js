@@ -78,12 +78,29 @@ module.exports = {
 		.populate('author')
 		//.populate('responses')
 		.then(function (model) {
-			model.totalViews = parseInt(model.totalViews) + 1;
-			Query.addViewCount(id, model.totalViews);
+			//model.totalViews = parseInt(model.totalViews) + 1;
+			//Query.addViewCount(id);
 			return [model];
 		});
 	},
-	addViewCount: function(id, views){
+	addViewCount: function(id){
+		return Query.findOne(id)
+		.then(function (model){
+			//console.log(model.totalViews);
+			model.totalViews = model.totalViews == null ? 1 : parseInt(model.totalViews) + 1;
+			console.log(model.totalViews);
+			Query.update(id, {totalViews: model.totalViews})
+			.exec(function (err, newModel){
+				if(err){
+					return console.log(err);
+				}
+				else{	
+					Query.publishUpdate(model.id, { totalViews: model.totalViews });
+				return;
+				}
+			});
+		});
+		/*
 		//[model].totalViews = [model].totalViews++;
 		//Query.addViewCount(id, [model].totalViews);
 		console.log(views);
@@ -96,6 +113,7 @@ module.exports = {
 				Query.publishUpdate(id, { totalViews: views });
 			}
 		});
+		*/
 		
 	},
 
