@@ -152,11 +152,13 @@ tags-input .autocomplete .suggestion-item em {
 }
 
 markdown {
-  -moz-user-select: text;
-   -khtml-user-select: auto;
-   -webkit-user-select: auto;
-   -ms-user-select: auto;
-   user-select: auto;
+  h1, h2, h3, p, li, code {
+    -moz-user-select: text;
+    -khtml-user-select: auto;
+    -webkit-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+  }
   h1 {
     font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     color: $dark !important;
@@ -186,9 +188,15 @@ markdown {
     cursor: text;
     margin-top: 8px;
     margin-bottom: 8px;
+    line-height: 1.2;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
     code {
       font-size: rem-calc(10px);
-      line-height: 0.8;
+      border: none;
     }
   }
   code {
