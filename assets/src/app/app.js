@@ -135,7 +135,7 @@ angular.module( 'symantis', [
 .run( function run ($rootScope, $sails, lodash) {
 	$rootScope.currentUser = window.currentUser;
 	$rootScope.user = {};
-	$rootScope.users = aUsers;
+	$rootScope.users = [];
 	$rootScope.cachedUsers = []; 
 
 	$rootScope.query = {};
@@ -151,7 +151,34 @@ angular.module( 'symantis', [
 	$rootScope.mantis = aMantis;
 	
 	$rootScope.alerts =  [];
+
+
 })
+
+.run(['$rootScope', function($root) {
+	
+	$root.$on('$routeChangeStart', function(e, curr, prev) { 
+		if (curr.$$route && curr.$$route.resolve) {
+			// Show a loading message until promises are not resolved
+			$root.loadingView = true;
+		}
+	});
+	$root.$on('$routeChangeSuccess', function(e, curr, prev) { 
+		// Hide loading message
+		$root.loadingView = false;
+	});
+
+	$root.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) { 
+		
+			// Show a loading message until promises are not resolved
+			$root.loadingView = true;
+		
+	});
+	$root.$on('$stateChangeSuccess', function(e, toState, toParams, fromState, fromParams) { 
+		// Hide loading message
+		$root.loadingView = false;
+	});
+}])
 /*
 .config(function config( $stateProvider ) {
 	$stateProvider.state('/', {

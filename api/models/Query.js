@@ -61,7 +61,7 @@ module.exports = {
 		},
 		responses: {
 			collection: 'response',
-			via: 'rid'
+			via: 'query'
 		}
 
 
@@ -69,17 +69,25 @@ module.exports = {
 	getAll: function() {
 		return Query.find()
 		.populate('author')
+		.populate('responses')
 		.then(function (models) {
+			_.each(models, function(model) { 
+				model.totalResponses = model.responses.length;
+				/*
+				_.each(model.responses, function(response){
+					response.author = User.findOne(author).exec(); 
+				});
+				*/
+			});
 			return [models];
 		});
 	},
 	getOne: function(id) {
 		return Query.findOne(id)
 		.populate('author')
-		//.populate('responses')
+		.populate('responses')
 		.then(function (model) {
-			//model.totalViews = parseInt(model.totalViews) + 1;
-			//Query.addViewCount(id);
+			model.totalResponses = model.responses.length;
 			return [model];
 		});
 	},
@@ -88,7 +96,7 @@ module.exports = {
 		.then(function (model){
 			//console.log(model.totalViews);
 			model.totalViews = model.totalViews == null ? 1 : parseInt(model.totalViews) + 1;
-			console.log(model.totalViews);
+			//console.log(model.totalViews);
 			Query.update(id, {totalViews: model.totalViews})
 			.exec(function (err, newModel){
 				if(err){
@@ -100,22 +108,25 @@ module.exports = {
 				}
 			});
 		});
-		/*
-		//[model].totalViews = [model].totalViews++;
-		//Query.addViewCount(id, [model].totalViews);
-		console.log(views);
-		Query.update(id, { totalViews: views })
-		.exec(function(err, models){
-			if (err) {
-				return res.serverError(err);
-			}
-			else{
-				Query.publishUpdate(id, { totalViews: views });
-			}
-		});
-		*/
-		
 	},
+	addResponseCount: function(id){
+		return Query.findOne(id)
+		.then(function (model){
+			//console.log(model.totalViews);
+			model.totalResponses = model.totalResponses == null ? 1 : parseInt(model.totalResponses) + 1;
+			//console.log(model.totalViews);
+			Query.update(id, {totalResponses: model.totalResponses})
+			.exec(function (err, newModel){
+				if(err){
+					return console.log(err);
+				}
+				else{	
+					Query.publishUpdate(model.id, { totalResponses: model.totalResponses });
+				return;
+				}
+			});
+		});
+	}
 
 };
 

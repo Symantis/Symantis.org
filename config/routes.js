@@ -52,7 +52,7 @@ module.exports.routes = {
      */
     'get /api/user': 'UserController.getAll',
     'get /api/user/:id': 'UserController.getOne',
-    'get /api/user/handle/:handle': 'UserController.getOneByHandle',
+    'get /api/user/handle/:handle': 'UserController.findByHandle',
     'post /api/user': 'UserController.create',
     'post /api/user/update': 'UserController.update',
     'post /api/user/status': 'UserController.updateStatus',
@@ -75,8 +75,12 @@ module.exports.routes = {
     'get /api/query/:id': 'QueryController.getOne',
     'post /api/query': 'QueryController.create',
     'post /api/query/update': 'QueryController.update',
+    'post /api/query/response': 'QueryController.addResponse',
     'post /api/query/update/views': 'QueryController.updateViews',
     'delete /api/query/:id': 'QueryController.destroy',
+
+    'get /api/response/:id': 'ResponseController.getOne',
+    'get /api/response/query/:query': 'ResponseController.getAllForQuery',
 
 
   // If a request to a URL doesn't match any of the custom routes above, it is matched 

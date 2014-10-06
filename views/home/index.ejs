@@ -33,6 +33,12 @@
 
 			<div class="overlay" ui-view="overlay">
 			</div><!-- /.overlay -->
+			
+			<div ng-show="loadingView" class="preloader-container">
+                <!-- loadingView is a variable defined in the $rootScope -->
+                <div class="preloader">
+                </div>
+            </div>
 
 			<div id="main" class="container" ui-view="main">
 			</div><!-- /.container -->

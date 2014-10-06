@@ -72,21 +72,52 @@ angular.module( 'symantis.community.queries', [
 
 	
 })
-.controller( 'QueriesViewCtrl', function QueriesViewController($scope, titleService, $state, query, cache, QueryModel ) {
+.controller( 'QueriesViewCtrl', function QueriesViewController($scope, titleService, $state, query, cache, QueryModel, utils ) {
 	
 	$scope.query = query;
 
 	$scope.query = cache.resolveQueryCache($scope.queries, query.id);
+	$scope.query.responses = cache.resolveQueryResponsesCache($scope.query);
+	//cache.resolveQueryResponsesCache($scope.query);
 	
+	/*
+	QueryModel.getResponses(query.id).then(function(models){
+		console.log(models);
+		return models;
+	});
+	*/
+
 	QueryModel.updateViews({id: query.id });
 
 	titleService.setTitle('Query: ' + $scope.query.title);
 
 	$scope.comments = {};
 	$scope.comments.selected = true;
+	$scope.newResponse = {
+		preview: false,
+		response: null
+	}
+
 	if(!query.responses || query.responses.length == 0){
 		$scope.comments.selected = false;
 	}
+
+	$scope.submitResponse = function(form){
+		if(form.$valid){
+			var newModel = {
+				query: $scope.query.id,
+				response: $scope.newResponse.response,
+				author: $scope.currentUser.id
+			}
+
+			QueryModel.addResponse(newModel).then(function(model){
+				utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your response was added successfully.' } );
+			});
+		}else{
+			utils.sectionAlert($scope.alerts, { type: 'alert', msg: 'Opps, some things are missing... Try again' } );
+		}
+	}
+
 	
 })
 .controller( 'QueriesEditCtrl', function QueriesEditController( $http, $scope, query, titleService, cache, QueryModel, utils ) {

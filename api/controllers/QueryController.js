@@ -106,6 +106,42 @@ module.exports = {
 		});
 		*/
 	},
+	addResponse: function (req, res){
+		var id = req.param('query');
+		if (!id) {
+			return res.badRequest('No query id provided.');
+
+		}
+		var author = req.param('author');
+		if (!author) {
+			return res.badRequest('No author id provided.');
+
+		}
+		var response = {
+			query: id,
+			author: author,
+			response: req.param('response')
+		}
+		Response.create(response)
+		.exec(function (err, newModel){
+			if(err){
+
+			}
+			else{
+				res.json(newModel);
+			}
+		});
+		/*
+		Query.addResponse({id: id, response: response }, function(err, newModel){
+			if(err){
+				return console.log(err);
+			}
+			else{
+				res.json(model);
+			}
+		});
+		*/
+	},
 	destroy: function (req, res) {
 		var id = req.param('id');
 		if (!id) {

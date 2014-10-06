@@ -9,7 +9,8 @@ module.exports = {
 		handle: {
 			type: 'string',
 			required: true,
-			unique: true
+			unique: true,
+			index: true
 		},
 		email: {
 			type: 'email',
@@ -64,7 +65,7 @@ module.exports = {
 		
 		connections: {
 			collection: 'user',
-			via: 'id'
+			via: 'connections'
 		},
 		//TODO Collection or Tracker
 		manti: {
@@ -91,7 +92,7 @@ module.exports = {
 
 	getOne: function(id) {
 		return User.findOne(id)
-		//.populate('connections')
+		.populate('connections')
 		.then(function (model) {
 			return [model];
 		});
@@ -99,7 +100,7 @@ module.exports = {
 	},
 	getOneByHandle: function(handle) {
 		return User.findOne({ handle: handle })
-		//.populate('connections')
+		.populate('connections')
 		.then(function (model) {
 			console.log(model);
 			return [model];

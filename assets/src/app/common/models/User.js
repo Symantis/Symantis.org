@@ -1,6 +1,6 @@
 angular.module('models.user', ['lodash', 'services', 'ngSails',])
 
-.service('UserModel', function($q, lodash, utils, $sails) {
+.service('UserModel', function($http, $q, lodash, utils, $sails) {
 	
 	this.getAll = function() {
 		var deferred = $q.defer();
@@ -25,11 +25,40 @@ angular.module('models.user', ['lodash', 'services', 'ngSails',])
 	this.getOneHandle = function(handle) {
 		var deferred = $q.defer();
 		var url = utils.prepareUrl('user/handle/' + handle);
+		/*
 		$sails.get(url, function(model) {
 			return deferred.resolve(model);
 		});
 
 		return deferred.promise;
+		*/
+		
+		$http.get(url).then(function(user){
+			//console.log(user.data);
+			//return user.data;
+			return deferred.resolve(user.data);
+			
+		});
+		return deferred.promise;
+		
+		/*
+		$sails.get(url, function(model) {
+			console.log(model);
+			return model;
+		});	
+		*/
+		/*
+		var deferred = $q.defer();
+		console.log("Getting " + handle);
+		
+		$sails.get(url, function(model) {
+			
+			return deferred.resolve(model);
+		});
+		*/
+
+		//return deferred.promise;
+		
 	};
 
 	/*

@@ -30,7 +30,12 @@ module.exports = {
 		controller: {
 			type: 'string',
 			enum: ['article', 'query', 'opportunity']
+		},
+		/*
+		owner: {
+			model: '' 
 		}
+		*/
 	}
 };
 

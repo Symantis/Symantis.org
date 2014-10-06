@@ -10,8 +10,8 @@ angular.module( 'symantis.profile', [
 		.state( 'profile', {
 			url: '/@',
 			resolve : {
-			    users : function(UserModel) {
-			        return UserModel.getAll();
+			    users : function($rootScope) {
+			        return $rootScope.users;
 			    }
 		    },
 			views: {
@@ -45,10 +45,18 @@ angular.module( 'symantis.profile', [
 		.state('profile.view',{
 			url: ':handle',
 			resolve : {
-			    user : function($stateParams) {
+				cache: 'cache',
+			    user : function(cache, $rootScope, $stateParams) {
+			    	
+			    	//return { handle: $stateParams.handle };
+			        //return UserModel.getOneHandle( $stateParams.handle ).$promise;
+			        return $rootScope.user = cache.resolveUserCache($rootScope.users, $stateParams.handle);
+			        /*
 			        console.log($stateParams);
+			        
 			        return { handle: $stateParams.handle };
 			        //return UserModel.getOneByHandle($stateParams.handle);
+			    	*/
 			    }
 		    },
 			views: {

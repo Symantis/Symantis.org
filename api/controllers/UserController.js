@@ -31,9 +31,10 @@ module.exports = {
 			//res.serverError(err);
 		});
 	},
+	findByHandle: function(req, res) {
+		console.log(req.param('handle'));
 
-	getOneByHandle: function(req, res) {
-		User.getOneByHandle(req.param('handle'))
+		User.findByHandle(req.param('handle'))
 		.spread(function(model) {
 			User.subscribe(req.socket, model);
 			res.json(model);
@@ -42,6 +43,29 @@ module.exports = {
 			res.send(404);
 			//res.serverError(err);
 		});
+	},
+	getOneByHandle: function(req, res) {
+		console.log(req.param('handle'));
+		/*
+		User.findOne({ handle: req.param('handle') })
+		//.populate('connections')
+		.then(function (model) {
+			console.log(model);
+			return res.json(model);
+		});
+		*/
+		
+		User.getOneByHandle(req.param('handle'))
+		.spread(function(model) {
+			console.log(model);
+			User.subscribe(req.socket, model);
+			res.json(model);
+		})
+		.fail(function(err) {
+			res.send(404);
+			//res.serverError(err);
+		});
+		
 	},
 
 	create: function (req, res) {

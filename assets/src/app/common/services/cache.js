@@ -1,6 +1,6 @@
 angular.module( 'services.cache', ['lodash'])
 
-.service('cache', function(lodash, config, $timeout, UserModel, QueryModel) {
+.factory('cache', function($q, $rootScope, lodash, config, $timeout, UserModel, QueryModel) {
 
 	return {
 		
@@ -9,11 +9,10 @@ angular.module( 'services.cache', ['lodash'])
 				return this.getCachedUser(users, handle);
 			}else{
 				 var self = this;
-				 console.log(handle);				 
+				 console.log("Getting " +handle);			 
 				 return UserModel.getOneHandle(handle).then(function(user){
-				 	self.cacheNewUser(users, user);
 				 	console.log(user);
-				 	return user;
+				 	return self.cacheNewUser(users, user);
 				 });
 			}
 		},
@@ -26,7 +25,8 @@ angular.module( 'services.cache', ['lodash'])
 			return users;
 		},
 		cacheNewUser: function(users, user){
-			return users.push(user);
+			 users.push(user);
+			 return user;
 		},
 		getCachedUser: function(users, handle){
 			return _.find(users, {handle: handle});
@@ -39,10 +39,7 @@ angular.module( 'services.cache', ['lodash'])
 				 var self = this;
 				 console.log(this);
 				 return QueryModel.getOne(id).then(function(query){
-				 	//return self.cacheNewQuery(queries, query);
-				 	//console.log(query);
-				 	//queries.push(query);
-				 	return query;
+				 	return self.cacheNewQuery(queries, query);
 				 });
 			}
 		},
@@ -78,6 +75,72 @@ angular.module( 'services.cache', ['lodash'])
 		},
 		removeQueryFromCache: function(queries, id){
 			return _.remove(queries, {id: id});
+		},
+		resolveQueryResponsesCache: function(query){
+			//var query = _.find(queries, {id: id});
+			//if(query.responses.length == 0){
+			var self = this;
+
+			return _.map(query.responses, function(response){
+				
+				response = self.cacheQueryReponse(response);
+				console.log(response);
+				return response;
+				
+				/*
+				var deferred = $q.defer();
+				self.cacheQueryReponse(response, function(model){
+					console.log(model);
+					return deferred.resolve(model);
+				});
+				return deferred.promise;
+				*/
+				
+			});
+			//console.log(query.responses = responses);
+			//return query.responses = responses;
+				/*
+				var self = this;
+				return QueryModel.getResponses(id).then(function(responses){
+					return self.cacheQueryResponses(queries, id, responses)
+				});
+				*/
+			//}else{
+
+			//}
+		},
+		cacheQueryReponse: function(response){
+			
+			if(response.cached){
+				 return response;
+			}else{
+				
+				return response = QueryModel.getResponse(response.id);
+				
+				/*
+				return response =  QueryModel.getResponse(response.id).then(function(model){
+					model.cached = true;
+					//$rootScope.$digest();
+					return model;
+				});
+				*/
+				
+				/*
+				var deferred = $q.defer();
+				QueryModel.getResponse(response.id).then(function(model){
+					model.cached = true;
+					return deferred.resolve(model);
+				});
+				return deferred.promise;
+				*/
+
+			}
+			//return cb(response);
+		},
+		cacheQueryAllResponses: function(queries, id, responses){
+			var query = _.find(queries, {id: id});
+						_.merge(query.responses, responses);
+			return responses;
 		}
 
 	};

@@ -8,10 +8,6 @@
 module.exports = {
 
 	attributes: {
-		rid: {
-  			type: 'integer',
-    		autoIncrement: true
-  		},
 		votes: {
 			type: 'integer',
 			defaultsTo: 0
@@ -44,8 +40,37 @@ module.exports = {
 		},
 		replies: {
 			collection: 'comment',
-			via: 'id'
+			via: 'controller'
+		},
+		query: {
+			model: 'query',
+			required: true
 		}
-	}
+	},
+	getAll: function() {
+		return Response.find()
+		.populate('author')
+		.then(function (models) {
+			return [models];
+		});
+	},
+	getOne: function(id) {
+		return Response.findOne(id)
+		.populate('author')
+		.then(function (model) {
+			//model.totalViews = parseInt(model.totalViews) + 1;
+			//Query.addViewCount(id);
+			return [model];
+		});
+	},
+	getAllForQuery: function(query) {
+		console.log(query);
+		return Response.find({query: query})
+		.populate('author')
+		//.populate('replies')
+		.then(function (models) {
+			return [models];
+		});
+	},
 };
 

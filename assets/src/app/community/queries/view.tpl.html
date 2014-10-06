@@ -91,49 +91,90 @@
 	</div>
 	
 	<div class="new-response" ng-show="currentUser && !comments.selected">
-		<form class="new-response-form">
+		<form 
+			class="new-response-form"
+			name="newResponseForm" 
+		>
 			<p class="new-response-title">
 				Respond as 
 	        	<a ui-sref="profile.view({handle: currentUser.handle})">
 	        		{{ currentUser.firstName }} {{ currentUser.lastName }}
 	        	</a>
 	        </p>
-	        <div class="new-response-inner">
-	        	<div class="response-options">
-			        <ul>
-			        	<li class="response-options-edit">
-			        		<a title="Insert Text" class="selected">
-			        			<span class="icon-pencil"></span>
-			        		</a>
-			        	</li>
-				        <li class="response-options-link">
-							<a title="Insert Link">
-			        			<span class="icon-link"></span>
-							</a>
-			        	</li>
-			        	<li class="response-options-image">
-			        		<a title="Insert Image">
-			        			<span class="icon-photo"></span>
-			        		</a>
-			        	</li>
-			        	<li class="response-options-code">
-			        		<a title="Insert Code Snippet">
-			        			<span class="icon-code-snippet"></span>
-			        		</a>
-			        	</li>
-			        </ul>
-			    </div>
-				<textarea 
-					name="newResponse" 
-					placeholder="Response.."
-					ng-model="newResponse.response"
-				></textarea>
+	        
+	        <div 
+				class="response-preview" 
+				ng-init="newResponse.preview = false"
+				ng-show="newResponse.preview"
+			>
+	        	<markdown ng-model="newResponse.response" strip="true" extensions="github, table">
+						Add your response!
+				</markdown>
+	        </div>
+	        <div 
+				ng-hide="newResponse.preview"
+			>
+		        <div class="new-response-inner">
+		        	<div class="response-options">
+				        <ul>
+				        	<li class="response-options-edit">
+				        		<a title="Insert Text" class="selected">
+				        			<span class="icon-pencil"></span>
+				        		</a>
+				        	</li>
+					        <li class="response-options-link">
+								<a title="Insert Link">
+				        			<span class="icon-link"></span>
+								</a>
+				        	</li>
+				        	<li class="response-options-image">
+				        		<a title="Insert Image">
+				        			<span class="icon-photo"></span>
+				        		</a>
+				        	</li>
+				        	<li class="response-options-code">
+				        		<a title="Insert Code Snippet">
+				        			<span class="icon-code-snippet"></span>
+				        		</a>
+				        	</li>
+				        </ul>
+				    </div>
+					<textarea 
+						name="newResponse" 
+						placeholder="Response..."
+						ng-model="newResponse.response"
+						required
+					></textarea>
+				</div>
 			</div>
 			<div class="new-response-post">
-				<p><a class="sy-button" ng-click="comments.selected = true">Post</a></p>
+				<p>
+					<a 
+						class="sy-button" 
+						ng-click="submitResponse(newResponseForm)"
+					>
+						Post
+					</a>
+				</p>
 			</div>
 			<div class="new-response-preview">
-				<p><a class="sy-button">Preview</a></p>
+				<p>
+					<a 
+						ng-click="newResponse.preview = !newResponse.preview"
+						class="sy-button"
+					>
+						<span 
+							ng-hide="newResponse.preview"
+						>
+							Preview
+						</span>
+						<span 
+							ng-show="newResponse.preview"
+						>
+							Edit
+						</span>
+					</a>
+				</p>
 			</div>
 		</form>
 	</div>
@@ -142,7 +183,7 @@
 
 	<div 
 		class="comment" 
-		ng-repeat="response in query.responses | orderBy : 'votes' : true "
+		ng-repeat="response in query.responses track by $index | orderBy : 'votes' : true "
 		ng-class="{ solution: response.solution }"
 	>
 		<div class="comment-left">

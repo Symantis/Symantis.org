@@ -63,11 +63,11 @@
                 </p>
                 <p class="connections-skills">
                     <a 
-                        ng-repeat="tag in user.tags" 
-                        ui-sref="community.tags.view({ tag: tag })"
-                        title="View users tagged with {{ tag }}"
+                        ng-repeat="tag in user.tags track by $index" 
+                        ui-sref="community.tags.view({ tag: tag.text })"
+                        title="View users tagged with {{ tag.text }}"
                     >
-                        {{ tag }}
+                        {{ tag.text }}
                     </a>
                 </p>
                 <a title="Message {{ user.firstName }}">

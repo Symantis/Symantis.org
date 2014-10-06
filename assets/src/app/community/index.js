@@ -60,38 +60,16 @@ angular.module( 'symantis.community', [
 		})
 		.state( 'community.queries', {
 			url: '/queries',
-			
-			resolve: {
-				cache : 'cache',
-				queries: function(cache, $rootScope){
-					return $rootScope.queries = cache.cacheQueries($rootScope.queries);
-				}
-				/*
-				queries : function($q, $rootScope, cache) {
-					//console.log($rootScope.queries);
-					//return cache.cacheQueries($rootScope.queries);
-					
-					
-					console.log($rootScope.queries);
-					var deferred = $q.defer();
-			        cache.cacheQueries($rootScope.queries).then(function(r) {
-			            //$rootScope.queries = r;
-			            //deferred.resolve(r);
-			            deferred.resolve(r);
-			            //$rootScope.queries = r;
-			        });
-			        return deferred.promise;
-			        
-			        
-
-				}
-				*/
-			},
-			
 			views: {
 				"main@": {
 					controller: 'QueriesCtrl',
-					templateUrl: 'community/queries/index.tpl.html'
+					templateUrl: 'community/queries/index.tpl.html',
+					resolve: {
+						cache : 'cache',
+						queries: function(cache, $rootScope){
+							return $rootScope.queries = cache.cacheQueries($rootScope.queries);
+						}
+					},
 				},
 				"leftside@community.queries": {
 					controller: 'CommunityQueriesLeftsideCtrl',
