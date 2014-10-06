@@ -77,7 +77,7 @@
 			text-align: left;
 			&.board-sort {
 				@include no-highlight;
-				padding-top: 2px;
+				line-height: 1.7;
 				a {
 					@include no-highlight;
 					color: $dark;
@@ -86,6 +86,9 @@
 						position: relative;
 						bottom: -.1rem;
 					}
+				}
+				&.active {
+					color: red;
 				}
 			}
 		}
@@ -419,7 +422,12 @@
 .board-page {
 	padding-top: rem-calc(20px);
 	padding-bottom: rem-calc(20px);
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 	height: auto;
+	.board-page-main {
+		padding-left: 0;
+	}
 	.board-post-content {
 		position: relative;
 		width: 100%;

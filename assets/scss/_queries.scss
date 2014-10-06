@@ -73,6 +73,7 @@
 			text-align: left;
 			&.queries-sort {
 				@include no-highlight;
+				line-height: 1.7;
 				a {
 					@include no-highlight;
 					color: $dark;

@@ -141,6 +141,7 @@
 			text-align: left;
 			&.connections-sort {
 				@include no-highlight;
+				line-height: 1.7;
 				a {
 					color: $dark;
 					@include no-highlight;

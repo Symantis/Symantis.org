@@ -150,3 +150,48 @@ tags-input .autocomplete .suggestion-item em {
   color: black;
   background-color: white;
 }
+
+markdown {
+  -moz-user-select: text;
+   -khtml-user-select: auto;
+   -webkit-user-select: auto;
+   -ms-user-select: auto;
+   user-select: auto;
+  h1 {
+    font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    color: $dark !important;
+    font-size: rem-calc(24px) !important;
+  }
+  h2 {
+    @include font-semi(rem-calc(16px));
+    margin-bottom: 5px;
+  }
+  h3 {
+    @include font-semi(rem-calc(14px));
+    padding: 0;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  p {
+    @include font-regular(rem-calc(12px));
+  }
+  ul, ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    li {
+      @include font-regular(0.75rem);
+    }
+  }
+  pre {
+    cursor: text;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    code {
+      font-size: rem-calc(10px);
+      line-height: 0.8;
+    }
+  }
+  code {
+    cursor: text;
+  }
+}

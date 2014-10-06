@@ -61,11 +61,6 @@ $reveal-close-weight: light;
 	color: black;
 	font-size: $size;
 }
-@mixin font-oswald($size) {
-	font-family: 'oswald', "Helvetica Neue", Helvetica, Arial, sans-serif;;
-	color: black;
-	font-size: $size;
-}
 @mixin font-bitter($size) {
 	font-family: 'bitter', "Helvetica Neue", Helvetica, Arial, sans-serif;;
 	color: black;
