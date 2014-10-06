@@ -158,6 +158,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-exit:before {
   content: "b";
 }
@@ -262,4 +263,28 @@
 }
 .icon-arrow-up:before {
   content: "H";
+}
+.icon-hierarchy:before {
+  content: "L";
+}
+.icon-dzone:before {
+  content: "M";
+}
+.icon-git-branch:before {
+  content: "N";
+}
+.icon-cloud-upload:before {
+  content: "O";
+}
+.icon-cloud-download:before {
+  content: "J";
+}
+.icon-git-pull-request:before {
+  content: "K";
+}
+.icon-git-merge:before {
+  content: "P";
+}
+.icon-git-compare:before {
+  content: "Q";
 }

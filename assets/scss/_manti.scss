@@ -1,0 +1,292 @@
+.manti-sub-nav {
+	border-bottom: rem-calc(1px) $dark solid;
+	padding-bottom: rem-calc(20px);
+	ul {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		width: auto;
+		li {
+			margin: 0;
+			padding: 0;
+			width: rem-calc(70px);
+			text-align: center;
+			a {
+				@include font-regular(rem-calc(12px));
+				width: 100%;
+				color: darken($light, 10%);
+				//display: block;
+				padding-bottom: rem-calc(25px);
+				padding-top: rem-calc(25px);
+				@include transition(100ms);
+				&:hover {
+					//border-top: 3px $dark solid;
+					//padding-top: rem-calc(23px);
+					color: black;
+				}
+				&.active {
+					border-top: 3px $dark solid;
+					padding-top: rem-calc(23px);
+					color: black;
+				}
+			}
+		}
+		&:after{
+			clear:both;
+			display:block;
+			content:"";
+		}
+	}
+	.manti-sub-nav-left {
+		float: left;
+		li {
+			float: left;
+			text-align: left;
+			&.manti-sort {
+				@include no-highlight;
+				line-height: 1.7;
+				a {
+					@include no-highlight;
+					color: $dark;
+					.icon {
+						padding-left: 4px;
+						position: relative;
+						bottom: -.1rem;
+					}
+				}
+				&.active {
+					color: red;
+				}
+			}
+		}
+	}
+	.manti-sub-nav-right {
+		float: right;
+		.manti-new {
+			width: auto;
+			a {
+				padding: 7px 14px 8px 14px;
+				height: 26px;
+				width: auto;
+				//background-color: $dark;
+				width: 100%;
+				white-space: nowrap;
+				@include font-regular(rem-calc(12px));
+				color: white;
+				border-radius: 4px;
+				background: #444444;
+				background: -moz-linear-gradient(top,  #444444 2%, #131313 97%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,#444444), color-stop(97%,#131313));
+				background: -webkit-linear-gradient(top,  #444444 2%,#131313 97%);
+				background: -o-linear-gradient(top,  #444444 2%,#131313 97%);
+				background: -ms-linear-gradient(top,  #444444 2%,#131313 97%);
+				background: linear-gradient(to bottom,  #444444 2%,#131313 97%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#131313',GradientType=0 );
+				-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+				-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+				box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+				@include transition(100ms);
+				span {
+					margin-left: 3px;
+					position: relative;
+					bottom: -.1rem;
+				}
+				&:hover {
+					color: $offWhite;
+				}
+				&:active {
+					-webkit-box-shadow: inset 3px 3px 13px 11px rgba(50, 50, 50, 1);
+					-moz-box-shadow:    inset 3px 3px 13px 11px rgba(50, 50, 50, 1);
+					box-shadow:         inset 3px 3px 13px 11px rgba(50, 50, 50, 1);
+				}
+			}
+		}
+	}
+	&:after{ 
+		clear:both;
+		display:block;
+		content:"";
+	}
+}
+
+
+.manti-center {
+	position: relative;
+}
+.manti-container {
+	margin-right:-14px;
+}
+.gutter-sizer{
+	width:0px;
+}
+.manti-pod-wrap {
+	width: 50%;
+	padding: 20px 15px 0 0;
+	&:after{
+		content:"";
+		clear:both;
+		display:block;
+	}
+}
+.manti-pod {
+	position: relative;
+	border: 1px $dark solid;
+	background-color: white; 
+	overflow: hidden;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	.manti-pod-header {
+		height: 50px;
+		width: 100%;
+		border-bottom: 1px $light solid;
+		padding: 10px 15px 10px 15px;
+		p {
+			@include font-regular(rem-calc(12px));
+			color: $gray;
+			width: auto;
+			float: left;
+			padding: 5px 0 0 0;
+		}
+		.manti-pod-stats {
+			float: right;
+			text-align: right;
+			//width: 80px;
+			margin: 0;
+			list-style: none;
+			li {
+				display: inline-block;
+				@include font-regular(rem-calc(12px));
+				width: auto;
+				color: $gray;
+				padding-left: 10px;
+				a {
+					color: $gray;
+					@include transition(100ms);
+					&:hover {
+						color: $dark;
+					}
+				}
+				span {
+					//color: $dark;
+					font-size: rem-calc(20px);
+					position: relative;
+					bottom: -.3rem;
+					line-height: 0.8;
+					margin-right: 1px;
+				}
+			}
+		}
+	}
+	.manti-pod-img {
+		width: 100%;
+		height: auto;
+		position: relative;
+		margin-bottom: -15px;
+		img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	.manti-pod-body {
+		width: 100%;
+		position: relative;
+		height: auto;
+		//margin-bottom: 50px;
+		padding: 10px 15px 0 15px;
+		header {
+			border: none;
+			padding-bottom: 10px;
+			h3 {
+				padding-bottom: 10px;
+			}
+		}
+		.manti-pod-graph {
+			height: 100px;
+			width: 100%;
+			position: relative;
+			img {
+				width: 100%;
+				height: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+	.manti-pod-footer {
+		height: 50px;
+		width: 100%;
+		border-top: 1px $light solid;
+		padding: 10px 15px 10px 15px;
+		p {
+			@include font-regular(rem-calc(12px));
+			color: $gray;
+			width: auto;
+			float: left;
+			padding: 5px 0 0 0;
+			span {
+				position: relative;
+				bottom: -.1rem;
+				margin-right: 2px;
+			}
+			a {
+				margin-left: 1px;
+				@include font-semi(rem-calc(12px));
+				color: $primary-color;
+				@include transition(100ms);
+				&:hover {
+					color: darken($primary-color, 10%);
+				}
+			}
+		}
+		button {
+			float: right;
+			padding: 4px 8px 6px 8px;
+			width: auto;
+			margin: 0;
+			span {
+				margin-left: 8px;
+				position: relative;
+				bottom: -.1rem;
+			}
+		}
+	}
+	.manti-pod-group {
+		width: 100%;
+		position: relative;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			li {
+				margin: 0;
+				border-top: 1px $light solid;
+				padding: 10px 15px 10px 15px;
+				width: 100%;
+				height: 45px;
+				@include font-regular(rem-calc(12px));
+				color: $gray;
+				span {
+					font-size: rem-calc(14px);
+					color: $dark;
+					
+					margin-right: 8px;
+				}
+				a {
+					margin-left: 1px;
+					@include font-semi(rem-calc(12px));
+					color: $primary-color;
+					@include transition(100ms);
+					&:hover {
+						color: darken($primary-color, 10%);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+

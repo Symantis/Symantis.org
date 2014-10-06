@@ -147,6 +147,8 @@ angular.module( 'symantis', [
 	$rootScope.opportunity = {};
 	$rootScope.opportunities = aOpportunities;
 	$rootScope.cachedOpportunities = [];
+
+	$rootScope.mantis = aMantis;
 	
 	$rootScope.alerts =  [];
 })
@@ -2766,6 +2768,94 @@ var aOpportunities = [
 				]
 			}
 		]
+	}
+]
+var aMantis = [
+	{
+		id: 1,
+		title: 'Symantis syNav Directive',
+		description: 'Top bar navigation with built in selected classes.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		branches: '23',
+		seeds: '2.4k',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		img:{
+			name: 'placeholder',
+			src: 'http://placehold.it/350x150',
+			caption: 'This is an example image.'
+		}
+	},
+	{
+		id: 2,
+		title: 'Directive for TS Furniture',
+		description: 'eCommerce product managment directive for masonry.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		branches: '72',
+		seeds: '162',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+	},
+	{
+		id: 3,
+		title: 'Symantis syNav Directive',
+		description: 'Top bar navigation with built in selected classes.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		branches: '23',
+		seeds: '2.4k',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+	},
+	{
+		id: 4,
+		title: 'Symantis syNav Directive',
+		description: 'Top bar navigation with built in selected classes.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		branches: '23',
+		seeds: '2.4k',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		img:{
+			name: 'placeholder',
+			src: 'http://placehold.it/350x150',
+			caption: 'This is an example image.'
+		}
 	}
 ]
 

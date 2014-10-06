@@ -128,9 +128,13 @@ Build date: 2014-01-10
 					padding-left: 10px;
 					border-left: 4px $primary-color solid;
 					padding-right: 2px;
+					span {
+						display: block;
+					}
 				}
 				span {
 					float: right;
+					display: none;
 				}
 			}
 		}

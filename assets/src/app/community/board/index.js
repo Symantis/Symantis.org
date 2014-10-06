@@ -21,7 +21,7 @@ angular.module( 'symantis.community.board', [
 	titleService.setTitle('Board');
 
 })
-.controller( 'BoardViewCtrl', function NewsViewController( $scope, titleService, $state, $stateParams  ) {
+.controller( 'BoardViewCtrl', function BoardViewController( $scope, titleService, $state, $stateParams  ) {
 	for(var i in $scope.opportunities){
 		if ($scope.opportunities[i].id == $stateParams.id){
 			$scope.board = $scope.opportunities[i];

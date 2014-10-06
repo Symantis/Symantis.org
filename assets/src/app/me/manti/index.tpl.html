@@ -10,22 +10,119 @@
 	</section>
 </div>
 <div class="row fluid-row">
-    <section class="medium-3 large-2 columns large-offset-1 main-left connections-left">
+    <section class="medium-3 large-2 columns large-offset-1 main-left">
         <div class="wrapper" ui-view="leftside">
-
         <!-- Section for main left header -->
         </div>
-    	
     </section>
-    <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center connections-center">
-    	<!-- Section for main center header -->
-        <header></header>
-        <div class="row">
-            <div class="preloader-container">
-                <div class="preloader">
+    <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center manti-center">
+
+        <header class="manti-sub-nav">
+            <ul class="manti-sub-nav-left">
+                <li class="manti-sort"><a dropdown-toggle="#manti-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
+            </ul>
+            <div class="sub-nav-search">
+                <input 
+                    class="sub-search-field" 
+                    type="search" 
+                    name="sub-search-field" 
+                    placeholder="Search" 
+                />
+            </div>
+            <div class="manti-sub-nav-right">
+                <div class="manti-new">
+                    <a title="New Manti">Create New <span class="icon-plus"></span></a>
                 </div>
             </div>
+        </header>
+        <div class="sort-container" id="manti-sort-menu">
+            <ul class="sort-menu">
+                <li><a class="active">All Manti <span class="icon-check icon"></span></a></li>
+                <li><a >Public <span class="icon-check icon"></span></a></li>
+                <li><a >Private <span class="icon-check icon"></span></a></li>
+                <li><a >Forked <span class="icon-check icon"></span></a></li>
+                <li><a >Collections <span class="icon-check icon"></span></a></li>
+            </ul>
         </div>
+
+        <!-- <section class="clearfix">
+            <alert class="animate-repeat" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        </section> -->
+
+        <div 
+            class="manti-container" 
+            masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile", "gutter": ".gutter-sizer" }' 
+            ui-view="manti"
+        >
+
+            <div class="gutter-sizer"></div>
+
+            <article 
+                masonry-tile
+                ng-repeat="manti in mantis" 
+                class="animate-repeat tile manti-pod-wrap" 
+            >
+                <div class="manti-pod">
+                    <section class="manti-pod-header">
+                        <p>Created on {{ manti.date | date }}</p>
+                        <ul class="manti-pod-stats">
+                            <li><a ><span class="icon-git-branch"></span> {{ manti.branches }}</a></li>
+                            <li><a ><span class="icon-cloud-upload"></span> {{ manti.seeds }}</a></li>
+                        </ul>
+                    </section>
+                    <section class="manti-pod-img" ng-show="manti.img">
+                        <img src="{{ manti.img.src }}" alt="{{ manti.img.name }}" />
+                    </section>
+                    <section class="manti-pod-body">
+                        <header>
+                            <h3><a >{{ manti.title }}</a></h3>
+                            <p>{{ manti.description }}</p>
+                        </header>
+                        <div class="manti-pod-graph">
+                            <img src="img/svg/graph-placeholder.svg" alt="placeholder" />
+                        </div>
+                    </section>
+                    <section class="manti-pod-footer">
+                        <p><span class="icon-git-branch"></span>Forked from <a >syQuery</a></p>
+                        <button class="sy-button">more <span class="icon-right-arrow"></span></button>
+                    </section>
+                </div>
+            </article>
+
+            <article class="animate-repeat tile manti-pod-wrap" masonry-tile>
+                <div class="manti-pod">
+                    <section class="manti-pod-header">
+                        <p>Updated on Oct 5</p>
+                        <ul class="manti-pod-stats">
+                            <li><a ><span class="icon-git-branch"></span> 74</a></li>
+                            <li><a ><span class="icon-cloud-upload"></span> 162</a></li>
+                        </ul>
+                    </section>
+                    <section class="manti-pod-body">
+                        <header>
+                            <h3><a >Directive for TS Furniture</a></h3>
+                            <p>eCommerce product managment directive for masonry.</p>
+                        </header>
+                        <div class="manti-pod-graph">
+                            <img src="img/svg/graph-placeholder.svg" alt="placeholder" />
+                        </div>
+                    </section>
+                    <section class="manti-pod-footer">
+                        <p>Created by <a >Hamish Jackson-Mee</a></p>
+                        <button class="sy-button">more <span class="icon-right-arrow"></span></button>
+                    </section>
+                    <section class="manti-pod-group">
+                        <ul>
+                            <li><span class="icon-indent"></span>Built using <a >syQuery</a></li>
+                            <li><span class="icon-indent"></span>Built using <a >syCurem</a></li>
+                            <li><span class="icon-indent"></span>Built using <a >niSimos</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+
+        </div>
+
     </section>
     <section class="medium-0 large-2 columns main-right">
         <header class="right-header">
