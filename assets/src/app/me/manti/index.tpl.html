@@ -62,7 +62,10 @@
                 ng-repeat="manti in mantis" 
                 class="animate-repeat tile manti-pod-wrap" 
             >
-                <div class="manti-pod">
+                <div 
+                    class="manti-pod"
+                    ng-class="{'visual-pod':manti.class=='visual','system-pod':manti.class=='systematic', 'group-pod':manti.class=='group'}"
+                >
                     <section class="manti-pod-header">
                         <p>Created on {{ manti.date | date }}</p>
                         <ul class="manti-pod-stats">
@@ -89,7 +92,7 @@
                 </div>
             </article>
 
-            <article class="animate-repeat tile manti-pod-wrap" masonry-tile>
+            <!-- <article class="animate-repeat tile manti-pod-wrap" masonry-tile>
                 <div class="manti-pod">
                     <section class="manti-pod-header">
                         <p>Updated on Oct 5</p>
@@ -119,7 +122,7 @@
                         </ul>
                     </section>
                 </div>
-            </article>
+            </article> -->
 
         </div>
 

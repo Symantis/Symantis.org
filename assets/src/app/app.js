@@ -2822,6 +2822,7 @@ var aMantis = [
 	{
 		id: 1,
 		title: 'Symantis syNav Directive',
+		class: 'visual',
 		description: 'Top bar navigation with built in selected classes.',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
@@ -2846,6 +2847,7 @@ var aMantis = [
 	{
 		id: 2,
 		title: 'Directive for TS Furniture',
+		class: 'visual',
 		description: 'eCommerce product managment directive for masonry.',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
@@ -2865,6 +2867,7 @@ var aMantis = [
 	{
 		id: 3,
 		title: 'Symantis syNav Directive',
+		class: 'systematic',
 		description: 'Top bar navigation with built in selected classes.',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
@@ -2884,6 +2887,57 @@ var aMantis = [
 	{
 		id: 4,
 		title: 'Symantis syNav Directive',
+		class: 'group',
+		description: 'Top bar navigation with built in selected classes.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		branches: '23',
+		seeds: '2.4k',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		img:{
+			name: 'placeholder',
+			src: 'http://placehold.it/350x150',
+			caption: 'This is an example image.'
+		}
+	},
+	{
+		id: 5,
+		title: 'Symantis syNav Directive',
+		class: 'visual',
+		description: 'Top bar navigation with built in selected classes.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		branches: '23',
+		seeds: '2.4k',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		img:{
+			name: 'placeholder',
+			src: 'http://placehold.it/350x150',
+			caption: 'This is an example image.'
+		}
+	},
+	{
+		id: 6,
+		title: 'Symantis syNav Directive',
+		class: 'systematic',
 		description: 'Top bar navigation with built in selected classes.',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');

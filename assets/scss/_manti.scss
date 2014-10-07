@@ -35,20 +35,41 @@
 				margin: 0;
 				width: 100%;
 				@include font-regular(12px);
-				color: darken($light, 10%);
+				//color: darken($light, 10%);
 				@include transition(100ms);
 				line-height: 1.4;
 				float: left;
 				text-overflow: ellipsis;
 				overflow: hidden;
 				white-space: nowrap;
+				opacity: 0.5;
 				&:hover {
-					color: $darkest;
+					//color: $darkest;
+					opacity: 1;
 				}
 				&.active {
-					border-left: 4px $primary-color solid;
-					color: $darkest;
+					border-left: 4px $dark solid;
+					//color: $darkest;
 					padding-left: rem-calc(8px);
+					opacity: 1;
+				}
+				&.visual-class {
+					color: $sy-blue;
+					&.active {
+						border-left: 4px $sy-blue solid;
+					}
+				}
+				&.system-class {
+					color: $sy-red;
+					&.active {
+						border-left: 4px $sy-red solid;
+					}
+				}
+				&.group-class {
+					color: $primary-color;
+					&.active {
+						border-left: 4px $primary-color solid;
+					}
 				}
 			}
 		}
@@ -73,8 +94,10 @@
 		float: left;
 		width: 100%;
 		a {
-			color: $primary-color;
+			color: $gray;
+			@include transition(100ms);
 			&:hover {
+				//color: darken($primary-color, 10%);
 				color: $dark;
 			}
 			span {
@@ -216,8 +239,8 @@
 }
 .manti-pod {
 	position: relative;
-	border: 1px $dark solid;
-	background-color: white; 
+	border: 2px $dark solid;
+	background-color: white;
 	overflow: hidden;
 	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
@@ -286,6 +309,9 @@
 			padding-bottom: 10px;
 			h3 {
 				padding-bottom: 10px;
+				a {
+					@include transition(100ms);
+				}
 			}
 		}
 		.manti-pod-graph {
@@ -327,7 +353,7 @@
 		}
 		button {
 			float: right;
-			padding: 4px 8px 6px 8px;
+			padding: 4px 8px 6px 10px;
 			width: auto;
 			margin: 0;
 			span {
@@ -362,6 +388,54 @@
 					@include font-semi(rem-calc(12px));
 					color: $primary-color;
 					@include transition(100ms);
+					&:hover {
+						color: darken($primary-color, 10%);
+					}
+				}
+			}
+		}
+	}
+	&.visual-pod {
+		border-color: $sy-blue;
+		a {
+			color: $sy-blue !important;
+		}
+		.manti-pod-body {
+			h3 {
+				a {
+					color: $sy-blue;
+					&:hover {
+						color: darken($sy-blue, 10%);
+					}
+				}
+			}
+		}
+	}
+	&.system-pod {
+		border-color: $sy-red;
+		a {
+			color: $sy-red !important;
+		}
+		.manti-pod-body {
+			h3 {
+				a {
+					color: $sy-red;
+					&:hover {
+						color: darken($sy-red, 10%);
+					}
+				}
+			}
+		}
+	}
+	&.group-pod {
+		border-color: $primary-color;
+		a {
+			color: $primary-color;
+		}
+		.manti-pod-body {
+			h3 {
+				a {
+					color: $primary-color;
 					&:hover {
 						color: darken($primary-color, 10%);
 					}
