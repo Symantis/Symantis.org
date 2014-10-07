@@ -285,6 +285,22 @@ pre {
 		}
 	}
 }
+.back-btn {
+	@include font-regular(rem-calc(12px));
+	color: $primary-color;
+	@include transition(100ms);
+	width: 4.375rem;
+	display: block;
+	padding-top: rem-calc(2px);
+	span {
+		margin-right: 3px;
+		position: relative;
+		bottom: -.1rem;
+	}
+	&:hover {
+		color: darken($primary-color, 15%);
+	}
+}
 
 .sort-container {
 	position: absolute;
