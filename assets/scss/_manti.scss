@@ -242,9 +242,12 @@
 	border: 2px $dark solid;
 	background-color: white;
 	overflow: hidden;
-	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	/*-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);*/
+	-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 	.manti-pod-header {
 		height: 50px;
 		width: 100%;

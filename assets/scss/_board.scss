@@ -207,9 +207,12 @@
 	//margin: 20px 10px 0 10px;
 	
 	border: rem-calc(1px) $gray solid;
-	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	/*-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);*/
+	-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 	.pod-header {
 		//float: left;
 		width: 100%;

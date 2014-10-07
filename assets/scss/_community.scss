@@ -42,7 +42,7 @@
 .community-pod {
 	padding: rem-calc(15px);
 	//margin: 2.5rem 0 0.6rem 0;
-	margin: 0.6rem 0 2rem 0;
+	margin: 2rem 0 2rem 0;
 	float: left;
 	background-color: white;
 	width: 100%;
@@ -50,9 +50,12 @@
 	//border-left: rem-calc(5px) $light solid;
 	border: rem-calc(1px) $gray solid;
 	//border-radius: 8px;
-	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	/*-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);*/
+	-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 	.pod-header {
 		float: left;
 		width: 100%;
