@@ -203,3 +203,38 @@ markdown {
     cursor: text;
   }
 }
+
+.back-btn {
+  @include font-regular(rem-calc(12px));
+  color: $primary-color;
+  @include transition(100ms);
+  width: 4.375rem;
+  display: block;
+  padding-top: rem-calc(2px);
+  span {
+    margin-right: 3px;
+    position: relative;
+    bottom: -.1rem;
+  }
+  &:hover {
+    color: darken($primary-color, 15%);
+  }
+}
+[ui-view="query-nav"].ng-enter, .back-btn.ng-leave {
+  -webkit-transition:all .3s linear;
+    -moz-transition:all .3s linear;
+    -o-transition:all .3s linear;
+    transition:all .3s linear;
+}
+[ui-view="query-nav"].ng-enter {
+  opacity: 0;
+}
+[ui-view="query-nav"].ng-enter-active {
+  opacity: 1;
+}
+[ui-view="query-nav"].ng-leave {
+  opacity: 1; 
+}
+[ui-view="query-nav"].ng-leave-active {
+  opacity: 0;
+}
