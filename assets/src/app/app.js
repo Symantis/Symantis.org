@@ -152,6 +152,7 @@ angular.module( 'symantis', [
 	$rootScope.mantis = aMantis;
 	
 	$rootScope.alerts =  [];
+	$rootScope.toDo = [];
 
 
 
@@ -172,7 +173,7 @@ angular.module( 'symantis', [
 	});
 
 	$root.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) { 
-		
+			$root.toDo = [];
 			// Show a loading message until promises are not resolved
 			$root.loadingView = true;
 		
@@ -180,6 +181,7 @@ angular.module( 'symantis', [
 	$root.$on('$stateChangeSuccess', function(e, toState, toParams, fromState, fromParams) { 
 		// Hide loading message
 		$root.loadingView = false;
+
 	});
 }])
 /*

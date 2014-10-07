@@ -43,9 +43,11 @@ angular.module( 'symantis.login', [
 
 .controller( 'LoginCtrl', function LoginController( $scope, titleService ) {
 	titleService.setTitle('Login');
+	$scope.$parent.toDo = [];
 })
 .controller( 'LoginForgotCtrl', function LoginForgotController( $scope, titleService ) {
 	titleService.setTitle('Forgot Password');
+	$scope.$parent.toDo = [];
 })
 .controller( 'LoginHeaderCtrl', function LoginHeaderController( $scope ) {
 

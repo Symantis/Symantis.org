@@ -35,7 +35,7 @@ angular.module( 'symantis.terms', [
 
 .controller( 'TermsCtrl', function TermsController( $scope, titleService ) {
 	titleService.setTitle('Terms');
-
+	$scope.$parent.toDo = [];
 	
 })
 .controller( 'TermsHeaderCtrl', function TermsHeaderController( $scope, titleService ) {

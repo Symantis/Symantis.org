@@ -35,7 +35,7 @@ angular.module( 'symantis.start', [
 
 .controller( 'StartCtrl', function StartController( $scope, titleService ) {
 	titleService.setTitle('Getting Started');
-
+	$scope.$parent.toDo = ['Add Images'];
 	
 })
 .controller( 'StartHeaderCtrl', function StartHeaderController( $scope, titleService ) {

@@ -19,7 +19,7 @@ angular.module( 'symantis.me.connections', [
 */
 .controller( 'ConnectionsCtrl', function ConnectionsController( $scope, titleService ) {
 	titleService.setTitle('Connections');
-
+	$scope.$parent.toDo = [];
 	
 })
 .controller( 'MeConnectionsLeftsideCtrl', function MeConnectionsLeftsideController( $scope ) {

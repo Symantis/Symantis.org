@@ -232,12 +232,12 @@ angular.module( 'symantis.community', [
 
 .controller( 'CommunityCtrl', function CommunityController( $scope, $state ,titleService ) {
 	titleService.setTitle('Community');
-
-
+	$scope.$parent.toDo = [];
 	
 })
 .controller( 'CommunityHeaderCtrl', function CommunityHeaderController( $scope, $state, titleService ) {
 	$scope.$state = $state;
+
 	//console.log($scope.$state);
 	//titleService.setTitle('About');
 })

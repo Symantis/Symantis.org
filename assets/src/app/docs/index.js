@@ -35,7 +35,7 @@ angular.module( 'symantis.docs', [
 
 .controller( 'DocsCtrl', function DocsController( $scope, titleService ) {
 	titleService.setTitle('Docs');
-
+	$scope.$parent.toDo = ['Add Docs'];
 	
 })
 .controller( 'DocsHeaderCtrl', function DocsHeaderController( $scope, titleService ) {

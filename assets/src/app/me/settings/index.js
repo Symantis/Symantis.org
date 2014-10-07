@@ -19,6 +19,8 @@ angular.module( 'symantis.me.settings', [
 */
 .controller( 'MeSettingsCtrl', function MeSettingsController( $http, $scope, titleService, UserModel ) {
 	titleService.setTitle('My Settings');
+	$scope.$parent.toDo = [];
+
 	$scope.loadTags = function(query) {
 		return $http.get('/api/tags/' + query);
 	};

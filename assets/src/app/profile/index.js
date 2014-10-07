@@ -159,6 +159,7 @@ angular.module( 'symantis.profile', [
 
 .controller( 'ProfileCtrl', function ProfileController( $sails, $scope, titleService, users, cache ) {
 	titleService.setTitle('Profile');
+	$scope.$parent.toDo = [];
 	$scope.users = users;
 
 	

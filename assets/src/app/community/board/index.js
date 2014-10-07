@@ -19,6 +19,7 @@ angular.module( 'symantis.community.board', [
 */
 .controller( 'BoardCtrl', function BoardController( $scope, titleService ) {
 	titleService.setTitle('Board');
+	$scope.$parent.toDo = [];
 
 })
 .controller( 'BoardViewCtrl', function BoardViewController( $scope, titleService, $state, $stateParams  ) {
@@ -30,6 +31,7 @@ angular.module( 'symantis.community.board', [
 	}
 
 	titleService.setTitle('Opportunities: ' + $scope.board.title);
+	$scope.$parent.toDo = [];
 
 })
 .controller( 'BoardNewCtrl', function BoardNewController( $scope, titleService ) {

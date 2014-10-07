@@ -35,7 +35,7 @@ angular.module( 'symantis.privacy', [
 
 .controller( 'PrivacyCtrl', function PrivacyController( $scope, titleService ) {
 	titleService.setTitle('Privacy');
-
+	$scope.$parent.toDo = ['Add Statment'];
 	
 })
 .controller( 'PrivacyHeaderCtrl', function PrivacyHeaderController( $scope, titleService ) {

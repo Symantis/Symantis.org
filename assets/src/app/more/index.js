@@ -103,6 +103,7 @@ angular.module( 'symantis.more', [
 
 .controller( 'MoreCtrl', function MoreController( $scope, titleService ) {
 	titleService.setTitle('More');
+	$scope.$parent.toDo = [];
 })
 .controller( 'MoreHeaderCtrl', function MoreHeaderController( $scope, titleService ) {
 	//titleService.setTitle('About');

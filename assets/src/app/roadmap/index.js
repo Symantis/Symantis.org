@@ -35,7 +35,7 @@ angular.module( 'symantis.roadmap', [
 
 .controller( 'RoadmapCtrl', function RoadmapController( $scope, titleService ) {
 	titleService.setTitle('Security');
-
+	$scope.$parent.toDo = ['Add Points'];
 	
 })
 .controller( 'RoadmapHeaderCtrl', function RoadmapHeaderController( $scope, titleService ) {

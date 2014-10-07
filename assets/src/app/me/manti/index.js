@@ -19,7 +19,7 @@ angular.module( 'symantis.me.manti', [
 */
 .controller( 'MantiCtrl', function MantiController( $scope, titleService ) {
 	titleService.setTitle('My Manti');
-
+	$scope.$parent.toDo = [];
 	
 })
 .controller( 'MeMantiLeftsideCtrl', function MeMantiLeftsideController( $scope ) {

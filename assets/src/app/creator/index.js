@@ -55,7 +55,7 @@ angular.module( 'symantis.creator', [
 
 .controller( 'CreatorCtrl', function CreatorController( $scope, titleService ) {
 	titleService.setTitle('Creator App');
-
+	$scope.$parent.toDo = [];
 	
 })
 .controller( 'CreatorHeaderCtrl', function CreatorHeaderController( $scope ) {

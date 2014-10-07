@@ -19,7 +19,7 @@ angular.module( 'symantis.me.activity', [
 */
 .controller( 'ActivityCtrl', function ActivityController( $scope, titleService ) {
 	titleService.setTitle('My Activity');
-
+	$scope.$parent.toDo = [];
 	
 })
 .controller( 'MeActivityLeftsideCtrl', function MeActivityLeftsideController( $scope ) {

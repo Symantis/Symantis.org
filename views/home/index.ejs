@@ -48,6 +48,10 @@
 
 		</div>
 	</div>
+	<ul class="to-do" ng-class="{show: toDo.length > 0 }">
+		<li><h4>To Do for this Section</h4></li>
+		<li ng-repeat="to in toDo">{{ to }}</li>
+	</ul>
 	<!-- C directive backToTop -->
 	<div class="back-to-top" ng-class="{hidden: hidden}">
 		<a ng-click="backToTop()" title="Back to top"><span class="icon-arrow-up"></span></a>

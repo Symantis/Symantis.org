@@ -11,7 +11,8 @@ angular.module( 'symantis.more.contributors', [
 
 })
 .controller( 'ContributorsBoardCtrl', function ContributorsBoardController( $scope, SystemModel, commits) {
-
+	$scope.$parent.toDo = [];
+	
 	$scope.commits = {}; 
 	$scope.loadingSection = true;
 

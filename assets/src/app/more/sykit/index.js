@@ -7,6 +7,7 @@ angular.module( 'symantis.more.sykit', [
 
 .controller( 'SykitCtrl', function SykitController( $scope, titleService ) {
 	titleService.setTitle('SyKit');
+	$scope.$parent.toDo = [];
 })
 .controller( 'SykitHeaderCtrl', function SykitHeaderController( $scope, titleService ) {
 	//titleService.setTitle('Contact');

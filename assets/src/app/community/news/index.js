@@ -19,6 +19,7 @@ angular.module( 'symantis.community.news', [
 */
 .controller( 'NewsCtrl', function NewsController( $scope, titleService ) {
 	titleService.setTitle('News');
+	$scope.$parent.toDo = [];
 
 	
 })
@@ -31,7 +32,7 @@ angular.module( 'symantis.community.news', [
 	}
 
 	titleService.setTitle('News: ' + $scope.article.title);
-
+	$scope.$parent.toDo = [];
 	
 })
 .controller( 'CommunityNewsLeftsideCtrl', function CommunityNewsLeftsideController( $scope ) {

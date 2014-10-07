@@ -179,6 +179,30 @@ quote {
 .no-title {
 	padding-top: rem-calc(80px);
 }
+.to-do{
+	position: fixed;
+	width:16%;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	bottom: 65px;
+	right: 0.9375rem;
+	z-index:100;
+	@include transition(200ms);
+	color:#fff;
+	background:$darkest;
+	opacity:0;
+	&.show{
+		opacity:1;
+	}
+	ul li{
+		font-size: rem-calc(10);
+		list-style-type:none;
+	}
+	h4{
+		color: #fff;
+		font-size: rem-calc(16);
+	}
+}
 .back-to-top {
 	position: fixed;
 	bottom: 0;

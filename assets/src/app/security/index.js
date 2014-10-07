@@ -35,7 +35,7 @@ angular.module( 'symantis.security', [
 
 .controller( 'SecurityCtrl', function SecurityController( $scope, titleService ) {
 	titleService.setTitle('Security');
-
+	$scope.$parent.toDo = ['Add Statement'];
 	
 })
 .controller( 'SecurityHeaderCtrl', function SecurityHeaderController( $scope, titleService ) {

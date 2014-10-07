@@ -19,6 +19,8 @@ angular.module( 'symantis.community.queries', [
 */
 .controller( 'QueriesCtrl', function QueriesController( $http, $sails, $scope, $state, titleService, cache, queries ) {
 	titleService.setTitle('Queries');
+	$scope.$parent.toDo = [];
+
 	$scope.loadingSection = true;
 
 	//$scope.queries = queries;
@@ -172,7 +174,9 @@ angular.module( 'symantis.community.queries', [
 	
 })
 .controller( 'QueriesEditCtrl', function QueriesEditController( $http, $scope, query, queries, titleService, cache, QueryModel, utils, $timeout ) {
-	
+	titleService.setTitle('Edit Query');
+	$scope.$parent.toDo = [];
+
 	//$scope.query = query;
 
 	$scope.loadingSection = true;
@@ -184,7 +188,7 @@ angular.module( 'symantis.community.queries', [
 	$scope.preview = false;
 	$scope.saveStatus = "Save";
 
-	titleService.setTitle('Edit Query');
+
 
 	$scope.loadTags = function(query) {
 		return $http.get('/api/tags/' + query);
@@ -218,6 +222,8 @@ angular.module( 'symantis.community.queries', [
 .controller( 'QueriesNewCtrl', function QueriesNewController( $http, $state, $scope, titleService, QueryModel, utils ) {
 
 	titleService.setTitle('New Query');
+	$scope.$parent.toDo = [];
+
 	$scope.loadTags = function(query) {
 		return $http.get('/api/tags/' + query);
 	};
@@ -254,6 +260,7 @@ angular.module( 'symantis.community.queries', [
 })
 .controller( 'QueriesMineCtrl', function QueriesMineController($scope, titleService) {
 	titleService.setTitle('My Queries');
+	$scope.$parent.toDo = ['Add Queries'];
 
 })
 .controller( 'CommunityQueriesLeftsideCtrl', function CommunityQueriesLeftsideController( $scope ) {

@@ -157,7 +157,9 @@ angular.module( 'symantis.me', [
 
 .controller( 'MeCtrl', function ProfileController( $scope, titleService, $http, user, UserModel, utils ) {
 	titleService.setTitle('Me');
-	//$scope.user = user;
+	$scope.$parent.toDo = [];
+	
+	$scope.user = user;
 	$scope.user.reciprocal = utils.finduserMatches($scope.user.totalToConnections, $scope.user.totalFromConnections )
 
 	$scope.loadTags = function(query) {

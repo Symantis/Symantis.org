@@ -92,6 +92,7 @@ angular.module( 'symantis.register', [
 
 .controller( 'RegisterCtrl', function RegisterController( $scope, $state, titleService ) {
 	titleService.setTitle('Register');
+	$scope.$parent.toDo = [];
 	
 	$scope.registerData = {
 		email : '',
