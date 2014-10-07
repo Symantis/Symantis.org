@@ -112,6 +112,10 @@ angular.module( 'symantis.community', [
 				"queries@community.queries": {
 					controller: 'QueriesMineCtrl',
 					templateUrl: 'community/queries/mine.tpl.html'
+				},
+				"query-nav@community.queries": {
+					controller: 'CommunityQueriesNavCtrl',
+                	templateUrl: 'common/back.tpl.html'
 				}
 			}
 		})
