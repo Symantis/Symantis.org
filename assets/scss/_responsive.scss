@@ -148,6 +148,9 @@ and (max-width : rem-calc(1024px)) {
 			width: 200px;
 		}
 	}
+	.manti-pod-wrap {
+		width: 100%;
+	}
 }
 
 // Desktops & Laptops & Above ----------- 
@@ -206,6 +209,9 @@ and (min-width : rem-calc(1824px)) {
 	}
 	.board-pod-wrap{
 		width: 25%;
+	}
+	.manti-pod-wrap {
+		width: 33.33%;
 	}
 }
 

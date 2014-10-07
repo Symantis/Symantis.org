@@ -1,3 +1,63 @@
+.manti-category-header {
+	padding-bottom: 0;
+	h3 {
+		padding-bottom: 18px;
+		//border-bottom: 1px $gray solid;
+		text-align: left;
+		width: 100%;
+		@include font-semi(rem-calc(18px));
+		color: $dark;
+		margin: 0;
+	}
+	.bottom-rule {
+		width: 20%;
+		height: 1px;
+		display: block;
+		padding: 0;
+		margin: 0;
+		background-color: $gray;
+	}
+}
+.manti-category-nav {
+	ul {
+		list-style: none;
+		margin: 0;
+		li {
+			padding: 0;
+			margin: 0;
+			line-height: 1;
+			float: left;
+			width: 100%;
+			position: relative;
+			&:first-child {
+				a {
+					padding-top: 0;
+				}
+			}
+			a {
+				padding: rem-calc(3px) 0 rem-calc(3px) 0;
+				margin: 0;
+				@include font-regular(12px);
+				color: darken($light, 10%);
+				@include transition(100ms);
+				line-height: 1.4;
+				float: left;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				&:hover {
+					color: $darkest;
+				}
+				&.active {
+					color: $darkest;
+				}
+			}
+		}
+	}
+}
+
+
+
 .manti-sub-nav {
 	border-bottom: rem-calc(1px) $dark solid;
 	padding-bottom: rem-calc(20px);
@@ -23,11 +83,6 @@
 				&:hover {
 					//border-top: 3px $dark solid;
 					//padding-top: rem-calc(23px);
-					color: black;
-				}
-				&.active {
-					border-top: 3px $dark solid;
-					padding-top: rem-calc(23px);
 					color: black;
 				}
 			}
@@ -140,7 +195,7 @@
 	.manti-pod-header {
 		height: 50px;
 		width: 100%;
-		border-bottom: 1px $light solid;
+		border-bottom: 1px $gray solid;
 		padding: 10px 15px 10px 15px;
 		p {
 			@include font-regular(rem-calc(12px));
@@ -217,7 +272,7 @@
 	.manti-pod-footer {
 		height: 50px;
 		width: 100%;
-		border-top: 1px $light solid;
+		border-top: 1px $gray solid;
 		padding: 10px 15px 10px 15px;
 		p {
 			@include font-regular(rem-calc(12px));
@@ -261,7 +316,7 @@
 			list-style: none;
 			li {
 				margin: 0;
-				border-top: 1px $light solid;
+				border-top: 1px $gray solid;
 				padding: 10px 15px 10px 15px;
 				width: 100%;
 				height: 45px;

@@ -1,24 +1,49 @@
+.board-category-header {
+	padding-bottom: 0 !important;
+}
 .board-category-nav {
 	ul {
 		list-style: none;
-		float: left;
-		position: relative;
-		width: 100%;
+		margin: 0;
 		li {
-			padding: 0 !important;
-			margin: 0 !important;
+			padding: 0;
+			margin: 0;
 			line-height: 1;
 			float: left;
 			width: 100%;
 			position: relative;
+			&:first-child {
+				width: 100%;
+				float: left;
+				text-align: left;
+				padding-top: rem-calc(3px);
+				padding-bottom: rem-calc(18px);
+				a {
+					padding: 0;
+				}
+				.bottom-rule {
+					width: 20%;
+					height: 1px;
+					display: block;
+					padding: 0;
+					margin: 0;
+					margin-top: rem-calc(24px);
+					background-color: $gray;
+					float: left;
+				}
+			}
 			a {
-				padding: 0 0 rem-calc(10px) 0;
+				padding: rem-calc(3px) 0 rem-calc(3px) 0;
 				margin: 0;
 				@include font-regular(12px);
 				color: darken($light, 10%);
 				@include transition(100ms);
 				line-height: 1.4;
+				width: 100%;
 				float: left;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
 				&:hover {
 					color: $darkest;
 				}
@@ -26,9 +51,12 @@
 					color: $darkest;
 				}
 			}
+			
 		}
 	}
 }
+
+
 .board-sub-nav {
 	border-bottom: rem-calc(1px) $dark solid;
 	//float: left;
