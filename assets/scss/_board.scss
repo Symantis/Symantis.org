@@ -36,20 +36,24 @@
 				line-height: 1.4;
 				width: 100%;
 				float: left;
-				text-overflow: ellipsis;
-				overflow: hidden;
-				white-space: nowrap;
+				//text-overflow: ellipsis;
+				//overflow: hidden;
+				//white-space: nowrap;
 				&:hover {
 					color: $darkest;
 				}
 				&.active {
 					border-left: 4px $primary-color solid;
 					color: $darkest;
-					padding-left: rem-calc(8px);
+					padding-left: 8px;
+					//margin-left: -12px;
 				}
 			}
 		}
 	}
+}
+.left-content {
+	overflow-x: visible; 
 }
 
 
@@ -191,23 +195,6 @@
 	//width: 0 !important;
 	//height: 0 !important;
 	visibility: hidden !important;
-	/*position: fixed !important;
-	left: -9999px !important;
-	top: -9999px !important;
-	&:after{
-		content:"";
-		clear:both;
-		display:none;
-	}
-	.board-pod {
-		display: none !important; 
-		width: 0 !important;
-		height: 0 !important;
-		visibility: hidden !important;
-		position: fixed !important;
-		left: -9999px !important;
-		top: -9999px !important;
-	}*/
 }
 .board-pod {
 	//float: left;
@@ -464,8 +451,44 @@
 				@inlude font-bold(rem-calc(24px));
 				font-size: rem-calc(24px);
 				color: $dark;
+				padding-right: rem-calc(100px);
 				&:hover {
 					color: $dark;
+				}
+			}
+			.board-page-accept {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: rem-calc(100px);
+				padding-right: rem-calc(3px);
+				a {
+					float: right;
+					width: rem-calc(30px);
+					height: rem-calc(30px);
+					border-radius: 50%;
+					display: block;
+					background-color: $light;
+					@include font-semi(rem-calc(16px));
+					text-align: center;
+					line-height: rem-calc(30px);
+					color: white;
+					@include transition(100ms);
+					&:hover {
+						background-color: darken($light, 15%);
+					}
+					&.accept-button {
+						background-color: $primary-color;
+						margin-left: rem-calc(15px);
+						&:hover {
+							background-color: darken($primary-color, 15%);
+						}
+						span {
+							position: relative;
+							bottom: -.2rem;
+							font-size: rem-calc(16px);
+						}
+					}
 				}
 			}
 		}

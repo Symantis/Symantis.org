@@ -105,8 +105,8 @@ $reveal-close-weight: light;
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		height: 15px;
-		width: 15px;
+		height: 10px;
+		width: 10px;
 		border-radius: 50%;
 		//BLUE
 		background-color: rgba(61,139,199,1.0);
@@ -118,8 +118,8 @@ $reveal-close-weight: light;
 		&:after {
 			content: '';
 			position: absolute;
-			width: 15px;
-			height: 15px;
+			width: 10px;
+			height: 10px;
 			border-radius: 50%;
 			//RED
 			background-color: rgba(199,64,61,1.0);
@@ -131,8 +131,8 @@ $reveal-close-weight: light;
 		&:before {
 			content: '';
 			position: absolute;
-			width: 15px;
-			height: 15px;
+			width: 10px;
+			height: 10px;
 			border-radius: 50%;
 			//PRIME
 			background-color: rgba(59,148,139,1.0);

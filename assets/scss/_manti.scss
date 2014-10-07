@@ -103,7 +103,7 @@
 			span {
 				position: relative;
 				bottom: -.1rem;
-				margin-left: 4px;
+				margin-right: 4px;
 			}
 		}
 	}
@@ -196,7 +196,7 @@
 				box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 				@include transition(100ms);
 				span {
-					margin-left: 3px;
+					margin-right: 3px;
 					position: relative;
 					bottom: -.1rem;
 				}
@@ -361,6 +361,10 @@
 				position: relative;
 				bottom: -.1rem;
 			}
+			&:hover {
+				background-color: $dark;
+				border-color: $dark;
+			}
 		}
 	}
 	.manti-pod-group {
@@ -399,15 +403,8 @@
 		border-color: $sy-blue;
 		a {
 			color: $sy-blue !important;
-		}
-		.manti-pod-body {
-			h3 {
-				a {
-					color: $sy-blue;
-					&:hover {
-						color: darken($sy-blue, 10%);
-					}
-				}
+			&:hover {
+				color: darken($sy-blue, 15%) !important;
 			}
 		}
 	}
@@ -415,31 +412,17 @@
 		border-color: $sy-red;
 		a {
 			color: $sy-red !important;
-		}
-		.manti-pod-body {
-			h3 {
-				a {
-					color: $sy-red;
-					&:hover {
-						color: darken($sy-red, 10%);
-					}
-				}
+			&:hover {
+				color: darken($sy-red, 15%) !important;
 			}
 		}
 	}
 	&.group-pod {
 		border-color: $primary-color;
 		a {
-			color: $primary-color;
-		}
-		.manti-pod-body {
-			h3 {
-				a {
-					color: $primary-color;
-					&:hover {
-						color: darken($primary-color, 10%);
-					}
-				}
+			color: $primary-color !important;
+			&:hover {
+				color: darken($primary-color, 15%) !important;
 			}
 		}
 	}
