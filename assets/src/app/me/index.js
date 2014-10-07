@@ -12,6 +12,12 @@ angular.module( 'symantis.me', [
 	$stateProvider
 		.state( 'me', {
 			url: '/me',
+			resolve : {
+				cache: 'cache',
+			    user : function(cache, $rootScope) {
+			        return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
+			    }
+		    },
 			views: {
 				"main": {
 					controller: 'MeCtrl',
@@ -148,9 +154,11 @@ angular.module( 'symantis.me', [
 	;
 })
 
-.controller( 'MeCtrl', function ProfileController( $scope, titleService, $http, UserModel ) {
+.controller( 'MeCtrl', function ProfileController( $scope, titleService, $http, user, UserModel, utils ) {
 	titleService.setTitle('Me');
-	
+	$scope.user = user;
+	$scope.user.reciprocal = utils.finduserMatches($scope.user.totalToConnections, $scope.user.totalFromConnections )
+
 	$scope.loadTags = function(query) {
 		return $http.get('/api/tags/' + query);
 	};

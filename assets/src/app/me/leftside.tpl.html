@@ -12,22 +12,22 @@
         <li class="profile-connections">
             <a title="View Connection Statistics" dropdown-toggle="#connections-table">
                 <div class="icon-2way icon"></div>
-                <h3>Connections <span>369</span></h3> 
+                <h3>Connections <span>{{user.totalConnections}}</span></h3> 
             </a>
         </li>
         <li class="profile-connections-tab">
             <table id="connections-table" class="connections-table">
                 <tr>
                     <td><a >Incoming Connections</a></td>
-                    <td>123</td>
+                    <td>{{user.totalFromConnections || 0}}</td>
                 </tr>
                 <tr>
                     <td><a >Outgoing Connections</a></td>
-                    <td>123</td>
+                    <td>{{user.totalToConnections || 0}}</td>
                 </tr>
                 <tr>
                     <td><a >Two-way Connections</a></td>
-                    <td>123</td>
+                    <td>{{ user.reciprocal || 0}}</td>
                 </tr>
             </table>
         </li>

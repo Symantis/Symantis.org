@@ -1,5 +1,13 @@
 <header></header>
+<section class="clearfix">
+            <alert class="animate-repeat" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+</section>
 
 <div>
 	<h2>Connect</h2>
+	<div ng-show="currentUser">
+		<p >Connect with {{ user.at }}{{ user.handle }}.</p>
+		<a ng-click="connect()">Connect to {{ user.at }}{{ user.handle }}
+	</a>
+	</div>
 </div>

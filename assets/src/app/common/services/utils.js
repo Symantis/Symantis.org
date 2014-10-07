@@ -23,6 +23,9 @@ angular.module( 'services.utils', ['lodash'])
 			//$timeout(function(){alerts.splice(index, 1)}, 5000);
 			$timeout(function(){lodash.remove(alerts, {id: data.id})},5000);
 			return;
+		},
+		finduserMatches: function(to,from){
+			return _.difference(to,from).length;
 		}
 
 	};

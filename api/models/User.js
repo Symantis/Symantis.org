@@ -2,10 +2,6 @@ var bcrypt = require('bcrypt');
 
 module.exports = {
 	attributes: {
-		uid: {
-  			type: 'integer',
-    		autoIncrement: true
-  		},
 		handle: {
 			type: 'string',
 			required: true,
@@ -67,6 +63,14 @@ module.exports = {
 			collection: 'user',
 			via: 'connections'
 		},
+		toConnections: {
+			collection: 'connection',
+			via: 'to'
+		},
+		fromConnections: {
+			collection: 'connection',
+			via: 'from'
+		},
 		//TODO Collection or Tracker
 		manti: {
 			type: 'array',
@@ -85,6 +89,8 @@ module.exports = {
 
 	getAll: function() {
 		return User.find()
+		.populate('toConnections')
+		.populate('fromConnections')
 		.then(function (models) {
 			return [models];
 		});
@@ -93,17 +99,14 @@ module.exports = {
 	getOne: function(id) {
 		return User.findOne(id)
 		.populate('connections')
+		.populate('toConnections')
+		.populate('fromConnections')
 		.then(function (model) {
+			model.totalToConnections = model.toConnections.length;
+			model.totalFromConnections = model.fromConnections.length;
+			model.totalConnections = model.totalToConnections + model.totalFromConnections;
 			return [model];
 		});
 
-	},
-	getOneByHandle: function(handle) {
-		return User.findOne({ handle: handle })
-		.populate('connections')
-		.then(function (model) {
-			console.log(model);
-			return [model];
-		});
 	}
 };

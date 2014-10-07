@@ -19,6 +19,9 @@
         </div>
     </section>
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center profile-center" ui-view="profile">
+        <section class="clearfix">
+            <alert class="animate-repeat" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        </section>
     	<!-- Section for main center header -->
         <header class="profile-header profile-about-header">
         	<h3>About</h3>

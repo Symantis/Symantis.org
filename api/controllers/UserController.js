@@ -35,7 +35,13 @@ module.exports = {
 		console.log(req.param('handle'));
 
 		User.findByHandle(req.param('handle'))
+		.populate('connections')
+		.populate('toConnections')
+		.populate('fromConnections')
 		.spread(function(model) {
+			model.totalToConnections = model.toConnections.length;
+			model.totalFromConnections = model.fromConnections.length;
+			model.totalConnections = model.totalToConnections + model.totalFromConnections;
 			User.subscribe(req.socket, model);
 			res.json(model);
 		})
@@ -43,29 +49,6 @@ module.exports = {
 			res.send(404);
 			//res.serverError(err);
 		});
-	},
-	getOneByHandle: function(req, res) {
-		console.log(req.param('handle'));
-		/*
-		User.findOne({ handle: req.param('handle') })
-		//.populate('connections')
-		.then(function (model) {
-			console.log(model);
-			return res.json(model);
-		});
-		*/
-		
-		User.getOneByHandle(req.param('handle'))
-		.spread(function(model) {
-			console.log(model);
-			User.subscribe(req.socket, model);
-			res.json(model);
-		})
-		.fail(function(err) {
-			res.send(404);
-			//res.serverError(err);
-		});
-		
 	},
 
 	create: function (req, res) {
@@ -106,12 +89,110 @@ module.exports = {
 		});
 		
 	},
-	updateStatus: function (req, res) {
+	connect: function (req, res) {
 		
-		if(req.user === "undefined" || !req.user.id ){
+		if(!req.user.id){
 			return res.badRequest('Not Logged In');
 		}
-		if(req.user === "undefined" || (req.user.id != req.param('id'))){
+		//console.log(req);
+		if(req.user.id != req.param('id')){
+			return res.badRequest('Not Logged In');
+		}
+		if(!req.param('connect')){
+			return res.badRequest('No Connection id');
+		}
+		var id = req.param('id');
+		var connect = req.param('connect');
+
+		Connection.create({to: connect, from: id }, function(err, connection){
+			if(err){
+				return console.log(err);
+			}
+			else{
+
+				User.findOne(id)
+				.exec(function(err, fromUser){
+					// handle error
+					if(err){
+
+				 	} 
+
+					// Queue up a record to be inserted into the join table
+					fromUser.toConnections.add(connection.id);
+					fromUser.connections.add(connect);
+					// Save the user, creating the new associations in the join table
+					fromUser.save(console.log, function(err) {
+				  		if(err){
+					  		//console.log(err);
+					  	}
+					});
+					User.publishAdd(id, 'connections', connect);
+					User.publishUpdate(id, fromUser);
+				});
+
+				User.findOne(connect)
+				.exec(function(err, toUser){
+				   // handle error
+					if(err){
+
+					} 
+					// Queue up a record to be inserted into the join table
+					toUser.fromConnections.add(connection.id);
+					toUser.connections.add(id);
+					// Save the user, creating the new associations in the join table
+					toUser.save(console.log,function(err) {
+					  	if(err){
+					  		//console.log(err);
+					  	}
+					});
+					User.publishAdd(connect, 'connections', id);
+					User.publishUpdate(id, toUser);
+				});
+			}
+			console.log("associated "+id+" with "+connect);
+			return res.json(connection);
+		});
+		/*
+		User.findOne(req.param('id'))
+		.exec(function(err, user){
+			if(err){
+				return res.badRequest('User not found');
+			}
+			else{
+				
+				user.connections.add(connect);
+				user.save(console.log);
+				User.publishAdd(id, 'connections', connect);
+				//res.json(user);
+
+				Connection.create({to: connect, from: id }, function(err, model){
+					if(err){
+						return console.log(err);
+					}else{
+						User.publishAdd(id, 'toConnections', connect);
+						User.publishAdd(connect, 'fromConnections', id);
+						
+						res.json(model);
+					}
+				});
+			}
+		})
+		*/
+		/*
+		User.update(req.user.id, req.params.all())
+		.exec(function(err, model) {
+			User.publishUpdate(req.user.id, model);
+			return res.json(model);
+		});
+		*/
+		
+	},
+	updateStatus: function (req, res) {
+		
+		if(!req.user ){
+			return res.badRequest('Not Logged In');
+		}
+		if(req.user.id != req.param('id')){
 			return res.badRequest('Not Logged In');
 		}
 

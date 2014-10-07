@@ -55,6 +55,7 @@ module.exports.routes = {
     'get /api/user/handle/:handle': 'UserController.findByHandle',
     'post /api/user': 'UserController.create',
     'post /api/user/update': 'UserController.update',
+    'post /api/user/connect': 'UserController.connect',
     'post /api/user/status': 'UserController.updateStatus',
 
   /**
