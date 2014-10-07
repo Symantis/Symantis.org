@@ -40,4 +40,7 @@ angular.module( 'symantis.community.board', [
 })
 .controller( 'CommunityBoardLeftsideCtrl', function CommunityBoardLeftsideController( $scope ) {
 	//titleService.setTitle('About');
+})
+.controller( 'CommunityBoardNavCtrl', function CommunityBoardNavController( $scope ) {
+	//titleService.setTitle('About');
 });

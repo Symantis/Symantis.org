@@ -74,6 +74,10 @@ angular.module( 'symantis.community', [
 				"leftside@community.queries": {
 					controller: 'CommunityQueriesLeftsideCtrl',
                 	templateUrl: 'community/queries/leftside.tpl.html'
+				},
+				"query-nav@community.queries": {
+					controller: 'CommunityQueriesNavCtrl',
+                	templateUrl: 'community/queries/sort.tpl.html'
 				}
 			}
 		})
@@ -95,6 +99,10 @@ angular.module( 'symantis.community', [
 				"queries@community.queries": {
 					controller: 'QueriesViewCtrl',
 					templateUrl: 'community/queries/view.tpl.html'
+				},
+				"query-nav@community.queries": {
+					controller: 'CommunityQueriesNavCtrl',
+                	templateUrl: 'common/back.tpl.html'
 				}
 			}
 		})
@@ -113,6 +121,10 @@ angular.module( 'symantis.community', [
 				"queries@community.queries": {
 					controller: 'QueriesNewCtrl',
 					templateUrl: 'community/queries/new.tpl.html'
+				},
+				"query-nav@community.queries": {
+					controller: 'CommunityQueriesNavCtrl',
+                	templateUrl: 'common/back.tpl.html'
 				}
 			}
 		})
@@ -132,6 +144,10 @@ angular.module( 'symantis.community', [
 				"queries@community.queries": {
 					controller: 'QueriesEditCtrl',
 					templateUrl: 'community/queries/edit.tpl.html'
+				},
+				"query-nav@community.queries": {
+					controller: 'CommunityQueriesNavCtrl',
+                	templateUrl: 'common/back.tpl.html'
 				}
 			}
 		})
@@ -139,9 +155,8 @@ angular.module( 'symantis.community', [
 		.state( 'community.board', {
 			url: '/board',
 			resolve: {
-				opportunities : function() {
-				        return {};
-				        //return UserModel.getOneByHandle($stateParams.handle);
+				opportunities : function($rootScope) {
+				       return $rootScope.opportunities;
 				}
 			},
 			views: {
@@ -152,6 +167,10 @@ angular.module( 'symantis.community', [
 				"leftside@community.board": {
 					controller: 'CommunityBoardLeftsideCtrl',
                 	templateUrl: 'community/board/leftside.tpl.html'
+				},
+				"board-nav@community.board": {
+					controller: 'CommunityBoardNavCtrl',
+                	templateUrl: 'community/board/sort.tpl.html'
 				}
 			}
 		})
@@ -159,14 +178,17 @@ angular.module( 'symantis.community', [
 			url: '/:id/:title',
 			resolve: {
 				opportunity : function($stateParams) {
-				        return { id: $stateParams.id, clean: $stateParams.title };
-				        //return UserModel.getOneByHandle($stateParams.handle);
+				    return { id: $stateParams.id, clean: $stateParams.title };
 				}
 			},
 			views: {
 				"board@community.board": {
 					controller: 'BoardViewCtrl',
 					templateUrl: 'community/board/view.tpl.html'
+				},
+				"board-nav@community.board": {
+					controller: 'CommunityBoardNavCtrl',
+                	templateUrl: 'common/back.tpl.html'
 				}
 			}
 		})
@@ -176,6 +198,10 @@ angular.module( 'symantis.community', [
 				"board@community.board": {
 					controller: 'BoardNewCtrl',
 					templateUrl: 'community/board/new.tpl.html'
+				},
+				"board-nav@community.board": {
+					controller: 'CommunityBoardNavCtrl',
+                	templateUrl: 'common/back.tpl.html'
 				}
 			}
 		})

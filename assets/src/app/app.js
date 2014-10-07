@@ -255,7 +255,11 @@ angular.module( 'symantis', [
 
 
 	}
-
+	//Handle "Cancel" and Back Buttons
+	$scope.goBack = function(){
+		history.back();
+	}
+	
 	$sails.on('user', function (envelope) {
 		switch(envelope.verb) {
 			

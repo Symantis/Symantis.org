@@ -71,6 +71,10 @@ module.exports = {
 			collection: 'connection',
 			via: 'from'
 		},
+		activity: {
+			collection: 'activity',
+			via: 'user'
+		},
 		//TODO Collection or Tracker
 		manti: {
 			type: 'array',

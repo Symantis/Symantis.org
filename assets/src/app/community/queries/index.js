@@ -215,7 +215,7 @@ angular.module( 'symantis.community.queries', [
 		}
 	}
 })
-.controller( 'QueriesNewCtrl', function QueriesNewController( $http, $scope, titleService, QueryModel, utils ) {
+.controller( 'QueriesNewCtrl', function QueriesNewController( $http, $state, $scope, titleService, QueryModel, utils ) {
 
 	titleService.setTitle('New Query');
 	$scope.loadTags = function(query) {
@@ -242,6 +242,7 @@ angular.module( 'symantis.community.queries', [
 
 			QueryModel.create(model).then(function (newModel){
 				utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your Query was added successfully.' } );	
+				$state.go('community.queries',{id: newModel.id, title: newModel.clean });
 			});
 
 		}else{
@@ -256,5 +257,8 @@ angular.module( 'symantis.community.queries', [
 
 })
 .controller( 'CommunityQueriesLeftsideCtrl', function CommunityQueriesLeftsideController( $scope ) {
+	//titleService.setTitle('About');
+})
+.controller( 'CommunityQueriesNavCtrl', function CommunityQueriesNavController( $scope ) {
 	//titleService.setTitle('About');
 });
