@@ -40,16 +40,18 @@
 		        <div class="board-page-details">
 		        	<div class="board-details">
 			        	<div class="board-details-pic author-{{ board.author.status }} generate-image" signature="{{ board.author.signature }}"></div>
-		                <p class="board-details-by">
-	                        <a ui-sref="profile.view({ handle: board.author.handle })">
-	                            {{ board.author.firstName }} {{ board.author.lastName }}
-	                        </a>
-	                    </p>
-		                <p class="board-details-on">
-	                        <span>
-	                            {{ board.date | date }}
-	                        </span>
-	                    </p>
+			        	<div class="board-postedby">
+			                <p class="board-details-by">
+		                        <a ui-sref="profile.view({ handle: board.author.handle })">
+		                            {{ board.author.firstName }} {{ board.author.lastName }}
+		                        </a>
+		                    </p>
+			                <p class="board-details-on">
+		                        <span>
+		                            {{ board.date | date }}
+		                        </span>
+		                    </p>
+		                </div>
 	                </div>
 		        </div>
 			</section>
