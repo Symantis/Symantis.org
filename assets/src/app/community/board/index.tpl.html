@@ -22,7 +22,9 @@
 
         <header class="board-sub-nav">
             <div class="board-sub-nav-left" ui-view="board-nav">
-            
+                <ul ui-view="board-nav">
+                    <li class="board-sort"><a dropdown-toggle="#board-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
+                </ul>
             </div>
             <div class="sub-nav-search">
                 <input 
