@@ -161,30 +161,6 @@ angular.module( 'symantis.profile', [
 	titleService.setTitle('Profile');
 	$scope.users = users;
 
-
-	$sails.on('user', function (envelope) {
-		switch(envelope.verb) {
-			
-			case 'created':
-				cache.cacheuserUser($scope.users, envelope.data);
-				
-				break;
-			case 'addedTo':
-				//cache.cacheNewQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'updated':
-				cache.cacheUpdatedUser($scope.users, envelope.id, envelope.data);
-				//lodash.
-				//$scope.queries.unshift(envelope.data);
-				break;
-			case 'destroyed':
-				cache.removeUserFromCache($scope.users, envelope.id);
-				
-				break;
-		}
-	});
-
 	
 })
 .controller( 'ProfileHeaderCtrl', function ProfileHeaderController( $scope, user) {

@@ -8,14 +8,15 @@ angular.module( 'symantis.more.contributors', [
 .controller( 'ContributorsCtrl', function ContributorsController( $scope, titleService) {
 	titleService.setTitle('Contributors');
 
+
 })
 .controller( 'ContributorsBoardCtrl', function ContributorsBoardController( $scope, SystemModel, commits) {
 
 	$scope.commits = {}; 
-	$scope.loading = true;
+	$scope.loadingSection = true;
 
 	SystemModel.getRecentCommits().then(function(data){
-		$scope.loading = false;
+		$scope.loadingSection = false;
 		$scope.commits = data;
 	});
 

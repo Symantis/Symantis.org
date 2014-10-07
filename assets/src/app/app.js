@@ -127,13 +127,14 @@ angular.module( 'symantis', [
 	moment.lang('en');
 	
 })
-
 .run(function(editableOptions) {
   editableOptions.theme = 'default'; // bootstrap3 theme. Can be also 'bs2', 'default'
 })
 
-.run( function run ($rootScope, $sails, lodash) {
+.run( function run ($rootScope, lodash, UserModel) {
 	$rootScope.currentUser = window.currentUser;
+
+
 	$rootScope.user = {};
 	$rootScope.users = [];
 	$rootScope.cachedUsers = []; 
@@ -151,6 +152,8 @@ angular.module( 'symantis', [
 	$rootScope.mantis = aMantis;
 	
 	$rootScope.alerts =  [];
+
+
 
 
 })
@@ -196,7 +199,7 @@ angular.module( 'symantis', [
 	});
 })
 */
-.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal) {
+.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal, $sails, cache) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
 	$timeout(function() {
@@ -206,6 +209,9 @@ angular.module( 'symantis', [
 
 	//Handle Idle
 	if($scope.currentUser){
+	    
+	    $scope.users = cache.resolveUserCache($scope.users, $scope.currentUser.handle);
+
 	    $scope.$on('$idleEnd', function() {
 	        $scope.currentUser.status = 'active';
 	        $scope.currentUser.statusTime = new Date();
@@ -246,7 +252,32 @@ angular.module( 'symantis', [
 	        	console.log(model.status);
 	        });
 	    });
+
+
 	}
+
+	$sails.on('user', function (envelope) {
+		switch(envelope.verb) {
+			
+			case 'created':
+				cache.cacheuserUser($scope.users, envelope.data);
+				
+				break;
+			case 'addedTo':
+				//cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'updated':
+				cache.cacheUpdatedUser($scope.users, envelope.id, envelope.data);
+				//lodash.
+				//$scope.queries.unshift(envelope.data);
+				break;
+			case 'destroyed':
+				cache.removeUserFromCache($scope.users, envelope.id);
+				
+				break;
+		}
+	});
 
 	//Modals
 	$scope.loginModal = function () {
@@ -269,16 +300,6 @@ angular.module( 'symantis', [
 
 
 });
-
-
-var oCurrentUser = {
-	id: 0, 
-	firstName: "Hamish",
-	lastName:  "Jackson-Mee",
-	handle: "theman",
-	at: "@",
-	signature: Math.random()
-}
 var aUsers = [
 	/*
 	{
