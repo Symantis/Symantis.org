@@ -65,9 +65,9 @@ angular.module( 'symantis.community', [
 					controller: 'QueriesCtrl',
 					templateUrl: 'community/queries/index.tpl.html',
 					resolve: {
-						cache : 'cache',
-						queries: function(cache, $rootScope){
-							return $rootScope.queries = cache.cacheQueries($rootScope.queries);
+						queries: function($rootScope){
+							return $rootScope.queries;
+							//return $rootScope.queries = cache.cacheQueries($rootScope.queries);
 						}
 					},
 				},
@@ -80,12 +80,15 @@ angular.module( 'symantis.community', [
 		.state( 'community.queries.view', {
 			url: '/:id/:title',
 			resolve : {
-			    query : function($stateParams) {
-			    	return {id: $stateParams.id, clean: $stateParams.title};	
+			    query : function($rootScope, $stateParams) {
+			    	return $rootScope.query = {id: $stateParams.id, clean: $stateParams.title};	
 			    	//console.log($stateParams);
 			    	//console.log($rootScope.queries);
 			    	//return $rootScope.query = cache.resolveQueryCache($rootScope.queries, $stateParams.id);
 			        
+			    },
+			    queries : function($rootScope){
+			    	return $rootScope.queries;
 			    }
 		    },
 			views: {
@@ -116,10 +119,13 @@ angular.module( 'symantis.community', [
 		.state( 'community.queries.edit', {
 			url: '/:id',
 			resolve : {
-			    query : function($stateParams) {
-			        return { id: $stateParams.id };
+			    query : function($rootScope, $stateParams) {
+			        return $rootScope.query = { id: $stateParams.id };
 			        //return { id: $stateParams.id, clean: $stateParams.title };
 			        //return UserModel.getOneByHandle($stateParams.handle);
+			    },
+			    queries : function($rootScope){
+			    	return $rootScope.queries;
 			    }
 		    },
 			views: {

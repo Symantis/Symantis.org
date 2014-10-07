@@ -32,6 +32,14 @@ quote {
 		color: $gray;
 	}
 }
+.clearfix{
+	display:block;
+	&:after{
+		content:"";
+		clear:both;
+		display:block;
+	}
+}
 .table{
 	display:table;
 	width:100%;

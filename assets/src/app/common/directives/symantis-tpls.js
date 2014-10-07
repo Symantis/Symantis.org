@@ -442,7 +442,7 @@ angular.module('sy.templates.sitenav', [])
                 var trytimeout = angular.noop;
 
 			    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
-                   console.log(fromState);
+                   //console.log(fromState);
                     if(fromState.name == ""){
                         $scope.resetHeader(50);
                     }else{

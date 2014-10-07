@@ -33,28 +33,52 @@ angular.module( 'services.cache', ['lodash'])
 		},
 
 		resolveQueryCache: function(queries, id){
+			var self = this;
 			if(this.checkQueryCache(queries, id)){
-				return this.getCachedQuery(queries, id);
+				console.log("returning cached query...");
+				var deferred = $q.defer();
+				var query = this.getCachedQuery(queries, id);
+				query.responses = self.resolveQueryResponsesCache(query);
+				deferred.resolve(query);
+				return deferred.promise;
+
+				//return 
 			}else{
-				 var self = this;
-				 console.log(this);
+				 console.log("getting query...");
 				 return QueryModel.getOne(id).then(function(query){
+				 	
 				 	return self.cacheNewQuery(queries, query);
 				 });
 			}
 		},
-		resolveQueriesCache: function(){
-			console.log("getting queries...");
-			return queries = QueryModel.getAll().then(function(models){
-				console.log(models);	
-				return models;
-			});
+		resolveQueriesCache: function(queries){
+			var self = this;
+			if(queries.length == 0){
+				console.log("getting queries...");
+				
+				return queries = QueryModel.getAll().then(function(models){
+					console.log(models);	
+					return models;
+				});
+			}else{
+				console.log("returning cached queries...");
+				var deferred = $q.defer();
+				deferred.resolve(queries);
+				return deferred.promise;
+			}
 		},
 		cacheQueries: function(queries){
 			if(queries.length == 0){
-				return queries = QueryModel.getAll();
+				return QueryModel.getAll().then(function(models){
+					queries = models;
+					console.log(models);	
+					return models;
+				});
 			}else{
-			    return queries;
+			    console.log("returning cached queries...");
+				var deferred = $q.defer();
+				deferred.resolve(queries);
+				return deferred.promise;
 			}
 		},
 		checkQueryCache: function(queries, id){
@@ -80,62 +104,29 @@ angular.module( 'services.cache', ['lodash'])
 			//var query = _.find(queries, {id: id});
 			//if(query.responses.length == 0){
 			var self = this;
-
-			return _.map(query.responses, function(response){
-				
-				response = self.cacheQueryReponse(response);
-				console.log(response);
-				return response;
-				
-				/*
-				var deferred = $q.defer();
-				self.cacheQueryReponse(response, function(model){
-					console.log(model);
-					return deferred.resolve(model);
-				});
-				return deferred.promise;
-				*/
-				
+			var deferred = $q.defer();
+			responses = _.map(query.responses, function(response){
+				return self.cacheQueryReponse(response);
 			});
-			//console.log(query.responses = responses);
-			//return query.responses = responses;
-				/*
-				var self = this;
-				return QueryModel.getResponses(id).then(function(responses){
-					return self.cacheQueryResponses(queries, id, responses)
-				});
-				*/
-			//}else{
 
-			//}
+			deferred.resolve(responses);
+			return deferred.promise;
 		},
 		cacheQueryReponse: function(response){
 			
 			if(response.cached){
-				 return response;
+				console.log("returning cached response...");
+				var deferred = $q.defer();
+				deferred.resolve(response);
+				return deferred.promise;
 			}else{
-				
-				return response = QueryModel.getResponse(response.id);
-				
-				/*
-				return response =  QueryModel.getResponse(response.id).then(function(model){
+				console.log("getting response...");
+				return response = QueryModel.getResponse(response.id).then(function(model){
 					model.cached = true;
 					//$rootScope.$digest();
 					return model;
 				});
-				*/
-				
-				/*
-				var deferred = $q.defer();
-				QueryModel.getResponse(response.id).then(function(model){
-					model.cached = true;
-					return deferred.resolve(model);
-				});
-				return deferred.promise;
-				*/
-
 			}
-			//return cb(response);
 		},
 		cacheQueryAllResponses: function(queries, id, responses){
 			var query = _.find(queries, {id: id});

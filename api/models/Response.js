@@ -40,7 +40,7 @@ module.exports = {
 		},
 		replies: {
 			collection: 'comment',
-			via: 'controller'
+			via: 'response'
 		},
 		query: {
 			model: 'query',
@@ -50,6 +50,7 @@ module.exports = {
 	getAll: function() {
 		return Response.find()
 		.populate('author')
+		.populate('replies')
 		.then(function (models) {
 			return [models];
 		});
@@ -57,6 +58,7 @@ module.exports = {
 	getOne: function(id) {
 		return Response.findOne(id)
 		.populate('author')
+		.populate('replies')
 		.then(function (model) {
 			//model.totalViews = parseInt(model.totalViews) + 1;
 			//Query.addViewCount(id);
@@ -67,7 +69,7 @@ module.exports = {
 		console.log(query);
 		return Response.find({query: query})
 		.populate('author')
-		//.populate('replies')
+		.populate('replies')
 		.then(function (models) {
 			return [models];
 		});

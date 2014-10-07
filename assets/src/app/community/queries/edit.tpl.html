@@ -1,33 +1,38 @@
-<div class="medium-12 columns new-query-page">
+<div ng-show="loadingSection" class="preloader-container">
+    <!-- loadingSection is a variable defined in the $scope -->
+	<div class="preloader">
+    </div>
+</div>
+<div ng-hide="loadingSection" class="medium-12 columns new-query-page">
 	<h3>Edit Query as <a ui-sref="me">{{ currentUser.firstName }} {{ currentUser.lastName }}</a></h3>
 	
 	<div class="query-page new-query">
 		<form class="new-query-form" name="queryForm">
 			<div 
-				ng-init="editQuery.preview = false"
-				ng-show="editQuery.preview"
-				class="query-post preview"
+				ng-init="query.preview = false"
+				ng-show="query.preview"
+				class="query-post preview clearfix"
 			>
 				<section class="querie-header">
 				    <div class="querie-header-title">
 				        <h3>
 				        	<a>
-				        		{{ editQuery.title || "Add a query title"}}
+				        		{{ query.title || "Add a query title"}}
 				        	</a>
 				        </h3>
 				    </div>
 				</section>
 				<section class="query-content">
 					<div class="query-content-main">
-						<markdown ng-model="editQuery.query" strip="true" extensions="github, table">
+						<markdown ng-model="query.query" strip="true" extensions="github, table">
 						Add your query!
 						</markdown>
 					</div>
 				</section>
 				<section class="query-footer">	
 					<div class="querie-tags">
-			            <ul>
-			                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in editQuery.tags track by $index">
+			            <ul class="clearfix">
+			                <li class="tag {{ tag.privillege }}-tag" ng-repeat="tag in query.tags track by $index">
 			                    <a title="View content tagged with {{ tag.title }}">
 			                        <p>{{ tag.text }}</p>
 			                    </a>
@@ -38,13 +43,13 @@
 			</div>
 			<div 
 				class="query-post preview"
-				ng-hide="editQuery.preview"
+				ng-hide="query.preview"
 			>
 				<input 
 					type="text" 
 					name="title"
 					placeholder="Query Title"
-					ng-model="editQuery.title"
+					ng-model="query.title"
 					required 
 				/>
 		        <div class="new-query-inner">
@@ -75,32 +80,33 @@
 					<textarea 
 						name="query" 
 						placeholder="Whats your Query?"
-						ng-model="editQuery.query"
+						ng-model="query.query"
 						required
 					></textarea>
 				</div>
-				<tags-input class="new-query-tag" ng-model="editQuery.tags">
+				<tags-input class="new-query-tag" ng-model="query.tags">
 		            <auto-complete source="loadTags($query)"></auto-complete>
 		        </tags-input>
 	        </div>
 			<div class="new-query-post">
 				<p>
 					<a 
+						ng
 						class="sy-button"
 						ng-click="updateQuery(queryForm)"
 					>
-						Save
+						{{ saveStatus }}
 					</a>
 				</p>
 			</div>
 			<div class="new-query-preview">
 				<p>
 					<a 
-						ng-click="editQuery.preview = !editQuery.preview"
+						ng-click="query.preview = !query.preview"
 						class="sy-button" 
 					>
-						<span ng-hide="editQuery.preview">Preview</span>
-						<span ng-show="editQuery.preview">Edit</span>
+						<span ng-hide="query.preview">Preview</span>
+						<span ng-show="query.preview">Edit</span>
 					</a>
 				</p>
 			</div>

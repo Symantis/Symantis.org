@@ -49,8 +49,14 @@
         <section class="clearfix">
             <alert class="animate-repeat" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
         </section>
+
         <!-- Section for main center content -->
         <div class="row" ui-view="queries">
+            <div ng-show="loadingSection" class="preloader-container">
+                <!-- loadingSection is a variable defined in the $scope -->
+                <div class="preloader">
+                </div>
+            </div>
             <div class="medium-12 columns queries-main-container">
                 <article ng-repeat="query in queries | filter:queryValue track by $index" class="animate-repeat querie-overview">
                     <div class="querie-overview-main">

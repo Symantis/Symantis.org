@@ -27,15 +27,16 @@ module.exports = {
 			type: 'int',
 			defaultsTo: 0
 		},
+		/*
 		controller: {
 			type: 'string',
 			enum: ['article', 'query', 'opportunity']
 		},
-		/*
-		owner: {
-			model: '' 
-		}
 		*/
+		
+		response: {
+			model: 'response' 
+		}
 	}
 };
 

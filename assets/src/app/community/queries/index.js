@@ -19,8 +19,15 @@ angular.module( 'symantis.community.queries', [
 */
 .controller( 'QueriesCtrl', function QueriesController( $http, $sails, $scope, $state, titleService, cache, queries ) {
 	titleService.setTitle('Queries');
+	$scope.loadingSection = true;
 
-	$scope.queries = queries;
+	//$scope.queries = queries;
+	cache.resolveQueriesCache(queries).then(function(queries){
+		$scope.queries = queries;
+		$scope.loadingSection = false;
+	});
+	
+
 	/*
 	$scope.queries = cache.cacheQueries($scope.queries).then(function(r) {
 			return r;
@@ -72,12 +79,36 @@ angular.module( 'symantis.community.queries', [
 
 	
 })
-.controller( 'QueriesViewCtrl', function QueriesViewController($scope, titleService, $state, query, cache, QueryModel, utils ) {
+.controller( 'QueriesViewCtrl', function QueriesViewController($scope, titleService, $state, query, queries, cache, QueryModel, utils, $sails ) {
 	
-	$scope.query = query;
+	//$scope.query = query;
+	$scope.loadingSection = true;
 
-	$scope.query = cache.resolveQueryCache($scope.queries, query.id);
-	$scope.query.responses = cache.resolveQueryResponsesCache($scope.query);
+	cache.resolveQueryCache(queries, query.id).then(function(query){
+		$scope.query = query;
+		
+		titleService.setTitle('Query: ' + $scope.query.title);
+		$scope.loadingSection = false;
+		
+		QueryModel.getResponses(query.id).then(function(models){
+			console.log(models);
+			query.responses = models;
+			$scope.query.responses = models;
+
+			if($scope.currentUser && $scope.query.responses.length == 0){
+				$scope.comments.selected = false;
+			}
+		});
+		/*
+		cache.resolveQueryResponsesCache(query).then(function(responses){
+			$scope.query.responses = responses;	
+			console.log(responses);
+		});
+		*/
+	});
+	/*
+	
+	*/
 	//cache.resolveQueryResponsesCache($scope.query);
 	
 	/*
@@ -89,8 +120,6 @@ angular.module( 'symantis.community.queries', [
 
 	QueryModel.updateViews({id: query.id });
 
-	titleService.setTitle('Query: ' + $scope.query.title);
-
 	$scope.comments = {};
 	$scope.comments.selected = true;
 	$scope.newResponse = {
@@ -98,9 +127,7 @@ angular.module( 'symantis.community.queries', [
 		response: null
 	}
 
-	if(!query.responses || query.responses.length == 0){
-		$scope.comments.selected = false;
-	}
+	
 
 	$scope.submitResponse = function(form){
 		if(form.$valid){
@@ -111,6 +138,7 @@ angular.module( 'symantis.community.queries', [
 			}
 
 			QueryModel.addResponse(newModel).then(function(model){
+				$scope.comments.selected = false;
 				utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your response was added successfully.' } );
 			});
 		}else{
@@ -118,19 +146,43 @@ angular.module( 'symantis.community.queries', [
 		}
 	}
 
+	$sails.on('response', function (envelope) {
+		switch(envelope.verb) {
+			
+			case 'created':
+				//cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'addedTo':
+				//cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'updated':
+				//cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
+				//lodash.
+				//$scope.queries.unshift(envelope.data);
+				break;
+			case 'destroyed':
+				//cache.removeQueryFromCache($scope.queries, envelope.id);
+				
+				break;
+		}
+	});
+
 	
 })
-.controller( 'QueriesEditCtrl', function QueriesEditController( $http, $scope, query, titleService, cache, QueryModel, utils ) {
+.controller( 'QueriesEditCtrl', function QueriesEditController( $http, $scope, query, queries, titleService, cache, QueryModel, utils, $timeout ) {
 	
-	$scope.query = query;
-	$scope.query = cache.resolveQueryCache($scope.queries, query.id);
-	
-	$scope.editQuery = {
-		preview: false,
-		title: $scope.query.title,
-		query: $scope.query.query,
-		tags: $scope.query.tags || []
-	}
+	//$scope.query = query;
+
+	$scope.loadingSection = true;
+	cache.resolveQueryCache(queries, query.id).then(function(query){
+		$scope.query = query;	
+		$scope.loadingSection = false;
+		console.log(query);
+	});
+	$scope.preview = false;
+	$scope.saveStatus = "Save";
 
 	titleService.setTitle('Edit Query');
 
@@ -140,16 +192,23 @@ angular.module( 'symantis.community.queries', [
 
 	$scope.updateQuery = function(form){
 		if(form.$valid){
+			
+			$scope.saveStatus = "Saving...";
+
 			var model = {
 				id: $scope.query.id,
-				title: $scope.editQuery.title,
-				query: $scope.editQuery.query,
-				tags: angular.toJson($scope.editQuery.tags),
+				title: $scope.query.title,
+				query: $scope.query.query,
+				tags: $scope.query.tags,
 			}
-
+			
 			console.log(model);
 			QueryModel.update(model).then(function (newModel){
-				utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your Query was updated successfully.' } );	
+				$scope.saveStatus = "SAVED!";
+				utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your Query was updated successfully.' } );
+				$timeout(function(){
+					$scope.saveStatus = "Save";
+				}, 2000);
 			});
 		}else{
 			utils.sectionAlert($scope.alerts, { type: 'alert', msg: 'Opps, some things are missing... Try again' } );

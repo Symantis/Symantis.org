@@ -1,4 +1,10 @@
-<div class="medium-12 columns query-page">
+
+<div ng-show="loadingSection" class="preloader-container">
+    <!-- loadingSection is a variable defined in the $scope -->
+	<div class="preloader">
+    </div>
+</div>
+<div ng-hide="loadingSection" class="medium-12 columns query-page">
 	<div class="query-post">
 		<section class="querie-header">
 		    <div class="querie-header-title">
@@ -225,9 +231,8 @@
 	            	<span>{{ response.date | date }}</span>
 	            </p>
 	        </div>
-			<p class="comment-text">
-				{{ response.response }}
-			</p>
+			<markdown class="comment-text" ng-model="response.response" strip="true" extensions="github, table">
+			</markdown>
 			<div class="image-thumbs" ng-show="response.imgs">
 	        	<div class="thumbnail-container" ng-repeat="img in response.imgs">
 	        		<a title="View {{ img.name }}">
@@ -237,8 +242,9 @@
 		    </div>		
 		</div>
 
-		<div class="replies slideToggle" ng-init="replies.open = false" ng-show="replies.open">
+		<div class="replies slideToggle" ng-init="replies.open = false" >
 			<div 
+				ng-show="replies.open"
 				class="reply" 
 				ng-repeat="reply in response.replies"
 			>
@@ -266,7 +272,7 @@
 					<p class="reply-text">{{reply.reply}}</p>
 			    </div>
 			</div>
-			<div class="new-comment" ng-show="currentUser">
+			<div class="new-comment" ng-show="currentUser && replies.open">
 				<!-- <div class="new-comment-left">
 					<div 
 						class="reply-pic generate-image" 
@@ -292,25 +298,19 @@
 				<a ui-sref="register">Sign up</a> or <a ng-click="loginModal()">Login</a> to reply
 			</h4>
 		</div>
-
 		<a 
-        	ng-click="replies.open = true" 
-        	ng-show="!replies.open"
-        >
-        	<div class="reply-toggle">
-				<p>
-					<span ng-show="response.replies.length > 0">Add/View Replies ({{ response.replies.length }})</span>
-					<span ng-show="response.replies.length < 1">Reply</span>
-				</p>
-			</div>
-		</a>
-		<a 
-			ng-click="replies.open = false"
-			ng-show="replies.open"
-			title="Hide Replies"
+			ng-click="replies.open = !replies.open"
+			title="Toggle Replies"
 		>
 			<div class="reply-toggle">
-				<p>Hide</p>
+				<p>
+				<span ng-show="replies.open">Hide</span>
+
+				<span ng-hide="replies.open">
+					<span ng-show="response.replies.length">Add/View Replies ({{ response.replies.length }})</span>
+					<span ng-show="response.replies.length == 0">Reply</span>
+				</span>
+				</p>
 			</div>
 		</a>
 
