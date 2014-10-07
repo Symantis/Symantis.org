@@ -112,6 +112,21 @@
 			}
 		}
 	}
+	.modal-help {
+	 	p {
+	 		@include font-regular(rem-calc(13px));
+	 		color: white;
+	 	}
+	 	padding-bottom: rem-calc(20px);
+	}
+	.modal-header.help-header {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		h2 {
+			text-align: center;
+		}
+	}
 }
 .tag {
 	border: rem-calc(1px) solid $gray;

@@ -16,6 +16,17 @@ angular.module( 'symantis.global.modals', [
 	};
 
 })
+.controller( 'OpportunityHelpModalCtrl', function OpportunityHelpModalController($scope, $modalInstance){
+
+	$scope.ok = function () {
+		$modalInstance.close();
+	};
+
+	$scope.cancel = function () {
+		$modalInstance.dismiss('cancel');
+	};
+
+})
 .controller( 'SearchModalCtrl', function SearchModalController($scope, $modalInstance){
 
 	$scope.ok = function () {

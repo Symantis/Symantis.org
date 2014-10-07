@@ -302,6 +302,15 @@ angular.module( 'symantis', [
 		});
 	};
 
+	$scope.opportunityhelpModal = function () {
+
+		var modalInstance = $symodal.open({
+			templateUrl: 'common/modals/opportunityhelpModal.tpl.html',
+			controller: 'OpportunityHelpModalCtrl',
+			windowClass: 'small'
+		});
+	};
+
 
 });
 var aUsers = [
