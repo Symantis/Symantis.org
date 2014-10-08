@@ -19,10 +19,37 @@
         </div>
     </section>
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center profile-center" ui-view="profile">
+        <header class="manti-sub-nav">
+            <ul class="manti-sub-nav-left">
+                <li class="manti-sort"><a dropdown-toggle="#manti-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
+            </ul>
+            <div class="sub-nav-search">
+                <input 
+                    class="sub-search-field" 
+                    type="search" 
+                    name="sub-search-field" 
+                    placeholder="Search" 
+                />
+            </div>
+            <div class="manti-sub-nav-right">
+                <div class="manti-new">
+                    <a title="New Manti"><span class="icon-plus"></span> Create New</a>
+                </div>
+            </div>
+        </header>
+        <div class="sort-container" id="manti-sort-menu">
+            <ul class="sort-menu">
+                <li><a class="active">All <span class="icon-check icon"></span></a></li>
+                <li><a >Public <span class="icon-check icon"></span></a></li>
+                <li><a >Private <span class="icon-check icon"></span></a></li>
+                <li><a >Forked <span class="icon-check icon"></span></a></li>
+                <li><a >Collections <span class="icon-check icon"></span></a></li>
+            </ul>
+        </div>
+
         <section class="clearfix">
             <alert class="animate-repeat" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
         </section>
-    	<!-- Section for main center header -->
         
     </section>
     <section class="medium-0 large-2 columns main-right">

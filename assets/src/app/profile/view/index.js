@@ -31,7 +31,6 @@ angular.module( 'symantis.profile.view', [
 })
 .controller( 'ProfileConnectCtrl', function ProfileConnectController( $scope, utils, UserModel ) {
 
-
 	$scope.connect = function(){
 		var newModel = {
 			id: $scope.currentUser.id,

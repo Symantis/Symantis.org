@@ -125,7 +125,6 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
-
 		.state('profile.view.message',{
 			url: '/message',
 			views: {

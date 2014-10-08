@@ -3,7 +3,7 @@
         <!-- Section on left of heading -->
     </section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
-        <h1><a ui-sref="me.manti">Manti</a></h1>
+        <h1><a >Manti</a></h1>
     </section>
     <section class="medium-0 large-2 columns heading-right">
         <!-- Section on right of heading -->
@@ -63,9 +63,8 @@
                 class="animate-repeat tile manti-pod-wrap" 
             >
                 <div 
-                    class="manti-pod {{ manti.class.color }}-pod"
+                    class="manti-pod {{ manti.class }}-pod"
                     ng-class="{'visual-pod':manti.class=='visual','system-pod':manti.class=='systematic', 'group-pod':manti.class=='group'}"
-
                 >
                     <section class="manti-pod-header">
                         <p>Created on {{ manti.date | date }}</p>
