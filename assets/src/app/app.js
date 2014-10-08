@@ -313,6 +313,14 @@ angular.module( 'symantis', [
 			windowClass: 'small'
 		});
 	};
+	$scope.opportunityapplyModal = function () {
+
+		var modalInstance = $symodal.open({
+			templateUrl: 'common/modals/opportunityapplyModal.tpl.html',
+			controller: 'OpportunityApplyModalCtrl',
+			windowClass: 'small'
+		});
+	};
 
 
 });
@@ -2961,7 +2969,7 @@ var aMantis = [
 			name: 'placeholder',
 			src: 'http://placehold.it/350x150',
 			caption: 'This is an example image.'
-		}
+		},
 		includes: []
 	},
 	{

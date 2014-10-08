@@ -4,8 +4,16 @@
 	        <section class="board-page-header">
 		        <h3>{{ board.title }}</h3>
 		        <div class="board-page-apply">
-		        	<a class="apply-button" title="Apply for this Opportunity"><span class="icon-check"></span></a>
-		        	<a class="qmark-button" title="Help" ng-click="opportunityhelpModal()">?</a>
+		        	<a 
+		        		class="apply-button" 
+		        		title="Apply for this Opportunity" 
+		        		ng-click="opportunityapplyModal()"
+		        	><span class="icon-check"></span></a>
+		        	<a 
+		        		class="qmark-button" 
+		        		title="Help" 
+		        		ng-click="opportunityhelpModal()"
+		        	>?</a>
 		        </div>
 		    </section>
 		    <section class="board-page-body">

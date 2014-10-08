@@ -34,7 +34,7 @@ angular.module( 'symantis.home', [
 .controller( 'HomeCtrl', function HomeController( $scope, titleService ) {
 	titleService.setTitle('Home');
 	
-	$scope.$parent.toDo = ['Make Animation'];
+	$scope.$parent.toDo = ['Make Animation','Add login form'];
 
 })
 .controller( 'HomeHeaderCtrl', function HomeHeaderController( $scope, titleService ) {
