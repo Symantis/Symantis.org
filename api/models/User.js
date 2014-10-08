@@ -120,6 +120,7 @@ module.exports = {
 		.populate('toConnections')
 		.populate('fromConnections')
 		.then(function(model){
+			console.log(model.connections);
 			return model;
 		})
 		.then(function (model) {
