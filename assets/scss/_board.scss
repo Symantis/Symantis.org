@@ -156,7 +156,6 @@
 		display:block;
 		content:"";
 	}
-
 }
 
 .board-center {
@@ -190,7 +189,6 @@
 		display:block;
 	}
 	margin-bottom: rem-calc(20px);
-
 }
 .deactivate.board-pod-wrap {
 	display: none !important; 
@@ -205,10 +203,8 @@
 	background-color: white;
 	padding: 15px 15px 5px 15px;
 	margin-right: 20px;
-
-	//margin: 20px 10px 0 10px;
-	
 	border: rem-calc(1px) $gray solid;
+	border-radius: 4px;
 	/*-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);*/

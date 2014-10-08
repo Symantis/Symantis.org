@@ -61,6 +61,11 @@ angular.module( 'symantis.me', [
 		})
 		.state( 'me.manti', {
 			url: '/manti',
+			resolve: {
+				mantis : function($rootScope) {
+				       return $rootScope.mantis;
+				}
+			},
 			views: {
 				"main@": {
 					controller: 'MantiCtrl',
@@ -69,6 +74,28 @@ angular.module( 'symantis.me', [
 				"leftside@me.manti": {
 					controller: 'MeMantiLeftsideCtrl',
                 	templateUrl: 'me/manti/leftside.tpl.html'
+				},
+				"manti-nav@me.manti": {
+					controller: 'MeMantiNavCtrl',
+                	templateUrl: 'me/manti/sort.tpl.html'
+				}
+			}
+		})
+		.state( 'me.manti.view', {
+			url: '/:id/:title',
+			resolve: {
+				manti : function($stateParams) {
+				    return { id: $stateParams.id, clean: $stateParams.title };
+				}
+			},
+			views: {
+				"manti@me.manti": {
+					controller: 'MantiViewCtrl',
+					templateUrl: 'me/manti/view.tpl.html'
+				},
+				"manti-nav@me.manti": {
+					controller: 'MeMantiNavCtrl',
+                	templateUrl: 'common/back.tpl.html'
 				}
 			}
 		})

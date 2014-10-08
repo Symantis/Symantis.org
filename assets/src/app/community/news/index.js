@@ -19,7 +19,7 @@ angular.module( 'symantis.community.news', [
 */
 .controller( 'NewsCtrl', function NewsController( $scope, titleService ) {
 	titleService.setTitle('News');
-	$scope.$parent.toDo = [];
+	$scope.$parent.toDo = ['duScroll on Left', 'Create New Post model'];
 
 	
 })

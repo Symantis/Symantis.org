@@ -189,8 +189,9 @@
 			left: 6px;
 		}
 		&:hover {
-			color: $primary-color;
-			background-color: white;
+			//color: $primary-color;
+			background-color: darken($primary-color, 15%);
+			border-color: darken($primary-color, 15%);
 		}
 	}
 	.profile-manti-header {

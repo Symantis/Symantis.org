@@ -140,18 +140,32 @@
 						span {
 							color: $dark;
 						}
-
+						/*.header-user-pic {
+							width: rem-calc(20px);
+							height: rem-calc(20px);
+							//float: left;
+							border: rem-calc(1px) $dark solid;
+							border-radius: 50%;
+							overflow: hidden;
+							@include transition(100ms);
+							position: absolute;
+							top: rem-calc(17px);
+							//left: rem-calc(-25px);
+							margin-left: rem-calc(-28px);
+							//margin-right: rem-calc(6px);
+							z-index: 98;
+						}*/
 						.status{
 							&:before{
 								content: "";
 								position:absolute;
-								margin-top:4px;
-								margin-left:-16px;
+								margin-top: rem-calc(4px);
+								margin-left: rem-calc(-18px);
 								height:10px;
 								width:10px;
 								background-color: $primary-color;
 								border-radius: 50%;
-
+								//z-index: 99;
 							}
 							&.user-inactive:before{
 								background-color: lighten($primary-color, 35%);
@@ -162,64 +176,31 @@
 						} 
 					}
 					.top-nav-messages {
-						padding-top: rem-calc(5px);
-						margin-left: rem-calc(10px);
-						height: rem-calc(19px);
+						padding-top: rem-calc(3px);
+						margin-top: rem-calc(3px);
+						padding-right: rem-calc(12px);
+						padding-left: rem-calc(8px);
+						//height: rem-calc(19px);
 						@include no-highlight;
-						.tooltip {
-							left: auto !important;
-							right: 0;
-							margin-top: 5px;
-							border-top-left-radius: 0;
-							border-top-right-radius: 0;
-							.nub {
-								left: 35px;
-								//margin-left: -8%;
-							}
-						}
-						.tip-bottom {
-						}
+						//border-left: rem-calc(1px) $light solid;
 					}
 					.top-nav-settings {
-						padding-top: rem-calc(4px);
-						margin-left: rem-calc(10px);
-						height: rem-calc(19px);
+						padding-top: rem-calc(3px);
+						margin-top: rem-calc(3px);
+						padding-left: rem-calc(10px);
+						//height: rem-calc(19px);
 						@include no-highlight;
-						.tooltip {
-							margin-top: 7px;
-							left: auto !important;
-							right: 0;
-							border-top-left-radius: 0;
-							border-top-right-radius: 0;
-							.nub {
-								left: auto;
-								right: 4px;
-								//margin-left: -8%;
-							}
-						}
-						.tip-bottom {
-						}
-					}
-					.clicked {
-						.tooltip {
-							display: none;
-						}
-						.tip-bottom {
-							display: none;
-						}
-						.icon {
-							color: $dark;
-						}
+						border-left: rem-calc(1px) $light solid;
 					}
 					.icon {
-						@include icon(rem-calc(16px),$gray);
+						@include icon(rem-calc(14px),$gray);
 						@include transition(100ms);
 						&:hover {
 							color: $dark;
 						}
 					}
-					.icon-settings {
-						font-size: rem-calc(15px);
+					.icon-caret-down {
+						//font-size: rem-calc(18px);
 					}
 				}
 				.top-nav-noUser {
@@ -289,7 +270,7 @@
 							color: $dark;
 							padding-top: 3px;
 							padding-bottom: 3px;
-							padding-left: 23px;
+							padding-left: 18px;
 							padding-right: 14px;
 							width: 152px;
 							float: left;
@@ -360,14 +341,14 @@
 			.settings-dropdown-container:after {
 				border-color: rgba(255, 255, 255, 0);
 				border-bottom-color: white;
-				border-width: 7px;
-				margin-left: -7px;
+				border-width: 9px;
+				margin-left: -9px;
 			}
 			.settings-dropdown-container:before {
 				border-color: rgba(46, 48, 44, 0);
 				border-bottom-color: $dark;
-				border-width: 8px;
-				margin-left: -8px;
+				border-width: 10px;
+				margin-left: -10px;
 			}
 		}
 		.top-nav-rule-inner {

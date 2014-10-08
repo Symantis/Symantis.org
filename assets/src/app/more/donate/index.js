@@ -29,6 +29,8 @@ angular.module( 'symantis.more.donate', [
 
 .controller( 'DonateCtrl', function DonateController( $scope, titleService ) {
 	titleService.setTitle('Donate');
+
+	$scope.$parent.toDo = ['Hook up Paypal','Create payment methods'];
 })
 .controller( 'DonateHeaderCtrl', function DonateHeaderController( $scope, titleService ) {
 	//titleService.setTitle('About');

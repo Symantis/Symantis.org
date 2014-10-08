@@ -168,6 +168,9 @@
 				}
 			}
 		}
+		.back-btn {
+			padding-top: rem-calc(5px);
+		}
 	}
 	.manti-sub-nav-right {
 		float: right;
@@ -240,6 +243,7 @@
 .manti-pod {
 	position: relative;
 	border: 2px $dark solid;
+	border-radius: 6px;
 	background-color: white;
 	overflow: hidden;
 	/*-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);

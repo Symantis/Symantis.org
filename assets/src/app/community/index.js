@@ -232,7 +232,7 @@ angular.module( 'symantis.community', [
 
 .controller( 'CommunityCtrl', function CommunityController( $scope, $state ,titleService ) {
 	titleService.setTitle('Community');
-	$scope.$parent.toDo = [];
+	$scope.$parent.toDo = ['Create Array for Feed', 'Add Comments Model to pods'];
 	
 })
 .controller( 'CommunityHeaderCtrl', function CommunityHeaderController( $scope, $state, titleService ) {

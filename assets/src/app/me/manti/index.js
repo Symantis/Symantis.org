@@ -1,26 +1,26 @@
 angular.module( 'symantis.me.manti', [
 ])
-/*
-.config(function config( $stateProvider ) {
-	$stateProvider.state( 'connections', {
-		url: '/connections',
-		views: {
-			"main": {
-				controller: 'ConnectionsCtrl',
-				templateUrl: 'connections/index.tpl.html'
-			},
-			"sitenav": {
-				controller: 'SiteNavCtrl',
-                templateUrl: 'sitenav/index.tpl.html'
-			}
-		}
-	});
-})
-*/
+
 .controller( 'MantiCtrl', function MantiController( $scope, titleService ) {
 	titleService.setTitle('My Manti');
 	$scope.$parent.toDo = [];
 	
+})
+.controller( 'MantiViewCtrl', function MantiViewController( $scope, titleService, $state, $stateParams  ) {
+	for(var i in $scope.mantis){
+		if ($scope.mantis[i].id == $stateParams.id){
+			$scope.manti = $scope.mantis[i];
+			break;
+		};
+	}
+
+	titleService.setTitle('Manti: ' + $scope.manti.title);
+	$scope.$parent.toDo = [];
+	
+})
+
+.controller( 'MeMantiNavCtrl', function MeMantiNavController( $scope ) {
+	//titleService.setTitle('About');
 })
 
 .controller( 'MeMantiLeftsideCtrl', function MeMantiLeftsideController( $scope ) {

@@ -158,7 +158,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-exit:before {
   content: "b";
 }
@@ -237,9 +236,6 @@
 .icon-right-arrow:before {
   content: "B";
 }
-.icon-check-mark-circle:before {
-  content: "v";
-}
 .icon-delete-circle:before {
   content: "z";
 }
@@ -257,9 +253,6 @@
 }
 .icon-2way:before {
   content: "G";
-}
-.icon-click-hand:before {
-  content: "I";
 }
 .icon-arrow-up:before {
   content: "H";
@@ -287,4 +280,52 @@
 }
 .icon-git-compare:before {
   content: "Q";
+}
+.icon-check-mark-circle-1:before {
+  content: "R";
+}
+.icon-close-circle:before {
+  content: "S";
+}
+.icon-check-mark-circle-outline:before {
+  content: "T";
+}
+.icon-close-circle-outline:before {
+  content: "U";
+}
+.icon-minus-circle-2:before {
+  content: "V";
+}
+.icon-minus-circle-outline:before {
+  content: "W";
+}
+.icon-caret-down:before {
+  content: "X";
+}
+.icon-talk-chat:before {
+  content: "Y";
+}
+.icon-question-circle:before {
+  content: "v";
+}
+.icon-question-circle-outline:before {
+  content: "I";
+}
+.icon-plus-circle-outline:before {
+  content: "Z";
+}
+.icon-plus-outline:before {
+  content: "0";
+}
+.icon-arrow-right:before {
+  content: "1";
+}
+.icon-arrow-down:before {
+  content: "2";
+}
+.icon-arrow-left:before {
+  content: "3";
+}
+.icon-chevron-down:before {
+  content: "4";
 }

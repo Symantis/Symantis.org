@@ -18,7 +18,7 @@
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center manti-center">
 
         <header class="manti-sub-nav">
-            <ul class="manti-sub-nav-left">
+            <ul class="manti-sub-nav-left" ui-view="manti-nav">
                 <li class="manti-sort"><a dropdown-toggle="#manti-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
             <div class="sub-nav-search">
@@ -65,7 +65,6 @@
                 <div 
                     class="manti-pod {{ manti.class }}-pod"
                     ng-class="{'visual-pod':manti.class=='visual','system-pod':manti.class=='systematic', 'group-pod':manti.class=='group'}"
-
                 >
                     <section class="manti-pod-header">
                         <p>Created on {{ manti.date | date }}</p>
@@ -75,11 +74,11 @@
                         </ul>
                     </section>
                     <section class="manti-pod-img" ng-show="manti.img">
-                        <img src="{{ manti.img.src }}" alt="{{ manti.img.name }}" />
+                        <img ng-src="{{ manti.img.src }}" alt="{{ manti.img.name }}" />
                     </section>
                     <section class="manti-pod-body">
                         <header>
-                            <h3><a >{{ manti.title }}</a></h3>
+                            <h3><a ui-sref="me.manti.view({id: manti.id, title: manti.clean() })">{{ manti.title }}</a></h3>
                             <p>{{ manti.description }}</p>
                         </header>
                         <div class="manti-pod-graph">
@@ -88,7 +87,7 @@
                     </section>
                     <section class="manti-pod-footer">
                         <p><span class="icon-git-branch"></span>Forked from <a >syQuery</a></p>
-                        <button class="sy-button">more <span class="icon-right-arrow"></span></button>
+                        <button class="sy-button" ui-sref="me.manti.view({id: manti.id, title: manti.clean() })">more <span class="icon-right-arrow"></span></button>
                     </section>
                      <section class="manti-pod-group" ng-show="manti.includes.length > 0">
                         <ul>
