@@ -31,15 +31,10 @@ module.exports = {
 			//res.serverError(err);
 		});
 	},
-	findByHandle: function(req, res) {
+	getByHandle: function(req, res) {
 		console.log(req.param('handle'));
-		User.findByHandle(req.param('handle'))
-		.populate('toConnections')
-		.populate('fromConnections')
+		User.getByHandle(req.param('handle'))
 		.spread(function(model) {
-			model.totalToConnections = model.toConnections.length;
-			model.totalFromConnections = model.fromConnections.length;
-			model.totalConnections = model.totalToConnections + model.totalFromConnections;
 			User.subscribe(req.socket, model);
 			res.json(model);
 		})
@@ -117,6 +112,12 @@ module.exports = {
 
 					// Queue up a record to be inserted into the join table
 					fromUser.toConnections.add(connection.id);
+					fromUser.save(console.log, function(err) {
+				  		if(err){
+					  		//console.log(err);
+					  	}
+					});
+
 					fromUser.connections.add(connect);
 					// Save the user, creating the new associations in the join table
 					fromUser.save(console.log, function(err) {
@@ -136,6 +137,11 @@ module.exports = {
 					} 
 					// Queue up a record to be inserted into the join table
 					toUser.fromConnections.add(connection.id);
+					toUser.save(console.log,function(err) {
+					  	if(err){
+					  		//console.log(err);
+					  	}
+					});
 					toUser.connections.add(id);
 					// Save the user, creating the new associations in the join table
 					toUser.save(console.log,function(err) {
@@ -147,6 +153,7 @@ module.exports = {
 					User.publishUpdate(id, toUser);
 				});
 			}
+
 			console.log("associated "+id+" with "+connect);
 			return res.json(connection);
 		});

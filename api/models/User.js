@@ -93,6 +93,7 @@ module.exports = {
 
 	getAll: function() {
 		return User.find()
+		.populate('connections')
 		.populate('toConnections')
 		.populate('fromConnections')
 		.then(function (models) {
@@ -102,6 +103,7 @@ module.exports = {
 
 	getOne: function(id) {
 		return User.findOne(id)
+		.populate('connections')
 		.populate('toConnections')
 		.populate('fromConnections')
 		.then(function (model) {
@@ -111,5 +113,20 @@ module.exports = {
 			return [model];
 		});
 
+	},
+	getByHandle: function(handle) {
+		return User.findOne({ handle: handle })
+		.populate('connections')
+		.populate('toConnections')
+		.populate('fromConnections')
+		.then(function(model){
+			return model;
+		})
+		.then(function (model) {
+			model.totalToConnections = model.toConnections.length;
+			model.totalFromConnections = model.fromConnections.length;
+			model.totalConnections = model.totalToConnections + model.totalFromConnections;
+			return [model];
+		});
 	}
 };

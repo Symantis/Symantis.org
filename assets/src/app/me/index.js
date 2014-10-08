@@ -2,7 +2,7 @@ angular.module( 'symantis.me', [
 	'symantis.me.connections',
 	'symantis.me.settings',
 	'symantis.me.manti',
-	'symantis.me.activity'
+	'symantis.me.information'
 ])
 
 .config(function config($stateProvider, $urlRouterProvider ) {
@@ -139,16 +139,16 @@ angular.module( 'symantis.me', [
 				}
 			}
 		})
-		.state( 'me.activity', {
-			url: '/activity',
+		.state( 'me.information', {
+			url: '/information',
 			views: {
 				"main@": {
-					controller: 'ActivityCtrl',
-					templateUrl: 'me/activity/index.tpl.html'
+					controller: 'InformationCtrl',
+					templateUrl: 'me/information/index.tpl.html'
 				},
-				"leftside@me.activity": {
-					controller: 'MeActivityLeftsideCtrl',
-                	templateUrl: 'me/activity/leftside.tpl.html'
+				"leftside@me.information": {
+					controller: 'MeInformationLeftsideCtrl',
+                	templateUrl: 'me/information/leftside.tpl.html'
 				}
 			}
 		})
@@ -161,6 +161,8 @@ angular.module( 'symantis.me', [
 	
 	$scope.user = user;
 	$scope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
+	//$scope.user.totalToConnections = $scope.user.totalToConnections - $scope.user.reciprocal;
+	//$scope.user.totalFromConnections = $scope.user.totalFromConnections - $scope.user.reciprocal;
 
 	$scope.loadTags = function(query) {
 		return $http.get('/api/tags/' + query);
@@ -174,6 +176,9 @@ angular.module( 'symantis.me', [
 		});
 	
 	}
+
+
+
 
 	
 })

@@ -1,0 +1,79 @@
+<div id="heading-row" class="row fluid-row">
+	<section class="medium-3 large-2 large-offset-1 columns heading-left" ui-view="leftside">
+		<!-- Section on left of heading -->
+	</section>
+    <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
+        <h1>Information</h1>
+    </section>
+    <section class="medium-0 large-2 columns heading-right">
+		<!-- Section on right of heading -->
+	</section>
+</div>
+<div class="row fluid-row">
+    <section class="medium-3 large-2 large-offset-1 columns main-left" ui-veiw="leftside">
+    	<!-- Section for main left header -->
+        <header class="left-header">
+        
+        </header>
+        <div class="left-content">
+            <!-- Section for main left content -->
+        </div>
+    </section>
+    <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center">
+    	<!-- Section for main center header -->
+        <header class="profile-header profile-about-header">
+            <h3>About</h3>
+        </header>
+        <article class="profile-about-content">
+            <p>{{ user.bio || "No information" }}</p>
+        </article>
+        <header class="profile-header profile-manti-header">
+            <h3>Current Manti</h3>
+        </header>
+        <article class="profile-manti-content">
+            <p ng-show="user.manti.length <= 0">
+                No Manti
+            </p>
+            <ul>
+                <li class="row current-manti" ng-repeat="manti in user.manti">
+                    <div class="medium-2 large-1 columns current-manti-view">
+                        <a ><p>View</p></a>
+                    </div>
+                    <div class="medium-10 large-11 columns current-manti-content">
+                        <h3><a >{{ manti.title }}</a></h3>
+                        <p>{{ manti.description }}</p>
+                    </div>
+                </li>
+            </ul>
+        </article>
+        <header class="profile-header profile-contributions-header">
+            <h3>Recent Contributions</h3>
+        </header>
+
+        <article class="profile-contributions-content">
+            <p ng-show="user.contributions.length <= 0">
+                No Contributions
+            </p>
+            <ul>
+                <li class="row recent-contribution" ng-repeat="contribution in user.contributions">
+                    <div class="medium-2 large-1 columns recent-contribution-category">
+                        <a ><p>{{ contribution.type }}</p></a>
+                    </div>
+                    <div class="medium-10 large-11 columns recent-contribution-content">
+                        <h3>{{ contribution.title }}</h3>
+                        <p>{{ contribution.description }}</p>
+                    </div>
+                </li>
+            </ul>
+        </article>
+        <!-- Section for main center content -->
+    </section>
+    <section class="medium-0 large-2 columns main-right">
+        <header class="right-header">
+        	<!-- Main Right Heading -->
+        </header>
+        <div class="right-content">
+        	<!-- Main Right Content -->
+        </div>
+    </section>
+</div>

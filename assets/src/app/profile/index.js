@@ -1,7 +1,7 @@
 angular.module( 'symantis.profile', [
 	'symantis.profile.connections',
 	'symantis.profile.manti',
-	'symantis.profile.activity',
+	'symantis.profile.information',
 	'symantis.profile.view'
 ])
 
@@ -112,16 +112,16 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
-		.state( 'profile.view.activity', {
-			url: '/activity',
+		.state( 'profile.view.information', {
+			url: '/information',
 			views: {
 				"main@": {
-					controller: 'ProfileActivityCtrl',
-					templateUrl: 'profile/activity/index.tpl.html'
+					controller: 'ProfileInformationCtrl',
+					templateUrl: 'profile/information/index.tpl.html'
 				},
-				"leftside@profile.activity": {
-					controller: 'ProfileActivityLeftsideCtrl',
-                	templateUrl: 'profile/activity/leftside.tpl.html'
+				"leftside@profile.information": {
+					controller: 'ProfileInformationLeftsideCtrl',
+                	templateUrl: 'profile/information/leftside.tpl.html'
 				}
 			}
 		})

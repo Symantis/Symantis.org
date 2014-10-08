@@ -23,44 +23,7 @@
             <alert class="animate-repeat" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
         </section>
     	<!-- Section for main center header -->
-        <header class="profile-header profile-about-header">
-        	<h3>About</h3>
-        </header>
-        <article class="profile-about-content">
-        	<p>{{ user.bio || "No information" }}</p>
-        </article>
-        <header class="profile-header profile-manti-header">
-        	<h3>Current Manti</h3>
-        </header>
-        <article class="profile-manti-content">
-            <ul>
-        		<li class="row current-manti" ng-repeat="manti in user.manti">
-                    <div class="medium-2 large-1 columns current-manti-view">
-                        <a ><p>View</p></a>
-                    </div>
-                    <div class="medium-10 large-11 columns current-manti-content">
-                        <h3><a >{{ manti.title }}</a></h3>
-                        <p>{{ manti.description }}</p>
-                    </div>
-                </li>
-            </ul>
-        </article>
-        <header class="profile-header profile-contributions-header">
-        	<h3>Recent Contributions</h3>
-        </header>
-        <article class="profile-contributions-content">
-            <ul>
-            	<li class="row recent-contribution" ng-repeat="contribution in user.contributions">
-                    <div class="medium-2 large-1 columns recent-contribution-category">
-                        <a ><p>{{ contribution.type }}</p></a>
-                    </div>
-                    <div class="medium-10 large-11 columns recent-contribution-content">
-                        <h3>{{ contribution.title }}</h3>
-                        <p>{{ contribution.description }}</p>
-                    </div>
-                </li>
-            </ul>
-        </article>
+        
     </section>
     <section class="medium-0 large-2 columns main-right">
         <header class="right-header">

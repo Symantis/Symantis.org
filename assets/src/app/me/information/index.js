@@ -1,4 +1,4 @@
-angular.module( 'symantis.me.activity', [
+angular.module( 'symantis.me.information', [
 ])
 /*
 .config(function config( $stateProvider ) {
@@ -17,11 +17,11 @@ angular.module( 'symantis.me.activity', [
 	});
 })
 */
-.controller( 'ActivityCtrl', function ActivityController( $scope, titleService ) {
-	titleService.setTitle('My Activity');
+.controller( 'InformationCtrl', function InformationController( $scope, titleService ) {
+	titleService.setTitle('My Information');
 	$scope.$parent.toDo = [];
 	
 })
-.controller( 'MeActivityLeftsideCtrl', function MeActivityLeftsideController( $scope ) {
+.controller( 'MeInformationLeftsideCtrl', function MeInformationLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 });
