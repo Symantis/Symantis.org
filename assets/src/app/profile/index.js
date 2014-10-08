@@ -93,12 +93,13 @@ angular.module( 'symantis.profile', [
 					controller: 'ProfileConnectionsCtrl',
 					templateUrl: 'profile/connections/index.tpl.html'
 				},
-				"leftside@profile.connections": {
+				"leftside@profile.view.connections": {
 					controller: 'ProfileConnectionsLeftsideCtrl',
                 	templateUrl: 'profile/connections/leftside.tpl.html'
 				}
 			}
 		})
+<<<<<<< HEAD
 		.state( 'profile.view.manti', {
 			url: '/manti',
 			views: {
@@ -112,6 +113,9 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
+=======
+		
+>>>>>>> FETCH_HEAD
 		.state( 'profile.view.information', {
 			url: '/information',
 			views: {
@@ -119,12 +123,28 @@ angular.module( 'symantis.profile', [
 					controller: 'ProfileInformationCtrl',
 					templateUrl: 'profile/information/index.tpl.html'
 				},
-				"leftside@profile.information": {
+				"leftside@profile.view.information": {
 					controller: 'ProfileInformationLeftsideCtrl',
                 	templateUrl: 'profile/information/leftside.tpl.html'
 				}
 			}
 		})
+<<<<<<< HEAD
+		.state( 'profile.view.manti', {
+			url: '/manti',
+			views: {
+				"main@": {
+					controller: 'ProfileMantiCtrl',
+					templateUrl: 'profile/manti/index.tpl.html'
+				},
+				"leftside@profile.view.manti": {
+					controller: 'ProfileMantiLeftsideCtrl',
+                	templateUrl: 'profile/manti/leftside.tpl.html'
+				}
+			}
+		})
+=======
+>>>>>>> FETCH_HEAD
 		.state('profile.view.message',{
 			url: '/message',
 			views: {
