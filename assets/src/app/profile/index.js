@@ -99,19 +99,6 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
-		.state( 'profile.view.manti', {
-			url: '/manti',
-			views: {
-				"main@": {
-					controller: 'ProfileMantiCtrl',
-					templateUrl: 'profile/manti/index.tpl.html'
-				},
-				"leftside@profile.view.manti": {
-					controller: 'ProfileMantiLeftsideCtrl',
-                	templateUrl: 'profile/manti/leftside.tpl.html'
-				}
-			}
-		})
 		.state( 'profile.view.information', {
 			url: '/information',
 			views: {
