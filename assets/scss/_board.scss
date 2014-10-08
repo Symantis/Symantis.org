@@ -459,7 +459,7 @@
 					color: $dark;
 				}
 			}
-			.board-page-accept {
+			.board-page-apply {
 				position: absolute;
 				right: 0;
 				top: 0;
@@ -480,7 +480,7 @@
 					&:hover {
 						background-color: darken($light, 15%);
 					}
-					&.accept-button {
+					&.apply-button {
 						background-color: $primary-color;
 						margin-left: rem-calc(15px);
 						&:hover {

@@ -2857,7 +2857,17 @@ var aMantis = [
 			name: 'placeholder',
 			src: 'http://placehold.it/350x150',
 			caption: 'This is an example image.'
-		}
+		},
+		includes:[
+			{
+				title: 'syQuery',
+				type: 'Built using'
+			},
+			{
+				title: 'Foundation Directive',
+				type: 'Incorporates'
+			}
+		]
 	},
 	{
 		id: 2,
@@ -2878,6 +2888,7 @@ var aMantis = [
 			signature: Math.random()
 		},
 		date: new Date(),
+		includes: []
 	},
 	{
 		id: 3,
@@ -2898,6 +2909,7 @@ var aMantis = [
 			signature: Math.random()
 		},
 		date: new Date(),
+		includes: []
 	},
 	{
 		id: 4,
@@ -2922,7 +2934,8 @@ var aMantis = [
 			name: 'placeholder',
 			src: 'http://placehold.it/350x150',
 			caption: 'This is an example image.'
-		}
+		},
+		includes: []
 	},
 	{
 		id: 5,
@@ -2948,6 +2961,7 @@ var aMantis = [
 			src: 'http://placehold.it/350x150',
 			caption: 'This is an example image.'
 		}
+		includes: []
 	},
 	{
 		id: 6,
@@ -2968,11 +2982,16 @@ var aMantis = [
 			signature: Math.random()
 		},
 		date: new Date(),
-		img:{
-			name: 'placeholder',
-			src: 'http://placehold.it/350x150',
-			caption: 'This is an example image.'
-		}
+		includes:[
+			{
+				title: 'syQuery',
+				type: 'Built using'
+			},
+			{
+				title: 'Foundation Directive',
+				type: 'Incorporates'
+			}
+		]
 	}
 ]
 

@@ -238,3 +238,21 @@ markdown {
 [ui-view="query-nav"].ng-leave-active {
   opacity: 0;
 }
+[ui-view="board-nav"].ng-enter, .back-btn.ng-leave {
+  -webkit-transition:all .3s linear;
+    -moz-transition:all .3s linear;
+    -o-transition:all .3s linear;
+    transition:all .3s linear;
+}
+[ui-view="board-nav"].ng-enter {
+  opacity: 0;
+}
+[ui-view="board-nav"].ng-enter-active {
+  opacity: 1;
+}
+[ui-view="board-nav"].ng-leave {
+  opacity: 1; 
+}
+[ui-view="board-nav"].ng-leave-active {
+  opacity: 0;
+}

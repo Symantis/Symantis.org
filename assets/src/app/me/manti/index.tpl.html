@@ -63,8 +63,9 @@
                 class="animate-repeat tile manti-pod-wrap" 
             >
                 <div 
-                    class="manti-pod"
+                    class="manti-pod {{ manti.class.color }}-pod"
                     ng-class="{'visual-pod':manti.class=='visual','system-pod':manti.class=='systematic', 'group-pod':manti.class=='group'}"
+
                 >
                     <section class="manti-pod-header">
                         <p>Created on {{ manti.date | date }}</p>
@@ -88,6 +89,13 @@
                     <section class="manti-pod-footer">
                         <p><span class="icon-git-branch"></span>Forked from <a >syQuery</a></p>
                         <button class="sy-button">more <span class="icon-right-arrow"></span></button>
+                    </section>
+                     <section class="manti-pod-group" ng-show="manti.includes.length > 0">
+                        <ul>
+                            <li ng-repeat="include in manti.includes">
+                                <span class="icon-indent"></span>{{ include.type }} <a >{{ include.title }}</a>
+                            </li>
+                        </ul>
                     </section>
                 </div>
             </article>
@@ -116,7 +124,7 @@
                         <p>Created by <a >Hamish Jackson-Mee</a></p>
                         <button class="sy-button">more <span class="icon-right-arrow"></span></button>
                     </section>
-                    <section class="manti-pod-group">
+                    <section class="manti-pod-group" ng-show="manti.group">
                         <ul>
                             <li><span class="icon-indent"></span>Built using <a >syQuery</a></li>
                             <li><span class="icon-indent"></span>Built using <a >syCurem</a></li>
