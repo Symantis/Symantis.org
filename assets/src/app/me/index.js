@@ -184,7 +184,7 @@ angular.module( 'symantis.me', [
 
 .controller( 'MeCtrl', function ProfileController( $scope, titleService, $http, user, UserModel, utils ) {
 	titleService.setTitle('Me');
-	$scope.$parent.toDo = [];
+	$scope.$parent.toDo = ['Format Activity'];
 	
 	$scope.user = user;
 	$scope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
