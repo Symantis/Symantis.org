@@ -102,7 +102,6 @@ module.exports = {
 
 	getOne: function(id) {
 		return User.findOne(id)
-		.populate('connections')
 		.populate('toConnections')
 		.populate('fromConnections')
 		.then(function (model) {

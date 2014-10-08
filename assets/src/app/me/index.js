@@ -160,7 +160,7 @@ angular.module( 'symantis.me', [
 	$scope.$parent.toDo = [];
 	
 	$scope.user = user;
-	$scope.user.reciprocal = utils.finduserMatches($scope.user.totalToConnections, $scope.user.totalFromConnections )
+	$scope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
 
 	$scope.loadTags = function(query) {
 		return $http.get('/api/tags/' + query);

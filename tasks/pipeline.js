@@ -33,6 +33,7 @@ var jsFilesToInject = [
   'bower_components/angular/angular.js',
   'bower_components/masonry/dist/masonry.pkgd.js',
   'bower_components/imagesloaded/imagesloaded.js',
+  'bower_components/angular-sails-bind/dist/angular-sails-bind.js',
   'bower_components/angular-foundation/mm-foundation-tpls.min.js',
   'bower_components/angular-ui-router/release/angular-ui-router.js',
   'bower_components/angular-ui-utils/modules/route/route.js',

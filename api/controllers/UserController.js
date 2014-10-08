@@ -33,9 +33,7 @@ module.exports = {
 	},
 	findByHandle: function(req, res) {
 		console.log(req.param('handle'));
-
 		User.findByHandle(req.param('handle'))
-		.populate('connections')
 		.populate('toConnections')
 		.populate('fromConnections')
 		.spread(function(model) {

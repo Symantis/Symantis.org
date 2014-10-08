@@ -102,6 +102,18 @@ angular.module( 'symantis.register', [
 		firstName: '',
 		lastName: ''
 	};
+	$scope.registerValid = {
+		email : null,
+		username: null,
+		password: null,
+		confirmPassword: null,
+		firstName: null,
+		lastName: null
+	}
+
+	$scope.prevStep = function(state){
+		$state.go('register.'+state);
+	}
 
 	$scope.nextStep = function(field, state){
 		console.log(field);
@@ -109,6 +121,11 @@ angular.module( 'symantis.register', [
 			$state.go('register.'+state);
 		}
 	}
+	/*
+	$scope.submit = function(){
+
+	}
+	*/
 
 })
 .controller( 'RegisterHeaderCtrl', function RegisterHeaderController( $scope ) {

@@ -8,7 +8,7 @@ angular.module( 'symantis.profile.view', [
 .controller( 'ProfileViewCtrl', function ProfileViewController($http, $scope, user, titleService, $state, $stateParams, UserModel, cache, utils) {
 	
 	$scope.user = user;
-	$scope.user.reciprocal = utils.finduserMatches($scope.user.totalToConnections, $scope.user.totalFromConnections );
+	$scope.user.reciprocal = utils.finduserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
 	/*
 	$scope.user = UserModel.getOneHandle(user.handle).then(function(model){
 		return model;

@@ -130,6 +130,46 @@ angular.module('sy.templates.inputs', [])
         });
     };
 })
+.directive('ngShiftTab', function() {
+    return function(scope, element, attrs) {
+        var map = {9: false, 16: false};
+
+        element.bind("keydown", function(event) {
+            if (event.which in map) {
+                map[event.which] = true;
+                if (map[9] && map[16]) {
+                    scope.$apply(function(){
+                        scope.$eval(attrs.ngShiftTab, {'event': event});
+                    });
+                    event.preventDefault();
+                }
+            }
+        });
+        element.bind("keyup", function(event) {
+            if (event.which in map) {
+                map[event.keyCode] = false;
+            }
+        });
+    };
+})
+.directive('lowercase', function() {
+   return {
+     require: 'ngModel',
+     link: function(scope, element, attrs, modelCtrl) {
+        var lowercase = function(inputValue) {
+           if(inputValue == undefined) inputValue = '';
+           var lowercase = inputValue.toLowerCase();
+           if(lowercase !== inputValue) {
+              modelCtrl.$setViewValue(lowercase);
+              modelCtrl.$render();
+            }         
+            return lowercase;
+         }
+         modelCtrl.$parsers.push(lowercase);
+         lowercase(scope[attrs.ngModel]);  // capitalize initial value
+     }
+   };
+})
 .directive('ngSearch', function() {
     return {
     require: 'ngModel',

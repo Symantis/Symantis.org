@@ -6,6 +6,7 @@ angular.module( 'symantis', [
 	'lodash',
 	'ngIdle',
 	'ngAnimate',
+	//'ngSailsBind',
 
 	//Directives, Templates, Etc...
 	'mm.foundation',

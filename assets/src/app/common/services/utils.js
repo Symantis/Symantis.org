@@ -24,8 +24,13 @@ angular.module( 'services.utils', ['lodash'])
 			$timeout(function(){lodash.remove(alerts, {id: data.id})},5000);
 			return;
 		},
-		finduserMatches: function(to,from){
-			return _.difference(to,from).length;
+		findUserMatches: function(to,from){
+			
+			var merged = _.union(to, from);
+			var tos = _.keys(_.groupBy(merged, 'to'));
+			var froms = _.keys(_.groupBy(merged, 'from'));
+			var diff = froms.length > tos.length ?  _.difference(froms, tos) : _.difference(tos, froms);
+			return diff;
 		}
 
 	};

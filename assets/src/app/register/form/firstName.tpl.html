@@ -8,6 +8,7 @@
 	force-focus="true"
 	ng-model="registerData.firstName"
 	required
+	ng-shift-tab="prevStep('confirmpassword')"
 	ng-enter="nextStep(registerForm.firstName, 'lastname')"
 >
 <div

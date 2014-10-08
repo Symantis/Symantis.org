@@ -58,6 +58,8 @@ module.exports.routes = {
     'post /api/user/connect': 'UserController.connect',
     'post /api/user/status': 'UserController.updateStatus',
 
+
+    'get /api/connection/user/:id': 'ConnectionController.getAllForUser',
   /**
      * Message routes
      *
