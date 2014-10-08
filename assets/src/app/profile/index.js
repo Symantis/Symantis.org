@@ -93,9 +93,23 @@ angular.module( 'symantis.profile', [
 					controller: 'ProfileConnectionsCtrl',
 					templateUrl: 'profile/connections/index.tpl.html'
 				},
-				"leftside@profile.connections": {
+				"leftside@profile.view.connections": {
 					controller: 'ProfileConnectionsLeftsideCtrl',
                 	templateUrl: 'profile/connections/leftside.tpl.html'
+				}
+			}
+		})
+		
+		.state( 'profile.view.information', {
+			url: '/information',
+			views: {
+				"main@": {
+					controller: 'ProfileInformationCtrl',
+					templateUrl: 'profile/information/index.tpl.html'
+				},
+				"leftside@profile.view.information": {
+					controller: 'ProfileInformationLeftsideCtrl',
+                	templateUrl: 'profile/information/leftside.tpl.html'
 				}
 			}
 		})
@@ -106,26 +120,12 @@ angular.module( 'symantis.profile', [
 					controller: 'ProfileMantiCtrl',
 					templateUrl: 'profile/manti/index.tpl.html'
 				},
-				"leftside@profile.manti": {
+				"leftside@profile.view.manti": {
 					controller: 'ProfileMantiLeftsideCtrl',
                 	templateUrl: 'profile/manti/leftside.tpl.html'
 				}
 			}
 		})
-		.state( 'profile.view.information', {
-			url: '/information',
-			views: {
-				"main@": {
-					controller: 'ProfileInformationCtrl',
-					templateUrl: 'profile/information/index.tpl.html'
-				},
-				"leftside@profile.information": {
-					controller: 'ProfileInformationLeftsideCtrl',
-                	templateUrl: 'profile/information/leftside.tpl.html'
-				}
-			}
-		})
-
 		.state('profile.view.message',{
 			url: '/message',
 			views: {
