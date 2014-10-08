@@ -156,6 +156,8 @@ angular.module( 'symantis', [
 	$rootScope.alerts =  [];
 	$rootScope.toDo = [];
 
+	$rootScope.activity = aActivity;
+
 })
 
 .run(['$rootScope', function($root) {
@@ -322,6 +324,102 @@ angular.module( 'symantis', [
 
 
 });
+
+
+var aActivity = [
+	{
+		id: 1,
+		verb: 'created',
+		type: 'manti',
+		status: '@author created #object',
+		description: 'Created an awesome new feature!',
+		createdAt: new Date(),
+		object: 'SyQuery',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		}
+	},
+	{
+		id: 2,
+		verb: 'updated',
+		type: 'manti',
+		status: '@author updated #object',
+		description: 'Updated that broken thing',
+		createdAt: new Date(),
+		object: 'SyQuery',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		}
+	},
+	{
+		id: 3,
+		verb: 'addedTo',
+		type: 'manti',
+		status: '@author added #part to #object ',
+		description: 'Added an awesome new feature!',
+		createdAt: new Date(),
+		object: 'SyQuery',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		}
+	},
+	{
+		id: 4,
+		verb: 'removedFrom',
+		type: 'manti',
+		status: '@author removed #part from #object',
+		description: 'Added an awesome new feature!',
+		createdAt: new Date(),
+		object: 'SyQuery',
+		part: 'SyThingy',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		}
+	},
+	{
+		id: 5,
+		verb: 'destroyed',
+		type: 'manti',
+		status: '@author deleted #object',
+		description: 'Had to remove that one thing!',
+		createdAt: new Date(),
+		object: 'SyQuery',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "theman",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		}
+	}
+];
+
 var aProfileData = {
 	curManti: [
 		{
