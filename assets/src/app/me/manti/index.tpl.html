@@ -74,7 +74,9 @@
                         </ul>
                     </section>
                     <section class="manti-pod-img" ng-show="manti.img">
-                        <img ng-src="{{ manti.img.src }}" alt="{{ manti.img.name }}" />
+                        <a ui-sref="me.manti.view({id: manti.id, title: manti.clean() })">
+                            <img ng-src="{{ manti.img.src }}" alt="{{ manti.img.name }}" />
+                        </a>
                     </section>
                     <section class="manti-pod-body">
                         <header>

@@ -23,7 +23,7 @@
 							<p>
 								<span class="status user-{{ currentUser.status }}"></span>
 								<!-- <span>Hi,</span> -->
-								<a ui-sref="me" title="View Profile">{{ currentUser.firstName }}</a>
+								<a ui-sref="me">{{ currentUser.firstName }}</a>
 								<!-- <div class="header-user-pic generate-image" signature="{{ currentUser.signature }}"></div> -->
 							</p>
 						</li>
@@ -31,7 +31,7 @@
 								<!-- tooltip-placement="bottom" 
 								tooltip="Messages" 
 								tooltip-animation="false" -->
-							<a title="Messages">
+							<a >
 								<div class="icon-talk-chat icon"></div>
 							</a>
 						</li>
@@ -39,7 +39,7 @@
 								<!-- tooltip-placement="bottom" 
 								tooltip="Settings" 
 								tooltip-animation="false" -->
-							<a dropdown-toggle="#settings-dropdown" title="Settings">
+							<a dropdown-toggle="#settings-dropdown">
 								<div class="icon-chevron-down icon"></div>
 							</a>
 						</li>
