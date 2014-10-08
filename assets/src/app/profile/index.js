@@ -106,7 +106,7 @@ angular.module( 'symantis.profile', [
 					controller: 'ProfileMantiCtrl',
 					templateUrl: 'profile/manti/index.tpl.html'
 				},
-				"leftside@profile.manti": {
+				"leftside@profile.view.manti": {
 					controller: 'ProfileMantiLeftsideCtrl',
                 	templateUrl: 'profile/manti/leftside.tpl.html'
 				}
