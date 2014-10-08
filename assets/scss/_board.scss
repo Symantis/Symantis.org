@@ -61,6 +61,7 @@
 	border-bottom: rem-calc(1px) $dark solid;
 	//float: left;
 	padding-bottom: rem-calc(20px);
+	margin-bottom: rem-calc(40px);
 	ul {
 		position: relative;
 		margin: 0;
@@ -188,7 +189,8 @@
 		clear:both;
 		display:block;
 	}
-	margin-top: 24px;
+	margin-bottom: rem-calc(20px);
+
 }
 .deactivate.board-pod-wrap {
 	display: none !important; 
@@ -434,7 +436,6 @@
 
 /* ------ Individual Opportunity page ------ */
 .board-page {
-	padding-top: rem-calc(20px);
 	padding-bottom: rem-calc(20px);
 	margin-left: 0 !important;
 	margin-right: 0 !important;
@@ -449,7 +450,7 @@
 			width: 100%;
 			float: left;
 			position: relative;
-			padding-bottom: rem-calc(15px);
+			padding-bottom: rem-calc(20px);
 			h3 {
 				@inlude font-bold(rem-calc(24px));
 				font-size: rem-calc(24px);
