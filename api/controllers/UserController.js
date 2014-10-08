@@ -1,6 +1,6 @@
 module.exports = {
 	getLike: function(req, res) {
-		User.find({ handle: { 'like': '%'+req.param('handle')+'%' }})
+		User.find({ handle: { 'contains': req.param('handle') }})
 		.exec(function(err, users){
 			if(err){
 
@@ -51,7 +51,7 @@ module.exports = {
 
 	create: function (req, res) {
 		var model = {
-			handle: req.param('handle'),
+			handle: req.param('username'),
 			email: req.param('email'),
 			firstName: req.param('firstName'),
 			lastName: req.param('lastName')

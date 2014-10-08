@@ -84,6 +84,7 @@ passport.connect = function (req, query, profile, next) {
   // have a way of identifying the user in the future. Throw an error and let
   // whoever's next in the line take care of it.
   if (!Object.keys(user).length) {
+    console.log("Username, Email");
     return next(new Error('Neither a username or email was available', null));
   }
 

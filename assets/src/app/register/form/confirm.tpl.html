@@ -5,7 +5,13 @@
 		<li>Email: <span>{{ registerData.email }}</span></li>
 		<li>Username: <span>@{{ registerData.username }}</span></li>
 	</ul>
-	
+	<input
+		type="hidden"
+		name="identifier"
+		ng-model="registerData.email"
+		value="{{registerData.email}}"
+		required
+	>
 	<input 
 		type="hidden" 
 		name="email" 

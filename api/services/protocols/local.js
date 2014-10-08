@@ -24,7 +24,7 @@ var validator = require('validator');
  */
 exports.register = function (req, res, next) {
   var email    = req.param('email')
-    , handle = req.param('handle')
+    , handle = req.param('username')
     , password = req.param('password')
     , firstName = req.param('firstName')
     , lastName = req.param('lastName');
