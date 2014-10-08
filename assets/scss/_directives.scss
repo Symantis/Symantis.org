@@ -139,11 +139,11 @@ tags-input .autocomplete .suggestion-item {
 }
 tags-input .autocomplete .suggestion-item.selected {
   color: white;
-  background-color: #0097cf;
+  background-color: $primary-color;
 }
 tags-input .autocomplete .suggestion-item.selected em {
   color: white;
-  background-color: #0097cf;
+  background-color: $primary-color;
 }
 tags-input .autocomplete .suggestion-item em {
   font: normal bold 16px "Helvetica Neue", Helvetica, Arial, sans-serif;

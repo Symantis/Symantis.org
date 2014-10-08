@@ -75,15 +75,15 @@ Build date: 2014-01-10
 	display:none!important;
 }
 .editable-click,a.editable-click{
-		text-decoration:none;
+	text-decoration:none;
 }
 .editable-click:hover,a.editable-click:hover{
 	text-decoration:none;
 }
 .editable-empty,.editable-empty:hover,.editable-empty:focus,a.editable-empty,a.editable-empty:hover,a.editable-empty:focus{
-	font-style:italic;
-	color:#D14;
 	text-decoration:none;
+	//font-style: italic;
+	color: $light !important;
 }
 
 
@@ -228,7 +228,7 @@ Build date: 2014-01-10
 		position: relative;
 		cursor: text;
 		@include font-regular(rem-calc(14px));
-		color: $gray;
+		color: darken($gray, 10%);
 		padding: 5px 10px 5px 10px;
 		border: 1px darken($light, 10%) solid;
 		line-height: 1.4;
@@ -240,6 +240,12 @@ Build date: 2014-01-10
 	h3.no-settings {
 		width: 100%;
 		text-align: center;
+	}
+	tags-input .host .tags .input {
+		&::-webkit-input-placeholder { @include font-regular(rem-calc(14px)); color: $light; }
+		&:-moz-placeholder { @include font-regular(rem-calc(14px)); color: $light; opacity: 1; }
+		&::-moz-placeholder { @include font-regular(rem-calc(14px)); color: $light; opacity: 1; }
+		&:-ms-input-placeholder { @include font-regular(rem-calc(14px)); color: $light; }
 	}
 }
 

@@ -50,7 +50,18 @@
                     editable-text="currentUser.lastName" 
                     e-ng-maxlength="140"
                     onaftersave="updateUser()"
-                >{{ currentUser.lastName || "First Name" }}</p>
+                >{{ currentUser.lastName || "Last Name" }}</p>
+            </div>
+        </section>
+
+        <section class="settings-row">
+            <p class="settings-title">Blurb:</p>
+            <div class="editable-option">
+                <p  class="settings-option"
+                    editable-text="currentUser.professed" 
+                    e-ng-maxlength="140" 
+                    onaftersave="updateUser()"
+                >{{ currentUser.professed || "Write a short blurb" }}</p>
             </div>
         </section>
 
@@ -64,25 +75,13 @@
         </section>
 
         <section class="settings-row">
-            <p class="settings-title settings-large">Description:</p>
-            <div class="editable-option-large">
-                <p  class="settings-option"
-                    editable-textarea="currentUser.professed" 
-                    e-ng-maxlength="140" 
-                    e-cols="20"
-                    onaftersave="updateUser()"
-                >{{ currentUser.professed || "Write a short description!" }}</p>
-            </div>
-        </section>
-
-        <section class="settings-row">
             <p class="settings-title settings-large">About:</p>
             <div class="editable-option-large">
                 <p  class="settings-option" 
                     editable-textarea="currentUser.bio" 
                     e-cols="40"
                     onaftersave="updateUser()"
-                >{{ currentUser.bio || "Write a bio!" }}</p>
+                >{{ currentUser.bio || "Write a bio" }}</p>
             </div>
         </section>
 
