@@ -113,6 +113,7 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
+<<<<<<< HEAD
 		.state( 'profile.view.manti', {
 			url: '/manti',
 			views: {
@@ -126,6 +127,8 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
+=======
+>>>>>>> FETCH_HEAD
 		.state('profile.view.message',{
 			url: '/message',
 			views: {
