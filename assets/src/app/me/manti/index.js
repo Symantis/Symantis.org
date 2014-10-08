@@ -22,9 +22,7 @@ angular.module( 'symantis.me.manti', [
 	$scope.$parent.toDo = [];
 	
 })
-.controller( 'MeMantiLeftsideCtrl', function MeMantiLeftsideController( $scope ) {
-	//titleService.setTitle('About');
-})
+
 .controller( 'MeMantiLeftsideCtrl', function MeMantiLeftsideController( $scope ) {
 	//titleService.setTitle('About');
 });

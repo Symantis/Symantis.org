@@ -8,4 +8,4 @@ angular.module( 'symantis.profile.manti', [
 })
 .controller( 'ProfileMantiLeftsideCtrl', function ProfileMantiLeftsideController( $scope ) {
 	
-})
+});
