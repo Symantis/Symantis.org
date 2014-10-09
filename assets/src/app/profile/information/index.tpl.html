@@ -1,5 +1,5 @@
 <div id="heading-row" class="row fluid-row">
-	<section class="medium-3 large-2 large-offset-1 columns heading-left" ui-view="leftside">
+	<section class="medium-3 large-2 large-offset-1 columns heading-left">
 		<!-- Section on left of heading -->
 	</section>
     <section class="medium-9 large-7 columns medium-offset-3 large-offset-3 sub-heading">
@@ -10,13 +10,9 @@
 	</section>
 </div>
 <div class="row fluid-row">
-    <section class="medium-3 large-2 large-offset-1 columns main-left" ui-veiw="leftside">
-    	<!-- Section for main left header -->
-        <header class="left-header">
-        
-        </header>
-        <div class="left-content">
-            <!-- Section for main left content -->
+    <section class="medium-3 large-2 columns large-offset-1 main-left profile-left">
+        <div class="wrapper" ui-view="leftside">
+        <!-- Section for main left header -->
         </div>
     </section>
 
@@ -39,10 +35,10 @@
             <ul>
                 <li class="row current-manti" ng-repeat="manti in profileData.curManti">
                     <div class="medium-2 large-1 columns current-manti-view">
-                        <a ><p>View</p></a>
+                        <a ng-click="inDevModal()"><p>View</p></a>
                     </div>
                     <div class="medium-10 large-11 columns current-manti-content">
-                        <h3><a >{{ manti.title }}</a></h3>
+                        <h3><a ng-click="inDevModal()">{{ manti.title }}</a></h3>
                         <p>{{ manti.description }}</p>
                     </div>
                 </li>
@@ -58,7 +54,7 @@
             <ul>
                 <li class="row recent-contribution" ng-repeat="contrib in profileData.reContributions">
                     <div class="medium-2 large-1 columns recent-contribution-category">
-                        <a ><p>{{ contrib.type }}</p></a>
+                        <a ng-click="inDevModal()"><p>{{ contrib.type }}</p></a>
                     </div>
                     <div class="medium-10 large-11 columns recent-contribution-content">
                         <h3>{{ contrib.title }}</h3>

@@ -1,0 +1,252 @@
+<article class="row manti-page manti-{{ manti.class }}">
+	<div class="medium-12 columns manti-page-main">
+	    <div class="manti-post-content">
+	    	<section class="manti-page-banner" ng-show="manti.img">
+	    		<img ng-src="{{ manti.img.src }}" alt="{{ manti.img.name }}" />
+	    	</section>
+	        <section class="manti-page-header">
+		        <h3>{{ manti.title }}</h3>
+		        <ul class="manti-pod-stats">
+                    <li><a ng-click="inDevModal()"><span class="icon-git-branch"></span> {{ manti.branches }}</a></li>
+                    <li><a ng-click="inDevModal()"><span class="icon-cloud-upload"></span> {{ manti.seeds }}</a></li>
+                </ul>
+		    </section>
+		    <section class="manti-page-body">
+		        <p>{{ manti.description }}</p>
+		        <div class="manti-invite">
+		        	<a class="invite-button" ng-click="inDevModal()">Invite Users</a>
+		        </div>
+		        <div class="manti-page-changes">
+		        	<div class="manti-changes-header">
+			        	<h4>Recent Changes</h4>
+			        </div>
+
+			        <div 
+			        	masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile", "gutter": ".gutter-sizer" }'
+			        	class="board-container"
+			        	ui-view="mantiChanges" 
+            		>
+			            <div class="gutter-sizer"></div>
+			            <div 
+			                masonry-tile 
+			                ng-repeat="change in manti.changes" 
+			                class="animate-repeat tile board-pod-wrap"
+			                ng-if="$index < 10"
+			            >
+			                <div class="board-pod">
+			                    <section class="pod-header">
+			                        <div 
+			                            class="pod-user-pic generate-image" 
+			                            signature="{{ change.author.signature }}"
+			                        >
+			                        </div>
+			                        <p>
+			                            <a ui-sref="profile.view({ handle: change.author.handle })">
+			                            	{{change.author.firstName }} {{change.author.lastName }}
+			                            </a><br />
+			                            <span>{{ change.date | date }}</span>
+			                        </p>
+			                    </section>
+			                    <section class="pod-body">
+			                    	<p class="manti-change-what">{{ change.type }} <a >{{ change.what }}</a></p>
+			                        <p class="pod-description">{{ change.description }}</p>
+			                    </section>
+			                </div>
+			            </div>
+			        </div>
+
+		        </div>
+		    </section>
+	        <section class="manti-page-footer">
+	        	<div class="manti-class-selection">
+	        		<select>
+	        			<option>Select a class</option>
+	        			<option value="1">Visual</option>
+	        			<option value="1">Systematic</option>
+	        			<option value="1">Group</option>
+	        		</select>
+	        	</div>
+	        	<div class="manti-open">
+                    <a ng-click="inDevModal()">Open in Creator App <span class="icon-arrow-right"></span></a>
+                </div>
+
+			</section>
+	    </div>
+
+		<!-- <div class="comments-head" ng-init="comments.selected = true">
+			<h4 class="number-comments">
+				<a 
+					ng-class="{active: comments.selected}" 
+					ng-click="comments.selected = true"
+				>
+					{{ board.questions.length }} Question<span ng-show="board.questions.length > 1">s</span>
+				</a>
+			</h4>
+			<h4>
+				<a 
+					ng-show="currentUser"
+					ng-click="comments.selected = false" 
+					ng-class="{active: !comments.selected}"
+				>
+					New
+				</a>
+				<a ng-show="!currentUser" ng-click="loginModal()">Login</a>
+			</h4>
+			<p>
+				<a dropdown-toggle="#board-question-sort-menu">Sort by <span class="icon-vote-down icon"></span></a>
+			</p>
+			<div class="sort-container board-question-sort" id="board-question-sort-menu">
+		        <ul class="sort-menu">
+		            <li><a class="active">Most Recent <span class="icon-check icon"></span></a></li>
+		            <li><a >Most Popular <span class="icon-check icon"></span></a></li>
+		        </ul>
+		    </div>
+		</div>
+		
+		<div 
+			class="comment" 
+			ng-repeat="question in board.questions"
+		>
+			<div class="comment-left">
+				<div 
+					class="comment-pic generate-image" 
+					signature="{{ question.author.signature }}"
+				>
+				</div>
+			</div>
+			<div class="comment-content">
+				<div class="comment-details">
+		            <p>
+		            	<a ui-sref="profile.view({ handle: question.author.handle })">
+		            		{{ question.author.firstName }} {{ question.author.lastName }}
+		            	</a>
+		            	&middot;
+		            	<span>{{ question.date | date }}</span>
+		            </p>
+		        </div>
+				<p class="comment-text">
+					{{ question.question }}
+				</p>
+				<p class="comment-reply">
+					<a title="Up Votes">
+						<span class="icon-vote-up"></span>
+						<span class="comment-votes">
+							{{ question.upVotes | number }}
+						</span>
+					</a>
+					<a title="Down Votes">
+						<span class="icon-vote-down"></span>
+						<span class="comment-votes">
+							{{ question.downVotes | number }}
+						</span>
+					</a>
+				</p>
+			</div>
+
+			<div class="replies" ng-init="replies.open = false" ng-show="replies.open">
+				<div 
+					class="reply" 
+					ng-repeat="reply in question.replies"
+				>
+					<div class="reply-push">
+						<div class="icon-indent icon">
+						</div>
+					</div>
+					<div class="reply-left">
+						<div class="reply-pic generate-image" signature="{{ reply.author.signature }}"></div>
+					</div>
+					<div class="reply-content">
+						<div class="reply-details">
+				            <p>
+				            	<a ui-sref="profile.view({handle: reply.author.handle})">
+				            		{{reply.author.firstName}} {{reply.author.lastName}}
+				            	</a>
+				            	&middot;
+				            	<span>
+				            		{{ reply.date | date }}
+				            	</span>
+				            </p>
+				        </div>
+						<p class="reply-text">
+							{{reply.reply}}
+						</p>
+				    </div>
+				</div>
+				<div class="new-comment" ng-show="currentUser">
+					<div class="new-comment-left">
+						<div 
+							class="reply-pic generate-image" 
+							signature="{{ currentUser.signature }}"
+						>
+						</div>
+					</div>
+					<form class="new-comment-form">
+						<p>
+				        	<a ui-sref="profile.view({handle: currentUser.handle})">
+				        		{{ currentUser.firstName }} {{ currentUser.lastName }}
+				        	</a>
+				        </p>
+						<textarea name="new-comment-input" placeholder="Add Reply.."></textarea>
+						<a >
+							<div class="new-comment-submit">
+								<span class="icon-plus"></span>
+							</div>
+						</a>
+					</form>
+				</div>
+				<h4 class="comment-noUser" ng-show="!currentUser">
+					<a ng-click="loginModal()">Login</a> to reply
+				</h4>
+			</div>
+			<a 
+	        	ng-click="replies.open = true" 
+	        	ng-show="!replies.open"
+	        >
+	        	<div class="reply-toggle">
+					<p>
+						<span ng-show="question.replies.length > 0">Add/View Replies ({{ question.replies.length }})</span>
+						<span ng-show="question.replies.length < 1">Reply</span>
+					</p>
+				</div>
+			</a>
+			<a 
+				ng-click="replies.open = false"
+				ng-show="replies.open"
+			>
+				<div class="reply-toggle">
+					<p>Hide</p>
+				</div>
+			</a>
+		</div>
+
+		<div class="view-more-comments" ng-show="board.questions.length > 12">
+			<a >
+				<p>More Questions</p>
+			</a>
+		</div>
+
+		<div class="new-comment" ng-show="currentUser">
+			<div class="new-comment-left">
+				<div 
+					class="reply-pic generate-image" 
+					signature="{{ currentUser.signature }}"
+				>
+				</div>
+			</div>
+			<form class="new-comment-form">
+				<p>
+		        	<a ui-sref="profile.view({handle: currentUser.handle})">
+		        		{{ currentUser.firstName }} {{ currentUser.lastName }}
+		        	</a>
+		        </p>
+				<textarea name="new-comment-input" placeholder="Ask Question.."></textarea>
+				<a ><div class="new-comment-submit"><span class="icon-plus"></span></div></a>
+			</form>
+		</div>
+
+		<div class="comments-noUser" ng-show="!currentUser">
+			<h4><a ui-sref="register">Sign up</a> or <a ng-click="loginModal()">Login</a> to ask a question.</h4>
+		</div> -->
+
+	</div>
+</article>

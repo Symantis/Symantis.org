@@ -122,6 +122,28 @@ angular.module( 'symantis.profile', [
 				"leftside@profile.view.manti": {
 					controller: 'ProfileMantiLeftsideCtrl',
                 	templateUrl: 'profile/manti/leftside.tpl.html'
+				},
+				"manti-nav@profile.view.manti": {
+					controller: 'ProfileMantiNavCtrl',
+                	templateUrl: 'profile/manti/sort.tpl.html'
+				}
+			}
+		})
+		.state( 'profile.view.manti.view', {
+			url: '/:id/:title',
+			resolve: {
+				manti : function($stateParams) {
+				    return { id: $stateParams.id, clean: $stateParams.title };
+				}
+			},
+			views: {
+				"manti@profile.view.manti": {
+					controller: 'ProfileMantiViewCtrl',
+					templateUrl: 'profile/manti/view.tpl.html'
+				},
+				"manti-nav@profile.view.manti": {
+					controller: 'ProfileMantiNavCtrl',
+                	templateUrl: 'common/back.tpl.html'
 				}
 			}
 		})

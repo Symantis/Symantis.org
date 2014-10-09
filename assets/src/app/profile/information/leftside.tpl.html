@@ -1,8 +1,59 @@
-<!-- Section for main left header -->
-<div class="left-content">
-    <div class="connections-online-nav">
-        <ul>
-                    
-        </ul>
+<header class="profile-left-user left-header">
+    <h3>
+        {{ user.firstName || user.handle}} {{ user.lastName }}
+    </h3>
+    <small>{{ user.at }}{{ user.handle }}</small>
+    <div class="profile-pic">
+        <div class="profile-pic-inner online generate-image" signature="{{ user.signature }}"></div>
     </div>
-</div>
+</header>
+<header class="profile-left-options left-header">
+    <ul>
+        <li class="profile-connections">
+            <a title="View Connection Statistics" dropdown-toggle="#connections-table">
+                <div class="icon-2way icon"></div>
+                <h3>Connections <span>{{user.totalConnections || 0}}</span></h3> 
+            </a>
+        </li>
+        <li class="profile-connections-tab">
+            <table id="connections-table" class="connections-table">
+                <tr>
+                    <td><a >Incoming Connections</a></td>
+                    <td>{{user.totalFromConnections || 0}}</td>
+                </tr>
+                <tr>
+                    <td><a >Outgoing Connections</a></td>
+                    <td>{{user.totalToConnections || 0}}</td>
+                </tr>
+                <tr>
+                    <td><a >Two-way Connections</a></td>
+                    <td>{{user.reciprocal || 0}}</td>
+                </tr>
+            </table>
+        </li>
+        <li class="profile-option">
+            <a ui-sref="profile.view.connect" title="Connect with {{ user.firstName }}">
+                <h3>Connect with User</h3>
+                <div class="icon-plus icon"></div>
+            </a>
+        </li>
+        <li class="profile-option">
+            <a ui-sref="profile.view.message" title="Message {{ user.firstName }}">
+                <h3>Message</h3>
+                <div class="icon-message icon"></div>
+            </a>
+        </li>
+        <li class="profile-option">
+            <a ui-sref="profile.view.invite" title="Invite {{ user.firstName }} to work with you">
+                <h3>Invite to Project</h3>
+                <div class="icon-plus icon"></div>
+            </a>
+        </li>
+        <li class="profile-option">
+            <a ui-sref="profile.view.invite" title="Remove {{ user.firstName }} from your Connections">
+                <h3>Remove Connection</h3>
+                <div class="icon-minus icon"></div>
+            </a>
+        </li>
+    </ul>
+</header>
