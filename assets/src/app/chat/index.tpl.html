@@ -1,7 +1,46 @@
-<div class="notifications-container" ng-class="{open: notificationsOpen}">
-	<div class="notifications-inner">
-		<header class="notifications-header">
 
+<div class="notifications-container" ng-class="{open: notificationsOpen}" ng-init="messages.active = false">
+
+	<div class="notifications-inner">
+
+		<header class="notifications-header">
+			<div class="notifications-filter" >
+				<a class="all-tab" ng-click="messages.active = false" ng-class="{active: !messages.active}">All</a
+				><a class="messages-tab" ng-click="messages.active = true" ng-class="{active: messages.active}">Messages</a>
+			</div>
+			<a class="compose" dropdown-toggle="#compose-dropdown"><span class="icon-compose"></span></a>
 		</header>
+
+		<div id="compose-dropdown" class="compose-dropdown">
+			<header class="compose-header">
+				<label for="compose-to">To:</label
+				><input class="compose-to" type="text" placeholder="Username..">
+			</header>
+			<section class="compose-body">
+				<textarea class="compose-copy" placeholder="Type here.."></textarea>
+			</section>
+			<footer class="compose-footer">
+				<a class="sy-button">Post</a>
+			</footer>
+		</div>
+
+		<ul class="notifications-list">
+			<li class="notification" ng-repeat="notification in notifications">
+				<section class="notification-icon">
+					<span class="icon-talk-chat" ng-show="notification.message"></span>
+					<span class="icon-dzone" ng-show="!notification.message"></span>
+				</section>
+				<section class="notification-content">
+				</section>
+				<section class="notification-goto">
+				</section>
+			</li>
+		</ul>
+
 	</div>
+
+	<footer class="notifications-footer">
+		<a >Footer</a>
+	</footer>
+
 </div>

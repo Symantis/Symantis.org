@@ -151,16 +151,6 @@ and (max-width : rem-calc(1024px)) {
 	.manti-pod-wrap {
 		width: 100%;
 	}
-	.notifications-container {
-		top: 55px;
-		width: rem-calc(200px);
-	}
-}
-
-// Desktops & Laptops & Above ----------- 
-@media only screen 
-and (min-width : rem-calc(1224px)) {
-
 }
 
 // Small Laptops and below ----------
@@ -178,13 +168,22 @@ and (max-width : rem-calc(1224px)) {
 	.board-pod-wrap{
 		width: 50%;
 	}
+	.notifications-container {
+		width: rem-calc(200px);
+		top: 55px;
+	}
 }
-
 
 // Laptops Only ----------
 @media only screen 
 and (min-width : rem-calc(1224px)) 
 and (max-height : rem-calc(880px)) {
+
+}
+
+// Desktops & Laptops & Above ----------- 
+@media only screen 
+and (min-width : rem-calc(1224px)) {
 
 }
 

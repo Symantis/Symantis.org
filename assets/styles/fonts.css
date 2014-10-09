@@ -323,3 +323,6 @@
 .icon-bell:before {
   content: "W";
 }
+.icon-compose:before {
+  content: "Z";
+}

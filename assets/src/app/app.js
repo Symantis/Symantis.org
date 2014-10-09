@@ -157,6 +157,7 @@ angular.module( 'symantis', [
 	$rootScope.toDo = [];
 
 	$rootScope.activity = aActivity;
+	$rootScope.notifications = aNotifications;
 
 	$rootScope.notificationsOpen = false;
 	$rootScope.notificationsToggle = function() {
@@ -344,6 +345,37 @@ angular.module( 'symantis', [
 
 });
 
+var aNotifications = [
+	{
+		author:{
+			id: 1, 
+			firstName: "Scott",
+			lastName:  "Wyatt",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'mentioned',
+		type: 'comment',
+		date: new Date(),
+		notication: '@author \"verb\" you \"type\"',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		message: 'Hey man\, whats up?',
+		date: new Date()
+	}
+];
 
 var aActivity = [
 	{
@@ -358,7 +390,7 @@ var aActivity = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -376,7 +408,7 @@ var aActivity = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -394,7 +426,7 @@ var aActivity = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -413,7 +445,7 @@ var aActivity = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -431,7 +463,7 @@ var aActivity = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -513,7 +545,7 @@ var aQueries = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -548,7 +580,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -578,7 +610,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -614,7 +646,7 @@ var aQueries = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -644,7 +676,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -660,7 +692,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -702,7 +734,7 @@ var aQueries = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -720,7 +752,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -733,7 +765,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -750,7 +782,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -780,7 +812,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -793,7 +825,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -810,7 +842,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -825,7 +857,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -841,7 +873,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -857,7 +889,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -904,7 +936,7 @@ var aQueries = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -922,7 +954,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -935,7 +967,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -952,7 +984,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -982,7 +1014,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -995,7 +1027,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -1031,7 +1063,7 @@ var aQueries = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -1049,7 +1081,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -1084,7 +1116,7 @@ var aQueries = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -1108,7 +1140,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -1121,7 +1153,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -1134,7 +1166,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -1151,7 +1183,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -1186,7 +1218,7 @@ var aQueries = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -1204,7 +1236,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -1217,7 +1249,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -1241,7 +1273,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -1254,7 +1286,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -1267,7 +1299,7 @@ var aQueries = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -1284,7 +1316,7 @@ var aQueries = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -1310,7 +1342,7 @@ var aArticles = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -1330,7 +1362,7 @@ var aArticles = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -1343,7 +1375,7 @@ var aArticles = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1357,7 +1389,7 @@ var aArticles = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1376,7 +1408,7 @@ var aArticles = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -1393,7 +1425,7 @@ var aArticles = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -1406,7 +1438,7 @@ var aArticles = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1420,7 +1452,7 @@ var aArticles = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1444,7 +1476,7 @@ var aArticles = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -1463,7 +1495,7 @@ var aArticles = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -1475,7 +1507,7 @@ var aArticles = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -1488,7 +1520,7 @@ var aArticles = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -1506,7 +1538,7 @@ var aArticles = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -1531,7 +1563,7 @@ var aArticles = [
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -1550,7 +1582,7 @@ var aArticles = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					signature: Math.random()
 				},
@@ -1562,7 +1594,7 @@ var aArticles = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -1575,7 +1607,7 @@ var aArticles = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							signature: Math.random()
 						},
@@ -1599,7 +1631,7 @@ var aOpportunities = [
 			id: 1,
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			signature: Math.random()
 		},
@@ -1648,7 +1680,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -1661,7 +1693,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1675,7 +1707,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1694,7 +1726,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -1711,7 +1743,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -1724,7 +1756,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1738,7 +1770,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1809,7 +1841,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -1822,7 +1854,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1836,7 +1868,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1855,7 +1887,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -1872,7 +1904,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -1885,7 +1917,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1899,7 +1931,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1921,7 +1953,7 @@ var aOpportunities = [
 			id: 1,
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			signature: Math.random()
 		},
@@ -1970,7 +2002,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -1983,7 +2015,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -1997,7 +2029,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2016,7 +2048,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2033,7 +2065,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2046,7 +2078,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2060,7 +2092,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2131,7 +2163,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2144,7 +2176,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2158,7 +2190,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2177,7 +2209,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2194,7 +2226,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2207,7 +2239,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2221,7 +2253,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2243,7 +2275,7 @@ var aOpportunities = [
 			id: 1,
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			signature: Math.random()
 		},
@@ -2292,7 +2324,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2305,7 +2337,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2319,7 +2351,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2338,7 +2370,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2355,7 +2387,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2368,7 +2400,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2382,7 +2414,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2404,7 +2436,7 @@ var aOpportunities = [
 			id: 1,
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			signature: Math.random()
 		},
@@ -2453,7 +2485,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2466,7 +2498,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2480,7 +2512,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2499,7 +2531,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2516,7 +2548,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2529,7 +2561,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2543,7 +2575,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2565,7 +2597,7 @@ var aOpportunities = [
 			id: 1,
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			signature: Math.random()
 		},
@@ -2614,7 +2646,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2627,7 +2659,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2641,7 +2673,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2660,7 +2692,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2677,7 +2709,7 @@ var aOpportunities = [
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
-					handle: "theman",
+					handle: "hamish",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2690,7 +2722,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2704,7 +2736,7 @@ var aOpportunities = [
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
-							handle: "theman",
+							handle: "hamish",
 							at: "@",
 							status: 'online',
 							signature: Math.random()

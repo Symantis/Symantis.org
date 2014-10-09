@@ -1,3 +1,4 @@
+
 $time: 0.2s;
 
 .notifications-container {
@@ -6,25 +7,21 @@ $time: 0.2s;
 	top: 0;
 	bottom: 0;
 	width: 16.2%;
-	background-color: lighten($darkest, 5%);
+	background-color: $dark;
 	//background-color: rgba(18,20,15,0.9);
 	z-index: 100;
-	overflow-y: scroll;
-	overflow-x: hidden;
 	transform: translateX(100%);
     transform: translate3d(100%, 0, 0);
 
-    padding-left: rem-calc(10px);
-    
-	/*-webkit-box-shadow: inset 5px 0px 11px 0px rgba(0, 0, 0, 1);
-	-moz-box-shadow:    inset 5px 0px 11px 0px rgba(0, 0, 0, 1);
-	box-shadow:         inset 5px 0px 11px 0px rgba(0, 0, 0, 1);*/
+	-webkit-box-shadow: -1px 0px 4px 0px rgba(50, 50, 50, 0);
+	-moz-box-shadow:    -1px 0px 4px 0px rgba(50, 50, 50, 0);
+	box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0);
 
-	-webkit-transition: transform $time ease;                  
-    -moz-transition: transform $time ease;                 
-    -o-transition: transform $time ease;   
-    -ms-transition: transform $time ease;          
-    transition: transform $time ease;
+	-webkit-transition: transform $time ease, box-shadow $time ease;                  
+    -moz-transition: transform $time ease, box-shadow $time ease;                 
+    -o-transition: transform $time ease, box-shadow $time ease;   
+    -ms-transition: transform $time ease, box-shadow $time ease;          
+    transition: transform $time ease, box-shadow $time ease;
     
 	&.open {
 		transform: translate3d(0%, 0, 0);
@@ -35,15 +32,228 @@ $time: 0.2s;
 		box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
 	}
 }
-.notifications-container-inner {
+
+.notifications-inner {
+	z-index: 101;
 	width: 100%;
 	position: relative;
+	min-height: 100%;
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+	padding: 0 0 rem-calc(55px) 0;
+	margin-bottom: rem-calc(-55px);
 }
+
 .notifications-header {
 	width: 100%;
 	height: rem-calc(56px);
 	border-bottom: 1px $gray solid;
 	position: relative;
 	display: block;
+	background-color: $dark;
+	padding-top: rem-calc(14px);
+	padding-left: rem-calc(15px);
+	a {
+		@include font-regular(rem-calc(12px));
+		@include no-highlight;
+		span {
+			font-size: rem-calc(20px);
+			position: relative;
+		}
+		&.compose {
+			position: absolute;
+			right: rem-calc(15px);
+			top: rem-calc(18px);
+			color: white;
+			-webkit-transition: color 0.1s ease;                  
+		    -moz-transition: 	color 0.1s ease;                 
+		    -o-transition: 		color 0.1s ease;   
+		    -ms-transition: 	color 0.1s ease;          
+		    transition: 		color 0.1s ease;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+	.notifications-filter {
+		display: block;
+		padding-right: rem-calc(35px);
+		padding-left: rem-calc(1px);
+		width: 100%;
+		position: relative;
+		text-align: left;
+		a {
+			padding: rem-calc(3px) rem-calc(15px) rem-calc(4px) rem-calc(15px);
+			color: $primary-color;
+			-webkit-transition: background-color 0.1s ease;                  
+		    -moz-transition: 	background-color 0.1s ease;                 
+		    -o-transition: 		background-color 0.1s ease;   
+		    -ms-transition: 	background-color 0.1s ease;          
+		    transition: 		background-color 0.1s ease;
 
+		    &:hover {
+		    	color: darken($primary-color, 10%);
+		    	border-color: darken($primary-color, 10%);
+		    }
+			&.active {
+				background-color: $primary-color;
+				color: $dark;
+				opacity: 0.9;
+			}
+			&:first-child {
+				border-top: 1px $primary-color solid;
+				border-bottom: 1px $primary-color solid;
+				border-left: 1px $primary-color solid;
+
+				/*border-top: 1px $light solid;
+				border-bottom: 1px $light solid;
+				border-left: 1px $light solid;*/
+
+				border-top-left-radius: 3px;
+				border-bottom-left-radius: 3px;
+			}
+			&:last-child {
+				border-top: 1px $primary-color solid;
+				border-bottom: 1px $primary-color solid;
+				border-right: 1px $primary-color solid;
+
+				/*border-top: 1px $light solid;
+				border-bottom: 1px $light solid;
+				border-right: 1px $light solid;*/
+
+				margin-left: -1px;
+				border-top-right-radius: 3px;
+				border-bottom-right-radius: 3px;
+			}
+		}
+	}
 }
+.compose-dropdown {
+	position: absolute;
+	z-index: 999;
+	top: 60px !important;
+	right: 2.5% !important;
+	left: auto !important;
+	width: 95%;
+	background-color: white;
+	border-radius: 4px;
+	border: 1px $dark solid;
+	.compose-header {
+		position: relative;
+		border-bottom: 1px $light solid;
+		padding-left: rem-calc(10px);
+		padding-right: rem-calc(10px);
+		margin-bottom: rem-calc(10px);
+		label {
+			width: 20%;
+			display: inline-block;
+		}
+		input {
+			width: 80%;
+			display: inline-block;
+			outline: none;
+			border: none;
+			box-shadow: none;
+			background-color: white;
+			margin: 0;
+			color: $dark;
+			&:focus {
+				outline: none;
+				border: none;
+				box-shadow: none;
+			}
+		}
+	}
+	.compose-body {
+		padding-left: rem-calc(10px);
+		padding-right: rem-calc(10px);
+		margin-bottom: rem-calc(10px);
+		textarea {
+			width: 100%;
+			resize: none;
+			height: 100px;
+			outline: none;
+			border: none;
+			box-shadow: none;
+			background-color: white;
+			margin: 0;
+			padding: 0;
+			padding-top: rem-calc(10px);
+			color: $dark;
+			&:focus {
+				outline: none;
+				border: none;
+				box-shadow: none;
+			}
+		}
+	}
+	.compose-footer {
+		text-align: right;
+		border-top: 1px $light solid;
+		padding: rem-calc(10px);
+		.sy-button {
+			padding: 5px 15px;
+			margin: 0;
+			border-color: $primary-color;
+			color: $primary-color;
+			border-radius: 3px;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}
+.compose-dropdown:after, .compose-dropdown:before {
+	bottom: 100%;
+	left: auto !important;
+	right: rem-calc(11px);
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.compose-dropdown:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: white;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.compose-dropdown:before {
+	border-color: rgba(46, 48, 44, 0);
+	border-bottom-color: $dark;
+	border-width: 9px;
+	margin-left: -9px;
+}
+
+.notifications-footer {
+	width: 100%;
+	height: rem-calc(55px);
+	border-top: 1px $gray solid;
+	position: relative;
+	display: block;
+	z-index: 102;
+	background-color: $dark;
+	padding-top: rem-calc(14px);
+	padding-left: rem-calc(15px);
+}
+
+.notifications-list {
+	margin: 0;
+	padding: 0 0 0 rem-calc(15px);
+	list-style: none;
+	width: 100%;
+	.notification {
+		height: rem-calc(80px);
+		width: 100%;
+		padding-right: rem-calc(10px);
+		display: block;
+		border-bottom: 1px darken($gray,15%) solid;
+	}
+}
+
+
+
+
