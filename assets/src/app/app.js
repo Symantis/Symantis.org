@@ -321,6 +321,14 @@ angular.module( 'symantis', [
 			windowClass: 'small'
 		});
 	};
+	$scope.inDevModal = function () {
+
+		var modalInstance = $symodal.open({
+			templateUrl: 'common/modals/inDevModal.tpl.html',
+			controller: 'InDevModalCtrl',
+			windowClass: 'small'
+		});
+	};
 
 
 });

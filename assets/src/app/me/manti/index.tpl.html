@@ -31,7 +31,7 @@
             </div>
             <div class="manti-sub-nav-right">
                 <div class="manti-new">
-                    <a title="New Manti"><span class="icon-plus"></span> Create New</a>
+                    <a ng-click="inDevModal()"><span class="icon-plus"></span> Create New</a>
                 </div>
             </div>
         </header>
@@ -67,10 +67,10 @@
                     ng-class="{'visual-pod':manti.class=='visual','system-pod':manti.class=='systematic', 'group-pod':manti.class=='group'}"
                 >
                     <section class="manti-pod-header">
-                        <p>Created on {{ manti.date | date }}</p>
+                        <p>{{ manti.changes[0].type }} {{ manti.date | date }}</p>
                         <ul class="manti-pod-stats">
-                            <li><a ><span class="icon-git-branch"></span> {{ manti.branches }}</a></li>
-                            <li><a ><span class="icon-cloud-upload"></span> {{ manti.seeds }}</a></li>
+                            <li><a ng-click="inDevModal()"><span class="icon-git-branch"></span> {{ manti.branches }}</a></li>
+                            <li><a ng-click="inDevModal()"><span class="icon-cloud-upload"></span> {{ manti.seeds }}</a></li>
                         </ul>
                     </section>
                     <section class="manti-pod-img" ng-show="manti.img">

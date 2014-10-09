@@ -1,4 +1,4 @@
-$animationTime: 0.2s !default;
+$animationTime: 0.3s !default;
 
 *,
 *:after,
@@ -99,7 +99,7 @@ body,
 		text-align:center;
 		display:table;
 		float:right;
-		background-color: $darkest;
+		background-color: darken($primary-color, 5%);
 		& > .activator-icon{
 			display:table-cell;
 			width:50px;
@@ -112,7 +112,7 @@ body,
 	}
 	.sitenav-inner{
 		height:100%;
-		background-color: $darkest;
+		background-color: darken($primary-color, 5%);
 		width:150px;
 		float:left;
 		display:table;
@@ -141,22 +141,27 @@ body,
 					.search-icon{
 						padding-left:15px;
 						width:50px;
-						color:$primary-color;
+						color: white;
 						cursor: pointer;
 					}
 					.search{
 						@include font-regular(rem-calc(16px));
 						padding-left:15px;
 						width:100px;
-						color: white;
+						color: $light;
 						white-space: nowrap;
 						position:relative;
 						top:-3px;
 						//opacity:0;
-						//@include transition(0.1s);
+						@include transition(0.1s);
 						//-webkit-transition: opacity $animationTime;
 						//transition: opacity $animationTime;
 						cursor: pointer;
+					}
+					&:hover {
+						.search {
+							color: white;
+						}
 					}
 				}
 			}
@@ -172,16 +177,17 @@ body,
 					line-height: rem-calc(45px);
 					font-size:rem-calc(13px);
 					a{
+						@include transition(100ms);
 						display: block;
 						color: white;
 						&:hover{
-							color: $primary-color;
+							color: $light;
 						}
 					}
 					&:nth-child(6) {
 						width: 120px;
 						a {
-							border-top: rem-calc(1px) $gray solid;
+							border-top: rem-calc(1px) white solid;
 							padding-top: 20px;
 							margin-top: 20px;
 						}
@@ -208,19 +214,23 @@ body,
 					.sy{
 						padding-left:8px;
 						width:50px;
-						color:$primary-color;
-
+						color: white;
 					}
 					.mantis{
 						width:100px;
 						padding-left:2px;
-						color: white;
+						color: $light;
 						white-space: nowrap;
 						//opacity:0;
-						//@include transition(0.1s);
+						@include transition(0.1s);
 						//-webkit-transition: opacity $animationTime;
 						//transition: opacity $animationTime;
 
+					}
+					&:hover {
+						.mantis {
+							color: white;
+						}
 					}
 				}
 			}
@@ -263,8 +273,6 @@ body,
 }
 .sy-effect.sy-menu-open.blur .sitenav-push{
 	opacity:0.4;
-	-webkit-filter: blur(1px);
-  	filter: blur(1px);
 }
 
 .sy-effect.sitenav {

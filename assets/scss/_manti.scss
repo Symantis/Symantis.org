@@ -477,15 +477,69 @@
 				@inlude font-bold(rem-calc(24px));
 				font-size: rem-calc(24px);
 				color: $dark;
-				padding-right: rem-calc(100px);
+				padding-right: rem-calc(120px);
 				&:hover {
 					color: $dark;
+				}
+			}
+			.manti-pod-stats {
+				position: absolute;
+				right: 0;
+				top: rem-calc(3px);
+				width: rem-calc(120px);
+				margin: 0;
+				list-style: none;
+				li {
+					display: inline-block;
+					@include font-regular(rem-calc(14px));
+					color: $gray;
+					padding-right: 10px;
+					padding-left: 5px;
+					&:last-child {
+						padding-right: 0;
+						//padding-left: 10px;
+					}
+					a {
+						color: $gray;
+						@include transition(100ms);
+						&:hover {
+							color: $dark;
+						}
+					}
+					span {
+						//color: $dark;
+						font-size: rem-calc(20px);
+						position: relative;
+						bottom: -.3rem;
+						line-height: 0.8;
+						margin-right: 1px;
+					}
+				}
+			}
+		}
+		.manti-page-body {
+			width: 100%;
+			position: relative;
+			//padding-top: rem-calc(20px);
+			//border-top: rem-calc(1px) $light solid;
+			padding-bottom: rem-calc(20px);
+			p {
+				padding-bottom: rem-calc(30px);
+				padding-right: rem-calc(120px);
+				@inlude font-regular(rem-calc(12px));
+				line-height: rem-calc(18px);
+				a {
+					text-decoration: underline;
+					color: $gray;
+					&:hover {
+						color: $dark;
+					}
 				}
 			}
 			.manti-invite {
 				position: absolute;
 				right: 0;
-				top: 3px;
+				top: -5px;
 				width: rem-calc(120px);
 				text-align: right;
 				.invite-button {
@@ -497,25 +551,6 @@
 					@include transition(100ms);
 				}
 			}
-		}
-		.manti-page-body {
-			width: 100%;
-			position: relative;
-			padding-top: rem-calc(20px);
-			border-top: rem-calc(1px) $light solid;
-			padding-bottom: rem-calc(20px);
-			p {
-				padding-bottom: rem-calc(20px);
-				@inlude font-regular(rem-calc(12px));
-				line-height: rem-calc(18px);
-				a {
-					text-decoration: underline;
-					color: $gray;
-					&:hover {
-						color: $dark;
-					}
-				}
-			}
 			.manti-page-changes {
 				width: 100%;
 				position: relative;
@@ -523,6 +558,8 @@
 					width: 100%;
 					display: block;
 					margin-bottom: rem-calc(20px);
+					padding-top: rem-calc(20px);
+					border-top: 1px $light solid;
 					h4 {
 						@include font-semi(rem-calc(18px));
 						padding-bottom: rem-calc(20px);
@@ -536,6 +573,7 @@
 					box-shadow: none;
 					p {
 						padding-bottom: 0;
+						padding-right: 0;
 					}
 					a {
 						text-decoration: none;
@@ -549,6 +587,57 @@
 					}
 					.pod-body {
 						padding-bottom: rem-calc(10px);
+					}
+				}
+			}
+		}
+		.manti-page-footer {
+			padding-top: rem-calc(30px);
+			position: relative;
+			border-top: 1px $light solid;
+			.manti-class-selection {
+				width: rem-calc(200px);
+			}
+			.manti-open {
+				position: absolute;
+				right: 0;
+				top: rem-calc(30px);
+				width: auto;
+				a {
+					padding: 7px 14px 8px 14px;
+					height: 26px;
+					width: auto;
+					//background-color: $dark;
+					width: 100%;
+					white-space: nowrap;
+					@include font-regular(rem-calc(12px));
+					color: white !important;
+					border-radius: 4px;
+					background: #444444;
+					background: -moz-linear-gradient(top,  #444444 2%, #131313 97%);
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,#444444), color-stop(97%,#131313));
+					background: -webkit-linear-gradient(top,  #444444 2%,#131313 97%);
+					background: -o-linear-gradient(top,  #444444 2%,#131313 97%);
+					background: -ms-linear-gradient(top,  #444444 2%,#131313 97%);
+					background: linear-gradient(to bottom,  #444444 2%,#131313 97%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#131313',GradientType=0 );
+					-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+					-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+					box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+					@include transition(100ms);
+					span {
+						margin-left: 3px;
+						position: relative;
+						bottom: -.2rem;
+						font-size: rem-calc(16px);
+					}
+					&:hover {
+						color: $offWhite;
+					}
+					&:active {
+						-webkit-box-shadow: inset 3px 3px 13px 11px rgba(50, 50, 50, 1);
+						-moz-box-shadow:    inset 3px 3px 13px 11px rgba(50, 50, 50, 1);
+						box-shadow:         inset 3px 3px 13px 11px rgba(50, 50, 50, 1);
 					}
 				}
 			}

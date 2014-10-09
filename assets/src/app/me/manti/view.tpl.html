@@ -6,24 +6,16 @@
 	    	</section>
 	        <section class="manti-page-header">
 		        <h3>{{ manti.title }}</h3>
-		        <div class="manti-invite">
-		        	<a class="invite-button">Invite Users</a>
-		        </div>
-		        <!-- <div class="board-page-apply">
-		        	<a 
-		        		class="apply-button" 
-		        		title="Apply for this Opportunity" 
-		        		ng-click="opportunityapplyModal()"
-		        	><span class="icon-check"></span></a>
-		        	<a 
-		        		class="qmark-button" 
-		        		title="Help" 
-		        		ng-click="opportunityhelpModal()"
-		        	>?</a>
-		        </div> -->
+		        <ul class="manti-pod-stats">
+                    <li><a ng-click="inDevModal()"><span class="icon-git-branch"></span> {{ manti.branches }}</a></li>
+                    <li><a ng-click="inDevModal()"><span class="icon-cloud-upload"></span> {{ manti.seeds }}</a></li>
+                </ul>
 		    </section>
 		    <section class="manti-page-body">
 		        <p>{{ manti.description }}</p>
+		        <div class="manti-invite">
+		        	<a class="invite-button" ng-click="inDevModal()">Invite Users</a>
+		        </div>
 		        <div class="manti-page-changes">
 		        	<div class="manti-changes-header">
 			        	<h4>Recent Changes</h4>
@@ -56,7 +48,7 @@
 			                        </p>
 			                    </section>
 			                    <section class="pod-body">
-			                    	<p class="manti-change-what">{{ change.type }} <a >{{ change.what }}</p>
+			                    	<p class="manti-change-what">{{ change.type }} <a >{{ change.what }}</a></p>
 			                        <p class="pod-description">{{ change.description }}</p>
 			                    </section>
 			                </div>
@@ -66,6 +58,17 @@
 		        </div>
 		    </section>
 	        <section class="manti-page-footer">
+	        	<div class="manti-class-selection">
+	        		<select>
+	        			<option>Select a class</option>
+	        			<option value="1">Visual</option>
+	        			<option value="1">Systematic</option>
+	        			<option value="1">Group</option>
+	        		</select>
+	        	</div>
+	        	<div class="manti-open">
+                    <a ng-click="inDevModal()">Open in Creator App <span class="icon-arrow-right"></span></a>
+                </div>
 
 			</section>
 	    </div>
