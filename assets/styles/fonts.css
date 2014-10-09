@@ -320,3 +320,6 @@
 .icon-minus:before {
   content: "X";
 }
+.icon-bell:before {
+  content: "W";
+}

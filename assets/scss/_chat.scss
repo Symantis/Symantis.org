@@ -5,15 +5,15 @@ $time: 0.2s;
 	right: 0;
 	top: 0;
 	bottom: 0;
-	width: 200px;
-	background-color: $darkest;
+	width: 16.2%;
+	background-color: lighten($darkest, 5%);
 	z-index: 100;
-	transform: translateX(210px);
-    transform: translate3d(210px, 0, 0);
-
-    -webkit-box-shadow: -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
-	-moz-box-shadow:    -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
-	box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+	transform: translateX(100%);
+    transform: translate3d(100%, 0, 0);
+    
+	/*-webkit-box-shadow: inset 5px 0px 11px 0px rgba(0, 0, 0, 1);
+	-moz-box-shadow:    inset 5px 0px 11px 0px rgba(0, 0, 0, 1);
+	box-shadow:         inset 5px 0px 11px 0px rgba(0, 0, 0, 1);*/
 
 	-webkit-transition: transform $time ease;                  
     -moz-transition: transform $time ease;                 
@@ -22,9 +22,15 @@ $time: 0.2s;
     transition: transform $time ease;
     
 	&.open {
-		transform: translate3d(0, 0, 0);
-		transform: translateX(0);
-	}
+		transform: translate3d(0%, 0, 0);
+		transform: translateX(0%);
 
+		-webkit-box-shadow: -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+		-moz-box-shadow:    -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+		box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+	}
+}
+.chat-container-inner {
+	
 }
 

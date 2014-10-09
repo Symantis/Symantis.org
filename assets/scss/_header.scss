@@ -196,9 +196,9 @@
 					}
 					.top-nav-messages {
 						padding-top: rem-calc(3px);
-						margin-top: rem-calc(3px);
+						margin-top: rem-calc(1px);
 						//padding-right: rem-calc(12px);
-						padding-left: rem-calc(12px);
+						padding-left: rem-calc(10px);
 						//height: rem-calc(19px);
 						@include no-highlight;
 						border-left: rem-calc(1px) $light solid;
@@ -211,7 +211,7 @@
 					.top-nav-settings {
 						padding-top: rem-calc(3px);
 						margin-top: rem-calc(3px);
-						padding-left: rem-calc(10px);
+						padding-left: rem-calc(8px);
 						//padding-right: rem-calc(10px);
 						//height: rem-calc(19px);
 						@include no-highlight;
@@ -219,14 +219,11 @@
 						//border-right: rem-calc(1px) $light solid;
 					}
 					.icon {
-						@include icon(rem-calc(14px),$gray);
+						@include icon(rem-calc(16px),$gray);
 						@include transition(100ms);
 						&:hover {
 							color: $dark;
 						}
-					}
-					.icon-caret-down {
-						//font-size: rem-calc(18px);
 					}
 				}
 				.top-nav-noUser {
