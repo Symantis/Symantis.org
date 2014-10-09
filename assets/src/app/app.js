@@ -7,7 +7,7 @@ angular.module( 'symantis', [
 	'ngIdle',
 	'ngAnimate',
 	'ngSailsBind',
-
+	'ui.utils',
 	//Directives, Templates, Etc...
 	'mm.foundation',
 	'xeditable',

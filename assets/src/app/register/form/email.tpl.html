@@ -9,6 +9,8 @@
 	ng-model="registerData.email"
 	required
 	ng-enter="nextStep(registerForm.email, 'username')"
+	lowercase
+	ui-validate="{unique : 'uniqueEmail($value)'}"
 >
 <div 
 	ng-hide="registerForm.email.$error.required || registerForm.email.$error.email"

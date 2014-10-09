@@ -62,6 +62,7 @@ var jsFilesToInject = [
   'bower_components/angular-input-match/dist/angular-input-match.js',
   'bower_components/TimelineJs/build/js/timeline.js',
   'bower_components/TimelineJs/build/js/storyjs-embed.js',
+  'bower_components/angular-ui-utils/ui-utils.js',
   //'bower_components/jquery/dist/jquery.min.js',
   //'bower_components/foundation/js/foundation.min.js',
 

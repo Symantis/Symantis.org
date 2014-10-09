@@ -1,4 +1,42 @@
 module.exports = {
+	checkEmail: function(req, res){
+		var ret = { unique: false }
+		User.findOne({ email: req.param('email') })
+		.exec(function(err, user){
+			if(err){
+				res.json(ret);
+			}
+			else{
+				if(user){
+					ret.unique = false;
+					res.json(ret);
+				}else{
+					ret.unique = true;
+					res.json(ret);
+				}
+				
+			}
+		});
+	},
+	checkHandle: function(req, res){
+		User.findOne({ handle: req.param('handle') })
+		.exec(function(err, user){
+			var ret = { unique: false }
+			if(err){
+				res.json(ret);
+			}
+			else{
+				if(user){
+					ret.unique = false;
+					res.json(ret);
+				}else{
+					ret.unique = true;
+					res.json(ret);
+				}
+				
+			}
+		});
+	},
 	getLike: function(req, res) {
 		User.find({ handle: { 'contains': req.param('handle') }})
 		.exec(function(err, users){

@@ -10,10 +10,12 @@
 	required
 	ng-shift-tab="prevStep('email')"
 	ng-enter="nextStep(registerForm.handle, 'password')"
+	ui-validate="{unique : 'uniqueHandle($value)', min: '$value.length > 2'}"
 >
 <div
-	ng-hide="registerForm.handle.$error.required"
+	ng-hide="registerForm.$invalid"
 	class="signup-prompt"
 >
-	<p>Press Enter to continue.</P>
+	<p>Press Enter to continue.</p>
+	<p>{{registerForm}}</p>
 </div>
