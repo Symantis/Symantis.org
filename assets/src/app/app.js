@@ -317,6 +317,22 @@ angular.module( 'symantis', [
 			windowClass: 'small'
 		});
 	};
+	$scope.confirmConnectionModal = function () {
+
+		var modalInstance = $symodal.open({
+			templateUrl: 'common/modals/confirmConnectionModal.tpl.html',
+			controller: 'ConfirmConnectionModalCtrl',
+			windowClass: 'small'
+		});
+	};
+	$scope.confirmDisconnectionModal = function () {
+
+		var modalInstance = $symodal.open({
+			templateUrl: 'common/modals/confirmDisconnectionModal.tpl.html',
+			controller: 'ConfirmConnectionModalCtrl',
+			windowClass: 'small'
+		});
+	};
 	$scope.inDevModal = function () {
 
 		var modalInstance = $symodal.open({

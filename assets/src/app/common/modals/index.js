@@ -38,6 +38,28 @@ angular.module( 'symantis.global.modals', [
 	};
 
 })
+.controller( 'ConfirmConnectionModalCtrl', function ConfirmConnectionModalController($scope, $modalInstance){
+
+	$scope.ok = function () {
+		$modalInstance.close();
+	};
+
+	$scope.cancel = function () {
+		$modalInstance.dismiss('cancel');
+	};
+
+})
+.controller( 'ConfirmDisconnectionModalCtrl', function ConfirmDisconnectionModalController($scope, $modalInstance){
+
+	$scope.ok = function () {
+		$modalInstance.close();
+	};
+
+	$scope.cancel = function () {
+		$modalInstance.dismiss('cancel');
+	};
+
+})
 .controller( 'InDevModalCtrl', function InDevModalController($scope, $modalInstance){
 
 	$scope.ok = function () {
