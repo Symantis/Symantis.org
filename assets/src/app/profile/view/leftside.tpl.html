@@ -10,13 +10,13 @@
 <header class="profile-left-options left-header">
     <ul>
         <li class="profile-connections">
-            <a title="View Connection Statistics" dropdown-toggle="#connections-table">
+            <a title="View Connection Statistics" dropdown-toggle="#profile-connections-table">
                 <div class="icon-2way icon"></div>
                 <h3>Connections <span>{{user.totalConnections || 0}}</span></h3> 
             </a>
         </li>
         <li class="profile-connections-tab">
-            <table id="connections-table" class="connections-table">
+            <table id="profile-connections-table" class="connections-table">
                 <tr>
                     <td><a >Incoming Connections</a></td>
                     <td>{{user.totalFromConnections || 0}}</td>
@@ -41,12 +41,6 @@
             <a ui-sref="profile.view.message" title="Message {{ user.firstName }}">
                 <h3>Message</h3>
                 <div class="icon-message icon"></div>
-            </a>
-        </li>
-        <li class="profile-option">
-            <a ui-sref="profile.view.invite" title="Invite {{ user.firstName }} to work with you">
-                <h3>Invite to Project</h3>
-                <div class="icon-plus icon"></div>
             </a>
         </li>
         <li class="profile-option">

@@ -10,13 +10,13 @@
 <header class="profile-left-options left-header">
     <ul>
         <li class="profile-connections">
-            <a title="View Connection Statistics" dropdown-toggle="#connections-table">
+            <a title="View Connection Statistics" dropdown-toggle="#me-connections-table">
                 <div class="icon-2way icon"></div>
                 <h3>Connections <span>{{user.totalConnections || 0}}</span></h3> 
             </a>
         </li>
         <li class="profile-connections-tab">
-            <table id="connections-table" class="connections-table">
+            <table id="me-connections-table" class="connections-table">
                 <tr>
                     <td><a >Incoming Connections</a></td>
                     <td>{{user.totalFromConnections || 0}}</td>

@@ -41,7 +41,4 @@ angular.module( 'symantis.profile.view', [
 
 		});
 	}
-})
-.controller( 'ProfileInviteCtrl', function ProfileInviteController( $scope ) {
-
 });

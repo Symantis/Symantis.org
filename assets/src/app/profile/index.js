@@ -165,15 +165,6 @@ angular.module( 'symantis.profile', [
 				}
 			}
 		})
-		.state('profile.view.invite',{
-			url: '/invite',
-			views: {
-				"profile@profile.view": {
-					controller: 'ProfileInviteCtrl',
-					templateUrl: 'profile/view/invite.tpl.html'
-				}
-			}
-		})
 		
 	;
 })

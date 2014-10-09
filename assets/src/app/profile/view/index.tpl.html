@@ -15,13 +15,13 @@
     <section class="medium-3 large-2 large-offset-1 columns main-left profile-left" >
         <div class="wrapper" ui-view="leftside">
 
-    	<!-- Section for main left header -->
         </div>
     </section>
     <section class="medium-9 large-7 large-offset-3 medium-offset-3 columns main-center profile-center" ui-view="profile">
-        <header class="manti-sub-nav">
-            <ul class="manti-sub-nav-left">
-                <li class="manti-sort"><a dropdown-toggle="#profile-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
+
+        <header class="profile-sub-nav">
+            <ul class="profile-sub-nav-left">
+                <li class="profile-sort"><a dropdown-toggle="#profile-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
             </ul>
             <div class="sub-nav-search">
                 <input 
@@ -31,16 +31,14 @@
                     placeholder="Search" 
                 />
             </div>
-            <div class="manti-sub-nav-right">
+            <div class="profile-sub-nav-right">
+
             </div>
         </header>
         <div class="sort-container" id="profile-sort-menu">
             <ul class="sort-menu">
-                <li><a class="active">All <span class="icon-check icon"></span></a></li>
-                <li><a >Public <span class="icon-check icon"></span></a></li>
-                <li><a >Private <span class="icon-check icon"></span></a></li>
-                <li><a >Forked <span class="icon-check icon"></span></a></li>
-                <li><a >Collections <span class="icon-check icon"></span></a></li>
+                <li><a class="active">Recent <span class="icon-check icon"></span></a></li>
+                <li><a >Popular <span class="icon-check icon"></span></a></li>
             </ul>
         </div>
 
