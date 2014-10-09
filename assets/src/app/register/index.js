@@ -118,7 +118,10 @@ angular.module( 'symantis.register', [
 	$scope.nextStep = function(field, state){
 		console.log(field);
 		if(field.$valid){
+			$scope.registerValid[field] = true;
 			$state.go('register.'+state);
+		}else{
+			$scope.registerValid[field] = false;
 		}
 	}
 	/*
