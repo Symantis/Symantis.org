@@ -1,0 +1,30 @@
+$time: 0.2s;
+
+.chat-container {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 200px;
+	background-color: $darkest;
+	z-index: 100;
+	transform: translateX(210px);
+    transform: translate3d(210px, 0, 0);
+
+    -webkit-box-shadow: -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+	-moz-box-shadow:    -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+	box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+
+	-webkit-transition: transform $time ease;                  
+    -moz-transition: transform $time ease;                 
+    -o-transition: transform $time ease;   
+    -ms-transition: transform $time ease;          
+    transition: transform $time ease;
+    
+	&.open {
+		transform: translate3d(0, 0, 0);
+		transform: translateX(0);
+	}
+
+}
+
