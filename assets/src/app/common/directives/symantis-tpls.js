@@ -208,7 +208,7 @@ angular.module('sy.templates.inputs', [])
     require: '?ngModel',
     restrict: 'A',
     scope: { same: '=' },
-    link: function (scope, elem, attrs, ctrl) {
+    link: function (scope, element, attrs, ctrl) {
         if(!ctrl) { 
             return; 
         }
@@ -381,7 +381,7 @@ angular.module('sy.templates.sitenav', [])
                     }
                     $scope.trytimeout = $timeout(function(){
 						action()
-					}, 1000);
+					}, 10);
                     //var action = e.type == 'mouseover' ? syNav.bottomOpen() : syNav.bottomClose();
                 });
                 $scope.$on('trytimeout', function(event, status){
