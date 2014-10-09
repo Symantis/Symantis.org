@@ -1,3 +1,44 @@
+.search-category-nav {
+	ul {
+		list-style: none;
+		float: left;
+		position: relative;
+		width: 100%;
+		li {
+			padding: rem-calc(8px) 0 rem-calc(8px) 0 !important;
+			margin: 0 !important;
+			line-height: 1;
+			float: left;
+			width: 100%;
+			position: relative;
+			a {
+				padding: 0;
+				margin: 0;
+				@include font-regular(12px);
+				color: darken($light, 10%);
+				@include transition(100ms);
+				line-height: 1.4;
+				float: left;
+				&:hover {
+					color: $dark;
+				}
+				&.active {
+					border-left: 4px $primary-color solid;
+					color: $darkest;
+					padding-left: rem-calc(8px);
+				}
+				span {
+					float: left;
+					font-size: rem-calc(28px);
+					margin-top: -8px;
+					margin-right: 10px;
+					//line-height: 0.4;
+				}
+			}
+		}
+	}
+}
+
 .search-form {
 	&::-webkit-input-placeholder { @include font-regular(rem-calc(48px)); color: $gray; }
 	&:-moz-placeholder { @include font-regular(rem-calc(48px)); color: $gray; opacity: 1; }
