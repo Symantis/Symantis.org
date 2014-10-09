@@ -7,6 +7,11 @@
 
 module.exports = {
 	attributes: {
+		/*
+		connection: {
+			model: 'user'
+		},
+		*/
 		to: {
 			model: 'user'
 		},

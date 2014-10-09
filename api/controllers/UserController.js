@@ -111,7 +111,7 @@ module.exports = {
 				 	} 
 
 					// Queue up a record to be inserted into the join table
-					fromUser.connections.add(connect);
+					//fromUser.connections.add(connect);
 					fromUser.toConnections.add(connection.id);
 					fromUser.save(console.log, function(err) {
 				  		if(err){
@@ -127,8 +127,8 @@ module.exports = {
 					  	}
 					});
 					*/
-					User.publishAdd(id, 'connections', connect);
-					User.publishUpdate(id, fromUser);
+					User.publishAdd(id, 'toConnections', connect);
+					//User.publishUpdate(id, fromUser);
 				});
 
 				User.findOne(connect)
@@ -138,7 +138,7 @@ module.exports = {
 
 					} 
 					// Queue up a record to be inserted into the join table
-					toUser.connections.add(id);
+					//toUser.connections.add(id);
 					toUser.fromConnections.add(connection.id);
 					toUser.save(console.log,function(err) {
 					  	if(err){
@@ -154,8 +154,8 @@ module.exports = {
 					  	}
 					});
 					*/
-					User.publishAdd(connect, 'connections', id);
-					User.publishUpdate(id, toUser);
+					User.publishAdd(connect, 'fromConnections', id);
+					//User.publishUpdate(id, toUser);
 				});
 			}
 

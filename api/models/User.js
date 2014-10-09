@@ -58,11 +58,12 @@ module.exports = {
 			collection: 'message',
 			via: 'user'
 		},
-		
+		/*
 		connections: {
-			collection: 'user',
-			via: 'connections'
+			collection: 'connection',
+			via: 'connection'
 		},
+		*/
 		toConnections: {
 			collection: 'connection',
 			via: 'to'
@@ -93,7 +94,7 @@ module.exports = {
 
 	getAll: function() {
 		return User.find()
-		.populate('connections')
+		//.populate('connections')
 		.populate('toConnections')
 		.populate('fromConnections')
 		.then(function (models) {
@@ -103,7 +104,7 @@ module.exports = {
 
 	getOne: function(id) {
 		return User.findOne(id)
-		.populate('connections')
+		//.populate('connections')
 		.populate('toConnections')
 		.populate('fromConnections')
 		.then(function (model) {
@@ -116,7 +117,7 @@ module.exports = {
 	},
 	getByHandle: function(handle) {
 		return User.findOne({ handle: handle })
-		.populate('connections')
+		//.populate('connections')
 		.populate('toConnections')
 		.populate('fromConnections')
 		.then(function(model){
