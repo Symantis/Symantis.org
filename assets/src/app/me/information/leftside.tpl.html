@@ -1,11 +1,41 @@
-<!-- Section for main left header -->
-<header class="left-header">
-    <h3><a >Title</a></h3>
-</header>
-<div class="left-content">
-    <div class="connections-online-nav">
-        <ul>
-            
-        </ul>
+<header class="profile-left-user left-header">
+    <h3>
+        {{ currentUser.firstName + ' ' + currentUser.lastName }}
+    </h3>
+    <small>{{ currentUser.at }}{{ currentUser.handle }}</small>
+    <div class="profile-pic">
+        <div class="profile-pic-inner online generate-image" signature="{{ currentUser.signature }}"></div>
     </div>
-</div>
+</header>
+<header class="profile-left-options left-header">
+    <ul>
+        <li class="profile-connections">
+            <a title="View Connection Statistics" dropdown-toggle="#connections-table">
+                <div class="icon-2way icon"></div>
+                <h3>Connections <span>{{user.totalConnections || 0}}</span></h3> 
+            </a>
+        </li>
+        <li class="profile-connections-tab">
+            <table id="connections-table" class="connections-table">
+                <tr>
+                    <td><a >Incoming Connections</a></td>
+                    <td>{{user.totalFromConnections || 0}}</td>
+                </tr>
+                <tr>
+                    <td><a >Outgoing Connections</a></td>
+                    <td>{{user.totalToConnections || 0}}</td>
+                </tr>
+                <tr>
+                    <td><a >Two-way Connections</a></td>
+                    <td>{{ user.reciprocal || 0}}</td>
+                </tr>
+            </table>
+        </li>
+        <li class="profile-option">
+            <a ui-sref="me.settings">
+                <div class="icon-settings icon"></div>
+                <h3>Settings</h3> 
+            </a>
+        </li>
+    </ul>
+</header>
