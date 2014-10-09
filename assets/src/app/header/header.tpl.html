@@ -22,8 +22,6 @@
 						<li class="top-nav-name">
 							<p class="user-{{ currentUser.status }}">
 								<span class="status"></span>
-								<!-- <span>Hi,</span> -->
-								<!-- <a ui-sref="me">{{ currentUser.firstName }}</a> -->
 								<a dropdown-toggle="#settings-dropdown">
 									{{ currentUser.firstName }}<span class="icon-chevron-down name-icon"></span>
 								</a>
@@ -31,9 +29,11 @@
 							</p>
 						</li>
 						<li class="top-nav-messages" >
-							<a ng-click="chatToggle()">
-								<div class="icon-bell icon" ng-class="{active: chatOpen}"></div>
-							</a>
+							<a ng-click="notificationsToggle()">
+								<!-- <div class="icon-bell icon" ng-class="{active: notificationsOpen}"></div> -->
+								<div class="icon-bell icon" ng-class="{active: !notificationsOpen}"></div>
+								<div class="icon-hide icon" ng-class="{active: notificationsOpen}"></div>
+							</a>		
 						</li>
 					</ul>
 					<p class="top-nav-noUser" ng-show="!currentUser">

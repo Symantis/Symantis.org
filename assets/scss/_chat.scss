@@ -1,15 +1,20 @@
 $time: 0.2s;
 
-.chat-container {
+.notifications-container {
 	position: fixed;
 	right: 0;
 	top: 0;
 	bottom: 0;
 	width: 16.2%;
 	background-color: lighten($darkest, 5%);
+	//background-color: rgba(18,20,15,0.9);
 	z-index: 100;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	transform: translateX(100%);
     transform: translate3d(100%, 0, 0);
+
+    padding-left: rem-calc(10px);
     
 	/*-webkit-box-shadow: inset 5px 0px 11px 0px rgba(0, 0, 0, 1);
 	-moz-box-shadow:    inset 5px 0px 11px 0px rgba(0, 0, 0, 1);
@@ -30,7 +35,15 @@ $time: 0.2s;
 		box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
 	}
 }
-.chat-container-inner {
-	
+.notifications-container-inner {
+	width: 100%;
+	position: relative;
 }
+.notifications-header {
+	width: 100%;
+	height: rem-calc(56px);
+	border-bottom: 1px $gray solid;
+	position: relative;
+	display: block;
 
+}

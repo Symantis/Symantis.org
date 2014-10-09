@@ -158,9 +158,9 @@ angular.module( 'symantis', [
 
 	$rootScope.activity = aActivity;
 
-	$rootScope.chatOpen = false;
-	$rootScope.chatToggle = function() {
-		$rootScope.chatOpen = !$rootScope.chatOpen;
+	$rootScope.notificationsOpen = false;
+	$rootScope.notificationsToggle = function() {
+		$rootScope.notificationsOpen = !$rootScope.notificationsOpen;
 	}
 
 })

@@ -15,7 +15,7 @@
 	
 	padding-top: 0;
 	padding-bottom: 0;
-	height: 50px;
+	height: rem-calc(55px);
 	z-index: 99;
 	margin: 0px;
 	position: fixed;
@@ -107,6 +107,7 @@
 				text-align: right;
 				@include no-highlight;
 				.top-nav-userOnline {
+					position: relative;
 					margin: 0;
 					float: right;
 					max-width: rem-calc(200px);
@@ -116,7 +117,7 @@
 						float: left;
 					}
 					.top-nav-name {
-						padding-right: rem-calc(10px);
+						padding-right: rem-calc(14px);
 						padding-top: rem-calc(2px);
 						max-width: rem-calc(100px);
 						p {
@@ -196,17 +197,24 @@
 					}
 					.top-nav-messages {
 						padding-top: rem-calc(3px);
-						margin-top: rem-calc(1px);
+						margin-top: rem-calc(3px);
+						margin-bottom: rem-calc(-4px);
 						//padding-right: rem-calc(12px);
 						padding-left: rem-calc(10px);
-						//height: rem-calc(19px);
+						position: relative;
+						height: rem-calc(16px);
+						width: rem-calc(30px);
 						@include no-highlight;
 						border-left: rem-calc(1px) $light solid;
 						.icon {
-							&.active {
+							position: absolute;
+							right: -1px;
+							top: -1px;
+							/*&.active {
 								color: $dark;
-							}
+							}*/
 						}
+						
 					}
 					.top-nav-settings {
 						padding-top: rem-calc(3px);
@@ -219,10 +227,14 @@
 						//border-right: rem-calc(1px) $light solid;
 					}
 					.icon {
-						@include icon(rem-calc(16px),$gray);
-						@include transition(100ms);
-						&:hover {
-							color: $dark;
+						@include icon(rem-calc(18px),$gray);
+						@include transition(300ms);
+						opacity: 0;	
+						&.active {
+							opacity: 1;
+							&:hover {
+								color: darken($gray, 10%);
+							}
 						}
 					}
 				}
@@ -353,7 +365,7 @@
 			}
 			.settings-dropdown-container:after, .settings-dropdown-container:before {
 				bottom: 100%;
-				left: 105px;
+				left: 102px;
 				border: solid transparent;
 				content: " ";
 				height: 0;
