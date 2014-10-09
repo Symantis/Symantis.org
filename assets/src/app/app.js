@@ -301,15 +301,6 @@ angular.module( 'symantis', [
 		});
 	};
 
-	$scope.searchModal = function () {
-
-		var modalInstance = $symodal.open({
-			templateUrl: 'common/modals/searchModal.tpl.html',
-			controller: 'SearchModalCtrl',
-			windowClass: 'full-screen'
-		});
-	};
-
 	$scope.opportunityhelpModal = function () {
 
 		var modalInstance = $symodal.open({
@@ -334,7 +325,6 @@ angular.module( 'symantis', [
 			windowClass: 'small'
 		});
 	};
-
 
 });
 

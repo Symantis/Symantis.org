@@ -48,15 +48,4 @@ angular.module( 'symantis.global.modals', [
 		$modalInstance.dismiss('cancel');
 	};
 
-})
-.controller( 'SearchModalCtrl', function SearchModalController($scope, $modalInstance){
-
-	$scope.ok = function () {
-		$modalInstance.close();
-	};
-
-	$scope.cancel = function () {
-		$modalInstance.dismiss('cancel');
-	};
-
 });
