@@ -40,10 +40,10 @@
 }
 
 .search-form {
-	&::-webkit-input-placeholder { @include font-regular(rem-calc(48px)); color: $gray; }
-	&:-moz-placeholder { @include font-regular(rem-calc(48px)); color: $gray; opacity: 1; }
-	&::-moz-placeholder { @include font-regular(rem-calc(48px)); color: $gray; opacity: 1; }
-	&:-ms-input-placeholder { @include font-regular(rem-calc(48px)); color: $gray; }
+	&::-webkit-input-placeholder { @include font-bitter2(rem-calc(48px)); color: $gray; }
+	&:-moz-placeholder { @include font-bitter2(rem-calc(48px)); color: $gray; opacity: 1; }
+	&::-moz-placeholder { @include font-bitter2(rem-calc(48px)); color: $gray; opacity: 1; }
+	&:-ms-input-placeholder { @include font-bitter2(rem-calc(48px)); color: $gray; }
 	.search-field {
 		background: rgba(255,255,255,0.0);
 		border: none;
@@ -53,7 +53,7 @@
 		padding: 0;
 		margin: 0;
 		height: rem-calc(65px);
-		@include font-regular(rem-calc(48px));
+		@include font-bitter2(rem-calc(48px));
 		&:focus {
 			background: rgba(255,255,255,0.0);
 			outline: 0;
@@ -70,7 +70,7 @@
 	}
 }
 .exit-search {
-	position: fixed;
+	position: absolute;
 	top: 10px;
 	right: 10px;
 	padding: rem-calc(10px);
