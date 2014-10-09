@@ -121,33 +121,6 @@ angular.module( 'symantis.register', [
 			$state.go('register.'+state);
 		}
 	}
-	$scope.uniqueEmail = function(email){
-		//console.log(email);
-		if(email.length > 2){
-			
-			return $http.get('/api/user/email/match/'+email)
-			.then(function(model){
-				console.log(model.data.unique);
-				return model.data.unique;
-			});
-		}else{	
-			return true;
-		}
-	}
-	$scope.uniqueHandle = function(handle){
-		//console.log(handle);
-		if(handle.length > 2){
-			var deferred = $q.defer();
-			$http.get('/api/user/handle/match/'+handle).then(function(model){
-				console.log(model.data.unique);
-				deferred.resolve(model.data.unique);
-			});
-			return deferred.promise;
-
-		}else{
-			return true;
-		}
-	}
 	/*
 	$scope.submit = function(){
 

@@ -1,13 +1,13 @@
 (function(){
 angular.module( 'symantis', [
 	'ui.router',
+	'ui.utils',
 	'ngSails',
 	'angularMoment',
 	'lodash',
 	'ngIdle',
 	'ngAnimate',
 	'ngSailsBind',
-	'ui.utils',
 	//Directives, Templates, Etc...
 	'mm.foundation',
 	'xeditable',

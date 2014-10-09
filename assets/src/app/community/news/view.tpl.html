@@ -84,7 +84,7 @@
 		
 		<div 
 			class="comment" 
-			ng-repeat="comment in article.comments"
+			ng-repeat="comment in article.comments track by $index"
 		>
 			<div class="comment-left">
 				<div 
@@ -125,7 +125,7 @@
 			<div class="replies" ng-init="replies.open = false" ng-show="replies.open">
 				<div 
 					class="reply" 
-					ng-repeat="reply in comment.replies"
+					ng-repeat="reply in comment.replies track by $index"
 				>
 					<div class="reply-push">
 						<div class="icon-indent icon">

@@ -48,6 +48,8 @@
 
 		</div>
 	</div>
+	
+	<div ng-controller="ChatCtrl" ng-include src="'chat/index.tpl.html'"></div>
 	<ul class="to-do" ng-class="{show: toDo.length > 0 }">
 		<li class="to-do-title"><h4>To Do for this Section</h4></li>
 		<li ng-repeat="to in toDo">{{ to }}</li>

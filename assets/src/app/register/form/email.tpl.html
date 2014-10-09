@@ -10,11 +10,11 @@
 	required
 	ng-enter="nextStep(registerForm.email, 'username')"
 	lowercase
-	ui-validate="{unique : 'uniqueEmail($value)'}"
+	ng-unique="email"
 >
 <div 
-	ng-hide="registerForm.email.$error.required || registerForm.email.$error.email"
 	class="signup-prompt"
 >
-	<p>Press Enter to continue.</P>
+	<p ng-hide="registerForm.$invalid">Press Enter to continue.</P>
+	<p ng-show="registerForm.email.$error.unique">Email already in use. <a ui-sref="login">Login Here</a></p>
 </div>

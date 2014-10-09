@@ -38,7 +38,6 @@ angular.module( 'services.cache', ['lodash'])
 				console.log("returning cached query...");
 				var deferred = $q.defer();
 				var query = this.getCachedQuery(queries, id);
-				query.responses = self.resolveQueryResponsesCache(query);
 				deferred.resolve(query);
 				return deferred.promise;
 
