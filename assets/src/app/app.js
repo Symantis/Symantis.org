@@ -2701,83 +2701,6 @@ var aMantis = [
 	{
 		id: 1,
 		title: 'Symantis syNav Directive',
-		class: 'visual',
-		description: 'Top bar navigation with built in selected classes.',
-		clean: function(){
-			return this.title.replace(/[\s]/g, '-');
-		},
-		branches: '23',
-		seeds: '2.4k',
-		author:{
-			id: 1,
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "theman",
-			at: "@",
-			signature: Math.random()
-		},
-		date: new Date(),
-		img:{
-			name: 'placeholder',
-			src: 'http://placehold.it/350x150',
-			caption: 'This is an example image.'
-		},
-		includes:[
-			{
-				title: 'syQuery',
-				type: 'Built using'
-			},
-			{
-				title: 'Foundation Directive',
-				type: 'Incorporates'
-			}
-		]
-	},
-	{
-		id: 2,
-		title: 'Directive for TS Furniture',
-		class: 'visual',
-		description: 'eCommerce product managment directive for masonry.',
-		clean: function(){
-			return this.title.replace(/[\s]/g, '-');
-		},
-		branches: '72',
-		seeds: '162',
-		author:{
-			id: 1,
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "theman",
-			at: "@",
-			signature: Math.random()
-		},
-		date: new Date(),
-		includes: []
-	},
-	{
-		id: 3,
-		title: 'Symantis syNav Directive',
-		class: 'systematic',
-		description: 'Top bar navigation with built in selected classes.',
-		clean: function(){
-			return this.title.replace(/[\s]/g, '-');
-		},
-		branches: '23',
-		seeds: '2.4k',
-		author:{
-			id: 1,
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "theman",
-			at: "@",
-			signature: Math.random()
-		},
-		date: new Date(),
-		includes: []
-	},
-	{
-		id: 4,
-		title: 'Symantis syNav Directive',
 		class: 'group',
 		description: 'Top bar navigation with built in selected classes.',
 		clean: function(){
@@ -2789,7 +2712,128 @@ var aMantis = [
 			id: 1,
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		img:{
+			name: 'placeholder',
+			src: 'http://placehold.it/350x150',
+			caption: 'This is a placeholder image.'
+		},
+		includes:[
+			{
+				title: 'Foundation Directive',
+				type: 'Incorporates'
+			},
+			{
+				title: 'Angular Masonry',
+				type: 'Incorporates'
+			}
+		],
+		changes: [
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Changed the animation speed.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Foundation Directive',
+				description: 'Needed it for dropdowns.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Removed',
+				what: 'Un-used variables',
+				description: '',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Implemented tool tips.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Custom Directive',
+				description: 'Body push and blur.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Cached User interaction',
+				description: 'Added Mouse-over effects.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			}
+		]
+	},
+	{
+		id: 2,
+		title: 'Full screen image gallery',
+		class: 'visual',
+		description: 'Thumbnail to full screen image gallery, swipe capable and responsive.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		branches: '4',
+		seeds: '873',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
 			at: "@",
 			signature: Math.random()
 		},
@@ -2799,23 +2843,333 @@ var aMantis = [
 			src: 'http://placehold.it/350x150',
 			caption: 'This is an example image.'
 		},
-		includes: []
+		includes: [
+			{
+				title: 'Foundation',
+				type: 'Built using'
+			}
+		],
+		changes: [
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Changed the animation speed.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Foundation Directive',
+				description: 'Needed it for dropdowns.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Removed',
+				what: 'Un-used variables',
+				description: '',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Implemented tool tips.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Custom Directive',
+				description: 'Body push and blur.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Cached User interaction',
+				description: 'Added Mouse-over effects.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			}
+		]
+	},
+	{
+		id: 3,
+		title: 'Directive for TS Furniture',
+		class: 'systematic',
+		description: 'eCommerce product managment directive for masonry.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		branches: '72',
+		seeds: '162',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		changes: [
+			{
+
+			}
+		],
+		includes: [],
+		changes: [
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Changed the animation speed.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Foundation Directive',
+				description: 'Needed it for dropdowns.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Removed',
+				what: 'Un-used variables',
+				description: '',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Implemented tool tips.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Custom Directive',
+				description: 'Body push and blur.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Cached User interaction',
+				description: 'Added Mouse-over effects.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			}
+		]
+	},
+	{
+		id: 4,
+		title: 'User Signup model',
+		class: 'systematic',
+		description: 'User signup model with Email, Username, Password, Full name and authentication.',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		branches: '4',
+		seeds: '64',
+		author:{
+			id: 1,
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			signature: Math.random()
+		},
+		date: new Date(),
+		includes: [],
+		changes: [
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Changed the animation speed.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Foundation Directive',
+				description: 'Needed it for dropdowns.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Removed',
+				what: 'Un-used variables',
+				description: '',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Implemented tool tips.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Custom Directive',
+				description: '',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Cached User interaction',
+				description: 'Added Mouse-over effects.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			}
+		]
 	},
 	{
 		id: 5,
-		title: 'Symantis syNav Directive',
-		class: 'visual',
-		description: 'Top bar navigation with built in selected classes.',
+		title: 'Left bar Scroll Nav',
+		class: 'group',
+		description: 'Side navigation with auto update ability on scroll.',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
 		},
-		branches: '23',
-		seeds: '2.4k',
+		branches: '3',
+		seeds: '211',
 		author:{
 			id: 1,
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			signature: Math.random()
 		},
@@ -2825,35 +3179,203 @@ var aMantis = [
 			src: 'http://placehold.it/350x150',
 			caption: 'This is an example image.'
 		},
-		includes: []
+		includes: [],
+		changes: [
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Changed the animation speed.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Foundation Directive',
+				description: 'Needed it for dropdowns.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Removed',
+				what: 'Un-used variables',
+				description: '',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Implemented tool tips.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Custom Directive',
+				description: 'Body push and blur.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Cached User interaction',
+				description: 'Added Mouse-over effects.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			}
+		]
 	},
 	{
 		id: 6,
-		title: 'Symantis syNav Directive',
-		class: 'systematic',
-		description: 'Top bar navigation with built in selected classes.',
+		title: 'Real-time chat',
+		class: 'visual',
+		description: 'Messaging model aimed for real-time social networks. Front-end only.',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
 		},
 		branches: '23',
-		seeds: '2.4k',
+		seeds: '18k',
 		author:{
 			id: 1,
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
-			handle: "theman",
+			handle: "hamish",
 			at: "@",
 			signature: Math.random()
 		},
 		date: new Date(),
 		includes:[
 			{
-				title: 'syQuery',
+				title: 'syScribe',
 				type: 'Built using'
+			}
+		],
+		changes: [
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Changed the animation speed.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
 			},
 			{
-				title: 'Foundation Directive',
-				type: 'Incorporates'
+				type: 'Added',
+				what: 'Foundation Directive',
+				description: 'Needed it for dropdowns.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Removed',
+				what: 'Un-used variables',
+				date: new Date(),
+				description: '',
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Front-end',
+				description: 'Implemented tool tips.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Added',
+				what: 'Custom Directive',
+				description: 'Body push and blur.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Scott",
+					lastName:  "Wyatt",
+					handle: "scott",
+					at: "@",
+					signature: Math.random()
+				},
+			},
+			{
+				type: 'Edited',
+				what: 'Cached User interaction',
+				description: 'Added Mouse-over effects.',
+				date: new Date(),
+				author:{
+					id: 1,
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
 			}
 		]
 	}

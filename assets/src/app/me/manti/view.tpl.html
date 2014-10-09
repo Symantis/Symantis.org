@@ -24,7 +24,46 @@
 		    </section>
 		    <section class="manti-page-body">
 		        <p>{{ manti.description }}</p>
-		        <a >test link</a>
+		        <div class="manti-page-changes">
+		        	<div class="manti-changes-header">
+			        	<h4>Recent Changes</h4>
+			        </div>
+
+			        <div 
+			        	masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile", "gutter": ".gutter-sizer" }'
+			        	class="board-container"
+			        	ui-view="mantiChanges" 
+            		>
+			            <div class="gutter-sizer"></div>
+			            <div 
+			                masonry-tile 
+			                ng-repeat="change in manti.changes" 
+			                class="animate-repeat tile board-pod-wrap"
+			                ng-if="$index < 10"
+			            >
+			                <div class="board-pod">
+			                    <section class="pod-header">
+			                        <div 
+			                            class="pod-user-pic generate-image" 
+			                            signature="{{ change.author.signature }}"
+			                        >
+			                        </div>
+			                        <p>
+			                            <a ui-sref="profile.view({ handle: change.author.handle })">
+			                            	{{change.author.firstName }} {{change.author.lastName }}
+			                            </a><br />
+			                            <span>{{ change.date | date }}</span>
+			                        </p>
+			                    </section>
+			                    <section class="pod-body">
+			                    	<p class="manti-change-what">{{ change.type }} <a >{{ change.what }}</p>
+			                        <p class="pod-description">{{ change.description }}</p>
+			                    </section>
+			                </div>
+			            </div>
+			        </div>
+
+		        </div>
 		    </section>
 	        <section class="manti-page-footer">
 

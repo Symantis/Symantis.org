@@ -126,6 +126,22 @@
 							padding: 0;
 							color: $primary-color;
 							font-size: rem-calc(12px);
+							&.user-inactive {
+								a {
+									color: $sy-blue;
+								}
+								.status:before {
+									background-color: $sy-blue;
+								}
+							}
+							&.user-offline {
+								a {
+									color: $sy-red;
+								}
+								.status:before {
+									background-color: $sy-red;
+								}
+							}
 						}
 						a {
 							color: $primary-color;
@@ -138,7 +154,7 @@
 							display:inline;
 						}
 						span {
-							color: $dark;
+							//color: $dark;
 						}
 						/*.header-user-pic {
 							width: rem-calc(20px);
@@ -155,6 +171,13 @@
 							//margin-right: rem-calc(6px);
 							z-index: 98;
 						}*/
+						.name-icon {
+							//@include icon(rem-calc(11px),$primary-color);
+							font-size: rem-calc(11px);
+							position: relative;
+							bottom: -.1rem;
+							padding-left: rem-calc(5px);
+						}
 						.status{
 							&:before{
 								content: "";
@@ -167,30 +190,27 @@
 								border-radius: 50%;
 								//z-index: 99;
 							}
-							&.user-inactive:before{
-								background-color: lighten($primary-color, 35%);
-							}
-							&.user-offline:before{
-								background-color: red;
-							}
 						} 
+						
 					}
 					.top-nav-messages {
 						padding-top: rem-calc(3px);
 						margin-top: rem-calc(3px);
-						padding-right: rem-calc(12px);
-						padding-left: rem-calc(8px);
+						//padding-right: rem-calc(12px);
+						padding-left: rem-calc(12px);
 						//height: rem-calc(19px);
 						@include no-highlight;
-						//border-left: rem-calc(1px) $light solid;
+						border-left: rem-calc(1px) $light solid;
 					}
 					.top-nav-settings {
 						padding-top: rem-calc(3px);
 						margin-top: rem-calc(3px);
 						padding-left: rem-calc(10px);
+						//padding-right: rem-calc(10px);
 						//height: rem-calc(19px);
 						@include no-highlight;
 						border-left: rem-calc(1px) $light solid;
+						//border-right: rem-calc(1px) $light solid;
 					}
 					.icon {
 						@include icon(rem-calc(14px),$gray);
@@ -241,9 +261,9 @@
 				z-index: 999;
 				//overflow: hidden;
 				top: 55px !important;
-				right: -6px !important;
+				right: -1px !important;
 				left: auto !important;
-				width: 154px;
+				width: 150px;
 				background-color: white;
 				border-bottom-right-radius: 4px;
 				border-bottom-left-radius: 4px;
@@ -272,7 +292,7 @@
 							padding-bottom: 3px;
 							padding-left: 18px;
 							padding-right: 14px;
-							width: 152px;
+							width: 148px;
 							float: left;
 							margin-left: -15px;
 							margin-right: -15px;
@@ -330,7 +350,7 @@
 			}
 			.settings-dropdown-container:after, .settings-dropdown-container:before {
 				bottom: 100%;
-				left: 140px;
+				left: 105px;
 				border: solid transparent;
 				content: " ";
 				height: 0;
@@ -341,14 +361,14 @@
 			.settings-dropdown-container:after {
 				border-color: rgba(255, 255, 255, 0);
 				border-bottom-color: white;
-				border-width: 9px;
-				margin-left: -9px;
+				border-width: 8px;
+				margin-left: -8px;
 			}
 			.settings-dropdown-container:before {
 				border-color: rgba(46, 48, 44, 0);
 				border-bottom-color: $dark;
-				border-width: 10px;
-				margin-left: -10px;
+				border-width: 9px;
+				margin-left: -9px;
 			}
 		}
 		.top-nav-rule-inner {

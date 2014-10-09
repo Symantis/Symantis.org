@@ -3,7 +3,7 @@ angular.module( 'symantis.me.manti', [
 
 .controller( 'MantiCtrl', function MantiController( $scope, titleService ) {
 	titleService.setTitle('My Manti');
-	$scope.$parent.toDo = [];
+	$scope.$parent.toDo = ['Hook up left classes', 'Add new class modal', 'Create new modal', 'Open in CA modal'];
 	
 })
 .controller( 'MantiViewCtrl', function MantiViewController( $scope, titleService, $state, $stateParams  ) {
@@ -15,6 +15,7 @@ angular.module( 'symantis.me.manti', [
 	}
 
 	titleService.setTitle('Manti: ' + $scope.manti.title);
+
 	$scope.$parent.toDo = [];
 	
 })

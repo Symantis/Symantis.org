@@ -20,27 +20,19 @@
 				<section class="top-nav-right medium-3 large-4 columns">
 					<ul class="top-nav-userOnline" ng-show="currentUser">
 						<li class="top-nav-name">
-							<p>
-								<span class="status user-{{ currentUser.status }}"></span>
+							<p class="user-{{ currentUser.status }}">
+								<span class="status"></span>
 								<!-- <span>Hi,</span> -->
-								<a ui-sref="me">{{ currentUser.firstName }}</a>
+								<!-- <a ui-sref="me">{{ currentUser.firstName }}</a> -->
+								<a dropdown-toggle="#settings-dropdown">
+									{{ currentUser.firstName }}<span class="icon-chevron-down name-icon"></span>
+								</a>
 								<!-- <div class="header-user-pic generate-image" signature="{{ currentUser.signature }}"></div> -->
 							</p>
 						</li>
 						<li class="top-nav-messages" >
-								<!-- tooltip-placement="bottom" 
-								tooltip="Messages" 
-								tooltip-animation="false" -->
 							<a >
 								<div class="icon-talk-chat icon"></div>
-							</a>
-						</li>
-						<li class="top-nav-settings">
-								<!-- tooltip-placement="bottom" 
-								tooltip="Settings" 
-								tooltip-animation="false" -->
-							<a dropdown-toggle="#settings-dropdown">
-								<div class="icon-chevron-down icon"></div>
 							</a>
 						</li>
 					</ul>

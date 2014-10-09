@@ -244,15 +244,15 @@
 .manti-pod {
 	position: relative;
 	border: 2px $dark solid;
-	border-radius: 3px;
+	//border-radius: 3px;
 	background-color: white;
 	overflow: hidden;
-	/*-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);*/
-	-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	/*-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.75);
-	box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);*/
 	.manti-pod-header {
 		height: 50px;
 		width: 100%;
@@ -471,7 +471,6 @@
 		width: 100%;
 		.manti-page-header {
 			width: 100%;
-			float: left;
 			position: relative;
 			padding-bottom: rem-calc(20px);
 			h3 {
@@ -501,12 +500,12 @@
 		}
 		.manti-page-body {
 			width: 100%;
-			float: left;
 			position: relative;
 			padding-top: rem-calc(20px);
 			border-top: rem-calc(1px) $light solid;
 			padding-bottom: rem-calc(20px);
 			p {
+				padding-bottom: rem-calc(20px);
 				@inlude font-regular(rem-calc(12px));
 				line-height: rem-calc(18px);
 				a {
@@ -514,6 +513,42 @@
 					color: $gray;
 					&:hover {
 						color: $dark;
+					}
+				}
+			}
+			.manti-page-changes {
+				width: 100%;
+				position: relative;
+				.manti-changes-header {
+					width: 100%;
+					display: block;
+					margin-bottom: rem-calc(20px);
+					h4 {
+						@include font-semi(rem-calc(18px));
+						padding-bottom: rem-calc(20px);
+						border-bottom: 1px $light solid;
+						margin: 0;
+						width: 40%;
+					}
+				}
+				.board-pod {
+					border-radius: 0;
+					box-shadow: none;
+					p {
+						padding-bottom: 0;
+					}
+					a {
+						text-decoration: none;
+					}
+					.pod-header {
+						padding-bottom: rem-calc(15px);
+					}
+					.manti-change-what {
+						@include font-semi(rem-calc(14px));
+						padding-bottom: rem-calc(8px);
+					}
+					.pod-body {
+						padding-bottom: rem-calc(10px);
 					}
 				}
 			}

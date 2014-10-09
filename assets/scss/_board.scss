@@ -160,25 +160,11 @@
 
 .board-center {
 	position: relative;
-	//display: block;
-	//width: 100%;
-	//text-align: center;
 }
 .board-container {
-	//list-style: none;
-	//margin: 0;
-	//padding: 0;
-	//position: relative;
-	//float: left;
-	//width: auto;
-	//height: auto;
-	//margin: 0 auto;
-	//display: inline-block;
-	//margin-top: 30px !important;
 	margin-right:-14px;
 }
 .gutter-sizer{
-	//width:3%;
 	width:0px;
 }
 .board-pod-wrap{
@@ -204,13 +190,13 @@
 	padding: 15px 15px 5px 15px;
 	margin-right: 20px;
 	border: rem-calc(1px) $gray solid;
-	border-radius: 4px;
-	/*-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	border-radius: rem-calc(2px);
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);*/
-	-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	/*-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.75);
-	box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);*/
 	.pod-header {
 		//float: left;
 		width: 100%;
