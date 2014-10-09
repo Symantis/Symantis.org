@@ -31,8 +31,17 @@
                     placeholder="Search" 
                 />
             </div>
-            <div class="profile-sub-nav-right">
-
+            <div class="profile-sub-nav-right" ng-init="isConnected = false">
+                <a 
+                    class="connect-button" 
+                    title="Add Connection" 
+                    ng-click="isConnected = !isConnected"
+                    ng-class="{active: !isConnected}"
+                >
+                    <span ng-show="!isConnected" class="icon-plus-1"></span>
+                    <span ng-show="isConnected" class="icon-minus-3"></span>
+                </a>
+                <a class="message-button" ng-class="{active: isConnected}"><span class="icon-message"></span></a>
             </div>
         </header>
         <div class="sort-container" id="profile-sort-menu">

@@ -242,9 +242,6 @@
 .icon-arrow-circle-right:before {
   content: "C";
 }
-.icon-minus:before {
-  content: "D";
-}
 .icon-1way-1:before {
   content: "E";
 }
@@ -293,15 +290,6 @@
 .icon-close-circle-outline:before {
   content: "U";
 }
-.icon-minus-circle-2:before {
-  content: "V";
-}
-.icon-minus-circle-outline:before {
-  content: "W";
-}
-.icon-caret-down:before {
-  content: "X";
-}
 .icon-talk-chat:before {
   content: "Y";
 }
@@ -310,12 +298,6 @@
 }
 .icon-question-circle-outline:before {
   content: "I";
-}
-.icon-plus-circle-outline:before {
-  content: "Z";
-}
-.icon-plus-outline:before {
-  content: "0";
 }
 .icon-arrow-right:before {
   content: "1";
@@ -328,4 +310,13 @@
 }
 .icon-chevron-down:before {
   content: "4";
+}
+.icon-plus-1:before {
+  content: "D";
+}
+.icon-minus-3:before {
+  content: "V";
+}
+.icon-minus:before {
+  content: "X";
 }

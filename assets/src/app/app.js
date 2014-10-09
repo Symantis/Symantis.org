@@ -158,6 +158,8 @@ angular.module( 'symantis', [
 
 	$rootScope.activity = aActivity;
 
+	$rootScope.chatOpen = false;
+
 })
 
 .run(['$rootScope', function($root) {

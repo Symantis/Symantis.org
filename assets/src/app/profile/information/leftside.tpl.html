@@ -1,8 +1,5 @@
 <header class="profile-left-user left-header">
-    <h3>
-        {{ user.firstName || user.handle}} {{ user.lastName }}
-    </h3>
-    <small>{{ user.at }}{{ user.handle }}</small>
+    <h3>{{ user.at }}{{ user.handle }}</h3>
     <div class="profile-pic">
         <div class="profile-pic-inner online generate-image" signature="{{ user.signature }}"></div>
     </div>
@@ -38,21 +35,15 @@
             </a>
         </li>
         <li class="profile-option">
-            <a ui-sref="profile.view.message" title="Message {{ user.firstName }}">
-                <h3>Message</h3>
-                <div class="icon-message icon"></div>
-            </a>
-        </li>
-        <li class="profile-option">
-            <a ui-sref="profile.view.invite" title="Invite {{ user.firstName }} to work with you">
-                <h3>Invite to Project</h3>
-                <div class="icon-plus icon"></div>
-            </a>
-        </li>
-        <li class="profile-option">
             <a ui-sref="profile.view.invite" title="Remove {{ user.firstName }} from your Connections">
                 <h3>Remove Connection</h3>
                 <div class="icon-minus icon"></div>
+            </a>
+        </li>
+        <li class="profile-option">
+            <a ui-sref="profile.view.message" title="Message {{ user.firstName }}">
+                <h3>Message</h3>
+                <div class="icon-message icon"></div>
             </a>
         </li>
     </ul>

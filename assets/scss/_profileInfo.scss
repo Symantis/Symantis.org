@@ -5,14 +5,7 @@
 			overflow: hidden;
 			white-space: nowrap;
 			@include font-semi(rem-calc(18px));
-		}
-		small {
-			width: 100%;
-			padding-bottom: rem-calc(10px);
-			float: left;
-			text-overflow: ellipsis;
-			overflow: hidden;
-			white-space: nowrap;
+			padding-bottom: rem-calc(20px);
 		}
 		.profile-pic {
 			float: left;
@@ -386,6 +379,62 @@
 	}
 	.profile-sub-nav-right {
 		float: right;
+		.connect-button {
+			height: rem-calc(30px);
+			width: rem-calc(30px);
+			float: right;
+			border: 1px $gray solid;
+			border-radius: 50%;
+			text-align: center;
+			font-size: rem-calc(24px);
+			color: $gray;
+			@include transition(100ms);
+			margin-bottom: rem-calc(-2px);
+			margin-top: rem-calc(-2px);
+			span {
+				position: relative;
+				bottom: -.1rem;
+			}
+			&:hover {
+				color: $primary-color;
+				border-color: $primary-color;
+			}
+			&.active {
+				background-color: $primary-color;
+				border-color: $primary-color;
+				color: white;
+			}
+		}
+		.message-button {
+			height: rem-calc(30px);
+			width: rem-calc(30px);
+			border: 1px $primary-color solid;
+			float: right;
+			border-radius: 50%;
+			margin-right: rem-calc(10px);
+			font-size: rem-calc(12px);
+			color: $primary-color;
+			text-align: center;
+			margin-bottom: rem-calc(-2px);
+			margin-top: rem-calc(-2px);
+			@include transition(100ms);
+			span {
+				position: relative;
+				bottom: -.3rem;
+			}
+			&:hover {
+				color: white;
+				background-color: $primary-color;
+			}
+			&.active {
+				background-color: $primary-color;
+				color: white;
+				&:hover {
+					background-color: darken($primary-color, 10%);
+					border-color: darken($primary-color, 10%);
+				}
+			}
+		}
 	}
 	&:after{ 
 		clear:both;
