@@ -16,7 +16,29 @@
         </div>
     </section>
     <section class="medium-9 large-8 large-offset-3 medium-offset-3 columns main-center profile-center">
-        <header></header>
+
+        <header class="profile-sub-nav">
+            <ul class="profile-sub-nav-left">
+                <li class="profile-sort"><a dropdown-toggle="#profile-sort-menu">Sort By <span class="icon-vote-down icon"></span></a></li>
+            </ul>
+            <div class="sub-nav-search">
+                <input 
+                    class="sub-search-field" 
+                    type="search" 
+                    name="sub-search-field" 
+                    placeholder="Search" 
+                />
+            </div>
+            <div class="profile-sub-nav-right" ng-init="isConnected = false">
+            </div>
+        </header>
+        <div class="sort-container" id="profile-sort-menu">
+            <ul class="sort-menu">
+                <li><a class="active">Recent <span class="icon-check icon"></span></a></li>
+                <li><a >Popular <span class="icon-check icon"></span></a></li>
+            </ul>
+        </div>
+
         <article class="activity-{{ post.verb }}" ng-repeat="post in activity">
             <div class="activity-{{ post.type }}">
                 <div>{{ post.verb }}

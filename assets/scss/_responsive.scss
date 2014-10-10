@@ -94,6 +94,7 @@ and (max-width : rem-calc(1024px)) {
 				}
 				.top-nav-right {
 					padding-right: 0;
+					margin-right: 0;
 					.top-nav-userOnline {
 						.top-nav-name {
 							//padding-right: rem-calc(3px);
@@ -169,7 +170,7 @@ and (max-width : rem-calc(1224px)) {
 		width: 50%;
 	}
 	.notifications-container {
-		width: rem-calc(200px);
+		width: rem-calc(250px);
 		top: 55px;
 	}
 	.sitenav-push {
