@@ -172,6 +172,13 @@ and (max-width : rem-calc(1224px)) {
 		width: rem-calc(200px);
 		top: 55px;
 	}
+	.sitenav-push {
+
+		&.notificationsOpen {
+			transform: translateX(0);
+	    	transform: translate3d(0, 0, 0);
+		}
+	}
 }
 
 // Laptops Only ----------

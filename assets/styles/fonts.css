@@ -326,3 +326,9 @@
 .icon-compose:before {
   content: "Z";
 }
+.icon-address-at:before {
+  content: "0";
+}
+.icon-hashtag:before {
+  content: "5";
+}

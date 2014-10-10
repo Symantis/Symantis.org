@@ -351,15 +351,15 @@ var aNotifications = [
 			id: 1, 
 			firstName: "Scott",
 			lastName:  "Wyatt",
-			handle: "hamish",
+			handle: "scott",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
 		},
-		verb: 'mentioned',
-		type: 'comment',
+		verb: 'Mentioned',
+		object: 'handle',
 		date: new Date(),
-		notication: '@author \"verb\" you \"type\"',
+		notification: 'Mentioned you in a comment',
 		src: ''
 	},
 	{
@@ -372,8 +372,110 @@ var aNotifications = [
 			status: 'online',
 			signature: Math.random()
 		},
+		verb: 'Messaged',
+		object: 'message',
 		message: 'Hey man\, whats up?',
-		date: new Date()
+		date: new Date(),
+		notification: 'Sent you a message',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Katelin",
+			lastName:  "Bull",
+			handle: "kbull",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Connected',
+		object: 'connection',
+		date: new Date(),
+		notification: 'Added you as a connection',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Messaged',
+		object: 'message',
+		message: 'Yo\, can you help me out?',
+		date: new Date(),
+		notification: 'Sent you a message',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Scott",
+			lastName:  "Wyatt",
+			handle: "scott",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Mentioned',
+		object: 'tag',
+		date: new Date(),
+		notification: 'Tagged your manti',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Messaged',
+		object: 'message',
+		message: 'Yo\, can you help me out?',
+		date: new Date(),
+		notification: 'Sent you a message',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Scott",
+			lastName:  "Wyatt",
+			handle: "scott",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Mentioned',
+		object: 'tag',
+		date: new Date(),
+		notification: 'Tagged your manti',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Katelin",
+			lastName:  "Bull",
+			handle: "kbull",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Connected',
+		object: 'connection',
+		date: new Date(),
+		notification: 'Added you as a connection',
+		src: ''
 	}
 ];
 
