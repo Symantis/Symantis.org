@@ -1,5 +1,5 @@
 
-$time: 0.4s;
+$time: 0.3s;
 
 .notifications-container {
 	position: fixed;
@@ -7,7 +7,7 @@ $time: 0.4s;
 	top: 0;
 	bottom: 0;
 	//height: 100%;
-	width: 16.2%;
+	width: 16.6667%;
 	background-color: $dark;
 	//background-color: rgba(46,48,44,0.9);
 	z-index: 100;
@@ -38,15 +38,10 @@ $time: 0.4s;
 	}
 }
 .sitenav-push {
-	-webkit-transition: transform $time ease;
-    -moz-transition: transform $time ease;
-    -o-transition: transform $time ease;
-    -ms-transition: transform $time ease;
-    transition: transform $time ease;
 
 	&.notificationsOpen {
-		transform: translateX(-8%);
-    	transform: translate3d(-8%, 0, 0);
+		transform: translateX(-8.3335%);
+    	transform: translate3d(-8.3335%, 0, 0);
 	}
 }
 

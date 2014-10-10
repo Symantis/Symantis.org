@@ -1,6 +1,6 @@
 angular.module("sy.templates", [
     'sy.templates.inputs',
-    'sy.templates.sitenav', 
+    //'sy.templates.sitenav', 
     'sy.templates.homeanimation', 
     'sy.templates.userimage', 
     'sy.templates.mainleft',
@@ -15,84 +15,6 @@ angular.module("sy.templates", [
  * @example:
 
  */
-angular.module('sy.templates.timeline', [])
-.directive('timelineJs',  function ($timeout) {
-    return {
-        restrict: 'A',
-        link: function (scope, element, attrs) {
-            
-            var width = element[0].offsetWidth;
-
-            var data = {
-                    "timeline":
-                    {
-                        "headline":"Symantis Roadmap",
-                        "type":"default",
-                        "text":"<p>Where we are, where we are going.</p>",
-                       // "asset": {
-                           // "media":"http://yourdomain_or_socialmedialink_goes_here.jpg",
-                           // "credit":"Credit Name Goes Here",
-                           // "caption":"Caption text goes here"
-                       // },
-                        "date": [
-                            {
-                                "startDate":"2012,12,10",
-                                "endDate":"2012,12,31",
-                                "headline":"Initial Idea",
-                                "text":"<p>We need something that let's us build faster.</p>",
-                                "tag":"Initial Idea",
-                                //"classname":"optionaluniqueclassnamecanbeaddedhere",
-                                //"asset": {
-                                  //  "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                                    //"thumbnail":"optional-32x32px.jpg",
-                                    //"credit":"Credit Name Goes Here",
-                                    //"caption":"Caption text goes here"
-                                //}
-                            },
-                            {
-                                "startDate":"2012,12,10",
-                                "endDate":"2012,12,31",
-                                "headline":"Symantis is Born",
-                                "text":"<p>Initial ground work for a symbiotic system is created.</p>",
-                                "tag":"Symantis",
-                            }
-                        ],
-                        "era": [
-                            {
-                                "startDate":"2012,12,10",
-                                "endDate":"2013,12,11",
-                                "headline":"Incpetion",
-                                "text":"<p>Symantis is planned on a whiteboard</p>",
-                                "tag":"Incpetion"
-                            },
-                            {
-                                "startDate":"2013,12,12",
-                                "endDate":"2014,12,11",
-                                "headline":"University Development",
-                                "text":"<p>Symantis gains new members</p>",
-                                "tag":"Initial Development"
-                            }
-
-                        ]
-                    }
-                }
-
-            postpone = $timeout(function() {
-                createStoryJS({
-                    type:       'timeline',
-                    width:      '100%',
-                    height:     '600',
-                    source:     data,
-                    hash_bookmark:      true,
-                    embed_id:   'sy-timeline',
-                    //css:        'lib/timelinejs/css/timeline.css',
-                    //js:         'lib/timelinejs/js/timeline.js'
-                });
-            }, 0);
-            console.log("Running timelineJS");
-        }
-    }
-});
 
 angular.module('sy.templates.inputs', [])
 .directive('forceFocus', function($timeout) {
@@ -224,6 +146,7 @@ angular.module('sy.templates.inputs', [])
   }
 });
 
+/*
 angular.module('sy.templates.sitenav', [])
 .directive('syNav', ['$document', '$window', '$location', '$state', '$timeout', function ($document, $window, $location, $state, $timeout) {
 	 return {
@@ -278,13 +201,12 @@ angular.module('sy.templates.sitenav', [])
 	    			//$scope.hide();
                     sidebar.removeClass('blur');
 	    		});
-                /*
-	    		$scope.$on('menuOpened', function(event, status){
-	    			console.log(status);
-	    			console.log("menu updated");
+                
+	    		//$scope.$on('menuOpened', function(event, status){
+	    		//	console.log(status);
+	    		//	console.log("menu updated");
 	    			
-	    		});
-				*/
+	    		//});
 
             },
             controller: ['$scope', function($scope) {
@@ -439,15 +361,7 @@ angular.module('sy.templates.sitenav', [])
 	    			}
 	    			
 	    		});
-                /*
-                	.append('svg')
-                	.attr('height', 400)
-                	.attr('width', 400);
-                var circle = canvas.append('circle')
-                	.attr('cx', 50)
-                	.attr('cy', 50)
-                	.attr('r',50);
-                */
+               
 
             }
         };
@@ -520,13 +434,11 @@ angular.module('sy.templates.sitenav', [])
         transclude: true,
         template: '<div ng-transclude></div><ul id="topNavLeftNav" class="f-dropdown"><li></li></ul>',
         link: function($scope, element, attrs){
-            
-            //element.attr('dropdown-toggle', "#topNavLeftNav");
-            //console.log(element);
+           
         }
     }
 }]);
-
+*/
 angular.module('sy.templates.scroll',['duScroll'])
 .directive('backToTop', ['$document','$window', function ($document, $window){
     return {
@@ -589,10 +501,14 @@ angular.module('sy.templates.mainleft',['duScroll'])
 
                 if(scrollTop > 107){
                     //console.log('lock');
-                    element.css('margin-top' , offset+'px');
+                    element.css(
+                       'margin-top', offset+'px'
+                    );
                 }else{
                     //console.log('unlocked');
-                    element.css('margin-top' , 0+'px');
+                    element.css(
+                        'margin-top', 0+'px'
+                    );
                     
                 }
 
@@ -1370,3 +1286,82 @@ angular.module('sy.symantis.modal', ['sy.symantis.transition'])
 
     return $symodalProvider;
   });
+
+angular.module('sy.templates.timeline', [])
+.directive('timelineJs',  function ($timeout) {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+            
+            var width = element[0].offsetWidth;
+
+            var data = {
+                    "timeline":
+                    {
+                        "headline":"Symantis Roadmap",
+                        "type":"default",
+                        "text":"<p>Where we are, where we are going.</p>",
+                       // "asset": {
+                           // "media":"http://yourdomain_or_socialmedialink_goes_here.jpg",
+                           // "credit":"Credit Name Goes Here",
+                           // "caption":"Caption text goes here"
+                       // },
+                        "date": [
+                            {
+                                "startDate":"2012,12,10",
+                                "endDate":"2012,12,31",
+                                "headline":"Initial Idea",
+                                "text":"<p>We need something that let's us build faster.</p>",
+                                "tag":"Initial Idea",
+                                //"classname":"optionaluniqueclassnamecanbeaddedhere",
+                                //"asset": {
+                                  //  "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                                    //"thumbnail":"optional-32x32px.jpg",
+                                    //"credit":"Credit Name Goes Here",
+                                    //"caption":"Caption text goes here"
+                                //}
+                            },
+                            {
+                                "startDate":"2012,12,10",
+                                "endDate":"2012,12,31",
+                                "headline":"Symantis is Born",
+                                "text":"<p>Initial ground work for a symbiotic system is created.</p>",
+                                "tag":"Symantis",
+                            }
+                        ],
+                        "era": [
+                            {
+                                "startDate":"2012,12,10",
+                                "endDate":"2013,12,11",
+                                "headline":"Incpetion",
+                                "text":"<p>Symantis is planned on a whiteboard</p>",
+                                "tag":"Incpetion"
+                            },
+                            {
+                                "startDate":"2013,12,12",
+                                "endDate":"2014,12,11",
+                                "headline":"University Development",
+                                "text":"<p>Symantis gains new members</p>",
+                                "tag":"Initial Development"
+                            }
+
+                        ]
+                    }
+                }
+
+            postpone = $timeout(function() {
+                createStoryJS({
+                    type:       'timeline',
+                    width:      '100%',
+                    height:     '600',
+                    source:     data,
+                    hash_bookmark:      true,
+                    embed_id:   'sy-timeline',
+                    //css:        'lib/timelinejs/css/timeline.css',
+                    //js:         'lib/timelinejs/js/timeline.js'
+                });
+            }, 0);
+            console.log("Running timelineJS");
+        }
+    }
+});
