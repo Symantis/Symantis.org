@@ -99,7 +99,7 @@ body,
 		text-align:center;
 		display:table;
 		float:right;
-		background-color: darken($primary-color, 5%);
+		background-color: $dark;
 		& > .activator-icon{
 			display:table-cell;
 			width:50px;
@@ -112,7 +112,7 @@ body,
 	}
 	.sitenav-inner{
 		height:100%;
-		background-color: darken($primary-color, 5%);
+		background-color: $dark;
 		width:150px;
 		float:left;
 		display:table;
@@ -141,14 +141,14 @@ body,
 					.search-icon{
 						padding-left:15px;
 						width:50px;
-						color: white;
+						color: $primary-color;
 						cursor: pointer;
 					}
 					.search{
 						@include font-regular(rem-calc(16px));
 						padding-left:15px;
 						width:100px;
-						color: $light;
+						color: white;
 						white-space: nowrap;
 						position:relative;
 						top:-3px;
@@ -160,7 +160,7 @@ body,
 					}
 					&:hover {
 						.search {
-							color: white;
+							color: $offWhite;
 						}
 					}
 				}
@@ -181,7 +181,7 @@ body,
 						display: block;
 						color: white;
 						&:hover{
-							color: $light;
+							color: $primary-color;
 						}
 					}
 					&:nth-child(6) {
@@ -214,12 +214,12 @@ body,
 					.sy{
 						padding-left:8px;
 						width:50px;
-						color: white;
+						color:$primary-color;
 					}
 					.mantis{
 						width:100px;
 						padding-left:2px;
-						color: $light;
+						color: white;
 						white-space: nowrap;
 						//opacity:0;
 						@include transition(0.1s);
@@ -229,7 +229,7 @@ body,
 					}
 					&:hover {
 						.mantis {
-							color: white;
+							color: $offWhite;
 						}
 					}
 				}
