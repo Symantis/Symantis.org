@@ -20,12 +20,13 @@
 	>
 	</div> /.sitenav -->
 
-
+	<div class="top-nav" ng-class="{notificationsOpen: notificationsOpen, menuOpen: menuOpen}" ui-view="header">
+	</div><!-- /.header -->
+	
 	<div id="sitenav-push" class="sitenav-push" ng-class="{notificationsOpen: notificationsOpen, menuOpen: menuOpen}">
 		<div class="sitenav-push-inner">
 			
-			<div class="top-nav" ui-view="header">
-			</div><!-- /.header -->
+			
 
 			<div class="sitealerts">
             	<alert class="animate-repeat ng-cloak" ng-cloak ng-repeat="alert in sitealerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
