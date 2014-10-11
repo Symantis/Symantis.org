@@ -31,6 +31,7 @@ angular.module( 'symantis', [
 	'symantis.sitenav',
 	'symantis.home',
 	'symantis.footer',
+	'symantis.alerts',
 
 	'symantis.messages',
 	'symantis.kitchen',
