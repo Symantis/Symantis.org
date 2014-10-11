@@ -25,8 +25,6 @@
 	
 	<div id="sitenav-push" class="sitenav-push" ng-class="{notificationsOpen: notificationsOpen, menuOpen: menuOpen}">
 		<div class="sitenav-push-inner">
-			
-			
 
 			<div class="sitealerts">
             	<alert class="animate-repeat ng-cloak" ng-cloak ng-repeat="alert in sitealerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>

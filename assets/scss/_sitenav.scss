@@ -150,18 +150,18 @@ $delay: 0.3s;
   background: transparent;
 }
 .menu-button.active span:before {
-  -moz-transform: rotate(45deg) translate(.4rem, .3rem);
-  -ms-transform: rotate(45deg) translate(.4rem, .3rem);
-  -o-transform: rotate(45deg) translate(.4rem, .3rem);
-  -webkit-transform: rotate(45deg) translate(.4rem, .3rem);
-  transform: rotate(45deg) translate(.4rem, .3rem);
+  -moz-transform: rotate(45deg) translate(.4rem, .33rem);
+  -ms-transform: rotate(45deg) translate(.4rem, .33rem);
+  -o-transform: rotate(45deg) translate(.4rem, .33rem);
+  -webkit-transform: rotate(45deg) translate(.4rem, .33rem);
+  transform: rotate(45deg) translate(.4rem, .33rem);
 }
 .menu-button.active span:after {
-  -moz-transform: rotate(-45deg) translate(.4rem, -.3rem);
-  -ms-transform: rotate(-45deg) translate(.4rem, -.3rem);
-  -o-transform: rotate(-45deg) translate(.4rem, -.3rem);
-  -webkit-transform: rotate(-45deg) translate(.4rem, -.3rem);
-  transform: rotate(-45deg) translate(.4rem, -.3rem);
+  -moz-transform: rotate(-45deg) translate(.4rem, -.33rem);
+  -ms-transform: rotate(-45deg) translate(.4rem, -.33rem);
+  -o-transform: rotate(-45deg) translate(.4rem, -.33rem);
+  -webkit-transform: rotate(-45deg) translate(.4rem, -.33rem);
+  transform: rotate(-45deg) translate(.4rem, -.33rem);
 }
 
 
