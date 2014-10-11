@@ -2,16 +2,8 @@
 	color: #777;
 }
 .home-animation {
-	//margin-bottom: -50px;
-	svg {
-		margin-bottom: rem-calc(50px);
-		text {
-			position: absolute !important;
-			bottom: 4rem !important;
-			padding-bottom: 3rem;
-			height: 400px !important;
-		}
-	}
+	margin-bottom: rem-calc(50px);
+	width: 100%;
 }
 .home-footer {
 	margin-bottom: -50px;
@@ -27,8 +19,8 @@
 	}
 }
 .home-noUser {
-	position: fixed;
-	top: rem-calc(60px);
+	position: absolute;
+	top: rem-calc(10px);
 	right: rem-calc(20px);
 	@include font-regular(rem-calc(14px));
 	color: $primary-color;
@@ -57,9 +49,9 @@
 	}
 }
 .home-user {
-	position: fixed;
-	top: rem-calc(60px);
-	right: rem-calc(30px);
+	position: absolute;
+	top: rem-calc(10px);
+	right: rem-calc(20px);
 	@include font-regular(rem-calc(12px));
 	padding: rem-calc(10px);
 	z-index: 999;
