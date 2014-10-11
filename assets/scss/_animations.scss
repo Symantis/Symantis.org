@@ -140,7 +140,6 @@ $uiAnimationTime: 0.3s;
     -o-transition:opacity $uiAnimationTime ease-in-out;
     transition:opacity $uiAnimationTime ease-in-out;
 
-    padding-bottom: 100%;
 }
 
 [ui-view="header"].ng-enter {
@@ -157,6 +156,37 @@ $uiAnimationTime: 0.3s;
 
 [ui-view="header"].ng-leave-active {
   opacity: 0;
+}
+
+[ui-view="footer"].ng-enter, [ui-view="footer"].ng-leave {
+
+  -webkit-transition:opacity $uiAnimationTime ease-in-out;
+    -moz-transition:opacity $uiAnimationTime ease-in-out;
+    -o-transition:opacity $uiAnimationTime ease-in-out;
+    transition:opacity $uiAnimationTime ease-in-out;
+    @include tranSpec(bottom, $uiAnimationTime);
+    //position: absolute;
+    //bottom: 0;
+    //margin-top: 100%;
+    position: absolute;
+}
+
+[ui-view="footer"].ng-enter {
+  opacity: 0;
+  bottom: rem-calc(-60px);
+}
+
+[ui-view="footer"].ng-enter-active {
+  opacity: 1;
+}
+
+[ui-view="footer"].ng-leave {
+  opacity: 1; 
+}
+
+[ui-view="footer"].ng-leave-active {
+  opacity: 0;
+  bottom: rem-calc(-60px);
 }
 
 
