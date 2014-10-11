@@ -81,6 +81,29 @@ angular.module( 'symantis.community', [
 				}
 			}
 		})
+		.state( 'community.queries.category', {
+			url: '/queries?category',
+			views: {
+				"main@": {
+					controller: 'QueriesCtrl',
+					templateUrl: 'community/queries/index.tpl.html',
+					resolve: {
+						queries: function($rootScope){
+							return $rootScope.queries;
+							//return $rootScope.queries = cache.cacheQueries($rootScope.queries);
+						}
+					},
+				},
+				"leftside@community.queries.category": {
+					controller: 'CommunityQueriesLeftsideCtrl',
+                	templateUrl: 'community/queries/leftside.tpl.html'
+				},
+				"query-nav@community.queries.category": {
+					controller: 'CommunityQueriesNavCtrl',
+                	templateUrl: 'community/queries/sort.tpl.html'
+				}
+			}
+		})
 		.state( 'community.queries.view', {
 			url: '/:id/:title',
 			resolve : {
