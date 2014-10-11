@@ -66,9 +66,7 @@
 					ng-show="currentUser"
 					ng-click="comments.selected = false" 
 					ng-class="{active: !comments.selected}"
-				>
-					New
-				</a>
+				>New</a>
 				<a ng-show="!currentUser" ng-click="loginModal()">Login</a>
 			</h4>
 			<p>
@@ -103,9 +101,7 @@
 		            	<span>{{ comment.date | date }}</span>
 		            </p>
 		        </div>
-				<p class="comment-text">
-					{{ comment.comment }}
-				</p>
+				<p class="comment-text">{{ comment.comment }}</p>
 				<p class="comment-reply">
 					<a title="Up Votes">
 						<span class="icon-vote-up"></span>

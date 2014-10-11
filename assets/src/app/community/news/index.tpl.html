@@ -32,7 +32,7 @@
                 <a ui-sref="community.news.view({id: article.id, title: article.clean() })">
                     <h3>{{ article.title }}</h3>
                 </a>
-                <p>{{ article.article }}</p>
+                <p class="news-copy">{{ article.article }}</p>
                 <ul class="news-post-footer">
                     <li class="news-post-share">
                         <div class="twitter-share">
@@ -56,9 +56,7 @@
                         <p>
                             <a 
                                 ui-sref="community.news.view({id: article.id, title: article.clean(), comments:'comments' })"
-                            >
-                                View Comments ({{ article.comments.length }})
-                            </a>
+                            >View Comments ({{ article.comments.length }})</a>
                         </p>
                     </li>
                     <li class="news-post-details">

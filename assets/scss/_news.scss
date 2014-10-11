@@ -90,6 +90,9 @@
 		p {
 			@inlude font-regular(rem-calc(12px));
 			line-height: rem-calc(18px);
+			&.news-copy {
+				max-width: rem-calc(600px);
+			}
 			a {
 				text-decoration: underline;
 				color: $gray;

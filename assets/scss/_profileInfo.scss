@@ -258,6 +258,9 @@
 						color: black;
 					}
 				}
+				p {
+					max-width: rem-calc(500px);
+				}
 			}
 			&:after {
 				content:"";
@@ -318,6 +321,9 @@
 					padding-bottom: rem-calc(2px);
 					margin: 0;
 					margin-top: rem-calc(-3px);
+				}
+				p {
+					max-width: rem-calc(500px);
 				}
 			}
 			&:after{
