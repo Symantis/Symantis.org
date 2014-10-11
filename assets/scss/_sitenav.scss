@@ -33,40 +33,118 @@ $animationTime: 0.3s !default;
 	}
 
 	.mainmenu-toggle{
-		height:53px;
-		width:55px;
+		height:rem-calc(53px);
+		width:rem-calc(55px);
 		position: absolute;
 		top:0px;
 		left:100%;
-		
 		.btn-container{
-			
 			width:100%;
 			height:100%;
-			& > a{
-				text-align:center;
-				
-				& > div{
-					position: absolute;
-					top:0px;
-					margin-top:15px;
-					height:40px;
-					width:55px;
-					opacity:0;
-					-webkit-transition: all $animationTime ease;
-					-moz-transition: all $animationTime ease;
-					-o-transition: all $animationTime ease;
-					-ms-transition: all $animationTime ease;
-					transition: all $animationTime ease;
-				}
-				& > div.active{
-					opacity:1;
-				}
+			padding-top: rem-calc(22px);
+			position: relative;
+			padding-left: rem-calc(10px);
+			cursor: pointer;
+			-webkit-transition: padding $animationTime ease;                  
+		    -moz-transition: padding $animationTime ease;            
+		    -o-transition: padding $animationTime ease;  
+		    -ms-transition: padding $animationTime ease;         
+		    transition: padding $animationTime ease;
+			&.active {
+				padding-left: rem-calc(7px);
+			}
+			&.open {
+				padding-left: rem-calc(7px);
+			}
+		}
+		.btn-border{
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 70%;
+			margin-top: 15%;
+			margin-bottom: 15%;
+			width: 1px;
+			background-color: $light;
+			-webkit-transition: right $animationTime ease;                  
+		    -moz-transition: right $animationTime ease;            
+		    -o-transition: right $animationTime ease;  
+		    -ms-transition: right $animationTime ease;         
+		    transition: right $animationTime ease;
+			&.active {
+				right: rem-calc(7px);
+			}
+			&.open {
+				right: rem-calc(7px);
 			}
 		}
 	}
-
 }
+
+.menu-button {
+	display: block;
+	position: relative;
+	font-size: rem-calc(12px); /* change this */
+	padding-top: 0.2rem;
+	padding-right: 0.1rem;
+	padding-bottom: 0.2rem;
+	padding-left: 0.1rem;
+	width: 2rem;
+	height: auto;
+	-webkit-tap-highlight-color: rgba(255,255,255,0.0);
+
+	-webkit-transition: transform $animationTime ease, background $animationTime ease;
+	-moz-transition: transform $animationTime ease, background $animationTime ease;
+	-o-transition: transform $animationTime ease, background $animationTime ease;
+	-ms-transition: transform $animationTime ease, background $animationTime ease;
+	transition: transform $animationTime ease, background $animationTime ease;
+}
+.menu-button span {
+	background: black;
+	display: block;
+	position: relative;
+	-webkit-transform: translate3d(0,0,0);
+}
+.menu-button span,
+.menu-button span:before,
+.menu-button span:after {
+  	width: 100%;
+  	height: .2rem;
+ 	-webkit-transition: transform $animationTime ease, background $animationTime ease;
+	-moz-transition: transform $animationTime ease, background $animationTime ease;
+	-o-transition: transform $animationTime ease, background $animationTime ease;
+	-ms-transition: transform $animationTime ease, background $animationTime ease;
+	transition: transform $animationTime ease, background $animationTime ease;
+  	-webkit-transform: translate3d(0,0,0);
+}
+.menu-button span:before,
+.menu-button span:after {
+  background: black;
+  content: " ";
+  margin-top: -.5rem;
+  position: absolute;
+}
+.menu-button span:after {
+  margin-top: .5rem;
+}
+.menu-button.active span {
+  background: transparent;
+}
+.menu-button.active span:before {
+  -moz-transform: rotate(45deg) translate(.4rem, .3rem);
+  -ms-transform: rotate(45deg) translate(.4rem, .3rem);
+  -o-transform: rotate(45deg) translate(.4rem, .3rem);
+  -webkit-transform: rotate(45deg) translate(.4rem, .3rem);
+  transform: rotate(45deg) translate(.4rem, .3rem);
+}
+.menu-button.active span:after {
+  -moz-transform: rotate(-45deg) translate(.4rem, -.3rem);
+  -ms-transform: rotate(-45deg) translate(.4rem, -.3rem);
+  -o-transform: rotate(-45deg) translate(.4rem, -.3rem);
+  -webkit-transform: rotate(-45deg) translate(.4rem, -.3rem);
+  transform: rotate(-45deg) translate(.4rem, -.3rem);
+}
+
 
 .sitenav-push {
 	&.menuOpen {

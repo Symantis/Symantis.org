@@ -21,11 +21,11 @@
       </ul>
     </div>
     <div class="mainmenu-toggle">
-      <div class="btn-container">
-        <a ng-click="menuToggle()">
-          <div ng-class="{active: !menuOpen}">BTN</div>
-          <div ng-class="{active: menuOpen}">CLS</div>
-        </a>
+      <div class="btn-container" ng-click="menuToggle()" ng-class="{open: menuOpen, active: notificationsOpen}">
+        <div  class="menu-button" ng-class="{active: menuOpen}">
+          <span></span>
+        </div>
       </div>
+      <div class="btn-border" ng-class="{open: menuOpen, active: notificationsOpen}"></div>
     </div>
 </div>

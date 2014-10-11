@@ -32,16 +32,16 @@ $time: 0.3s;
 		transform: translate3d(0%, 0, 0);
 		transform: translateX(0%);
 
-		-webkit-box-shadow: -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+		/*-webkit-box-shadow: -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
 		-moz-box-shadow:    -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
-		box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+		box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0.71);*/
+
+		&.menuOpen {
+			transform: translateX(100%);
+    		transform: translate3d(100%, 0, 0);
+		}
 	}
 }
-.sitenav-push {
-
-	
-}
-
 .notifications-inner {
 	width: 100%;
 	position: relative;

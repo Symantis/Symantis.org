@@ -34,11 +34,12 @@ $animationTime: 0.3s !default;
 		//position: fixed;
 		//width: calc(100% - 50px);
 		//width:100%;
-		background-color: white;
+		//background-color: rgba(245,249,249,1);
+		background-color: lighten($offWhite, 5%);
 		/* ---- Body is gray ---- */
-		/*-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+		-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
 		-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.5);
-		box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.5);*/
+		box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.5);
 		/* ---- */
 		.row.fluid-row {
 			padding-top:0px;
@@ -71,6 +72,11 @@ $animationTime: 0.3s !default;
 				padding-right: 1.875rem;
 				@include font-bold(rem-calc(13px));
 				@include no-highlight;
+				-webkit-transition: padding 0.3s ease;                  
+			    -moz-transition: padding 0.3s ease;            
+			    -o-transition: padding 0.3s ease;  
+			    -ms-transition: padding 0.3s ease;         
+			    transition: padding 0.3s ease;
 				a {
 					color: $gray;
 					@include transition(200ms);
@@ -80,6 +86,12 @@ $animationTime: 0.3s !default;
 				}
 				.active {
 					color: black;
+				}
+				&.navOpen {
+					padding-left: 2.2rem;
+				}
+				&.open {
+					padding-left: 2.2rem;
 				}
 			}
 			.top-nav-mid {
@@ -102,7 +114,7 @@ $animationTime: 0.3s !default;
 					padding-right: 0;
 					a {
 						text-align: center;
-						border-left: 1px $light solid;
+						//border-left: 1px $light solid;
 						padding-right: rem-calc(30px);
 						padding-left: rem-calc(30px);
 					}
@@ -113,7 +125,7 @@ $animationTime: 0.3s !default;
 					padding-right: 0;
 					a {
 						text-align: center;
-						border-left: 1px $light solid;
+						//border-left: 1px $light solid;
 						padding-left: rem-calc(30px);
 						//padding-right: rem-calc(30px);
 					}
@@ -123,10 +135,15 @@ $animationTime: 0.3s !default;
 					font-size: rem-calc(13px);
 					white-space: nowrap;;
 					span{
-						color: $light;
-						padding-top: rem-calc(10px);
+						color: $gray;
+						padding-top: rem-calc(18px);
 						//padding-bottom: rem-calc(20px);
-						@include transition(200ms);
+						//@include transition(200ms);
+						-webkit-transition: padding 0.2s ease, border 0.2s ease;                  
+					    -moz-transition: padding 0.2s ease, border 0.2s ease;              
+					    -o-transition: padding 0.2s ease, border 0.2s ease;
+					    -ms-transition: padding 0.2s ease, border 0.2s ease;  
+					    transition: padding 0.2s ease, border 0.2s ease;  
 					}
 					&:hover {
 						span {
@@ -137,7 +154,8 @@ $animationTime: 0.3s !default;
 				.active {
 					//border-top: rem-calc(1px) $light solid;
 					span {
-						//border-top: rem-calc(1px) $primary-color solid;
+						padding-top: rem-calc(6px);
+						border-top: rem-calc(2px) black solid;
 						color: black;
 					}
 				}
@@ -279,14 +297,22 @@ $animationTime: 0.3s !default;
 						font-size: rem-calc(18px);
 						@include transition(300ms);
 						opacity: 0;
-						//color: $gray;
+						color: $gray;
 						//text-shadow: 0px -1px 0px rgba(0, 0, 0, .75);
-						color: rgba(100,100,100,0.8);
-					    text-shadow: 0px 1px 2px #fff, 0 0 0 #000;
+						/*color: rgba(100,100,100,0.8);
+					    text-shadow: 0px 1px 2px #fff, 0 0 0 #000;*/
+					    -webkit-transition: opacity 0.3s ease;                  
+					    -moz-transition: opacity 0.3s ease;            
+					    -o-transition: opacity 0.3s ease;  
+					    -ms-transition: opacity 0.3s ease;         
+					    transition: opacity 0.3s ease;
+					    &:hover {
+					    	color: darken($gray, 10%);
+					    }
 						&.active {
 							opacity: 0.8;
 							&:hover {
-								color: rgba(50,50,50,0.8);
+								color: darken($gray, 10%);
 								opacity: 1;
 							}
 						}
@@ -329,7 +355,7 @@ $animationTime: 0.3s !default;
 				position: absolute;
 				z-index: 999;
 				//overflow: hidden;
-				top: 55px !important;
+				top: rem-calc(54px) !important;
 				right: -1px !important;
 				left: auto !important;
 				width: 150px;
