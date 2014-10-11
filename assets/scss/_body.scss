@@ -234,9 +234,19 @@ quote {
 	right: 30px;
 	z-index:100;
 	opacity: 1;
-	@include transition(200ms);
+	-webkit-transition: opacity 0.2s ease;               
+    -moz-transition: opacity 0.2s ease;                 
+    -o-transition: opacity 0.2s ease;  
+    -ms-transition: opacity 0.2s ease;          
+    transition: opacity 0.2s ease;
 	&.hidden{
 		opacity:0;
+	}
+	&.notificationsOpen {
+		opacity: 0;
+	}
+	&.menuOpen {
+		opacity: 0;
 	}
 	a {
 		span {

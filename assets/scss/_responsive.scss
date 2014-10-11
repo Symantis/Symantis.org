@@ -90,7 +90,8 @@ and (max-width : rem-calc(1024px)) {
 		.top-nav-container {
 			.row.fluid-row {
 				.top-nav-left {
-					padding-left: 0.6rem;
+					padding-left: 2.2rem;
+					padding-left: 2.2rem;
 				}
 				.top-nav-right {
 					padding-right: 0;
@@ -152,6 +153,25 @@ and (max-width : rem-calc(1024px)) {
 	.manti-pod-wrap {
 		width: 100%;
 	}
+	.mainmenu-container{
+		width: rem-calc(200px);
+		left: rem-calc(-200px);
+		transform: translateX(0);
+   		transform: translate3d(0, 0, 0);
+	    &.open {
+			transform: translate3d(200px, 0, 0);
+			transform: translateX(200px);
+		}
+		.mainmenu-toggle {
+			.btn-border {
+				right: rem-calc(7px);
+			}
+			.btn-container {
+				padding-left: rem-calc(7px);
+				background-color: lighten($offWhite, 5%);
+			}
+		}
+	}
 }
 
 // Small Laptops and below ----------
@@ -174,11 +194,16 @@ and (max-width : rem-calc(1224px)) {
 		top: 55px;
 	}
 	.sitenav-push {
-
 		&.notificationsOpen {
 			transform: translateX(0);
 	    	transform: translate3d(0, 0, 0);
 		}
+	}
+	.top-nav {
+	    &.notificationsOpen{
+	    	transform: translateX(0);
+	    	transform: translate3d(0, 0, 0);
+	    }
 	}
 }
 
