@@ -332,3 +332,9 @@
 .icon-hashtag:before {
   content: "5";
 }
+.icon-star-2:before {
+  content: "6";
+}
+.icon-contact-add-2:before {
+  content: "7";
+}

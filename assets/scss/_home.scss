@@ -41,7 +41,7 @@
 		color: black;
 	}
 	a {
-		@include transition(100ms);
+		@include transition(200ms);
 		&.header-signup {
 			@include font-semi(rem-calc(14px));
 			color: $primary-color;

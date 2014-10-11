@@ -21,7 +21,8 @@ $transtime: 500ms;
 		left: 60%;
 		height: 1px;
 		background-color: $light;
-		@include transition($transtime);
+	    @include tranSpec(opacity,$transtime);
+	    @include tranSpec(left,$transtime);
 	}
 	.gr-bottom-rule {
 		display: block;
@@ -32,7 +33,8 @@ $transtime: 500ms;
 		height: 1px;
 		background-color: $light;
 		z-index: 13;
-		@include transition($transtime);
+		@include tranSpec(opacity,$transtime);
+	    @include tranSpec(right,$transtime);
 	}
 	.gr-text {
 		position: absolute;
@@ -41,7 +43,7 @@ $transtime: 500ms;
 		width: 40%;
 		display: table;
 		z-index: 10;
-		@include transition($transtime);
+		@include tranSpec(left,$transtime);
 		.gr-text-inner {
 			display: table-cell;
 			vertical-align: middle;
@@ -76,7 +78,8 @@ $transtime: 500ms;
 		left: 0;
 		z-index: 9;
 		background-color: white;
-		@include transition($transtime);
+		@include tranSpec(opacity,$transtime);
+	    @include tranSpec(left,$transtime);
 		&:after {
 			content: '';
 			display: block;
@@ -110,7 +113,7 @@ $transtime: 500ms;
 		height: 100%;
 		display: table;
 		z-index: 8;
-		@include transition($transtime);
+	    @include tranSpec(right,$transtime);
 		.gr-image-inner {
 			display: table-cell;
 			vertical-align: middle;
@@ -136,7 +139,8 @@ $transtime: 500ms;
 		right: 60%;
 		height: 1px;
 		background-color: $light;
-		@include transition($transtime);
+		@include tranSpec(opacity,$transtime);
+	    @include tranSpec(right,$transtime);
 	}
 	.gr-bottom-rule {
 		display: block;
@@ -147,7 +151,8 @@ $transtime: 500ms;
 		height: 1px;
 		background-color: $light;
 		z-index: 13;
-		@include transition($transtime);
+		@include tranSpec(opacity,$transtime);
+	    @include tranSpec(left,$transtime);
 	}
 	.gr-text {
 		position: absolute;
@@ -156,7 +161,7 @@ $transtime: 500ms;
 		width: 40%;
 		display: table;
 		z-index: 10;
-		@include transition($transtime);
+	    @include tranSpec(right,$transtime);
 		.gr-text-inner {
 			display: table-cell;
 			vertical-align: middle;
@@ -191,7 +196,8 @@ $transtime: 500ms;
 		right: 0;
 		z-index: 9;
 		background-color: white;
-		@include transition($transtime);
+		@include tranSpec(opacity,$transtime);
+	    @include tranSpec(right,$transtime);
 		&:after {
 			content: '';
 			display: block;
@@ -225,7 +231,7 @@ $transtime: 500ms;
 		height: 100%;
 		display: table;
 		z-index: 8;
-		@include transition($transtime);
+	    @include tranSpec(left,$transtime);
 		.gr-image-inner {
 			display: table-cell;
 			vertical-align: middle;

@@ -282,8 +282,9 @@ $time: 0.3s;
 			width: 15%;
 			span {
 				display: table-cell;
-				vertical-align: middle;
+				vertical-align: top;
 				font-size: rem-calc(18px);
+				padding-top: rem-calc(4px);
 				color: $offWhite;
 				position: relative;
 				bottom: -.2rem;

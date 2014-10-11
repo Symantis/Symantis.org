@@ -13,6 +13,10 @@ angular.module( 'symantis.search', [
 				controller: 'SiteNavCtrl',
                 templateUrl: 'sitenav/index.tpl.html'
 			},
+			"header": {
+				controller: 'HeaderCtrl',
+                template: ''
+			},
 			"leftside@search": {
 				controller: 'SearchLeftsideCtrl',
                 templateUrl: 'search/leftside.tpl.html'

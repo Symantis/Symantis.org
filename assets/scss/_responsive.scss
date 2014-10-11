@@ -205,6 +205,16 @@ and (max-width : rem-calc(1224px)) {
 	    	transform: translate3d(0, 0, 0);
 	    }
 	}
+	.mainmenu-container{
+		.mainmenu-toggle {
+			.btn-border {
+				right: rem-calc(7px);
+			}
+			.btn-container {
+				padding-left: rem-calc(7px);
+			}
+		}
+	}
 }
 
 // Laptops Only ----------

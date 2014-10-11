@@ -84,6 +84,13 @@ $reveal-close-weight: light;
     -ms-transition: all $time ease;          
     transition: all $time ease;
 }
+@mixin tranSpec($object,$time) {
+	-webkit-transition: $object $time ease;                  
+    -moz-transition: $object $time ease;                 
+    -o-transition: $object $time ease;   
+    -ms-transition: $object $time ease;          
+    transition: $object $time ease;
+}
 @mixin drop-shadow($opac) {
 	-webkit-box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, $opac);
 	-moz-box-shadow:    2px 3px 15px 0px rgba(0, 0, 0, $opac);
