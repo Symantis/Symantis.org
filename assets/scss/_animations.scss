@@ -133,6 +133,32 @@ $uiAnimationTime: 0.3s;
   transform:translate3d(100px, 0, 0);
 }
 
+[ui-view="header"].ng-enter, [ui-view="header"].ng-leave {
+
+  -webkit-transition:opacity $uiAnimationTime ease-in-out;
+    -moz-transition:opacity $uiAnimationTime ease-in-out;
+    -o-transition:opacity $uiAnimationTime ease-in-out;
+    transition:opacity $uiAnimationTime ease-in-out;
+
+    padding-bottom: 100%;
+}
+
+[ui-view="header"].ng-enter {
+  opacity: 0;
+}
+
+[ui-view="header"].ng-enter-active {
+  opacity: 1;
+}
+
+[ui-view="header"].ng-leave {
+  opacity: 1; 
+}
+
+[ui-view="header"].ng-leave-active {
+  opacity: 0;
+}
+
 
 [ui-view="register"].ng-enter, [ui-view="register"].ng-leave {
   position: absolute;
