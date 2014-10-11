@@ -488,7 +488,7 @@ angular.module('sy.templates.mainleft',['duScroll'])
             var top = 400;
             var duration = 2000; //milliseconds
             
-            var wind = angular.element($document[0].querySelector('.sitenav-push'));
+            var wind = angular.element($document[0].querySelector('.sy-app'));
             //console.log(wind[0]);
             //Scroll to the exact position
             
