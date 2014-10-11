@@ -72,7 +72,12 @@ $animationTime: 0.3s !default;
 	&.menuOpen {
 		transform: translateX(8.3335%);
     	transform: translate3d(8.3335%, 0, 0);
+    	&.notificationsOpen{
+    		transform: translateX(8.3335%);
+    		transform: translate3d(8.3335%, 0, 0);
+    	}
 	}
+
 }
 
 *,
