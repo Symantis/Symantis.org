@@ -7,6 +7,7 @@ $animationTime: 0.3s !default;
 	bottom: 0;
 	//height: 100%;
 	width: 16%;
+	max-width: rem-calc(250px);
 	background-color: $dark;
 	//background-color: rgba(46,48,44,0.9);
 	z-index: 100;
