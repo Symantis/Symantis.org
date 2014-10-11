@@ -1,5 +1,88 @@
 $animationTime: 0.3s !default;
 
+.mainmenu-container{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	//height: 100%;
+	width: 16%;
+	background-color: $dark;
+	//background-color: rgba(46,48,44,0.9);
+	z-index: 100;
+	transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
+
+	-webkit-box-shadow: 1px 0px 4px 0px rgba(50, 50, 50, 0);
+	-moz-box-shadow:    1px 0px 4px 0px rgba(50, 50, 50, 0);
+	box-shadow:         1px 0px 4px 0px rgba(50, 50, 50, 0);
+
+	-webkit-transition: transform $animationTime ease, box-shadow $animationTime ease;                  
+    -moz-transition: transform $animationTime ease, box-shadow $animationTime ease;                 
+    -o-transition: transform $animationTime ease, box-shadow $animationTime ease;   
+    -ms-transition: transform $animationTime ease, box-shadow $animationTime ease;          
+    transition: transform $animationTime ease, box-shadow $animationTime ease;
+
+    &.open {
+		transform: translate3d(0%, 0, 0);
+		transform: translateX(0%);
+
+		-webkit-box-shadow: 1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+		-moz-box-shadow:    1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+		box-shadow:         1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+	}
+
+	.mainmenu-toggle{
+		height:53px;
+		width:55px;
+		position: absolute;
+		top:0px;
+		left:100%;
+		
+		.btn-container{
+			
+			width:100%;
+			height:100%;
+			& > a{
+				text-align:center;
+				
+				& > div{
+					position: absolute;
+					top:0px;
+					margin-top:15px;
+					height:40px;
+					width:55px;
+					opacity:0;
+					-webkit-transition: all $animationTime ease;
+					-moz-transition: all $animationTime ease;
+					-o-transition: all $animationTime ease;
+					-ms-transition: all $animationTime ease;
+					transition: all $animationTime ease;
+				}
+				& > div.active{
+					opacity:1;
+				}
+			}
+		}
+	}
+
+}
+
+.sitenav-push {
+	&.menuOpen {
+		transform: translateX(8.3335%);
+    	transform: translate3d(8.3335%, 0, 0);
+    	&.notificationsOpen{
+    		transform: translateX(8.3335%);
+    		transform: translate3d(8.3335%, 0, 0);
+    	}
+	}
+	&.notificationsOpen {
+		transform: translateX(-7.7775%);
+    	transform: translate3d(-7.7775%, 0, 0);
+	}
+}
+
 *,
 *:after,
 *::before {
@@ -11,14 +94,14 @@ html,
 body,
 .sy-app,
 .sitenav-push,
-//.sitenav-push-inner,
-.sitenav {
+.sitenav-push-inner{
 	height: 100%;
 }
 
 .sy-app {
 	position: relative;
 	overflow: hidden;
+	overflow-y:scroll;
 }
 
 .sitenav-push,
@@ -27,13 +110,14 @@ body,
 }
 
 .sitenav-push {
-	position: relative;
-	left: 0;
 	z-index: 0;
-	height: 100%;
-	-webkit-transition: -webkit-filter $animationTime, opacity $animationTime, -webkit-transform $animationTime;
-	transition: filter $animationTime, opacity $animationTime, transform $animationTime;
 	background: white;
+
+	-webkit-transition: transform $animationTime ease;
+    -moz-transition: transform $animationTime ease;
+    -o-transition: transform $animationTime ease;
+    -ms-transition: transform $animationTime ease;
+    transition: transform $animationTime ease;
 
 	&::after {
 		position: absolute;
@@ -47,73 +131,10 @@ body,
 		transition: opacity $animationTime, width 0.1s $animationTime, height 0.1s $animationTime;
 	}
 }
-
-.sy-menu-open .sitenav-push::after {
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	-webkit-transition: opacity $animationTime;
-	transition: opacity $animationTime;
-}
-
-.sitenav {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	//visibility: hidden;
-	height: 100%;
-	background: rgba(255,255,255,0.0);
-}
-
-.sitenav::after {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	//background: rgba(0,0,0,0.2);
-	content: '';
-	opacity: 1;
-	-webkit-transition: opacity $animationTime;
-	transition: opacity $animationTime;
-}
-
-.sy-menu-open .sitenav::after {
-	width: 0;
-	height: 0;
-	opacity: 0;
-	-webkit-transition: opacity $animationTime, width 0.1s $animationTime, height 0.1s $animationTime;
-	transition: opacity $animationTime, width 0.1s $animationTime, height 0.1s $animationTime;
-}
-
-.sitenav{
-	-webkit-transition: left $animationTime;
-	transition: left $animationTime;
-	.trident{
-		fill: #ffffff;
-	}
-	.activator{
-		width: 50px;
-		height: 100%;
-		text-align:center;
-		display:table;
-		float:right;
-		background-color: $dark;
-		& > .activator-icon{
-			display:table-cell;
-			width:50px;
-			height:50px;
-			padding-left:15px;
-			padding-right:15px;
-			vertical-align:middle;
-			cursor:pointer;
-		}
-	}
-	.sitenav-inner{
+.mainmenu-container{
+	.mainmenu-inner{
 		height:100%;
 		background-color: $dark;
-		width:150px;
 		float:left;
 		display:table;
 		.vertical-middle{
@@ -129,12 +150,8 @@ body,
 
 			&.top{
 				position:absolute;
-				//z-index:101;
-				left:150px;
-				width: 50px;
+				left:0px;
 				min-height:50px;
-				-webkit-transition: left $animationTime;
-				transition: left $animationTime;
 				li {
 					font-size:20px;
 					line-height:50px;
@@ -197,15 +214,10 @@ body,
 			
 			&.bottom{
 				position:absolute;
-				//z-index:100;
-				left:150px;
-				width: 50px;
+				left:0px;
 				min-height:50px;
 				bottom:5px;
 				display:table;
-				
-				-webkit-transition: left $animationTime;
-				transition: left $animationTime;
 				
 				li.logo{
 					display:table-cell;
@@ -240,103 +252,4 @@ body,
 			}
 		}
 	}
-}
-
-/* ----- Dark Side Bar ------ */
-
-/*.sitenav{
-	background-color: $darkest;
-	.trident{
-		fill: white;
-	}
-	.sitenav-inner{
-		background-color: none;
-	}
-}*/
-
-.sy-effect.sy-app {
-	-webkit-perspective: 1500px;
-	perspective: 1500px;
-}
-
-.sy-effect .sitenav-push {
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	overflow:auto;
-	margin-left:50px;
-}
-
-.sy-effect.sy-menu-open .sitenav-push {
-	-webkit-transform: translate3d(75px, 0, 0px);
-	transform: translate3d(75px, 0, 0px);
-	
-}
-.sy-effect.sy-menu-open.blur .sitenav-push{
-	opacity:0.4;
-}
-
-.sy-effect.sitenav {
-	opacity: 1;
-	width:200px;
-	left: -150px;
-}
-
-.sy-effect.sy-menu-open .sy-effect.sitenav {
-
-	-webkit-transition: left $animationTime, -webkit-transform $animationTime;
-	transition: left $animationTime, transform $animationTime;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-
-	width: 200px;
-	left: 0;
-
-	.activator{
-		width: 50px;
-		& > .activator-icon{
-			width: 50px;
-
-		}
-	}
-	.sitenav-inner{
-		width:150px;
-		ul{
-			&.top{
-				width:150px;
-				left:0px;
-				li{
-					.search{
-						//opacity:1.0;
-						//@include transition($animationTime);
-					}
-				}
-			}
-			&.middle{
-				width:150px;
-				
-				li{
-					a{
-						display:block;
-					}
-				}
-			}
-			&.bottom{
-				width:150px;
-				left:0px;
-				li.logo{
-					.sy{
-					}
-					.mantis{
-						//opacity:1.0;
-						//@include transition($animationTime);
-					}
-				}
-			}
-		}
-	}
-
-}
-
-.sy-effect.sitenav::after {
-	display: none;
 }

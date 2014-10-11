@@ -5,31 +5,32 @@
 </script>
 <% } %>
 
-<div 
-	sy-nav-toggle
+<div
 	id="sy-menu"
-	class="sy-nav sy-app sy-effect"
+	class="sy-nav sy-app"
 >
+	
+	<div ng-controller="SiteNavCtrl" ng-include src="'sitenav/index.tpl.html'"></div>
 
+	<!--
 	<div 
 		id="sitenav"
-		class="sy-nav-menu sitenav sy-effect" 
+		class="sy-nav-menu sitenav" 
 		ui-view="sitenav"
 	>
-	</div><!-- /.sitenav -->
+	</div> /.sitenav -->
 
-	<div 
-		id="chatnav"
-		class="sy-chat-menu" 
-		ui-view="chatnav"
-	>
-	</div><!-- /.chatnav -->
-
-	<div id="sitenav-push" class="sitenav-push">
+	<div class="top-nav" ng-class="{notificationsOpen: notificationsOpen, menuOpen: menuOpen}" ui-view="header">
+	</div><!-- /.header -->
+	
+	<div id="sitenav-push" class="sitenav-push" ng-class="{notificationsOpen: notificationsOpen, menuOpen: menuOpen}">
 		<div class="sitenav-push-inner">
 			
-			<div class="header top" ui-view="header">
-			</div><!-- /.header -->
+			
+
+			<div class="sitealerts">
+            	<alert class="animate-repeat ng-cloak" ng-cloak ng-repeat="alert in sitealerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        	</div>
 
 			<div class="overlay" ui-view="overlay">
 			</div><!-- /.overlay -->

@@ -1,5 +1,7 @@
 <header class="profile-left-user left-header">
-    <h3>{{ user.at }}{{ user.handle }}</h3>
+    <h3>{{ user.firstName + ' ' + user.lastName }}
+        <span>Username: {{ user.at }}{{ user.handle }}</span>
+    </h3>
     <div class="profile-pic">
         <div class="profile-pic-inner online generate-image" signature="{{ user.signature }}"></div>
     </div>

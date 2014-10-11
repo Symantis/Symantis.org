@@ -22,7 +22,13 @@ angular.module( 'services.utils', ['lodash'])
 			alerts.push(data);
 			//$timeout(function(){alerts.splice(index, 1)}, 5000);
 			$timeout(function(){lodash.remove(alerts, {id: data.id})},5000);
-			return;
+			return data;
+		},
+		siteAlert: function(alerts, data){
+			data.id = Date.now();
+			alerts.push(data);
+			$timeout(function(){lodash.remove(alerts, {id: data.id})},5000);
+			return data;
 		},
 		findUserMatches: function(to,from){
 			

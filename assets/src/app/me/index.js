@@ -187,7 +187,7 @@ angular.module( 'symantis.me', [
 	$scope.$parent.toDo = ['Format Activity'];
 	
 	$scope.user = user;
-	$scope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
+	//$scope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
 	//$scope.user.totalToConnections = $scope.user.totalToConnections - $scope.user.reciprocal;
 	//$scope.user.totalFromConnections = $scope.user.totalFromConnections - $scope.user.reciprocal;
 

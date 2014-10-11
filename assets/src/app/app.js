@@ -8,6 +8,7 @@ angular.module( 'symantis', [
 	'ngIdle',
 	'ngAnimate',
 	'ngSailsBind',
+	'flow',
 	//Directives, Templates, Etc...
 	'mm.foundation',
 	'xeditable',
@@ -153,15 +154,21 @@ angular.module( 'symantis', [
 	$rootScope.mantis = aMantis;
 	$rootScope.profileData = aProfileData;
 	
+	$rootScope.sitealerts =  [];
 	$rootScope.alerts =  [];
 	$rootScope.toDo = [];
 
 	$rootScope.activity = aActivity;
 	$rootScope.notifications = aNotifications;
 
+	$rootScope.menuOpen = false;
 	$rootScope.notificationsOpen = false;
+	
 	$rootScope.notificationsToggle = function() {
 		$rootScope.notificationsOpen = !$rootScope.notificationsOpen;
+	}
+	$rootScope.menuToggle = function() {
+		$rootScope.menuOpen = !$rootScope.menuOpen;
 	}
 
 })
@@ -208,7 +215,7 @@ angular.module( 'symantis', [
 	});
 })
 */
-.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal, $sails, cache) {
+.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal, $sails, cache, utils) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
 	$timeout(function() {
@@ -292,6 +299,14 @@ angular.module( 'symantis', [
 		}
 	});
 
+	$sails.on('disconnect', function(){
+		utils.siteAlert($scope.sitealerts, { type: 'error', msg: 'Your connection was lost... Attempting to reconnect' } );
+	});
+	$sails.on('reconnect', function(){
+		utils.siteAlert($scope.sitealerts, { type: 'success', msg: 'Your connection is back' } );
+	});
+	//utils.siteAlert($scope.sitealerts, { type: 'error', msg: 'Your connection was lost... Attempting to reconnect' } );
+
 	//Modals
 	$scope.loginModal = function () {
 
@@ -351,15 +366,15 @@ var aNotifications = [
 			id: 1, 
 			firstName: "Scott",
 			lastName:  "Wyatt",
-			handle: "hamish",
+			handle: "scott",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
 		},
-		verb: 'mentioned',
-		type: 'comment',
+		verb: 'Mentioned',
+		object: 'handle',
 		date: new Date(),
-		notication: '@author \"verb\" you \"type\"',
+		notification: 'Mentioned you in a comment',
 		src: ''
 	},
 	{
@@ -372,8 +387,110 @@ var aNotifications = [
 			status: 'online',
 			signature: Math.random()
 		},
+		verb: 'Messaged',
+		object: 'message',
 		message: 'Hey man\, whats up?',
-		date: new Date()
+		date: new Date(),
+		notification: 'Sent you a message',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Katelin",
+			lastName:  "Bull",
+			handle: "kbull",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Connected',
+		object: 'connection',
+		date: new Date(),
+		notification: 'Added you as a connection',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Messaged',
+		object: 'message',
+		message: 'Yo\, can you help me out?',
+		date: new Date(),
+		notification: 'Sent you a message',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Scott",
+			lastName:  "Wyatt",
+			handle: "scott",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Mentioned',
+		object: 'tag',
+		date: new Date(),
+		notification: 'Tagged your manti',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Messaged',
+		object: 'message',
+		message: 'Yo\, can you help me out?',
+		date: new Date(),
+		notification: 'Sent you a message',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Scott",
+			lastName:  "Wyatt",
+			handle: "scott",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Mentioned',
+		object: 'tag',
+		date: new Date(),
+		notification: 'Tagged your manti',
+		src: ''
+	},
+	{
+		author:{
+			id: 1, 
+			firstName: "Katelin",
+			lastName:  "Bull",
+			handle: "kbull",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		verb: 'Connected',
+		object: 'connection',
+		date: new Date(),
+		notification: 'Added you as a connection',
+		src: ''
 	}
 ];
 

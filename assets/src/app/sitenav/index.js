@@ -3,7 +3,7 @@ angular.module( 'symantis.sitenav', [
 
 .config(function config( $stateProvider, $urlRouterProvider) {
     //$urlRouterProvider.when('', '/');
-
+    /*
     $stateProvider.state( '*', {
         url: '/*',
         views: {
@@ -13,6 +13,7 @@ angular.module( 'symantis.sitenav', [
             }
         }
     });
+    */
 })
 
 .controller( 'SiteNavCtrl', function SiteNavController( $scope, $state, config ) {

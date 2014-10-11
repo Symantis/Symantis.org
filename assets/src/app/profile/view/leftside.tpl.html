@@ -1,6 +1,5 @@
 <header class="profile-left-user left-header">
-    <h3>{{ user.at }}{{ user.handle }}</h3>
-    <div class="profile-pic">
+    <div class="profile-pic margin-top">
         <div class="profile-pic-inner online generate-image" signature="{{ user.signature }}"></div>
     </div>
 </header>
@@ -24,7 +23,7 @@
                 </tr>
                 <tr>
                     <td><a >Two-way Connections</a></td>
-                    <td>{{user.reciprocal || 0}}</td>
+                    <td>{{ user.totalReciprocal || 0}}</td>
                 </tr>
             </table>
         </li>

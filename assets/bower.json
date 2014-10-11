@@ -32,7 +32,8 @@
     "angular-input-match": "~0.0.2",
     "TimelineJS": "~2.33.1",
     "angular-sails-bind": "~1.0.5",
-    "angular-ui-utils": "~0.1.1"
+    "angular-ui-utils": "~0.1.1",
+    "ng-flow": "~2"
   },
   "resolutions": {
     "angular": "~1.3.0"

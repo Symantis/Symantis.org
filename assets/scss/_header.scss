@@ -1,30 +1,35 @@
-.top{
-	//left:50px;
-	//width: calc(100% - 50px);
-	z-index: 99;
-	display:block;
-	position:relative;
-	//height: 50px;
-}
-.top-bar {
-	opacity: 0;
-	display: none;
-}
+$animationTime: 0.3s !default;
+
+
 .top-nav {
-	//position: fixed;
-	
 	padding-top: 0;
 	padding-bottom: 0;
 	height: rem-calc(55px);
 	z-index: 99;
 	margin: 0px;
 	position: fixed;
-    //left: 0;
-	//right: 0px;
     width:100%;
-}
-.top-nav {
-	//z-index: 10;
+
+    -webkit-transition: transform $animationTime ease;
+    -moz-transition: transform $animationTime ease;
+    -o-transition: transform $animationTime ease;
+    -ms-transition: transform $animationTime ease;        
+    transition: transform $animationTime ease;
+
+    &.menuOpen{
+    	transform: translateX(8.3335%);
+    	transform: translate3d(8.3335%, 0, 0);
+    }
+    &.notificationsOpen{
+    	transform: translateX(-7.7775%);
+    	transform: translate3d(-7.7775%, 0, 0);
+    }
+    &.menuOpen.notificationsOpen{
+    	transform: translateX(8.3335%);
+    	transform: translate3d(8.3335%, 0, 0);
+    }
+
+
 	.top-nav-container {
 		//position: fixed;
 		//width: calc(100% - 50px);
@@ -65,23 +70,62 @@
 				padding-bottom: rem-calc(15px);
 				padding-right: 1.875rem;
 				@include font-bold(rem-calc(13px));
-				color: $primary-color;
-				@include no-highlight;
-			}
-			.top-nav-mid {
-				//background-color: white;
-				padding-top: rem-calc(16px);
-				padding-bottom: rem-calc(15px);
-				float:left;
 				@include no-highlight;
 				a {
 					color: $gray;
+					@include transition(200ms);
+					&:hover {
+						color: black;
+					}
+				}
+				.active {
+					color: black;
+				}
+			}
+			.top-nav-mid {
+				//background-color: white;
+				padding-top: rem-calc(15px);
+				padding-bottom: rem-calc(15px);
+				float:left;
+				@include no-highlight;
+				&:nth-child(2) {
+					width: auto;
+					padding-right: 0;
+					a {
+						text-align: center;
+						padding-right: rem-calc(30px);
+					}
+				}
+				&:nth-child(3) {
+					width: auto;
+					padding-left: 0;
+					padding-right: 0;
+					a {
+						text-align: center;
+						border-left: 1px $light solid;
+						padding-right: rem-calc(30px);
+						padding-left: rem-calc(30px);
+					}
+				}
+				&:nth-child(4) {
+					width: auto;
+					padding-left: 0;
+					padding-right: 0;
+					a {
+						text-align: center;
+						border-left: 1px $light solid;
+						padding-left: rem-calc(30px);
+						//padding-right: rem-calc(30px);
+					}
+				}
+				a {
+					color: $gray;
 					font-size: rem-calc(13px);
-					white-space: nowrap;
+					white-space: nowrap;;
 					span{
-						color: $gray;
-						margin-top: rem-calc(6px);
-						padding-top: rem-calc(6px);
+						color: $light;
+						padding-top: rem-calc(10px);
+						//padding-bottom: rem-calc(20px);
 						@include transition(200ms);
 					}
 					&:hover {
@@ -90,20 +134,25 @@
 						}
 					}
 				}
-				.active span {
-					border-top: rem-calc(1px) black solid;
-					color: black;
+				.active {
+					//border-top: rem-calc(1px) $light solid;
+					span {
+						//border-top: rem-calc(1px) $primary-color solid;
+						color: black;
+					}
 				}
 				.header-mid-center {
 					text-align: center;
 				}
 			}
 			.top-nav-right {
-				padding-left: 0;
+				margin-right: 8.4%;
 				padding-top: rem-calc(16px);
 				padding-bottom: rem-calc(16px);
 				padding-right: 0;
 				//background-color: white;
+				width: auto;
+				float: right;
 				text-align: right;
 				@include no-highlight;
 				.top-nav-userOnline {
@@ -227,13 +276,18 @@
 						//border-right: rem-calc(1px) $light solid;
 					}
 					.icon {
-						@include icon(rem-calc(18px),$gray);
+						font-size: rem-calc(18px);
 						@include transition(300ms);
-						opacity: 0;	
+						opacity: 0;
+						//color: $gray;
+						//text-shadow: 0px -1px 0px rgba(0, 0, 0, .75);
+						color: rgba(100,100,100,0.8);
+					    text-shadow: 0px 1px 2px #fff, 0 0 0 #000;
 						&.active {
-							opacity: 1;
+							opacity: 0.8;
 							&:hover {
-								color: darken($gray, 10%);
+								color: rgba(50,50,50,0.8);
+								opacity: 1;
 							}
 						}
 					}

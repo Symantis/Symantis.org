@@ -1,14 +1,15 @@
 
-$time: 0.2s;
+$time: 0.3s;
 
 .notifications-container {
 	position: fixed;
 	right: 0;
 	top: 0;
 	bottom: 0;
-	width: 16.2%;
+	//height: 100%;
+	width: 16.6667%;
 	background-color: $dark;
-	//background-color: rgba(18,20,15,0.9);
+	//background-color: rgba(46,48,44,0.9);
 	z-index: 100;
 	transform: translateX(100%);
     transform: translate3d(100%, 0, 0);
@@ -16,6 +17,10 @@ $time: 0.2s;
 	-webkit-box-shadow: -1px 0px 4px 0px rgba(50, 50, 50, 0);
 	-moz-box-shadow:    -1px 0px 4px 0px rgba(50, 50, 50, 0);
 	box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0);
+
+	/*-webkit-box-shadow: inset 5px 0px 5px 0px rgba(0, 0, 0, 1);
+	-moz-box-shadow:    inset 5px 0px 5px 0px rgba(0, 0, 0, 1);
+	box-shadow:         inset 5px 0px 5px 0px rgba(0, 0, 0, 1);*/
 
 	-webkit-transition: transform $time ease, box-shadow $time ease;                  
     -moz-transition: transform $time ease, box-shadow $time ease;                 
@@ -32,26 +37,32 @@ $time: 0.2s;
 		box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
 	}
 }
+.sitenav-push {
+
+	
+}
 
 .notifications-inner {
-	z-index: 101;
 	width: 100%;
 	position: relative;
-	min-height: 100%;
+	max-height: 100%;
 	display: block;
 	overflow-y: scroll;
 	overflow-x: hidden; 
-	padding: 0 0 rem-calc(55px) 0;
+	padding: rem-calc(55px) 0 rem-calc(55px) 0;
 	margin-bottom: rem-calc(-55px);
+	margin-top: rem-calc(-55px);
 }
 
 .notifications-header {
 	width: 100%;
-	height: rem-calc(56px);
-	border-bottom: 1px $gray solid;
+	height: rem-calc(55px);
+	border-bottom: 1px lighten($dark, 12%) solid;
 	position: relative;
 	display: block;
-	background-color: $dark;
+	z-index: 102;
+	//background-color: $dark;
+	background-color: rgba(46,48,44,0.95);
 	padding-top: rem-calc(14px);
 	padding-left: rem-calc(15px);
 	a {
@@ -65,13 +76,16 @@ $time: 0.2s;
 			position: absolute;
 			right: rem-calc(15px);
 			top: rem-calc(18px);
-			color: white;
+			color: $offWhite;
 			-webkit-transition: color 0.1s ease;                  
 		    -moz-transition: 	color 0.1s ease;                 
 		    -o-transition: 		color 0.1s ease;   
 		    -ms-transition: 	color 0.1s ease;          
 		    transition: 		color 0.1s ease;
 			&:hover {
+				color: white;
+			}
+			&.active {
 				color: $primary-color;
 			}
 		}
@@ -85,7 +99,7 @@ $time: 0.2s;
 		text-align: left;
 		a {
 			padding: rem-calc(3px) rem-calc(15px) rem-calc(4px) rem-calc(15px);
-			color: $primary-color;
+			color: lighten($primary-color, 5%);
 			-webkit-transition: background-color 0.1s ease;                  
 		    -moz-transition: 	background-color 0.1s ease;                 
 		    -o-transition: 		background-color 0.1s ease;   
@@ -93,18 +107,18 @@ $time: 0.2s;
 		    transition: 		background-color 0.1s ease;
 
 		    &:hover {
-		    	color: darken($primary-color, 10%);
-		    	border-color: darken($primary-color, 10%);
+		    	color: darken($primary-color, 5%);
+		    	border-color: darken($primary-color, 5%);
 		    }
 			&.active {
-				background-color: $primary-color;
+				background-color: lighten($primary-color, 5%);
 				color: $dark;
 				opacity: 0.9;
 			}
 			&:first-child {
-				border-top: 1px $primary-color solid;
-				border-bottom: 1px $primary-color solid;
-				border-left: 1px $primary-color solid;
+				border-top: 1px lighten($primary-color, 5%) solid;
+				border-bottom: 1px lighten($primary-color, 5%) solid;
+				border-left: 1px lighten($primary-color, 5%) solid;
 
 				/*border-top: 1px $light solid;
 				border-bottom: 1px $light solid;
@@ -114,9 +128,9 @@ $time: 0.2s;
 				border-bottom-left-radius: 3px;
 			}
 			&:last-child {
-				border-top: 1px $primary-color solid;
-				border-bottom: 1px $primary-color solid;
-				border-right: 1px $primary-color solid;
+				border-top: 1px lighten($primary-color, 5%) solid;
+				border-bottom: 1px lighten($primary-color, 5%) solid;
+				border-right: 1px lighten($primary-color, 5%) solid;
 
 				/*border-top: 1px $light solid;
 				border-bottom: 1px $light solid;
@@ -228,29 +242,115 @@ $time: 0.2s;
 	margin-left: -9px;
 }
 
-.notifications-footer {
+/*.notifications-footer {
 	width: 100%;
 	height: rem-calc(55px);
-	border-top: 1px $gray solid;
+	border-top: 1px lighten($dark, 12%) solid;
 	position: relative;
 	display: block;
-	z-index: 102;
-	background-color: $dark;
+	z-index: 101;
+	//background-color: $dark;
+	background-color: rgba(46,48,44,0.95);
 	padding-top: rem-calc(14px);
 	padding-left: rem-calc(15px);
-}
+}*/
 
 .notifications-list {
 	margin: 0;
 	padding: 0 0 0 rem-calc(15px);
 	list-style: none;
 	width: 100%;
+	height: auto;
+
 	.notification {
 		height: rem-calc(80px);
 		width: 100%;
-		padding-right: rem-calc(10px);
+		padding: rem-calc(10px) rem-calc(10px) rem-calc(10px) 0;
 		display: block;
-		border-bottom: 1px darken($gray,15%) solid;
+		border-bottom: 1px lighten($dark, 5%) solid;
+		overflow: hidden;
+
+		section {
+			float: left;
+			height: 100%;
+			display: table;
+		}
+
+		.notification-icon {
+			//padding-top: rem-calc(10px);
+			width: 15%;
+			span {
+				display: table-cell;
+				vertical-align: middle;
+				font-size: rem-calc(18px);
+				color: $offWhite;
+				position: relative;
+				bottom: -.2rem;
+			}
+		}
+
+		.notification-content {
+			p {
+				@include font-regular(rem-calc(12px));
+				margin: 0;
+				padding: 0;
+				line-height: 1.2;
+				display: table-cell;
+				vertical-align: middle;
+				a {
+					color: $offWhite;
+					-webkit-transition: color 0.1s ease;                  
+				    -moz-transition: 	color 0.1s ease;                 
+				    -o-transition: 		color 0.1s ease;   
+				    -ms-transition: 	color 0.1s ease;          
+				    transition: 		color 0.1s ease;
+					&:hover {
+						color: white;
+					}
+				}
+				span {
+					font-size: rem-calc(10px);
+					color: $light;
+					&.n-date {
+						@include font-italic(rem-calc(10px));
+						color: darken($gray, 10%);
+					}
+				}
+			}
+			width: 70%;
+			float: left;
+		}
+
+		.notification-goto {
+			width: 15%;
+			text-align: right;
+			a {
+				display: table-cell;
+				vertical-align: middle;
+				position: relative;
+				color: $dark;
+				width: rem-calc(24px);
+				height: rem-calc(24px);
+				text-align: center;
+				background-color: darken($primary-color, 10%);
+				border-radius: 50%;
+				float: right;
+				margin-top: rem-calc(17px);
+				-webkit-transition: background-color 0.1s ease;                  
+			    -moz-transition: 	background-color 0.1s ease;                 
+			    -o-transition: 		background-color 0.1s ease;   
+			    -ms-transition: 	background-color 0.1s ease;          
+			    transition: 		background-color 0.1s ease;
+				&:hover {
+					background-color: $primary-color;
+				}
+			}
+			span {
+				font-size: rem-calc(18px);
+				position: relative;
+				bottom: -.05rem;
+			}
+		}
 	}
 }
 
