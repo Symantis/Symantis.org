@@ -4,6 +4,7 @@
 .home-animation {
 	//margin-bottom: -50px;
 	svg {
+		margin-bottom: rem-calc(50px);
 		text {
 			position: absolute !important;
 			bottom: 4rem !important;
