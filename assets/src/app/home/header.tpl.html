@@ -1,13 +1,3 @@
-<section class="top-nav-left medium-3 large-2 large-offset-1 columns"  ng-class="{open: menuOpen, navOpen: notificationsOpen}">
-	<a ui-sref="home"><span></span></a>
-</section>
-<section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="home" ng-class="{active:isActive('/home')}"><span></span></a>
-</section>
-<section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="home" ng-class="{active:isActive('/home')}"><span></span></a>
-</section>
-<section class="top-nav-mid medium-2 large-1 columns">
-	<a ui-sref="home" ng-class="{active:isActive('/home')}"><span></span></a>
-</section>
-				
+<div class="home-user" ng-show="currentUser">
+  <a ui-sref="community">Go to Community home</a>
+</div>

@@ -21,11 +21,11 @@ angular.module( 'symantis.home', [
 			},
 			"header": {
 				controller: 'HeaderCtrl',
-                template: ''
+                templateUrl: 'home/header.tpl.html'
 			},
 			"subheader@home": {
 				controller: 'HomeHeaderCtrl',
-                templateUrl: 'home/header.tpl.html'
+                templateUrl: ''
 			}
 		}
 	});
