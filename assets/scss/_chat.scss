@@ -39,10 +39,7 @@ $time: 0.3s;
 }
 .sitenav-push {
 
-	&.notificationsOpen {
-		transform: translateX(-8.3335%);
-    	transform: translate3d(-8.3335%, 0, 0);
-	}
+	
 }
 
 .notifications-inner {
