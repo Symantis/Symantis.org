@@ -13,9 +13,9 @@ $animationTime: 0.3s !default;
 	transform: translateX(-100%);
     transform: translate3d(-100%, 0, 0);
 
-	-webkit-box-shadow: -1px 0px 4px 0px rgba(50, 50, 50, 0);
-	-moz-box-shadow:    -1px 0px 4px 0px rgba(50, 50, 50, 0);
-	box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0);
+	-webkit-box-shadow: 1px 0px 4px 0px rgba(50, 50, 50, 0);
+	-moz-box-shadow:    1px 0px 4px 0px rgba(50, 50, 50, 0);
+	box-shadow:         1px 0px 4px 0px rgba(50, 50, 50, 0);
 
 	-webkit-transition: transform $animationTime ease, box-shadow $animationTime ease;                  
     -moz-transition: transform $animationTime ease, box-shadow $animationTime ease;                 
@@ -27,13 +27,13 @@ $animationTime: 0.3s !default;
 		transform: translate3d(0%, 0, 0);
 		transform: translateX(0%);
 
-		-webkit-box-shadow: -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
-		-moz-box-shadow:    -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
-		box-shadow:         -1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+		-webkit-box-shadow: 1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+		-moz-box-shadow:    1px 0px 4px 0px rgba(50, 50, 50, 0.71);
+		box-shadow:         1px 0px 4px 0px rgba(50, 50, 50, 0.71);
 	}
 
 	.mainmenu-toggle{
-		height:55px;
+		height:53px;
 		width:55px;
 		position: absolute;
 		top:0px;
