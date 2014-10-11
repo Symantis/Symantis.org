@@ -624,7 +624,7 @@ angular.module('sy.templates.homeanimation', [])
                 var story = [{
                     start: {
                         text:'',
-                        duration: 3000
+                        duration: 1000
                     },
                     zero: {
                         text: "There are millions of people that make the internet.",
@@ -632,11 +632,11 @@ angular.module('sy.templates.homeanimation', [])
                     },
                     one: {
                         text: "Some of them are designers.",
-                        duration: 3000
+                        duration: 2000
                     },
                     two: {
                         text: "Some of them are developers.",
-                        duration: 3000
+                        duration: 2000
                     },
                     three: {
                         text: "Some people say they are totally different.",
@@ -644,7 +644,7 @@ angular.module('sy.templates.homeanimation', [])
                     },
                     four: {
                         text: "But we don’t think so.",
-                        duration: 3000
+                        duration: 2000
                     },
                     five: {
                         text: "They have something in common.",
@@ -656,7 +656,7 @@ angular.module('sy.templates.homeanimation', [])
                     },
                     seven: {
                         text: "Symantis brings them together.",
-                        duration: 3000
+                        duration: 2000
                     },
                     eight: {
                         text: "Blurring the line between Design and Development,",
@@ -668,7 +668,7 @@ angular.module('sy.templates.homeanimation', [])
                     },
                     ten: {
                         text: "Free, Open, Different.",
-                        duration: 3000
+                        duration: 2000
                     },
                     eleven: {
                         text: "Symantis",
@@ -715,8 +715,8 @@ angular.module('sy.templates.homeanimation', [])
                     .attr("y", h-10)
                     .text(function (d) { return d.start.text; })
                     .style("text-anchor", "middle")
-                    .attr("font-family", "'open_sansregular', sans-serif")
-                    .attr("font-size", "25px")
+                    .attr("font-family", "'bitter2', sans-serif")
+                    .attr("font-size", "2.6rem")
                     .attr("fill", "black");
 
                 var animationTime = function(time){
@@ -740,7 +740,7 @@ angular.module('sy.templates.homeanimation', [])
                                 .text(function (d) { return d[nextAnimation].text; });
 
                             currentAnimation = nextAnimation;
-                            animationTime(3000);
+                            animationTime(2400);
                         }
                     }, time);
                 }  
