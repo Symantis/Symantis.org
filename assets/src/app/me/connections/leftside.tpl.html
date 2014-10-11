@@ -4,13 +4,14 @@
 </header>
 <div class="left-content">
     <div class="connections-online-nav">
+        
         <ul>
-            <li class="animate-repeat" ng-repeat="user in users">
+            <li class="animate-repeat" ng-repeat="user in user.connections">
                 <a 
                     ui-sref="profile.view({ handle: user.handle })" 
                     ng-show="user.status == 'online'"
                 >
-                    <p>{{ user.firstName + ' ' + user.lastName }}</p>
+                    {{ user.firstName + ' ' + user.lastName }}
                 </a>
             </li>
         </ul>
@@ -24,7 +25,7 @@
         <ul>
             <li 
                 class="animate-repeat" 
-                ng-repeat="user in users"
+                ng-repeat="user in user.suggestions"
             >
                 <a ui-sref="profile.view({ handle: user.handle })" title="View {{ user.firstName }}'s Profile">
                     <div class="connections-suggestions-pic suggestions-{{ user.status }} generate-image" signature="{{ user.signature }}">
