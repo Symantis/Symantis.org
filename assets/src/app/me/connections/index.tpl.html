@@ -43,11 +43,15 @@
                 <li><a >Two Way Connections <span class="icon-check icon"></span></a></li>
             </ul>
         </div>
-
+        <div ng-show="loadingSection" class="preloader-container">
+                <!-- loadingSection is a variable defined in the $scope -->
+                <div class="preloader">
+                </div>
+        </div>
         <div class="row connections-container">
             <article 
                 class="animate-repeat connections-individual medium-6 columns"
-                ng-repeat="user in currentUser.connections | filter:queryValue track by $index"
+                ng-repeat="user in user.connections | filter:queryValue track by $index"
             >
                 <div class="connection-type"><span class="icon-2way icon"></span></div>
                 <div class="connections-pic connections-{{ user.status }} generate-image" signature="{{ user.signature }}"></div>

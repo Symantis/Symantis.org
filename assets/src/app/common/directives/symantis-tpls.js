@@ -159,7 +159,7 @@ angular.module('sy.templates.sitenav', [])
                     //console.log(scope);
                     console.log('close menu');
                 }else{
-                    console.log(scope.menuOpen);
+                    //console.log(scope.menuOpen);
                 }
               });
 

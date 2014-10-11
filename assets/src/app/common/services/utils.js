@@ -24,6 +24,11 @@ angular.module( 'services.utils', ['lodash'])
 			$timeout(function(){lodash.remove(alerts, {id: data.id})},5000);
 			return;
 		},
+		siteAlert: function(alerts, data){
+			data.id = Date.now();
+			alerts.push(data);
+			return;
+		},
 		findUserMatches: function(to,from){
 			
 			var merged = _.union(to, from);

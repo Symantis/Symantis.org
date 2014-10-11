@@ -50,6 +50,12 @@ quote {
 		color: inherit;
 	}
 }
+.sitealerts{
+	position:fixed;
+	top:55px;
+	width:100%;
+	z-index:100;
+}
 .tooltip {
 	border-radius: 5px;
 	padding-top: 6px;

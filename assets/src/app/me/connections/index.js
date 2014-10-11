@@ -17,9 +17,17 @@ angular.module( 'symantis.me.connections', [
 	});
 })
 */
-.controller( 'ConnectionsCtrl', function ConnectionsController( $scope, titleService ) {
+.controller( 'ConnectionsCtrl', function ConnectionsController( $scope, titleService, UserModel ) {
 	titleService.setTitle('Connections');
 	$scope.$parent.toDo = [];
+
+	$scope.loadingSection = true;
+	//console.log($scope.currentUser);
+	UserModel.getConnections($scope.currentUser.id).then(function(connections){
+		$scope.user.connections = connections;
+		$scope.loadingSection = false;
+	});
+
 	
 })
 .controller( 'MeConnectionsLeftsideCtrl', function MeConnectionsLeftsideController( $scope ) {

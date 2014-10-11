@@ -153,6 +153,7 @@ angular.module( 'symantis', [
 	$rootScope.mantis = aMantis;
 	$rootScope.profileData = aProfileData;
 	
+	$rootScope.sitealerts =  [];
 	$rootScope.alerts =  [];
 	$rootScope.toDo = [];
 
@@ -213,7 +214,7 @@ angular.module( 'symantis', [
 	});
 })
 */
-.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal, $sails, cache) {
+.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal, $sails, cache, utils) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
 	$timeout(function() {
@@ -296,6 +297,11 @@ angular.module( 'symantis', [
 				break;
 		}
 	});
+
+	$sails.on('disconnect', function(){
+		utils.siteAlert($scope.sitealerts, { type: 'error', msg: 'Your connection was lost... Attempting to reconnect' } );
+	});
+	//utils.siteAlert($scope.sitealerts, { type: 'error', msg: 'Your connection was lost... Attempting to reconnect' } );
 
 	//Modals
 	$scope.loginModal = function () {

@@ -108,9 +108,13 @@ module.exports = {
 		.populate('toConnections')
 		.populate('fromConnections')
 		.then(function (model) {
-			model.totalToConnections = model.toConnections.length;
-			model.totalFromConnections = model.fromConnections.length;
-			model.totalConnections = model.totalToConnections + model.totalFromConnections;
+			var totalToConnections = model.toConnections.length;
+			var totalFromConnections = model.fromConnections.length;
+			var totalReciprocal = totalToConnections > totalFromConnections ?  totalToConnections - totalFromConnections : totalFromConnections - totalToConnections;
+			model.totalReciprocal = totalReciprocal;
+			model.totalToConnections = totalToConnections - totalReciprocal;
+			model.totalFromConnections = totalFromConnections - totalReciprocal;
+			model.totalConnections = totalToConnections + totalFromConnections - totalReciprocal;
 			return [model];
 		});
 
@@ -121,13 +125,19 @@ module.exports = {
 		.populate('toConnections')
 		.populate('fromConnections')
 		.then(function(model){
-			console.log(model.connections);
+			//console.log(model.connections);
 			return model;
 		})
 		.then(function (model) {
-			model.totalToConnections = model.toConnections.length;
-			model.totalFromConnections = model.fromConnections.length;
-			model.totalConnections = model.totalToConnections + model.totalFromConnections;
+			
+			var totalToConnections = model.toConnections.length;
+			var totalFromConnections = model.fromConnections.length;
+			var totalReciprocal = totalToConnections > totalFromConnections ?  totalToConnections - totalFromConnections : totalFromConnections - totalToConnections;
+			model.totalReciprocal = totalReciprocal;
+			model.totalToConnections = totalToConnections - totalReciprocal;
+			model.totalFromConnections = totalFromConnections - totalReciprocal;
+			model.totalConnections = totalToConnections + totalFromConnections - totalReciprocal;
+
 			return [model];
 		});
 	}
