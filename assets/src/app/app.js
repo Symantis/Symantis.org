@@ -8,6 +8,7 @@ angular.module( 'symantis', [
 	'ngIdle',
 	'ngAnimate',
 	'ngSailsBind',
+	'flow',
 	//Directives, Templates, Etc...
 	'mm.foundation',
 	'xeditable',
@@ -300,6 +301,9 @@ angular.module( 'symantis', [
 
 	$sails.on('disconnect', function(){
 		utils.siteAlert($scope.sitealerts, { type: 'error', msg: 'Your connection was lost... Attempting to reconnect' } );
+	});
+	$sails.on('reconnect', function(){
+		utils.siteAlert($scope.sitealerts, { type: 'success', msg: 'Your connection is back' } );
 	});
 	//utils.siteAlert($scope.sitealerts, { type: 'error', msg: 'Your connection was lost... Attempting to reconnect' } );
 
