@@ -91,26 +91,23 @@ html,
 body,
 .sy-app,
 .sitenav-push,
-//.sitenav-push-inner,
-.sitenav {
+.sitenav-push-inner{
 	height: 100%;
 }
 
 .sy-app {
 	position: relative;
 	overflow: hidden;
+	overflow-y:scroll;
 }
 
 .sitenav-push,
 .sitenav-push-inner {
-	position: relative;
+	//position: relative;
 }
 
 .sitenav-push {
-	position: relative;
-	left: 0;
 	z-index: 0;
-	height: 100%;
 	background: white;
 
 	-webkit-transition: transform $animationTime ease;
@@ -150,12 +147,8 @@ body,
 
 			&.top{
 				position:absolute;
-				//z-index:101;
 				left:0px;
-				//width: 50px;
 				min-height:50px;
-				//-webkit-transition: left $animationTime;
-				//transition: left $animationTime;
 				li {
 					font-size:20px;
 					line-height:50px;
@@ -218,14 +211,10 @@ body,
 			
 			&.bottom{
 				position:absolute;
-				//z-index:100;
 				left:0px;
 				min-height:50px;
 				bottom:5px;
 				display:table;
-				
-				-webkit-transition: left $animationTime;
-				transition: left $animationTime;
 				
 				li.logo{
 					display:table-cell;

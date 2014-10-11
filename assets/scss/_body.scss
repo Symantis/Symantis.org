@@ -313,11 +313,13 @@ quote {
 .sitenav-push-inner {
 	height: 100%;
 }
-.footer {
+.footer-container{
 	border-top: 1px $light solid;
+}
+.footer {
+	
 	height: 55px;
 	display: block;
-	margin: 0;
 	padding-top: 8px;
 	padding-bottom: 10px;
 	position: relative;

@@ -445,7 +445,7 @@ angular.module('sy.templates.scroll',['duScroll'])
         restrict: 'C',
         link: function ($scope, element, attrs){
             
-          var viewport = angular.element($document[0].querySelector('.sitenav-push'));
+          var viewport = angular.element($document[0].querySelector('.sy-app'));
           angular.element(viewport).bind("scroll", function() {
                 var scrollTop = viewport.scrollTop();
                 if(scrollTop > 0){
@@ -459,7 +459,7 @@ angular.module('sy.templates.scroll',['duScroll'])
             
             var top = 0;
             
-            var viewport = angular.element($document[0].querySelector('.sitenav-push'));
+            var viewport = angular.element($document[0].querySelector('.sy-app'));
             var duration = (viewport[0].offsetHeight + viewport[0].scrollTop / 2); //milliseconds
             //Scroll to the exact position
             viewport.scrollTop(top, duration).then(function() {
