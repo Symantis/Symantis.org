@@ -37,8 +37,8 @@
                 <div class="preloader">
                 </div>
             </div>
-            
-			<div id="main" class="container {{ currentState }}" ui-view="main">
+
+			<div id="main" class="container" ng-class="currentState" ui-view="main">
 			</div><!-- /.container -->
 
 			<div ui-view="footer">
