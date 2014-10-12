@@ -188,12 +188,15 @@ angular.module( 'symantis', [
 	});
 
 	$root.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) { 
+			$root.currentState = fromState.name.replace(".", "-");
+
 			$root.toDo = [];
 			// Show a loading message until promises are not resolved
 			$root.loadingView = true;
 		
 	});
 	$root.$on('$stateChangeSuccess', function(e, toState, toParams, fromState, fromParams) { 
+		$root.currentState = toState.name.replace(".", "-");
 		// Hide loading message
 		$root.loadingView = false;
 
