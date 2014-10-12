@@ -29,7 +29,11 @@
 	<div class="notifications-inner">		
 
 		<ul class="notifications-list">
-			<li class="notification" ng-repeat="notification in notifications">
+			<li 
+				class="notification" 
+				ng-repeat="notification in notifications"
+				ng-class="{viewed: notification.viewed}"
+			>
 				<section class="notification-icon">
 					<span class="icon-talk-chat" ng-show="notification.object == 'message'"></span>
 					<span class="icon-contact-add-2" ng-show="notification.object == 'connection'"></span>
@@ -43,7 +47,6 @@
 						<span class="n-message">{{ notification.notification }}</span><br />
 						<span class="n-date">{{ notification.date | date }}</span>
 					</p>
-					
 				</section
 				><section class="notification-goto">
 					<a ng-src="{{ notification.src }}"><span class="icon-arrow-right"></span></a>

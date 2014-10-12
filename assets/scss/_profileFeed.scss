@@ -36,6 +36,7 @@
 			@include font-regular(rem-calc(12px));
 			color: $gray;
 			width: auto;
+			float: left;
 		}
 		.profile-pod-type {
 			float: right;

@@ -5,6 +5,7 @@
 		        <h3>{{ board.title }}</h3>
 		        <div class="board-page-apply">
 		        	<a 
+		        		ng-show="currentUser"
 		        		class="apply-button" 
 		        		title="Apply for this Opportunity" 
 		        		ng-click="opportunityapplyModal()"

@@ -271,6 +271,19 @@ $time: 0.3s;
 		border-bottom: 1px lighten($dark, 5%) solid;
 		overflow: hidden;
 
+		&.viewed {
+			@include tranSpec(opacity, 0.2s);
+			opacity: 0.4;
+			&:hover {
+				opacity: 1;
+			}
+			.notification-goto {
+				a {
+					background-color: $gray;
+				}
+			}
+		}
+
 		section {
 			float: left;
 			height: 100%;

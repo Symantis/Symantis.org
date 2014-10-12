@@ -379,6 +379,7 @@ var aNotifications = [
 		object: 'handle',
 		date: new Date(),
 		notification: 'Mentioned you in a comment',
+		viewed: false,
 		src: ''
 	},
 	{
@@ -395,6 +396,7 @@ var aNotifications = [
 		object: 'use',
 		date: new Date(),
 		notification: 'Used your manti',
+		viewed: false,
 		src: ''
 	},
 	{
@@ -412,6 +414,7 @@ var aNotifications = [
 		message: 'Hey man\, whats up?',
 		date: new Date(),
 		notification: 'Sent you a message',
+		viewed: false,
 		src: ''
 	},
 	{
@@ -428,6 +431,7 @@ var aNotifications = [
 		object: 'connection',
 		date: new Date(),
 		notification: 'Added you as a connection',
+		viewed: true,
 		src: ''
 	},
 	{
@@ -445,6 +449,7 @@ var aNotifications = [
 		message: 'Yo\, can you help me out?',
 		date: new Date(),
 		notification: 'Sent you a message',
+		viewed: true,
 		src: ''
 	},
 	{
@@ -461,6 +466,7 @@ var aNotifications = [
 		object: 'tag',
 		date: new Date(),
 		notification: 'Tagged your manti',
+		viewed: true,
 		src: ''
 	},
 	{
@@ -478,6 +484,7 @@ var aNotifications = [
 		message: 'Yo\, can you help me out?',
 		date: new Date(),
 		notification: 'Sent you a message',
+		viewed: true,
 		src: ''
 	},
 	{
@@ -494,6 +501,7 @@ var aNotifications = [
 		object: 'handle',
 		date: new Date(),
 		notification: 'Mentioned you in a comment',
+		viewed: true,
 		src: ''
 	},
 	{
@@ -510,6 +518,7 @@ var aNotifications = [
 		object: 'tag',
 		date: new Date(),
 		notification: 'Tagged your manti',
+		viewed: true,
 		src: ''
 	},
 	{
@@ -526,6 +535,7 @@ var aNotifications = [
 		object: 'connection',
 		date: new Date(),
 		notification: 'Added you as a connection',
+		viewed: true,
 		src: ''
 	},
 	{
@@ -542,6 +552,7 @@ var aNotifications = [
 		object: 'use',
 		date: new Date(),
 		notification: 'Used your manti',
+		viewed: true,
 		src: ''
 	},
 	{
@@ -559,6 +570,7 @@ var aNotifications = [
 		message: 'Yo\, can you help me out?',
 		date: new Date(),
 		notification: 'Sent you a message',
+		viewed: true,
 		src: ''
 	},
 	{
@@ -575,6 +587,7 @@ var aNotifications = [
 		object: 'tag',
 		date: new Date(),
 		notification: 'Tagged your manti',
+		viewed: true,
 		src: ''
 	},
 	{
@@ -591,6 +604,7 @@ var aNotifications = [
 		object: 'connection',
 		date: new Date(),
 		notification: 'Added you as a connection',
+		viewed: true,
 		src: ''
 	}
 ];
