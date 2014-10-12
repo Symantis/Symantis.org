@@ -9,9 +9,11 @@
             <li class="animate-repeat" ng-repeat="user in user.connections">
                 <a 
                     ui-sref="profile.view({ handle: user.handle })" 
-                    ng-show="user.status == 'online'"
+                    ng-show="user.status == 'active'"
                 >
+                    <p>
                     {{ user.firstName + ' ' + user.lastName }}
+                    </p>
                 </a>
             </li>
         </ul>

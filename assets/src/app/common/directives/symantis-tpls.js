@@ -1,6 +1,7 @@
 angular.module("sy.templates", [
     'sy.templates.inputs',
     'sy.templates.sitenav', 
+   // 'sy.templates.activity',
     'sy.templates.homeanimation', 
     'sy.templates.userimage', 
     'sy.templates.mainleft',
@@ -537,7 +538,7 @@ angular.module('sy.templates.userimage', [])
         },
         link: function (scope, element, attrs){
             //console.log("signature: "+attrs.signature);
-            
+            console.log(attrs.signature);
             var rand = Math.floor(attrs.signature * 10) + 1;
 
             var w = element[0].offsetWidth;
@@ -596,6 +597,88 @@ angular.module('sy.templates.userimage', [])
 
         }
     }
+}]);
+
+angular.module('sy.templates.activity', [])
+.directive('profileActivityContent', ['$window', function ($window) {
+     return {
+        restrict: 'C',
+        link: function ($scope, element, attrs){
+
+            var margin = {top: 5.5, right: 0, bottom: 5.5, left: 19.5},
+                width = element[0].offsetWidth - margin.left - margin.right,
+                height = 130 - margin.top - margin.bottom,
+                size = height / 7;
+
+            var day = function(d) { return (d.getDay() + 6) % 7; }, // monday = 0
+                week = d3.time.format("%W"), // monday-based week number
+                date = d3.time.format("%Y-%m-%d"),
+                percent = d3.format("+.1%");
+
+            var color = d3.scale.quantize()
+                .domain([-.05, .05])
+                .range(d3.range(9));
+
+            var svg = d3.select(element[0]).append("svg:svg")
+                .data(d3.range(2013, 2015))
+              .enter()
+                .append("svg:svg")
+                .attr("class", "RdYlGn")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            svg.append("text")
+                .attr("transform", "translate(-6," + size * 3.5 + ")rotate(-90)")
+                .attr("text-anchor", "middle")
+                .text(function(d) { return d; });
+
+            var rect = svg.selectAll(".day")
+                .data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+                .enter().append("rect")
+                .attr("class", "day")
+                .attr("width", size)
+                .attr("height", size)
+                .attr("x", function(d) { return week(d) * size; })
+                .attr("y", function(d) { return day(d) * size; })
+                .map(date);
+
+            rect.append("title")
+                .text(function(d) { return d; });
+
+            svg.selectAll(".month")
+                .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+                .enter().append("path")
+                .attr("class", "month")
+                .attr("d", monthPath);
+
+            d3.csv("dji.csv", function(csv) {
+              var data = d3.nest()
+                .key(function(d) { return d.Date; })
+                .rollup(function(d) { return (d[0].Close - d[0].Open) / d[0].Open; })
+                .map(csv);
+
+              rect.filter(function(d) { return d in data; })
+                  .attr("class", function(d) { return "day q" + color(data[d]) + "-9"; })
+                .select("title")
+                  .text(function(d) { return d + ": " + percent(data[d]); });
+            });
+
+            function monthPath(t0) {
+              var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+                  d0 = +day(t0), w0 = +week(t0),
+                  d1 = +day(t1), w1 = +week(t1);
+              return "M" + (w0 + 1) * size + "," + d0 * size
+                  + "H" + w0 * size + "V" + 7 * size
+                  + "H" + w1 * size + "V" + (d1 + 1) * size
+                  + "H" + (w1 + 1) * size + "V" + 0
+                  + "H" + (w0 + 1) * size + "Z";
+            }
+
+        }
+    }
+
 }]);
 
 angular.module('sy.templates.homeanimation', [])

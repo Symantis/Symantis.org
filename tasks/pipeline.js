@@ -50,6 +50,7 @@ var jsFilesToInject = [
   'bower_components/ngprogress/build/ngProgress.js',
   'bower_components/angular-scroll/angular-scroll.js',
   'bower_components/d3/d3.js',
+  
   'bower_components/angular-xeditable/dist/js/xeditable.js',
   //'bower_components/angular-masonry-directive/src/angular-masonry-directive.js',
   //'bower_components/angular-masonry/angular-masonry.js',
