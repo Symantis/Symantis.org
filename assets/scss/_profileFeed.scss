@@ -1,0 +1,30 @@
+.profile-feed-center {
+	position: relative;
+}
+.profile-feed-container {
+	margin-right:-14px;
+}
+.gutter-sizer{
+	width:0px;
+}
+.profile-pod-wrap {
+	width: 33.333%;
+	padding: 0 15px 20px 0;
+	&:after{
+		content:"";
+		clear:both;
+		display:block;
+	}
+	&.large {
+		width: 66.666%;
+	}
+}
+.profile-pod {
+	position: relative;
+	border: 1px $dark solid;
+	background-color: white;
+	overflow: hidden;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+}

@@ -637,7 +637,7 @@ var aActivity = [
 		verb: 'addedTo',
 		type: 'manti',
 		status: '@author added #part to #object ',
-		description: 'Added an awesome new feature!',
+		description: 'Added an awesome new feature and also Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.!',
 		createdAt: new Date(),
 		object: 'SyQuery',
 		author:{
