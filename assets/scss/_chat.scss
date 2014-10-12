@@ -328,7 +328,7 @@ $time: 0.3s;
 					color: $light;
 					&.n-date {
 						@include font-italic(rem-calc(10px));
-						color: darken($gray, 10%);
+						color: $light;
 					}
 				}
 			}

@@ -1,40 +1,58 @@
-.docs-left {
-	header {
-		margin-bottom: rem-calc(-40px);
-	}
-}
-.docs-left-content {
-}
 .docs-nav {
-	padding-top: rem-calc(20px);
-	padding-bottom: rem-calc(20px);
-	h3 {
-		padding-top: rem-calc(7px);
-		a {
-			text-align: left;
-			width: 100%;
-			@include font-semi(rem-calc(16px));
-			margin: 0;
-			@include transition(100ms);
-			&:hover {
-				color: $primary-color;
-			}
-		}
-	}
-	li {
-		padding: 0;
+	ul {
+		list-style: none;
+		float: left;
+		position: relative;
+		width: 100%;
 		margin: 0;
-		line-height: rem-calc(12px);
-		a {
-			text-align: left;
-			line-height: rem-calc(14px);
+		li {
+			padding: 0 0 rem-calc(8px) 0 !important;
+			margin: 0 !important;
+			line-height: 1;
+			float: left;
 			width: 100%;
-			@include font-regular(rem-calc(12px));
-			margin: 0;
-			padding: 0;
-			@include transition(100ms);
-			&:hover {
-				color: $gray;
+			position: relative;
+			h3 {
+				padding: 0;
+				margin: 0;
+				a {
+					text-align: left;
+					width: 100%;
+					@include font-semi(rem-calc(14px));
+					color: $gray;
+					margin: 0;
+					@include transition(100ms);
+					&:hover {
+						color: $dark;
+					}
+				}
+			}
+			a {
+				padding: 0;
+				margin: 0;
+				@include font-regular(12px);
+				color: darken($light, 10%);
+				@include transition(100ms);
+				line-height: 1.4;
+				float: left;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				&:hover {
+					color: $dark;
+				}
+				&.active {
+					border-left: 4px $primary-color solid;
+					color: $darkest;
+					padding-left: rem-calc(8px);
+				}
+			}
+			ul {
+				padding-left: rem-calc(20px) !important;
+				padding-top: rem-calc(12px) !important;
+				li {
+					padding-bottom: rem-calc(4px);
+				}
 			}
 		}
 	}
@@ -42,8 +60,8 @@
 .docs-main-content {
 	margin: 0;
 	padding: 0;
-	overflow-y: auto; 
-	margin-top: rem-calc(-20px);
+	overflow-y: auto;
+	padding-bottom: rem-calc(100px); 
 	border-bottom: rem-calc(1px) black solid;
 }
 .docs-category {
@@ -55,13 +73,20 @@
 	h1 {
 		@include font-semi(rem-calc(26px));
 		line-height: rem-calc(38px);
-		padding-bottom: 0;
+		padding-bottom: rem-calc(10px);
+		white-space: pre-wrap;
 	}
 	h2 {
 		@include font-semi(rem-calc(18px));
 		line-height: rem-calc(26px);
-		padding-bottom: rem-calc(10px);
+		//padding-bottom: rem-calc(10px);
 		padding-top: rem-calc(8px);
+		margin: 0;
+	}
+	h3 {
+		@include font-semi(rem-calc(14px));
+		padding-bottom: rem-calc(5px);
+		padding-top: rem-calc(5px);
 		margin: 0;
 	}
 	p {
@@ -81,6 +106,18 @@
 	}
 	.code-snippet {
 		margin-top: rem-calc(10px);
+	}
+}
+.docs-end {
+	line-height: rem-calc(18px);
+	text-align: left;
+	width: 100%;
+	@include font-regular(rem-calc(12px));
+	margin: 0;
+	padding: rem-calc(200px) 0 rem-calc(200px) 0;
+	p {
+		border-left: 1px $light solid;
+		padding-left: rem-calc(20px); 
 	}
 }
 
