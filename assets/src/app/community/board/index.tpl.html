@@ -49,9 +49,11 @@
                 <li ng-show="currentUser"><a >From Connections <span class="icon-check icon"></span></a></li>
             </ul>
         </div>
+
         <section class="clearfix">
             <alert class="animate-repeat" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
         </section>
+        
         <div 
             masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile", "gutter": ".gutter-sizer" }' 
             class="board-container" 

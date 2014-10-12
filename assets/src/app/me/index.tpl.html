@@ -15,6 +15,7 @@
 
         </div>
     </section>
+    
     <section class="medium-9 large-8 large-offset-3 medium-offset-3 columns main-center profile-center">
 
         <header class="profile-sub-nav">
@@ -29,7 +30,7 @@
                     placeholder="Search" 
                 />
             </div>
-            <div class="profile-sub-nav-right" ng-init="isConnected = false">
+            <div class="profile-sub-nav-right">
             </div>
         </header>
         <div class="sort-container" id="profile-sort-menu">
@@ -39,32 +40,51 @@
             </ul>
         </div>
 
-        <article class="activity-{{ post.verb }}" ng-repeat="post in activity">
-            <div class="activity-{{ post.type }}">
-                <div>{{ post.verb }}
-                {{ post.type }}
+        <section class="clearfix">
+            <alert class="animate-repeat" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        </section>
+
+        <div 
+            masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".profile-pod", "gutter": ".gutter-sizer" }' 
+            class="profile-feed-container" 
+            ui-view="profile-feed"
+        >
+            <div class="gutter-sizer"></div>
+
+            <article 
+                masonry-tile
+                class="activity-{{ post.verb }} profile-pod" 
+                ng-repeat="post in activity"
+            >
+                <div class="activity-{{ post.type }}">
+                    <div>{{ post.verb }}
+                    {{ post.type }}
+                    </div>
+                    <div>
+                    {{ post.status }}
+                    </div>
+                    <div>
+                    {{ post.description }}
+                    </div>
+                    <div>
+                    {{ post.createdAt | date }}
+                    </div>
+                    <div>
+                    {{ post.object }}
+                    </div>
+                    <div>
+                    {{ post.part }}
+                    </div>
+                    <div>
+                    {{ post.author.at }}{{ post.author.handle }}
+                    </div>
                 </div>
-                <div>
-                {{ post.status }}
-                </div>
-                <div>
-                {{ post.description }}
-                </div>
-                <div>
-                {{ post.createdAt | date }}
-                </div>
-                <div>
-                {{ post.object }}
-                </div>
-                <div>
-                {{ post.part }}
-                </div>
-                <div>
-                {{ post.author.at }}{{ post.author.handle }}
-                </div>
-            </div>
-        </article>
+            </article>
+
+        </div>
+
     </section>
+
     <section class="medium-0 large-1 columns main-right">
         <header class="right-header">
         	<!-- Main Right Heading -->
