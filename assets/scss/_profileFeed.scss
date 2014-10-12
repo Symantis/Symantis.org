@@ -27,4 +27,18 @@
 	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	.profile-pod-header {
+		padding: rem-calc(10px);
+		border-bottom: rem-calc(1px) $light solid;
+		width: 100%;
+		height: rem-calc(50px);
+		p {
+			@include font-regular(rem-calc(12px));
+			color: $gray;
+			width: auto;
+		}
+		.profile-pod-type {
+			float: right;
+		}
+	}
 }
