@@ -239,11 +239,11 @@ module.exports.routes = {
     action: 'index'
   },
   //Handle "/creator" queries "Creator App"
-  'get /security': {
+  'get /currency': {
     controller: 'HomeController',
     action: 'index'
   },
-  'get /security/*': {
+  'get /currency/*': {
     controller: 'HomeController',
     action: 'index'
   },

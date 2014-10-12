@@ -45,7 +45,7 @@ angular.module( 'symantis', [
 	//Privacy
 	'symantis.privacy',
 	//Security
-	'symantis.security',
+	'symantis.currency',
 	'symantis.roadmap',
 	//More
 	'symantis.more',
