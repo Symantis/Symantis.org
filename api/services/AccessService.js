@@ -3,7 +3,12 @@
 module.exports = {
 
     checkAccessArea: function(isAuthenticated, route) {
-        var requiresAccess = ['/me', '/me/*'];
+        var requiresAccess = [
+            '/me', 
+            '/me/*', 
+            '/community/queries/new',
+            '/community/board/new'
+        ];
         var access = true;
         
         for(var i in requiresAccess){

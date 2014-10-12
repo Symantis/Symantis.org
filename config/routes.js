@@ -148,6 +148,16 @@ module.exports.routes = {
     action: 'index'
   },
 
+  //Handle "/chat" queries "Chat Section"
+  'get /chat': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  'get /chat/*': {
+    controller: 'HomeController',
+    action: 'index'
+  },
+  
   //Handle "/community" queries "Community Section, News, Queries"
   'get /community': {
     controller: 'HomeController',
@@ -200,15 +210,7 @@ module.exports.routes = {
     action: 'index'
   },
 
-  //Handle "/chat" queries "Chat Section"
-  'get /chat': {
-    controller: 'HomeController',
-    action: 'index'
-  },
-  'get /chat/*': {
-    controller: 'HomeController',
-    action: 'index'
-  },
+  
   
   //Handle "/creator" queries "Creator App"
   'get /docs': {
