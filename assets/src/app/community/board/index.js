@@ -17,9 +17,13 @@ angular.module( 'symantis.community.board', [
 	});
 })
 */
-.controller( 'BoardCtrl', function BoardController( $scope, titleService ) {
+.controller( 'BoardCtrl', function BoardController( $scope, titleService, utils ) {
 	titleService.setTitle('Board');
 	$scope.$parent.toDo = [];
+
+	$scope.removeBoard = function(id){
+		utils.removeBoard($scope.opportunities, id);
+	}
 
 })
 .controller( 'BoardViewCtrl', function BoardViewController( $scope, titleService, $state, $stateParams  ) {

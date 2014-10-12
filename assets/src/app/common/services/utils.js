@@ -37,6 +37,9 @@ angular.module( 'services.utils', ['lodash'])
 			var froms = _.keys(_.groupBy(merged, 'from'));
 			var diff = froms.length > tos.length ?  _.difference(froms, tos) : _.difference(tos, froms);
 			return diff;
+		},
+		removeBoard: function(boards, id){
+			return lodash.remove(boards, {id: id});
 		}
 
 	};

@@ -58,6 +58,7 @@
             masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile", "gutter": ".gutter-sizer" }' 
             class="board-container" 
             ui-view="board"
+            tiles="opportunities"
         >
             <div class="gutter-sizer"></div>
             <div 
@@ -90,8 +91,10 @@
                     <section class="pod-footer">
                         <div class="pod-exit option">
                             <a 
+                                masonry-remove
+                                masonry-tile-index="{{$index}}" 
                                 title="Remove this Opportunity" 
-                                ng-click="pod.active = false"
+                                
                             >
                                 <span class="icon-delete-circle icon"></span>
                             </a>

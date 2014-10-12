@@ -6,7 +6,8 @@ angular.module("sy.templates", [
     'sy.templates.mainleft',
     'sy.templates.scroll',
     'sy.symantis.modal',
-    'sy.templates.timeline'
+    'sy.templates.timeline',
+    'sy.masonry'
 ]);
 
 /*
@@ -1363,4 +1364,94 @@ angular.module('sy.templates.timeline', [])
             console.log("Running timelineJS");
         }
     }
+});
+angular.module('sy.masonry', ['ng'])
+.directive('masonry', function($parse) {
+    return {
+        restrict: 'AC',
+        /*
+        scope:{
+            tiles: '=tiles'
+        },
+        */
+        link: function(scope, elem, attrs) {
+            scope.items = [];
+            var container = elem[0];
+            var options = angular.extend({
+                itemSelector: '.item'
+            }, JSON.parse(attrs.masonry));
+            
+            console.log(scope.items);
+
+            var masonry = scope.masonry = new Masonry(container, options);
+
+            var debounceTimeout = 0;
+            scope.update = function() {
+                if (debounceTimeout) {
+                    window.clearTimeout(debounceTimeout);
+                }
+                debounceTimeout = window.setTimeout(function() {
+                    debounceTimeout = 0;
+
+                    masonry.reloadItems();
+                    masonry.layout();
+
+                    elem.children(options.itemSelector).css('visibility', 'visible');
+                }, 150);
+            };
+            scope.removedTile = function(){
+                //console.log($scope);
+                //console.log(attrs.masonryTiles);
+                
+                //attrs.masonryTiles.splice(index,1);
+
+                //masonry.reloadItems();
+                masonry.layout();
+            };
+            
+            //scope.$watch('tiles', function(tiles) {
+                /*
+                angular.forEach(tiles, function(tile, key) {
+                  console.log(tile);
+                  // do something
+                });
+                */
+            //});
+            
+        },
+        controller: ['$scope', function($scope) {
+
+            this.removedTile = function() {
+                $scope.removedTile();
+                //console.log($scope.menuOpen);
+            };
+        }]
+    };
+})
+.directive('masonryTile', function() {
+    return {
+        require: '^masonry',
+        restrict: 'AC',
+        link: function(scope, elem) {
+            elem.css('visibility', 'hidden');
+            var master = elem.parent('*[masonry]:first').scope(),
+                update = master.update;
+
+            imagesLoaded( elem[0], update);
+            elem.ready(update);
+        }
+    };
+})
+.directive('masonryRemove', function() {
+    return {
+        require: '^masonry',
+        restrict: 'AC',
+        link: function($scope, element, attrs, masonry) {
+            
+            element.on('click', function () {
+               //console.log(attrs.masonryTileIndex);
+               masonry.removedTile();
+            });
+        }
+    };
 });

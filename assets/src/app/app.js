@@ -19,7 +19,7 @@ angular.module( 'symantis', [
 	'models',
 	'ngProgress',
 	'duScroll',
-	'masonry',
+	//'masonry',
 	'ngTagsInput',
 	'pascalprecht.github-adapter',
 	'angular-markdown',
