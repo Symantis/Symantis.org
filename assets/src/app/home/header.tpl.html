@@ -1,5 +1,5 @@
 <div class="home-user" ng-show="currentUser">
-  <a ui-sref="community">Go to Community home</a>
+  <a ui-sref="me">{{ currentUser.at }}{{ currentUser.handle }} <span class="icon-arrow-right"></span></a>
 </div>
 <div class="home-noUser" ng-show="!currentUser">
   <a ui-sref="login">Login</a><span> or </span><a ui-sref="register" class="header-signup">Sign up</a>

@@ -606,19 +606,18 @@ angular.module('sy.templates.homeanimation', [])
                 
                 var currentAnimation = 'start';
                 var animations = [
-                    'start',
-                    'zero',
-                    'one',
-                    'two',
-                    'three',
-                    'four',
-                    'five',
-                    'six',
-                    'seven',
-                    'eight',
-                    'nine',
-                    'ten',
-                    'eleven'
+                    'start'//,
+                    // 'zero',
+                    // 'one',
+                    // 'two',
+                    // 'three',
+                    // 'four',
+                    // 'five',
+                    // 'six',
+                    // 'seven',
+                    // 'eight',
+                    // 'nine',
+                    // 'ten'
                 ];
 
                 var story = [{
@@ -626,54 +625,50 @@ angular.module('sy.templates.homeanimation', [])
                         text:'',
                         duration: 1000
                     },
-                    zero: {
-                        text: "There are millions of people that make the internet.",
-                        duration: 3000
-                    },
-                    one: {
-                        text: "Some of them are designers.",
-                        duration: 2000
-                    },
-                    two: {
-                        text: "Some of them are developers.",
-                        duration: 2000
-                    },
-                    three: {
-                        text: "Some people say they are totally different.",
-                        duration: 3000
-                    },
-                    four: {
-                        text: "But we don’t think so.",
-                        duration: 2000
-                    },
-                    five: {
-                        text: "They have something in common.",
-                        duration: 3000
-                    },
-                    six: {
-                        text: "They are both types of creators.",
-                        duration: 3000
-                    },
-                    seven: {
-                        text: "Symantis brings them together.",
-                        duration: 2000
-                    },
-                    eight: {
-                        text: "Blurring the line between Design and Development,",
-                        duration: 3000
-                    },
-                    nine: {
-                        text: "and changing the way we work together.",
-                        duration: 3000
-                    },
-                    ten: {
-                        text: "Free, Open, Different.",
-                        duration: 2000
-                    },
-                    eleven: {
-                        text: "Symantis",
-                        duration: 3000
-                    }
+                    // zero: {
+                    //     text: "There are millions of people that make the internet..",
+                    //     duration: 3000
+                    // },
+                    // one: {
+                    //     text: "Some of them are designers..",
+                    //     duration: 2000
+                    // },
+                    // two: {
+                    //     text: "Some of them are developers..",
+                    //     duration: 2000
+                    // },
+                    // three: {
+                    //     text: "Some people say they are totally different..",
+                    //     duration: 3000
+                    // },
+                    // four: {
+                    //     text: "But we don’t think so..",
+                    //     duration: 2000
+                    // },
+                    // five: {
+                    //     text: "They have something in common..",
+                    //     duration: 3000
+                    // },
+                    // six: {
+                    //     text: "They are both types of creators..",
+                    //     duration: 3000
+                    // },
+                    // seven: {
+                    //     text: "Symantis brings them together..",
+                    //     duration: 2000
+                    // },
+                    // eight: {
+                    //     text: "Blurring the line between Design and Development..",
+                    //     duration: 3000
+                    // },
+                    // nine: {
+                    //     text: "and changing the way we work together..",
+                    //     duration: 3000
+                    // },
+                    // ten: {
+                    //     text: "Free, Open, Different.",
+                    //     duration: 2000
+                    // }
                 }];
                 
 
@@ -710,13 +705,13 @@ angular.module('sy.templates.homeanimation', [])
                     .enter()
                     .append("text");
 
-                 var textLabel = text   
+                var textLabel = text   
                     .attr("x",  w / 2)
-                    .attr("y", h-10)
+                    .attr("y", h-160)
                     .text(function (d) { return d.start.text; })
                     .style("text-anchor", "middle")
-                    .attr("font-family", "'bitter2', sans-serif")
-                    .attr("font-size", "2.6rem")
+                    .attr("font-family", "bitter2, sans-serif")
+                    .attr("font-size", "2.4rem")
                     .attr("fill", "black");
 
                 var animationTime = function(time){

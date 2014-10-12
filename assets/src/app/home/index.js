@@ -17,7 +17,7 @@ angular.module( 'symantis.home', [
 			},
 			"footer": {
 				controller: 'FooterCtrl',
-                template: ''
+                templateUrl: 'footer/index.tpl.html'
 			},
 			"header": {
 				controller: 'HeaderCtrl',
@@ -34,7 +34,7 @@ angular.module( 'symantis.home', [
 .controller( 'HomeCtrl', function HomeController( $scope, titleService ) {
 	titleService.setTitle('Home');
 	
-	$scope.$parent.toDo = ['Make Animation','Add login form'];
+	$scope.$parent.toDo = [];
 
 })
 .controller( 'HomeHeaderCtrl', function HomeHeaderController( $scope, titleService ) {

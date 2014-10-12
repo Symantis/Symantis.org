@@ -4,9 +4,54 @@
 .home-animation {
 	margin-bottom: rem-calc(50px);
 	width: 100%;
+	svg {
+		@include no-highlight;
+	}
 }
-.home-footer {
-	margin-bottom: -50px;
+.home-title {
+	text-align: center;
+	width: rem-calc(600px);
+	left: 50%;
+	margin-left: rem-calc(-300px);
+	position: absolute;
+	bottom: rem-calc(180px);
+	h1 {
+		@include font-semi(rem-calc(48px));
+		padding-bottom: rem-calc(5px);
+		color: $darkest;
+	}
+	.home-rule1 {
+		height: rem-calc(2px);
+		display: block;
+		background-color: $dark;
+		width: rem-calc(40px);
+		margin: 0 auto;
+	}
+	p {
+		@include font-bitter2(rem-calc(16px));
+		padding-top: rem-calc(22px);
+		a {
+			color: $dark;
+			@include transition(200ms);
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: rem-calc(-5px);
+				left: 50%;
+				height: rem-calc(2px);
+				background-color: $dark;
+				width: 0;
+				margin-left: rem-calc(-20px);
+				@include transition(200ms);
+			}
+			&:hover {
+				color: black;
+				&:after {
+					width: rem-calc(40px);
+				}
+			}
+		}
+	}
 }
 .vertical-middle{
 	display:table;
@@ -21,7 +66,7 @@
 .home-noUser {
 	position: absolute;
 	top: rem-calc(10px);
-	right: rem-calc(20px);
+	right: rem-calc(12px);
 	@include font-regular(rem-calc(14px));
 	color: $primary-color;
 	padding: rem-calc(10px);
@@ -30,7 +75,7 @@
 		display: inline-block;
 	}
 	span {
-		padding: 0 rem-calc(10px) 0 rem-calc(5px);
+		padding: 0 rem-calc(8px) 0 rem-calc(5px);
 		color: black;
 	}
 	a {
@@ -50,9 +95,18 @@
 }
 .home-user {
 	position: absolute;
-	top: rem-calc(10px);
-	right: rem-calc(20px);
+	top: rem-calc(-5px);
+	right: rem-calc(12px);
 	@include font-regular(rem-calc(12px));
 	padding: rem-calc(10px);
 	z-index: 999;
+	span {
+		font-size: rem-calc(24px);
+		position: relative;
+		bottom: -.5rem;
+	}
 }
+
+
+
+
