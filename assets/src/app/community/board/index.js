@@ -21,8 +21,9 @@ angular.module( 'symantis.community.board', [
 	titleService.setTitle('Board');
 	$scope.$parent.toDo = [];
 
-	$scope.removeBoard = function(id){
-		utils.removeBoard($scope.opportunities, id);
+	$scope.remove = function(id){
+		console.log("tile: "+id);
+		utils.removeTile($scope.opportunities, id);
 	}
 
 })

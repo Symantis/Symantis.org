@@ -38,7 +38,7 @@ angular.module( 'services.utils', ['lodash'])
 			var diff = froms.length > tos.length ?  _.difference(froms, tos) : _.difference(tos, froms);
 			return diff;
 		},
-		removeBoard: function(boards, id){
+		removeTile: function(boards, id){
 			return lodash.remove(boards, {id: id});
 		}
 

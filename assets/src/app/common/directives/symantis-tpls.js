@@ -1369,19 +1369,13 @@ angular.module('sy.masonry', ['ng'])
 .directive('masonry', function($parse) {
     return {
         restrict: 'AC',
-        /*
-        scope:{
-            tiles: '=tiles'
-        },
-        */
+        scope : true,
         link: function(scope, elem, attrs) {
             scope.items = [];
             var container = elem[0];
             var options = angular.extend({
                 itemSelector: '.item'
             }, JSON.parse(attrs.masonry));
-            
-            console.log(scope.items);
 
             var masonry = scope.masonry = new Masonry(container, options);
 
@@ -1399,30 +1393,18 @@ angular.module('sy.masonry', ['ng'])
                     elem.children(options.itemSelector).css('visibility', 'visible');
                 }, 150);
             };
-            scope.removedTile = function(){
-                //console.log($scope);
-                //console.log(attrs.masonryTiles);
-                
-                //attrs.masonryTiles.splice(index,1);
-
-                //masonry.reloadItems();
+            scope.removedTile = function (id, element) {
+                if (typeof (scope.remove) == 'function') {
+                    scope.remove(id);    
+                }
+                masonry.remove(element[0]);
                 masonry.layout();
-            };
-            
-            //scope.$watch('tiles', function(tiles) {
-                /*
-                angular.forEach(tiles, function(tile, key) {
-                  console.log(tile);
-                  // do something
-                });
-                */
-            //});
-            
+            }
         },
         controller: ['$scope', function($scope) {
 
-            this.removedTile = function() {
-                $scope.removedTile();
+            this.removedTile = function(id, element) {
+                $scope.removedTile(id, element);
                 //console.log($scope.menuOpen);
             };
         }]
@@ -1432,26 +1414,27 @@ angular.module('sy.masonry', ['ng'])
     return {
         require: '^masonry',
         restrict: 'AC',
-        link: function(scope, elem) {
-            elem.css('visibility', 'hidden');
-            var master = elem.parent('*[masonry]:first').scope(),
+        link: function(scope, element, attrs, masonry) {
+            element.css('visibility', 'hidden');
+            var master = element.parent('*[masonry]:first').scope(),
                 update = master.update;
 
-            imagesLoaded( elem[0], update);
-            elem.ready(update);
-        }
-    };
-})
-.directive('masonryRemove', function() {
-    return {
-        require: '^masonry',
-        restrict: 'AC',
-        link: function($scope, element, attrs, masonry) {
+            imagesLoaded( element[0], update);
+            element.ready(update);
             
-            element.on('click', function () {
-               //console.log(attrs.masonryTileIndex);
-               masonry.removedTile();
-            });
-        }
+            //console.log(scope.remove());
+            //console.log(scope.removeTile);
+            scope.removeTile = function(id){
+                masonry.removedTile(id, element);
+            } 
+
+        },
+        controller: ['$scope', function($scope) {
+            this.removeTile = function(id) {
+                console.log(id);
+                $scope.removeTile(id);
+                //console.log($scope.menuOpen);
+            };
+        }]
     };
 });

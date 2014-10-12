@@ -56,13 +56,14 @@
         
         <div 
             masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile", "gutter": ".gutter-sizer" }' 
+            tiles="opportunities"
             class="board-container" 
             ui-view="board"
-            tiles="opportunities"
+            
         >
             <div class="gutter-sizer"></div>
             <div 
-                masonry-tile 
+                masonry-tile
                 ng-repeat="board in opportunities | filter:queryValue" 
                 class="animate-repeat tile board-pod-wrap"
                 ng-init="pod.active = true"
@@ -91,9 +92,8 @@
                     <section class="pod-footer">
                         <div class="pod-exit option">
                             <a 
-                                masonry-remove
-                                masonry-tile-index="{{$index}}" 
-                                title="Remove this Opportunity" 
+                                title="Remove this Opportunity"
+                                ng-click="removeTile(board.id)" 
                                 
                             >
                                 <span class="icon-delete-circle icon"></span>
