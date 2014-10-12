@@ -101,7 +101,14 @@ $reveal-close-weight: light;
 	-moz-user-select: none;
 	-ms-user-select: none;
 }
-
+@mixin columns($number, $gutter) {
+	-webkit-column-count: $number;
+    -moz-column-count: $number;
+    column-count: $number;
+    -webkit-column-gap: $gutter;
+    -moz-column-gap: $gutter;
+    column-gap: $gutter;
+}
 
 .preloader-container {
 	width: 100%;

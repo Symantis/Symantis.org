@@ -626,6 +626,11 @@ var aActivity = [
 			at: "@",
 			status: 'online',
 			signature: Math.random()
+		},
+		img:{
+			name: 'placeholder',
+			src: 'http://placehold.it/350x150',
+			caption: 'This is a placeholder image.'
 		}
 	},
 	{
@@ -662,6 +667,11 @@ var aActivity = [
 			at: "@",
 			status: 'online',
 			signature: Math.random()
+		},
+		img:{
+			name: 'placeholder',
+			src: 'http://placehold.it/350x150',
+			caption: 'This is a placeholder image.'
 		}
 	},
 	{
@@ -689,6 +699,66 @@ var aActivity = [
 		type: 'manti',
 		status: '@author deleted #object',
 		description: 'Had to remove that one thing!',
+		createdAt: new Date(),
+		object: 'SyQuery',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		img:{
+			name: 'placeholder',
+			src: 'http://placehold.it/350x150',
+			caption: 'This is a placeholder image.'
+		},
+	},
+	{
+		id: 6,
+		verb: 'addedTo',
+		type: 'manti',
+		status: '@author added #part to #object ',
+		description: 'Added an awesome new feature and also Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.!',
+		createdAt: new Date(),
+		object: 'SyQuery',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+	},
+	{
+		id: 7,
+		verb: 'removedFrom',
+		type: 'manti',
+		status: '@author removed #part from #object',
+		description: 'Added an awesome new feature!',
+		createdAt: new Date(),
+		object: 'SyQuery',
+		part: 'SyThingy',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		}
+	},
+	{
+		id: 8,
+		verb: 'updated',
+		type: 'manti',
+		status: '@author updated #object',
+		description: 'Updated that broken thing',
 		createdAt: new Date(),
 		object: 'SyQuery',
 		author:{

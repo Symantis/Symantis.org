@@ -186,11 +186,11 @@ $uiAnimationTime: 0.3s;
 }
 
 [ui-view="footer"].ng-enter-active {
-  opacity: 1;
+  opacity: 0;
 }
 
 [ui-view="footer"].ng-leave {
-  opacity: 1; 
+  opacity: 0; 
 }
 
 [ui-view="footer"].ng-leave-active {
