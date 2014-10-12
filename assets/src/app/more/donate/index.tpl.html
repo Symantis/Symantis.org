@@ -37,7 +37,7 @@
 							id="inputFirstName" 
 							name="firstName" 
 							placeholder="First Name" 
-							value=""
+							value="{{ currentUser.firstName || '' }}"
 							>
 						</div>
 					</div>
@@ -49,7 +49,7 @@
 							id="inputLastName" 
 							name="lastName" 
 							placeholder="Last Name" 
-							value=""
+							value="{{ currentUser.lastName || '' }}"
 							>
 						</div>
 					</div>
@@ -61,7 +61,7 @@
 							id="inputEmail" 
 							name="email" 
 							placeholder="Email" 
-							value=""
+							value="{{ currentUser.email || '' }}"
 							>
 						</div>
 					</div>
