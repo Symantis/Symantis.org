@@ -12,15 +12,9 @@ module.exports = {
         var access = true;
         
         for(var i in requiresAccess){
-        	//console.log(route);
-            if(route.regex.test(requiresAccess[i])){
-                access = false;
-            }
-            /*
-            if(route.indexOf(requiresAccess[i]) > -1){
+        	if(route.regexp.test(requiresAccess[i])){
         		access = false;
         	}
-            */
         }
 
         if(!isAuthenticated && !access){

@@ -62,11 +62,14 @@ module.exports = {
 		responses: {
 			collection: 'response',
 			via: 'query'
-		},
-		viewers: {
-			collection: 'user',
-			via: 'id'
 		}
+		/*
+		,
+		viewers: {
+			collection: 'views',
+			via: 'user'
+		}
+		*/
 
 
 	},
@@ -88,7 +91,7 @@ module.exports = {
 	},
 	getOne: function(id) {
 		return Query.findOne(id)
-		.populate('viewers')
+		//.populate('viewers')
 		.populate('author')
 		.populate('responses')
 		.then(function (model) {
