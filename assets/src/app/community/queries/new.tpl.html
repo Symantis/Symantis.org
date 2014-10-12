@@ -83,41 +83,45 @@
 		            <auto-complete source="loadTags($query)"></auto-complete>
 		        </tags-input>
 	        </div>
-	        
-	        <div 
-	        	class="image-thumbs" 
-	        	flow-init
-      			flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
-      			flow-files-submitted="$flow.upload()"
+	        <div class="clearfix">
+		        <div 
+		        	class="image-thumbs" 
+		        	flow-init
+	      			flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+	      			flow-files-submitted="$flow.upload()"
 
-      		>
-      			<div class="drop" flow-drop="" ng-class="dropClass">
-				    <span 
-				    	class="btn btn-default" 
-				    	flow-btn=""
-				    >
-				    	Upload Image
-				    	<input type="file" multiple="multiple" style="visibility: hidden; position: absolute;"
-				    	>
-				    </span>
-				    <span 
-				    	class="btn btn-default" 
-				    	flow-btn="" 
-				    	flow-directory="" 
-				    	ng-show="$flow.supportDirectory"
-				    >
-				    	Upload Folder of Images<input type="file" multiple="multiple" webkitdirectory="webkitdirectory" style="visibility: hidden; position: absolute;">
-				    </span>
-				    <b>OR</b>
-				    Drag And Drop your images here
+	      		>
+	      			<div 
+	      				class="drop" 
+	      				flow-drop="" 
+	      				ng-class="dropClass" 
+	      				ng-hide="newQuery.preview">
+					    <span 
+					    	class="button tiny" 
+					    	flow-btn=""
+					    >
+					    	Upload Image
+					    	<input type="file" multiple="multiple" style="visibility: hidden; position: absolute;"
+					    	>
+					    </span>
+					    <span 
+					    	class="button tiny" 
+					    	flow-btn="" 
+					    	flow-directory="" 
+					    	ng-show="$flow.supportDirectory"
+					    >
+					    	Upload Folder of Images<input type="file" multiple="multiple" webkitdirectory="webkitdirectory" style="visibility: hidden; position: absolute;">
+					    </span>
+					    <b>OR</b>
+					    Drag And Drop your images here
+					</div>
+			        <div class="thumbnail-container" ng-repeat="img in $flow.files">
+			        	<a>
+	      					<img ng-src="http://placehold.it/350x150" src="http://placehold.it/350x150" />
+	      				</a>
+			        </div>
 				</div>
-		        <div class="thumbnail-container" ng-repeat="img in $flow.files">
-		        	<a>
-      					<img ng-src="http://placehold.it/350x150" src="http://placehold.it/350x150" />
-      				</a>
-		        </div>
 			</div>
-
 			<div class="new-query-post">
 				<p>
 					<a 

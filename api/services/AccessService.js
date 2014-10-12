@@ -6,15 +6,21 @@ module.exports = {
         var requiresAccess = [
             '/me', 
             '/me/*', 
-            '/community/queries/new',
-            '/community/board/new'
+            //'/community/queries/new',
+            //'/community/board/new'
         ];
         var access = true;
         
         for(var i in requiresAccess){
-        	if(route.regexp.test(requiresAccess[i])){
+        	//console.log(route);
+            if(route.regex.test(requiresAccess[i])){
+                access = false;
+            }
+            /*
+            if(route.indexOf(requiresAccess[i]) > -1){
         		access = false;
         	}
+            */
         }
 
         if(!isAuthenticated && !access){

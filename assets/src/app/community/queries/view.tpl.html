@@ -298,22 +298,33 @@
 				<a ui-sref="register">Sign up</a> or <a ng-click="loginModal()">Login</a> to reply
 			</h4>
 		</div>
-		<a 
-			ng-click="replies.open = !replies.open"
-			title="Toggle Replies"
-		>
-			<div class="reply-toggle">
-				<p>
-				<span ng-show="replies.open">Hide</span>
+		
+		<div class="reply-toggle">
+			<p>
+				<a
+					title="Edit Response"
+					ng-show="response.author.id == currentUser.id"
+				>	
+					<span>Edit Reponse &middot;</span>
+				</a>
+				<a 
+					ng-click="replies.open = !replies.open"
+					title="Toggle Replies"
+				>
+					
+						
+						
+						<span ng-show="replies.open">Hide</span>
 
-				<span ng-hide="replies.open">
-					<span ng-show="response.replies.length">Add/View Replies ({{ response.replies.length }})</span>
-					<span ng-show="response.replies.length == 0">Reply</span>
-				</span>
-				</p>
-			</div>
-		</a>
-
+						<span ng-hide="replies.open">
+							<span ng-show="response.replies.length">Add/View Replies ({{ response.replies.length }})</span>
+							<span ng-show="response.replies.length == 0">Reply</span>
+						</span>
+						
+					
+				</a>
+			</p>
+		</div>
 	</div>
 
 	<div class="view-more-comments" ng-show="query.response.length > 12">
