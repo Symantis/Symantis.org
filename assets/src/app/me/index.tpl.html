@@ -61,7 +61,8 @@
                     <section class="profile-pod-header">
                         <p>{{ post.createdAt | date }}</p>
                         <div class="profile-pod-options">
-                            <a dropdown-toggle="#profile-pod-options-{{ post.id || number }}" title="Options">
+                            <!-- dropdown-toggle="#profile-pod-options-{{ post.id || number }}" -->
+                            <a title="Options">
                                 <span class="icon-vote-down"></span>
                             </a>
                         </div>
@@ -77,10 +78,11 @@
                     </section>
                     <section class="profile-pod-footer">
                         <p class="f-left">{{ post.part }} in {{ post.object }}</p>
-                        <a dropdown-toggle="#profile-pod-share-{{ post.id || number }}">Share</a>
+                        <!-- dropdown-toggle="#profile-pod-share-{{ post.id || number }}" -->
+                        <a >Share</a>
                     </section>
 
-                    <section class="pod-options" id="profile-pod-options-{{ post.id || number }}">
+                    <!-- <section class="pod-options" id="profile-pod-options-{{ post.id || number }}">
                         <p class="pod-options-exit">Options<a ><span class="icon-exit"></span></a></p>
                         <ul class="pod-options-list">
                             <li><a >Remove from Feed</a></li>
@@ -95,7 +97,7 @@
                             <li><a ><span class="icon-social-behance"></span></a></li>
                             <li><a ><span class="icon-social-github"></span></a></li>
                         </ul>
-                    </section>
+                    </section> -->
 
                 </div>
                 

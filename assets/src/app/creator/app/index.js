@@ -5,4 +5,12 @@ angular.module( 'symantis.creator.app', [
 	titleService.setTitle('Creator App');
 
 	
+})
+.controller( 'CreatorAppNavCtrl', function CreatorAppNavController( $scope, titleService ) {
+
+	
+})
+.controller( 'CreatorAppHeaderCtrl', function CreatorAppHeaderController( $scope, titleService ) {
+	
+
 });
