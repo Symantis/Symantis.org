@@ -158,6 +158,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-exit:before {
   content: "b";
 }
