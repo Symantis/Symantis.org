@@ -89,6 +89,12 @@ $uiAnimationTime: 0.3s;
 
 
 /* ---- Leaving home ---- */
+[ui-view="main"].ng-enter.home {
+  opacity: 0;
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
 [ui-view="main"].ng-leave-active.home {
   opacity: 0;
   -webkit-transform:translate3d(0, 0, 0);
