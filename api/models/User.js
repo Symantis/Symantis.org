@@ -140,5 +140,16 @@ module.exports = {
 
 			return [model];
 		});
-	}
+	},
+	afterCreate : function(user, next){
+  		//console.log(website);
+  		console.log('New User: '+user.handle);
+  		var options = {
+  			user: user
+  		}
+  		EmailService.sendHello(options);
+  		
+  		next();
+  
+  	}
 };

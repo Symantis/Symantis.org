@@ -300,6 +300,7 @@
 		</div>
 		
 		<div class="reply-toggle">
+			{{ response.author.id }}
 			<p>
 				<a
 					title="Edit Response"
@@ -311,17 +312,12 @@
 					ng-click="replies.open = !replies.open"
 					title="Toggle Replies"
 				>
-					
-						
-						
-						<span ng-show="replies.open">Hide</span>
+					<span ng-show="replies.open">Hide</span>
 
-						<span ng-hide="replies.open">
-							<span ng-show="response.replies.length">Add/View Replies ({{ response.replies.length }})</span>
-							<span ng-show="response.replies.length == 0">Reply</span>
-						</span>
-						
-					
+					<span ng-hide="replies.open">
+						<span ng-show="response.replies.length">Add/View Replies ({{ response.replies.length }})</span>
+						<span ng-show="response.replies.length == 0">Reply</span>
+					</span>
 				</a>
 			</p>
 		</div>
