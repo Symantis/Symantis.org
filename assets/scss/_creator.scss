@@ -37,12 +37,15 @@
 		height: rem-calc(50px);
 		width: rem-calc(40px);
 		text-align: center;
+		border-right: 1px solid rgba(0,0,0,.5);
 		a {
-			line-height: rem-calc(30px);
-			margin: rem-calc(10px) 0 rem-calc(10px) 0;
+			border: 1px solid rgba(255,255,255,.05);
+			border-width: 0 1px;
+			text-shadow: 0 1px 0 #000;
+			line-height: rem-calc(50px);
+			margin: 0;
 			display: block;
 			width: 100%;
-			border-right: 1px $dark solid;
 			@include font-semi(rem-calc(18px));
 			color: $primary-color;
 		}
@@ -54,15 +57,18 @@
 		width: rem-calc(150px);
 		height: 100%;
 		text-align: center;
+		border-right: 1px solid rgba(0,0,0,.5);
 		a {
-			line-height: rem-calc(30px);
-			margin: rem-calc(10px) 0 rem-calc(10px) 0;
+			border: 1px solid rgba(255,255,255,.05);
+			border-width: 0 1px;
+			text-shadow: 0 1px 0 #000;
+			line-height: rem-calc(50px);
+			margin: 0;
 			width: 100%;
 			position: relative;
 			display: block;
 			@include font-regular(rem-calc(12px));
 			color: $offWhite;
-			border-right: 1px $dark solid;
 			span {
 				position: relative;
 				bottom: -.15rem;
@@ -77,16 +83,19 @@
 		width: rem-calc(150px);
 		height: 100%;
 		text-align: center;
+		border-left: 1px solid rgba(0,0,0,.5);
 		p {
-			line-height: rem-calc(30px);
-			margin: rem-calc(10px) 0 rem-calc(10px) 0;
+			line-height: rem-calc(50px);
+			margin: 0;
 			width: 100%;
 			position: relative;
+			border: 1px solid rgba(255,255,255,.05);
+			border-width: 0 1px;
+			text-shadow: 0 1px 0 #000;
 			display: block;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			border-left: 1px $dark solid;
 			@include font-regular(rem-calc(13px));
 			color: $primary-color;
 			&.user-inactive {
@@ -125,7 +134,7 @@
 				&:before{
 					content: "";
 					position:absolute;
-					margin-top: rem-calc(10px);
+					margin-top: rem-calc(20px);
 					//margin-left: rem-calc(-18px);
 					height:10px;
 					width:10px;
@@ -144,15 +153,18 @@
 		height: 100%;
 		width: rem-calc(150px);
 		text-align: center;
+		border-left: 1px solid rgba(0,0,0,.5);
 		a {
-			line-height: rem-calc(30px);
-			margin: rem-calc(10px) 0 rem-calc(10px) 0;
+			border: 1px solid rgba(255,255,255,.05);
+			border-width: 0 1px;
+			text-shadow: 0 1px 0 #000;
+			line-height: rem-calc(50px);
+			margin: 0;
 			width: 100%;
 			position: relative;
 			display: block;
 			@include font-regular(rem-calc(12px));
 			color: $offWhite;
-			border-left: 1px $dark solid;
 			span {
 				position: relative;
 				bottom: -.15rem;

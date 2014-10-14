@@ -11,31 +11,38 @@ circle{
 	color: #777;
 }
 .home-animation {
+	margin-top: rem-calc(100px);
 	margin-bottom: rem-calc(50px);
 	width: 100%;
+	z-index: 92;
 	/*background-image: url('../img/png/background3.jpg');
 	background-repeat: repeat;*/
-	background: #e2e2e2;
+	/*background: #e2e2e2;
 	background: -moz-linear-gradient(top, #e2e2e2 0%, #ffffff 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(100%,#ffffff));
 	background: -webkit-linear-gradient(top, #e2e2e2 0%,#ffffff 100%);
 	background: -o-linear-gradient(top, #e2e2e2 0%,#ffffff 100%);
 	background: -ms-linear-gradient(top, #e2e2e2 0%,#ffffff 100%);
 	background: linear-gradient(to bottom, #e2e2e2 0%,#ffffff 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#ffffff',GradientType=0 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#ffffff',GradientType=0 );*/
 	svg {
 		@include no-highlight;
+		opacity: 0.8;
+		
+		circle {
+			//z-index: 92;
+		}
 	}
 }
 .home-title {
 	text-align: center;
-	width: rem-calc(600px);
-	left: 50%;
-	margin-left: rem-calc(-300px);
+	width: 100%;
 	position: absolute;
-	bottom: rem-calc(180px);
+	height: 180px;
+	top: 50%;
+	margin-top: -290px;
 	h1 {
-		@include font-semi(rem-calc(38px));
+		@include font-bitter(rem-calc(72px));
 		padding-bottom: rem-calc(8px);
 		color: $darkest;
 		span {
@@ -52,10 +59,10 @@ circle{
 		margin: 0 auto;
 	}
 	p {
-		@include font-bitter2(rem-calc(12px));
-		padding-top: rem-calc(22px);
+		@include font-bitter(rem-calc(72px));
+		//padding-top: rem-calc(22px);
 		a {
-			color: $dark;
+			color: $darkest;
 			@include transition(200ms);
 			&:after {
 				content: '';
