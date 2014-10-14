@@ -159,6 +159,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-exit:before {
   content: "b";
 }
@@ -338,4 +339,10 @@
 }
 .icon-contact-add-2:before {
   content: "7";
+}
+.icon-minus-circle-2:before {
+  content: "8";
+}
+.icon-close-empty:before {
+  content: "9";
 }

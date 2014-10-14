@@ -187,7 +187,6 @@
 	//height: auto;
 	position: relative;
 	background-color: white;
-	padding-bottom: 5px;
 	margin-right: 20px;
 	//border: rem-calc(1px) $gray solid;
 	border-radius: rem-calc(2px);
@@ -294,23 +293,62 @@
 	.pod-footer {
 		width: 100%;
 		//float: left;
-		padding: 10px 15px 0 15px;
+		padding: 0;
 		margin-top: 10px;
 		border-top: 1px $light solid;
 		background-color: rgb(252,252,253);
 		position: relative;
-		text-align: center;
 		.option {
 			display: inline-block;
-			padding: 0 5px 0 5px;
+			padding: 0;
+			@include transition(100ms);
+			cursor: pointer;
 			a {
 				color: $light;
-				@include transition(100ms);
 				span {
-					font-size: rem-calc(24px);
+					font-size: rem-calc(30px);
+					position: relative;
+					bottom: -.2rem;
+					@include transition(100ms);
 				}
 				&:hover {
 					color: $dark;
+				}
+			}
+			&.pod-exit {
+				border-right: 1px $light inset;
+				width: 50%;
+				text-align: center;
+				a {
+					span {
+						color: $sy-red;
+					}
+				}
+				&:hover {
+					background-color: $sy-red;
+					a {
+						span {
+							color: white;
+						}
+					}
+				}
+			}
+			&.pod-more {
+				width: 50%;
+				text-align: center;
+				a {
+					span {
+						
+						color: $primary-color;
+					}
+				}
+				&:hover {
+					background-color: $primary-color;
+					a {
+						span {
+							color: white;
+						}
+					}
 				}
 			}
 		}

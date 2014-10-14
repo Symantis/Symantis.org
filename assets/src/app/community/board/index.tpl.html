@@ -95,25 +95,20 @@
                         <p class="pod-description">{{ board.description }}</p>
                     </section>
                     <section class="pod-footer">
-                        <div class="pod-exit option">
-                            <a 
-                                title="Remove this Opportunity"
-                                ng-click="removeTile(board.id)"
-                                ng-show="currentUser" 
-                            >
-                                <span class="icon-delete-circle icon"></span>
-                            </a>
-                        </div>
-                        <!-- <div class="pod-accept option">
-                            <a title="Accept this Opportunity"><span class="icon-check-mark-circle icon"></span></a>
-                        </div> -->
-                        <div class="pod-more option">
-                            <a 
-                                title="More about this Opportunity" 
-                                ui-sref="community.board.view({id: board.id, title: board.clean() })"
-                            >
-                                <span class="icon-arrow-circle-right icon"></span>
-                            </a>
+                        <div 
+                            class="pod-exit option"
+                            title="Remove this Opportunity"
+                            ng-click="removeTile(board.id)"
+                            ng-show="currentUser"
+                        >
+                            <a ><span class="icon-close-empty icon"></span></a>
+                        </div
+                        ><div 
+                            class="pod-more option"
+                            title="More about this Opportunity" 
+                            ui-sref="community.board.view({id: board.id, title: board.clean() })"
+                        >
+                            <a ><span class="icon-arrow-right icon"></span></a>
                         </div>
                     </section>
                 </div>
