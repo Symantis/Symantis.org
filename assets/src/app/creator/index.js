@@ -1,4 +1,5 @@
-angular.module( 'symantis.creator', [
+angular.module( 'symantis.creator', [ 
+	'symantis.creator.app'
 ])
 
 .config(function config( $stateProvider ) {
@@ -47,7 +48,11 @@ angular.module( 'symantis.creator', [
 				"header@": {
 					controller: 'CreatorAppHeaderCtrl',
 		            template: '<div></div>'
-				}
+				},
+				"footer@": {
+					controller: 'FooterCtrl',
+	                template: ''
+				},
 			}
 		})
 	;
