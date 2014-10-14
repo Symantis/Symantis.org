@@ -7,6 +7,36 @@ body {
 	//background-color: #f6f5f2;
 	background-color: #f5f8fa;
 }
+[ui-view="main"].login {
+	background-color: white;
+}
+[ui-view="main"].register-email {
+	background-color: white;
+}
+[ui-view="main"].register-username {
+	background-color: white;
+}
+[ui-view="main"].register-password {
+	background-color: white;
+}
+[ui-view="main"].register-confirm_password {
+	background-color: white;
+}
+[ui-view="main"].register-first_name {
+	background-color: white;
+}
+[ui-view="main"].register-last_name {
+	background-color: white;
+}
+[ui-view="main"].register-confirm {
+	background-color: white;
+}
+[ui-view="main"].home {
+	background-color: white;
+}
+[ui-view="main"].login-forgot {
+	background-color: white;
+}
 
 /* ----- Highlight color ------ */
 ::selection {

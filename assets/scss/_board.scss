@@ -189,11 +189,11 @@
 	background-color: white;
 	padding: 15px 15px 5px 15px;
 	margin-right: 20px;
-	border: rem-calc(1px) $gray solid;
+	//border: rem-calc(1px) $gray solid;
 	border-radius: rem-calc(2px);
-	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	-webkit-box-shadow: 0.5px 0.5px 0.5px 1px rgba(80, 80, 80, 0.2);
+	-moz-box-shadow:    0.5px 0.5px 0.5px 1px rgba(80, 80, 80, 0.2);
+	box-shadow:         0.5px 0.5px 0.5px 1px rgba(80, 80, 80, 0.2);
 	/*-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);*/
