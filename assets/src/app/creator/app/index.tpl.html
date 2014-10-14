@@ -1,10 +1,42 @@
 <div class="c-wrapper">
 
 	<header class="c-header">
+		<div class="c-logo">
+			<a >sy.</a>
+		</div>
+		<div class="c-header-left">
+			<a >Front-End <span class="icon-chevron-down"></span></a>
+		</div>
 		<div class="c-header-right">
-			<a >Messages <span class="icon-vote-down"></span></a>
+			<a >Messages <span class="icon-chevron-down"></span></a>
 		</div>
 		<div class="c-header-mid-right">
+			<p class="user-{{ currentUser.status }}">
+				<span class="status"></span>
+				<a dropdown-toggle="#c-settings-dropdown">Hamish<span class="icon-chevron-down"></span></a>
+			</p>
+		</div>
+		<div id="c-settings-dropdown" class="settings-dropdown-container">
+			<ul class="settings-dropdown">
+				<li>
+					<a ui-sref="me">My Profile</a>
+				</li>
+				<li class="header-balance">
+					<a ng-click="inDevModal()">Balance <span>$y: 7362</span></a>
+				</li>
+				<li>
+					<a ui-sref="me.manti" >Manage Manti</a>
+				</li>
+				<li>
+					<a ui-sref="me.settings.sykit" >Sy.kit Preferences</a>
+				</li>
+				<li>
+					<a ui-sref="me.settings">Settings</a>
+				</li>
+				<li>
+					<a href="/logout">Log Out</a>
+				</li>
+			</ul>
 		</div>
 	</header>
 
