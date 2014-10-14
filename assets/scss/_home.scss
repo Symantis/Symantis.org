@@ -35,7 +35,7 @@ circle{
 	position: absolute;
 	bottom: rem-calc(180px);
 	h1 {
-		@include font-semi(rem-calc(48px));
+		@include font-semi(rem-calc(38px));
 		padding-bottom: rem-calc(8px);
 		color: $darkest;
 		span {
@@ -52,7 +52,7 @@ circle{
 		margin: 0 auto;
 	}
 	p {
-		@include font-bitter2(rem-calc(16px));
+		@include font-bitter2(rem-calc(12px));
 		padding-top: rem-calc(22px);
 		a {
 			color: $dark;

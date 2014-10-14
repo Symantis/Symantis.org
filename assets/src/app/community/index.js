@@ -255,7 +255,7 @@ angular.module( 'symantis.community', [
 
 .controller( 'CommunityCtrl', function CommunityController( $scope, $state ,titleService ) {
 	titleService.setTitle('Community');
-	$scope.$parent.toDo = ['Create Array for Feed', 'Add Comments Model to pods'];
+	$scope.$parent.toDo = [];
 	
 })
 .controller( 'CommunityHeaderCtrl', function CommunityHeaderController( $scope, $state, titleService ) {

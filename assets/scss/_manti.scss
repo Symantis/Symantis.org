@@ -448,9 +448,9 @@
 	margin-right: 0 !important;
 	height: auto;
 	.manti-page-main {
-		padding-left: rem-calc(20px);
+		padding-left: 0;
 		height: auto;
-		border-left: 4px $dark solid;
+		//border-left: 1px $dark solid;
 		margin-bottom: 40px;
 	}
 	.manti-page-banner {
@@ -570,7 +570,8 @@
 				}
 				.board-pod {
 					border-radius: 0;
-					box-shadow: none;
+					//box-shadow: none;
+					border-radius: rem-calc(2px);
 					p {
 						padding-bottom: 0;
 						padding-right: 0;

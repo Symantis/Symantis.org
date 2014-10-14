@@ -5,37 +5,7 @@ body {
 [ui-view="main"] {
 	//background-color: whitesmoke;
 	//background-color: #f6f5f2;
-	background-color: #f5f8fa;
-}
-[ui-view="main"].login {
-	background-color: white;
-}
-[ui-view="main"].register-email {
-	background-color: white;
-}
-[ui-view="main"].register-username {
-	background-color: white;
-}
-[ui-view="main"].register-password {
-	background-color: white;
-}
-[ui-view="main"].register-confirm_password {
-	background-color: white;
-}
-[ui-view="main"].register-first_name {
-	background-color: white;
-}
-[ui-view="main"].register-last_name {
-	background-color: white;
-}
-[ui-view="main"].register-confirm {
-	background-color: white;
-}
-[ui-view="main"].home {
-	background-color: white;
-}
-[ui-view="main"].login-forgot {
-	background-color: white;
+	//background-color: #f5f8fa;
 }
 
 /* ----- Highlight color ------ */
@@ -132,11 +102,11 @@ quote {
 		text-align: left;
 		width: 100%;
 		@include font-bitter2(rem-calc(48px));
-		color: $dark;
+		color: $darkest;
 		margin: 0;
 		white-space: nowrap;
 		a {
-			color: $dark;
+			color: $darkest;
 		}
 	}
 	h3 {

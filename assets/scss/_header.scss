@@ -37,9 +37,9 @@ $animationTime: 0.3s !default;
 		//background-color: lighten($offWhite, 5%);
 		background-color: white;
 		/* ---- Body is gray ---- */
-		-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.4);
-		-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.4);
-		box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.4);
+		-webkit-box-shadow: 0px 1px 1px 0px rgba(60, 60, 60, 0.6);
+		-moz-box-shadow:    0px 1px 1px 0px rgba(60, 60, 60, 0.6);
+		box-shadow:         0px 1px 1px 0px rgba(60, 60, 60, 0.6);
 		/* ---- */
 		.row.fluid-row {
 			padding-top:0px;
@@ -355,17 +355,20 @@ $animationTime: 0.3s !default;
 				position: absolute;
 				z-index: 999;
 				//overflow: hidden;
-				top: rem-calc(54px) !important;
+				top: rem-calc(55px) !important;
 				right: -1px !important;
 				left: auto !important;
 				width: 150px;
 				background-color: white;
 				border-bottom-right-radius: 4px;
 				border-bottom-left-radius: 4px;
-				border: 1px $dark solid;
-				-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-				-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-				box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+				//border: 1px $dark solid;
+				-webkit-box-shadow: 1px 1px 3px 1px rgba(50, 50, 50, 0.3);
+				-moz-box-shadow:    1px 1px 3px 1px rgba(50, 50, 50, 0.3);
+				box-shadow:         1px 1px 3px 1px rgba(50, 50, 50, 0.3);
+				-webkit-box-shadow: 0px 1px 2px 0px rgba(60, 60, 60, 0.6);
+		-moz-box-shadow:    0px 1px 2px 0px rgba(60, 60, 60, 0.6);
+		box-shadow:         0px 1px 2px 0px rgba(60, 60, 60, 0.6);
 				.settings-dropdown {
 					list-style: none;
 					float: left;
@@ -387,7 +390,7 @@ $animationTime: 0.3s !default;
 							padding-bottom: 3px;
 							padding-left: 18px;
 							padding-right: 14px;
-							width: 148px;
+							width: 150px;
 							float: left;
 							margin-left: -15px;
 							margin-right: -15px;
@@ -461,14 +464,14 @@ $animationTime: 0.3s !default;
 			}
 			.settings-dropdown-container:before {
 				border-color: rgba(46, 48, 44, 0);
-				border-bottom-color: $dark;
+				border-bottom-color: $gray;
 				border-width: 9px;
 				margin-left: -9px;
 			}
 		}
 		.top-nav-rule-inner {
 			width: 100%;
-			height: rem-calc(1px);
+			height: 0;
 			background-color: $dark;
 			//padding-right: 1.875rem;
 			//padding-left: 1.875rem;
@@ -486,8 +489,8 @@ $animationTime: 0.3s !default;
 		.top-nav-rule-cont {
 			padding-left: 0;
 			padding-right: 0;
-			background-color: $dark;
-			height: 1px;
+			//background-color: $gray;
+			height: 0;
 		}
 		.top-nav-rule {
 			padding-left: 0;

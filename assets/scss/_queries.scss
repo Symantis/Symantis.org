@@ -411,9 +411,13 @@
 		margin-top: rem-calc(20px);
 		background-color: white;
 		border: rem-calc(1px) $gray solid;
-		-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+		border-radius: rem-calc(2px);
+		/*-webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.75);
 		-moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.75);
-		box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);
+		box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.75);*/
+		-webkit-box-shadow: 0.5px 0.5px 1px 0px rgba(60, 60, 60, 0.4);
+		-moz-box-shadow:    0.5px 0.5px 1px 0px rgba(60, 60, 60, 0.4);
+		box-shadow:         0.5px 0.5px 1px 0px rgba(60, 60, 60, 0.4);
 
 		.comment-left {
 			.comment-pic {
