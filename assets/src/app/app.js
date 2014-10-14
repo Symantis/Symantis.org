@@ -387,7 +387,7 @@ var aNotifications = [
 			id: 1, 
 			firstName: "Katelin",
 			lastName:  "Bull",
-			handle: "kbull",
+			handle: "katelinnz",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -422,7 +422,7 @@ var aNotifications = [
 			id: 1, 
 			firstName: "Katelin",
 			lastName:  "Bull",
-			handle: "kbull",
+			handle: "katelinnz",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -526,7 +526,7 @@ var aNotifications = [
 			id: 1, 
 			firstName: "Katelin",
 			lastName:  "Bull",
-			handle: "kbull",
+			handle: "katelinnz",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -543,7 +543,7 @@ var aNotifications = [
 			id: 1, 
 			firstName: "Katelin",
 			lastName:  "Bull",
-			handle: "kbull",
+			handle: "katelinnz",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -595,7 +595,7 @@ var aNotifications = [
 			id: 1, 
 			firstName: "Katelin",
 			lastName:  "Bull",
-			handle: "kbull",
+			handle: "katelinnz",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -742,7 +742,7 @@ var aActivity = [
 			id: 1, 
 			firstName: "Katelin",
 			lastName:  "Bull",
-			handle: "katelin",
+			handle: "katelinnz",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
@@ -865,7 +865,7 @@ var aActivity = [
 			id: 1, 
 			firstName: "Katelin",
 			lastName:  "Bull",
-			handle: "katelin",
+			handle: "katelinnz",
 			at: "@",
 			status: 'online',
 			signature: Math.random()

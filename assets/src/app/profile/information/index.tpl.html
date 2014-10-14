@@ -18,56 +18,77 @@
 
     <section class="medium-9 large-8 large-offset-3 medium-offset-3 columns main-center profile-center">
 
-        <header class="profile-header profile-about-header">
-            <h3>About</h3>
-        </header>
+        <header class="profile-header"></header>
 
-        <article class="profile-about-content">
-            <p>{{ user.bio || "No user description" }}</p>
-        </article>
-        <header class="profile-header profile-manti-header">
-            <h3>Activity</h3>
-        </header>
-        <div class="profile-activity-content">
-            
+        <div class="profile-about-wrapper profile-section">
+            <header>
+                <h3>About</h3>
+            </header>
+            <article>
+                <p>{{ user.bio || "No user description" }}</p>
+            </article>
         </div>
-        <header class="profile-header profile-manti-header">
-            <h3>Current Manti</h3>
-        </header>
 
-        <article class="profile-manti-content">
-            <!-- <p ng-show="user.manti.length <= 0">No Manti</p> -->
-            <ul>
-                <li class="row current-manti" ng-repeat="manti in profileData.curManti">
-                    <div class="medium-2 large-1 columns current-manti-view">
-                        <a ng-click="inDevModal()"><p>View</p></a>
-                    </div>
-                    <div class="medium-10 large-11 columns current-manti-content">
-                        <h3><a ng-click="inDevModal()">{{ manti.title }}</a></h3>
-                        <p>{{ manti.description }}</p>
-                    </div>
-                </li>
-            </ul>
-        </article>
+        <div class="profile-section">
+            <header>
+                <h3>Activity</h3>
+            </header>
+            <article class="profile-activity-content">
+                <p>No Activity</p>
+            </article>
+        </div>
 
-        <header class="profile-header profile-contributions-header">
-            <h3>Recent Contributions</h3>
-        </header>
-
-        <article class="profile-contributions-content">
-            <!-- <p ng-show="user.contributions.length <= 0">No Recent Contributions</p> -->
-            <ul>
-                <li class="row recent-contribution" ng-repeat="contrib in profileData.reContributions">
-                    <div class="medium-2 large-1 columns recent-contribution-category">
-                        <a ng-click="inDevModal()"><p>{{ contrib.type }}</p></a>
-                    </div>
-                    <div class="medium-10 large-11 columns recent-contribution-content">
-                        <h3>{{ contrib.title }}</h3>
-                        <p>{{ contrib.description }}</p>
-                    </div>
-                </li>
-            </ul>
-        </article>
+        <div class="profile-section">
+            <header>
+                <h3>Current Manti</h3>
+            </header>
+            <article class="profile-manti-content">
+                <!-- <p ng-show="currentUser.manti.length <= 0">No Manti</p> -->
+                <ul>
+                    <li class="current-manti" ng-repeat="manti in profileData.curManti">
+                        <div class="current-manti-view">
+                            <a ng-click="inDevModal()"><p>View</p></a>
+                        </div>
+                        <div class="current-manti-content">
+                            <div class="manti-content-inner">
+                                <h3><a ng-click="inDevModal()">{{ manti.title }}</a></h3>
+                                <p>{{ manti.description }}</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <!--  ng-show="profileData.curManti.length > 5" -->
+            <a class="profile-info-more" ng-click="inDevModal()">
+                <span class="icon-dot-3"></span>
+            </a>
+        </div>
+        
+        <div class="profile-section">
+            <header class="profile-header profile-contributions-header">
+                <h3>Recent Contributions</h3>
+            </header>
+            <article class="profile-contributions-content">
+                <!-- <p ng-show="currentUser.contributions.length <= 0">No Recent Contributions</p> -->
+                <ul>
+                    <li class="recent-contribution" ng-repeat="contrib in profileData.reContributions">
+                        <div class="recent-contribution-category">
+                            <a ng-click="inDevModal()"><p>{{ contrib.type }}</p></a>
+                        </div>
+                        <div class="recent-contribution-content">
+                            <div class="re-contrib-inner">
+                                <h3><a ng-click="inDevModal()">{{ contrib.title }}</a></h3>
+                                <p>{{ contrib.description }}</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <!--  ng-show="profileData.reContributions.length > 5" -->
+            <a class="profile-info-more" ng-click="inDevModal()">
+                <span class="icon-dot-3"></span>
+            </a>
+        </div>
 
     </section>
 

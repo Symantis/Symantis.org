@@ -6,14 +6,16 @@ line {
 circle{
 	fill: $primary-color;
 }
-
+/*[ui-view="main"].home {
+	margin-bottom: 0;
+}*/
 .cirlcelink{
 	color: #777;
 }
 .home-animation {
-	margin-top: rem-calc(100px);
-	margin-bottom: rem-calc(50px);
+	//margin-bottom: rem-calc(50px);
 	width: 100%;
+	//position: fixed;
 	z-index: 92;
 	/*background-image: url('../img/png/background3.jpg');
 	background-repeat: repeat;*/
@@ -27,8 +29,6 @@ circle{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#ffffff',GradientType=0 );*/
 	svg {
 		@include no-highlight;
-		opacity: 0.8;
-		
 		circle {
 			//z-index: 92;
 		}
@@ -38,12 +38,10 @@ circle{
 	text-align: center;
 	width: 100%;
 	position: absolute;
-	height: 180px;
-	top: 50%;
-	margin-top: -290px;
+	bottom: rem-calc(110px);
 	h1 {
 		@include font-bitter(rem-calc(72px));
-		padding-bottom: rem-calc(8px);
+		//padding-bottom: rem-calc(8px);
 		color: $darkest;
 		span {
 			font-size: rem-calc(36px);
@@ -59,8 +57,8 @@ circle{
 		margin: 0 auto;
 	}
 	p {
-		@include font-bitter(rem-calc(72px));
-		//padding-top: rem-calc(22px);
+		@include font-bitter2(rem-calc(14px));
+		padding-top: rem-calc(22px);
 		a {
 			color: $darkest;
 			@include transition(200ms);
