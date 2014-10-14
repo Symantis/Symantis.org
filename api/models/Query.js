@@ -94,6 +94,10 @@ module.exports = {
 		//.populate('viewers')
 		.populate('author')
 		.populate('responses')
+		.then(function(model){
+			console.log(model.responses);
+			return model;
+		})
 		.then(function (model) {
 			model.totalResponses = model.responses.length;
 			return [model];

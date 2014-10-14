@@ -125,7 +125,8 @@ module.exports = {
 		.populate('toConnections')
 		.populate('fromConnections')
 		.then(function(model){
-			//console.log(model.connections);
+			console.log(model.toConnections);
+			console.log(model.fromConnections);
 			return model;
 		})
 		.then(function (model) {
@@ -148,8 +149,6 @@ module.exports = {
   			user: user
   		}
   		EmailService.sendHello(options);
-  		
   		next();
-  
   	}
 };

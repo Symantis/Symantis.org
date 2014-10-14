@@ -49,7 +49,10 @@ var jsFilesToInject = [
   'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
   'bower_components/ngprogress/build/ngProgress.js',
   'bower_components/angular-scroll/angular-scroll.js',
-  'bower_components/d3/d3.js',
+  'bower_components/d3-master/d3.js',
+  'bower_components/d3-master/geom/geom.js',
+  'bower_components/d3-master/layout/layout.js',
+  'bower_components/d3-master/time/time.js',
   
   'bower_components/angular-xeditable/dist/js/xeditable.js',
   //'bower_components/angular-masonry-directive/src/angular-masonry-directive.js',

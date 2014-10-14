@@ -1,7 +1,7 @@
 angular.module("sy.templates", [
     'sy.templates.inputs',
     'sy.templates.sitenav', 
-   // 'sy.templates.activity',
+    //'sy.templates.activity',
     'sy.templates.homeanimation', 
     'sy.templates.userimage', 
     'sy.templates.mainleft',
@@ -680,7 +680,6 @@ angular.module('sy.templates.activity', [])
     }
 
 }]);
-
 angular.module('sy.templates.homeanimation', [])
 .directive('homeAnimation', ['$document','$window','$timeout', function ($document, $window, $timeout) {
         return {
@@ -688,89 +687,263 @@ angular.module('sy.templates.homeanimation', [])
             link: function ($scope, element, attrs){
                 console.log("Home Animation");
                 
-                var currentAnimation = 'start';
-                var animations = [
-                    'start'//,
-                    // 'zero',
-                    // 'one',
-                    // 'two',
-                    // 'three',
-                    // 'four',
-                    // 'five',
-                    // 'six',
-                    // 'seven',
-                    // 'eight',
-                    // 'nine',
-                    // 'ten'
+
+
+                function norm() {
+                  var res, i;
+                  res = 0;
+                  for (i = 0; i < 10; i += 1) {
+                    res += Math.random()*2-1
+                  }
+                  return res;
+                }
+
+                var w = element[0].offsetWidth,
+                    h = $window.innerHeight - 6;
+
+                var adjacencyList = [
+                  {x: w, y: h},
+                //s
+                  {x: w -150, y: h - 450},
+                  {x: w -200, y: h - 500},
+                  {x: w -250, y: h - 525},
+                  {x: w -300, y: h - 540},
+                  {x: w -350, y: h - 550},
+                  {x: w -400, y: h - 540},
+                  {x: w -450, y: h - 525},
+                  {x: w -480, y: h - 510},
+                  {x: w -525, y: h - 475},
+                  {x: w -540, y: h - 440},
+                  {x: w -550, y: h - 400},
+                  {x: w -525, y: h - 340},
+                  {x: w -450, y: h - 300},
+                  {x: w -350, y: h - 250},
+                  {x: w -250, y: h - 225},
+                  {x: w -200, y: h - 200},
+                  {x: w -150, y: h - 150},
+                  {x: w -160, y: h - 100},
+                  {x: w -175, y: h - 75},
+                  {x: w -250, y: h -25},
+                  {x: w -350, y: h + 0},
+                  {x: w -450, y: h - 25},
+                  {x: w -500, y: h - 50},
+                  {x: w -550, y: h - 100},
+                
+                //y 
+                  {x: w + 0, y: h - 550},
+                  {x: w + 60, y: h - 435},
+                  {x: w + 125, y: h - 325},
+                  {x: w + 175, y: h - 250},
+                  {x: w + 250, y: h - 150},
+
+                  {x: w + 430, y: h - 435},
+                  {x: w + 500, y: h - 550},
+                  {x: w + 375, y: h - 325},
+                  {x: w + 325, y: h - 250},
+
+                  {x: w + 200, y: h - 50},
+                  {x: w + 125, y: h + 50},
+                  {x: w + 0, y: h + 100},
+                
+
+                //.
+                  
+                  {x: w + 575, y: h - 25},
+                  {x: w + 570, y: h - 20},
+                  {x: w + 565, y: h - 15},
+
+
                 ];
 
-                var story = [{
-                    start: {
-                        text:'',
-                        duration: 1000
-                    },
-                    // zero: {
-                    //     text: "There are millions of people that make the internet..",
-                    //     duration: 3000
-                    // },
-                    // one: {
-                    //     text: "Some of them are designers..",
-                    //     duration: 2000
-                    // },
-                    // two: {
-                    //     text: "Some of them are developers..",
-                    //     duration: 2000
-                    // },
-                    // three: {
-                    //     text: "Some people say they are totally different..",
-                    //     duration: 3000
-                    // },
-                    // four: {
-                    //     text: "But we don’t think so..",
-                    //     duration: 2000
-                    // },
-                    // five: {
-                    //     text: "They have something in common..",
-                    //     duration: 3000
-                    // },
-                    // six: {
-                    //     text: "They are both types of creators..",
-                    //     duration: 3000
-                    // },
-                    // seven: {
-                    //     text: "Symantis brings them together..",
-                    //     duration: 2000
-                    // },
-                    // eight: {
-                    //     text: "Blurring the line between Design and Development..",
-                    //     duration: 3000
-                    // },
-                    // nine: {
-                    //     text: "and changing the way we work together..",
-                    //     duration: 3000
-                    // },
-                    // ten: {
-                    //     text: "Free, Open, Different.",
-                    //     duration: 2000
-                    // }
-                }];
+
+                
+
+                var nodes = d3.values(adjacencyList)
+                .map(function(list) { 
+                    var true_y = (norm()*50)+250;
+                    console.log(list);
+                    return {
+                        radius: Math.random() * 10 + 4, 
+                        x: list.x,
+                        y: list.y/2,
+                        true_x: list.x/2,
+                        true_y: list.y/2 
+                    }
+                });
+
+                var force = d3.layout.force()
+                    .gravity(0.06)
+                    .charge(function(d, i) { return i ? 0 : -2000; })
+                    .friction(0.9)
+                    .nodes(nodes)
+                    .size([w, h]);
+
+                var root = nodes[0];
+                root.radius = 0;
+                root.fixed = true;
+
+                force.start();
+
+                var svg = d3.select(element[0]).append("svg:svg")
+                    .attr("width", w)
+                    .attr("height", h);
+
+                svg.selectAll("circle")
+                    .data(nodes)
+                  .enter().append("svg:circle")
+                    .attr("r", function(d) { return d.radius -2 ; })
+                    .style("fill", '#3b948b')
+                    //.style("stroke", "black");
+
+                
+
+
+                force.on("tick", function(e) {
+                  var q,
+                    node,
+                    i = 0,
+                    n = nodes.length;
+                    
+                  var q = d3.geom.quadtree(nodes);
+
+                  while (++i < n) {
+                    node = nodes[i];
+                    q.visit(collide(node));
+                    xerr = node.x - node.true_x;
+                    yerr = node.y - node.true_y;
+                    node.x -= xerr*0.1;
+                    node.y -= yerr*0.1;
+                  }
+                  
+                svg.on("mousemove", function() {
+                  var p1 = d3.mouse(this);
+                  root.px = p1[0];
+                  root.py = p1[1];
+                  force.resume();
+                });
+
+                svg.selectAll("circle")
+                      .attr("cx", function(d) { return d.x; })
+                      .attr("cy", function(d) { return d.y; });
+                });
+
+                function collide(node) {
+                  var r = node.radius + 16,
+                    nx1,
+                    nx2,
+                    ny1,
+                    ny2,
+                    xerr,
+                    yerr;
+                    
+                  nx1 = node.x - r;
+                  nx2 = node.x + r;
+                  ny1 = node.y - r;
+                  ny2 = node.y + r;
+                      
+                  return function(quad, x1, y1, x2, y2) {
+                    if (quad.point && (quad.point !== node)) {
+                      var x = node.x - quad.point.x,
+                          y = node.y - quad.point.y,
+                          l = Math.sqrt(x * x + y * y),
+                          r = node.radius + quad.point.radius;
+                      if (l < r) {
+                        // we're colliding.
+                        var xnudge, ynudge, nudge_factor;
+                        nudge_factor = (l - r) / l * .4;
+                        xnudge = x*nudge_factor;
+                        ynudge = y*nudge_factor;
+                        node.x -= xnudge;
+                        node.y -= ynudge;
+                        quad.point.x += xnudge;
+                        quad.point.y += ynudge;
+                      }
+                    }
+                    return x1 > nx2
+                        || x2 < nx1
+                        || y1 > ny2
+                        || y2 < ny1;
+                  };
+                }
+                    
+            }
+        }
+}]);
+/*
+angular.module('sy.templates.homeanimation', [])
+.directive('homeAnimation', ['$document','$window','$timeout', function ($document, $window, $timeout) {
+        return {
+            restrict: 'C',
+            link: function ($scope, element, attrs){
+                console.log("Home Animation");
+                
+                
+                var adjacencyList = {
+                  1: {x: 1, y: 1},
+                  2: {x: 2, y: 2},
+                  3: {x: 3, y: 3},
+                  4: {x: 4, y: 4},
+                  5: {x: 5, y: 5},
+                  6: {x: 6, y: 6},
+                  7: {x: 7, y: 7},
+                  8: {x: 8, y: 8},
+                  9: {x: 9, y: 9},
+                  10: {x: 10, y: 10},
+                  11: {x: 11, y: 11},
+                  12: {x: 12, y: 12},
+                  13: {x: 13, y: 13},
+                  14: {x: 14, y: 14},
+                  15: {x: 15, y: 15},
+                  16: {x: 16, y: 16},
+                  17: {x: 17, y: 17},
+                  18: {x: 18, y: 18},
+
+                  19: {x: 200, y: 0},
+                  20: {x: 200, y: 10},
+                  21: {x: 200, y: 20},
+                  22: {x: 200, y: 30},
+                  23: {x: 200, y: 40},
+                  24: {x: 200, y: 50},
+                  25: {x: 200, y: 60},
+                  26: {x: 200, y: 70},
+                  27: {x: 200, y: 80},
+                  28: {x: 200, y: 90},
+                  29: {x: 200, y: 100},
+                  30: {x: 200, y: 110},
+                  31: {x: 200, y: 120},
+                  32: {x: 200, y: 130},
+                  33: {x: 200, y: 140},
+                  34: {x: 200, y: 150},
+                  35: {x: 200, y: 160},
+                  36: {x: 200, y: 170},
+                  37: {x: 200, y: 180},
+                  38: {x: 200, y: 190},
+                };
                 
 
                 var w = element[0].offsetWidth,
                     h = $window.innerHeight - 6;
 
-                var nodes = d3.range(250).map(function() { return {radius: Math.random() * 12 + 4}; }),
-                    links = d3.layout.tree().links(nodes),
+                var nodes = d3.values(adjacencyList)
+                            .map(function(source, i) { 
+                                console.log(i);
+                                return {
+                                    radius: Math.random() * 12 + 4,
+                                    source: source,
+                                    target: source
+                                }; 
+                            }),
                     color = d3.scale
                             .linear()
                             .domain([1,3])
-                            .range(["#3b948b", "#3b948b", "#3b948b"]);
+                            .range(["#3b948b", "#3b948b", "#3b948b"]); 
+                    
 
                 var force = d3.layout.force()
                     .gravity(0.06)
                     .charge(function(d, i) { return i ? 0 : -2000; })
                     .nodes(nodes)
-                    .links(links)
+                    //.links(links)
                     .size([w, h]);
 
                 var root = nodes[0];
@@ -784,50 +957,6 @@ angular.module('sy.templates.homeanimation', [])
                     .attr("height", h);
 
 
-                var text = svg.selectAll("text")
-                    .data(story)
-                    .enter()
-                    .append("text");
-
-                var textLabel = text   
-                    .attr("x",  w / 2)
-                    .attr("y", h-160)
-                    .text(function (d) { return d.start.text; })
-                    .style("text-anchor", "middle")
-                    .attr("font-family", "bitter2, sans-serif")
-                    .attr("font-size", "2.4rem")
-                    .attr("fill", "black");
-
-                var animationTime = function(time){
-                    $timeout(function() {
-                        var index = animations.indexOf(currentAnimation);
-                        console.log(index);
-                        if(index+2 > animations.length || index == -1){
-
-                        }else{
-                            var nextAnimation = animations[index+1];
-                            
-                            //console.log(nextAnimation);
-                            textLabel
-                                .style("opacity", 1)
-                                .transition()
-                                .duration(400)
-                                .style("opacity", 0)
-                                .transition()
-                                .duration(400)
-                                .style("opacity", 1)
-                                .text(function (d) { return d[nextAnimation].text; });
-
-                            currentAnimation = nextAnimation;
-                            animationTime(2400);
-                        }
-                    }, time);
-                }  
-
-                animationTime(1500); 
-
-                //textLabel.text(function (d) { return d.one; });   
-
                 svg.selectAll("circle")
                     .data(nodes.slice(1))
                     .enter()
@@ -835,15 +964,7 @@ angular.module('sy.templates.homeanimation', [])
                     .attr("r", function(d) { return d.radius - 2; })
                     .style("fill", function(d, i) { return color(i % 3); });
 
-                svg.selectAll("line.link")
-                    .data(links, function(d) { return d.target.id; })
-                    .enter()
-                    .insert("svg:line", ".node")
-                    .attr("class", "cirlcelink")
-                    .attr("x1", function(d) { return d.source.x; })
-                    .attr("y1", function(d) { return d.source.y; })
-                    .attr("x2", function(d) { return d.target.x; })
-                    .attr("y2", function(d) { return d.target.y; });
+
 
                 force.on("tick", function(e) {
                   var q = d3.geom.quadtree(nodes),
@@ -856,14 +977,13 @@ angular.module('sy.templates.homeanimation', [])
                   
 
                   svg.selectAll("circle")
-                      .attr("cx", function(d) { return d.x; })
-                      .attr("cy", function(d) { return d.y; });
-                  
-                  svg.selectAll("line.link")   
-                      .attr("x1", function(d) { return d.source.x; })
-                      .attr("y1", function(d) { return d.source.y; })
-                      .attr("x2", function(d) { return d.target.x; })
-                      .attr("y2", function(d) { return d.target.y; });  
+                      .attr("cx", function(d) { 
+                       // console.log(d.x);
+                        return d.x; 
+                      })
+                      .attr("cy", function(d) { 
+                        return d.y; 
+                      });
                     
                 });
 
@@ -900,15 +1020,89 @@ angular.module('sy.templates.homeanimation', [])
                         || y2 < ny1;
                   };
                 }
-
-                function stepOne(){
-
-                }
             }
         }
 }]);
+*/
+/*
+angular.module('sy.templates.homeanimation', [])
+.directive('homeAnimation', ['$document','$window','$timeout', function ($document, $window, $timeout) {
+    return {
+        restrict: 'C',
+        link: function ($scope, element, attrs){
+            console.log("Home Animation");
+            var w = element[0].offsetWidth,
+                h = $window.innerHeight - 6;
 
+            var adjacencyList = {
+              1: [1,1,1],
+              2: [1,1,1],
+              3: [4,2,9],
+              4: [10,3,5],
+              5: [6,4,11],
+              6: [1,5,12],
+              7: [1,20,13],
+              8: [2,14,21],
+              9: [3,22,15],
+              10: [4,16,23],
+              11: [5,17,24],
+              12: [6,19,18],
+              13: [7,19],
+              14: [20,8],
+              15: [21,9],
+              16: [22,10],
+              17: [23, 11],
+              18: [24, 12],
+              19: [12, 13],
+              20: [14,7],
+              21: [8, 15],
+              22: [9,16],
+              23: [10, 17],
+              24: [11, 18]
+            };
 
+            var nodes = d3.values(adjacencyList),
+                links = d3.merge(nodes.map(function(source) {
+                  return source.map(function(target) {
+                    return {source: source, target: adjacencyList[target]};
+                  });
+                }));
+            
+           
+            var vis = d3.select(element[0]).append("svg:svg")
+                .attr("width", w)
+                .attr("height", h);
+
+            var force = d3.layout.force()
+                .nodes(nodes)
+                .links(links)
+                .size([w, h])
+                .start();
+
+            var link = vis.selectAll("line.link")
+                .data(links)
+              .enter().append("svg:line");
+
+            var node = vis.selectAll("circle.node")
+                .data(nodes)
+              .enter().append("svg:circle")
+                .attr("r", 5)
+                .call(force.drag);
+
+            force.on("tick", function() {
+              link.attr("x1", function(d) { return d.source.x; })
+                  .attr("y1", function(d) { return d.source.y; })
+                  .attr("x2", function(d) { return d.target.x; })
+                  .attr("y2", function(d) { return d.target.y; });
+
+              node.attr("cx", function(d) { return d.x; })
+                  .attr("cy", function(d) { return d.y; });
+            }); 
+            
+        }
+    }
+}]);
+*/
 
 angular.module('sy.symantis.transition', [])
 
