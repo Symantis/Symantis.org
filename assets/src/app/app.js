@@ -613,11 +613,31 @@ var aActivity = [
 	{
 		id: 1,
 		verb: 'created',
-		type: 'manti',
-		status: '@author created #object',
-		description: 'Created an awesome new feature!',
+		status: '@author #verb #child in #parent',
+		description: 'Created this awesome query language that can be used in the Creator App',
+		parent: 'SyQuery',
+		child: '',
 		createdAt: new Date(),
-		object: 'SyQuery',
+		type: 'Manti',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		}
+	},
+	{
+		id: 2,
+		verb: 'created',
+		status: '@author #verb #child in #parent',
+		description: 'Created the Backbone for Symantis.org network',
+		parent: 'Backbone.js',
+		child: '',
+		createdAt: new Date(),
+		type: 'Manti',
 		author:{
 			id: 1, 
 			firstName: "Hamish",
@@ -634,31 +654,14 @@ var aActivity = [
 		}
 	},
 	{
-		id: 2,
-		verb: 'updated',
-		type: 'manti',
-		status: '@author updated #object',
-		description: 'Updated that broken thing',
-		createdAt: new Date(),
-		object: 'SyQuery',
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "hamish",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		}
-	},
-	{
 		id: 3,
 		verb: 'addedTo',
-		type: 'manti',
-		status: '@author added #part to #object ',
-		description: 'Added an awesome new feature and also Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.!',
+		status: '@author #verb #child in #parent',
+		description: 'Added d3 animations to home.',
+		parent: 'Symantis.org',
+		child: 'Home',
 		createdAt: new Date(),
-		object: 'SyQuery',
+		type: 'Manti',
 		author:{
 			id: 1, 
 			firstName: "Hamish",
@@ -676,13 +679,13 @@ var aActivity = [
 	},
 	{
 		id: 4,
-		verb: 'removedFrom',
-		type: 'manti',
-		status: '@author removed #part from #object',
-		description: 'Added an awesome new feature!',
+		verb: 'removed',
+		status: '@author #verb #child in #parent',
+		description: 'Removed old landing page.',
+		parent: 'Symantis.org',
+		child: 'Home',
 		createdAt: new Date(),
-		object: 'SyQuery',
-		part: 'SyThingy',
+		type: 'Manti',
 		author:{
 			id: 1, 
 			firstName: "Hamish",
@@ -695,13 +698,23 @@ var aActivity = [
 	},
 	{
 		id: 5,
-		verb: 'destroyed',
-		type: 'manti',
-		status: '@author deleted #object',
-		description: 'Had to remove that one thing!',
+		verb: 'mentioned',
+		status: '@author #verb #child in #parent',
+		description: '',
+		parent: 'Comment',
+		child: '',
 		createdAt: new Date(),
-		object: 'SyQuery',
+		type: 'Query',
 		author:{
+			id: 1, 
+			firstName: "Scott",
+			lastName:  "Wyatt",
+			handle: "scott",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		user: {
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
@@ -714,17 +727,27 @@ var aActivity = [
 			name: 'placeholder',
 			src: 'http://placehold.it/350x150',
 			caption: 'This is a placeholder image.'
-		},
+		}
 	},
 	{
 		id: 6,
-		verb: 'addedTo',
-		type: 'manti',
-		status: '@author added #part to #object ',
-		description: 'Added an awesome new feature and also Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.!',
+		verb: 'tagged',
+		status: '@author #verb #child in #parent',
+		description: '',
+		parent: 'SyQuery',
+		child: '',
 		createdAt: new Date(),
-		object: 'SyQuery',
+		type: 'Manti',
 		author:{
+			id: 1, 
+			firstName: "Katelin",
+			lastName:  "Bull",
+			handle: "katelin",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		user: {
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",
@@ -732,17 +755,17 @@ var aActivity = [
 			at: "@",
 			status: 'online',
 			signature: Math.random()
-		},
+		}
 	},
 	{
 		id: 7,
-		verb: 'removedFrom',
-		type: 'manti',
-		status: '@author removed #part from #object',
-		description: 'Added an awesome new feature!',
+		verb: 'removed',
+		status: '@author #verb #child in #parent',
+		description: 'Removed Connections dialogue from Community.',
+		parent: 'Symantis.org',
+		child: 'Community',
 		createdAt: new Date(),
-		object: 'SyQuery',
-		part: 'SyThingy',
+		type: 'Manti',
 		author:{
 			id: 1, 
 			firstName: "Hamish",
@@ -756,12 +779,98 @@ var aActivity = [
 	{
 		id: 8,
 		verb: 'updated',
-		type: 'manti',
-		status: '@author updated #object',
-		description: 'Updated that broken thing',
+		status: '@author #verb #child in #parent',
+		description: 'Changed a few front-end animations',
+		parent: 'Symantis.org',
+		child: 'Home',
 		createdAt: new Date(),
-		object: 'SyQuery',
+		type: 'Manti',
 		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		}
+	},
+	{
+		id: 9,
+		verb: 'removed',
+		status: '@author #verb #child in #parent',
+		description: '',
+		parent: 'Post Uni Front-end Work',
+		child: '',
+		createdAt: new Date(),
+		type: 'Opportunity',
+		author:{
+			id: 1, 
+			firstName: "Katelin",
+			lastName:  "Bull",
+			handle: "katelin",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		img:{
+			name: 'placeholder',
+			src: 'http://placehold.it/350x150',
+			caption: 'This is a placeholder image.'
+		}
+	},
+	{
+		id: 10,
+		verb: 'mentioned',
+		status: '@author #verb #child in #parent',
+		description: 'Katelin you should go for this!',
+		parent: 'Comment',
+		child: '',
+		createdAt: new Date(),
+		type: 'Opportunity',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		user: {
+			id: 1, 
+			firstName: "Katelin",
+			lastName:  "Bull",
+			handle: "katelin",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		img:{
+			name: 'placeholder',
+			src: 'http://placehold.it/350x150',
+			caption: 'This is a placeholder image.'
+		}
+	},
+	{
+		id: 11,
+		verb: 'tagged',
+		status: '@author #verb #child in #parent',
+		description: '',
+		parent: 'SyQuery',
+		child: '',
+		createdAt: new Date(),
+		type: 'Manti',
+		author:{
+			id: 1, 
+			firstName: "Katelin",
+			lastName:  "Bull",
+			handle: "katelin",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		user: {
 			id: 1, 
 			firstName: "Hamish",
 			lastName:  "Jackson-Mee",

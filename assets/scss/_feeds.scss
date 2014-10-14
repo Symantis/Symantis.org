@@ -76,13 +76,20 @@
 		height: auto;
 		padding: rem-calc(10px) rem-calc(15px) rem-calc(10px) rem-calc(15px);
 		h3 {
-			@include font-semi(rem-calc(14px));
+			@include font-regular(rem-calc(14px));
+			color: $gray;
 			padding-bottom: rem-calc(10px);
 			padding-top: rem-calc(5px);
 			a {
+				@include font-semi(rem-calc(14px));
+				color: $primary-color;
 				@include transition(100ms);
+				&:hover {
+					border-bottom: 1px $primary-color solid;
+				}
 			}
 		}
+		
 	}
 	.profile-pod-footer {
 		padding: rem-calc(10px) rem-calc(15px) rem-calc(10px) rem-calc(15px);
@@ -90,11 +97,21 @@
 		margin-top: rem-calc(10px);
 		width: 100%;
 		height: rem-calc(40px);
-		p {
+		a.f-left {
 			width: auto;
 			float: left;
 			@include font-regular(rem-calc(12px));
 			color: $gray;
+		}
+		.f-child-des {
+			width: auto;
+			float: left;
+			padding-left: rem-calc(10px);
+			margin-left: rem-calc(10px);
+			border-left: 1px $light solid;
+			@include font-regular(rem-calc(12px));
+			color: $light;
+
 		}
 		a {
 			float: right;
@@ -116,6 +133,8 @@
 		top: rem-calc(40px);
 		right: rem-calc(10px) !important;
 		left: auto !important;
+		//visibility: hidden !important;
+		display: none;
 		width: rem-calc(180px);
 		height: rem-calc(133px);
 		background-color: white;
@@ -176,6 +195,7 @@
 	.pod-share {
 		position: absolute;
 		z-index: 10;
+		display: none;
 		//overflow: hidden;
 		bottom: 0;
 		top: auto !important;

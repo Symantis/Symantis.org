@@ -16,9 +16,103 @@
         <!-- Section for main left header -->
         </div>
     </section>
-    <section class="medium-9 large-8 large-offset-3 medium-offset-3 columns main-center">
+    <section class="medium-9 large-8 large-offset-3 medium-offset-3 columns main-center profile-feed-center">
     	<!-- Section for main center header -->
         <header></header>
+
+        <header class="community-push" ng-show="currentUser"></header>
+
+        <section class="clearfix">
+            <alert class="animate-repeat" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        </section>
+
+        <div 
+            masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".profile-pod-wrap", "gutter": ".gutter-sizer" }' 
+            class="profile-feed-container" 
+            ui-view="profile-feed"
+        >
+            <div class="gutter-sizer"></div>
+
+            <article 
+                masonry-tile
+                class="activity-{{ post.verb }} profile-pod-wrap" 
+                ng-repeat="post in activity"
+                ng-class="{ large: post.description.length > 300, small: post.description.length < 50 }"
+                ng-show="currentUser"
+            >
+                <div class="profile-pod">
+                    <section class="profile-pod-header">
+                        <p>{{ post.createdAt | date }}</p>
+                        <div class="profile-pod-options">
+                            <a dropdown-toggle="#community-pod-options-{{ post.id || number }}" title="Options">
+                                <span class="icon-vote-down"></span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="profile-pod-img" ng-show="post.img">
+                        <a >
+                            <img ng-src="{{ post.img.src }}" alt="{{ post.img.name }}" />
+                        </a>
+                    </section>
+                    <section class="profile-pod-body">
+                        <h3>
+                            <a ui-sref="profile.view({ handle: post.author.handle })">{{ post.author.firstName }} {{ post.author.lastName }}</a>
+                             {{ post.verb }} 
+                            <span ng-show="post.user">
+                                <a ui-sref="profile.view({ handle: post.user.handle })">{{ post.user.firstName }} {{ post.user.lastName }}</a> 
+                                in a
+                            </span>
+                            <a >{{ post.parent }}</a>
+                        </h3>
+                        <p>{{ post.description }}</p>
+                    </section>
+                    <section class="profile-pod-footer">
+                        <a 
+                            class="f-left" 
+                            ui-sref="profile.view.manti({ handle: post.author.handle })"
+                            ng-show="post.type=='Manti'"
+                        >{{ post.type }}</a>
+                        <a 
+                            class="f-left" 
+                            ui-sref="community.queries"
+                            ng-show="post.type=='Query'"
+                        >{{ post.type }}</a>
+                        <a 
+                            class="f-left" 
+                            ui-sref="community.board"
+                            ng-show="post.type=='Opportunity'"
+                        >{{ post.type }}</a>
+
+                        <p 
+                            ng-show="post.child.length > 1" 
+                            class="f-child-des"
+                        >{{ post.child }}<span> in </span>{{ post.parent }}</p>
+
+                        <a dropdown-toggle="#community-pod-share-{{ post.id || number }}">Share</a>
+                    </section>
+
+                    <section class="pod-options" id="community-pod-options-{{ post.id || number }}">
+                        <p class="pod-options-exit">Options</p>
+                        <ul class="pod-options-list">
+                            <li><a >Remove from Feed</a></li>
+                            <li><a >Block User</a></li>
+                            <li><a >Flag as inappropriate</a></li>
+                        </ul>
+                    </section>
+                    <section class="pod-share" id="community-pod-share-{{ post.id || number }}">
+                        <ul class="pod-share-options">
+                            <li><a ><span class="icon-social-facebook"></span></a></li>
+                            <li><a ><span class="icon-social-twitter"></span></a></li>
+                            <li><a ><span class="icon-social-behance"></span></a></li>
+                            <li><a ><span class="icon-social-github"></span></a></li>
+                        </ul>
+                    </section>
+
+                </div>
+                
+            </article>
+
+        </div>
 
         <div class="main-content gr-container" ng-show="!currentUser">
 
@@ -121,78 +215,6 @@
             </article>
 
         </div>
-
-        <ul class="community-container" ng-show="currentUser">
-            <li class="community-pod">
-                <section class="pod-header">
-                    <div class="pod-header-left">
-                        <div 
-                            class="pod-user-pic generate-image" 
-                            signature="{{ currentUser.signature }}"
-                        >
-                        </div>
-                    </div>
-                    <h3>
-                        <a >Hamish Jackson-Mee </a>created a new Manti -<a > syQuery</a><br />
-                        <span>3 hours ago</span>
-                    </h3>
-                    <div class="pod-options-reveal">
-                        <a dropdown-toggle="#pod-options" title="Options">
-                            <span class="icon-vote-down"></span>
-                        </a>
-                    </div>
-                </section>
-                <section class="pod-body">
-                    <p class="pod-description">Trust fund irony brunch small batch. Hoodie slow-carb post-ironic, yr American Apparel forage blog pork belly shabby chic 8-bit pour-over bicycle rights. PBR&B farm-to-table pickled tofu gluten-free pour-over, readymade fingerstache cardigan cray. Bicycle rights ethnic sustainable mumblecore Marfa, aesthetic banjo tattooed hashtag bitters. Distillery fanny pack food truck you probably haven't heard of them Truffaut, street art readymade mixtape farm-to-table. Flannel vegan cliche skateboard fap Carles, leggings scenester ennui aesthetic PBR&B. Gentrify pour-over cliche ugh, normcore plaid scenester art party put a bird on it drinking vinegar salvia gluten-free Vice.</p>
-                    <div class="pod-extra">
-                        <h4 class="pod-extra-title">Preview</h4>
-                        <div class="pod-extra-content">
-                            <img src="http://placehold.it/350x150" />
-                        </div>
-                    </div>
-                </section>
-                <section class="pod-footer">
-                    <div class="pod-reveal-comments">
-                        <p><a >Add/View Comments</a></p>
-                    </div>
-                    <div class="pod-reveal-share">
-                        <div class="reveal-share-button" ng-click="podShare.open = true" ng-show="!podShare.open">
-                            <a title="Share Options">
-                                <span class="icon-dot-3"></span>
-                            </a>
-                        </div>
-                        <div class="reveal-share-button" ng-click="podShare.open = false" ng-show="podShare.open">
-                            <a >
-                                <span class="icon-exit share-button-small"></span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                <section class="pod-options" id="pod-options">
-                    <p class="pod-options-exit">
-                        Options
-                        <a ><span class="icon-exit"></span></a>
-                    </p>
-                    <ul class="pod-options-list">
-                        <li><a >Remove from Feed</a></li>
-                        <li><a >Block User</a></li>
-                        <li><a >Flag as inappropriate</a></li>
-                    </ul>
-                </section>
-                <section 
-                    class="pod-share"
-                    ng-init="podShare.open = false" 
-                    ng-show="podShare.open"
-                >
-                    <ul class="pod-share-options">
-                        <li><a ><span class="icon-social-facebook"></span></a></li>
-                        <li><a ><span class="icon-social-twitter"></span></a></li>
-                        <li><a ><span class="icon-social-behance"></span></a></li>
-                        <li><a ><span class="icon-social-github"></span></a></li>
-                    </ul>
-                </section>
-            </li>
-        </ul>
 
     </section>
     <section class="medium-0 large-1 columns main-right">

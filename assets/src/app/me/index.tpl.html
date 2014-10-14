@@ -61,8 +61,7 @@
                     <section class="profile-pod-header">
                         <p>{{ post.createdAt | date }}</p>
                         <div class="profile-pod-options">
-                            <!-- dropdown-toggle="#profile-pod-options-{{ post.id || number }}" -->
-                            <a title="Options">
+                            <a dropdown-toggle="#me-pod-options-{{ post.id || number }}" title="Options">
                                 <span class="icon-vote-down"></span>
                             </a>
                         </div>
@@ -73,31 +72,58 @@
                         </a>
                     </section>
                     <section class="profile-pod-body">
-                        <h3><a >{{ post.author.firstName }} {{ post.author.lastName }} </a>{{ post.verb }} <a >{{ post.object }}</a></h3>
+                        <h3>
+                            <a ui-sref="profile.view({ handle: post.author.handle })">{{ post.author.firstName }} {{ post.author.lastName }}</a>
+                             {{ post.verb }} 
+                            <span ng-show="post.user">
+                                <a ui-sref="profile.view({ handle: post.user.handle })">{{ post.user.firstName }} {{ post.user.lastName }}</a> 
+                                in a
+                            </span>
+                            <a >{{ post.parent }}</a>
+                        </h3>
                         <p>{{ post.description }}</p>
                     </section>
                     <section class="profile-pod-footer">
-                        <p class="f-left">{{ post.part }} in {{ post.object }}</p>
-                        <!-- dropdown-toggle="#profile-pod-share-{{ post.id || number }}" -->
-                        <a >Share</a>
+                        <a 
+                            class="f-left" 
+                            ui-sref="profile.view.manti({ handle: post.author.handle })"
+                            ng-show="post.type=='Manti'"
+                        >{{ post.type }}</a>
+                        <a 
+                            class="f-left" 
+                            ui-sref="community.queries"
+                            ng-show="post.type=='Query'"
+                        >{{ post.type }}</a>
+                        <a 
+                            class="f-left" 
+                            ui-sref="community.board"
+                            ng-show="post.type=='Opportunity'"
+                        >{{ post.type }}</a>
+
+                        <p 
+                            ng-show="post.child.length > 1" 
+                            class="f-child-des"
+                        >{{ post.child }}<span> in </span>{{ post.parent }}</p>
+
+                        <a dropdown-toggle="#me-pod-share-{{ post.id || number }}">Share</a>
                     </section>
 
-                    <!-- <section class="pod-options" id="profile-pod-options-{{ post.id || number }}">
-                        <p class="pod-options-exit">Options<a ><span class="icon-exit"></span></a></p>
+                    <section class="pod-options" id="me-pod-options-{{ post.id || number }}">
+                        <p class="pod-options-exit">Options</p>
                         <ul class="pod-options-list">
                             <li><a >Remove from Feed</a></li>
                             <li><a >Block User</a></li>
                             <li><a >Flag as inappropriate</a></li>
                         </ul>
                     </section>
-                    <section class="pod-share" id="profile-pod-share-{{ post.id || number }}">
+                    <section class="pod-share" id="me-pod-share-{{ post.id || number }}">
                         <ul class="pod-share-options">
                             <li><a ><span class="icon-social-facebook"></span></a></li>
                             <li><a ><span class="icon-social-twitter"></span></a></li>
                             <li><a ><span class="icon-social-behance"></span></a></li>
                             <li><a ><span class="icon-social-github"></span></a></li>
                         </ul>
-                    </section> -->
+                    </section>
 
                 </div>
                 

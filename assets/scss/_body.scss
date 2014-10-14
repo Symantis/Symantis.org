@@ -1,8 +1,13 @@
 body {
 	background-color: white;
-	//background-color: lighten($offWhite, 5%);
 	height: 100%;
 }
+[ui-view="main"] {
+	//background-color: whitesmoke;
+	//background-color: #f6f5f2;
+	background-color: #f5f8fa;
+}
+
 /* ----- Highlight color ------ */
 ::selection {
   	background: lighten($primary-color, 45%);
@@ -337,11 +342,11 @@ quote {
 .sitenav-push-inner {
 	//height: 100%;
 }
-.footer-container{
-	border-top: 1px $light solid;
+
+.footer-container{	
 }
 .footer {
-	
+	border-top: 1px $light solid;
 	height: 55px;
 	display: block;
 	padding-top: 8px;

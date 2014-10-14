@@ -1,6 +1,5 @@
 $animationTime: 0.3s !default;
 
-
 .top-nav {
 	padding-top: 0;
 	padding-bottom: 0;
@@ -35,7 +34,8 @@ $animationTime: 0.3s !default;
 		//width: calc(100% - 50px);
 		//width:100%;
 		//background-color: rgba(245,249,249,1);
-		background-color: lighten($offWhite, 5%);
+		//background-color: lighten($offWhite, 5%);
+		background-color: white;
 		/* ---- Body is gray ---- */
 		-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.4);
 		-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.4);

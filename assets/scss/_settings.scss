@@ -42,32 +42,32 @@ $reveal-close-weight: light;
 	font-size: $size;
 }
 @mixin font-light($size) {
-	font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	font-family: 'open_sanslight', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: black;
 	font-size: $size;
 }
 @mixin font-semi($size) {
-	font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: black;
 	font-size: $size;
 }
 @mixin font-bold($size) {
-	font-family: 'open_sansbold', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	font-family: 'open_sansbold', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: black;
 	font-size: $size;
 }
 @mixin font-italic($size) {
-	font-family: 'open_sansitalic', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	font-family: 'open_sansitalic', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: black;
 	font-size: $size;
 }
 @mixin font-bitter($size) {
-	font-family: 'bitter', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	font-family: 'bitter', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: black;
 	font-size: $size;
 }
 @mixin font-bitter2($size) {
-	font-family: 'bitter2', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	font-family: 'bitter2', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: black;
 	font-size: $size;
 }
