@@ -1,5 +1,6 @@
 angular.module("sy.templates", [
     'sy.templates.inputs',
+    'sy.templates.syapp',
     'sy.templates.sitenav', 
     'sy.templates.activity',
     'sy.templates.homeanimation', 
@@ -147,6 +148,28 @@ angular.module('sy.templates.inputs', [])
     }
   }
 });
+
+
+angular.module('sy.templates.syapp', ['duScroll'])
+.directive('syApp', ['$document', '$window', '$rootScope','$state','$timeout', function ($document, $window, $state, $timeout) {
+    return {
+        restrict: 'C',
+        link: function ($scope, element, attrs) {
+            
+            $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+                console.log("state changed");
+                var viewport = element;
+                var top = 0;
+                var duration = 500; //milliseconds
+                //Scroll to the exact position
+                viewport.scrollTop(top, duration).then(function() {
+                  console.log('You just scrolled to the top!');
+                });
+            });
+        }
+    }
+
+}]);
 
 angular.module('sy.templates.sitenav', [])
 .directive('sitenavPush', ['$document', '$window', '$rootScope', '$timeout', function ($document, $window, $timeout) {

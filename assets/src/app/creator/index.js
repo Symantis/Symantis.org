@@ -11,10 +11,6 @@ angular.module( 'symantis.creator', [
 					controller: 'CreatorCtrl',
 					templateUrl: 'creator/index.tpl.html'
 				},
-				"sitenav": {
-					controller: 'SiteNavCtrl',
-	                templateUrl: 'sitenav/index.tpl.html'
-				},
 				"header": {
 					controller: 'HeaderCtrl',
 		            templateUrl: 'header/header.tpl.html'
@@ -40,10 +36,6 @@ angular.module( 'symantis.creator', [
 				"main@": {
 					controller: 'CreatorAppCtrl',
 					templateUrl: 'creator/app/index.tpl.html'
-				},
-				"sitenav@": {
-					controller: 'CreatorAppNavCtrl',
-	                template: '<div></div>'
 				},
 				"header@": {
 					controller: 'CreatorAppHeaderCtrl',
