@@ -171,6 +171,7 @@ module.exports = {
 
 			}
 			else{
+				Response.publishCreate(newModel);
 				res.json(newModel);
 			}
 		});
