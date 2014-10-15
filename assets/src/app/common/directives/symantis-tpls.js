@@ -1169,7 +1169,7 @@ angular.module('sy.templates.homeanimation', [])
                 var force = d3.layout.force()
                     .gravity(0.06)
                     .charge(function(d, i) { return i ? 0 : -2000; })
-                    //.friction(0.9)
+                    .friction(0.95)
                     .nodes(nodes)
                     .size([w, h]);
 
