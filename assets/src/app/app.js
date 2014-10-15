@@ -1850,14 +1850,14 @@ var aQueries = [
 var aArticles = [
 	{
 		id: 1,
-		title: 'Symantis.org is out of Beta!',
+		title: 'Google Warns of Design Vulnerability in SSL 3.0',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
 		},
 		date: new Date(),
-		img: 'http://placehold.it/350x150',
-		description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
-		article: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+		img: '../img/placeholder/google-news.jpg',
+ 		description: 'Google on Tuesday announced that it has discovered a \"vulnerability in the design of SSL version 3.0\". The vulnerability, which Google announced on its security blog and detailed in a security advisory \[PDF link\], \"allows the plaintext of secure connections to be calculated by a network attacker.\"',
+		article: 'Although the problem Google has discovered looks severe, the good news is that it can be mitigated by upgrading to a newer version of a web browser. In the case of Google Chrome, Mozilla Firefox and Opera, the rolling, automatic-updating nature of the browser means that users can get fixes quickly.Although the problem Google has discovered looks severe, the good news is that it can be mitigated by upgrading to a newer version of a web browser. In the case of Google Chrome, Mozilla Firefox and Opera, the rolling, automatic-updating nature of the browser means that users can get fixes quickly.Although the problem Google has discovered looks severe, the good news is that it can be mitigated by upgrading to a newer version of a web browser. In the case of Google Chrome, Mozilla Firefox and Opera, the rolling, automatic-updating nature of the browser means that users can get fixes quickly.',
 		author:{
 			id: 1, 
 			firstName: "Hamish",
@@ -1985,12 +1985,13 @@ var aArticles = [
 	},
 	{
 		id: 2,
-		title: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Wellington',
+		title: 'Lenovo Yoga 3 Pro Design Was Inspired by Fine Watches',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
 		},
 		date: new Date(),
-		description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+		img: '../img/placeholder/lenova-news.jpg',
+		description: 'The first Lenovo Yoga laptop was an inspired piece of hybrid design: a full-featured laptop that could be used in four different modes, thanks to a special hinge that could unfold the screen a full 360 degrees.',
 		article: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
 		author:{
 			id: 1, 
@@ -2071,13 +2072,82 @@ var aArticles = [
 	},
 	{
 		id: 3,
-		title: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Wellington',
+		title: 'Joseph Gordon-Levitt Unveils Adobe\'s Most Promising Experiments',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
 		},
 		date: new Date(),
-		img: 'http://placehold.it/350x150',
-		description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+		img: '../img/placeholder/adobe-news.jpg',
+		description: 'Adobe is fond of referring to certain features as &quot;Photoshop magic,&quot; or simple tools that make complex processes simpler. Many of these “magical” features begin as experiments in the company’s labs.',
+		article: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+		author:{
+			id: 1, 
+			firstName: "Hamish",
+			lastName:  "Jackson-Mee",
+			handle: "hamish",
+			at: "@",
+			status: 'online',
+			signature: Math.random()
+		},
+		social : {
+			facebook : 25,
+			twitter : 50
+		},
+		comments : [
+			{
+				id : '1',
+				date: new Date(),
+				upVotes: 9,
+				downVotes: 0,
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					signature: Math.random()
+				},
+				comment: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
+				replies: [
+					{
+						id: '1',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "hamish",
+							at: "@",
+							signature: Math.random()
+						},
+						date: new Date(),
+						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					},
+					{
+						id: '2',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "hamish",
+							at: "@",
+							signature: Math.random()
+						},
+						date: new Date(),
+						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+					}
+				]
+			}
+		]
+	},
+	{
+		id: 4,
+		title: '9 Reasons You Should Know a Little HTML and CSS',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
+		},
+		date: new Date(),
+		img: '../img/placeholder/code-news.jpg',
+		description: 'You&#039;ve heard over and over that everyone should learn to code. Alright already! But as a writer, marketer, finance guru or nonprofit worker, why in the world should you get into coding?',
 		article: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
 		author:{
 			id: 1, 
