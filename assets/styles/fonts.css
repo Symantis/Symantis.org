@@ -159,7 +159,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .icon-exit:before {
   content: "b";
 }
@@ -345,4 +344,22 @@
 }
 .icon-close-empty:before {
   content: "9";
+}
+.icon-pipe1:before {
+  content: "!";
+}
+.icon-pipe2:before {
+  content: "\"";
+}
+.icon-pipe3:before {
+  content: "#";
+}
+.icon-pipe4:before {
+  content: "$";
+}
+.icon-pipe5:before {
+  content: "%";
+}
+.icon-align-right:before {
+  content: "&";
 }

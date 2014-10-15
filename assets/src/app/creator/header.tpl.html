@@ -4,7 +4,7 @@
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a 
 		ui-sref="creator.app" 
-		
+		ng-show="currentUser"
 		ng-class="{active: $state.includes('creator.app')}"
 	>
 		<span>Launch</span>

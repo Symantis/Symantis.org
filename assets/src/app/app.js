@@ -995,46 +995,46 @@ var aProfileData = {
 	curManti: [
 		{
 			title: 'SyScribe',
-			description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+			description: 'The IDE/GUI hybrid for the Symantis Creator App. Allowing anyone to build and create for the web. ',
 		},
 		{
-			title: 'SyScribe',
-			description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+			title: 'SyQuery',
+			description: 'The Symantis Query library. This library allows for storing on Angular.js partials and SCSS CSS in JSON.',
 		},
 		{
-			title: 'SyScribe',
-			description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+			title: 'Parallax Scroll',
+			description: 'A parallax scrolling plugin. Plug and Play driven, this will help anyone with creating parallax web experiences.',
 		},
 		{
-			title: 'SyScribe',
-			description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+			title: 'Responsive Template',
+			description: 'A simple template for mobile, tablet and desktop screen sizes.',
 		}
 	],
 	reContributions: [
 		{
 			type: 'New Branch',
 			title: 'SyQuery',
-			description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+			description: 'Added a bunch of new variables to help people customize and drive their stored data.',
 		},
 		{
-			type: 'New Branch',
-			title: 'SyQuery',
-			description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+			type: 'Added',
+			title: 'Symantis.org',
+			description: 'Added a mapping section to Symantis.org. This is only the initial map, we still need to work on this..',
 		},
 		{
-			type: 'New Branch',
+			type: 'Forked',
 			title: 'SyQuery',
-			description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+			description: 'Had to fork SyQuery as I\'m making some dramatic changes and didn\'t want to break it for you guys',
 		},
 		{
-			type: 'New Branch',
-			title: 'SyQuery',
-			description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+			type: 'Removed',
+			title: 'Flash',
+			description: 'Removed all ActionScript support from the Symantis system. We do not like flash!',
 		},
 		{
-			type: 'New Branch',
-			title: 'SyQuery',
-			description: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
+			type: 'New Manti',
+			title: 'Front-End GUI',
+			description: 'Made the front-end for the SYmantis Creator application. This is the GUI view only for the the mapping tools, and des/dev views.',
 		}
 	]
 };

@@ -1,19 +1,86 @@
 <div class="c-wrapper">
 
 	<header class="c-header">
+
 		<div class="c-logo">
 			<a >sy.</a>
 		</div>
+
 		<div class="c-header-left">
-			<a >Front-End <span class="icon-chevron-down"></span></a>
+			<a dropdown-toggle="#c-front-dropdown">Front-End <span class="icon-chevron-down"></span></a>
 		</div>
-		<div class="c-header-right">
-			<a >Messages <span class="icon-chevron-down"></span></a>
+		<div id="c-front-dropdown" class="front-dropdown-container">
+			<ul class="settings-dropdown">
+				<li>
+					<a >Front Option 1</a>
+				</li>
+				<li>
+					<a >Front Option 2</a>
+				</li>
+				<li>
+					<a >Front Option 3</a>
+				</li>
+			</ul>
 		</div>
+
+		<div class="c-header-pipe">
+			<ul>
+				<li>
+					<a class="active"><span class="icon-pipe1 icon"></span></a>
+				</li
+				><li class="c-pipe-join">
+					<span class="c-pipe-line"></span>
+				</li
+				><li>
+					<a ><span class="icon-pipe2 icon"></span></a>
+				</li
+				><li class="c-pipe-join">
+					<span class="c-pipe-line"></span>
+				</li
+				><li>
+					<a ><span class="icon-pipe3 icon"></span></a>
+				</li
+				><li class="c-pipe-join">
+					<span class="c-pipe-line"></span>
+				</li
+				><li>
+					<a ><span class="icon-pipe4 icon"></span></a>
+				</li
+				><li class="c-pipe-join">
+					<span class="c-pipe-line"></span>
+				</li
+				><li>
+					<a ><span class="icon-pipe5 icon"></span></a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="c-header-menu">
+			<a dropdown-toggle="#c-menu-dropdown"><span class="icon-align-right"></span></a>
+		</div>
+		<div id="c-menu-dropdown" class="front-dropdown-container menu-dropdown">
+			<ul class="settings-dropdown">
+				<li>
+					<a >Project</a>
+				</li>
+				<li>
+					<a >Edit</a>
+				</li>
+				<li>
+					<a >View</a>
+				</li>
+				<li>
+					<a >Help</a>
+				</li>
+			</ul>
+		</div>
+
 		<div class="c-header-mid-right">
-			<p class="user-{{ currentUser.status }}">
-				<span class="status"></span>
-				<a dropdown-toggle="#c-settings-dropdown">{{ currentUser }}<span class="icon-chevron-down"></span></a>
+			<p 
+				class="user-{{ currentUser.status }}" 
+				dropdown-toggle="#c-settings-dropdown"
+			><span class="status"></span>
+				<a >{{ currentUser.firstName }}<span class="icon-chevron-down"></span></a>
 			</p>
 		</div>
 		<div id="c-settings-dropdown" class="settings-dropdown-container">
@@ -38,6 +105,26 @@
 				</li>
 			</ul>
 		</div>
+
+		<div class="c-header-right">
+			<a 
+				dropdown-toggle="#c-right-dropdown"
+			>Messages <span class="icon-chevron-down"></span></a>
+		</div>
+		<div id="c-right-dropdown" class="front-dropdown-container right-dropdown">
+			<ul class="settings-dropdown">
+				<li>
+					<a >Option 1</a>
+				</li>
+				<li>
+					<a >Option 2</a>
+				</li>
+				<li>
+					<a >Option 3</a>
+				</li>
+			</ul>
+		</div>
+
 	</header>
 
 	<section class="c-left">

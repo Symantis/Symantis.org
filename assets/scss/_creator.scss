@@ -1,7 +1,9 @@
 [ui-view="main"].creator-app {
 	padding-bottom: 0 !important;
 	margin-bottom: 0 !important;
-	z-index: 999;
+}
+.creator-app .top-nav {
+	display: none;
 }
 .c-wrapper {
 	height: 100%;
@@ -17,42 +19,49 @@
 	left: 0;
 	//background-color: $darkest;
 	z-index: 9999;
-	border-bottom: 1px lighten($dark, 7%) solid;
-	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	border-bottom: 1px $darkest solid;
+	-webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow:    0px 1px 6px 0px rgba(0, 0, 0, 0.4);
+	box-shadow:         0px 1px 6px 0px rgba(0, 0, 0, 0.4);
 	@include no-highlight;
-	background: #383838; /* Old browsers */
-	background: -moz-linear-gradient(top, #383838 0%, #1c1c1c 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#383838), color-stop(100%,#1c1c1c)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #383838 0%,#1c1c1c 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #383838 0%,#1c1c1c 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #383838 0%,#1c1c1c 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #383838 0%,#1c1c1c 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#1c1c1c',GradientType=0 );
+	background: #424242; /* Old browsers */
+	background: -moz-linear-gradient(top, #424242 0%, #282828 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#424242), color-stop(100%,#282828)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #424242 0%,#282828 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #424242 0%,#282828 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #424242 0%,#282828 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #424242 0%,#282828 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#282828',GradientType=0 );
 	.c-logo {
 		position: absolute;
 		left: 0;
 		top: 0;
 		height: rem-calc(50px);
-		width: rem-calc(40px);
+		width: rem-calc(60px);
 		text-align: center;
 		border-right: 1px solid rgba(0,0,0,.5);
+		cursor: pointer;
 		a {
 			border: 1px solid rgba(255,255,255,.05);
 			border-width: 0 1px;
 			text-shadow: 0 1px 0 #000;
-			line-height: rem-calc(50px);
+			line-height: rem-calc(42px);
 			margin: 0;
 			display: block;
 			width: 100%;
-			@include font-semi(rem-calc(18px));
+			@include font-semi(rem-calc(24px));
 			color: $primary-color;
+		}
+		&:hover {
+			//border: none;
+			-webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+			-moz-box-shadow:    inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+			box-shadow:         inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
 		}
 	}
 	.c-header-left {
 		position: absolute;
-		left: rem-calc(40px);
+		left: rem-calc(60px);
 		top: 0;
 		width: rem-calc(150px);
 		height: 100%;
@@ -73,6 +82,105 @@
 				position: relative;
 				bottom: -.15rem;
 				padding-left: rem-calc(5px);
+			}
+			&.active {
+				border: none;
+				-webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+				-moz-box-shadow:    inset 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+				box-shadow:         inset 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+				color: $light;
+			}
+			&:hover {
+				//border: none;
+				-webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow:    inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+				box-shadow:         inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+	.c-header-pipe {
+		position: absolute;
+		left: rem-calc(210px);
+		top: 0;
+		height: 100%;
+		width: rem-calc(260px);
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: block;
+			position: relative;
+			margin-left: rem-calc(30px);
+			margin-top: rem-calc(1px);
+			li {
+				display: inline-block;
+				width: rem-calc(33px);
+				height: 100%;
+				line-height: rem-calc(50px);
+				text-align: center;
+				a {
+					padding: 0.125rem 0.125rem 0 0.1875rem;
+					font-size: rem-calc(23px);
+					color: $light;
+					border-radius: rem-calc(4px);
+					border: none;
+					@include transition(100ms);
+					.icon {
+						position: relative;
+						bottom: -.1rem;
+					}
+					&:hover {
+						//border: rem-calc(2px) $primary-color solid;
+						color: white;
+					}
+					&.active {
+						border: rem-calc(2px) $primary-color solid;
+						color: white;
+					}
+				}
+				
+				.c-pipe-line {
+					height: rem-calc(1px);
+					width: 100%;
+					display: block;
+					background-color: $light;
+				}
+				&.c-pipe-join {
+					width: rem-calc(20px);
+					margin-left: rem-calc(-5px);
+					margin-right: rem-calc(-6px);
+					position: relative;
+					top: -.55rem;
+				}
+			}
+		}
+	}
+	.c-header-menu {
+		position: absolute;
+		top: 0;
+		right: rem-calc(300px);
+		width: rem-calc(30px);
+		height: 100%;
+		text-align: center;
+		border-right: 1px solid rgba(255,255,255,.05);
+		border-width: 0 1px;
+		padding-right: rem-calc(40px);
+		a {
+			text-shadow: 0 1px 0 #000;
+			line-height: rem-calc(50px);
+			margin: 0;
+			width: 100%;
+			position: relative;
+			display: block;
+			font-size: rem-calc(24px);
+			color: lighten($light,10%);
+			@include transition(100ms);
+			span {
+				position: relative;
+				bottom: -.1rem;
+			}
+			&:hover {
+				color: $offWhite;
 			}
 		}
 	}
@@ -95,9 +203,24 @@
 			display: block;
 			white-space: nowrap;
 			overflow: hidden;
+			cursor: pointer;
 			text-overflow: ellipsis;
 			@include font-regular(rem-calc(13px));
-			color: $primary-color;
+			&.active {
+				border: none;
+				-webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+				-moz-box-shadow:    inset 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+				box-shadow:         inset 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+				a {
+					color: darken($primary-color, 10%);
+				}
+			}
+			&:hover {
+				//border: none;
+				-webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow:    inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+				box-shadow:         inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+			}
 			&.user-inactive {
 				a {
 					color: $sy-blue;
@@ -165,25 +288,38 @@
 			display: block;
 			@include font-regular(rem-calc(12px));
 			color: $offWhite;
+			@include transition(100ms);
 			span {
 				position: relative;
 				bottom: -.15rem;
 				padding-left: rem-calc(5px);
+			}
+			&.active {
+				//border: none;
+				-webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow:    inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+				box-shadow:         inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+				//color: darken($offWhite,10%);
+			}
+			&:hover {
+				//border: none;
+				-webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow:    inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+				box-shadow:         inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
 			}
 		}
 	}
 	.settings-dropdown-container {
 		position: absolute;
 		z-index: 999;
-		//overflow: hidden;
 		top: rem-calc(50px) !important;
-		right: rem-calc(152px) !important;
+		right: rem-calc(150px) !important;
 		left: auto !important;
-		width: rem-calc(148px);
-		background-color: $dark;
+		width: rem-calc(150px);
+		background-color: $darkest;
 		border-bottom-right-radius: 4px;
 		border-bottom-left-radius: 4px;
-		border: 1px $dark solid;
+		border-top: 1px lighten($dark,10%) solid;
 		-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 		-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
 		box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
@@ -192,7 +328,7 @@
 			float: left;
 			position: relative;
 			margin: 0;
-			padding: 7px 10px 4px 10px;
+			padding: 7px 10px 10px 10px;
 			li {
 				width: 100%;
 				float: left;
@@ -202,13 +338,13 @@
 				padding: 8px 5px 8px 5px;
 				//border-radius: 3px;
 				a {
-					@include font-regular(rem-calc(12px));
+					@include font-light(rem-calc(12px));
 					color: $offWhite;
 					padding-top: 3px;
 					padding-bottom: 3px;
 					padding-left: 18px;
 					padding-right: 14px;
-					width: 146px;
+					width: rem-calc(150px);
 					float: left;
 					margin-left: -15px;
 					margin-right: -15px;
@@ -222,7 +358,6 @@
 					}
 					&:hover {
 						background-color: $primary-color;
-						color: white;
 					}
 				}
 				&.header-balance {
@@ -266,7 +401,7 @@
 	}
 	.settings-dropdown-container:after, .settings-dropdown-container:before {
 		bottom: 100%;
-		left: rem-calc(110px);
+		left: 53%;
 		border: solid transparent;
 		content: " ";
 		height: 0;
@@ -276,17 +411,125 @@
 	}
 	.settings-dropdown-container:after {
 		border-color: rgba(255, 255, 255, 0);
-		border-bottom-color: $dark;
-		border-width: 9px;
-		margin-left: -9px;
+		border-bottom-color: $darkest;
+		border-width: 7px;
+		margin-left: -7px;
 	}
 	.settings-dropdown-container:before {
 		border-color: rgba(46, 48, 44, 0);
-		border-bottom-color: lighten($dark, 7%);
-		border-width: 10px;
-		margin-left: -10px;
+		border-bottom-color: lighten($dark,10%);
+		border-width: 8px;
+		margin-left: -8px;
+	}
+
+	.front-dropdown-container {
+		position: absolute;
+		z-index: 999;
+		//overflow: hidden;
+		top: rem-calc(50px) !important;
+		left: rem-calc(59px) !important;
+		width: rem-calc(151px);
+		background-color: $darkest;
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-top: 1px lighten($dark,10%) solid;
+		-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+		-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+		box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+		&.right-dropdown {
+			left: auto !important;
+			right: 0 !important;
+		}
+		&.menu-dropdown {
+			width: rem-calc(100px);
+			left: auto !important;
+			right: rem-calc(300px);
+			li {
+				a {
+					width: rem-calc(100px) !important;
+				}
+			}
+		}
+		.settings-dropdown {
+			list-style: none;
+			float: left;
+			position: relative;
+			margin: 0;
+			padding: 7px 10px 10px 10px;
+			li {
+				width: 100%;
+				float: left;
+				text-align: left;
+				@include transition(100ms);
+				padding: 2px 5px 2px 5px;
+				//border-radius: 3px;
+				a {
+					@include font-light(rem-calc(12px));
+					color: $offWhite;
+					padding-top: 3px;
+					padding-bottom: 3px;
+					padding-left: 18px;
+					padding-right: 14px;
+					width: rem-calc(151px);
+					float: left;
+					margin-left: -15px;
+					margin-right: -15px;
+					@include transition(100ms);
+					.icon {
+						float: right;
+						position: relative;
+						font-size: rem-calc(14px);
+						margin-bottom: -5px;
+						display: none;
+					}
+					&:hover {
+						background-color: $primary-color;
+					}
+				}
+				&.header-balance {
+					span {
+						background-color: $light;
+						border-radius: 2px;
+						padding: 2px 6px 2px 6px;
+						color: white;
+						margin-left: 5px;
+					}
+				}
+				.active {
+					.icon {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.front-dropdown-container:after, .front-dropdown-container:before {
+		bottom: 100%;
+		left: 53%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+	.menu-dropdown:after, .menu-dropdown:before {
+		left: rem-calc(73px);
+	}
+	.front-dropdown-container:after {
+		border-color: rgba(255, 255, 255, 0);
+		border-bottom-color: $darkest;
+		border-width: 7px;
+		margin-left: -7px;
+	}
+	.front-dropdown-container:before {
+		border-color: rgba(46, 48, 44, 0);
+		border-bottom-color: lighten($dark,10%);
+		border-width: 8px;
+		margin-left: -8px;
 	}
 }
+
 .c-left {
 	height: 100%;
 	width: rem-calc(40px);
@@ -321,9 +564,9 @@
 					border: 1px lighten($dark, 12%) solid;
 				}
 				&.active {
-					-webkit-box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.8);
-					-moz-box-shadow:    inset 1px 1px 5px 0px rgba(0, 0, 0, 0.8);
-					box-shadow:         inset 1px 1px 5px 0px rgba(0, 0, 0, 0.8);
+					-webkit-box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+					-moz-box-shadow:    inset 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+					box-shadow:         inset 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
 					background-color: darken($dark, 3%);
 				}
 			}
