@@ -17,14 +17,14 @@ angular.module( 'symantis.community.queries', [
 	});
 })
 */
-.controller( 'QueriesCtrl', function QueriesController( $http, $sails, $scope, $state, titleService, cache, queries ) {
+.controller( 'QueriesCtrl', function QueriesController( $http, $sails, $scope, $state, titleService, cache ) {
 	titleService.setTitle('Queries');
 	$scope.$parent.toDo = [];
 
 	$scope.loadingSection = true;
 
 	//$scope.queries = queries;
-	cache.resolveQueriesCache(queries).then(function(queries){
+	cache.resolveQueriesCache($scope.queries).then(function(queries){
 		$scope.queries = queries;
 		$scope.loadingSection = false;
 	});
@@ -55,29 +55,6 @@ angular.module( 'symantis.community.queries', [
 	      //return queries;
 	    });
 	  };
-
-	$sails.on('query', function (envelope) {
-		switch(envelope.verb) {
-			
-			case 'created':
-				cache.cacheNewQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'addedTo':
-				//cache.cacheNewQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'updated':
-				cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
-				//lodash.
-				//$scope.queries.unshift(envelope.data);
-				break;
-			case 'destroyed':
-				cache.removeQueryFromCache($scope.queries, envelope.id);
-				
-				break;
-		}
-	});
 
 	
 })
@@ -234,7 +211,7 @@ angular.module( 'symantis.community.queries', [
 
 			QueryModel.create(model).then(function (newModel){
 				utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your Query was added successfully.' } );	
-				$state.go('community.queries',{id: newModel.id, title: newModel.clean });
+				$state.go('community.queries.view',{id: newModel.id, title: newModel.clean });
 			});
 
 		}else{

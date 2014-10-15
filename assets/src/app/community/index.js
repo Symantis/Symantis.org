@@ -88,10 +88,12 @@ angular.module( 'symantis.community', [
 					controller: 'QueriesCtrl',
 					templateUrl: 'community/queries/index.tpl.html',
 					resolve: {
+						/*
 						queries: function($rootScope){
 							return $rootScope.queries;
 							//return $rootScope.queries = cache.cacheQueries($rootScope.queries);
 						}
+						*/
 					},
 				},
 				"leftside@community.queries.category": {

@@ -103,6 +103,10 @@ angular.module( 'services.cache', ['lodash'])
 			 queries.push(newModel);
 			 return newModel;
 		},
+		cacheCreatedQuery: function(queries, query){
+			queries.push(query);
+			return query;
+		},
 		getCachedQuery: function(queries, id){
 			return _.find(queries, {id: id});
 		},

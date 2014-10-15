@@ -61,8 +61,11 @@ module.exports = {
 		},
 		responses: {
 			collection: 'response',
-			via: 'query',
-			defaultsTo: []
+			via: 'query'
+		},
+		replies: {
+			collection: 'comment',
+			via: 'query'
 		}
 		/*
 		,
