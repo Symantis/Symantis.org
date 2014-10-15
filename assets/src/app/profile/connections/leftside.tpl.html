@@ -1,8 +1,41 @@
-<!-- Section for main left header -->
+<header class="left-header online-header">
+    <h3><a >Online</a></h3>
+    <span class="bottom-rule"></span>
+</header>
 <div class="left-content">
     <div class="connections-online-nav">
+        
         <ul>
-                    
+            <li class="animate-repeat" ng-repeat="user in user.connections">
+                <a 
+                    ui-sref="profile.view({ handle: user.handle })" 
+                    ng-show="user.status == 'active'"
+                >
+                    <p>
+                    {{ user.firstName + ' ' + user.lastName }}
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<header class="connections-suggestions-header left-header">
+    <h3><a ui-sref="profile">Suggestions</a></h3>
+</header>
+<div class="left-content">
+    <div class="connections-suggestions-nav">
+        <ul>
+            <li 
+                class="animate-repeat" 
+                ng-repeat="user in user.suggestions"
+            >
+                <a ui-sref="profile.view({ handle: user.handle })" title="View {{ user.firstName }}'s Profile">
+                    <div class="connections-suggestions-pic suggestions-{{ user.status }} generate-image" signature="{{ user.signature }}">
+                    </div>
+                    <p class="connections-suggestions-name">{{ user.firstName + ' ' + user.lastName }}</p>
+                    <p class="connections-suggestions-skills">{{ user.tags[0].text }}</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
