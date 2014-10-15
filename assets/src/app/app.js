@@ -2235,12 +2235,7 @@ var aOpportunities = [
 		imgs: [
 			{
 				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
-				caption: 'This is an example image.'
-			},
-			{
-				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
+				src: '../img/placeholder/first-ecommerce.jpg',
 				caption: 'This is an example image.'
 			},
 			{
@@ -2540,7 +2535,7 @@ var aOpportunities = [
 		imgs: [
 			{
 				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
+				src: '../img/placeholder/jabber.jpg',
 				caption: 'This is an example image.'
 			},
 			{
@@ -2701,7 +2696,7 @@ var aOpportunities = [
 		imgs: [
 			{
 				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
+				src: '../img/placeholder/widgetware.png',
 				caption: 'This is an example image.'
 			},
 			{
