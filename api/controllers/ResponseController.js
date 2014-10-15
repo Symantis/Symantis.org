@@ -28,5 +28,46 @@ module.exports = {
 			// An error occured
 		});
 	},
+	addReply: function (req, res){
+		var query = req.param('query');
+		if (!query) {
+			return res.badRequest('No query id provided.');
+
+		}
+		var response = req.param('response');
+		if (!response) {
+			return res.badRequest('No response id provided.');
+
+		}
+		var author = req.param('author');
+		if (!author) {
+			return res.badRequest('No author id provided.');
+
+		}
+		var comment = req.param('comment');
+		if (!comment) {
+			return res.badRequest('No comment provided.');
+
+		}
+
+		var reply = {
+			query: query,
+			response: response,
+			author: author,
+			comment: comment,
+			controller: 'query'
+		}
+
+		Comment.create(reply)
+		.exec(function (err, newModel){
+			if(err){
+
+			}
+			else{
+				Comment.publishCreate(newModel);
+				res.json(newModel);
+			}
+		});
+	}
 };
 

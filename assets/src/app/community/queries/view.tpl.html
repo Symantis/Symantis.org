@@ -269,7 +269,7 @@
 			            	<span>{{ reply.date | date }}</span>
 			            </p>
 			        </div>
-					<p class="reply-text">{{reply.reply}}</p>
+					<p class="reply-text">{{reply.comment}}</p>
 			    </div>
 			</div>
 			<div class="new-comment" ng-show="currentUser && replies.open">
@@ -280,18 +280,28 @@
 					>
 					</div>
 				</div> -->
-				<form class="new-comment-form">
+				<form 
+					ng-submit="submitReply(response.id, response.newReply)"
+					class="new-comment-form"
+				>
 					<p>
 			        	<a ui-sref="profile.view({handle: currentUser.handle})">
 			        		{{ currentUser.firstName }} {{ currentUser.lastName }}
 			        	</a>
 			        </p>
-					<textarea name="new-comment-input" placeholder="Add Reply.."></textarea>
-					<a >
+					<textarea 
+						name="newReply" 
+						ng-model="response.newReply"
+						placeholder="Add Reply.."
+						required
+					></textarea>
+					
+					<a ng-click="submitReply(response.id, response.newReply)">
 						<div class="new-comment-submit">
 							<span class="icon-plus"></span>
 						</div>
 					</a>
+				
 				</form>
 			</div>
 			<h4 class="comment-noUser" ng-show="!currentUser">
@@ -315,7 +325,7 @@
 
 					<span ng-hide="replies.open">
 						<span ng-show="response.replies.length">Add/View Replies ({{ response.replies.length }})</span>
-						<span ng-show="response.replies.length == 0">Reply</span>
+						<span ng-hide="response.replies.length">Reply</span>
 					</span>
 				</a>
 			</p>

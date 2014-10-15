@@ -61,7 +61,8 @@ module.exports = {
 		},
 		responses: {
 			collection: 'response',
-			via: 'query'
+			via: 'query',
+			defaultsTo: []
 		}
 		/*
 		,
@@ -93,13 +94,24 @@ module.exports = {
 		return Query.findOne(id)
 		//.populate('viewers')
 		.populate('author')
-		.populate('responses')
-		.then(function(model){
-			console.log(model.responses);
-			return model;
-		})
-		.then(function (model) {
+		//.populate('responses')
+		//.then(function(model){
+			//console.log(model.responses);
+			/*
+			_.map(model.responses, function(response){
+				//console.log(response);
+				return response.author = User.findOne(response.author).then(function(user){
+					return [user];
+				});
+				
+			});
+			//console.log(model.responses);
 			model.totalResponses = model.responses.length;
+			*/
+			//return model;
+		//})
+		.then(function (model) {
+			
 			return [model];
 		});
 	},

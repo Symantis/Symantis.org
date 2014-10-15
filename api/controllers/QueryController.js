@@ -4,6 +4,7 @@
  * @description :: Server-side logic for managing queries
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
+var Q = require('q');
 
 module.exports = {
 	getLike: function(req, res) {
@@ -33,9 +34,51 @@ module.exports = {
 	},
 
 	getOne: function(req, res) {
-		Query.getOne(req.param('id'))
-		.spread(function(model) {
-			Query.subscribe(req.socket, model);
+		Q.all([
+	    	// let's get the query
+	    	Query.findOne(req.param('id'))
+	    	.populate('author')
+	    	.then(function (model) {
+				return model;
+			}),
+
+	    	// let's get the responses
+	    	Response.find({query: req.param('id')})
+	    	.populate('author')
+	    	.then(function (models) {
+				return models;
+			}),
+
+			Comment.find({query: req.param('id')})
+	    	.populate('author')
+	    	.then(function (models) {
+				return models;
+			})
+
+	    ])
+		.spread(function(query, responses, replies) {
+			
+			
+			query.totalResponses = responses.length;
+			responses.totalReplies = replies.length;
+			responses.replies = [];
+
+
+			Query.subscribe(req.socket, query);
+			Response.subscribe(req.socket, responses);
+			Comment.subscribe(req.socket, replies);
+			/*
+			var model = query;
+			model.responses = responses;
+			model.totalResponses = responses.length;
+			*/
+			model = {
+				query: query,
+				responses: responses,
+				replies: replies
+			}
+
+			//console.log(model);
 			res.json(model);
 		})
 		.fail(function(err) {

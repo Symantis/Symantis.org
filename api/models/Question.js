@@ -1,5 +1,5 @@
 /**
-* Response.js
+* Question.js
 *
 * @description :: TODO: You might write a short summary of how this model works and what it represents here.
 * @docs        :: http://sailsjs.org/#!documentation/models
@@ -22,10 +22,6 @@ module.exports = {
 			via: 'id'
 		},
 		*/
-		solution: {
-			type: 'boolean',
-			defaultsTo: false
-		},
 		author: {
 			model: 'user',
 			required: true
@@ -34,21 +30,22 @@ module.exports = {
 			type: 'datetime',
 			defaultsTo: new Date()
 		},
-		response: {
+		question: {
 			type: 'string',
 			required: true
 		},
 		replies: {
 			collection: 'comment',
-			via: 'response'
+			via: 'question',
+			defaultsTo: []
 		},
-		query: {
-			model: 'query',
+		opportunity: {
+			model: 'opportunity',
 			required: true
 		}
 	},
 	getAll: function() {
-		return Response.find()
+		return Question.find()
 		.populate('author')
 		.populate('replies')
 		.then(function (models) {
@@ -56,7 +53,7 @@ module.exports = {
 		});
 	},
 	getOne: function(id) {
-		return Response.findOne(id)
+		return Question.findOne(id)
 		.populate('author')
 		.populate('replies')
 		.then(function (model) {
@@ -64,29 +61,6 @@ module.exports = {
 			//Query.addViewCount(id);
 			return model;
 		});
-	},
-	getAllForQuery: function(query) {
-		console.log(query);
-		return Response.find({query: query})
-		.populate('author')
-		.populate('replies')
-		.then(function (models) {
-			return models;
-		});
-	},
-	/*
-	afterCreate : function(response, next){
-  		//console.log(comment);
-  		Response.findOne(response.id)
-  		.populate('author')
-  		.then(function(model){
-  			Response.publishCreate(model);
-  			return model;
-  		});
-  		//Response.publishCreate();
-
-  		next();
-  	}
-  	*/
+	}
 };
 

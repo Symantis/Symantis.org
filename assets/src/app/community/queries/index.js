@@ -92,6 +92,7 @@ angular.module( 'symantis.community.queries', [
 		titleService.setTitle('Query: ' + $scope.query.title);
 		$scope.loadingSection = false;
 		
+		/*
 		QueryModel.getResponses(query.id).then(function(models){
 			console.log(models);
 			query.responses = models;
@@ -101,6 +102,7 @@ angular.module( 'symantis.community.queries', [
 				$scope.comments.selected = false;
 			}
 		});
+		*/
 		/*
 		cache.resolveQueryResponsesCache(query).then(function(responses){
 			$scope.query.responses = responses;	
@@ -108,17 +110,6 @@ angular.module( 'symantis.community.queries', [
 		});
 		*/
 	});
-	/*
-	
-	*/
-	//cache.resolveQueryResponsesCache($scope.query);
-	
-	/*
-	QueryModel.getResponses(query.id).then(function(models){
-		console.log(models);
-		return models;
-	});
-	*/
 
 	QueryModel.updateViews({id: query.id });
 
@@ -148,30 +139,25 @@ angular.module( 'symantis.community.queries', [
 		}
 	}
 
-	$sails.on('response', function (envelope) {
-		switch(envelope.verb) {
+	$scope.submitReply = function(id, reply){
+		if(reply){
+			//console.log("Sumbit Called");
 			
-			case 'created':
-				//cache.cacheNewQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'addedTo':
-				//cache.cacheNewQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'updated':
-				//cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
-				//lodash.
-				//$scope.queries.unshift(envelope.data);
-				break;
-			case 'destroyed':
-				//cache.removeQueryFromCache($scope.queries, envelope.id);
-				
-				break;
-		}
-	});
+			var newModel = {
+				author: $scope.currentUser.id,
+				query: $scope.query.id,
+				response: id,
+				comment: reply
+			}
+			QueryModel.addReply(newModel).then(function(model){
+				$scope.comments.selected = false;
+				utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your reply was added successfully.' } );
+			});
+		}else{
 
-	
+		}
+	}
+
 })
 .controller( 'QueriesEditCtrl', function QueriesEditController( $http, $scope, query, queries, titleService, cache, QueryModel, utils, $timeout ) {
 	titleService.setTitle('Edit Query');

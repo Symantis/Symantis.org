@@ -304,6 +304,7 @@ angular.module( 'symantis', [
 				
 				break;
 			case 'addedTo':
+				console/log("User Added To");
 				//cache.cacheNewQuery($scope.queries, envelope.data);
 				
 				break;
@@ -314,6 +315,67 @@ angular.module( 'symantis', [
 				break;
 			case 'destroyed':
 				cache.removeUserFromCache($scope.users, envelope.id);
+				
+				break;
+		}
+	});
+
+	$sails.on('response', function (envelope) {
+		switch(envelope.verb) {
+			
+			case 'created':
+				console.log(envelope);
+				cache.cacheNewQueryReponse($scope.queries, envelope.data);
+				
+				break;
+			case 'addedTo':
+				console.log("Response Added To");
+				console.log(envelope);
+				//cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'updated':
+				console.log(envelope);
+				//cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
+				//lodash.
+				//$scope.queries.unshift(envelope.data);
+				break;
+			case 'destroyed':
+				console.log(envelope);
+				//cache.removeQueryFromCache($scope.queries, envelope.id);
+				
+				break;
+		}
+	});
+
+	$sails.on('comment', function (envelope) {
+		switch(envelope.verb) {
+			
+			case 'created':
+				console.log(envelope);
+				if(envelope.data.controller == 'query'){
+					cache.cacheNewQueryReponseReply($scope.queries, envelope.data);	
+				}
+				//cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'addedTo':
+				console/log("Comment Added To");
+				console.log(envelope);
+
+				//Object {id: "543e0a903097a4393459e5c9", verb: "addedTo", attribute: "replies", addedId: "543e297e34af6e4939475b1e"}
+				//cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'updated':
+				console.log(envelope);
+				//cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
+				//lodash.
+				//$scope.queries.unshift(envelope.data);
+				break;
+			case 'destroyed':
+				console.log(envelope);
+				//cache.removeQueryFromCache($scope.queries, envelope.id);
 				
 				break;
 		}

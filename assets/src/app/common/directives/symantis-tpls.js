@@ -38,6 +38,16 @@ angular.module('sy.templates.inputs', [])
     }
   };
 })
+.directive("dynamicName",[function(){
+    return {
+        restrict:"A",
+        require: ['ngModel', '^form'],
+        link:function(scope,element,attrs,ctrls){
+            ctrls[0].$name = scope.$eval(attrs.dynamicName) || attrs.dynamicName;
+            ctrls[1].$addControl(ctrls[0]);
+        }
+    };
+}])
 .directive('ngEnter', function() {
     return function(scope, element, attrs) {
         element.bind("keydown keypress", function(event) {

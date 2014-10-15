@@ -88,10 +88,20 @@ angular.module( 'services.cache', ['lodash'])
 						_.merge(query, data);
 			return queries;
 		},
-		cacheNewQuery: function(queries, query){
-			
-			 queries.push(query);
-			 return query;
+		cacheNewQuery: function(queries, collection){
+			 console.log(collection);
+
+			 _.map(collection.replies, function(reply){
+			 	var response = _.find(collection.responses, {id: reply.response});
+				response.replies = response.replies || [];
+				response.replies.push(reply);
+			 	
+			 });
+
+			 var newModel = collection.query;
+			 newModel.responses = collection.responses;
+			 queries.push(newModel);
+			 return newModel;
 		},
 		getCachedQuery: function(queries, id){
 			return _.find(queries, {id: id});
@@ -99,6 +109,23 @@ angular.module( 'services.cache', ['lodash'])
 		removeQueryFromCache: function(queries, id){
 			return _.remove(queries, {id: id});
 		},
+		cacheNewQueryReponse: function(queries, response){
+			console.log(response);
+			var query = _.find(queries, {id: response.query});
+			query.responses.push(response);
+			return response;
+		},
+		cacheNewQueryReponseReply: function(queries, reply){
+			console.log(reply);
+			var query = _.find(queries, {id: reply.query});
+			var response = _.find(query.responses, {id: reply.response});
+			
+			response.replies = response.replies || [];
+			response.replies.push(reply);
+			
+			return reply;
+		}
+		/*
 		resolveQueryResponsesCache: function(query){
 			//var query = _.find(queries, {id: id});
 			//if(query.responses.length == 0){
@@ -111,6 +138,8 @@ angular.module( 'services.cache', ['lodash'])
 			deferred.resolve(responses);
 			return deferred.promise;
 		},
+		*/
+		/*
 		cacheQueryReponse: function(response){
 			
 			if(response.cached){
@@ -127,11 +156,14 @@ angular.module( 'services.cache', ['lodash'])
 				});
 			}
 		},
+		*/
+		/*
 		cacheQueryAllResponses: function(queries, id, responses){
 			var query = _.find(queries, {id: id});
 						_.merge(query.responses, responses);
 			return responses;
 		}
+		*/
 
 	};
 
