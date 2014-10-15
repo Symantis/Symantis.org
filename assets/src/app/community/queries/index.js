@@ -48,8 +48,8 @@ angular.module( 'symantis.community.queries', [
 	      //var queries = [];
 	      console.log(res.data);
 	      angular.forEach(res.data, function(item){
-	      	if(!cache.checkQueryCache($scope.queries, item.id)){
-	      		return cache.cacheNewQuery($scope.queries, item);
+	      	if(!cache.checkQuickQueryCache($rootScope.queries, item.id)){
+	      		return cache.cacheCreatedQuery($rootScope.queries, item);
 	      	}
 	        //queries.push({id: item.id, title: item.title});
 	        //$scope.queries.push(item);

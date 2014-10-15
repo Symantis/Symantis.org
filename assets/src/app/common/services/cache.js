@@ -83,6 +83,9 @@ angular.module( 'services.cache', ['lodash'])
 		checkQueryCache: function(queries, id){
 			return _.some(queries, {id: id, local: true});
 		},
+		checkQuickQueryCache: function(queries, id){
+			return _.some(queries, {id: id});
+		},
 		cacheUpdatedQuery: function(queries, id, data){
 			var query = _.find(queries, {id: id});
 						_.merge(query, data);

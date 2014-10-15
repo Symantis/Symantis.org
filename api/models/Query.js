@@ -59,6 +59,10 @@ module.exports = {
 			type: 'boolean',
 			defaultsTo: false
 		},
+		edited: {
+			type: 'boolean',
+			defaultsTo: false
+		},
 		responses: {
 			collection: 'response',
 			via: 'query'
