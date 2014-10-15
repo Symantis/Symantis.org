@@ -561,6 +561,103 @@ angular.module('sy.templates.mainleft',['duScroll'])
     }
 }]);
 
+
+angular.module('sy.templates.userimage', [])
+.directive('generateImage', [function(){
+    return {
+        restrict: 'C',
+        /*
+        scope: {
+            value: '=',
+            type: '@'
+        },
+        */
+        link: function (scope, element, attrs){
+            
+            console.log("signature: "+attrs.signature);
+            var w = element[0].offsetWidth;
+            var h = element[0].offsetHeight;
+            var svg = d3.select(element[0]).append("svg:svg")
+                .attr("width", w)
+                .attr("height", h);
+
+            var line = d3.svg.line()
+            .x(function(d) {
+              return d.x;
+            })
+            .y(function(d) {
+              return d.y;
+            })
+
+            function circle(g, cx, cy, r) {
+              g.append("circle")
+              .attr({
+                cx: cx,
+                cy: cy,
+                r: r
+              })
+            }
+            function tri(g, theta0, cx, cy, r) {
+              var theta = -Math.PI/2 + theta0;
+              var top = {
+                x: r * Math.cos(theta) + cx,
+                y: r * Math.sin(theta) + cy
+              }
+              theta = -Math.PI - Math.PI/6 + theta0
+              var left = {
+                x: r * Math.cos(theta) + cx,
+                y: r * Math.sin(theta) + cy
+              }
+              theta = Math.PI/6 + theta0
+              var right = {
+                x: r * Math.cos(theta) + cx,
+                y: r * Math.sin(theta) + cy
+              }
+              g.append("path")
+              .attr("d", line([top, left, right, top]))
+            }
+            function circleTri(g, cx, cy, r) {
+              //we want to draw a circle with an equilateral triangle inside of it
+              //many times
+              circle(g, cx, cy, r)
+              //draw the triangle
+              //top point
+              tri(g, 0, cx, cy, r)
+              tri(g, Math.PI, cx, cy, r)
+            }
+
+            var radius = w/2;
+            var cx = (w-2)/2;
+            var cy = (h-2)/2;
+
+            circle(svg, cx, cy, radius);
+            tri(svg, 0, cx, cy, radius)
+            tri(svg, Math.PI, cx, cy, radius)
+
+            circle(svg, cx, cy, radius/2)
+            tri(svg, Math.PI, cx, cy, radius/2)
+
+            //lets make 6 circles with half the radius centered at 6 points
+            //around the big circle
+            for(var i = 0; i < 6; i++) {
+              var theta = i * Math.PI / 3 + Math.PI/6;
+              var r = radius / 2;
+              var lcx = r * Math.cos(theta) + cx;
+              var lcy = r * Math.sin(theta) + cy;
+              circle(svg, lcx, lcy, r)
+              if(i % 2 == 0) {
+                tri(svg, Math.PI, lcx, lcy, r);
+              } else {
+                tri(svg, 0, lcx, lcy, r);
+              }
+              
+            }
+
+        }
+    }
+}]);
+
+/*
 angular.module('sy.templates.userimage', [])
 .directive('generateImage', [function(){
     return {
@@ -616,21 +713,10 @@ angular.module('sy.templates.userimage', [])
               mouse = d3.mouse(this);
             });
 
-            /*
-            d3.timer(function() {
-              count++;
-              g.attr("transform", function(d, i) {
-                d.center[0] += (mouse[0] - d.center[0]) / (i + 5);
-                d.center[1] += (mouse[1] - d.center[1]) / (i + 5);
-                d.angle += Math.sin((count + i) / 10) * 7;
-                return "translate(" + d.center + ")rotate(" + d.angle + ")";
-              });
-            });
-            */
-
         }
     }
 }]);
+*/
 
 angular.module('sy.templates.activity', [])
 .directive('profileActivityContent', ['$window', function ($window) {
@@ -1264,476 +1350,6 @@ angular.module('sy.templates.homeanimation', [])
             }
         }
 }]);
-/*
-angular.module('sy.templates.homeanimation', [])
-.directive('homeAnimation', ['$document','$window','$timeout', function ($document, $window, $timeout) {
-        return {
-            restrict: 'C',
-            link: function ($scope, element, attrs){
-                console.log("Home Animation");
-                
-
-
-                function norm() {
-                  var res, i;
-                  res = 0;
-                  for (i = 0; i < 10; i += 1) {
-                    res += Math.random()*2-1
-                  }
-                  return res;
-                }
-
-                var w = element[0].offsetWidth,
-                    h = $window.innerHeight - 6;
-
-                var adjacencyList = [
-                  {x: w, y: h},
-                //s
-                  {x: w -150, y: h - 450},
-                  {x: w -160, y: h - 460},
-                  {x: w -170, y: h - 470},
-
-                  {x: w -200, y: h - 500},
-                  {x: w -220, y: h - 510},
-                  
-                  {x: w -250, y: h - 525},
-                  {x: w -270, y: h - 530},
-                  {x: w -280, y: h - 535},
-                  
-                  {x: w -300, y: h - 540},
-                  {x: w -325, y: h - 545},
-                  {x: w -350, y: h - 550},
-                  {x: w -325, y: h - 545},
-                  {x: w -400, y: h - 540},
-                  {x: w -430, y: h - 530},
-                  {x: w -450, y: h - 525},
-                  {x: w -460, y: h - 515},
-                  
-                  {x: w -480, y: h - 510},
-                  {x: w -490, y: h - 500},
-                  {x: w -500, y: h - 490},
-
-                  {x: w -525, y: h - 475},
-                  {x: w -535, y: h - 455},
-                  {x: w -540, y: h - 440},
-                  {x: w -545, y: h - 420},
-                  {x: w -550, y: h - 400},
-                  {x: w -525, y: h - 340},
-                  {x: w -500, y: h - 320},
-                  {x: w -475, y: h - 300},
-                  
-                  {x: w -400, y: h - 270},
-                  {x: w -375, y: h - 265},
-                  {x: w -350, y: h - 260},
-                  {x: w -325, y: h - 255},
-                  {x: w -300, y: h - 250},
-
-                  {x: w -250, y: h - 240},
-                  {x: w -235, y: h - 235},
-                  {x: w -230, y: h - 230},
-                  {x: w -200, y: h - 215},
-                  {x: w -150, y: h - 165},
-                  {x: w -160, y: h - 145},
-                  {x: w -175, y: h - 75},
-                  {x: w -185, y: h - 60},
-                  {x: w -200, y: h - 40},
-                  {x: w -230, y: h - 30},
-                  {x: w -250, y: h - 10},
-                  {x: w -260, y: h - 5},
-                  {x: w -270, y: h - 0},
-                  
-                  {x: w -360, y: h + 5},
-                  {x: w -370, y: h + 5},
-                  {x: w -385, y: h + 5},
-                  {x: w -400, y: h + 5},
-                  {x: w -450, y: h + 10},
-                  {x: w -470, y: h + 15},
-                  {x: w -480, y: h - 20},
-                  {x: w -500, y: h - 30},
-                  {x: w -520, y: h - 55},
-                  {x: w -535, y: h - 70},
-                  {x: w -545, y: h - 75},
-                  {x: w -550, y: h - 80},
-                
-                //y 
-                  {x: w + 0, y: h - 550},
-                  {x: w + 60, y: h - 435},
-                  {x: w + 125, y: h - 325},
-                  {x: w + 175, y: h - 250},
-                  {x: w + 250, y: h - 150},
-
-                  {x: w + 430, y: h - 435},
-                  {x: w + 500, y: h - 550},
-                  {x: w + 375, y: h - 325},
-                  {x: w + 325, y: h - 250},
-
-                  {x: w + 200, y: h - 50},
-                  {x: w + 125, y: h + 50},
-                  {x: w + 0, y: h + 100},
-                
-
-                //.
-                  
-                  //{x: w + 575, y: h - 25},
-                  {x: w + 570, y: h - 20},
-                  {x: w + 570, y: h - 20},
-                  {x: w + 570, y: h - 20},
-                  {x: w + 570, y: h - 20},
-                  {x: w + 570, y: h - 20},
-                  //{x: w + 565, y: h - 15},
-
-
-                ];
-
-
-                
-
-                var nodes = d3.values(adjacencyList)
-                .map(function(list) { 
-                    var true_y = (norm()*50)+250;
-                    console.log(list);
-                    return {
-                        radius: Math.random() * 10 + 4, 
-                        x: true_y,
-                        y: true_y,
-                        true_x: list.x/2,
-                        true_y: list.y/2 
-                    }
-                });
-
-                var force = d3.layout.force()
-                    .gravity(0.06)
-                    .charge(function(d, i) { return i ? 0 : -2000; })
-                    //.friction(0.9)
-                    .nodes(nodes)
-                    .size([w, h]);
-
-                var root = nodes[0];
-                root.radius = 0;
-                root.fixed = true;
-
-                force.start();
-
-                var svg = d3.select(element[0]).append("svg:svg")
-                    .attr("width", w)
-                    .attr("height", h);
-
-                svg.selectAll("circle")
-                    .data(nodes)
-                  .enter().append("svg:circle")
-                    .attr("r", function(d) { return d.radius -2 ; })
-                    .style("fill", '#3b948b')
-                    //.style("stroke", "black");
-
-                
-
-
-                force.on("tick", function(e) {
-                  var q,
-                    node,
-                    i = 0,
-                    n = nodes.length;
-                    
-                  var q = d3.geom.quadtree(nodes);
-
-                  while (++i < n) {
-                    node = nodes[i];
-                    q.visit(collide(node));
-                    xerr = node.x - node.true_x;
-                    yerr = node.y - node.true_y;
-                    node.x -= xerr*0.05;
-                    node.y -= yerr*0.05;
-                  }
-                  
-                svg.on("mousemove", function() {
-                  var p1 = d3.mouse(this);
-                  root.px = p1[0];
-                  root.py = p1[1];
-                  force.resume();
-                });
-
-                svg.selectAll("circle")
-                      .attr("cx", function(d) { return d.x; })
-                      .attr("cy", function(d) { return d.y; });
-                });
-
-                function collide(node) {
-                  var r = node.radius + 16,
-                    nx1,
-                    nx2,
-                    ny1,
-                    ny2,
-                    xerr,
-                    yerr;
-                    
-                  nx1 = node.x - r;
-                  nx2 = node.x + r;
-                  ny1 = node.y - r;
-                  ny2 = node.y + r;
-                      
-                  return function(quad, x1, y1, x2, y2) {
-                    if (quad.point && (quad.point !== node)) {
-                      var x = node.x - quad.point.x,
-                          y = node.y - quad.point.y,
-                          l = Math.sqrt(x * x + y * y),
-                          r = node.radius + quad.point.radius;
-                      if (l < r) {
-                        // we're colliding.
-                        var xnudge, ynudge, nudge_factor;
-                        nudge_factor = (l - r) / l * .4;
-                        xnudge = x*nudge_factor;
-                        ynudge = y*nudge_factor;
-                        node.x -= xnudge;
-                        node.y -= ynudge;
-                        quad.point.x += xnudge;
-                        quad.point.y += ynudge;
-                      }
-                    }
-                    return x1 > nx2
-                        || x2 < nx1
-                        || y1 > ny2
-                        || y2 < ny1;
-                  };
-                }
-                    
-            }
-        }
-}]);
-*/
-/*
-angular.module('sy.templates.homeanimation', [])
-.directive('homeAnimation', ['$document','$window','$timeout', function ($document, $window, $timeout) {
-        return {
-            restrict: 'C',
-            link: function ($scope, element, attrs){
-                console.log("Home Animation");
-                
-                
-                var adjacencyList = {
-                  1: {x: 1, y: 1},
-                  2: {x: 2, y: 2},
-                  3: {x: 3, y: 3},
-                  4: {x: 4, y: 4},
-                  5: {x: 5, y: 5},
-                  6: {x: 6, y: 6},
-                  7: {x: 7, y: 7},
-                  8: {x: 8, y: 8},
-                  9: {x: 9, y: 9},
-                  10: {x: 10, y: 10},
-                  11: {x: 11, y: 11},
-                  12: {x: 12, y: 12},
-                  13: {x: 13, y: 13},
-                  14: {x: 14, y: 14},
-                  15: {x: 15, y: 15},
-                  16: {x: 16, y: 16},
-                  17: {x: 17, y: 17},
-                  18: {x: 18, y: 18},
-
-                  19: {x: 200, y: 0},
-                  20: {x: 200, y: 10},
-                  21: {x: 200, y: 20},
-                  22: {x: 200, y: 30},
-                  23: {x: 200, y: 40},
-                  24: {x: 200, y: 50},
-                  25: {x: 200, y: 60},
-                  26: {x: 200, y: 70},
-                  27: {x: 200, y: 80},
-                  28: {x: 200, y: 90},
-                  29: {x: 200, y: 100},
-                  30: {x: 200, y: 110},
-                  31: {x: 200, y: 120},
-                  32: {x: 200, y: 130},
-                  33: {x: 200, y: 140},
-                  34: {x: 200, y: 150},
-                  35: {x: 200, y: 160},
-                  36: {x: 200, y: 170},
-                  37: {x: 200, y: 180},
-                  38: {x: 200, y: 190},
-                };
-                
-
-                var w = element[0].offsetWidth,
-                    h = $window.innerHeight - 6;
-
-                var nodes = d3.values(adjacencyList)
-                            .map(function(source, i) { 
-                                console.log(i);
-                                return {
-                                    radius: Math.random() * 12 + 4,
-                                    source: source,
-                                    target: source
-                                }; 
-                            }),
-                    color = d3.scale
-                            .linear()
-                            .domain([1,3])
-                            .range(["#3b948b", "#3b948b", "#3b948b"]); 
-                    
-
-                var force = d3.layout.force()
-                    .gravity(0.06)
-                    .charge(function(d, i) { return i ? 0 : -2000; })
-                    .nodes(nodes)
-                    //.links(links)
-                    .size([w, h]);
-
-                var root = nodes[0];
-                root.radius = 0;
-                root.fixed = true;
-
-                force.start();
-
-                var svg = d3.select(element[0]).append("svg:svg")
-                    .attr("width", w)
-                    .attr("height", h);
-
-
-                svg.selectAll("circle")
-                    .data(nodes.slice(1))
-                    .enter()
-                    .append("svg:circle")
-                    .attr("r", function(d) { return d.radius - 2; })
-                    .style("fill", function(d, i) { return color(i % 3); });
-
-
-
-                force.on("tick", function(e) {
-                  var q = d3.geom.quadtree(nodes),
-                      i = 0,
-                      n = nodes.length;
-
-                  while (++i < n) {
-                    q.visit(collide(nodes[i]));
-                  }
-                  
-
-                  svg.selectAll("circle")
-                      .attr("cx", function(d) { 
-                       // console.log(d.x);
-                        return d.x; 
-                      })
-                      .attr("cy", function(d) { 
-                        return d.y; 
-                      });
-                    
-                });
-
-                svg.on("mousemove", function() {
-                  var p1 = d3.mouse(this);
-                  root.px = p1[0];
-                  root.py = p1[1];
-                  force.resume();
-                });
-
-                function collide(node) {
-                  var r = node.radius + 16,
-                      nx1 = node.x - r,
-                      nx2 = node.x + r,
-                      ny1 = node.y - r,
-                      ny2 = node.y + r;
-                  return function(quad, x1, y1, x2, y2) {
-                    if (quad.point && (quad.point !== node)) {
-                      var x = node.x - quad.point.x,
-                          y = node.y - quad.point.y,
-                          l = Math.sqrt(x * x + y * y),
-                          r = node.radius + quad.point.radius;
-                      if (l < r) {
-                        l = (l - r) / l * .5;
-                        node.x -= x *= l;
-                        node.y -= y *= l;
-                        quad.point.x += x;
-                        quad.point.y += y;
-                      }
-                    }
-                    return x1 > nx2
-                        || x2 < nx1
-                        || y1 > ny2
-                        || y2 < ny1;
-                  };
-                }
-            }
-        }
-}]);
-*/
-/*
-angular.module('sy.templates.homeanimation', [])
-.directive('homeAnimation', ['$document','$window','$timeout', function ($document, $window, $timeout) {
-    return {
-        restrict: 'C',
-        link: function ($scope, element, attrs){
-            console.log("Home Animation");
-            var w = element[0].offsetWidth,
-                h = $window.innerHeight - 6;
-
-            var adjacencyList = {
-              1: [1,1,1],
-              2: [1,1,1],
-              3: [4,2,9],
-              4: [10,3,5],
-              5: [6,4,11],
-              6: [1,5,12],
-              7: [1,20,13],
-              8: [2,14,21],
-              9: [3,22,15],
-              10: [4,16,23],
-              11: [5,17,24],
-              12: [6,19,18],
-              13: [7,19],
-              14: [20,8],
-              15: [21,9],
-              16: [22,10],
-              17: [23, 11],
-              18: [24, 12],
-              19: [12, 13],
-              20: [14,7],
-              21: [8, 15],
-              22: [9,16],
-              23: [10, 17],
-              24: [11, 18]
-            };
-
-            var nodes = d3.values(adjacencyList),
-                links = d3.merge(nodes.map(function(source) {
-                  return source.map(function(target) {
-                    return {source: source, target: adjacencyList[target]};
-                  });
-                }));
-            
-           
-            var vis = d3.select(element[0]).append("svg:svg")
-                .attr("width", w)
-                .attr("height", h);
-
-            var force = d3.layout.force()
-                .nodes(nodes)
-                .links(links)
-                .size([w, h])
-                .start();
-
-            var link = vis.selectAll("line.link")
-                .data(links)
-              .enter().append("svg:line");
-
-            var node = vis.selectAll("circle.node")
-                .data(nodes)
-              .enter().append("svg:circle")
-                .attr("r", 5)
-                .call(force.drag);
-
-            force.on("tick", function() {
-              link.attr("x1", function(d) { return d.source.x; })
-                  .attr("y1", function(d) { return d.source.y; })
-                  .attr("x2", function(d) { return d.target.x; })
-                  .attr("y2", function(d) { return d.target.y; });
-
-              node.attr("cx", function(d) { return d.x; })
-                  .attr("cy", function(d) { return d.y; });
-            }); 
-            
-        }
-    }
-}]);
-*/
 
 angular.module('sy.symantis.transition', [])
 

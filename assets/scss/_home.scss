@@ -3,15 +3,24 @@ line {
   stroke: #666;
   stroke-width: 1.5px;
 }
-circle{
-	fill: $primary-color;
+circle {
+  fill: none;
+  stroke: $primary-color;
+  stroke-width: 2;
+  opacity: 0.4
 }
+
+path {
+  fill: none;
+  stroke: $primary-color;
+  stroke-width: 2;
+  opacity: 0.3
+}
+
 /*[ui-view="main"].home {
 	margin-bottom: 0;
 }*/
-.cirlcelink{
-	color: #777;
-}
+
 .home-animation {
 	//margin-bottom: rem-calc(50px);
 	width: 100%;
