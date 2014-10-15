@@ -320,6 +320,31 @@ angular.module( 'symantis', [
 		}
 	});
 
+	$sails.on('query', function (envelope) {
+		switch(envelope.verb) {
+			
+			case 'created':
+				cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'addedTo':
+				console.log("Query Added To");
+				console.log(envelope);
+				//cache.cacheNewQuery($scope.queries, envelope.data);
+				
+				break;
+			case 'updated':
+				cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
+				//lodash.
+				//$scope.queries.unshift(envelope.data);
+				break;
+			case 'destroyed':
+				cache.removeQueryFromCache($scope.queries, envelope.id);
+				
+				break;
+		}
+	});
+
 	$sails.on('response', function (envelope) {
 		switch(envelope.verb) {
 			
