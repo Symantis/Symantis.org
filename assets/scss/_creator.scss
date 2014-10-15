@@ -118,12 +118,14 @@
 				height: 100%;
 				line-height: rem-calc(50px);
 				text-align: center;
+				z-index: 5;
 				a {
-					padding: 0.125rem 0.125rem 0 0.1875rem;
-					font-size: rem-calc(23px);
+					padding: 0.125rem 0.175rem 0.08rem 0.1875rem;
+					font-size: rem-calc(18px);
 					color: $light;
 					border-radius: rem-calc(4px);
 					border: none;
+					z-index: 9;
 					@include transition(100ms);
 					.icon {
 						position: relative;
@@ -144,13 +146,15 @@
 					width: 100%;
 					display: block;
 					background-color: $light;
+					
 				}
 				&.c-pipe-join {
 					width: rem-calc(20px);
-					margin-left: rem-calc(-5px);
-					margin-right: rem-calc(-6px);
+					margin-left: rem-calc(-7px);
+					margin-right: rem-calc(-8px);
 					position: relative;
-					top: -.55rem;
+					z-index: 4;
+					top: -.4rem;
 				}
 			}
 		}
