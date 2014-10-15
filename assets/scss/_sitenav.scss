@@ -11,6 +11,9 @@ $animationTime: 0.3s !default;
 	background-color: $dark;
 	//background-color: rgba(46,48,44,0.9);
 	z-index: 100;
+	
+	-webkit-transform: translateX(-100%);
+    -webkit-transform: translate3d(-100%, 0, 0);
 	transform: translateX(-100%);
     transform: translate3d(-100%, 0, 0);
 
@@ -25,6 +28,8 @@ $animationTime: 0.3s !default;
     transition: transform $animationTime ease, box-shadow $animationTime ease;
 
     &.open {
+		-webkit-transform: translate3d(0%, 0, 0);
+		-webkit-transform: translateX(0%);
 		transform: translate3d(0%, 0, 0);
 		transform: translateX(0%);
 
@@ -167,14 +172,20 @@ $delay: 0.3s;
 
 .sitenav-push {
 	&.menuOpen {
+		-webkit-transform: translateX(8.3335%);
+    	-webkit-transform: translate3d(8.3335%, 0, 0);
 		transform: translateX(8.3335%);
     	transform: translate3d(8.3335%, 0, 0);
     	&.notificationsOpen{
+    		-webkit-transform: translateX(8.3335%);
+    		-webkit-transform: translate3d(8.3335%, 0, 0);
     		transform: translateX(8.3335%);
     		transform: translate3d(8.3335%, 0, 0);
     	}
 	}
 	&.notificationsOpen {
+		-webkit-transform: translateX(-7.7775%);
+    	-webkit-transform: translate3d(-7.7775%, 0, 0);
 		transform: translateX(-7.7775%);
     	transform: translate3d(-7.7775%, 0, 0);
 	}
