@@ -33,7 +33,7 @@ angular.module( 'symantis.home', [
 
 .controller( 'HomeCtrl', function HomeController( $scope, titleService ) {
 	titleService.setTitle('Home');
-	
+	$scope.$parent.notificationsOpen = false;
 	$scope.$parent.toDo = [];
 
 })

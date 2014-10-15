@@ -163,13 +163,20 @@ angular.module( 'symantis', [
 	$rootScope.notifications = aNotifications;
 
 	$rootScope.menuOpen = false;
+	$rootScope.menuHide = false;
 	$rootScope.notificationsOpen = false;
 	
 	$rootScope.notificationsToggle = function() {
 		$rootScope.notificationsOpen = !$rootScope.notificationsOpen;
 	}
+	$rootScope.notificationsClose = function() {
+		$rootScope.notificationsOpen = false;
+	}
 	$rootScope.menuToggle = function() {
 		$rootScope.menuOpen = !$rootScope.menuOpen;
+	}
+	$rootScope.menuHide = function() {
+		$rootScope.menuHide = true;
 	}
 
 })
