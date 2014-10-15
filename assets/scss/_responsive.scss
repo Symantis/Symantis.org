@@ -175,6 +175,9 @@ and (max-width : rem-calc(1024px)) {
 	.profile-pod-wrap {
 		width: 100%;
 	}
+	.connections-pod-wrap {
+		width: 100%;
+	}
 }
 
 // Small Laptops and below ----------
@@ -260,6 +263,12 @@ and (min-width : rem-calc(1824px)) {
 		width: 25%;
 	}
 	.manti-pod-wrap {
+		width: 33.33%;
+	}
+	.profile-pod-wrap {
+		width: 33.33%;
+	}
+	.connections-pod-wrap {
 		width: 33.33%;
 	}
 }
