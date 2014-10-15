@@ -86,7 +86,11 @@ $animationTime: 0.3s !default;
 		}
 	}
 }
-
+.creator-app{
+	.mainmenu-toggle{
+		display:none;
+	}
+}
 $xChange: 0.4s;
 $midX: 0.4s;
 $delay: 0.3s;
