@@ -1146,7 +1146,7 @@ angular.module('sy.templates.homeanimation', [])
                 var nodes = d3.values(adjacencyList)
                 .map(function(list) { 
                     var true_y = (norm()*50)+250;
-                    console.log(list);
+                    //console.log(list);
                     return {
                         radius: list.r / 3, 
                         x: true_y,

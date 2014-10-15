@@ -107,6 +107,11 @@ module.exports = {
 		//.populate('connections')
 		.populate('toConnections')
 		.populate('fromConnections')
+		.then(function(model){
+			console.log(model.toConnections);
+			console.log(model.fromConnections);
+			return model;
+		})
 		.then(function (model) {
 			var totalToConnections = model.toConnections.length;
 			var totalFromConnections = model.fromConnections.length;

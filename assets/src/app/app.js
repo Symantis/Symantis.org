@@ -167,10 +167,19 @@ angular.module( 'symantis', [
 	$rootScope.notificationsOpen = false;
 	
 	$rootScope.notificationsToggle = function() {
+		console.log("Toggled");
 		$rootScope.notificationsOpen = !$rootScope.notificationsOpen;
+		//console.log($rootScope.notificationsOpen);
+
 	}
 	$rootScope.notificationsClose = function() {
 		$rootScope.notificationsOpen = false;
+		//$rootScope.$apply();
+		/*
+		if($rootScope.notificationsOpen == true){
+			$rootScope.notificationsToggle();
+		}
+		*/
 	}
 	$rootScope.menuToggle = function() {
 		$rootScope.menuOpen = !$rootScope.menuOpen;
