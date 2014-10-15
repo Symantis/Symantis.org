@@ -17,15 +17,18 @@ angular.module( 'symantis.community.queries', [
 	});
 })
 */
-.controller( 'QueriesCtrl', function QueriesController( $http, $sails, $scope, $state, titleService, cache ) {
+.controller( 'QueriesCtrl', function QueriesController( $http, $sails, $scope, $rootScope, $state, titleService, cache, queries ) {
 	titleService.setTitle('Queries');
+	
+	//console.log($scope.$parent.$parent);
+
 	$scope.$parent.toDo = [];
 
 	$scope.loadingSection = true;
 
 	//$scope.queries = queries;
-	cache.resolveQueriesCache($scope.queries).then(function(queries){
-		$scope.queries = queries;
+	cache.resolveQueriesCache(queries).then(function(queries){
+		$rootScope.queries = queries;
 		$scope.loadingSection = false;
 	});
 	
@@ -58,13 +61,13 @@ angular.module( 'symantis.community.queries', [
 
 	
 })
-.controller( 'QueriesViewCtrl', function QueriesViewController($scope, titleService, $state, query, queries, cache, QueryModel, utils, $sails ) {
+.controller( 'QueriesViewCtrl', function QueriesViewController($scope, $rootScope, titleService, $state, query,queries, cache, QueryModel, utils, $sails ) {
 	
 	//$scope.query = query;
 	$scope.loadingSection = true;
 
-	cache.resolveQueryCache(queries, query.id).then(function(query){
-		$scope.query = query;
+	cache.resolveQueryCache($rootScope.queries, query.id).then(function(query){
+		$rootScope.query = query;
 		
 		titleService.setTitle('Query: ' + $scope.query.title);
 		$scope.loadingSection = false;
@@ -136,18 +139,19 @@ angular.module( 'symantis.community.queries', [
 	}
 
 })
-.controller( 'QueriesEditCtrl', function QueriesEditController( $http, $scope, query, queries, titleService, cache, QueryModel, utils, $timeout ) {
+.controller( 'QueriesEditCtrl', function QueriesEditController( $http, $scope, $rootScope, query, titleService, cache, QueryModel, utils, $timeout ) {
 	titleService.setTitle('Edit Query');
 	$scope.$parent.toDo = [];
 
 	//$scope.query = query;
 
 	$scope.loadingSection = true;
-	cache.resolveQueryCache(queries, query.id).then(function(query){
-		$scope.query = query;	
+	cache.resolveQueryCache($rootScope.queries, query.id).then(function(query){
+		$rootScope.query = query;	
 		$scope.loadingSection = false;
-		console.log(query);
+		//console.log(query);
 	});
+
 	$scope.preview = false;
 	$scope.saveStatus = "Save";
 

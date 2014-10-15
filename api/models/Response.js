@@ -62,7 +62,7 @@ module.exports = {
 		.then(function (model) {
 			//model.totalViews = parseInt(model.totalViews) + 1;
 			//Query.addViewCount(id);
-			return model;
+			return [model];
 		});
 	},
 	getAllForQuery: function(query) {
@@ -71,7 +71,7 @@ module.exports = {
 		.populate('author')
 		.populate('replies')
 		.then(function (models) {
-			return models;
+			return [models];
 		});
 	},
 	/*

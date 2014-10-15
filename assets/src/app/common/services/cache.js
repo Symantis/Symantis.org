@@ -81,7 +81,7 @@ angular.module( 'services.cache', ['lodash'])
 			}
 		},
 		checkQueryCache: function(queries, id){
-			return _.some(queries, {id: id});
+			return _.some(queries, {id: id, local: true});
 		},
 		cacheUpdatedQuery: function(queries, id, data){
 			var query = _.find(queries, {id: id});
@@ -90,17 +90,20 @@ angular.module( 'services.cache', ['lodash'])
 		},
 		cacheNewQuery: function(queries, collection){
 			 console.log(collection);
-
 			 _.map(collection.replies, function(reply){
 			 	var response = _.find(collection.responses, {id: reply.response});
 				response.replies = response.replies || [];
 				response.replies.push(reply);
 			 	
 			 });
-
 			 var newModel = collection.query;
 			 newModel.responses = collection.responses;
-			 queries.push(newModel);
+			 newModel.local = true;
+			 if(_.some(queries, {id: newModel.id})){
+			 	this.cacheUpdatedQuery(queries, newModel.id, newModel);
+			 }else{
+				 queries.push(newModel);
+			 }
 			 return newModel;
 		},
 		cacheCreatedQuery: function(queries, query){
@@ -113,11 +116,20 @@ angular.module( 'services.cache', ['lodash'])
 		removeQueryFromCache: function(queries, id){
 			return _.remove(queries, {id: id});
 		},
+		getAndCacheReponse: function(queries, querId, responseId){
+			var self = this;
+			return QueryModel.getResponse(responseId).then(function(response){
+				console.log(response);
+				return self.cacheNewQueryReponse(queries, response);
+			});
+
+		},
 		cacheNewQueryReponse: function(queries, response){
 			console.log(response);
 			var query = _.find(queries, {id: response.query});
+			query.responses = query.responses || [];
 			query.responses.push(response);
-			return response;
+			return queries;
 		},
 		cacheNewQueryReponseReply: function(queries, reply){
 			console.log(reply);
@@ -127,7 +139,7 @@ angular.module( 'services.cache', ['lodash'])
 			response.replies = response.replies || [];
 			response.replies.push(reply);
 			
-			return reply;
+			return queries;
 		}
 		/*
 		resolveQueryResponsesCache: function(query){

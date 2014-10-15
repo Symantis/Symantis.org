@@ -89,7 +89,7 @@
                                 <a ui-sref="community.queries.view({id: query.id, title: query.clean })" title="View Responses">
                                     <div class="icon-reply icon"></div>
                                     <p class="querie-replys-num">
-                                        {{ query.totalResponses || 0 }}
+                                        {{ query.responses.length || 0 }}
                                     </p>
                                 </a>
                             </li>

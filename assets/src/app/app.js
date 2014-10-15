@@ -330,6 +330,9 @@ angular.module( 'symantis', [
 			case 'addedTo':
 				console.log("Query Added To");
 				console.log(envelope);
+				if(envelope.attribute == "responses"){
+					cache.getAndCacheReponse($scope.queries, envelope.id, envelope.addedId );
+				}
 				//Object {id: "543e3473724fae3f3b745f85", verb: "addedTo", attribute: "responses", addedId: "543e34d1724fae3f3b745f86"}
 				//cache.cacheNewQuery($scope.queries, envelope.data);
 				
