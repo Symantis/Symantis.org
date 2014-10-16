@@ -63,8 +63,8 @@ $transtime: 500ms;
 				line-height: 1;
 			}
 			p {
-				@include font-regular(rem-calc(12px));
-				color: $dark;
+				@include font-light(rem-calc(16px));
+				color: darken($gray, 8%);
 			}
 			.text-large {
 				font-size: rem-calc(24px);
@@ -180,8 +180,8 @@ $transtime: 500ms;
 				line-height: 1;
 			}
 			p {
-				@include font-regular(rem-calc(12px));
-				color: $dark;
+				@include font-light(rem-calc(16px));
+				color: darken($gray, 8%);
 			}
 			.text-large {
 				font-size: rem-calc(24px);
@@ -255,7 +255,7 @@ $transtime: 500ms;
 	float: left;
 	width: 100%;
 	position: relative;
-	padding: 50px 0 50px 0;
+	padding: 80px 0 80px 0;
 	text-align: center;
 	border-top: 1px $light solid;
 	border-bottom: 1px $light solid;
@@ -265,6 +265,10 @@ $transtime: 500ms;
 	h2 {
 		@include font-semi(rem-calc(24px));
 		color: $dark;
+	}
+	p {
+		@include font-light(rem-calc(16px));
+		color: darken($gray, 8%);
 	}
 	img {
 		max-height: 100px;
@@ -277,7 +281,7 @@ $transtime: 500ms;
 }
 .gr-top-p {
 	text-align: left !important;
-	padding: 10px 0px 50px 0px;
+	padding: 20px 0px 60px 0px;
 	border-top: none;
 }
 .gr-second-p {

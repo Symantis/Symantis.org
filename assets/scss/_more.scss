@@ -14,7 +14,7 @@
 			a {
 				padding: 0;
 				margin: 0;
-				@include font-regular(12px);
+				@include font-light(14px);
 				color: darken($light, 10%);
 				@include transition(100ms);
 				line-height: 1.4;
@@ -54,6 +54,10 @@
 	h2 {
 		@include font-semi(rem-calc(24px));
 		color: $dark;
+	}
+	p {
+		@include font-light(rem-calc(16px));
+		color: darken($gray, 8%);
 	}
 }
 .rc-statement {

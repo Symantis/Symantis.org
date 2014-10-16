@@ -14,7 +14,7 @@
 			a {
 				padding: 0;
 				margin: 0;
-				@include font-regular(12px);
+				@include font-light(14px);
 				color: darken($light, 10%);
 				@include transition(100ms);
 				line-height: 1.4;
