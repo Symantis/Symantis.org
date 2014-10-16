@@ -17,9 +17,18 @@ angular.module( 'symantis.me.settings', [
 	});
 })
 */
-.controller( 'MeSettingsCtrl', function MeSettingsController( $http, $scope, titleService, UserModel ) {
+.controller( 'MeSettingsCtrl', function MeSettingsController( $http, $scope, $rootScope, titleService, UserModel, user, cache ) {
 	titleService.setTitle('My Settings');
 	$scope.$parent.toDo = ['Hook up other Settings forms', 'Add save option to tags'];
+
+	$scope.loadingSection = true;
+	cache.resolveUserCache($rootScope.users, user.handle).then(function(user){
+		$rootScope.user = user;
+		//$rootScope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
+		$scope.loadingSection = false;
+		
+	});
+
 
 	$scope.loadTags = function(query) {
 		return $http.get('/api/tags/' + query);

@@ -94,9 +94,9 @@ module.exports = {
 				var totalFromConnections = model.fromConnections.length;
 				var totalReciprocal = totalToConnections > totalFromConnections ?  totalToConnections - totalFromConnections : totalFromConnections - totalToConnections;
 				model.totalReciprocal = totalReciprocal;
-				model.totalToConnections = totalToConnections - totalReciprocal;
-				model.totalFromConnections = totalFromConnections - totalReciprocal;
-				model.totalConnections = totalToConnections + totalFromConnections - totalReciprocal;
+				model.totalToConnections = Math.max(0,totalToConnections - totalReciprocal);
+				model.totalFromConnections = Math.max(0,totalFromConnections - totalReciprocal);
+				model.totalConnections = model.totalToConnections + model.totalFromConnections + model.totalReciprocal;
 				return model;
 			})
 		])
