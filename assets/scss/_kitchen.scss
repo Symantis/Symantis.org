@@ -114,7 +114,7 @@
 	}
 	.modal-help {
 	 	p {
-	 		@include font-regular(rem-calc(13px));
+	 		@include font-light(rem-calc(14px));
 	 		color: white;
 	 	}
 	 	padding-bottom: rem-calc(20px);
@@ -130,7 +130,7 @@
 	.modal-boolean {
 		padding-bottom: rem-calc(60px);
 		p {
-	 		@include font-regular(rem-calc(13px));
+	 		@include font-light(rem-calc(14px));
 	 		color: white;
 	 	}
 	 	.modal-boolean-buttons {
