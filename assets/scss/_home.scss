@@ -78,7 +78,7 @@ path {
 		margin: 0 auto;
 	}
 	p {
-		@include font-bitter2(rem-calc(14px));
+		@include font-regular(rem-calc(16px));
 		padding-top: rem-calc(22px);
 		a {
 			color: $darkest;
