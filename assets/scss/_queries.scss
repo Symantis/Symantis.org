@@ -278,6 +278,8 @@
 				//float: left;
 				.query-content-p {
 					padding-top: rem-calc(15px);
+					@include font-light(rem-calc(14px));
+					color: $dark;
 					a {
 						color: $gray;
 						text-decoration: underline;

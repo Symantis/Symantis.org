@@ -308,7 +308,7 @@ body,
 					a{
 						@include transition(100ms);
 						display: block;
-						@include font-light(rem-calc(15px));
+						@include font-light(rem-calc(14px));
 						color: white;
 						&:hover{
 							color: $primary-color;

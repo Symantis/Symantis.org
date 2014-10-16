@@ -91,7 +91,9 @@
 			@inlude font-regular(rem-calc(12px));
 			&.news-copy {
 				//max-width: rem-calc(600px);
-				font-size: rem-calc(13px) !important;
+				@include font-light(rem-calc(14px));
+				font-size: rem-calc(14px) !important;
+				color: lighten($dark,5%);
 				line-height: 1.6;
 			}
 			a {
@@ -296,8 +298,10 @@
 			border-top: rem-calc(1px) $light solid;
 			padding-bottom: rem-calc(20px);
 			p {
-				@inlude font-regular(rem-calc(14px));
-				line-height: rem-calc(18px);
+				@include font-light(rem-calc(14px));
+				//font-size: rem-calc(14px) !important;
+				color: $dark;
+				//line-height: rem-calc(18px);
 				a {
 					text-decoration: underline;
 					color: $gray;

@@ -289,6 +289,8 @@
 		p {
 			//float: left;
 			width: 100%;
+			@include font-light(rem-calc(13px));
+			color: $dark;
 		}
 	}
 	.pod-footer {
@@ -539,8 +541,10 @@
 			border-top: rem-calc(1px) $light solid;
 			padding-bottom: rem-calc(20px);
 			p {
-				@inlude font-regular(rem-calc(12px));
-				line-height: rem-calc(18px);
+				//@inlude font-regular(rem-calc(12px));
+				@include font-light(rem-calc(14px));
+				color: $dark;
+				line-height: 1.6;
 				a {
 					text-decoration: underline;
 					color: $gray;

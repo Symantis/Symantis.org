@@ -127,6 +127,8 @@
 		.comment-text {
 			float: left;
 			width: 100%;
+			@include font-light(rem-calc(14px));
+			color: lighten($dark,5%);
 		}
 		.comment-reply {
 			float: left;
