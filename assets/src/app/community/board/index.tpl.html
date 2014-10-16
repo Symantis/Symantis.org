@@ -64,7 +64,7 @@
             <div class="gutter-sizer"></div>
             <div 
                 masonry-tile
-                ng-repeat="board in opportunities | filter:queryValue" 
+                ng-repeat="board in opportunities | filter:queryValue"
                 class="animate-repeat tile board-pod-wrap"
                 ng-init="pod.active = true"
                 ng-class="{deactivate: !pod.active}"
@@ -114,6 +114,10 @@
 
             </div>
 
+        </div>
+
+        <div class="infinite-scroll-more" ng-show="opportunities.length > 5">
+            <a ><span class="icon-dot-3"></span></a>
         </div>
 
     </section>

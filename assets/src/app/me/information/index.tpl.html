@@ -27,7 +27,7 @@
                 <button class="sy-button profile-edit" ui-sref="me.settings">Edit Info</button>
             </header>
             <article>
-                <p>{{ currentUser.bio }}</p>
+                <p class="user-bio">{{ currentUser.bio }}</p>
                 <a ng-show="!currentUser.bio" ui-sref="me.settings">Write your biography here</a>
             </article>
         </div>

@@ -176,6 +176,9 @@
 	}
 	p {
 		@include font-regular(rem-calc(12px));
+		&.user-bio {
+			font-size: rem-calc(14px);
+		}
 	}
 	.profile-section {
 		margin-top: rem-calc(20px);
@@ -266,9 +269,10 @@
 			min-height: rem-calc(60px);
 			padding-left: 5rem;
 			width: 100%;
+			position: relative;
 			.manti-content-inner {
 				border-left: 1px $offWhite solid;
-				height: auto;
+				height: 100%;
 				@include transition(0.1s);
 				padding-left: rem-calc(15px);
 			}

@@ -188,6 +188,13 @@ $transtime: 500ms;
 				color: $gray;
 				line-height: 1;
 			}
+			h2 {
+				@include font-semi(rem-calc(24px));
+				color: $dark;
+				a {
+					font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
+				}
+			}
 			p {
 				@include font-light(rem-calc(16px));
 				color: darken($gray, 8%);

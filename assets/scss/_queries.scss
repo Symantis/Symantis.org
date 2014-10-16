@@ -278,7 +278,6 @@
 				//float: left;
 				.query-content-p {
 					padding-top: rem-calc(15px);
-					@include font-light(rem-calc(14px));
 					color: $dark;
 					a {
 						color: $gray;
@@ -286,6 +285,11 @@
 						&:hover {
 							color: $dark;
 						}
+					}
+				}
+				markdown {
+					p {
+						font-size: rem-calc(14px);
 					}
 				}
 				code {
@@ -479,6 +483,11 @@
 				margin-bottom: rem-calc(7px);
 				//float: left;
 				//background-color: darken($offWhite, 10%);
+			}
+			.comment-text {
+				p {
+					font-size: rem-calc(14px);
+				}
 			}
 			.image-thumbs {
 				padding-top: rem-calc(10px);
