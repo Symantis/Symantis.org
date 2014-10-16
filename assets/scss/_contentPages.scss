@@ -56,6 +56,9 @@ $transtime: 500ms;
 				&.with-sub {
 					padding-bottom: 0;
 				}
+				a {
+					font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
+				}
 			}
 			h4 {
 				@include font-italic(rem-calc(14px));
@@ -175,6 +178,9 @@ $transtime: 500ms;
 				padding-bottom: 10px;
 				&.with-sub {
 					padding-bottom: 0;
+				}
+				a {
+					font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
 				}
 			}
 			h4 {
