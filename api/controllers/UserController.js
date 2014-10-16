@@ -88,15 +88,54 @@ module.exports = {
 			.populate('toConnections')
 			.populate('fromConnections')
 			.then(function(model){
+				
+				var reducedTo = [];
+				_.each(model.toConnections, function(tos){
+				 	if(tos.from != model.id){
+				 		reducedTo.push(tos.from);
+				 	}
+				});
+				var reducedFrom = [];
+				_.each(model.fromConnections, function(froms){
+				 	if(froms.to != model.id){
+				 		reducedFrom.push(froms.to);
+				 	}
+				});
+
 				//console.log(model.toConnections);
 				//console.log(model.fromConnections);
+
+
+				reducedFrom = _.unique(reducedFrom);
+				reducedTo = _.unique(reducedTo);
+
+				console.log(reducedFrom);
+				console.log(reducedTo);
+				
+				var totalReciprocal = Math.abs(reducedTo.length - reducedFrom.length);
+				model.totalReciprocal = totalReciprocal;
+
+				var totalConnections = _.union(reducedFrom, reducedTo).length;
+				model.totalConnections = totalConnections;
+
+				model.totalFromConnections = Math.abs(totalReciprocal - reducedTo.length);
+				model.totalToConnections = Math.abs(totalReciprocal - reducedFrom.length);
+				
+				
+				//console.log(model.toConnections);
+				//console.log(model.fromConnections);
+				/*
 				var totalToConnections = model.toConnections.length;
 				var totalFromConnections = model.fromConnections.length;
 				var totalReciprocal = totalToConnections > totalFromConnections ?  totalToConnections - totalFromConnections : totalFromConnections - totalToConnections;
 				model.totalReciprocal = totalReciprocal;
-				model.totalToConnections = Math.max(0,totalToConnections - totalReciprocal);
-				model.totalFromConnections = Math.max(0,totalFromConnections - totalReciprocal);
+				
+				model.totalToConnections = _.difference(reducedTo, reducedFrom).length;
+				model.totalFromConnections = _.difference(reducedFrom, reducedTo).length;;
+				//model.totalToConnections = Math.max(0,totalToConnections - totalReciprocal);
+				//model.totalFromConnections = Math.max(0,totalFromConnections - totalReciprocal);
 				model.totalConnections = model.totalToConnections + model.totalFromConnections + model.totalReciprocal;
+				*/
 				return model;
 			})
 		])

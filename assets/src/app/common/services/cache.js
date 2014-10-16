@@ -54,7 +54,7 @@ angular.module( 'services.cache', ['lodash'])
 				 users.push(user);
 			 }
 
-			 return user;
+			 return _.find(users, {id: user.id});
 		},
 		getCachedUser: function(users, handle){
 			return _.find(users, {handle: handle});
@@ -135,7 +135,7 @@ angular.module( 'services.cache', ['lodash'])
 			 }else{
 				 queries.push(newModel);
 			 }
-			 return newModel;
+			 return _.find(queries, {id : newModel.id});
 		},
 		cacheCreatedQuery: function(queries, query){
 			queries.push(query);

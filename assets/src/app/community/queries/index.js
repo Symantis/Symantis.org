@@ -67,7 +67,7 @@ angular.module( 'symantis.community.queries', [
 	$scope.loadingSection = true;
 
 	cache.resolveQueryCache($rootScope.queries, query.id).then(function(query){
-		$rootScope.query = query;
+		$scope.query = query;
 		
 		titleService.setTitle('Query: ' + $scope.query.title);
 		$scope.loadingSection = false;

@@ -27,19 +27,19 @@
                 </tr>
             </table>
         </li>
-        <li class="profile-option">
+        <li class="profile-option" ng-show="currentUser">
             <a ui-sref="profile.view.connect" title="Connect with {{ user.firstName }}">
                 <h3>Connect with User</h3>
                 <div class="icon-plus icon"></div>
             </a>
         </li>
-        <li class="profile-option">
+        <li class="profile-option" ng-show="currentUser">
             <a ui-sref="profile.view.invite" title="Remove {{ user.firstName }} from your Connections">
                 <h3>Remove Connection</h3>
                 <div class="icon-minus icon"></div>
             </a>
         </li>
-        <li class="profile-option">
+        <li class="profile-option" ng-show="currentUser">
             <a ui-sref="profile.view.message" title="Message {{ user.firstName }}">
                 <h3>Message</h3>
                 <div class="icon-message icon"></div>
