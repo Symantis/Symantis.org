@@ -7,7 +7,7 @@ angular.module( 'symantis.profile.manti', [
 
 })
 
-.controller( 'ProfileMantiViewCtrl', function MantiViewController( $scope, titleService, $state, $stateParams  ) {
+.controller( 'ProfileMantiViewCtrl', function MantiViewController( $scope, $rootScope, titleService, $state, $stateParams  ) {
 	for(var i in $scope.mantis){
 		if ($scope.mantis[i].id == $stateParams.id){
 			$scope.manti = $scope.mantis[i];

@@ -72,23 +72,6 @@ angular.module( 'symantis.community.queries', [
 		titleService.setTitle('Query: ' + $scope.query.title);
 		$scope.loadingSection = false;
 		
-		/*
-		QueryModel.getResponses(query.id).then(function(models){
-			console.log(models);
-			query.responses = models;
-			$scope.query.responses = models;
-
-			if($scope.currentUser && $scope.query.responses.length == 0){
-				$scope.comments.selected = false;
-			}
-		});
-		*/
-		/*
-		cache.resolveQueryResponsesCache(query).then(function(responses){
-			$scope.query.responses = responses;	
-			console.log(responses);
-		});
-		*/
 	});
 
 	QueryModel.updateViews({id: query.id });

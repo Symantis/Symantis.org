@@ -8,13 +8,17 @@
 module.exports = {
 
 	attributes: {
-		votes: {
-			type: 'integer',
-			defaultsTo: 0
-		},
 		voters: {
 			collection: 'user',
 			via: 'handle'
+		},
+		upVotes: {
+			type: 'int',
+			defaultsTo: 0
+		},
+		downVotes: {
+			type: 'int',
+			defaultsTo: 0
 		},
 		/*
 		voters: {

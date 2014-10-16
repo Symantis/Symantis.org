@@ -17,14 +17,20 @@ angular.module( 'symantis.me.connections', [
 	});
 })
 */
-.controller( 'ConnectionsCtrl', function ConnectionsController( $scope, titleService, UserModel ) {
+.controller( 'ConnectionsCtrl', function ConnectionsController( $scope, $rootScope, titleService, UserModel, user, cache ) {
 	titleService.setTitle('Connections');
 	$scope.$parent.toDo = ['Add Cache feature', 'Add Filter'];
 
 	$scope.loadingSection = true;
 	//console.log($scope.currentUser);
+	/*
 	UserModel.getConnections($scope.currentUser.id).then(function(connections){
 		$scope.user.connections = connections;
+		$scope.loadingSection = false;
+	});
+	*/
+	cache.resolveUserConnectionsCache($rootScope.users, user).then(function(connections){
+		$rootScope.user.connections = connections;
 		$scope.loadingSection = false;
 	});
 

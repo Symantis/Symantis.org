@@ -29,7 +29,7 @@ angular.module( 'symantis.creator.app', [
         width: 'auto', // can be an integer or 'auto'. 'auto' scales gridster to be the full width of its containing element
         colWidth: 'auto', // can be an integer or 'auto'.  'auto' uses the pixel width of the element divided by 'columns'
         rowHeight: 'match', // can be an integer or 'match'.  Match uses the colWidth, giving you square widgets.
-        margins: [10, 10], // the pixel distance between each widget
+        margins: [15, 15], // the pixel distance between each widget
         outerMargin: true, // whether margins apply to outer edges of the grid
         isMobile: false, // stacks the grid items if true
         mobileBreakPoint: 600, // if the screen is not wider that this, remove the grid layout and stack the items
@@ -42,16 +42,16 @@ angular.module( 'symantis.creator.app', [
         resizable: {
            enabled: true,
            handles: ['n', 'e', 's', 'w', 'ne', 'se', 'sw', 'nw'],
-           start: function(event, $element, widget) {}, // optional callback fired when resize is started,
-           resize: function(event, $element, widget) {}, // optional callback fired when item is resized,
-           stop: function(event, $element, widget) {} // optional callback fired when item is finished resizing
+           //start: function(event, $element, widget) {}, // optional callback fired when resize is started,
+           //resize: function(event, $element, widget) {}, // optional callback fired when item is resized,
+           //stop: function(event, $element, widget) {} // optional callback fired when item is finished resizing
         },
         draggable: {
            enabled: true, // whether dragging items is supported
            handle: '.c-drag-handle', // optional selector for resize handle
-           start: function(event, $element, widget) {}, // optional callback fired when drag is started,
-           drag: function(event, $element, widget) {}, // optional callback fired when item is moved,
-           stop: function(event, $element, widget) {} // optional callback fired when item is finished dragging
+           //start: function(event, $element, widget) {}, // optional callback fired when drag is started,
+           //drag: function(event, $element, widget) {}, // optional callback fired when item is moved,
+           //stop: function(event, $element, widget) {} // optional callback fired when item is finished dragging
         }
     };
 

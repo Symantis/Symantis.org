@@ -17,9 +17,17 @@ angular.module( 'symantis.me.information', [
 	});
 })
 */
-.controller( 'InformationCtrl', function InformationController( $scope, titleService ) {
+.controller( 'InformationCtrl', function InformationController( $scope, $rootScope, titleService, user, cache ) {
 	titleService.setTitle('My Information');
 	$scope.$parent.toDo = [];
+
+	$scope.loadingSection = true;
+	cache.resolveUserCache($rootScope.users, user.handle).then(function(user){
+		$rootScope.user = user;
+		$rootScope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
+		$scope.loadingSection = false;
+		
+	});
 	
 })
 .controller( 'MeInformationLeftsideCtrl', function MeInformationLeftsideController( $scope ) {

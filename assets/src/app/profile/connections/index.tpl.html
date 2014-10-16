@@ -54,59 +54,59 @@
                 <div class="preloader">
                 </div>
         </div>
-
-        <div 
-            masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".connections-pod-wrap", "gutter": ".gutter-sizer" }' 
-            class="connections-container" 
-            ui-view="connections"
-        >
-
-            <div class="gutter-sizer"></div>
-
-            <article 
-                masonry-tile
-                class="connections-pod-wrap"
-                ng-repeat="user in user.connections | filter:queryValue track by $index"
+        <div class="fade" ng-class="{in: !loadingSection}">
+            <div 
+                masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".connections-pod-wrap", "gutter": ".gutter-sizer" }' 
+                class="connections-container" 
+                ui-view="connections"
             >
-                <div class="connections-pod">
-                    <div class="connections-pod-left">
-                        <div class="connection-type"><span class="icon-2way icon"></span></div>
-                        <a ui-sref="profile.view({ handle: user.handle })">
-                            <div class="connections-pic connections-{{ user.status }} generate-image" signature="{{ user.signature }}"></div>
-                        </a>
-                    </div>
-                    <div class="connections-pod-right">
-                        <div class="connections-pod-right-inner">
-                            <header class="connections-pod-header">
-                                <h2 class="connections-name">
-                                    <a ui-sref="profile.view({ handle: user.handle })">{{ user.firstName + ' ' + user.lastName }}</a>
-                                </h2>
-                                <a 
-                                    class="connections-message" 
-                                    title="Message {{ user.firstName }}" 
-                                    ng-click="inDevModal()"
-                                ><span class="icon-message"></span></a>
-                            </header>
-                            <section class="connections-pod-body">
-                                <p class="connections-bio">{{ user.professed }}</p>
-                            </section>
-                            <footer class="connections-pod-footer">
-                                <p class="connections-skills">
+
+                <div class="gutter-sizer"></div>
+
+                <article 
+                    masonry-tile
+                    class="connections-pod-wrap"
+                    ng-repeat="user in user.connections | filter:queryValue track by $index"
+                >
+                    <div class="connections-pod">
+                        <div class="connections-pod-left">
+                            <div class="connection-type"><span class="icon-2way icon"></span></div>
+                            <a ui-sref="profile.view({ handle: user.handle })">
+                                <div class="connections-pic connections-{{ user.status }} generate-image" signature="{{ user.signature }}"></div>
+                            </a>
+                        </div>
+                        <div class="connections-pod-right">
+                            <div class="connections-pod-right-inner">
+                                <header class="connections-pod-header">
+                                    <h2 class="connections-name">
+                                        <a ui-sref="profile.view({ handle: user.handle })">{{ user.firstName + ' ' + user.lastName }}</a>
+                                    </h2>
                                     <a 
-                                        ng-repeat="tag in user.tags track by $index" 
-                                        ui-sref="community.tags.view({ tag: tag.text })"
-                                        title="View users tagged with {{ tag.text }}"
-                                    >{{ tag.text }}</a>
-                                </p>
-                            </footer>
+                                        class="connections-message" 
+                                        title="Message {{ user.firstName }}" 
+                                        ng-click="inDevModal()"
+                                    ><span class="icon-message"></span></a>
+                                </header>
+                                <section class="connections-pod-body">
+                                    <p class="connections-bio">{{ user.professed }}</p>
+                                </section>
+                                <footer class="connections-pod-footer">
+                                    <p class="connections-skills">
+                                        <a 
+                                            ng-repeat="tag in user.tags track by $index" 
+                                            ui-sref="community.tags.view({ tag: tag.text })"
+                                            title="View users tagged with {{ tag.text }}"
+                                        >{{ tag.text }}</a>
+                                    </p>
+                                </footer>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </article>
+                </article>
 
+            </div>
         </div>
-
     </section>
     <section class="medium-0 large-1 columns main-right">
         <header class="right-header">

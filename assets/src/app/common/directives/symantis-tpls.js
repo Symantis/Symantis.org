@@ -574,7 +574,7 @@ angular.module('sy.templates.userimage', [])
         */
         link: function (scope, element, attrs){
             
-            console.log("signature: "+attrs.signature);
+            //console.log("signature: "+attrs.signature);
             var w = element[0].offsetWidth;
             var h = element[0].offsetHeight;
             var svg = d3.select(element[0]).append("svg:svg")

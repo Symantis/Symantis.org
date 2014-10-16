@@ -1,3 +1,12 @@
+/**
+ * UserController
+ *
+ * @description :: Server-side logic for managing users
+ * @help        :: See http://links.sailsjs.org/docs/controllers
+ */
+
+var Q = require('q');
+
 module.exports = {
 	checkEmail: function(req, res){
 		var ret = { unique: false }
@@ -71,8 +80,26 @@ module.exports = {
 		});
 	},
 	getByHandle: function(req, res) {
-		console.log(req.param('handle'));
-		User.getByHandle(req.param('handle'))
+		//console.log(req.param('handle'));
+		//User.getByHandle(req.param('handle'))
+		Q.all([
+			User.findOne({ handle: req.param('handle') })
+			//.populate('connections')
+			.populate('toConnections')
+			.populate('fromConnections')
+			.then(function(model){
+				//console.log(model.toConnections);
+				//console.log(model.fromConnections);
+				var totalToConnections = model.toConnections.length;
+				var totalFromConnections = model.fromConnections.length;
+				var totalReciprocal = totalToConnections > totalFromConnections ?  totalToConnections - totalFromConnections : totalFromConnections - totalToConnections;
+				model.totalReciprocal = totalReciprocal;
+				model.totalToConnections = totalToConnections - totalReciprocal;
+				model.totalFromConnections = totalFromConnections - totalReciprocal;
+				model.totalConnections = totalToConnections + totalFromConnections - totalReciprocal;
+				return model;
+			})
+		])
 		.spread(function(model) {
 			User.subscribe(req.socket, model);
 			res.json(model);

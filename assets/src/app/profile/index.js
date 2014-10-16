@@ -45,36 +45,18 @@ angular.module( 'symantis.profile', [
 		.state('profile.view',{
 			url: ':handle',
 			resolve : {
-				cache: 'cache',
+				//cache: 'cache',
 			    user : function(cache, $rootScope, $stateParams) {
-			    	
-			    	//return { handle: $stateParams.handle };
-			        //return UserModel.getOneHandle( $stateParams.handle ).$promise;
-			        return $rootScope.user = cache.resolveUserCache($rootScope.users, $stateParams.handle);
-			        /*
-			        console.log($stateParams);
-			        
-			        return { handle: $stateParams.handle };
-			        //return UserModel.getOneByHandle($stateParams.handle);
-			    	*/
+			        return $rootScope.user = {handle: $stateParams.handle};
+			    },
+			    users : function($rootScope){
+			    	return $rootScope.users;
 			    }
 		    },
 			views: {
 				"main@": {
 					controller: 'ProfileViewCtrl',
 					templateUrl: 'profile/view/index.tpl.html',
-					/*
-					resolve : {
-			            user : function(UserModel, $stateParams) {
-			                //console.log($stateParams.id);
-			               // var deferred = $q.defer();
-			                //console.log($stateParams.handle);
-			                return UserModel.getOneByHandle($stateParams.handle);
-			                
-			            }
-		        	}
-		        	*/
-		        	
 				},
 				"leftside@profile.view": {
 					controller: 'ProfileViewLeftsideCtrl',
@@ -88,6 +70,15 @@ angular.module( 'symantis.profile', [
 		})
 		.state( 'profile.view.connections', {
 			url: '/connections',
+			resolve : {
+				//cache: 'cache',
+			    user : function(cache, $rootScope, $stateParams) {
+			        return $rootScope.user = {handle: $stateParams.handle};
+			    },
+			    users : function($rootScope){
+			    	return $rootScope.users;
+			    }
+		    },
 			views: {
 				"main@": {
 					controller: 'ProfileConnectionsCtrl',
@@ -101,6 +92,15 @@ angular.module( 'symantis.profile', [
 		})
 		.state( 'profile.view.information', {
 			url: '/information',
+			resolve : {
+				//cache: 'cache',
+			    user : function(cache, $rootScope, $stateParams) {
+			        return $rootScope.user = {handle: $stateParams.handle};
+			    },
+			    users : function($rootScope){
+			    	return $rootScope.users;
+			    }
+		    },
 			views: {
 				"main@": {
 					controller: 'ProfileInformationCtrl',
@@ -169,10 +169,10 @@ angular.module( 'symantis.profile', [
 	;
 })
 
-.controller( 'ProfileCtrl', function ProfileController( $sails, $scope, titleService, users, cache ) {
+.controller( 'ProfileCtrl', function ProfileController( $sails, $rootScope, titleService, users, cache ) {
 	titleService.setTitle('Profile');
 	$scope.$parent.toDo = [];
-	$scope.users = users;
+	$scope.users = $rootScope.users;
 
 	
 })

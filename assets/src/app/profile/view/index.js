@@ -5,10 +5,20 @@ angular.module( 'symantis.profile.view', [
 	
 })
 
-.controller( 'ProfileViewCtrl', function ProfileViewController($http, $scope, user, titleService, $state, $stateParams, UserModel, cache, utils) {
+.controller( 'ProfileViewCtrl', function ProfileViewController($http, $scope, $rootScope, user, titleService, $state, $stateParams, UserModel, cache, utils) {
 	
-	$scope.user = user;
-	$scope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
+	$scope.loadingSection = true;
+	cache.resolveUserCache($rootScope.users, user.handle).then(function(user){
+		$rootScope.user = user;
+		$rootScope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
+		
+		titleService.setTitle($scope.user.firstName+'\'s' + ' Profile');
+		$scope.loadingSection = false;
+		
+	});
+
+	//$scope.user = user;
+	//$scope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
 	//$scope.user.totalToConnections = $scope.user.totalToConnections - $scope.user.reciprocal;
 	//$scope.user.totalFromConnections = $scope.user.totalFromConnections - $scope.user.reciprocal;
 	/*
@@ -18,7 +28,7 @@ angular.module( 'symantis.profile.view', [
 	*/
 	//cache.resolveUserCache($scope.users, user.handle);
 
-	titleService.setTitle($scope.user.firstName+'\'s' + ' Profile');
+	
 
 	
 

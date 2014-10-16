@@ -5,10 +5,14 @@ angular.module( 'services.cache', ['lodash'])
 	return {
 		
 		resolveUserCache: function(users, handle){
+			var self = this;
 			if(this.checkUserCache(users, handle)){
-				return this.getCachedUser(users, handle);
+				console.log("returning cached user...");
+				var deferred = $q.defer();
+				var user = this.getCachedUser(users, handle);
+				deferred.resolve(user);
+				return deferred.promise;
 			}else{
-				 var self = this;
 				 console.log("Getting " +handle);			 
 				 return UserModel.getOneHandle(handle).then(function(user){
 				 	console.log(user);
@@ -16,8 +20,24 @@ angular.module( 'services.cache', ['lodash'])
 				 });
 			}
 		},
+		resolveUserConnectionsCache: function(users, user){
+			var self = this;
+			if(user.connections){
+				console.log("returning cached user connections...");
+				var deferred = $q.defer();
+				deferred.resolve(user.connections);
+				return deferred.promise;
+			}else{
+				console.log("Getting user " + user.handle + " connections...");
+				return UserModel.getConnections(user.id).then(function(connections){
+					user.connections = connections;
+					self.cacheUpdatedUser(users, user.handle, {connections: connections});
+					return connections;
+				});
+			}
+		},
 		checkUserCache: function(users, identifier){
-			return _.some(users, {handle: identifier});
+			return _.some(users, {handle: identifier, local:true});
 		},
 		cacheUpdatedUser: function(users, handle, data){
 			var user = _.find(users, {handle: handle});
@@ -25,7 +45,15 @@ angular.module( 'services.cache', ['lodash'])
 			return users;
 		},
 		cacheNewUser: function(users, user){
-			 users.push(user);
+			 user.local = true;
+			 //users.push(user);
+
+			 if(_.some(users, {id: user.id})){
+			 	this.cacheUpdatedUser(users, user.handle, user);
+			 }else{
+				 users.push(user);
+			 }
+
 			 return user;
 		},
 		getCachedUser: function(users, handle){
