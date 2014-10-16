@@ -308,8 +308,8 @@ body,
 					a{
 						@include transition(100ms);
 						display: block;
-						@include font-light(rem-calc(14px));
-						color: white;
+						@include font-regular(rem-calc(14px));
+						color: $offWhite;
 						&:hover{
 							color: $primary-color;
 						}
