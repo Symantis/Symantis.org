@@ -12,6 +12,7 @@ angular.module( 'symantis', [
 	//Directives, Templates, Etc...
 	'mm.foundation',
 	'xeditable',
+	'gridster',
 	'sy.templates',
 
 	'templates-app',

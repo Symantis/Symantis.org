@@ -37,6 +37,10 @@ angular.module( 'symantis.creator', [
 					controller: 'CreatorAppCtrl',
 					templateUrl: 'creator/app/index.tpl.html'
 				},
+				"canvas@creator.app": {
+					controller: 'CreatorAppCanvasCtrl',
+					templateUrl: 'creator/app/canvas.tpl.html'
+				},
 				"header@": {
 					controller: 'CreatorAppHeaderCtrl',
 		            template: '<div></div>'

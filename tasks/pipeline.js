@@ -69,6 +69,7 @@ var jsFilesToInject = [
   'bower_components/angular-ui-utils/ui-utils.js',
   'bower_components/flow.js/dist/flow.js',
   'bower_components/ng-flow/dist/ng-flow.js',
+  'bower_components/angular-gridster/src/angular-gridster.js',
   //'bower_components/jquery/dist/jquery.min.js',
   //'bower_components/foundation/js/foundation.min.js',
 

@@ -594,7 +594,8 @@ angular.module('sy.templates.userimage', [])
               .attr({
                 cx: cx,
                 cy: cy,
-                r: r
+                r: r,
+                class: 'creator'
               })
             }
             function tri(g, theta0, cx, cy, r) {

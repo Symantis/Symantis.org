@@ -33,7 +33,8 @@
     "TimelineJS": "~2.33.1",
     "angular-sails-bind": "~1.0.5",
     "angular-ui-utils": "~0.1.1",
-    "ng-flow": "~2"
+    "ng-flow": "~2",
+    "angular-gridster": "~0.10.4"
   },
   "resolutions": {
     "angular": "~1.3.0"
