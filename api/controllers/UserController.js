@@ -113,6 +113,7 @@ module.exports = {
 				console.log(reducedTo);
 				
 				var totalReciprocal = Math.abs(reducedTo.length - reducedFrom.length);
+				
 				model.totalReciprocal = totalReciprocal;
 
 				var totalConnections = _.union(reducedFrom, reducedTo).length;

@@ -3,6 +3,7 @@
 </section>
 <section class="top-nav-mid medium-2 large-1 columns">
 	<a 
+		ng-show="currentUser"
 		ui-sref="creator.app" 
 		ng-class="{active: $state.includes('creator.app')}"
 	>
