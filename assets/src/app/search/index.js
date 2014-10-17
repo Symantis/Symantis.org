@@ -15,7 +15,7 @@ angular.module( 'symantis.search', [
 			},
 			"header": {
 				controller: 'HeaderCtrl',
-                template: ''
+                templateUrl: 'search/header.tpl.html'
 			},
 			"leftside@search": {
 				controller: 'SearchLeftsideCtrl',

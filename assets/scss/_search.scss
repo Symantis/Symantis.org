@@ -71,16 +71,23 @@
 }
 .exit-search {
 	position: absolute;
-	top: 10px;
-	right: 10px;
-	padding: rem-calc(10px);
-	margin: rem-calc(10px);
-	.exit-icon {
-		fill: black;
+	//top: 10px;
+	right: 0;
+	//padding: rem-calc(10px);
+	//margin: rem-calc(10px);
+	.close-reveal-modal {
+		position: relative;
+		display: block;
 		@include transition(100ms);
-	}
-	&:hover .exit-icon  {
-		fill: $gray;
+		font-size: rem-calc(70px);
+		color: $gray;
+		span {
+			position: relative;
+			//bottom: -.2rem;
+		}
+		&:hover {
+			color: $darkest;
+		}
 	}
 }
 #search-category-1 {
