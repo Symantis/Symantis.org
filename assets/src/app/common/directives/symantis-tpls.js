@@ -87,6 +87,7 @@ angular.module('sy.templates.inputs', [])
         });
     };
 })
+
 .directive('lowercase', function() {
    return {
      require: 'ngModel',
@@ -179,6 +180,27 @@ angular.module('sy.templates.syapp', ['duScroll'])
                     });
                 }
             });
+
+            var map = {91: false, 16: false, 76: false};
+            $document.bind("keydown", function(event) {
+                console.log(event.which);
+                if (event.which in map) {
+                    map[event.which] = true;
+                    
+                    if (map[91] && map[16] && map[76]) {
+                        if (typeof ($scope.loginModal) == 'function') {
+                            $scope.loginModal();    
+                        }
+                        event.preventDefault();
+                    }
+                }
+            });
+            $document.bind("keyup", function(event) {
+                if (event.which in map) {
+                    map[event.keyCode] = false;
+                }
+            });
+   
         }
     }
 
