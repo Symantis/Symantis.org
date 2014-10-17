@@ -172,9 +172,12 @@ angular.module('sy.templates.syapp', ['duScroll'])
                 var top = 0;
                 var duration = 0; //milliseconds
                 //Scroll to the exact position
-                viewport.scrollTop(top, duration).then(function() {
-                  console.log('You just scrolled to the top!');
-                });
+                //console.log(viewport[0].scrollTop);
+                if(viewport[0].scrollTop != 0){
+                    viewport.scrollTop(top, duration).then(function() {
+                      console.log('You just scrolled to the top!');
+                    });
+                }
             });
         }
     }
