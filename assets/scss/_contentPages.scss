@@ -284,6 +284,9 @@ $transtime: 500ms;
 	h2 {
 		@include font-semi(rem-calc(24px));
 		color: $dark;
+		a {
+			font-family: 'open_sanssemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
 	}
 	p {
 		@include font-light(rem-calc(16px));
