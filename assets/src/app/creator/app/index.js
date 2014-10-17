@@ -6,20 +6,22 @@ angular.module( 'symantis.creator.app', [
 
 	
 })
-.controller( 'CreatorAppCanvasCtrl', function CreatorAppCanvasController( $scope ) {
+.controller( 'CreatorAppCanvasCtrl', function CreatorAppCanvasController( $scope, CreatorModel, $sails) {
 	
+  CreatorModel.subscribeToDemo();
+
 	$scope.customItems = [
-      { size: { x: 2, y: 1 }, position: [0, 0] },
-      { size: { x: 2, y: 2 }, position: [0, 2] },
-      { size: { x: 1, y: 1 }, position: [0, 4] },
-      { size: { x: 1, y: 1 }, position: [0, 5] },
-      { size: { x: 2, y: 1 }, position: [1, 0] },
-      { size: { x: 1, y: 1 }, position: [1, 4] },
-      { size: { x: 1, y: 2 }, position: [1, 5] },
-      { size: { x: 1, y: 1 }, position: [2, 0] },
-      { size: { x: 2, y: 1 }, position: [2, 1] },
-      { size: { x: 1, y: 1 }, position: [2, 3] },
-      { size: { x: 1, y: 1 }, position: [2, 4] }
+      { id:1, size: { x: 2, y: 1 }, position: [0, 0] },
+      { id:2, size: { x: 2, y: 2 }, position: [0, 2] },
+      { id:3, size: { x: 1, y: 1 }, position: [0, 4] },
+      { id:4, size: { x: 1, y: 1 }, position: [0, 5] },
+      { id:5, size: { x: 2, y: 1 }, position: [1, 0] },
+      { id:6, size: { x: 1, y: 1 }, position: [1, 4] },
+      { id:7, size: { x: 1, y: 2 }, position: [1, 5] },
+      { id:8, size: { x: 1, y: 1 }, position: [2, 0] },
+      { id:9, size: { x: 2, y: 1 }, position: [2, 1] },
+      { id:10, size: { x: 1, y: 1 }, position: [2, 3] },
+      { id:11, size: { x: 1, y: 1 }, position: [2, 4] }
     ];
 
     $scope.gridsterOpts = {
@@ -44,16 +46,28 @@ angular.module( 'symantis.creator.app', [
            handles: ['n', 'e', 's', 'w', 'ne', 'se', 'sw', 'nw'],
            //start: function(event, $element, widget) {}, // optional callback fired when resize is started,
            //resize: function(event, $element, widget) {}, // optional callback fired when item is resized,
-           //stop: function(event, $element, widget) {} // optional callback fired when item is finished resizing
+           stop: function(event, $element, widget) {
+              console.log(event);
+              console.log($element);
+              console.log(widget);
+           } // optional callback fired when item is finished resizing
         },
         draggable: {
            enabled: true, // whether dragging items is supported
            handle: '.c-drag-handle', // optional selector for resize handle
            //start: function(event, $element, widget) {}, // optional callback fired when drag is started,
            //drag: function(event, $element, widget) {}, // optional callback fired when item is moved,
-           //stop: function(event, $element, widget) {} // optional callback fired when item is finished dragging
+           stop: function(event, $element, widget) {
+              console.log(event);
+              console.log($element);
+              console.log(widget);
+           } // optional callback fired when item is finished dragging
         }
     };
+
+    $sails.on('creator', function (envelope) {
+      console.log(envelope);
+    });
 
 })
 .controller( 'CreatorAppNavCtrl', function CreatorAppNavController( $scope, titleService ) {

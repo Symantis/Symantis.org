@@ -34,6 +34,10 @@ angular.module( 'symantis.me.connections', [
 		$scope.loadingSection = false;
 	});
 
+	$scope.getConnectionType = function(id){
+		return utils.getConnectionType(id, $rootScope.user.toConnections, $rootScope.user.fromConnections);
+
+	}
 	
 })
 .controller( 'MeConnectionsLeftsideCtrl', function MeConnectionsLeftsideController( $scope ) {

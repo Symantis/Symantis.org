@@ -292,6 +292,20 @@ angular.module( 'symantis', [
 
 
 	}
+	$scope.tagUserClick = function(e) {
+		var tagText = e.target.innerText;
+		console.log(tagText);
+            // tagText is '@Joe'. You could use this to verify
+            // that your app has a 'Joe' user and then redirect
+            // to a view that displays this user profile.
+    };
+
+    $scope.tagTermClick = function(e) {
+		var tagText = e.target.innerText;
+		console.log(tagText);
+            // tagText is '#gun'. You could use this to display
+            // all posts/info that has a hashtag with this value.
+    };
 	//Handle "Cancel" and Back Buttons
 	$scope.goBack = function(){
 		history.back();

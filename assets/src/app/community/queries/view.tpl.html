@@ -187,7 +187,8 @@
 
 	
 
-	<div 
+	<div
+		
 		class="comment animate-repeat" 
 		ng-repeat="response in query.responses | orderBy : 'votes' : true "
 		ng-class="{ solution: query.solved == response.id }"
@@ -237,7 +238,15 @@
 	            	<span>{{ response.date | date }}</span>
 	            </p>
 	        </div>
-			<markdown class="comment-text" ng-model="response.response" strip="true" extensions="github, table">
+			<markdown 
+				hashtagify 
+			    term-click="tagTermClick($event)" 
+			    user-click="tagUserClick($event)" 
+				class="comment-text" 
+				ng-model="response.response" 
+				strip="true" 
+				extensions="github, table"
+			>
 			</markdown>
 			<div class="image-thumbs" ng-show="response.imgs">
 	        	<div class="thumbnail-container" ng-repeat="img in response.imgs">
@@ -275,7 +284,12 @@
 			            	<span>{{ reply.date | date }}</span>
 			            </p>
 			        </div>
-					<p class="reply-text">{{reply.comment}}</p>
+					<p 
+						hashtagify 
+					    term-click="tagTermClick($event)" 
+					    user-click="tagUserClick($event)"
+						class="reply-text"
+					>{{reply.comment}}</p>
 			    </div>
 			</div>
 			<div class="new-comment" ng-show="currentUser && replies.open">

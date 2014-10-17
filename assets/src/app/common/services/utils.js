@@ -38,6 +38,11 @@ angular.module( 'services.utils', ['lodash'])
 			var diff = froms.length > tos.length ?  _.difference(froms, tos) : _.difference(tos, froms);
 			return diff;
 		},
+		getConnectionType: function(id,to,from){
+			var possible = ['icon-2way', 'icon-1way-1', 'icon-1way-2'];
+			
+			return;
+		},
 		removeTile: function(boards, id){
 			return lodash.remove(boards, {id: id});
 		}
