@@ -28,6 +28,32 @@ module.exports = {
 			// An error occured
 		});
 	},
+	addSolution: function(req, res){
+		var query = req.param('query');
+		if (!query) {
+			return res.badRequest('No query id provided.');
+
+		}
+		var response = req.param('response');
+		if (!response) {
+			return res.badRequest('No response id provided.');
+		}
+		var user = req.param('user');
+		if (!user) {
+			return res.badRequest('No user id provided.');
+		}
+		Query.update(query, { solved: response })
+		.exec(function(err, models) {
+			if (err) {
+				console.log(err);
+			}
+			else {
+				Query.publishUpdate(query, models[0]);
+				res.json(models[0]);
+			}
+		});
+
+	},
 	addReply: function (req, res){
 		var query = req.param('query');
 		if (!query) {

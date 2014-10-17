@@ -95,6 +95,7 @@ angular.module( 'symantis.community.queries', [
 
 			QueryModel.addResponse(newModel).then(function(model){
 				$scope.comments.selected = false;
+				$scope.newResponse = null;
 				utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your response was added successfully.' } );
 			});
 		}else{
@@ -119,6 +120,17 @@ angular.module( 'symantis.community.queries', [
 		}else{
 
 		}
+	}
+	$scope.sumbitSolution = function(id){
+		var newModel = {
+			user: $scope.currentUser.id,
+			query: $scope.query.id,
+			response: id
+		}
+		QueryModel.addSolution(newModel).then(function(model){
+			//$scope.comments.selected = false;
+			//utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your reply was added successfully.' } );
+		});
 	}
 
 })

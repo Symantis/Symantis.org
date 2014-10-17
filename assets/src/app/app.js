@@ -332,7 +332,7 @@ angular.module( 'symantis', [
 				console.log("Query Added To");
 				console.log(envelope);
 				if(envelope.attribute == "responses"){
-					cache.getAndCacheReponse($scope.queries, envelope.id, envelope.addedId );
+					cache.getAndCacheReponse($scope.queries, envelope.addedId );
 				}
 				//Object {id: "543e3473724fae3f3b745f85", verb: "addedTo", attribute: "responses", addedId: "543e34d1724fae3f3b745f86"}
 				//cache.cacheNewQuery($scope.queries, envelope.data);
@@ -340,6 +340,7 @@ angular.module( 'symantis', [
 				break;
 			case 'updated':
 				console.log("Query Updated");
+				console.log(envelope);
 				cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
 				//lodash.
 				//$scope.queries.unshift(envelope.data);
@@ -362,6 +363,9 @@ angular.module( 'symantis', [
 			case 'addedTo':
 				console.log("Response Added To");
 				console.log(envelope);
+				if(envelope.attribute = "replies"){
+					cache.getAndCacheReply($scope.queries, envelope.addedId);
+				}
 				//Object {id: "543e0a903097a4393459e5c9", verb: "addedTo", attribute: "replies", addedId: "543e297e34af6e4939475b1e"}
 				//cache.cacheNewQuery($scope.queries, envelope.data);
 				

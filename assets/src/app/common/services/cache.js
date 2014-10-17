@@ -147,7 +147,7 @@ angular.module( 'services.cache', ['lodash'])
 		removeQueryFromCache: function(queries, id){
 			return _.remove(queries, {id: id});
 		},
-		getAndCacheReponse: function(queries, querId, responseId){
+		getAndCacheReponse: function(queries, responseId){
 			var self = this;
 			return QueryModel.getResponse(responseId).then(function(response){
 				console.log(response);
@@ -171,7 +171,15 @@ angular.module( 'services.cache', ['lodash'])
 			response.replies.push(reply);
 			
 			return queries;
+		},
+		getAndCacheReply: function(queries, replyId){
+			var self = this;
+			return QueryModel.getReply(replyId).then(function(reply){
+				//console.log(reply);
+				return self.cacheNewQueryReponseReply(queries, reply);
+			});
 		}
+		//cacheNewQueryReponseReply: function(queries, )
 		/*
 		resolveQueryResponsesCache: function(query){
 			//var query = _.find(queries, {id: id});

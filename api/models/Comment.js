@@ -45,6 +45,22 @@ module.exports = {
 		}
 
 	},
+	getAll: function() {
+		return Comment.find()
+		.populate('author')
+		.then(function (models) {
+			return [models];
+		});
+	},
+	getOne: function(id) {
+		return Comment.findOne(id)
+		.populate('author')
+		.then(function (model) {
+			//model.totalViews = parseInt(model.totalViews) + 1;
+			//Query.addViewCount(id);
+			return [model];
+		});
+	},
 	/*
 	afterCreate : function(comment, next){
   		//console.log(comment);

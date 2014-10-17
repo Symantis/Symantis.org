@@ -64,6 +64,7 @@
                     <div class="querie-overview-main">
                         <h3>
                             <a ui-sref="community.queries.view({id: query.id, title: query.clean })">
+                                <span class="icon-check response-favourite" ng-show="query.solved"></span>
                                 {{ query.title }}
                             </a>
                         </h3>

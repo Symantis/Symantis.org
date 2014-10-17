@@ -86,7 +86,10 @@ module.exports.routes = {
 
     'get /api/response/:id': 'ResponseController.getOne',
     'get /api/response/query/:query': 'ResponseController.getAllForQuery',
+    'get /api/response/reply/:id': 'CommentController.getOne',
+
     'post /api/response/reply': 'ResponseController.addReply',
+    'post /api/response/solve': 'ResponseController.addSolution',
 
 
   // If a request to a URL doesn't match any of the custom routes above, it is matched 

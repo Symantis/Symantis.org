@@ -189,8 +189,8 @@
 
 	<div 
 		class="comment animate-repeat" 
-		ng-repeat="response in query.responses track by $index | orderBy : 'votes' : true "
-		ng-class="{ solution: response.solution }"
+		ng-repeat="response in query.responses | orderBy : 'votes' : true "
+		ng-class="{ solution: query.solved == response.id }"
 	>
 		<div class="comment-left">
 			<div 
@@ -217,7 +217,13 @@
 					<span class="icon-vote-down"></span>
 				</a>
 				<!-- placeholder icon -->
-				<span class="icon-check response-favourite" ng-show="response.solution"></span>
+				<span class="icon-check response-favourite" ng-show="query.solved == response.id"></span>
+				<a 
+					ng-show="query.author.id == currentUser.id &&  query.solved != response.id" title="Mark as best solution"
+					ng-click="sumbitSolution(response.id)"
+				>
+					<span class="icon-check response-possible-favourite"></span>
+				</a>
 			</p>
 		</div>
 
@@ -292,7 +298,7 @@
 					<textarea 
 						name="newReply" 
 						ng-model="response.newReply"
-						placeholder="Add Reply.."
+						placeholder="Add Reply..."
 						required
 					></textarea>
 					
@@ -324,8 +330,9 @@
 					<span ng-show="replies.open">Hide</span>
 
 					<span ng-hide="replies.open">
-						<span ng-show="response.replies.length">Add/View Replies ({{ response.replies.length }})</span>
-						<span ng-hide="response.replies.length">Reply</span>
+						<span ng-show="response.replies.length && currentUser">Add/View Replies ({{ response.replies.length }})</span>
+						<span ng-show="!response.replies.length && currentUser">Reply</span>
+						<span ng-show="response.replies.length > 0 && !currentUser">View Replies ({{ response.replies.length }})</span>
 					</span>
 				</a>
 			</p>

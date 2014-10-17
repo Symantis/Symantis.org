@@ -56,8 +56,8 @@ module.exports = {
 			defaultsTo: new Date()
 		},
 		solved: {
-			type: 'boolean',
-			defaultsTo: false
+			type: 'string',
+			defaultsTo: null
 		},
 		edited: {
 			type: 'boolean',

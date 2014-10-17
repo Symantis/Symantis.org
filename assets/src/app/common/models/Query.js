@@ -46,6 +46,17 @@ angular.module('models.query', ['lodash', 'services', 'ngSails',])
 
 		return deferred.promise;
 	};
+	this.getReply = function(id) {
+		var deferred = $q.defer();
+		var url = utils.prepareUrl('response/reply/' + id);
+		//console.log("Getting Response: "+id);
+		$sails.get(url, function(model) {
+			//console.log(model);
+			return deferred.resolve(model);
+		});
+
+		return deferred.promise;
+	};
 	this.create = function(newModel) {
 		var deferred = $q.defer();
 		var url = utils.prepareUrl('query');
@@ -76,8 +87,15 @@ angular.module('models.query', ['lodash', 'services', 'ngSails',])
 		});
 		return deferred.promise;
 	};
+	this.addSolution = function(newModel) {
+		var deferred = $q.defer();
+		var url = utils.prepareUrl('response/solve');
 
-
+		$sails.post(url, newModel, function(model) {
+			return deferred.resolve(model);
+		});
+		return deferred.promise;
+	};
 	this.update = function(newModel) {
 		var deferred = $q.defer();
 		var url = utils.prepareUrl('query/update');
