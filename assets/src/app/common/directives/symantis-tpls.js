@@ -183,12 +183,12 @@ angular.module('sy.templates.syapp', ['duScroll'])
 
             var map = {91: false, 16: false, 76: false};
             $document.bind("keydown", function(event) {
-                console.log(event.which);
+                //console.log($scope.currentUser);
                 if (event.which in map) {
                     map[event.which] = true;
                     
                     if (map[91] && map[16] && map[76]) {
-                        if (typeof ($scope.loginModal) == 'function') {
+                        if (typeof ($scope.loginModal) == 'function' && !$scope.currentUser) {
                             $scope.loginModal();    
                         }
                         event.preventDefault();
