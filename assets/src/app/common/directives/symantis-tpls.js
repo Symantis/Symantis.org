@@ -674,17 +674,17 @@ angular.module('sy.templates.userimage', [])
 
             //lets make 6 circles with half the radius centered at 6 points
             //around the big circle
-            for(var i = 0; i < 6; i++) {
+            for(var i = 0; i < Math.floor(Math.random() * possible.length); i++) {
               var theta = i * Math.PI / 3 + Math.PI/6;
               var r = radius / 2;
               var lcx = r * Math.cos(theta) + cx;
               var lcy = r * Math.sin(theta) + cy;
               circle(svg, lcx, lcy, r)
-              if(i % 2 == 0) {
+              //if(i % 2 == 0) {
                 tri(svg, Math.PI, lcx, lcy, r);
-              } else {
-                tri(svg, 0, lcx, lcy, r);
-              }
+              //} else {
+                //tri(svg, 0, lcx, lcy, r);
+              //}
               
             }
 
