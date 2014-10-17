@@ -72,6 +72,10 @@ module.exports = {
 			collection: 'connection',
 			via: 'from'
 		},
+		responseVotes: {
+            collection: 'response',
+            via: 'votes'
+        },
 		activity: {
 			collection: 'activity',
 			via: 'user'

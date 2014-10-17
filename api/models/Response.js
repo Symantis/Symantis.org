@@ -14,7 +14,8 @@ module.exports = {
 		},
 		voters: {
 			collection: 'user',
-			via: 'handle'
+			via: 'responseVotes',
+            dominant:true
 		},
 		/*
 		voters: {

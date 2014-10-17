@@ -132,6 +132,42 @@ angular.module( 'symantis.community.queries', [
 			//utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your reply was added successfully.' } );
 		});
 	}
+	$scope.upVote = function(id){
+		
+		if($scope.currentUser){
+			var newModel = {
+				user: $scope.currentUser.id,
+				query: $scope.query.id,
+				response: id,
+				vote: 'up'
+			}
+			QueryModel.addVote(newModel).then(function(model){
+				//$scope.comments.selected = false;
+				//utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your reply was added successfully.' } );
+			});
+		}else{
+			console.log("Login");
+			$scope.loginModal();
+		}
+	}
+	$scope.downVote = function(id){
+		
+		if($scope.currentUser){
+			var newModel = {
+				user: $scope.currentUser.id,
+				query: $scope.query.id,
+				response: id,
+				vote: 'down'
+			}
+			QueryModel.addVote(newModel).then(function(model){
+				//$scope.comments.selected = false;
+				//utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your reply was added successfully.' } );
+			});
+		}else{
+			console.log("Login");
+			$scope.loginModal();
+		}
+	}
 
 })
 .controller( 'QueriesEditCtrl', function QueriesEditController( $http, $scope, $rootScope, query, titleService, cache, QueryModel, utils, $timeout ) {

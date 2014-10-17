@@ -201,7 +201,7 @@
 			<p class="response-voting">
 				<a  
 					class="vote-up" 
-					ng-click="response.votes = response.votes + 1"
+					ng-click="upVote(response.id)"
 					title="Up Vote this response"
 				>
 					<span class="icon-vote-up"></span>
@@ -211,7 +211,7 @@
 				</span>
 				<a 
 					class="vote-down" 
-					ng-click="response.votes = response.votes - 1"
+					ng-click="downVote(response.id)"
 					title="Down Vote this response"
 				>
 					<span class="icon-vote-down"></span>
