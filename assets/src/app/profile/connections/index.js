@@ -2,7 +2,7 @@ angular.module( 'symantis.profile.connections', [
 ])
 
 .controller( 'ProfileConnectionsCtrl', function ProfileConnectionsController($scope, $rootScope, titleService, $state, $stateParams, cache, utils, user) {
-	
+	$scope.$parent.toDo = [];
 	titleService.setTitle('Connections');
 
 	$scope.loadingSection = true;

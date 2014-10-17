@@ -2,7 +2,7 @@ angular.module( 'symantis.profile.information', [
 ])
 
 .controller( 'ProfileInformationCtrl', function ProfileInformationController($scope, $rootScope, titleService, $state, $stateParams, cache, utils, user) {
-	
+	$scope.$parent.toDo = ['Add Activity', 'link Manti', 'Link Contributions'];
 	titleService.setTitle('Information');
 	$scope.loadingSection = true;
 	cache.resolveUserCache($rootScope.users, user.handle).then(function(user){

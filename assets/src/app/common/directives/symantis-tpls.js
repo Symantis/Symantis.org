@@ -170,7 +170,7 @@ angular.module('sy.templates.syapp', ['duScroll'])
                 console.log("state changed");
                 var viewport = element;
                 var top = 0;
-                var duration = 500; //milliseconds
+                var duration = 0; //milliseconds
                 //Scroll to the exact position
                 viewport.scrollTop(top, duration).then(function() {
                   console.log('You just scrolled to the top!');
