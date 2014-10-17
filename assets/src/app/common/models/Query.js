@@ -96,6 +96,15 @@ angular.module('models.query', ['lodash', 'services', 'ngSails',])
 		});
 		return deferred.promise;
 	};
+	this.addVote = function(newModel) {
+		var deferred = $q.defer();
+		var url = utils.prepareUrl('response/vote');
+
+		$sails.post(url, newModel, function(model) {
+			return deferred.resolve(model);
+		});
+		return deferred.promise;
+	};
 	this.update = function(newModel) {
 		var deferred = $q.defer();
 		var url = utils.prepareUrl('query/update');

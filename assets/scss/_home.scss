@@ -9,24 +9,72 @@ circle.creator {
   stroke-width: 2;
   opacity: 0.4;
 }
+circle.creator-full {
+  fill: $primary-color;
+  stroke: none;
+  stroke-width: 2;
+  opacity: 0.2;
+}
 circle.designer {
   fill: none;
   stroke: $sy-blue;
   stroke-width: 2;
-  opacity: 0.4
+  opacity: 0.4;
+}
+circle.designer-full {
+  fill: $sy-blue;
+  stroke:none;
+  stroke-width: 2;
+  opacity: 0.2;
 }
 circle.developer {
   fill: none;
   stroke: $sy-red;
   stroke-width: 2;
-  opacity: 0.4
+  opacity: 0.4;
+}
+circle.developer-full {
+  fill: $sy-red;
+  stroke: none;
+  stroke-width: 2;
+  opacity: 0.2;
 }
 
-path {
+path.creator {
   fill: none;
   stroke: $primary-color;
   stroke-width: 2;
-  opacity: 0.3;
+  opacity: 0.4;
+}
+path.creator-full {
+  fill: $primary-color;
+  stroke: none;
+  stroke-width: 2;
+  opacity: 0.2;
+}
+path.designer {
+  fill: none;
+  stroke: $sy-blue;
+  stroke-width: 2;
+  opacity: 0.4;
+}
+path.designer-full {
+  fill: $sy-blue;
+  stroke: none;
+  stroke-width: 2;
+  opacity: 0.2;
+}
+path.developer {
+  fill: none;
+  stroke: $sy-red;
+  stroke-width: 2;
+  opacity: 0.4;
+}
+path.developer-full {
+  fill: $sy-red;
+  stroke: none;
+  stroke-width: 2;
+  opacity: 0.2;
 }
 
 /*[ui-view="main"].home {

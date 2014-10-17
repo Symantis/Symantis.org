@@ -181,6 +181,7 @@ angular.module('sy.templates.syapp', ['duScroll'])
                 }
             });
 
+            //Global Hot Keys
             var map = {91: false, 16: false, 76: false};
             $document.bind("keydown", function(event) {
                 //console.log($scope.currentUser);
@@ -591,12 +592,111 @@ angular.module('sy.templates.userimage', [])
 .directive('generateImage', [function(){
     return {
         restrict: 'C',
-        /*
-        scope: {
-            value: '=',
-            type: '@'
-        },
-        */
+        link: function (scope, element, attrs){
+            
+            //console.log("signature: "+attrs.signature);
+            var signature = attrs.signature;
+            
+            var rand = parseInt(attrs.signature);
+            //console.log(parseInt(attrs.signature));
+
+            var possible = ['creator','creator-full','developer', 'developer-full','designer', 'designer-full'];
+            //console.log(possible[Math.floor(Math.random() * possible.length)]);
+            var w = element[0].offsetWidth;
+            var h = element[0].offsetHeight;
+            var svg = d3.select(element[0]).append("svg:svg")
+                .attr("width", w)
+                .attr("height", h);
+
+            var line = d3.svg.line()
+            .x(function(d) {
+              return d.x;
+            })
+            .y(function(d) {
+              return d.y;
+            })
+            function getClass(){
+                return possible[Math.floor(Math.random() * possible.length)];
+            }
+            function circle(g, cx, cy, r) {
+              g.append("circle")
+              .attr({
+                cx: cx,
+                cy: cy,
+                r: r,
+                class: getClass()
+              })
+            }
+
+            function tri(g, theta0, cx, cy, r) {
+              var theta = -Math.PI/2 + theta0;
+              var top = {
+                x: r * Math.cos(theta) + cx,
+                y: r * Math.sin(theta) + cy
+              }
+              theta = -Math.PI - Math.PI/6 + theta0
+              var left = {
+                x: r * Math.cos(theta) + cx,
+                y: r * Math.sin(theta) + cy
+              }
+              theta = Math.PI/6 + theta0
+              var right = {
+                x: r * Math.cos(theta) + cx,
+                y: r * Math.sin(theta) + cy
+              }
+              g.append("path")
+              .attr({
+                "d" : line([top, left, right, top]),
+                class: getClass()  
+              })
+            }
+
+            function circleTri(g, cx, cy, r) {
+              //we want to draw a circle with an equilateral triangle inside of it
+              //many times
+              circle(g, cx, cy, r)
+              //draw the triangle
+              //top point
+              tri(g, 0, cx, cy, r)
+              tri(g, Math.PI, cx, cy, r)
+            }
+
+            var radius = w/2;
+            var cx = (w-2)/2;
+            var cy = (h-2)/2;
+
+            circle(svg, cx, cy, radius);
+            tri(svg, 0, cx, cy, radius)
+            tri(svg, Math.PI, cx, cy, radius)
+
+            circle(svg, cx, cy, radius/2)
+            tri(svg, Math.PI, cx, cy, radius/2)
+
+            //lets make 6 circles with half the radius centered at 6 points
+            //around the big circle
+            for(var i = 0; i < 6; i++) {
+              var theta = i * Math.PI / 3 + Math.PI/6;
+              var r = radius / 2;
+              var lcx = r * Math.cos(theta) + cx;
+              var lcy = r * Math.sin(theta) + cy;
+              circle(svg, lcx, lcy, r)
+              if(i % 2 == 0) {
+                tri(svg, Math.PI, lcx, lcy, r);
+              } else {
+                tri(svg, 0, lcx, lcy, r);
+              }
+              
+            }
+
+        }
+    }
+}]);
+
+/*
+angular.module('sy.templates.userimage', [])
+.directive('generateImage', [function(){
+    return {
+        restrict: 'C',
         link: function (scope, element, attrs){
             
             //console.log("signature: "+attrs.signature);
@@ -682,7 +782,7 @@ angular.module('sy.templates.userimage', [])
         }
     }
 }]);
-
+*/
 /*
 angular.module('sy.templates.userimage', [])
 .directive('generateImage', [function(){
