@@ -3,7 +3,11 @@
         <span>{{ user.at }}{{ user.handle }}</span>
     </h3>
     <div class="profile-pic">
-        <div class="profile-pic-inner online generate-image" signature="{{ user.signature }}"></div>
+        <div 
+            class="profile-pic-inner online generate-image fade" 
+            ng-class="{in: user.signature}" 
+            signature="{{ user.signature }}"
+        ></div>
     </div>
 </header>
 <header class="profile-left-options left-header">

@@ -1,6 +1,10 @@
 <header class="profile-left-user left-header">
     <div class="profile-pic margin-top">
-        <div class="profile-pic-inner online generate-image" signature="{{ user.signature }}"></div>
+        <div 
+            class="profile-pic-inner online generate-image fade"
+            ng-class="{in: user.signature}"
+            signature="{{ user.signature }}"
+        ></div>
     </div>
 </header>
 <header class="profile-left-options left-header">
