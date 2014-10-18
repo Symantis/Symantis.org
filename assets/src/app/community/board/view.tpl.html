@@ -187,9 +187,6 @@
 						</a>
 					</form>
 				</div>
-				<h4 class="comment-noUser" ng-show="!currentUser">
-					<a ng-click="loginModal()">Login</a> to reply
-				</h4>
 			</div>
 			<a 
 	        	ng-click="replies.open = true" 
@@ -212,7 +209,7 @@
 			</a>
 		</div>
 
-		<div class="view-more-comments" ng-show="board.questions.length > 12">
+		<div class="view-more-comments" ng-show="board.questions.length > 5">
 			<a >
 				<p>More Questions</p>
 			</a>

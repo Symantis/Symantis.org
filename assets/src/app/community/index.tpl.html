@@ -29,7 +29,7 @@
         <div 
             masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".profile-pod-wrap", "gutter": ".gutter-sizer" }' 
             class="profile-feed-container" 
-            ui-view="profile-feed"
+            ui-view="community-feed"
         >
             <div class="gutter-sizer"></div>
 
@@ -111,6 +111,10 @@
                 </div>
                 
             </article>
+
+            <div class="infinite-scroll-more" ng-show="currentUser && activity.length > 5">
+                <a ><span class="icon-dot-3"></span></a>
+            </div>
 
         </div>
 
@@ -218,10 +222,6 @@
                 <h2>Enhancing collaboration and communication within the web development community.</h2>
             </article>
 
-        </div>
-
-        <div class="infinite-scroll-more" ng-show="currentUser && activity.length > 5">
-            <a ><span class="icon-dot-3"></span></a>
         </div>
 
     </section>
