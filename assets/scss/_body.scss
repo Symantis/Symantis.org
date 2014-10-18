@@ -398,3 +398,130 @@ quote {
 	}
 }
 
+
+.infinite-scroll-more {
+	position: absolute;
+	bottom: -3rem;
+	//width: 14rem;
+	height: 2rem;
+	width: 100%;
+	//border-top: 1px $offWhite solid;
+	//left: 50%;
+	//margin-left: -7.5rem;
+	text-align: center;
+	display: block;
+	-webkit-animation-iteration-count: 1;
+		    		animation-iteration-count: 1;
+		    -webkit-animation-delay: 0;
+		    		animation-delay: 0;
+			-webkit-animation-duration: 2s;
+					animation-duration: 2s;
+			-webkit-animation-name: infinite-fade;
+					animation-name: infinite-fade;
+	a {
+		display: block;
+		position: relative;
+		margin-top: 3rem;
+		//width: 14rem;
+		//top: 4rem;
+		//left: 50%;
+		//margin-left: -7.5rem;
+		width: 100%;
+		height: 100%;
+		background-color: lighten($offWhite,6%);
+		//border: 1px $offWhite solid;
+		border-radius: 3px;
+		@include tranSpec(background-color, 200ms);
+
+		-webkit-animation-iteration-count: infinite;
+		    		animation-iteration-count: infinite;
+		    -webkit-animation-delay: 0;
+		    		animation-delay: 0;
+			-webkit-animation-duration: 1s;
+					animation-duration: 1s;
+			-webkit-animation-name: infinite-pulse;
+					animation-name: infinite-pulse;
+
+		&:hover {
+			//border-color: $gray;
+			background-color: $light;
+			span {
+				color: $dark;
+			}
+		}
+	}
+	span {
+		color: $gray;
+		font-size: 1.5rem;
+		position: relative;
+		bottom: -.3rem;
+		@include tranSpec(color, 100ms);
+	}
+	
+	&.querie-more {
+		float: left;
+		padding-right: rem-calc(20px);
+	}
+}
+
+[ui-view="board"] {
+	margin-bottom: 12rem;
+}
+[ui-view="community-feed"] {
+	margin-bottom: 12rem;
+}
+[ui-view="profile-feed"] {
+	margin-bottom: 12rem;
+}
+[ui-view="news"] {
+	margin-bottom: 12rem;
+}
+.queries-main-container {
+	padding-bottom: 1rem !important;
+	margin-bottom: 12rem;
+}
+@-webkit-keyframes infinite-fade {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes infinite-fade {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes infinite-pulse {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes infinite-pulse {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+

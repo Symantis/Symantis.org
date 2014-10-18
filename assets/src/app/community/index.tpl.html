@@ -30,6 +30,7 @@
             masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".profile-pod-wrap", "gutter": ".gutter-sizer" }' 
             class="profile-feed-container" 
             ui-view="community-feed"
+            ng-show="currentUser"
         >
             <div class="gutter-sizer"></div>
 
@@ -38,7 +39,6 @@
                 class="activity-{{ post.verb }} profile-pod-wrap" 
                 ng-repeat="post in activity"
                 ng-class="{ large: post.description.length > 300, small: post.description.length < 50 }"
-                ng-show="currentUser"
             >
                 <div class="profile-pod">
                     <section class="profile-pod-header">
