@@ -602,13 +602,19 @@ angular.module('sy.templates.userimage', [])
         restrict: 'C',
         link: function (scope, element, attrs){
             
+            var possible = ['creator','creator-full','developer', 'developer-full','designer', 'designer-full'];
             //console.log("signature: "+attrs.signature);
             var signature = attrs.signature;
             
-            var rand = parseInt(attrs.signature);
+            var rand = parseInt(attrs.signature) / Math.pow(10, attrs.signature.length);
+            var random  =  parseInt(attrs.signature) % 5;
+            console.log(random);
+            var num = Math.floor(rand * possible.length) + 1 + random;
             //console.log(parseInt(attrs.signature));
+            
+            //console.log(num);
 
-            var possible = ['creator','creator-full','developer', 'developer-full','designer', 'designer-full'];
+            
             //console.log(possible[Math.floor(Math.random() * possible.length)]);
             var w = element[0].offsetWidth;
             var h = element[0].offsetHeight;
@@ -624,7 +630,7 @@ angular.module('sy.templates.userimage', [])
               return d.y;
             })
             function getClass(){
-                return possible[Math.floor(Math.random() * possible.length)];
+                return possible[num];
             }
             function circle(g, cx, cy, r) {
               g.append("circle")
@@ -682,7 +688,7 @@ angular.module('sy.templates.userimage', [])
 
             //lets make 6 circles with half the radius centered at 6 points
             //around the big circle
-            for(var i = 0; i < Math.floor(Math.random() * possible.length); i++) {
+            for(var i = 0; i < num; i++) {
               var theta = i * Math.PI / 3 + Math.PI/6;
               var r = radius / 2;
               var lcx = r * Math.cos(theta) + cx;
