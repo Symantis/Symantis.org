@@ -300,7 +300,7 @@ $reveal-close-weight: light;
 .infinite-scroll-more {
 	position: relative;
 	width: 100%;
-	height: rem-calc(40px);
+	height: rem-calc(40px) !important;
 	background-color: lighten($offWhite,6%);
 	text-align: center;
 	display: block;
