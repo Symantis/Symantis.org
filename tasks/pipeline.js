@@ -72,7 +72,7 @@ var jsFilesToInject = [
   'bower_components/angular-gridster/src/angular-gridster.js',
   //'bower_components/jquery/dist/jquery.min.js',
   //'bower_components/foundation/js/foundation.min.js',
-
+  'src/app/app.js',
 
   // All of the rest of your app scripts
   'src/**/*.js'

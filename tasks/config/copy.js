@@ -19,21 +19,25 @@ module.exports = function(grunt) {
 
 	grunt.config.set('copy', {
 		dev: {
-			files: [{
-				expand: true,
-				cwd: './assets',
-				//src: filesToCopy,
-				src: ['**/*.!(coffee|less|scss)'],
-				dest: '.tmp/public'
-			}]
+			files: [
+				{
+					expand: true,
+					cwd: './assets',
+					//src: filesToCopy,
+					src: ['**/*.!(coffee|less|scss)'],
+					dest: '.tmp/public'
+				}
+			]
 		},
 		build: {
-			files: [{
-				expand: true,
-				cwd: '.tmp/public',
-				src: ['**/*'],
-				dest: 'www'
-			}]
+			files: [
+				{
+					expand: true,
+					cwd: '.tmp/public',
+					src: ['**/*.!(coffee|less|scss)'],
+					dest: 'www'
+				}
+			]
 		}
 	});
 

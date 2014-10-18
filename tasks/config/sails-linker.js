@@ -110,11 +110,18 @@ module.exports = function(grunt) {
 				fileTmpl: '<link rel="stylesheet" href="%s">',
 				appRoot: '.tmp/public'
 			},
+			
 			files: {
 				'.tmp/public/index.html': ['.tmp/public/min/production.css'],
 				'views/**/*.html': ['.tmp/public/min/production.css'],
 				'views/**/*.ejs': ['.tmp/public/min/production.css']
 			}
+
+			//files: {
+			//	'.tmp/public/**/*.html': require('../pipeline').cssFilesToInject,
+			//	'views/**/*.html': require('../pipeline').cssFilesToInject,
+			//	'views/**/*.ejs': require('../pipeline').cssFilesToInject
+			//}
 		},
 
 		prodStylesRelative: {

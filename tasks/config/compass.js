@@ -9,19 +9,24 @@ module.exports = function(grunt) {
   // 'compass' will be configured based on the object below.
   grunt.config.set('compass', {
     
-    dist: {
+    dev: {
       options: {
         //expand: true,
         httpPath: '/',
         importPath: ['assets/bower_components/foundation/scss'],
-        //importPath: 'assets/bower_components/foundation/scss',
         sassDir: ['assets/scss'],
-        //cssDir: 'assets/css',
         cssDir: '.tmp/public/styles/',
         imagesDir: 'assets/img',
-        //javascriptsDir: 'assets/js'
-        //,force: true
-        //,watch: true 
+      }
+    },
+    prod: {
+      options: {
+        //expand: true,
+        httpPath: '/',
+        importPath: ['assets/bower_components/foundation/scss'],
+        sassDir: ['assets/scss'],
+        cssDir: '.tmp/public/styles/',
+        imagesDir: 'assets/img',
       }
     }
   });
