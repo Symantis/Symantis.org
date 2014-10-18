@@ -183,9 +183,9 @@ angular.module('sy.templates.syapp', ['duScroll'])
             });
 
             //Global Hot Keys
-            var map = {91: false, 16: false, 76: false, 65: false};
+            var map = {91: false, 16: false, 76: false, 65: false, 83:false};
             $document.bind("keydown", function(event) {
-                //console.log(event.which);
+                console.log(event.which);
                 if (event.which in map) {
                     map[event.which] = true;
                     
@@ -200,6 +200,11 @@ angular.module('sy.templates.syapp', ['duScroll'])
                         if (typeof ($scope.notificationsToggle) == 'function' && $scope.currentUser) {
                             $scope.notificationsToggle();    
                         }
+                        event.preventDefault();
+                    }
+                    if (map[91] && map[16] && map[83]) {
+                        
+                        $state.go('search');    
                         event.preventDefault();
                     }
                 }
