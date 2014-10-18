@@ -79,12 +79,16 @@ angular.module( 'symantis.creator.app', [
       var block = _.find($scope.standardItems, {id: envelope.id});
       block.sizeX = envelope.sizeX;
       block.sizeY = envelope.sizeY;
+      block.row = envelope.row;
+      block.col = envelope.col;
 
     });
     $sails.on('drag', function (envelope) {
       console.log("Creator Called");
       console.log(envelope);
       var block = _.find($scope.standardItems, {id: envelope.id});
+      block.sizeX = envelope.sizeX;
+      block.sizeY = envelope.sizeY;
       block.row = envelope.row;
       block.col = envelope.col;
     });
