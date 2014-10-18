@@ -1,4 +1,4 @@
-(function(){
+
 angular.module( 'symantis', [
 	'ui.router',
 	'ui.utils',
@@ -4001,5 +4001,3 @@ var aMantis = [
 		]
 	}
 ]
-
-})();
