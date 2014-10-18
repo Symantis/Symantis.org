@@ -1,5 +1,15 @@
 <div gridster="gridsterOpts">
 	<ul>
-		<li gridster-item row="item.position[0]" col="item.position[1]" size-x="item.size.x" size-y="item.size.y" ng-repeat="item in customItems"></li>
+		<li 
+			gridster-item="item" 
+			ng-repeat="item in standardItems"
+			class="gridster-item"
+		>
+			{{ item.id }}
+			{{ item.row }}
+			{{ item.col }}
+			{{ item.sizeX }}
+			{{ item.sizeY }}	
+        </li>
 	</ul>
 </div>

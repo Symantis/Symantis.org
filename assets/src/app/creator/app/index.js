@@ -8,21 +8,23 @@ angular.module( 'symantis.creator.app', [
 })
 .controller( 'CreatorAppCanvasCtrl', function CreatorAppCanvasController( $scope, CreatorModel, $sails) {
 	
-  CreatorModel.subscribeToDemo();
-
-	$scope.customItems = [
-      { id:1, size: { x: 2, y: 1 }, position: [0, 0] },
-      { id:2, size: { x: 2, y: 2 }, position: [0, 2] },
-      { id:3, size: { x: 1, y: 1 }, position: [0, 4] },
-      { id:4, size: { x: 1, y: 1 }, position: [0, 5] },
-      { id:5, size: { x: 2, y: 1 }, position: [1, 0] },
-      { id:6, size: { x: 1, y: 1 }, position: [1, 4] },
-      { id:7, size: { x: 1, y: 2 }, position: [1, 5] },
-      { id:8, size: { x: 1, y: 1 }, position: [2, 0] },
-      { id:9, size: { x: 2, y: 1 }, position: [2, 1] },
-      { id:10, size: { x: 1, y: 1 }, position: [2, 3] },
-      { id:11, size: { x: 1, y: 1 }, position: [2, 4] }
-    ];
+  CreatorModel.subscribeToDemo().then(function(model){
+      console.log(model);
+  });
+  
+	$scope.standardItems = [
+      { id:1, sizeX: 2, sizeY: 1, row: 0, col: 0 },
+      { id:2, sizeX: 2, sizeY: 2, row: 0, col: 2 },
+      { id:3, sizeX: 1, sizeY: 1, row: 0, col: 4 },
+      { id:4, sizeX: 1, sizeY: 1, row: 0, col: 5 },
+      { id:5, sizeX: 2, sizeY: 1, row: 1, col: 0 },
+      { id:6, sizeX: 1, sizeY: 1, row: 1, col: 4 },
+      { id:7, sizeX: 1, sizeY: 2, row: 1, col: 5 },
+      { id:8, sizeX: 1, sizeY: 1, row: 2, col: 0 },
+      { id:9, sizeX: 2, sizeY: 1, row: 2, col: 1 },
+      { id:10, sizeX: 1, sizeY: 1, row: 2, col: 3 },
+      { id:11, sizeX: 1, sizeY: 1, row: 2, col: 4 }
+  ];
 
     $scope.gridsterOpts = {
         columns: 6, // the width of the grid, in columns
@@ -47,9 +49,12 @@ angular.module( 'symantis.creator.app', [
            //start: function(event, $element, widget) {}, // optional callback fired when resize is started,
            //resize: function(event, $element, widget) {}, // optional callback fired when item is resized,
            stop: function(event, $element, widget) {
-              console.log(event);
-              console.log($element);
-              console.log(widget);
+              //console.log(event);
+              //console.log($element);
+              //console.log(widget);
+              CreatorModel.resizeBlock(widget).then(function(){
+                
+              });
            } // optional callback fired when item is finished resizing
         },
         draggable: {
@@ -58,15 +63,30 @@ angular.module( 'symantis.creator.app', [
            //start: function(event, $element, widget) {}, // optional callback fired when drag is started,
            //drag: function(event, $element, widget) {}, // optional callback fired when item is moved,
            stop: function(event, $element, widget) {
-              console.log(event);
-              console.log($element);
-              console.log(widget);
+              //console.log(event);
+              //console.log($element);
+              //console.log(widget);
+              CreatorModel.dragBlock(widget).then(function(){
+
+              });
            } // optional callback fired when item is finished dragging
         }
     };
 
-    $sails.on('creator', function (envelope) {
+    $sails.on('resize', function (envelope) {
+      console.log("Demo Called");
       console.log(envelope);
+      var block = _.find($scope.standardItems, {id: envelope.id});
+      block.sizeX = envelope.sizeX;
+      block.sizeY = envelope.sizeY;
+
+    });
+    $sails.on('drag', function (envelope) {
+      console.log("Creator Called");
+      console.log(envelope);
+      var block = _.find($scope.standardItems, {id: envelope.id});
+      block.row = envelope.row;
+      block.col = envelope.col;
     });
 
 })

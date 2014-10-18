@@ -10,4 +10,22 @@ angular.module('models.creator', ['lodash', 'services', 'ngSails',])
 		});
 		return deferred.promise;
 	};
+	this.dragBlock = function(model) {
+		var deferred = $q.defer();
+		var url = utils.prepareUrl('creator/demo/drag');
+
+		$sails.post(url, model, function(newModel) {
+			return deferred.resolve(newModel);
+		});
+		return deferred.promise;
+	};
+	this.resizeBlock = function(model) {
+		var deferred = $q.defer();
+		var url = utils.prepareUrl('creator/demo/resize');
+
+		$sails.post(url, model, function(newModel) {
+			return deferred.resolve(newModel);
+		});
+		return deferred.promise;
+	};
 });
