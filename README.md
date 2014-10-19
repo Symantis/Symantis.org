@@ -29,9 +29,9 @@ Symantis.org uses Foundation 5 Sass framework and Compass.
 ### To get up and running ###
 You will need to have Sails v0.10 installed on your machine (sudo npm install sails -g) and then clone the repo, cd into the project directory and run
 
-If you do not have SASS installed you will need to run sudo `gem install sass`
+If you do not have SASS installed you will need to run `gem install sass`
 
-If you do not have Compass installed you will need to run `sudo gem install compass` and `npm install compass`
+If you do not have Compass installed you will need to run `gem install compass --version 0.12.6`
 
     $ npm install (if you are on Windows using Vagrant, be sure to: npm install --no-bin-links)
     $ cd assets
