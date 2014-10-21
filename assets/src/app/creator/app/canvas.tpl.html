@@ -5,11 +5,17 @@
 			ng-repeat="item in standardItems"
 			class="gridster-item"
 		>
-			{{ item.id }}
-			{{ item.row }}
-			{{ item.col }}
-			{{ item.sizeX }}
-			{{ item.sizeY }}	
+			<small>
+			#{{ item.id }}
+			{{ item.row }}.row
+			{{ item.col }}.col
+			</small>
+			<br>
+			<small>
+			{{ item.sizeY }} row
+			large-{{ item.sizeX }} column
+			</small>
+			
         </li>
 	</ul>
 </div>
