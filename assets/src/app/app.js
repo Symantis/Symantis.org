@@ -1058,103 +1058,137 @@ var aProfileData = {
 	]
 };
 
-var aQueries = [
+var aArticles = [
 	{
 		id: 1,
-		title: 'Problems with installation of Symantis v 2.0 on Windows 8',
-		clean: 'test-test-test',
-		category: {
-			title: 'Question'
+		title: 'Australia\'s First 3D Printing Factory Aims to Shape Future of Manufacturing',
+		clean: function(){
+			return this.title.replace(/[\s]/g, '-');
 		},
-		tags: [
-			{
-				text: 'Admin',
-				privillege: 'admin',
-			},
-			{
-				text: 'v2.0',
-				privillege: 'none',
-			},
-			{
-				text: 'Install',
-				privillege: 'none',
-			}
-		],
+		date: new Date(),
+		img: '../img/placeholder/3d.jpg',
+ 		description: 'MELBOURNE — As industry stalwarts Ford and Holden start to wind down local operations, there is an air of uncertainty around Australian manufacturing at the moment. But a new state-of-the-art facility in outer Melbourne is looking help shape its future, and is counting on a stockpile of cutting-edge 3D printers to lead the way.',
+		article: '',
 		author:{
 			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "hamish",
+			firstName: "Scott",
+			lastName:  "Wyatt",
+			handle: "scott",
 			at: "@",
 			status: 'online',
 			signature: Math.random()
 		},
-		totalResponses: '5',
-		totalViews: '1000',
-		imgs: [ 
-			{
-				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
-				caption: 'This is an example image.'
-			},
-			{
-				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
-				caption: 'This is an example image.'
-			},
-			{
-				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
-				caption: 'This is an example image.'
-			}
-		],
-		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date(),
-		responses : [
+		social : {
+			facebook : 23,
+			twitter : 44
+		},
+		comments : [
 			{
 				id : '1',
-				votes: 0,
-				solution: false,
+				comment: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+				date: new Date(),
+				upVotes: 13,
+				downVotes: 2,
 				author:{
 					id: 1, 
 					firstName: "Hamish",
 					lastName:  "Jackson-Mee",
 					handle: "hamish",
 					at: "@",
+					status: 'online',
 					signature: Math.random()
 				},
-				date: new Date(),
-				imgs: [ 
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					},
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					},
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					}
-				],
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
 				replies: [
 					{
 						id: '1',
+						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
 						author:{
 							id: 1, 
 							firstName: "Hamish",
 							lastName:  "Jackson-Mee",
 							handle: "hamish",
 							at: "@",
+							status: 'online',
 							signature: Math.random()
 						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
+						date: new Date()
+					},
+					{
+						id: '2',
+						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "hamish",
+							at: "@",
+							status: 'online',
+							signature: Math.random()
+						},
+						date: new Date()
+					}
+				]
+			},
+			{
+				id : '2',
+				comment: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+				date: new Date(),
+				upVotes: 9,
+				downVotes: 0,
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					status: 'online',
+					signature: Math.random()
+				},
+				replies: []
+			},
+			{
+				id : '3',
+				comment: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
+				date: new Date(),
+				upVotes: 0,
+				downVotes: 1,
+				author:{
+					id: 1, 
+					firstName: "Hamish",
+					lastName:  "Jackson-Mee",
+					handle: "hamish",
+					at: "@",
+					status: 'online',
+					signature: Math.random()
+				},
+				replies: [
+					{
+						id: '1',
+						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "hamish",
+							at: "@",
+							status: 'online',
+							signature: Math.random()
+						},
+						date: new Date()
+					},
+					{
+						id: '2',
+						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
+						author:{
+							id: 1, 
+							firstName: "Hamish",
+							lastName:  "Jackson-Mee",
+							handle: "hamish",
+							at: "@",
+							status: 'online',
+							signature: Math.random()
+						},
+						date: new Date()
 					}
 				]
 			}
@@ -1162,713 +1196,6 @@ var aQueries = [
 	},
 	{
 		id: 2,
-		title: 'Symantis quick install on RasPi',
-		clean: 'test-test-test',
-		category: {
-			title: 'Question'
-		},
-		tags: [
-			{
-				text: 'Admin',
-				privillege: 'admin',
-			},
-			{
-				text: 'v2.0',
-				privillege: 'none',
-			},
-			{
-				text: 'Install',
-				privillege: 'none',
-			}
-		],
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "hamish",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		},
-		totalResponses: '5',
-		totalViews: '1000',
-		imgs: [ 
-			{
-				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
-				caption: 'This is an example image.'
-			},
-			{
-				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
-				caption: 'This is an example image.'
-			}
-		],
-		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date(),
-		responses : [
-			{
-				id : '1',
-				votes: 0,
-				solution: false,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: []
-			},
-			{
-				id : '2',
-				votes: 73,
-				solution: true,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				imgs: [ 
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					}
-				],
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: []
-			}
-		]
-	},
-	{
-		id: 3,
-		title: 'Working together on different platforms',
-		clean: 'test-test-test',
-		category: {
-			title: 'Question'
-		},
-		tags: [
-			{
-				text: 'Question',
-				privillege: 'none',
-			},
-			{
-				text: 'v2.0',
-				privillege: 'none',
-			},
-			{
-				text: 'Install',
-				privillege: 'none',
-			}
-		],
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "hamish",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		},
-		totalResponses: '5',
-		totalViews: '1000',
-		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date(),
-		responses : [
-			{
-				id : '1',
-				votes: -13,
-				solution: false,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: [
-					{
-						id: '1',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					}
-				]
-			},
-			{
-				id : '2',
-				votes: 27,
-				solution: true,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				imgs: [ 
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					},
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					},
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					}
-				],
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: [
-					{
-						id: '1',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					},
-					{
-						id: '2',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					}
-				]
-			},
-			{
-				id : '3',
-				votes: -7,
-				solution: false,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: []
-			},
-			{
-				id : '4',
-				votes: 0,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: []
-			},
-			{
-				id : '5',
-				votes: 0,
-				solution: false,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: []
-			},
-			{
-				id : '6',
-				votes: 0,
-				solution: false,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				imgs: [ 
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					},
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					}
-				],
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: []
-			}
-		]
-	},
-	{
-		id: 4,
-		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
-		clean: 'test-test-test',
-		category: {
-			title: 'Question'
-		},
-		tags: [
-			{
-				text: 'Question',
-				privillege: 'none',
-			},
-			{
-				text: 'v2.0',
-				privillege: 'none',
-			},
-			{
-				text: 'Install',
-				privillege: 'none',
-			}
-		],
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "hamish",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		},
-		totalResponses: '5',
-		totalViews: '1000',
-		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date(),
-		responses : [
-			{
-				id : '1',
-				votes: 7,
-				solution: true,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: [
-					{
-						id: '1',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					}
-				]
-			},
-			{
-				id : '2',
-				votes: 0,
-				solution: false,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				imgs: [ 
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					},
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					},
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					}
-				],
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: [
-					{
-						id: '1',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					},
-					{
-						id: '2',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					}
-				]
-			}
-		]
-	},
-	{
-		id: 5,
-		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
-		clean: 'test-test-test',
-		category: {
-			title: 'Question'
-		},
-		tags: [
-			{
-				text: 'Question',
-				privillege: 'none',
-			},
-			{
-				text: 'v2.0',
-				privillege: 'none',
-			},
-			{
-				text: 'Install',
-				privillege: 'none',
-			}
-		],
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "hamish",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		},
-		totalResponses: '5',
-		totalViews: '1000',
-		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date(),
-		responses : [
-			{
-				id : '1',
-				votes: 0,
-				solution: false,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: []
-			}
-		]
-	},
-	{
-		id: 6,
-		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
-		clean: 'test-test-test',
-		category: {
-			title: 'Question'
-		},
-		tags: [
-			{
-				text: 'Question',
-				privillege: 'none',
-			},
-			{
-				text: 'v2.0',
-				privillege: 'none',
-			},
-			{
-				text: 'Install',
-				privillege: 'none',
-			}
-		],
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "hamish",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		},
-		totalResponses: '5',
-		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date(),
-		responses : [
-			{
-				id : '1',
-				votes: 2,
-				solution: false,
-				imgs: [ 
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					}
-				],
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: [
-					{
-						id: '1',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					},
-					{
-						id: '2',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					}
-				]
-			},
-			{
-				id : '2',
-				votes: 3,
-				solution: true,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: []
-			}
-		]
-	},
-	{
-		id: 7,
-		title: 'Testing a long title, also Hamish prefers the company of naked men in hot tubs and lude events.',
-		clean: 'test-test-test',
-		category: {
-			title: 'Question'
-		},
-		tags: [
-			{
-				text: 'Question',
-				privillege: 'none',
-			},
-			{
-				text: 'v2.0',
-				privillege: 'none',
-			},
-			{
-				text: 'Install',
-				privillege: 'none',
-			}
-		],
-		author:{
-			id: 1, 
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "hamish",
-			at: "@",
-			status: 'online',
-			signature: Math.random()
-		},
-		totalResponses: '5',
-		totalViews: '1000',
-		query: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro?',
-		date: new Date(),
-		responses : [
-			{
-				id : '1',
-				votes: 3,
-				solution: false,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: [
-					{
-						id: '1',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					}
-				]
-			},
-			{
-				id : '2',
-				votes: 17,
-				solution: true,
-				imgs: [ 
-					{
-						name: 'placeholder',
-						src: 'http://placehold.it/350x150',
-						caption: 'This is an example image.'
-					}
-				],
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: [
-					{
-						id: '1',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					},
-					{
-						id: '2',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							signature: Math.random()
-						},
-						date: new Date(),
-						reply: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.'
-					}
-				]
-			},
-			{
-				id : '3',
-				votes: 7,
-				solution: false,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					signature: Math.random()
-				},
-				date: new Date(),
-				response: 'hello im a stupid comment on a silly post about laughable cats. And Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher.',
-				replies: []
-			}
-		]
-	}
-];
-var aArticles = [
-	{
-		id: 1,
 		title: 'Google Warns of Design Vulnerability in SSL 3.0',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
@@ -2003,7 +1330,7 @@ var aArticles = [
 		]
 	},
 	{
-		id: 2,
+		id: 3,
 		title: 'Lenovo Yoga 3 Pro Design Was Inspired by Fine Watches',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
@@ -2090,7 +1417,7 @@ var aArticles = [
 		]
 	},
 	{
-		id: 3,
+		id: 4,
 		title: 'Joseph Gordon-Levitt Unveils Adobe\'s Most Promising Experiments',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
@@ -2159,7 +1486,7 @@ var aArticles = [
 		]
 	},
 	{
-		id: 4,
+		id: 5,
 		title: '9 Reasons You Should Know a Little HTML and CSS',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
@@ -2226,7 +1553,8 @@ var aArticles = [
 				]
 			}
 		]
-	}
+	},
+
 ]
 var aOpportunities = [
 	{
