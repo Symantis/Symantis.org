@@ -777,7 +777,7 @@ var aActivity = [
 		},
 		img:{
 			name: 'placeholder',
-			src: 'http://placehold.it/350x150',
+			src: '/img/placeholder/backbone.png',
 			caption: 'This is a placeholder image.'
 		}
 	},
@@ -801,7 +801,7 @@ var aActivity = [
 		},
 		img:{
 			name: 'placeholder',
-			src: 'http://placehold.it/350x150',
+			src: '/img/placeholder/d3js.png',
 			caption: 'This is a placeholder image.'
 		}
 	},
@@ -853,7 +853,7 @@ var aActivity = [
 		},
 		img:{
 			name: 'placeholder',
-			src: 'http://placehold.it/350x150',
+			src: '/img/placeholder/ui-header.jpg',
 			caption: 'This is a placeholder image.'
 		}
 	},
@@ -943,7 +943,7 @@ var aActivity = [
 		},
 		img:{
 			name: 'placeholder',
-			src: 'http://placehold.it/350x150',
+			src: '/img/placeholder/mephobox.png',
 			caption: 'This is a placeholder image.'
 		}
 	},
@@ -976,7 +976,7 @@ var aActivity = [
 		},
 		img:{
 			name: 'placeholder',
-			src: 'http://placehold.it/350x150',
+			src: '/img/placeholder/navigation.jpg',
 			caption: 'This is a placeholder image.'
 		}
 	},

@@ -87,7 +87,7 @@
                                         ng-click="inDevModal()"
                                     ><span class="icon-message"></span></a>
                                 </header>
-                                <section class="connections-pod-body">
+                                <section class="connections-pod-body" ng-show="user.professed.length > 1">
                                     <p class="connections-bio">{{ user.professed }}</p>
                                 </section>
                                 <footer class="connections-pod-footer">

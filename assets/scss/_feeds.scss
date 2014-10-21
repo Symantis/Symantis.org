@@ -66,13 +66,18 @@
 		height: auto;
 		position: relative;
 		//margin-bottom: -15px;
+		background-color: white;
+		border-bottom: 1px $light solid;
 		a {
 			display: block;
+			text-align: center;
+			width: 100%;
 		}
 		img {
 			width: 100%;
 			max-width: 100%;
 			height: auto;
+			//max-height: rem-calc(300px);
 		}
 	}
 	.profile-pod-body {
