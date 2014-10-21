@@ -1066,7 +1066,7 @@ var aArticles = [
 			return this.title.replace(/[\s]/g, '-');
 		},
 		date: new Date(),
-		img: '../img/placeholder/3d.jpg',
+		img: '/img/placeholder/3d.jpg',
  		description: 'MELBOURNE — As industry stalwarts Ford and Holden start to wind down local operations, there is an air of uncertainty around Australian manufacturing at the moment. But a new state-of-the-art facility in outer Melbourne is looking help shape its future, and is counting on a stockpile of cutting-edge 3D printers to lead the way.',
 		article: '',
 		author:{
@@ -1201,7 +1201,7 @@ var aArticles = [
 			return this.title.replace(/[\s]/g, '-');
 		},
 		date: new Date(),
-		img: '../img/placeholder/google-news.jpg',
+		img: '/img/placeholder/google-news.jpg',
  		description: 'Google on Tuesday announced that it has discovered a \"vulnerability in the design of SSL version 3.0\". The vulnerability, which Google announced on its security blog and detailed in a security advisory \[PDF link\], \"allows the plaintext of secure connections to be calculated by a network attacker.\"',
 		article: 'Although the problem Google has discovered looks severe, the good news is that it can be mitigated by upgrading to a newer version of a web browser. In the case of Google Chrome, Mozilla Firefox and Opera, the rolling, automatic-updating nature of the browser means that users can get fixes quickly.Although the problem Google has discovered looks severe, the good news is that it can be mitigated by upgrading to a newer version of a web browser. In the case of Google Chrome, Mozilla Firefox and Opera, the rolling, automatic-updating nature of the browser means that users can get fixes quickly.Although the problem Google has discovered looks severe, the good news is that it can be mitigated by upgrading to a newer version of a web browser. In the case of Google Chrome, Mozilla Firefox and Opera, the rolling, automatic-updating nature of the browser means that users can get fixes quickly.',
 		author:{
@@ -1336,7 +1336,7 @@ var aArticles = [
 			return this.title.replace(/[\s]/g, '-');
 		},
 		date: new Date(),
-		img: '../img/placeholder/lenova-news.jpg',
+		img: '/img/placeholder/lenova-news.jpg',
 		description: 'The first Lenovo Yoga laptop was an inspired piece of hybrid design: a full-featured laptop that could be used in four different modes, thanks to a special hinge that could unfold the screen a full 360 degrees.',
 		article: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
 		author:{
@@ -1423,7 +1423,7 @@ var aArticles = [
 			return this.title.replace(/[\s]/g, '-');
 		},
 		date: new Date(),
-		img: '../img/placeholder/adobe-news.jpg',
+		img: '/img/placeholder/adobe-news.jpg',
 		description: 'Adobe is fond of referring to certain features as &quot;Photoshop magic,&quot; or simple tools that make complex processes simpler. Many of these “magical” features begin as experiments in the company’s labs.',
 		article: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
 		author:{
@@ -1492,7 +1492,7 @@ var aArticles = [
 			return this.title.replace(/[\s]/g, '-');
 		},
 		date: new Date(),
-		img: '../img/placeholder/code-news.jpg',
+		img: '/img/placeholder/code-news.jpg',
 		description: 'You&#039;ve heard over and over that everyone should learn to code. Alright already! But as a writer, marketer, finance guru or nonprofit worker, why in the world should you get into coding?',
 		article: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
 		author:{
@@ -1582,7 +1582,7 @@ var aOpportunities = [
 		imgs: [
 			{
 				name: 'placeholder',
-				src: '../img/placeholder/first-ecommerce.jpg',
+				src: '/img/placeholder/first-ecommerce.jpg',
 				caption: 'This is an example image.'
 			},
 			{
@@ -1882,7 +1882,7 @@ var aOpportunities = [
 		imgs: [
 			{
 				name: 'placeholder',
-				src: '../img/placeholder/jabber.jpg',
+				src: '/img/placeholder/jabber.jpg',
 				caption: 'This is an example image.'
 			},
 			{
@@ -2043,7 +2043,7 @@ var aOpportunities = [
 		imgs: [
 			{
 				name: 'placeholder',
-				src: '../img/placeholder/widgetware.png',
+				src: '/img/placeholder/widgetware.png',
 				caption: 'This is an example image.'
 			},
 			{
