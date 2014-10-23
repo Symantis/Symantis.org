@@ -44,6 +44,11 @@ angular.module( 'services.cache', ['lodash'])
 					   _.merge(user, data);
 			return users;
 		},
+		cacheUpdatedUserId: function(users, id, data){
+			var user = _.find(users, {id: id});
+					   _.merge(user, data);
+			return users;
+		},
 		cacheNewUser: function(users, user){
 			 user.local = true;
 			 //users.push(user);

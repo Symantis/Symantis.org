@@ -1,6 +1,6 @@
 <header class="profile-left-user left-header">
     <h3>{{ currentUser.firstName + ' ' + currentUser.lastName }}
-        <span>Username: {{ currentUser.at }}{{ currentUser.handle }}</span>
+        <span>{{ currentUser.at }}{{ currentUser.handle }}</span>
     </h3>
     <div class="profile-pic">
         <div class="profile-pic-inner online generate-image" signature="{{ currentUser.signature }}"></div>
@@ -26,7 +26,7 @@
                 </tr>
                 <tr>
                     <td><a >Two-way Connections</a></td>
-                    <td>{{ user.reciprocal || 0}}</td>
+                    <td>{{ user.totalReciprocal || 0}}</td>
                 </tr>
             </table>
         </li>

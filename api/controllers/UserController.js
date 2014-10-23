@@ -219,7 +219,7 @@ module.exports = {
 
 					// Queue up a record to be inserted into the join table
 					//fromUser.connections.add(connect);
-					fromUser.toConnections.add(connection.id);
+					fromUser.toConnections.add(connect);
 					fromUser.save(console.log, function(err) {
 				  		if(err){
 					  		//console.log(err);
@@ -237,7 +237,7 @@ module.exports = {
 					} 
 					// Queue up a record to be inserted into the join table
 					//toUser.connections.add(id);
-					toUser.fromConnections.add(connection.id);
+					toUser.fromConnections.add(id);
 					toUser.save(console.log,function(err) {
 					  	if(err){
 					  		//console.log(err);
@@ -264,12 +264,12 @@ module.exports = {
 
 		var id = req.user.id;
 		
+		var status = req.param('status');
 		if (!status) {
 			return res.badRequest('No status provided.');
 		}
-		var status = req.param('status');
+
 		var newModel = {
-			id: id,
 			status: status,
 			statusTime: new Date()
 		};

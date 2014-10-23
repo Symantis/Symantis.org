@@ -32,7 +32,7 @@ module.exports = {
 		},
 		status : {
 			type: 'string',
-			defaultsTo: 'offline'
+			defaultsTo: 'offline' //active, inactive, offline
 		},
 		statusTime: {
 			type: 'datetime',
@@ -149,6 +149,52 @@ module.exports = {
 			model.totalConnections = model.totalToConnections + model.totalFromConnections + model.totalReciprocal;
 
 			return [model];
+		});
+	},
+	logout: function (req){
+		if(!req.user ){
+			return console.log("no user");
+			//return res.badRequest('Not Logged In');
+		}
+		if(req.user.id != req.param('id')){
+			return console.log("no user id");
+			//return res.badRequest('Not Logged In');
+		}
+		var newModel = {
+			status: "offline",
+			statusTime: new Date()
+		};
+		User.update(req.user.id, newModel)
+		.exec(function(err, model) {
+			if (err) {
+				return console.log(err);
+			}
+			else {
+				User.publishUpdate(req.user.id, newModel);
+			}
+		});
+	},
+	login: function (req){
+		if(!req.user ){
+			return console.log("no user");
+			//return res.badRequest('Not Logged In');
+		}
+		if(req.user.id != req.param('id')){
+			return console.log("no user id");
+			//return res.badRequest('Not Logged In');
+		}
+		var newModel = {
+			status: "active",
+			statusTime: new Date()
+		};
+		User.update(req.user.id, newModel)
+		.exec(function(err, model) {
+			if (err) {
+				return console.log(err);
+			}
+			else {
+				User.publishUpdate(req.user.id, newModel);
+			}
 		});
 	},
 	afterCreate : function(user, next){

@@ -324,7 +324,7 @@ angular.module( 'symantis', [
 				
 				break;
 			case 'updated':
-				cache.cacheUpdatedUser($scope.users, envelope.id, envelope.data);
+				cache.cacheUpdatedUserId($scope.users, envelope.id, envelope.data);
 				//lodash.
 				//$scope.queries.unshift(envelope.data);
 				break;

@@ -66,6 +66,8 @@ var AuthController = {
    * @param {Object} res
    */
   logout: function (req, res) {
+    //console.log(req);
+    //User.logout(req);
     req.logout();
     res.redirect('/home');
   },

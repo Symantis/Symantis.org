@@ -9,13 +9,16 @@ module.exports = {
 		var isAuthenticated = req.isAuthenticated();
 
 		if (isAuthenticated) {
-			navItems.push({url: '/logout', sref: 'logout', title: 'Logout'});
+			//navItems.push({url: '/logout', sref: 'logout', title: 'Logout'});
 			
 			var UserModel = {
 				status: 'active',
 				statusTime: new Date()
 			}
 			
+			User.login(req);
+			
+			/*
 			User.update({id: req.user.id}, UserModel )
 			.exec(function(err, user) {
 				if(err){
@@ -27,14 +30,15 @@ module.exports = {
 					User.publishUpdate(req.user.id, UserModel);
 				}
 			});
+			*/
 
 
 			//console.log(req.user);
 		}
 		else {
 			
-			navItems.push({url: '/register', title: 'Register'});
-			navItems.push({url: '/login', title: 'Login'});
+			//navItems.push({url: '/register', title: 'Register'});
+			//navItems.push({url: '/login', title: 'Login'});
 		}
 
 		if(!AccessService.checkAccessArea(isAuthenticated, req.route)){
@@ -43,7 +47,7 @@ module.exports = {
 
 		res.view({
 			title: 'Home',
-			navItems: navItems,
+			//navItems: navItems,
 			currentUser: req.user
 		});
 	}
