@@ -21,7 +21,7 @@ $animationTime: 0.3s !default;
 	-moz-box-shadow:    1px 0px 4px 0px rgba(50, 50, 50, 0);
 	box-shadow:         1px 0px 4px 0px rgba(50, 50, 50, 0);
 
-	-webkit-transition: transform $animationTime ease, box-shadow $animationTime ease;                  
+	-webkit-transition: -webkit-transform $animationTime ease, box-shadow $animationTime ease;                  
     -moz-transition: transform $animationTime ease, box-shadow $animationTime ease;                 
     -o-transition: transform $animationTime ease, box-shadow $animationTime ease;   
     -ms-transition: transform $animationTime ease, box-shadow $animationTime ease;          
@@ -108,7 +108,7 @@ $delay: 0.3s;
 	@include no-highlight;
 	-webkit-tap-highlight-color: rgba(255,255,255,0.0);
 
-	-webkit-transition: transform $xChange ease, background $midX ease;
+	-webkit-transition: -webkit-transform $xChange ease, background $midX ease;
 	-moz-transition: transform $xChange ease, background $midX ease;
 	-o-transition: transform $xChange ease, background $midX ease;
 	-ms-transition: transform $xChange ease, background $midX ease;
@@ -131,7 +131,7 @@ $delay: 0.3s;
 .menu-button span:after {
   	width: 100%;
   	height: .2rem;
- 	-webkit-transition: transform $xChange ease, background $midX ease;
+ 	-webkit-transition: -webkit-transform $xChange ease, background $midX ease;
 	-moz-transition: transform $xChange ease, background $midX ease;
 	-o-transition: transform $xChange ease, background $midX ease;
 	-ms-transition: transform $xChange ease, background $midX ease;

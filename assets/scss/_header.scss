@@ -9,7 +9,7 @@ $animationTime: 0.3s !default;
 	position: fixed;
     width:100%;
 
-    -webkit-transition: transform $animationTime ease;
+    -webkit-transition: -webkit-transform $animationTime ease;
     -moz-transition: transform $animationTime ease;
     -o-transition: transform $animationTime ease;
     -ms-transition: transform $animationTime ease;        
