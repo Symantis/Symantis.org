@@ -257,13 +257,32 @@
 				width: 100%;
 				h3 {
 					padding-bottom: 0;
+					width: auto;
+					float: left;
 					@include font-bold(rem-calc(26px));
-					font-size: rem-calc(26px);
+					//font-size: rem-calc(26px);
 					a {
 						color: $dark;
 						&:hover {
 							color: $dark;
 						}
+					}
+				}
+				.edit-query {
+					float: right;
+					padding: rem-calc(2px) rem-calc(6px);
+					width: rem-calc(26px);
+					height: rem-calc(26px);
+					border-radius: 50%;
+					border: 1px $primary-color solid;
+					text-align: center;
+					font-size: 0.75rem;
+					margin-right: rem-calc(7px);
+					margin-top: rem-calc(7px);
+					@include transition(100ms);
+					&:hover {
+						background-color: $primary-color;
+						color: white;
 					}
 				}
 			}

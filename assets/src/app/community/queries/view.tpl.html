@@ -9,7 +9,6 @@
 		<section class="querie-header">
 		    <div class="querie-header-title">
 		        <h3>
-		        	
 		        	<a ui-sref="community.queries.view({id: query.id, title: query.clean })">
 		        		{{ query.title || query.clean }}
 		        	</a>
@@ -17,8 +16,10 @@
 		        <a 
 		        	ng-if="query.author.id == currentUser.id"
 		        	ui-sref="community.queries.edit({ id: query.id })"
+		        	class="edit-query"
+		        	title="Edit Query"
 		        >
-		        	Edit
+		        	<span class="icon-pencil"></span>
 		        </a>
 		    </div>
 		</section>
