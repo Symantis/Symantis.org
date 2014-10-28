@@ -20,18 +20,20 @@
 				<ul class="top-nav-userOnline" ng-show="currentUser">
 					<li class="top-nav-name">
 						<p class="user-{{ currentUser.status }}">
-							<span class="status"></span>
+							<!-- <span class="status"></span> -->
 							<a dropdown-toggle="#settings-dropdown">
 								{{ currentUser.firstName }}<span class="icon-chevron-down name-icon"></span>
 							</a>
-							<!-- <div class="header-user-pic generate-image" signature="{{ currentUser.signature }}"></div> -->
+							<div class="header-user-pic generate-image" signature="{{ currentUser.signature }}"></div>
 						</p>
 					</li>
 					<li class="top-nav-messages mainmessages-toggle" >
 						<a ng-click="notificationsToggle()">
 							<div class="icon-bell icon" ng-class="{active: !notificationsOpen}"></div>
 							<div class="icon-hide icon" ng-class="{active: notificationsOpen}"></div>
-						</a>		
+						</a>
+						<span class="new-notification">
+						</span>		
 					</li>
 				</ul>
 				<p class="top-nav-noUser" ng-show="!currentUser">

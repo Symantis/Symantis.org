@@ -231,21 +231,21 @@ $animationTime: 0.3s !default;
 						span {
 							//color: $dark;
 						}
-						/*.header-user-pic {
-							width: rem-calc(20px);
-							height: rem-calc(20px);
+						.header-user-pic {
+							width: rem-calc(30px);
+							height: rem-calc(30px);
 							//float: left;
 							border: rem-calc(1px) $dark solid;
 							border-radius: 50%;
 							overflow: hidden;
 							@include transition(100ms);
 							position: absolute;
-							top: rem-calc(17px);
+							top: rem-calc(-3px);
 							//left: rem-calc(-25px);
-							margin-left: rem-calc(-28px);
+							margin-left: rem-calc(-40px);
 							//margin-right: rem-calc(6px);
 							z-index: 98;
-						}*/
+						}
 						.name-icon {
 							//@include icon(rem-calc(11px),$primary-color);
 							font-size: rem-calc(11px);
@@ -253,11 +253,11 @@ $animationTime: 0.3s !default;
 							bottom: -.1rem;
 							padding-left: rem-calc(5px);
 						}
-						.status{
+						/*.status{
 							&:before{
 								content: "";
 								position:absolute;
-								margin-top: rem-calc(4px);
+								margin-top: rem-calc(-4px);
 								margin-left: rem-calc(-18px);
 								height:10px;
 								width:10px;
@@ -265,7 +265,7 @@ $animationTime: 0.3s !default;
 								border-radius: 50%;
 								//z-index: 99;
 							}
-						} 
+						} */
 						
 					}
 					.top-nav-messages {
@@ -287,7 +287,23 @@ $animationTime: 0.3s !default;
 								color: $dark;
 							}*/
 						}
-						
+						.new-notification {
+							position: absolute;
+							top: 0;
+							right: 0;
+							width: rem-calc(8px);
+							height: rem-calc(8px);
+							border-radius: 50%;
+							background-color: $primary-color;
+							-webkit-animation-iteration-count: infinite;
+						    		animation-iteration-count: infinite;
+						    -webkit-animation-delay: 0;
+						    		animation-delay: 0;
+							-webkit-animation-duration: 1s;
+									animation-duration: 1s;
+							-webkit-animation-name: infinite-pulse;
+									animation-name: infinite-pulse;
+						}
 					}
 					.top-nav-settings {
 						padding-top: rem-calc(3px);
