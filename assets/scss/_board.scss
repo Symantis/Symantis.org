@@ -446,6 +446,7 @@
 				padding-right: 0;
 				.sy-button {
 					margin-top: 0;
+					margin-bottom: 0;
 				}
 			}
 		}
@@ -464,8 +465,14 @@
 				padding-right: 0;
 				.sy-button {
 					margin-top: 0;
+					margin-bottom: 0;
 				}
 			}
+		}
+		.opportunity-category-selection {
+			width: rem-calc(200px);
+			float: left;
+			padding-top: 0.625rem;
 		}
 	}
 }
