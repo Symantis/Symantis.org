@@ -277,7 +277,7 @@
 					border: 1px $primary-color solid;
 					text-align: center;
 					font-size: 0.75rem;
-					margin-right: rem-calc(7px);
+					margin-right: rem-calc(6px);
 					margin-top: rem-calc(7px);
 					@include transition(100ms);
 					&:hover {
@@ -445,6 +445,7 @@
 		box-shadow:         0.5px 0.5px 1px 0px rgba(60, 60, 60, 0.4);
 
 		.comment-left {
+			z-index: 5;
 			.comment-pic {
 				margin-left: rem-calc(3px);
 			}
@@ -499,7 +500,13 @@
 			}
 		}
 		.comment-content {
+			width: 100%;
+			z-index: 4;
+			padding-left: 3.6rem;
+			padding-right: 3.6rem;
+			float: none;
 			.comment-details {
+				float: none;
 				padding-top: rem-calc(10px);
 				padding-bottom: rem-calc(8px);
 				margin-bottom: rem-calc(8px);
