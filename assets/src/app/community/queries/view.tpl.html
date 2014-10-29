@@ -110,17 +110,55 @@
 	        </p>
 	        
 	        <div 
-				class="response-preview" 
+				class="response-preview comment" 
 				ng-init="newResponse.preview = false"
 				ng-show="newResponse.preview"
 			>
-	        	<markdown ng-model="newResponse.response" strip="true" extensions="github, table">
+				<div class="comment-left">
+					<div 
+						class="comment-pic generate-image" 
+						signature="{{ currentUser.signature }}"
+					>
+					</div>
+					<p class="response-voting">
+						<a class="vote-up">
+							<span class="icon-vote-up"></span>
+						</a>
+						<span class="response-votes">0</span>
+						<a class="vote-down">
+							<span class="icon-vote-down"></span>
+						</a>
+						<!-- placeholder icon -->
+						<a title="Mark as best solution">
+							<span class="icon-check response-possible-favourite"></span>
+						</a>
+					</p>
+				</div>
+
+				<div class="comment-content">
+					<div class="comment-details">
+			            <p>
+			            	<a ui-sref="me">
+			            		{{ currentUser.firstName }} {{ currentUser.lastName }}
+			            	</a>
+			            	&middot;
+			            	<span>{{ todaysDate | date }}</span>
+			            </p>
+			        </div>
+					<markdown ng-model="newResponse.response" strip="true" extensions="github, table">
 						Add your response!
-				</markdown>
+					</markdown>
+					<!-- <div class="image-thumbs" ng-show="response.imgs">
+			        	<div class="thumbnail-container" ng-repeat="img in response.imgs">
+			        		<a title="View {{ img.name }}">
+			                    <img ng-src="{{ img.src }}" />
+			                </a>
+			        	</div>
+				    </div> -->		
+				</div>
 	        </div>
-	        <div 
-				ng-hide="newResponse.preview"
-			>
+
+	        <div ng-hide="newResponse.preview">
 		        <div class="new-response-inner">
 		        	<div class="response-options">
 				        <ul>

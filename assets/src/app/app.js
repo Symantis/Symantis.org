@@ -155,6 +155,8 @@ angular.module( 'symantis', [
 
 	$rootScope.mantis = aMantis;
 	$rootScope.profileData = aProfileData;
+
+	$rootScope.todaysDate = new Date();
 	
 	$rootScope.sitealerts =  [];
 	$rootScope.alerts =  [];
