@@ -34,6 +34,19 @@
 			                </li>
 			            </ul>
 					</div>
+					<div class="query-details">
+			        	<div class="query-details-pic generate-image" signature="{{ currentUser.signature }}"></div>
+		                <p class="query-details-by">
+		                    <a ui-sref="profile.view({ handle: currentUser.handle })">
+		                        {{ currentUser.firstName }} {{ currentUser.lastName }}
+		                    </a>
+		                </p>
+		                <p class="query-details-on">
+		                    <span>
+		                        {{ todaysDate | date }}
+		                    </span>
+		                </p>
+		            </div>
 				</section>
 			</div>
 			<div 
