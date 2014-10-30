@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="350px" height="150px" viewBox="0 0 350 150" enable-background="new 0 0 350 150" xml:space="preserve">
+<rect x="9" y="9" fill="#EFEFEF" width="92" height="141"/>
+<line fill="none" stroke="#828282" stroke-linecap="round" stroke-miterlimit="10" x1="17" y1="37.5" x2="91" y2="37.5"/>
+<line fill="none" stroke="#828282" stroke-linecap="round" stroke-miterlimit="10" x1="17" y1="70.5" x2="91" y2="70.5"/>
+<line fill="none" stroke="#828282" stroke-linecap="round" stroke-miterlimit="10" x1="17" y1="103.5" x2="91" y2="103.5"/>
+<line fill="none" stroke="#828282" stroke-linecap="round" stroke-miterlimit="10" x1="17" y1="136.5" x2="91" y2="136.5"/>
+<text transform="matrix(1 0 0 1 26.2505 26.75)" font-family="'OpenSans-Light'" font-size="10">menu item 1</text>
+<text transform="matrix(1 0 0 1 26.2505 57.5)" font-family="'OpenSans-Light'" font-size="10">menu item 2</text>
+<text transform="matrix(1 0 0 1 26.2505 90.25)" font-family="'OpenSans-Light'" font-size="10">menu item 3</text>
+<text transform="matrix(1 0 0 1 26.2505 122.75)" font-family="'OpenSans-Light'" font-size="10">menu item 4</text>
+<rect x="108" y="9" fill="#EFEFEF" width="233" height="29"/>
+<text transform="matrix(1 0 0 1 207.334 26.75)" font-family="'OpenSans-Light'" font-size="10">header</text>
+</svg>
