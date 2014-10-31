@@ -16,7 +16,7 @@ module.exports.bootstrap = function (cb) {
   						.createClient({
 						    url: "wordpress.symantis.org",
 						    username: "admin",
-						    password: wordPass
+						    password: "Shraptorinlove23!"
 						});
 
 	/*
