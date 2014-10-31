@@ -438,20 +438,32 @@ $uiAnimationTime: 0.3s;
 }
 
 /*  ----- Comment, Response reply animation ----- */
-
-.slideToggle {
-  height: 100%;
-  overflow: hidden;
-  opacity: 1;
-}
-.slideToggle.ng-hide-add.ng-hide-add-active,
-.slideToggle.ng-hide-remove.ng-hide-remove-active {
+/*.reply-toggle {
   -webkit-transition:all linear 0.5s;
   transition:all linear 0.5s;
 }
-.slideToggle.ng-hide {
-  opacity: 0;
-  height: 0;
+.slideToggle {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+  //line-height:100%;
+  opacity: 1;
+  //@include tranSpec(height,0.3s);
+  @include tranSpec(opacity,0.5s);
 }
-
+.reply.slideToggle {
+  //height: 80px;
+}
+.slideToggle.ng-hide {
+  //line-height:0;
+  opacity: 0;
+  //height: 1px !important;
+  //padding-top: 0 !important;
+  //padding-bottom: 0 !important;
+}
+.slideToggle.ng-hide-add, .slideToggle.ng-hide-remove {
+  display:block!important;
+}*/
+/*.new-comment.slideToggle {
+  height: 100% !important;
+}*/
 
