@@ -98,6 +98,13 @@ module.exports.routes = {
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
   // and examples.
 
+    /**
+     * Wordpress routes
+     *
+     */
+    'get /api/wordpress': 'WordpressController.getPosts',
+    'get /api/wordpress/:id': 'WordpressController.getPost',
+
   //Handle "/home" queries 
   'get /home/*': {
     controller: 'HomeController',

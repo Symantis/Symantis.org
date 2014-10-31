@@ -3,5 +3,6 @@ angular.module('models', [
 	'models.user',
 	'models.system',
 	'models.query',
-	'models.creator'
+	'models.creator',
+	'models.news'
 ]);

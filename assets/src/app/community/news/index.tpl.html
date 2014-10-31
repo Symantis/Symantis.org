@@ -16,6 +16,68 @@
     <section class="medium-9 large-8 large-offset-3 medium-offset-3 columns main-center" ui-view="news">
         <header></header>
         
+        <article class="row news-post" ng-repeat="article in wordpress">
+            <div class="medium-2 large-1 columns news-post-date">
+                <h2>
+                    {{ article.date | date:'dd MMM' }}
+                </h2>
+            </div>
+            <div class="medium-10 large-11 columns news-post-content">
+                <a 
+                    ng-show="article.thumbnail.link"
+                    ui-sref="community.news.view({id: article.id, title: article.name })"
+                >
+                    <img ng-src="{{ article.thumbnail.link }}">
+                </a>
+                <a ui-sref="community.news.view({id: article.id, title: article.name })">
+                    <h3>{{ article.title }}</h3>
+                </a>
+                <p class="news-copy">{{ article.excerpt }}</p>
+                <ul class="news-post-footer">
+                    <li class="news-post-share">
+                        <div class="twitter-share">
+                            <a title="Share on Twitter">
+                                <div class="icon-social-twitter icon"></div>
+                            </a>
+                            <div class="share-count">
+                                <p>{{ article.social.twitter }}</p>
+                            </div>
+                        </div>
+                        <div class="facebook-share">
+                            <a title="Share on Facebook">
+                                <div class="icon-social-facebook icon"></div>
+                            </a>
+                            <div class="share-count">
+                                <p>{{ article.social.facebook }}</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li ng-show="article.comments.length > 0" class="news-post-comments">
+                        <p>
+                            <a 
+                                ui-sref="community.news.view({id: article.id, title: article.name, comments:'comments' })"
+                            >View Comments ({{ article.comments.length }})</a>
+                        </p>
+                    </li>
+                    <li class="news-post-details">
+                        <div class="news-details">
+                            <div class="news-details-pic author-{{ article.author.status }} generate-image" signature="{{ article.author.signature }}"></div>
+                            <p class="news-details-by">
+                                <a ui-sref="profile.view({ handle: article.author.handle })">
+                                    {{ article.author.firstName }} {{ article.author.lastName }}
+                                </a>
+                            </p>
+                            <p class="news-details-on">
+                                <span>
+                                    {{ article.date | date }}
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
         <article class="row news-post" ng-repeat="article in articles">
             <div class="medium-2 large-1 columns news-post-date">
                 <h2>

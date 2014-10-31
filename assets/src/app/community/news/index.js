@@ -17,10 +17,14 @@ angular.module( 'symantis.community.news', [
 	});
 })
 */
-.controller( 'NewsCtrl', function NewsController( $scope, titleService ) {
+.controller( 'NewsCtrl', function NewsController( $scope, titleService, NewsModel ) {
 	titleService.setTitle('News');
 	$scope.$parent.toDo = ['duScroll on Left', 'Create New Post model'];
 
+	NewsModel.getAll().then(function(models){
+		console.log(models);
+		$scope.wordpress = models;
+	});
 	
 })
 .controller( 'NewsViewCtrl', function NewsViewController( $scope, titleService, $state, $stateParams  ) {
