@@ -609,7 +609,7 @@ angular.module('sy.templates.userimage', [])
             
             var possible = ['creator','creator-full','developer', 'developer-full','designer', 'designer-full'];
             //console.log("signature: "+attrs.signature);
-            var signature = attrs.signature;
+            var signature = isNaN(attrs.signature) ? attrs.signature : new Date().getTime();
             
             var rand = parseInt(attrs.signature) / Math.pow(10, attrs.signature.length);
             var random  =  parseInt(attrs.signature) % 5;

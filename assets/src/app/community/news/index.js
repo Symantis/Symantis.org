@@ -23,7 +23,6 @@ angular.module( 'symantis.community.news', [
 	$scope.loadingSection = true;
 	
 	NewsModel.getAll().then(function(models){
-		console.log(models);
 		$rootScope.wordpress = models;
 		$scope.loadingSection = false;
 	});

@@ -2,6 +2,17 @@ angular.module('models.news', ['lodash', 'services', 'ngSails',])
 
 .service('NewsModel', function($q, lodash, utils, $sails) {
 
+	this.getOne = function(id) {
+		var deferred = $q.defer();
+		var url = utils.prepareUrl('wordpress/' + id);
+
+		$sails.get(url, function(model) {
+			return deferred.resolve(model);
+		});
+
+		return deferred.promise;
+	};
+	
 	this.getAll = function() {
 		var deferred = $q.defer();
 		var url = utils.prepareUrl('wordpress');
@@ -13,15 +24,6 @@ angular.module('models.news', ['lodash', 'services', 'ngSails',])
 		return deferred.promise;
 	};
 
-	this.getOne = function(id) {
-		var deferred = $q.defer();
-		var url = utils.prepareUrl('wordpress/' + id);
-
-		$sails.get(url, function(model) {
-			return deferred.resolve(model);
-		});
-
-		return deferred.promise;
-	};
+	
 
 });
