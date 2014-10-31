@@ -94,16 +94,18 @@ module.exports.routes = {
     'get /api/creator/demo': 'CreatorController.subscribeToDemo',
     'post /api/creator/demo/drag': 'CreatorController.dragBlock',
     'post /api/creator/demo/resize': 'CreatorController.resizeBlock',
-  // If a request to a URL doesn't match any of the custom routes above, it is matched 
-  // against Sails route blueprints.  See `config/blueprints.js` for configuration options
-  // and examples.
+  
 
     /**
      * Wordpress routes
      *
      */
-    'get /api/wordpress': 'WordpressController.getPosts',
-    'get /api/wordpress/:id': 'WordpressController.getPost',
+    'get /api/news': 'WordpressController.getPosts',
+    'get /api/article/:id': 'WordpressController.getPost',
+
+    // If a request to a URL doesn't match any of the custom routes above, it is matched 
+    // against Sails route blueprints.  See `config/blueprints.js` for configuration options
+    // and examples.
 
   //Handle "/home" queries 
   'get /home/*': {

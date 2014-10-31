@@ -41,7 +41,13 @@ angular.module( 'symantis.community', [
 			views: {
 				"main@": {
 					controller: 'NewsCtrl',
-					templateUrl: 'community/news/index.tpl.html'
+					templateUrl: 'community/news/index.tpl.html',
+					resolve: {
+						news: function($rootScope){
+							return $rootScope.news;
+							//return $rootScope.queries = cache.cacheQueries($rootScope.queries);
+						}
+					}
 				},
 				"leftside@community.news": {
 					controller: 'CommunityNewsLeftsideCtrl',
@@ -54,7 +60,16 @@ angular.module( 'symantis.community', [
 			views: {
 				"news@community.news": {
 					controller: 'NewsViewCtrl',
-					templateUrl: 'community/news/view.tpl.html'
+					templateUrl: 'community/news/view.tpl.html',
+					resolve : {
+					    article : function($rootScope, $stateParams) {
+					    	return $rootScope.article = {id: $stateParams.id, clean: $stateParams.title};
+					    },
+					    news : function($rootScope){
+					    	return $rootScope.news;
+					    }
+					    
+				    },
 				}
 			}
 		})
@@ -110,23 +125,23 @@ angular.module( 'symantis.community', [
 		})
 		.state( 'community.queries.view', {
 			url: '/:id/:title',
-			resolve : {
-			    query : function($rootScope, $stateParams) {
-			    	return $rootScope.query = {id: $stateParams.id, clean: $stateParams.title};	
-			    	//console.log($stateParams);
-			    	//console.log($rootScope.queries);
-			    	//return $rootScope.query = cache.resolveQueryCache($rootScope.queries, $stateParams.id);
-			        
-			    },
-			    queries : function($rootScope){
-			    	return $rootScope.queries;
-			    }
-			    
-		    },
 			views: {
 				"queries@community.queries": {
 					controller: 'QueriesViewCtrl',
-					templateUrl: 'community/queries/view.tpl.html'
+					templateUrl: 'community/queries/view.tpl.html',
+					resolve : {
+					    query : function($rootScope, $stateParams) {
+					    	return $rootScope.query = {id: $stateParams.id, clean: $stateParams.title};	
+					    	//console.log($stateParams);
+					    	//console.log($rootScope.queries);
+					    	//return $rootScope.query = cache.resolveQueryCache($rootScope.queries, $stateParams.id);
+					        
+					    },
+					    queries : function($rootScope){
+					    	return $rootScope.queries;
+					    }
+					    
+				    }
 				},
 				"query-nav@community.queries": {
 					controller: 'CommunityQueriesNavCtrl',

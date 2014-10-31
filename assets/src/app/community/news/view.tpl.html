@@ -1,6 +1,10 @@
 <header></header>
-        
-<article class="row news-page">
+<div ng-show="loadingSection" class="preloader-container">
+    <!-- loadingSection is a variable defined in the $scope -->
+	<div class="preloader">
+    </div>
+</div>        
+<article class="row news-page fade" ng-class="{in: !loadingSection}">
 	<div class="medium-12 columns">
 		<div class="news-post-content">
 	    	<section class="news-page-hero">

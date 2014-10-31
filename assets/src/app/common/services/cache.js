@@ -1,6 +1,6 @@
 angular.module( 'services.cache', ['lodash'])
 
-.factory('cache', function($q, $rootScope, lodash, config, $timeout, UserModel, QueryModel) {
+.factory('cache', function($q, $rootScope, lodash, config, $timeout, UserModel, QueryModel, NewsModel) {
 
 	return {
 		
@@ -183,7 +183,7 @@ angular.module( 'services.cache', ['lodash'])
 				//console.log(reply);
 				return self.cacheNewQueryReponseReply(queries, reply);
 			});
-		}
+		},
 		//cacheNewQueryReponseReply: function(queries, )
 		/*
 		resolveQueryResponsesCache: function(query){
@@ -225,6 +225,97 @@ angular.module( 'services.cache', ['lodash'])
 		}
 		*/
 
+		resolveArticleCache: function(news, id){
+			var self = this;
+			if(this.checkNewsCache(news, id)){
+				console.log("returning cached article...");
+				var deferred = $q.defer();
+				var article = this.getCachedArticle(news, id);
+				deferred.resolve(article);
+				return deferred.promise;
+
+				//return 
+			}else{
+				 console.log("getting article...");
+				 return NewsModel.getOne(id).then(function(article){
+				 	
+				 	return self.cacheNewArticle(news, article);
+				 });
+			}
+		},
+		resolveNewsCache: function(news){
+			var self = this;
+			if(news.length == 0){
+				console.log("getting news...");
+				
+				return news = NewsModel.getAll().then(function(models){
+					console.log(models);	
+					return models;
+				});
+			}else{
+				console.log("returning cached news...");
+				var deferred = $q.defer();
+				deferred.resolve(news);
+				return deferred.promise;
+			}
+		},
+		cacheNews: function(news){
+			if(news.length == 0){
+				return NewsModel.getAll().then(function(models){	
+					return models;
+				});
+			}else{
+			    console.log("returning cached news...");
+				var deferred = $q.defer();
+				deferred.resolve(news);
+				return deferred.promise;
+			}
+		},
+		checkNewsCache: function(news, id){
+			return _.some(news, {id: id, local: true});
+		},
+		checkQuickArticleCache: function(news, id){
+			return _.some(news, {id: id});
+		},
+		cacheUpdatedArticle: function(news, id, data){
+			var article = _.find(news, {id: id});
+						_.merge(article, data);
+			return news;
+		},
+		cacheNewArticle: function(news, article){
+			 
+			 if(_.some(news, {id: article.id})){
+			 	this.cacheUpdatedArticle(news, article.id, article);
+			 }else{
+				 news.push(article);
+			 }
+			 return _.find(news, {id : article.id});
+		},
+		cacheCreatedArticle: function(news, article){
+			news.push(article);
+			return article;
+		},
+		getCachedArticle: function(news, id){
+			return _.find(news, {id: id});
+		},
+		removeArticleFromCache: function(news, id){
+			return _.remove(news, {id: id});
+		},
+		getAndCacheComment: function(news, responseId){
+			var self = this;
+			return CommentModel.getComment(responseId).then(function(comment){
+				console.log(comment);
+				return self.cacheNewArticleComment(news, comment);
+			});
+
+		},
+		cacheNewArticleComment: function(news, comment){
+			console.log(response);
+			var article = _.find(queries, {id: comment.article});
+			article.responses = article.comments || [];
+			article.responses.push(comment);
+			return news;
+		}
 	};
 
 });

@@ -14,7 +14,8 @@ module.exports = {
 	},
 	getPost: function(req, res){
 		sails.Wordpress.getPost(req.param('id'), function( error, post ) {
-		    res.json(post);
+		    console.log( "Found " + post.title);
+		    res.json([post]);
 		});
 	}	
 };

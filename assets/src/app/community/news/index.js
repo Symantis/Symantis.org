@@ -17,30 +17,37 @@ angular.module( 'symantis.community.news', [
 	});
 })
 */
-.controller( 'NewsCtrl', function NewsController($rootScope, $scope, titleService, NewsModel ) {
+.controller( 'NewsCtrl', function NewsController($rootScope, $scope, titleService, cache, news ) {
 	titleService.setTitle('News');
 	$scope.$parent.toDo = ['duScroll on Left', 'Create New Post model'];
 	$scope.loadingSection = true;
 	
-	NewsModel.getAll().then(function(models){
-		$rootScope.wordpress = models;
+	cache.resolveNewsCache(news).then(function(news){
+		$rootScope.news = news;
 		$scope.loadingSection = false;
 	});
 	
 })
-.controller( 'NewsViewCtrl', function NewsViewController( $rootScope, $scope, titleService, $state, $stateParams, NewsModel ) {
+.controller( 'NewsViewCtrl', function NewsViewController( $rootScope, $scope, titleService, $state, $stateParams, cache, news, article ) {
 	
-	for(var i in $rootScope.wordpress){
-		if ($rootScope.wordpress[i].id == $stateParams.id){
-			$scope.article = $rootScope.wordpress[i];
+	/*
+	for(var i in $rootScope.news){
+		if ($rootScope.news[i].id == $stateParams.id){
+			$scope.article = $rootScope.news[i];
 			break;
 		};
 	}
-	
-	NewsModel.getOne($stateParams.id).then(function(model){
-		console.log(model);
-		$scope.article = model;
+	*/
+
+	$scope.loadingSection = true;
+
+	cache.resolveArticleCache($rootScope.news, article.id).then(function(article){
+		//console.log(article);
+		$scope.article = article;
+		
 		titleService.setTitle('News: ' + $scope.article.title);
+		$scope.loadingSection = false;
+		
 	});
 
 	
