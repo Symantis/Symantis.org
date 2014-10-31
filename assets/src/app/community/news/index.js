@@ -17,25 +17,34 @@ angular.module( 'symantis.community.news', [
 	});
 })
 */
-.controller( 'NewsCtrl', function NewsController( $scope, titleService, NewsModel ) {
+.controller( 'NewsCtrl', function NewsController($rootScope, $scope, titleService, NewsModel ) {
 	titleService.setTitle('News');
 	$scope.$parent.toDo = ['duScroll on Left', 'Create New Post model'];
-
+	$scope.loadingSection = true;
+	
 	NewsModel.getAll().then(function(models){
 		console.log(models);
-		$scope.wordpress = models;
+		$rootScope.wordpress = models;
+		$scope.loadingSection = false;
 	});
 	
 })
-.controller( 'NewsViewCtrl', function NewsViewController( $scope, titleService, $state, $stateParams  ) {
-	for(var i in $scope.articles){
-		if ($scope.articles[i].id == $stateParams.id){
-			$scope.article = $scope.articles[i];
+.controller( 'NewsViewCtrl', function NewsViewController( $rootScope, $scope, titleService, $state, $stateParams, NewsModel ) {
+	
+	for(var i in $rootScope.wordpress){
+		if ($rootScope.wordpress[i].id == $stateParams.id){
+			$scope.article = $rootScope.wordpress[i];
 			break;
 		};
 	}
+	
+	NewsModel.getOne($stateParams.id).then(function(model){
+		console.log(model);
+		$scope.article = model;
+		titleService.setTitle('News: ' + $scope.article.title);
+	});
 
-	titleService.setTitle('News: ' + $scope.article.title);
+	
 	$scope.$parent.toDo = [];
 	
 })

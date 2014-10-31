@@ -15,7 +15,11 @@
     </section>
     <section class="medium-9 large-8 large-offset-3 medium-offset-3 columns main-center" ui-view="news">
         <header></header>
-        
+        <div ng-show="loadingSection" class="preloader-container">
+            <!-- loadingSection is a variable defined in the $scope -->
+            <div class="preloader">
+            </div>
+        </div>
         <article class="row news-post" ng-repeat="article in wordpress">
             <div class="medium-2 large-1 columns news-post-date">
                 <h2>
@@ -40,7 +44,7 @@
                                 <div class="icon-social-twitter icon"></div>
                             </a>
                             <div class="share-count">
-                                <p>{{ article.social.twitter }}</p>
+                                <p>{{ article.social.twitter || 0 }}</p>
                             </div>
                         </div>
                         <div class="facebook-share">
@@ -48,23 +52,26 @@
                                 <div class="icon-social-facebook icon"></div>
                             </a>
                             <div class="share-count">
-                                <p>{{ article.social.facebook }}</p>
+                                <p>{{ article.social.facebook || 0 }}</p>
                             </div>
                         </div>
                     </li>
-                    <li ng-show="article.comments.length > 0" class="news-post-comments">
+                    <li class="news-post-comments">
                         <p>
                             <a 
                                 ui-sref="community.news.view({id: article.id, title: article.name, comments:'comments' })"
-                            >View Comments ({{ article.comments.length }})</a>
+                            >View Comments ({{ article.comments.length || 0 }})</a>
                         </p>
                     </li>
                     <li class="news-post-details">
                         <div class="news-details">
                             <div class="news-details-pic author-{{ article.author.status }} generate-image" signature="{{ article.author.signature }}"></div>
                             <p class="news-details-by">
-                                <a ui-sref="profile.view({ handle: article.author.handle })">
+                                <a ng-show="article.author.handle" ui-sref="profile.view({ handle: article.author.handle })">
                                     {{ article.author.firstName }} {{ article.author.lastName }}
+                                </a>
+                                <a ng-show="!article.author.handle"> 
+                                    Admin
                                 </a>
                             </p>
                             <p class="news-details-on">
@@ -77,7 +84,7 @@
                 </ul>
             </div>
         </article>
-
+        <!--
         <article class="row news-post" ng-repeat="article in articles">
             <div class="medium-2 large-1 columns news-post-date">
                 <h2>
@@ -139,7 +146,7 @@
                 </ul>
             </div>
         </article>
-
+        -->
         <div class="infinite-scroll-more" ng-show="articles.length > 3">
             <a ><span class="icon-dot-3"></span></a>
         </div>

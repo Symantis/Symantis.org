@@ -2,7 +2,58 @@
         
 <article class="row news-page">
 	<div class="medium-12 columns">
-
+		<div class="news-post-content">
+	    	<section class="news-page-hero">
+		    	
+		        <img ng-show="article.thumbnail.link" ng-src="{{ article.thumbnail.link }}">
+		        
+		    </section>
+	        <section class="news-page-header">
+		        <h3>{{ article.title }}</h3>
+		    </section>
+		    <section class="news-page-body">
+		        <p>{{ article.content }}</p>
+		    </section>
+	        <section class="news-page-footer">
+				<div class="news-page-share">
+	                <div class="twitter-share">
+	                    <a title="Share on Twitter">
+	                        <div class="icon-social-twitter icon"></div>
+	                    </a>
+	                    <div class="share-count">
+	                        <p>{{ article.social.twitter || 0 }}</p>
+	                    </div>
+	                </div>
+	                <div class="facebook-share">
+	                    <a title="Share on Facebook">
+	                        <div class="icon-social-facebook icon"></div>
+	                    </a>
+	                    <div class="share-count">
+	                        <p>{{ article.social.facebook || 0 }}</p>
+	                    </div>
+	                </div>
+	            </div>
+		        <div class="news-page-details">
+		        	<div class="news-details">
+			        	<div class="news-details-pic author-{{ article.author.status }} generate-image" signature="{{ article.author.signature }}"></div>
+		                <p class="news-details-by">
+	                        <a ng-show="article.author.handle" ui-sref="profile.view({ handle: article.author.handle })">
+                                {{ article.author.firstName }} {{ article.author.lastName }}
+                            </a>
+                            <a ng-show="!article.author.handle"> 
+                                Admin
+                            </a>
+	                    </p>
+		                <p class="news-details-on">
+	                        <span>
+	                            {{ article.date | date }}
+	                        </span>
+	                    </p>
+	                </div>
+		        </div>
+			</section>
+	    </div>
+	<!--
 	    <div class="news-post-content">
 	    	<section class="news-page-hero">
 		    	
@@ -51,7 +102,7 @@
 		        </div>
 			</section>
 	    </div>
-
+	-->
 		<div class="comments-head" ng-init="comments.selected = true">
 			<h4 class="number-comments">
 				<a 
