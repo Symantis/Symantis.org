@@ -12,7 +12,8 @@
 		        <h3>{{ article.title }}</h3>
 		    </section>
 		    <section class="news-page-body">
-		        <p>{{ article.content }}</p>
+		        <markdown ng-model="article.content" strip="true" extensions="github, table">
+				</markdown>
 		    </section>
 	        <section class="news-page-footer">
 				<div class="news-page-share">
