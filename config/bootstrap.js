@@ -12,6 +12,12 @@ module.exports.bootstrap = function (cb) {
 
   	sails.Nodemailer = require('nodemailer');
   	sails.GitHubApi = require("github");
+  	sails.Wordpress = require("wordpress")
+  						.createClient({
+						    url: "wordpress.symantis.org",
+						    username: "admin",
+						    password: wordPass
+						});
 
 	/*
 	var transporter = nodemailer.createTransport();
