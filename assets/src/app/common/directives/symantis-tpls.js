@@ -979,6 +979,7 @@ angular.module('sy.templates.homeanimation', [])
 
                 var w = element[0].offsetWidth,
                     h = $window.innerHeight - 6;
+                    console.log(w + 'px '+ h + 'px');
 
                 var adjacencyList = [
                   {cx: w, cy: h, r: 5},
@@ -1384,6 +1385,7 @@ angular.module('sy.templates.homeanimation', [])
 
                 ];
 
+                /*
                 var nodes = d3.values(adjacencyList)
                 .map(function(list) { 
                     var true_y = (norm()*50)+250;
@@ -1393,6 +1395,20 @@ angular.module('sy.templates.homeanimation', [])
                         x: true_y,
                         y: true_y,
                         true_x: (w -100 / 2 + list.cx) / 3,
+                        true_y: (h / 2 + list.cy) / 3 
+                    }
+                });
+                */
+                
+                var nodes = d3.values(adjacencyList)
+                .map(function(list) { 
+                    var true_y = (norm()*50)+250;
+                    //console.log(list);
+                    return {
+                        radius: list.r / 3, 
+                        x: true_y,
+                        y: true_y,
+                        true_x: (w + ((w - 1300) / 2) + list.cx) / 3,
                         true_y: (h / 2 + list.cy) / 3 
                     }
                 });
