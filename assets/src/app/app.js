@@ -240,7 +240,7 @@ angular.module( 'symantis', [
 	});
 })
 */
-.controller( 'AppCtrl', function AppCtrl ( $scope, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal, $sails, cache, utils) {
+.controller( 'AppCtrl', function AppCtrl ( $scope, $state, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal, $sails, cache, utils) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
 	$timeout(function() {
@@ -295,7 +295,16 @@ angular.module( 'symantis', [
 	    });
 
 
+	}else{
+
+		$scope.$on('$idleTimeout', function() {
+	        console.log("Idle as, let's go home");
+	        $state.go('home');
+	    });
+
 	}
+
+
 	$scope.tagUserClick = function(e) {
 		var tagText = e.target.innerText;
 		console.log(tagText);
