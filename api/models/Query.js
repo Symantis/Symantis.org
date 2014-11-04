@@ -20,8 +20,7 @@ module.exports = {
 			type: 'string'
 		},
 		category: {
-			collection: 'category',
-			via: 'title'
+			type: 'string'
 		},
 		tags: {
 			type: 'json',

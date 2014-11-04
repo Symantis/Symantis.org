@@ -114,7 +114,7 @@ angular.module( 'symantis.community.queries', [
 				comment: reply
 			}
 			QueryModel.addReply(newModel).then(function(model){
-				$scope.comments.selected = false;
+				//$scope.comments.selected = false;
 				//utils.sectionAlert($scope.alerts, { type: 'success',msg: 'Your reply was added successfully.' } );
 			});
 		}else{

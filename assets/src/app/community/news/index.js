@@ -23,6 +23,7 @@ angular.module( 'symantis.community.news', [
 	$scope.loadingSection = true;
 	
 	cache.resolveNewsCache(news).then(function(news){
+		titleService.setTitle('News');
 		$rootScope.news = news;
 		$scope.loadingSection = false;
 	});

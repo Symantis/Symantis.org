@@ -151,7 +151,6 @@ angular.module( 'symantis', [
 	$rootScope.article = {};
 	$rootScope.news = [];
 
-	$rootScope.articles = aArticles;
 	$rootScope.opportunity = {};
 	$rootScope.opportunities = aOpportunities;
 	$rootScope.cachedOpportunities = [];

@@ -227,10 +227,10 @@
 	
 
 	<div
-		
 		class="comment animate-repeat" 
 		ng-repeat="response in query.responses | orderBy : 'votes' : true "
 		ng-class="{ solution: query.solved == response.id }"
+		ng-attr-id="{{ response.id }}"
 	>
 		<div class="comment-left">
 			<div 
