@@ -15,7 +15,7 @@ module.exports = {
 				status: 'active',
 				statusTime: new Date()
 			}
-			
+			req.user.status = "active";
 			User.login(req);
 			
 			/*

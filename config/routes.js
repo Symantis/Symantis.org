@@ -50,13 +50,14 @@ module.exports.routes = {
     /**
      * User routes
      */
-    'get /api/user': 'UserController.getAll',
-    'get /api/user/:id': 'UserController.getOne',
+    'get /api/user': 'UserController.find',
+    'get /api/user/:id': 'UserController.findOne',
     'get /api/user/handle/:handle': 'UserController.getByHandle',
     'get /api/user/email/match/:email': 'UserController.checkEmail',
     'get /api/user/handle/match/:handle': 'UserController.checkHandle',
     'post /api/user': 'UserController.create',
     'post /api/user/update': 'UserController.update',
+    'put /api/user/:id': 'UserController.update',
     'post /api/user/connect': 'UserController.connect',
     'post /api/user/status': 'UserController.updateStatus',
 
@@ -101,6 +102,7 @@ module.exports.routes = {
      *
      */
     'get /api/news': 'WordpressController.getPosts',
+    'get /api/news/:id': 'WordpressController.getPost',
     'get /api/article/:id': 'WordpressController.getPost',
 
     // If a request to a URL doesn't match any of the custom routes above, it is matched 
@@ -108,6 +110,10 @@ module.exports.routes = {
     // and examples.
 
   //Handle "/home" queries 
+  'get /home': {
+    controller: 'HomeController',
+    action: 'index'
+  },
   'get /home/*': {
     controller: 'HomeController',
     action: 'index'

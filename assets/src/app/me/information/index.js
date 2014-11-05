@@ -1,9 +1,10 @@
 angular.module( 'symantis.me.information', [
 ])
-.controller( 'InformationCtrl', function InformationController( $scope, $rootScope, titleService, user, cache ) {
+.controller( 'InformationCtrl', function InformationController( $scope, $rootScope, titleService, user, UserDS ) {
 	titleService.setTitle('My Information');
 	$scope.$parent.toDo = ['Add Activity', 'link Manti', 'Link Contributions'];
 
+	/*
 	$scope.loadingSection = true;
 	cache.resolveUserCache($rootScope.users, user.handle).then(function(user){
 		$rootScope.user = user;
@@ -11,6 +12,13 @@ angular.module( 'symantis.me.information', [
 		$scope.loadingSection = false;
 		
 	});
+	*/
+
+	$scope.loadingSection = true;
+	UserDS.find(user.id).then(function(){
+		$scope.loadingSection = false;
+	});
+	UserDS.bindOne($rootScope, 'user', user.id);
 	
 })
 .controller( 'MeInformationLeftsideCtrl', function MeInformationLeftsideController( $scope ) {

@@ -5,9 +5,26 @@ angular.module( 'symantis.profile.view', [
 	
 })
 
-.controller( 'ProfileViewCtrl', function ProfileViewController($http, $scope, $rootScope, user, titleService, $state, $stateParams, UserModel, cache, utils) {
+.controller( 'ProfileViewCtrl', function ProfileViewController($http, $scope, user, titleService, utils, UserDS) {
 	
 	$scope.loadingSection = true;
+
+
+	var query = {
+	    where: {
+	     	handle : user.handle
+	    }
+	};
+
+	UserDS.find(query).then(function(model){
+		UserDS.bindOne($scope, 'user', model.id);
+		titleService.setTitle(model.firstName+'\'s' + ' Profile');
+		$scope.loadingSection = false;
+	});
+
+
+	
+	/*
 	cache.resolveUserCache($rootScope.users, user.handle).then(function(user){
 		$rootScope.user = user;
 		$rootScope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
@@ -16,6 +33,7 @@ angular.module( 'symantis.profile.view', [
 		$scope.loadingSection = false;
 		
 	});
+	*/
 
 	//$scope.user = user;
 	//$scope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;

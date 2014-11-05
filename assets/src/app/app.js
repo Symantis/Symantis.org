@@ -1,14 +1,23 @@
 
 angular.module( 'symantis', [
+	
+	// Cache and call engines
+	'angular-data.DS',
+	'angular-data.DSCacheFactory',
+	'sails.io',
+
+	// Routers
 	'ui.router',
 	'ui.utils',
-	'ngSails',
+
+	//'ngSails',
+	
 	'angularMoment',
 	'lodash',
 	'ngIdle',
 	'ngAnimate',
-	'ngSailsBind',
 	'flow',
+
 	//Directives, Templates, Etc...
 	'mm.foundation',
 	'xeditable',
@@ -120,6 +129,13 @@ angular.module( 'symantis', [
   $idleProvider.warningDuration(15);
   $keepaliveProvider.interval(10);
 }])
+.run(['DS', 'DSSailsSocketAdapter', function (DS, DSSailsSocketAdapter) {
+  // register the adapter with the data store
+  DS.adapters.DSSailsSocketAdapter = DSSailsSocketAdapter;
+  // set your custom adapter as the default
+  //DS.defaults.defaultAdapter = 'DSSailsSocketAdapter';
+
+}])
 
 .run(['$idle', function($idle) {
   
@@ -135,12 +151,34 @@ angular.module( 'symantis', [
   editableOptions.theme = 'default'; // bootstrap3 theme. Can be also 'bs2', 'default'
 })
 
-.run( function run ($rootScope, lodash, UserModel) {
+.run( function run ($rootScope, lodash, UserDS) {
 
 	$rootScope.currentUser = window.currentUser;
-
-	$rootScope.user = {};
+	//$rootScope.user = {};
 	$rootScope.users = [];
+
+	if($rootScope.currentUser){
+		/*
+		UserDS.find($rootScope.currentUser.id).then(function(user){
+			
+		});
+		*/
+
+		var query = {
+		    where: {
+		     	id : window.currentUser.id
+		    }
+		};
+		UserDS.findAll(query).then(function(user){
+			UserDS.bindOne($rootScope, 'currentUser', window.currentUser.id);
+			UserDS.bindAll($rootScope, 'users', query);
+		});
+
+		
+	}
+
+	//$rootScope.user = {};
+	//$rootScope.users = [];
 	$rootScope.cachedUsers = []; 
 
 	$rootScope.query = {};
@@ -148,8 +186,8 @@ angular.module( 'symantis', [
 	$rootScope.queries = [];
 	$rootScope.cachedQueries = [];
 	
-	$rootScope.article = {};
-	$rootScope.news = [];
+	//$rootScope.article = {};
+	//$rootScope.news = [];
 
 	$rootScope.opportunity = {};
 	$rootScope.opportunities = aOpportunities;
@@ -240,7 +278,7 @@ angular.module( 'symantis', [
 	});
 })
 */
-.controller( 'AppCtrl', function AppCtrl ( $scope, $state, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal, $sails, cache, utils) {
+.controller( 'AppCtrl', function AppCtrl ( $rootScope, $scope, $state, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal, $sails, $sailsSocket, cache, utils, UserDS) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
 	$timeout(function() {
@@ -249,11 +287,24 @@ angular.module( 'symantis', [
 	config.currentUser = window.currentUser;
 
 	//Handle Idle
-	if($scope.currentUser){
+	if($rootScope.currentUser){
 	    
-	    $scope.users = cache.resolveUserCache($scope.users, $scope.currentUser.handle);
+	    //$scope.users = cache.resolveUserCache($scope.users, $scope.currentUser.handle);
 
-	    $scope.$on('$idleEnd', function() {
+	    $rootScope.$on('$idleEnd', function() {
+	        //var user = UserDS.get($rootScope.currentUser.id);
+	        /*
+	        $rootScope.user.status = 'active';
+	        $rootScope.user.statusTime = new Date();
+	        UserDS.save($rootScope.currentUser.id);
+	        */
+	        
+	        UserDS.update($rootScope.currentUser.id, {
+	        	status : 'active',
+	        	statusTime: new Date()
+	        });
+	    	
+	        /*
 	        $scope.currentUser.status = 'active';
 	        $scope.currentUser.statusTime = new Date();
 	        //console.log("active");
@@ -265,8 +316,22 @@ angular.module( 'symantis', [
 	        UserModel.updateStatus(newModel).then(function(model){
 	        	console.log(model.status);
 	        });
+			*/
 	    });
-	    $scope.$on('$idleStart', function() {
+	    $rootScope.$on('$idleStart', function() {
+	        
+	        //var user = UserDS.get($rootScope.currentUser.id);
+	        /*
+	        $rootScope.user.status = 'inactive';
+	        $rootScope.user.statusTime = new Date();
+	        UserDS.save($rootScope.currentUser.id);
+			*/
+	        UserDS.update($rootScope.currentUser.id, {
+	        	status : 'inactive',
+	        	statusTime: new Date()
+	        });
+	    	
+	        /*
 	        $scope.currentUser.status = 'inactive';
 	        $scope.currentUser.statusTime = new Date();
 	        
@@ -278,9 +343,23 @@ angular.module( 'symantis', [
 	        UserModel.updateStatus(newModel).then(function(model){
 	        	console.log(model.status);
 	        });
+			*/
 
 	    });
-	    $scope.$on('$idleTimeout', function() {
+	    $rootScope.$on('$idleTimeout', function() {
+	        //var user = UserDS.get($rootScope.currentUser.id);
+	        /*
+	        $rootScope.user.status = 'offline';
+	        $rootScope.user.statusTime = new Date();
+	        UserDS.save($rootScope.currentUser.id);
+			*/
+			
+	        UserDS.update($rootScope.currentUser.id, {
+	        	status : 'offline',
+	        	statusTime: new Date()
+	        });
+	    	
+	        /*
 	        $scope.currentUser.status = 'offline';
 	        $scope.currentUser.statusTime = new Date();
 	        
@@ -292,12 +371,13 @@ angular.module( 'symantis', [
 	        UserModel.updateStatus(newModel).then(function(model){
 	        	console.log(model.status);
 	        });
+			*/
 	    });
 
 
 	}else{
 
-		$scope.$on('$idleTimeout', function() {
+		$rootScope.$on('$idleTimeout', function() {
 	        console.log("Idle as, let's go home");
 	        $state.go('home');
 	    });
@@ -324,6 +404,7 @@ angular.module( 'symantis', [
 		history.back();
 	}
 	
+	/*
 	$sails.on('user', function (envelope) {
 		switch(envelope.verb) {
 			
@@ -347,7 +428,8 @@ angular.module( 'symantis', [
 				break;
 		}
 	});
-
+	*/
+	/*
 	$sails.on('query', function (envelope) {
 		switch(envelope.verb) {
 			
@@ -378,6 +460,7 @@ angular.module( 'symantis', [
 				break;
 		}
 	});
+	*/
 
 	$sails.on('response', function (envelope) {
 		switch(envelope.verb) {
@@ -444,10 +527,10 @@ angular.module( 'symantis', [
 		}
 	});
 
-	$sails.on('disconnect', function(){
+	io.socket.on('disconnect', function(){
 		utils.siteAlert($scope.sitealerts, { type: 'error', msg: 'Your connection was lost... Attempting to reconnect' } );
 	});
-	$sails.on('reconnect', function(){
+	io.socket.on('reconnect', function(){
 		utils.siteAlert($scope.sitealerts, { type: 'success', msg: 'Your connection is back' } );
 	});
 	//utils.siteAlert($scope.sitealerts, { type: 'error', msg: 'Your connection was lost... Attempting to reconnect' } );

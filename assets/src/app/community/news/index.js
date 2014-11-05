@@ -17,29 +17,38 @@ angular.module( 'symantis.community.news', [
 	});
 })
 */
-.controller( 'NewsCtrl', function NewsController($rootScope, $scope, titleService, cache, news ) {
+.controller( 'NewsCtrl', function NewsController($rootScope, $scope, titleService, cache, news, NewsDS ) {
 	titleService.setTitle('News');
 	$scope.$parent.toDo = ['duScroll on Left', 'Create New Post model'];
 	$scope.loadingSection = true;
+
+	NewsDS.findAll().then(function(){
+		$scope.loadingSection = false;
+		NewsDS.bindAll($scope, 'news');	
+	})
 	
+	/*
 	cache.resolveNewsCache(news).then(function(news){
 		titleService.setTitle('News');
 		$rootScope.news = news;
 		$scope.loadingSection = false;
 	});
+	*/
 	
 })
-.controller( 'NewsViewCtrl', function NewsViewController( $rootScope, $scope, titleService, $state, $stateParams, cache, news, article ) {
+.controller( 'NewsViewCtrl', function NewsViewController( $rootScope, $scope, titleService, $state, $stateParams, article, NewsDS ) {
 	
-	/*
-	for(var i in $rootScope.news){
-		if ($rootScope.news[i].id == $stateParams.id){
-			$scope.article = $rootScope.news[i];
-			break;
-		};
-	}
-	*/
+	$scope.$parent.toDo = [];
+	
+	$scope.loadingSection = true;
 
+	NewsDS.find(article.id).then(function(model){
+		titleService.setTitle('News: ' + model.title);	
+		$scope.loadingSection = false;
+	});
+	NewsDS.bindOne($scope, 'article', article.id);
+
+	/*
 	$scope.loadingSection = true;
 
 	cache.resolveArticleCache($rootScope.news, article.id).then(function(article){
@@ -50,9 +59,10 @@ angular.module( 'symantis.community.news', [
 		$scope.loadingSection = false;
 		
 	});
+	*/
 
 	
-	$scope.$parent.toDo = [];
+	
 	
 })
 .controller( 'CommunityNewsLeftsideCtrl', function CommunityNewsLeftsideController( $scope ) {

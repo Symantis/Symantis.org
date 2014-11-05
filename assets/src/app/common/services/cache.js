@@ -1,6 +1,6 @@
 angular.module( 'services.cache', ['lodash'])
 
-.factory('cache', function($q, $rootScope, lodash, config, $timeout, UserModel, QueryModel, NewsModel) {
+.factory('cache', function($q, $rootScope, lodash, config, $timeout, UserModel, QueryModel) {
 
 	return {
 		
@@ -224,7 +224,7 @@ angular.module( 'services.cache', ['lodash'])
 			return responses;
 		}
 		*/
-
+		/*
 		resolveArticleCache: function(news, id){
 			var self = this;
 			if(this.checkNewsCache(news, id)){
@@ -316,6 +316,7 @@ angular.module( 'services.cache', ['lodash'])
 			article.responses.push(comment);
 			return news;
 		}
+		*/
 	};
 
 });

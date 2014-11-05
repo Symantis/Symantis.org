@@ -183,9 +183,10 @@ module.exports = {
 		console.log(req.params.all());
 
 		User.update(req.user.id, req.params.all())
-		.exec(function(err, model) {
-			User.publishUpdate(req.user.id, model);
-			return res.json(model);
+		.exec(function(err, models) {
+
+			User.publishUpdate(req.user.id, req.params.all());
+			return res.json(req.params.all());
 		});
 		
 	},
