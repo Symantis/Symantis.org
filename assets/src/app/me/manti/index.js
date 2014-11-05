@@ -1,15 +1,16 @@
 angular.module( 'symantis.me.manti', [
 ])
 
-.controller( 'MantiCtrl', function MantiController( $rootScope, $scope, titleService, user, UserDS ) {
+.controller( 'MantiCtrl', function MantiController( $scope, titleService, user, UserDS ) {
 	titleService.setTitle('My Manti');
 	$scope.$parent.toDo = ['Hook up left classes', 'Add new class modal'];
-
+	/*
 	$scope.loadingSection = true;
 	UserDS.find(user.id).then(function(){
 		$scope.loadingSection = false;
 	});
 	UserDS.bindOne($rootScope, 'user', user.id);
+	*/
 	
 })
 .controller( 'MantiViewCtrl', function MantiViewController( $scope, titleService, $state, $stateParams  ) {

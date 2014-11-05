@@ -289,18 +289,18 @@ angular.module( 'symantis.me', [
 	;
 })
 
-.controller( 'MeCtrl', function ProfileController( $scope, $rootScope, titleService, $http, user, utils, UserDS ) {
+.controller( 'MeCtrl', function ProfileController( $scope, titleService, $http, utils, UserDS ) {
 	titleService.setTitle('Me');
 	$scope.$parent.toDo = ['Format Activity', 'Add Cache feature'];
 	
 	//$scope.user = user;
 	
-	$scope.loadingSection = true;
+	//$scope.loadingSection = true;
 	
-	UserDS.find(user.id).then(function(){
+	//UserDS.find(user.id).then(function(){
 		$scope.loadingSection = false;
-		UserDS.bindOne($rootScope, 'user', user.id);
-	});
+		//UserDS.bindOne($rootScope, 'user', user.id);
+	//});
 	
 	
 
@@ -321,7 +321,7 @@ angular.module( 'symantis.me', [
 	$scope.loadTags = function(query) {
 		return $http.get('/api/tags/' + query);
 	};
-
+	/*
 	$scope.updateUser = function (){
 		console.log($scope.currentUser);
 		UserModel.update($scope.currentUser)
@@ -330,6 +330,7 @@ angular.module( 'symantis.me', [
 		});
 	
 	}
+	*/
 
 
 

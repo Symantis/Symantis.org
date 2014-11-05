@@ -21,6 +21,14 @@ angular.module('models.userDS', [
 		baseUrl: '/api'
     });
 })
+.factory('UserHandleDS', function (DS) {
+    return DS.defineResource({
+        name: 'usersHandle',
+        idAttribute: 'handle',
+        endpoint: '/user/handle',
+        baseUrl: '/api'
+    });
+})
 .factory('UserService',function(UserDS, $sailsSocket){
 	var _service = {};
 	var _handler = {};

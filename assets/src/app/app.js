@@ -169,7 +169,7 @@ angular.module( 'symantis', [
 		     	id : window.currentUser.id
 		    }
 		};
-		UserDS.findAll(query).then(function(user){
+		UserDS.find(window.currentUser.id).then(function(user){
 			UserDS.bindOne($rootScope, 'currentUser', window.currentUser.id);
 			UserDS.bindAll($rootScope, 'users', query);
 		});

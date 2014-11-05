@@ -54,7 +54,7 @@ angular.module( 'symantis.profile', [
 			    
 			    /*
 			    user : function($stateParams, UserDS){
-			    	return UserDS.find(
+			    	return UserDS.findAll(
 			    		{
 				    		where: {
 				    			handle : $stateParams.handle 
@@ -63,6 +63,7 @@ angular.module( 'symantis.profile', [
 			    	);
 			    },
 			    */
+			    
 			    users : function($rootScope){
 			    	return $rootScope.users;
 			    }
@@ -86,7 +87,7 @@ angular.module( 'symantis.profile', [
 			url: '/connections',
 			resolve : {
 				//cache: 'cache',
-			    user : function(cache, $rootScope, $stateParams) {
+			    user : function($rootScope, $stateParams) {
 			        return {handle: $stateParams.handle};
 			    },
 			    users : function($rootScope){

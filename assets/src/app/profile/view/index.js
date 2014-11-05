@@ -5,23 +5,18 @@ angular.module( 'symantis.profile.view', [
 	
 })
 
-.controller( 'ProfileViewCtrl', function ProfileViewController($http, $scope, user, titleService, utils, UserDS) {
+.controller( 'ProfileViewCtrl', function ProfileViewController($http, $scope, user, titleService, utils, UserHandleDS) {
 	
 	$scope.loadingSection = true;
 
-
-	var query = {
-	    where: {
-	     	handle : user.handle
-	    }
-	};
-
-	UserDS.find(query).then(function(model){
-		UserDS.bindOne($scope, 'user', model.id);
+	UserHandleDS.find(user.handle).then(function(model){
+		//$scope.user = model;
 		titleService.setTitle(model.firstName+'\'s' + ' Profile');
 		$scope.loadingSection = false;
 	});
 
+	UserHandleDS.bindOne($scope, 'user', user.handle);
+	
 
 	
 	/*

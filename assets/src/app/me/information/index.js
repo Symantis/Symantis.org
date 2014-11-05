@@ -1,6 +1,6 @@
 angular.module( 'symantis.me.information', [
 ])
-.controller( 'InformationCtrl', function InformationController( $scope, $rootScope, titleService, user, UserDS ) {
+.controller( 'InformationCtrl', function InformationController( $scope, titleService, user, UserDS ) {
 	titleService.setTitle('My Information');
 	$scope.$parent.toDo = ['Add Activity', 'link Manti', 'Link Contributions'];
 
@@ -14,11 +14,11 @@ angular.module( 'symantis.me.information', [
 	});
 	*/
 
-	$scope.loadingSection = true;
-	UserDS.find(user.id).then(function(){
-		$scope.loadingSection = false;
-	});
-	UserDS.bindOne($rootScope, 'user', user.id);
+	//$scope.loadingSection = true;
+	//UserDS.find(user.id).then(function(){
+	//	$scope.loadingSection = false;
+	//});
+	//UserDS.bindOne($rootScope, 'user', user.id);
 	
 })
 .controller( 'MeInformationLeftsideCtrl', function MeInformationLeftsideController( $scope ) {
