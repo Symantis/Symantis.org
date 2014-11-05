@@ -1873,21 +1873,11 @@ var aOpportunities = [
 		},
 		date: new Date(),
 		description: 'Looking for people to get involved with my companys new product, WidgetWare5! From Analytics, SEO Tools, Social Media Management, to Training we\’ve put them all together in one dashboard for your ease of use. Save time and optimize your business with our Digital Marketing Toolsuite.',
-		opportunity: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+		opportunity: 'Looking for people to get involved with my companys new product, WidgetWare5! From Analytics, SEO Tools, Social Media Management, to Training we\’ve put them all together in one dashboard for your ease of use. Save time and optimize your business with our Digital Marketing Toolsuite.',
 		imgs: [
 			{
 				name: 'placeholder',
 				src: '/img/placeholder/widgetware.png',
-				caption: 'This is an example image.'
-			},
-			{
-				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
-				caption: 'This is an example image.'
-			},
-			{
-				name: 'placeholder',
-				src: 'http://placehold.it/350x150',
 				caption: 'This is an example image.'
 			}
 		],
@@ -1901,130 +1891,20 @@ var aOpportunities = [
 				privillege: 'none',
 			}
 		],
-		questions : [
-			{
-				id : '1',
-				question: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
-				date: new Date(),
-				upVotes: 9,
-				downVotes: 0,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					status: 'online',
-					signature: Math.random()
-				},
-				replies: [
-					{
-						id: '1',
-						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							status: 'online',
-							signature: Math.random()
-						},
-						date: new Date()
-					},
-					{
-						id: '2',
-						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							status: 'online',
-							signature: Math.random()
-						},
-						date: new Date()
-					}
-				]
-			},
-			{
-				id : '2',
-				question: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
-				date: new Date(),
-				upVotes: 9,
-				downVotes: 0,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					status: 'online',
-					signature: Math.random()
-				},
-				replies: []
-			},
-			{
-				id : '3',
-				question: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
-				date: new Date(),
-				upVotes: 9,
-				downVotes: 0,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					status: 'online',
-					signature: Math.random()
-				},
-				replies: [
-					{
-						id: '1',
-						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							status: 'online',
-							signature: Math.random()
-						},
-						date: new Date()
-					},
-					{
-						id: '2',
-						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							status: 'online',
-							signature: Math.random()
-						},
-						date: new Date()
-					}
-				]
-			}
-		]
+		questions : []
 	},
 	{
 		id: 5,
-		title: 'Third Sample post!',
+		title: 'User Testers Wanted',
 		clean: function(){
 			return this.title.replace(/[\s]/g, '-');
 		},
 		totalViews: '9',
 		author:{
 			id: 1,
-			firstName: "Hamish",
-			lastName:  "Jackson-Mee",
-			handle: "hamish",
+			firstName: "Katelin",
+			lastName:  "Bull",
+			handle: "katelinnz",
 			at: "@",
 			signature: Math.random()
 		},
@@ -2033,8 +1913,8 @@ var aOpportunities = [
 			twitter : 50
 		},
 		date: new Date(),
-		description: 'Long, Long, Long, Long, Long, Long, Long, Long, Long, Long, Long, Long, Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog.',
-		opportunity: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+		description: 'Looking for a range of people to test the navigation and UX of a new app I\'ve designed.',
+		opportunity: 'I have designed an app that allows people to store all of their user details and passwords etc for various sites in one place. It has a fair amount of security and I\'m worried that it gets too overly complex when it comes to storing and retrieving date. I\'m after a range of people from different background to test the app and give feedback. I will be after detailed thoughts of what is working and what needs improvements etc.',
 		tags: [
 			{
 				title: 'Visuals',
@@ -2048,15 +1928,15 @@ var aOpportunities = [
 		questions : [
 			{
 				id : '1',
-				question: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
+				question: 'Hi I\'m really interested but worried that I might not have enough technical experience to give you the feedback you\'re after. Do I need to have an overly technical knowledge?',
 				date: new Date(),
-				upVotes: 9,
-				downVotes: 0,
+				upVotes: 2,
+				downVotes: 1,
 				author:{
 					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
+					firstName: "Josh",
+					lastName:  "Smith",
+					handle: "jaysmith",
 					at: "@",
 					status: 'online',
 					signature: Math.random()
@@ -2064,89 +1944,12 @@ var aOpportunities = [
 				replies: [
 					{
 						id: '1',
-						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
+						reply:'Hey, I\'m really hoping to get a big range of people from all sorts of background. One of the key aims of this app is that it needs to be useable for anybody, even if they aren\'t totally tech-savvy so your feedback would be a huge help!',
 						author:{
 							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							status: 'online',
-							signature: Math.random()
-						},
-						date: new Date()
-					},
-					{
-						id: '2',
-						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							status: 'online',
-							signature: Math.random()
-						},
-						date: new Date()
-					}
-				]
-			},
-			{
-				id : '2',
-				question: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami. Helvetica literally direct trade, mumblecore slow-carb photo booth blog. Vinyl ugh +1 Odd Future viral, wayfarers bicycle rights Cosby sweater disrupt sustainable Etsy trust fund Kickstarter Pitchfork hashtag. Normcore photo booth chillwave Thundercats, salvia occupy Etsy bitters viral. Truffaut jean shorts plaid Carles Banksy photo booth gastropub viral. Photo booth cliche Tumblr Pitchfork, Neutra skateboard fingerstache quinoa Pinterest small batch retro.',
-				date: new Date(),
-				upVotes: 9,
-				downVotes: 0,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					status: 'online',
-					signature: Math.random()
-				},
-				replies: []
-			},
-			{
-				id : '3',
-				question: 'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
-				date: new Date(),
-				upVotes: 9,
-				downVotes: 0,
-				author:{
-					id: 1, 
-					firstName: "Hamish",
-					lastName:  "Jackson-Mee",
-					handle: "hamish",
-					at: "@",
-					status: 'online',
-					signature: Math.random()
-				},
-				replies: [
-					{
-						id: '1',
-						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
-							at: "@",
-							status: 'online',
-							signature: Math.random()
-						},
-						date: new Date()
-					},
-					{
-						id: '2',
-						reply:'Polaroid flexitarian pork belly, narwhal Bushwick +1 iPhone selfies Williamsburg butcher. Keffiyeh 8-bit cray Pinterest scenester, Tonx umami.',
-						author:{
-							id: 1, 
-							firstName: "Hamish",
-							lastName:  "Jackson-Mee",
-							handle: "hamish",
+							firstName: "Katelin",
+							lastName:  "Bull",
+							handle: "katelinnz",
 							at: "@",
 							status: 'online',
 							signature: Math.random()
@@ -2502,7 +2305,7 @@ var aMantis = [
 		date: new Date(),
 		img:{
 			name: 'placeholder',
-			src: 'http://placehold.it/350x150',
+			src: '/img/placeholder/navigation.jpg',
 			caption: 'This is a placeholder image.'
 		},
 		includes:[
@@ -2623,7 +2426,7 @@ var aMantis = [
 		date: new Date(),
 		img:{
 			name: 'placeholder',
-			src: 'http://placehold.it/350x150',
+			src: '/img/placeholder/mephobox.png',
 			caption: 'This is an example image.'
 		},
 		includes: [
@@ -2959,7 +2762,7 @@ var aMantis = [
 		date: new Date(),
 		img:{
 			name: 'placeholder',
-			src: 'img/svg/manti-3.svg',
+			src: 'img/placeholder/ui-header.jpg',
 			caption: 'This is an example image.'
 		},
 		includes: [],
