@@ -63,7 +63,7 @@ angular.module( 'symantis.profile', [
 			    	);
 			    },
 			    */
-			    
+
 			    users : function($rootScope){
 			    	return $rootScope.users;
 			    }
@@ -109,7 +109,7 @@ angular.module( 'symantis.profile', [
 			url: '/information',
 			resolve : {
 				//cache: 'cache',
-			    user : function(cache, $rootScope, $stateParams) {
+			    user : function($rootScope, $stateParams) {
 			        return {handle: $stateParams.handle};
 			    },
 			    users : function($rootScope){

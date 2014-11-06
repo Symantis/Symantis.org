@@ -131,7 +131,7 @@ module.exports.blueprints = {
   prefix: '/api',
 
 
-
+  autoWatch: true,
 
 
   /**

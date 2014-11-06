@@ -133,7 +133,7 @@ angular.module( 'symantis', [
   // register the adapter with the data store
   DS.adapters.DSSailsSocketAdapter = DSSailsSocketAdapter;
   // set your custom adapter as the default
-  //DS.defaults.defaultAdapter = 'DSSailsSocketAdapter';
+  DS.defaults.defaultAdapter = 'DSSailsSocketAdapter';
 
 }])
 
@@ -278,7 +278,7 @@ angular.module( 'symantis', [
 	});
 })
 */
-.controller( 'AppCtrl', function AppCtrl ( $rootScope, $scope, $state, config, ngProgress, $timeout, $idle, UserModel, $modal, $symodal, $sails, $sailsSocket, cache, utils, UserDS) {
+.controller( 'AppCtrl', function AppCtrl ( $rootScope, $scope, $state, config, ngProgress, $timeout, $idle, $modal, $symodal, $sailsSocket, utils, UserDS) {
 	ngProgress.color('#3b948b');
 	ngProgress.start();
 	$timeout(function() {
@@ -461,7 +461,7 @@ angular.module( 'symantis', [
 		}
 	});
 	*/
-
+	/*
 	$sails.on('response', function (envelope) {
 		switch(envelope.verb) {
 			
@@ -526,6 +526,7 @@ angular.module( 'symantis', [
 				break;
 		}
 	});
+	*/
 
 	io.socket.on('disconnect', function(){
 		utils.siteAlert($scope.sitealerts, { type: 'error', msg: 'Your connection was lost... Attempting to reconnect' } );

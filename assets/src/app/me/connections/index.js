@@ -17,7 +17,7 @@ angular.module( 'symantis.me.connections', [
 	});
 })
 */
-.controller( 'ConnectionsCtrl', function ConnectionsController( $scope, titleService, UserModel, user, UserDS ) {
+.controller( 'ConnectionsCtrl', function ConnectionsController( $scope, titleService, user, UserDS ) {
 	titleService.setTitle('Connections');
 	$scope.$parent.toDo = ['Add Cache feature', 'Add Filter'];
 

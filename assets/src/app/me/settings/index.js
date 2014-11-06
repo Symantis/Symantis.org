@@ -17,7 +17,7 @@ angular.module( 'symantis.me.settings', [
 	});
 })
 */
-.controller( 'MeSettingsCtrl', function MeSettingsController( $http, $scope, titleService, UserModel, user, UserDS ) {
+.controller( 'MeSettingsCtrl', function MeSettingsController( $http, $scope, titleService, user, UserDS ) {
 	titleService.setTitle('My Settings');
 	$scope.$parent.toDo = ['Hook up other Settings forms', 'Add save option to tags'];
 

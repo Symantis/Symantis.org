@@ -6,7 +6,7 @@ angular.module( 'symantis.creator.app', [
 
 	
 })
-.controller( 'CreatorAppCanvasCtrl', function CreatorAppCanvasController( $scope, CreatorModel, $sails) {
+.controller( 'CreatorAppCanvasCtrl', function CreatorAppCanvasController( $scope, CreatorModel, $sailsSocket) {
 	
   CreatorModel.subscribeToDemo().then(function(model){
       console.log(model);
@@ -73,6 +73,7 @@ angular.module( 'symantis.creator.app', [
         }
     };
 
+    /*
     $sails.on('resize', function (envelope) {
       console.log("Demo Called");
       console.log(envelope);
@@ -92,6 +93,7 @@ angular.module( 'symantis.creator.app', [
       block.row = envelope.row;
       block.col = envelope.col;
     });
+    */
 
 })
 .controller( 'CreatorAppNavCtrl', function CreatorAppNavController( $scope, titleService ) {

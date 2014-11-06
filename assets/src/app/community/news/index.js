@@ -17,7 +17,7 @@ angular.module( 'symantis.community.news', [
 	});
 })
 */
-.controller( 'NewsCtrl', function NewsController($rootScope, $scope, titleService, cache, news, NewsDS ) {
+.controller( 'NewsCtrl', function NewsController($rootScope, $scope, titleService, news, NewsDS ) {
 	titleService.setTitle('News');
 	$scope.$parent.toDo = ['duScroll on Left', 'Create New Post model'];
 	$scope.loadingSection = true;

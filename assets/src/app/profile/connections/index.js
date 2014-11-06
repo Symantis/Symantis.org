@@ -1,10 +1,21 @@
 angular.module( 'symantis.profile.connections', [
 ])
 
-.controller( 'ProfileConnectionsCtrl', function ProfileConnectionsController($scope, $rootScope, titleService, $state, $stateParams, cache, utils, user) {
+.controller( 'ProfileConnectionsCtrl', function ProfileConnectionsController($scope, $rootScope, titleService, $state, $stateParams, utils, user, UserHandleDS) {
 	$scope.$parent.toDo = [];
 	titleService.setTitle('Connections');
 
+
+	$scope.loadingSection = true;
+
+	UserHandleDS.find(user.handle).then(function(model){
+		//$scope.user = model;
+		titleService.setTitle(model.firstName+'\'s' + ' Profile');
+		$scope.loadingSection = false;
+	});
+
+	UserHandleDS.bindOne($scope, 'user', user.handle);
+	/*
 	$scope.loadingSection = true;
 	cache.resolveUserCache($rootScope.users, user.handle).then(function(user){
 		$rootScope.user = user;
@@ -19,6 +30,7 @@ angular.module( 'symantis.profile.connections', [
 		//$scope.loadingSection = false;
 		
 	});
+	*/
 
 })
 .controller( 'ProfileConnectionsLeftsideCtrl', function ProfileConnectionsLeftsideController( $scope ) {

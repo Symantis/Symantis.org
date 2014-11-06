@@ -74,8 +74,7 @@ angular.module( 'symantis.more', [
 					templateUrl: 'more/contributors/board.tpl.html',
 					
 					resolve : {
-			            commits : function(SystemModel, $q) {
-			            	var deferred = $q.defer();
+			            commits : function($q) {
 
 			            	/*
 			                return SystemModel.getRecentCommits().then(function (data) {

@@ -57,6 +57,37 @@ module.exports = {
 			}
 		});
 	},
+
+	findOne: function(req, res){
+		console.log(req.params.all());
+		User.findOne(req.param('id'))
+		.populate('activity')
+		//.populate('toConnections')
+		//.populate('fromConnections')
+		.spread(function(model) {
+			console.log(model);
+			res.json(model);
+		})
+		.fail(function(err) {
+			// An error occured
+			console.log(err);
+		});
+	},
+	find: function(req, res){
+		console.log(req.params.all());
+		User.find(req.params.all())
+		.populate('activity')
+		//.populate('toConnections')
+		//.populate('fromConnections')
+		.spread(function(models) {
+			res.json([models]);
+		})
+		.fail(function(err) {
+			// An error occured
+			console.log(err);
+		});
+	},
+
 	getAll: function(req, res) {
 		User.getAll()
 		.spread(function(models) {
