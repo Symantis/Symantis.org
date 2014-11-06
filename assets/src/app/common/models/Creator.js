@@ -8,10 +8,12 @@ angular.module('models.creator', [
 .run(function($sailsSocket, CreatorService){
 	
 	console.log("listening to creator changes");
-    $sailsSocket.subscribe('creator', function(envelope){
-        //console.log(envelope);
+    /*
+    $sailsSocket.subscribe('demo', function(envelope){
+        console.log(envelope);
         CreatorService.handler[envelope.verb](envelope)
     });
+	*/
 
 })
 

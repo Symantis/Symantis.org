@@ -8,10 +8,13 @@ angular.module( 'symantis.creator.app', [
 })
 .controller( 'CreatorAppCanvasCtrl', function CreatorAppCanvasController( $scope, CreatorModel, $sailsSocket) {
 	
+  /*
   CreatorModel.subscribeToDemo().then(function(model){
       console.log(model);
   });
+  */
   
+
 	$scope.standardItems = [
       { id:1, sizeX: 2, sizeY: 1, row: 0, col: 0 },
       { id:2, sizeX: 2, sizeY: 2, row: 0, col: 2 },
@@ -72,6 +75,46 @@ angular.module( 'symantis.creator.app', [
            } // optional callback fired when item is finished dragging
         }
     };
+
+    var events = {};
+
+    events.resize = function(envelope){
+      console.log("Demo Resize Called");
+      console.log(envelope);
+      var block = _.find($scope.standardItems, {id: envelope.id});
+      block.sizeX = envelope.sizeX;
+      block.sizeY = envelope.sizeY;
+      block.row = envelope.row;
+      block.col = envelope.col;
+    }
+
+    events.drag = function(envelope){
+      console.log("Demo Drag Called");
+      console.log(envelope);
+      var block = _.find($scope.standardItems, {id: envelope.id});
+      block.sizeX = envelope.sizeX;
+      block.sizeY = envelope.sizeY;
+      block.row = envelope.row;
+      block.col = envelope.col;
+    }
+
+    
+    $sailsSocket.subscribe('resize', function(envelope){
+      console.log(envelope);
+      events['resize'](envelope);
+    });
+
+    $sailsSocket.subscribe('drag', function(envelope){
+      console.log(envelope);
+      events['drag'](envelope);
+    });
+
+    
+    /*
+    sails.on("demo", function(envelope){
+      events[envelope.verb](envelope);
+    });
+    */
 
     /*
     $sails.on('resize', function (envelope) {

@@ -14,6 +14,7 @@ module.exports = {
 	    message: 'Subscribed to a creator room called demo!'
 	  });
 	},
+
 	dragBlock: function(req, res) {
 	  console.log("Drag");
 	  console.log(req.params.all());
@@ -30,7 +31,7 @@ module.exports = {
 	  	row: row,
 	  	col: col
 	  }
-
+	  sails.sockets.blast('drag', model);
 	  sails.sockets.broadcast('demo','drag', model);
 	  res.json(model);
 	},
@@ -51,6 +52,7 @@ module.exports = {
 	  	col: col
 	  }
 
+	  sails.sockets.blast('drag', model);
 	  sails.sockets.broadcast('demo', 'resize', model);
 	  
 	  res.json(model);
