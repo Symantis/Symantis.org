@@ -50,13 +50,15 @@ module.exports.routes = {
     /**
      * User routes
      */
-    'get /api/user': 'UserController.getAll',
+    'get /api/user': 'UserController.find',
     'get /api/user/:id': 'UserController.getOne',
+
     'get /api/user/handle/:handle': 'UserController.getByHandle',
     'get /api/user/email/match/:email': 'UserController.checkEmail',
     'get /api/user/handle/match/:handle': 'UserController.checkHandle',
     'post /api/user': 'UserController.create',
     'post /api/user/update': 'UserController.update',
+    'put /api/user/:id': 'UserController.update',
     'post /api/user/connect': 'UserController.connect',
     'post /api/user/status': 'UserController.updateStatus',
 
@@ -75,21 +77,31 @@ module.exports.routes = {
      * Query routes
      *
      */
-    'get /api/query': 'QueryController.getAll',
+    'get /api/query': 'QueryController.find',
+    'get /api/query/:id': 'QueryController.findOne',
     'get /api/query/like/:title': 'QueryController.getLike',
-    'get /api/query/:id': 'QueryController.getOne',
+    
     'post /api/query': 'QueryController.create',
     'post /api/query/update': 'QueryController.update',
     'post /api/query/response': 'QueryController.addResponse',
     'post /api/query/update/views': 'QueryController.updateViews',
+    'put /api/query/:id': 'QueryController.update',
     'delete /api/query/:id': 'QueryController.destroy',
 
-    'get /api/response/:id': 'ResponseController.getOne',
+    'get /api/response': 'ResponseController.find',
+    'get /api/response/:id': 'ResponseController.findOne',
     'get /api/response/query/:query': 'ResponseController.getAllForQuery',
     'get /api/response/reply/:id': 'CommentController.getOne',
 
+    'post /api/response': 'ResponseController.create',
+    'put /api/response/:id': 'ResponseController.update',
     'post /api/response/reply': 'ResponseController.addReply',
     'post /api/response/solve': 'ResponseController.addSolution',
+
+    'get /api/comment': 'CommentController.find',
+    'get /api/comment/:id': 'CommentController.findOne',
+    'put /api/comment/:id': 'CommentController.update',
+    'post /api/comment': 'CommentController.create',
 
     'get /api/creator/demo': 'CreatorController.subscribeToDemo',
     'post /api/creator/demo/drag': 'CreatorController.dragBlock',
@@ -101,6 +113,7 @@ module.exports.routes = {
      *
      */
     'get /api/news': 'WordpressController.getPosts',
+    'get /api/news/:id': 'WordpressController.getPost',
     'get /api/article/:id': 'WordpressController.getPost',
 
     // If a request to a URL doesn't match any of the custom routes above, it is matched 
@@ -108,6 +121,10 @@ module.exports.routes = {
     // and examples.
 
   //Handle "/home" queries 
+  'get /home': {
+    controller: 'HomeController',
+    action: 'index'
+  },
   'get /home/*': {
     controller: 'HomeController',
     action: 'index'

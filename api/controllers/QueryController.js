@@ -7,6 +7,56 @@
 var Q = require('q');
 
 module.exports = {
+	findOne: function(req, res){
+		Query.findOne(req.param('id'))
+		.populate('author')
+		
+		.exec(function(err, query){
+			if(err){
+
+			}
+			else{
+				Query.subscribe(req.socket, query);
+				res.json(query);
+			}
+		});
+		/*
+		.spread(function(model) {
+			res.json(model);
+		})
+		.fail(function(err) {
+			// An error occured
+			console.log(err);
+		});
+		*/
+		
+	},
+	find: function(req, res){
+		//console.log(req.params.all());
+		Query.find(req.params.all())
+		.populate('author')
+		.exec(function(err, queries){
+			if(err){
+
+			}
+			else{
+				//console.log(queries.responses);
+				Query.subscribe(req.socket, queries);
+				res.json(queries);
+			}
+		});
+		/*
+		.spread(function(models) {
+			console.log(models);
+			res.json([models]);
+		})
+		.fail(function(err) {
+			// An error occured
+			console.log(err);
+		});
+	*/
+	},
+
 	getLike: function(req, res) {
 		Query
 		.find({ title: { 'like': '%'+req.param('title')+'%' }})
@@ -33,6 +83,7 @@ module.exports = {
 		});
 	},
 
+	/*
 	getOne: function(req, res) {
 		Q.all([
 	    	// let's get the query
@@ -67,11 +118,7 @@ module.exports = {
 			Query.subscribe(req.socket, query);
 			Response.subscribe(req.socket, responses);
 			Comment.subscribe(req.socket, replies);
-			/*
-			var model = query;
-			model.responses = responses;
-			model.totalResponses = responses.length;
-			*/
+			
 			model = {
 				query: query,
 				responses: responses,
@@ -85,6 +132,7 @@ module.exports = {
 			res.send(404);
 		});
 	},
+	*/
 
 	create: function (req, res) {
 		var author = req.param('author');
@@ -94,6 +142,7 @@ module.exports = {
 			clean: escape(req.param('title')).replace('%20','-'),
 			query: req.param('query'),
 			tags: req.param('tags'),
+			category: req.param('category'),
 			author: author
 		};
 
@@ -103,6 +152,7 @@ module.exports = {
 				return console.log(err);
 			}
 			else {
+				query.author = author;
 				Query.publishCreate(query);
 				res.json(query);
 			}
@@ -113,12 +163,17 @@ module.exports = {
 		if (!id) {
 			return res.badRequest('No id provided.');
 		}
-		
+		/*
 		var model = {
 			title: req.param('title'),
 			clean: escape(req.param('title')).replace('%20','-'),
 			query: req.param('query'),
 			tags: req.param('tags')
+		}
+		*/
+		model = req.params.all();
+		if(model.title){
+			model.clean = escape(model.title).replace('%20','-')
 		}
 
 		Query.update(id, model)

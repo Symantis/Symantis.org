@@ -14,14 +14,20 @@ angular.module( 'symantis.me', [
 			url: '/me',
 			resolve : {
 				//cache: 'cache',
-			    
+			    user: function($rootScope, UserDS){
+          			//return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+		    		return $rootScope.currentUser;
+		    	},
+		    	/*
 			    user : function($rootScope) {
 			        return $rootScope.user = $rootScope.currentUser;
 			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
 			    },
+			    
 			    users: function($rootScope) {
 			    	return $rootScope.users;
 			    }
+			    */
 
 		    },
 			views: {
@@ -71,7 +77,8 @@ angular.module( 'symantis.me', [
 				       return $rootScope.mantis;
 				},    
 			    user : function($rootScope) {
-			        return $rootScope.user = $rootScope.currentUser;
+			        //return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+			        return  $rootScope.currentUser;
 			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
 			    },
 			    users: function($rootScope) {
@@ -100,7 +107,8 @@ angular.module( 'symantis.me', [
 				    return { id: $stateParams.id, clean: $stateParams.title };
 				},    
 			    user : function($rootScope) {
-			        return $rootScope.user = $rootScope.currentUser;
+			        //return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+			        return $rootScope.currentUser;
 			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
 			    },
 			    users: function($rootScope) {
@@ -122,7 +130,8 @@ angular.module( 'symantis.me', [
 			url: '/settings',
 			resolve: {   
 			    user : function($rootScope) {
-			        return $rootScope.user = $rootScope.currentUser;
+			        //return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+			        return $rootScope.currentUser;
 			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
 			    },
 			    users: function($rootScope) {
@@ -142,6 +151,16 @@ angular.module( 'symantis.me', [
 		})
 		.state('me.settings.account',{
 			url: '/account',
+			resolve: {   
+			    user : function($rootScope) {
+			        //return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+			        return $rootScope.currentUser;
+			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
+			    },
+			    users: function($rootScope) {
+			    	return $rootScope.users;
+			    }
+			},
 			views: {
 				"settings@me.settings": {
 					controller: 'MeSettingsAccountCtrl',
@@ -151,6 +170,16 @@ angular.module( 'symantis.me', [
 		})
 		.state('me.settings.emails',{
 			url: '/emails',
+			resolve: {   
+			    user : function($rootScope) {
+			        //return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+			        return $rootScope.currentUser;
+			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
+			    },
+			    users: function($rootScope) {
+			    	return $rootScope.users;
+			    }
+			},
 			views: {
 				"settings@me.settings": {
 					controller: 'MeSettingsEmailsCtrl',
@@ -160,6 +189,16 @@ angular.module( 'symantis.me', [
 		})
 		.state('me.settings.notifications',{
 			url: '/notifications',
+			resolve: {   
+			    user : function($rootScope) {
+			        //return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+			        return $rootScope.currentUser;
+			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
+			    },
+			    users: function($rootScope) {
+			    	return $rootScope.users;
+			    }
+			},
 			views: {
 				"settings@me.settings": {
 					controller: 'MeSettingsNotificationsCtrl',
@@ -169,6 +208,16 @@ angular.module( 'symantis.me', [
 		})
 		.state('me.settings.security',{
 			url: '/security',
+			resolve: {   
+			    user : function($rootScope) {
+			        //return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+			        return $rootScope.currentUser;
+			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
+			    },
+			    users: function($rootScope) {
+			    	return $rootScope.users;
+			    }
+			},
 			views: {
 				"settings@me.settings": {
 					controller: 'MeSettingsSecurityCtrl',
@@ -178,6 +227,16 @@ angular.module( 'symantis.me', [
 		})
 		.state('me.settings.manti',{
 			url: '/manti',
+			resolve: {   
+			    user : function($rootScope) {
+			        //return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+			        return $rootScope.currentUser;
+			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
+			    },
+			    users: function($rootScope) {
+			    	return $rootScope.users;
+			    }
+			},
 			views: {
 				"settings@me.settings": {
 					controller: 'MeSettingsMantiCtrl',
@@ -187,6 +246,16 @@ angular.module( 'symantis.me', [
 		})
 		.state('me.settings.sykit',{
 			url: '/sykit',
+			resolve: {   
+			    user : function($rootScope) {
+			        //return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+			        return $rootScope.currentUser;
+			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
+			    },
+			    users: function($rootScope) {
+			    	return $rootScope.users;
+			    }
+			},
 			views: {
 				"settings@me.settings": {
 					controller: 'MeSettingsSykitCtrl',
@@ -198,7 +267,8 @@ angular.module( 'symantis.me', [
 			url: '/information',
 			resolve: {   
 			    user : function($rootScope) {
-			        return $rootScope.user = $rootScope.currentUser;
+			        //return $rootScope.user = UserDS.find($rootScope.currentUser.id);
+			        return $rootScope.currentUser;
 			        //return $rootScope.user = cache.resolveUserCache($rootScope.users, $rootScope.currentUser.handle);
 			    },
 			    users: function($rootScope) {
@@ -219,12 +289,23 @@ angular.module( 'symantis.me', [
 	;
 })
 
-.controller( 'MeCtrl', function ProfileController( $scope, $rootScope, titleService, $http, user, cache, UserModel, utils ) {
+.controller( 'MeCtrl', function ProfileController( $scope, titleService, $http, utils, UserDS ) {
 	titleService.setTitle('Me');
 	$scope.$parent.toDo = ['Format Activity', 'Add Cache feature'];
 	
 	//$scope.user = user;
 	
+	//$scope.loadingSection = true;
+	
+	//UserDS.find(user.id).then(function(){
+		$scope.loadingSection = false;
+		//UserDS.bindOne($rootScope, 'user', user.id);
+	//});
+	
+	
+
+
+	/*
 	$scope.loadingSection = true;
 	cache.resolveUserCache($rootScope.users, user.handle).then(function(user){
 		$rootScope.user = user;
@@ -232,6 +313,7 @@ angular.module( 'symantis.me', [
 		$scope.loadingSection = false;
 		
 	});
+	*/
 	//$scope.user.reciprocal = utils.findUserMatches($scope.user.toConnections, $scope.user.fromConnections ).length;
 	//$scope.user.totalToConnections = $scope.user.totalToConnections - $scope.user.reciprocal;
 	//$scope.user.totalFromConnections = $scope.user.totalFromConnections - $scope.user.reciprocal;
@@ -239,7 +321,7 @@ angular.module( 'symantis.me', [
 	$scope.loadTags = function(query) {
 		return $http.get('/api/tags/' + query);
 	};
-
+	/*
 	$scope.updateUser = function (){
 		console.log($scope.currentUser);
 		UserModel.update($scope.currentUser)
@@ -248,6 +330,7 @@ angular.module( 'symantis.me', [
 		});
 	
 	}
+	*/
 
 
 

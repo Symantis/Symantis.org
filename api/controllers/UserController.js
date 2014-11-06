@@ -57,6 +57,37 @@ module.exports = {
 			}
 		});
 	},
+
+	findOne: function(req, res){
+		console.log(req.params.all());
+		User.findOne(req.param('id'))
+		.populate('activity')
+		//.populate('toConnections')
+		//.populate('fromConnections')
+		.spread(function(model) {
+			console.log(model);
+			res.json(model);
+		})
+		.fail(function(err) {
+			// An error occured
+			console.log(err);
+		});
+	},
+	find: function(req, res){
+		console.log(req.params.all());
+		User.find(req.params.all())
+		.populate('activity')
+		//.populate('toConnections')
+		//.populate('fromConnections')
+		.spread(function(models) {
+			res.json([models]);
+		})
+		.fail(function(err) {
+			// An error occured
+			console.log(err);
+		});
+	},
+
 	getAll: function(req, res) {
 		User.getAll()
 		.spread(function(models) {
@@ -183,9 +214,10 @@ module.exports = {
 		console.log(req.params.all());
 
 		User.update(req.user.id, req.params.all())
-		.exec(function(err, model) {
-			User.publishUpdate(req.user.id, model);
-			return res.json(model);
+		.exec(function(err, models) {
+
+			User.publishUpdate(req.user.id, req.params.all());
+			return res.json(req.params.all());
 		});
 		
 	},

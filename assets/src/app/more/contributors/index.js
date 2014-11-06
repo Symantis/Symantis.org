@@ -10,17 +10,25 @@ angular.module( 'symantis.more.contributors', [
 
 
 })
-.controller( 'ContributorsBoardCtrl', function ContributorsBoardController( $scope, SystemModel, commits) {
+.controller( 'ContributorsBoardCtrl', function ContributorsBoardController( $scope, commits, SystemDS) {
 	$scope.$parent.toDo = [];
 	
-	$scope.commits = {}; 
+	//$scope.commits = {}; 
 	$scope.loadingSection = true;
+	
+	SystemDS.findAll().then(function(){
+		$scope.loadingSection = false;
+		SystemDS.bindAll($scope, 'commits');
+	});
 
+	/*
 	SystemModel.getRecentCommits().then(function(data){
 		$scope.loadingSection = false;
 		$scope.commits = data;
+		console.log(data);
 	});
-
+	*/
+	
 })
 .controller( 'ContributorsHeaderCtrl', function ContributorsHeaderController( $scope, titleService ) {
 	//titleService.setTitle('About');

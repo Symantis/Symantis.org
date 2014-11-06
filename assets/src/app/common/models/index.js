@@ -1,8 +1,13 @@
 angular.module('models', [
-	'models.message',
-	'models.user',
-	'models.system',
-	'models.query',
+	//'models.message',
+	//'models.user',
+	'models.userDS',
+	//'models.system',
+	//'models.query',
+	'models.queryDS',
 	'models.creator',
-	'models.news'
+	//'models.news',
+	'models.newsDS',
+	'models.systemDS'
+
 ]);

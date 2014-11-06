@@ -46,9 +46,24 @@ angular.module( 'symantis.profile', [
 			url: ':handle',
 			resolve : {
 				//cache: 'cache',
-			    user : function(cache, $rootScope, $stateParams) {
-			        return $rootScope.user = {handle: $stateParams.handle};
+			    
+			    user : function($rootScope, $stateParams) {
+			        return {handle: $stateParams.handle};
+
 			    },
+			    
+			    /*
+			    user : function($stateParams, UserDS){
+			    	return UserDS.findAll(
+			    		{
+				    		where: {
+				    			handle : $stateParams.handle 
+				    		}
+			    		}
+			    	);
+			    },
+			    */
+
 			    users : function($rootScope){
 			    	return $rootScope.users;
 			    }
@@ -72,8 +87,8 @@ angular.module( 'symantis.profile', [
 			url: '/connections',
 			resolve : {
 				//cache: 'cache',
-			    user : function(cache, $rootScope, $stateParams) {
-			        return $rootScope.user = {handle: $stateParams.handle};
+			    user : function($rootScope, $stateParams) {
+			        return {handle: $stateParams.handle};
 			    },
 			    users : function($rootScope){
 			    	return $rootScope.users;
@@ -94,8 +109,8 @@ angular.module( 'symantis.profile', [
 			url: '/information',
 			resolve : {
 				//cache: 'cache',
-			    user : function(cache, $rootScope, $stateParams) {
-			        return $rootScope.user = {handle: $stateParams.handle};
+			    user : function($rootScope, $stateParams) {
+			        return {handle: $stateParams.handle};
 			    },
 			    users : function($rootScope){
 			    	return $rootScope.users;
@@ -169,10 +184,15 @@ angular.module( 'symantis.profile', [
 	;
 })
 
-.controller( 'ProfileCtrl', function ProfileController( $sails, $rootScope, titleService, users, cache ) {
+.controller( 'ProfileCtrl', function ProfileController( $sails, $rootScope, titleService, users, UserDS) {
 	titleService.setTitle('Profile');
 	$scope.$parent.toDo = [];
-	$scope.users = $rootScope.users;
+	
+	UserDS.findAll().then(function(){
+		$scope.loadingSection = false;
+		UserDS.bindAll($scope, 'users');	
+	})
+	//$scope.users = $rootScope.users;
 
 	
 })

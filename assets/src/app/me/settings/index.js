@@ -17,10 +17,11 @@ angular.module( 'symantis.me.settings', [
 	});
 })
 */
-.controller( 'MeSettingsCtrl', function MeSettingsController( $http, $scope, $rootScope, titleService, UserModel, user, cache ) {
+.controller( 'MeSettingsCtrl', function MeSettingsController( $http, $scope, titleService, user, UserDS ) {
 	titleService.setTitle('My Settings');
 	$scope.$parent.toDo = ['Hook up other Settings forms', 'Add save option to tags'];
 
+	/*
 	$scope.loadingSection = true;
 	cache.resolveUserCache($rootScope.users, user.handle).then(function(user){
 		$rootScope.user = user;
@@ -28,6 +29,14 @@ angular.module( 'symantis.me.settings', [
 		$scope.loadingSection = false;
 		
 	});
+	*/
+
+	$scope.loadingSection = true;
+	UserDS.find(user.id).then(function(model){
+		console.log(model);
+		$scope.loadingSection = false;
+	});
+	UserDS.bindOne($scope, 'user', user.id);
 
 
 	$scope.loadTags = function(query) {
@@ -36,11 +45,27 @@ angular.module( 'symantis.me.settings', [
 
 	$scope.updateUser = function (){
 		console.log($scope.currentUser);
+
+		//var user = UserDS.find($scope.currentUser.id);
+		UserDS.update($scope.currentUser.id, {
+			
+			firstName: $scope.currentUser.firstName,
+			lastName: $scope.currentUser.lastName,
+			tags: $scope.currentUser.tags,
+			bio: $scope.currentUser.bio,
+			professed: $scope.currentUser.professed
+
+		}).then(function (user) {
+			console.log(user);
+			//user; // A reference to the document that's been persisted via an adapter
+		});
+		
+		/*
 		UserModel.update($scope.currentUser)
 		.then(function(model){
 			console.log(model);
 		});
-	
+		*/
 	}
 	
 })
