@@ -15,8 +15,7 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  'styles/**/*.css'
-
+  'styles/**/*.css',
   //'assets/scss/app.scss',
   //'stlyes/fonts.css',
   //'styles/icons.css',
@@ -111,8 +110,10 @@ var jsFilesToInject = [
   'bower_components/angular-input-match/dist/angular-input-match.js',
 
   // Load Timeline for roadmap
-  'bower_components/TimelineJs/build/js/timeline.js',
-  'bower_components/TimelineJs/build/js/storyjs-embed.js',
+  //'bower_components/TimelineJs/build/js/timeline.js',
+  //'bower_components/TimelineJs/build/js/storyjs-embed.js',
+  
+  // Load angular ui helpers
   'bower_components/angular-ui-utils/ui-utils.js',
   
   // Load Flow
