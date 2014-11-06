@@ -1885,7 +1885,7 @@ var aOpportunities = [
 		imgs: [
 			{
 				name: 'placeholder',
-				src: '/img/placeholder/jabber.jpg',
+				src: '/img/placeholder/jabber2.jpg',
 				caption: 'This is an example image.'
 			},
 		],
