@@ -253,7 +253,7 @@ angular.module( 'symantis.community.queries', [
 		}
 	}
 })
-.controller( 'QueriesNewCtrl', function QueriesNewController( $http, $state, $scope, titleService, QueryModel, utils, QueryDS ) {
+.controller( 'QueriesNewCtrl', function QueriesNewController( $http, $state, $scope, titleService, utils, QueryDS ) {
 
 	titleService.setTitle('New Query');
 	$scope.$parent.toDo = [];
