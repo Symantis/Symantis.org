@@ -233,7 +233,7 @@ angular.module( 'symantis', [
 
 })
 
-.run(['$rootScope', function($root) {
+.run(['$rootScope', function($root, $window, $location) {
 	
 	$root.$on('$routeChangeStart', function(e, curr, prev) { 
 		if (curr.$$route && curr.$$route.resolve) {
@@ -258,6 +258,8 @@ angular.module( 'symantis', [
 		$root.currentState = toState.name.replace(".", "-");
 		// Hide loading message
 		$root.loadingView = false;
+
+		$window.ga('send', 'pageview', { page: $location.path() });
 
 	});
 }])
@@ -404,129 +406,7 @@ angular.module( 'symantis', [
 		history.back();
 	}
 	
-	/*
-	$sails.on('user', function (envelope) {
-		switch(envelope.verb) {
-			
-			case 'created':
-				cache.cacheuserUser($scope.users, envelope.data);
-				
-				break;
-			case 'addedTo':
-				console/log("User Added To");
-				//cache.cacheNewQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'updated':
-				cache.cacheUpdatedUserId($scope.users, envelope.id, envelope.data);
-				//lodash.
-				//$scope.queries.unshift(envelope.data);
-				break;
-			case 'destroyed':
-				cache.removeUserFromCache($scope.users, envelope.id);
-				
-				break;
-		}
-	});
-	*/
-	/*
-	$sails.on('query', function (envelope) {
-		switch(envelope.verb) {
-			
-			case 'created':
-				cache.cacheCreatedQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'addedTo':
-				console.log("Query Added To");
-				console.log(envelope);
-				if(envelope.attribute == "responses"){
-					cache.getAndCacheReponse($scope.queries, envelope.addedId );
-				}
-				//Object {id: "543e3473724fae3f3b745f85", verb: "addedTo", attribute: "responses", addedId: "543e34d1724fae3f3b745f86"}
-				//cache.cacheNewQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'updated':
-				console.log("Query Updated");
-				console.log(envelope);
-				cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
-				//lodash.
-				//$scope.queries.unshift(envelope.data);
-				break;
-			case 'destroyed':
-				cache.removeQueryFromCache($scope.queries, envelope.id);
-				
-				break;
-		}
-	});
-	*/
-	/*
-	$sails.on('response', function (envelope) {
-		switch(envelope.verb) {
-			
-			case 'created':
-				console.log(envelope);
-				cache.cacheNewQueryReponse($scope.queries, envelope.data);
-				
-				break;
-			case 'addedTo':
-				console.log("Response Added To");
-				console.log(envelope);
-				if(envelope.attribute = "replies"){
-					cache.getAndCacheReply($scope.queries, envelope.addedId);
-				}
-				//Object {id: "543e0a903097a4393459e5c9", verb: "addedTo", attribute: "replies", addedId: "543e297e34af6e4939475b1e"}
-				//cache.cacheNewQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'updated':
-				console.log(envelope);
-				//cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
-				//lodash.
-				//$scope.queries.unshift(envelope.data);
-				break;
-			case 'destroyed':
-				console.log(envelope);
-				//cache.removeQueryFromCache($scope.queries, envelope.id);
-				
-				break;
-		}
-	});
 
-	$sails.on('comment', function (envelope) {
-		switch(envelope.verb) {
-			
-			case 'created':
-				console.log(envelope);
-				if(envelope.data.controller == 'query'){
-					cache.cacheNewQueryReponseReply($scope.queries, envelope.data);	
-				}
-				//cache.cacheNewQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'addedTo':
-				console/log("Comment Added To");
-				console.log(envelope);
-
-				
-				//cache.cacheNewQuery($scope.queries, envelope.data);
-				
-				break;
-			case 'updated':
-				console.log(envelope);
-				//cache.cacheUpdatedQuery($scope.queries, envelope.id, envelope.data);
-				//lodash.
-				//$scope.queries.unshift(envelope.data);
-				break;
-			case 'destroyed':
-				console.log(envelope);
-				//cache.removeQueryFromCache($scope.queries, envelope.id);
-				
-				break;
-		}
-	});
-	*/
 
 	io.socket.on('disconnect', function(){
 		utils.siteAlert($scope.sitealerts, { type: 'error', msg: 'Your connection was lost... Attempting to reconnect' } );
