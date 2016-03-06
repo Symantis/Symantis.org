@@ -14,9 +14,9 @@ module.exports.bootstrap = function (cb) {
   	sails.GitHubApi = require("github");
   	sails.Wordpress = require("wordpress")
   						.createClient({
-						    url: "wordpress.symantis.org",
-						    username: "admin",
-						    password: "Shraptorinlove23!"
+						    url: "---",
+						    username: "---",
+						    password: "---"
 						});
 
 	/*
